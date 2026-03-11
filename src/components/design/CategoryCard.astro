@@ -1,0 +1,96 @@
+---
+interface Props {
+  icon?: string;
+  title: string;
+  body: string;
+  tag?: string;
+  variant?: 'red' | 'amber' | 'green' | 'blue';
+}
+
+const { icon, title, body, tag, variant = 'red' } = Astro.props;
+---
+
+<div class:list={['category-card', 'fade-up', variant]}>
+  {icon && <span class="category-icon">{icon}</span>}
+  <div class="category-title">{title}</div>
+  <div class="category-body" set:html={body} />
+  {tag && <span class="category-tag">{tag}</span>}
+</div>
+
+<style>
+  .category-card {
+    background: var(--card);
+    padding: 36px 32px;
+    border-left: 4px solid var(--red);
+    transition: transform 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .category-card:hover {
+    background: #222;
+    transform: translateX(4px);
+  }
+
+  .category-card.amber { border-left-color: var(--amber); }
+  .category-card.green { border-left-color: var(--green); }
+  .category-card.blue { border-left-color: var(--blue); }
+
+  .category-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .category-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  .category-body {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .category-body :global(strong) {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .category-body :global(em) {
+    font-style: italic;
+  }
+
+  .category-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-transform: uppercase;
+    border: 1px solid var(--red);
+    padding: 3px 10px;
+  }
+
+  .category-card.amber .category-tag {
+    color: var(--amber);
+    border-color: var(--amber);
+  }
+
+  .category-card.green .category-tag {
+    color: var(--green);
+    border-color: var(--green);
+  }
+
+  .category-card.blue .category-tag {
+    color: var(--blue);
+    border-color: var(--blue);
+  }
+</style>

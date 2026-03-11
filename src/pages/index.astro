@@ -1,0 +1,139 @@
+---
+import ResearchLayout from '../layouts/ResearchLayout.astro';
+import Masthead from '../components/design/Masthead.astro';
+import Ticker from '../components/design/Ticker.astro';
+import IntroQuote from '../components/design/IntroQuote.astro';
+import SectionHeader from '../components/design/SectionHeader.astro';
+import SectionDivider from '../components/design/SectionDivider.astro';
+import NavigationGrid from '../components/navigation/NavigationGrid.astro';
+import CTASection from '../components/design/CTASection.astro';
+import StatGrid from '../components/design/StatGrid.astro';
+import StatCard from '../components/design/StatCard.astro';
+import HighlightBar from '../components/design/HighlightBar.astro';
+
+const tickerItems = [
+  "255+ Documented Controversies",
+  "69 Former Officials Speaking Out",
+  "57 Attacks on Scientific Integrity",
+  "200+ Historians Warning of Authoritarianism",
+  "91 Criminal Charges (Election-Related)",
+  "20,500+ Scientists Fired",
+  "12 of 14 Fascism Criteria Met",
+  "17 Inspector Generals Fired",
+  "Every Claim Sourced from Official Records",
+];
+
+const researchSections = [
+  {
+    icon: '🔬',
+    title: "Trump's War on Science",
+    description: 'How the administration dismantled scientific integrity, fired 20,500+ scientists, and caused measles to return — documented with Senate reports and agency records.',
+    href: '/attacks-on-science',
+    tag: 'Updated March 2026',
+  },
+  {
+    icon: '⚠️',
+    title: 'Path to Fascism',
+    description: 'Scholarly analysis using established academic frameworks (Eco, Britt, Paxton, Stanley) showing why experts call this fascism — not hyperbole.',
+    href: '/fascism',
+    tag: '4 Deep Dives',
+  },
+  {
+    icon: '🏛️',
+    title: 'Attacking Democracy',
+    description: 'Documentation of the systematic dismantling of democratic institutions — purging oversight, installing loyalists, demanding personal loyalty, and weaponizing government.',
+    href: '/attacking-democracy',
+    tag: '4 Deep Dives',
+  },
+  {
+    icon: '📢',
+    title: 'Dangerous Rhetoric',
+    description: 'Catalogued rhetoric targeting the press, critics, Democrats, immigrants, and women — with direct quotes, dates, and consequences.',
+    href: '/dangerous-rhetoric',
+    tag: '5 Deep Dives',
+  },
+  {
+    icon: '📁',
+    title: 'The Epstein Files',
+    description: 'Court documents, sworn testimony, and the documented relationship between Donald Trump and Jeffrey Epstein — presented without speculation.',
+    href: '/epstein-files',
+    tag: 'Court Documents',
+  },
+  {
+    icon: '⚖️',
+    title: 'Election Rigging',
+    description: 'From the 2020 coup attempt to active 2026 midterm interference — 91 criminal charges, fake electors, and federal raids on ballot boxes.',
+    href: '/election-rigging',
+    tag: 'Active Threat',
+  },
+];
+
+const additionalSections = [
+  {
+    icon: '🗣️',
+    title: 'Critics & Whistleblowers',
+    description: '69 former Trump officials, military leaders, and Republican appointees who have spoken out — in their own words.',
+    href: '/critics',
+    tag: '69 Profiles',
+  },
+  {
+    icon: '📝',
+    title: 'Analysis & Posts',
+    description: 'Original analysis pieces connecting controversies, examining patterns, and providing context for ongoing events.',
+    href: '/posts',
+    tag: '30+ Posts',
+  },
+];
+---
+
+<ResearchLayout title="Research" description="Deep-dive research and documentation from The Trump Tracker — scholarly analysis, expert testimony, and sourced evidence.">
+
+  <Masthead
+    eyebrow="The Trump Tracker · Research Division"
+    title="THE <span class='word-red'>EVIDENCE</span>"
+    subtitle="Deep-Dive Research, Expert Analysis, and Documented Evidence"
+    date="Every claim sourced from official records, court documents, expert testimony, and direct quotes"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="When we are no longer able to change a situation, we are challenged to change ourselves. The truth does not change because it is, or is not, believed by a majority of the people."
+    citation="Giordano Bruno"
+  />
+
+  <StatGrid>
+    <StatCard target={255} suffix="+" label="Documented controversies with full sources" />
+    <StatCard target={69} label="Former officials who have spoken out against Trump" />
+    <StatCard target={25} suffix="+" label="Deep-dive research pages with original analysis" />
+    <StatCard target={30} suffix="+" label="Original analysis posts connecting patterns" />
+  </StatGrid>
+
+  <SectionHeader
+    eyebrow="Research Library"
+    title="Explore<br>the Evidence"
+    introText="Each section presents documented evidence using official records, court filings, expert analysis, and direct quotes. Click any topic to begin."
+  />
+
+  <NavigationGrid cards={researchSections} />
+
+  <SectionDivider label="Additional Resources" />
+
+  <SectionHeader
+    eyebrow="People & Analysis"
+    title="Voices &amp;<br>Perspectives"
+    introText="The people who were there — and the analysis that connects the dots."
+  />
+
+  <NavigationGrid cards={additionalSections} />
+
+  <HighlightBar text="Every number is sourced. Every quote is dated. Every claim links to official records." />
+
+  <CTASection
+    title="Browse All<br>Controversies"
+    description="Search, filter, and explore 255+ documented Trump controversies with full sources and severity ratings."
+    linkText="Open The Trump Tracker →"
+    linkHref="https://thetrumptracker.com"
+  />
+
+</ResearchLayout>

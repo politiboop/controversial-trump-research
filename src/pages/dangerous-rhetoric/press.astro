@@ -1,0 +1,362 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const rhetoricTabs = [
+  { label: 'Overview', href: '/dangerous-rhetoric' },
+  { label: 'Press', href: '/dangerous-rhetoric/press' },
+  { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+  { label: 'Democrats', href: '/dangerous-rhetoric/democrats' },
+  { label: 'Immigrants', href: '/dangerous-rhetoric/immigrants' },
+  { label: 'Women', href: '/dangerous-rhetoric/women' },
+];
+
+const tickerItems = [
+  "5 Journalists Murdered at Capital Gazette",
+  "2,000+ Documented Attacks on Press by Trump",
+  "33% of U.S. Journalists Threatened with Violence",
+  "U.S. Press Freedom Ranking: 45th (Down from 32nd)",
+  "$20 Billion CBS Lawsuit — Designed to Destroy",
+  "100+ Times Trump Called Press 'Enemy of the People'",
+  "400% Increase in Threats Against Journalists",
+  "Stalin/Hitler Used Same 'Enemy of the People' Phrase",
+];
+---
+
+<ResearchLayout title="Dangerous Rhetoric Against the Press" description="Trump's escalating violent rhetoric against journalists and the free press - from 'fake news' to 'enemy of the people' to encouraging violence">
+
+  <SeriesNav tabs={rhetoricTabs} currentPath="/dangerous-rhetoric/press" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Dangerous Rhetoric', href: '/dangerous-rhetoric' },
+    { label: 'Against the Press' }
+  ]} />
+
+  <Masthead
+    eyebrow="Page 1 of 5 &middot; Dangerous Rhetoric"
+    title="WAR ON THE<br>FREE PRESS"
+    titleHighlight="FREE PRESS"
+    subtitle="From &quot;Fake News&quot; to &quot;Enemy of the People&quot; to encouraging violence"
+    date="Documented Timeline &middot; Journalist Targeting &middot; Deadly Consequences"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="A free press is essential to democracy -- the Founders called it the 'Fourth Estate' and enshrined it in the First Amendment. But Trump has waged an unprecedented war on journalism, systematically escalating from 'fake news' labels to declaring journalists 'enemy of the people' -- a phrase historically used by Stalin and Hitler to justify purges and executions -- to praising and encouraging physical violence against reporters."
+    citation="Pattern Analysis of Presidential Attacks on Press"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={5} label="Capital Gazette journalists murdered after years of Trump's 'enemy' rhetoric" accentColor="var(--red)" />
+    <StatCard target={2000} suffix="+" label="Documented attacks on press by Trump (tweets, speeches, interviews)" accentColor="var(--red)" />
+    <StatCard target={33} suffix="%" label="U.S. journalists who say they've been threatened with violence" accentColor="var(--amber)" />
+    <StatCard target={45} suffix="th" label="U.S. ranking in World Press Freedom Index (2024) - down from 32nd in 2016" accentColor="var(--amber)" />
+  </StatGrid>
+
+  <!-- THE SYSTEMATIC ESCALATION -->
+  <SectionDivider label="The Pattern" />
+  <SectionHeader
+    eyebrow="Systematic Escalation"
+    title="How Criticism Became<br>Calls for Violence"
+    introText="Trump's attacks on the press follow a deliberate, escalating pattern designed to delegitimize, dehumanize, and ultimately destroy independent journalism."
+  />
+
+  <TimelineSection title="The Six-Stage<br>Escalation">
+    <TimelineItem
+      date="STAGE 1"
+      badge="Delegitimize"
+      badgeType="serious"
+      title="Label Critical Coverage as 'Fake News'"
+      description="Any negative coverage dismissed as fabricated, regardless of accuracy or evidence. Creates alternate reality where Trump is always right, media always lying. Undermines public trust in journalism."
+    />
+    <TimelineItem
+      date="STAGE 2"
+      badge="Dehumanize"
+      badgeType="catastrophic"
+      title="Escalate to 'Enemy of the People'"
+      description="Stalin used this phrase to justify purges and executions. Hitler used 'Lugenpresse' (lying press) before attacking journalists. Trump repeated it 100+ times, specifically calling mainstream press 'enemy of the American people.' Dehumanizes journalists, frames them as existential threat."
+    />
+    <TimelineItem
+      date="STAGE 3"
+      badge="Target"
+      badgeType="catastrophic"
+      title="Target Individual Journalists"
+      description="Names specific reporters (Jim Acosta, Katy Tur, April Ryan, Yamiche Alcindor) and directs mob harassment. Mocks appearance, intelligence, integrity. Rally crowds boo and jeer. Journalists receive death threats, require security, some leave profession."
+    />
+    <TimelineItem
+      date="STAGE 4"
+      badge="Incite"
+      badgeType="catastrophic"
+      title="Encourage and Praise Violence"
+      description="Praises Rep. Gianforte for body-slamming reporter. Tweets video of himself violently attacking CNN. Says he wants to 'knock the crap out of them.' Message to supporters: violence against journalists is acceptable, even praiseworthy."
+    />
+    <TimelineItem
+      date="STAGE 5"
+      badge="Violence"
+      badgeType="catastrophic"
+      title="Violence and Threats Occur"
+      description="Capital Gazette shooting (5 dead). Pipe bombs to CNN. Daily death threats to reporters. Physical attacks at rallies. Journalists requiring security details. Attackers cite Trump's rhetoric as justification."
+    />
+    <TimelineItem
+      date="STAGE 6"
+      badge="Destroy"
+      badgeType="catastrophic"
+      title="Financial and Legal Warfare"
+      description="$20 billion CBS lawsuit. FCC investigations of NPR/PBS as 'communist.' Revoking press credentials. Restricting access. Goal: financially destroy independent press, replace with state-aligned media."
+    />
+  </TimelineSection>
+
+  <!-- CHRONOLOGICAL TIMELINE -->
+  <SectionDivider label="Timeline" />
+  <SectionHeader
+    eyebrow="Every Major Attack"
+    title="Chronological<br>Timeline"
+    introText="A comprehensive timeline documenting Trump's systematic campaign against journalists and the free press, with specific dates, quotes, and consequences."
+  />
+
+  <TimelineSection title="2015-2016<br><span style='font-size:0.4em;color:var(--muted)'>Building the &quot;Fake News&quot; Foundation</span>">
+    <TimelineItem date="JUN 2015" badge="Foundation" badgeType="serious" title="Campaign Launch: First Media Attacks" description="'The media is among the most dishonest groups of people I've ever met.' Presidential campaign announcement speech establishes pattern of attacking press." />
+    <TimelineItem date="DEC 2015" badge="Targeting" badgeType="serious" title="Rally Violence Begins, Press as Targets" description="Trump points at press pen, crowds turn and jeer at journalists. Pattern begins: rally crowds booing and threatening press at Trump's direction." />
+    <TimelineItem date="FEB 2016" badge="Escalation" badgeType="serious" title="'Disgusting' Press" description="'The press is so dishonest. They're the worst. They're scum. They're horrible people.' Fort Worth, Texas rally. Moves from 'dishonest' to 'scum' and 'horrible people.'" />
+    <TimelineItem date="MAY 2016" badge="Targeting" badgeType="catastrophic" title="Attacks Katy Tur by Name" description="Trump singles out NBC reporter Katy Tur at rally, pointing at her and disparaging her. Tur requires Secret Service protection after receiving threats. 'His supporters turned on the press and became very aggressive... I had to have a Secret Service escort to my car.'" />
+    <TimelineItem date="OCT 2016" badge="Delegitimize" badgeType="serious" title="'Crooked Media'" description="'The election is being rigged by the media pushing false and unsubstantiated charges.' As negative coverage increases, Trump claims entire election system rigged by media. Pre-delegitimizing election results." />
+  </TimelineSection>
+
+  <TimelineSection title="2017<br><span style='font-size:0.4em;color:var(--muted)'>&quot;Enemy of the People&quot; - The Stalin/Hitler Term</span>">
+    <TimelineItem date="FEB 2017" badge="Catastrophic" badgeType="catastrophic" title="First 'Enemy of the People' Declaration" description="'The FAKE NEWS media (failing @nytimes, @NBCNews, @ABC, @CBS, @CNN) is not my enemy, it is the enemy of the American People!' Less than one month into presidency, Trump uses Stalin's phrase. Sen. John McCain: 'That's how dictators get started.'" />
+    <TimelineItem date="FEB 2017" badge="Access" badgeType="serious" title="Exclusion from Press Briefing" description="White House blocks CNN, New York Times, Los Angeles Times, Politico, BuzzFeed from press briefing. First time in modern history administration bars major outlets." />
+    <TimelineItem date="JUL 2017" badge="Incitement" badgeType="catastrophic" title="CNN Wrestling Violence Video" description="Trump tweets video of himself violently body-slamming and punching person with CNN logo over their face. President of the United States posts video depicting violence against press. CNN: 'It is a sad day when the President encourages violence against reporters.'" />
+    <TimelineItem date="AUG 2017" badge="Rally" badgeType="serious" title="'Fake News' Chants at Rally" description="Phoenix rally: Trump directs crowd to turn and jeer at journalists in press pen. Loud 'CNN sucks!' chants, middle fingers directed at press. Journalists describe feeling physically threatened." />
+    <TimelineItem date="2017" badge="Targeting" badgeType="catastrophic" title="Jim Acosta Systematically Targeted" description="Trump repeatedly attacks CNN's Jim Acosta by name at rallies and briefings. Rally crowds turn on Acosta with threatening behavior. Acosta: 'Trump supporters have yelled f--- you at me... I've been called an enemy of the people to my face.' Requires security detail." />
+  </TimelineSection>
+
+  <TimelineSection title="2018<br><span style='font-size:0.4em;color:var(--muted)'>Praising Violence, Encouraging Attacks - and Murder</span>">
+    <TimelineItem date="JUN 2018" badge="Murder" badgeType="catastrophic" title="Capital Gazette Newsroom Shooting: 5 Journalists Killed" description="Gunman enters Capital Gazette newspaper office in Annapolis, Maryland with pump-action shotgun. Killed: Gerald Fischman (61), Rob Hiaasen (59), John McNamara (56), Rebecca Smith (34), Wendi Winters (65). Occurred after years of Trump calling press 'enemy of the people.' Trump's response: brief generic statement, then back to attacking press within days." />
+    <TimelineItem date="AUG 2018" badge="Rally Violence" badgeType="catastrophic" title="'Fake News' Rally Attack" description="Tampa, Florida rally: Trump supporters verbally attack and physically threaten CNN reporter Jim Acosta. Crowd screaming 'CNN sucks!' 'F--- you!' with threatening gestures. Acosta: 'I've never seen it this bad. It's getting worse.'" />
+    <TimelineItem date="OCT 2018" badge="Endorsing Violence" badgeType="catastrophic" title="Praises Body-Slamming Reporter" description="'Any guy that can do a body slam, he's my kind of guy.' About Rep. Greg Gianforte assaulting Guardian reporter Ben Jacobs. Montana rally, two weeks before pipe bombs mailed to Trump critics including CNN. President explicitly endorses violence against journalists." />
+    <TimelineItem date="OCT 2018" badge="Pipe Bomb" badgeType="catastrophic" title="Pipe Bomb to CNN Headquarters" description="Pipe bomb discovered at CNN's New York headquarters. Perpetrator Cesar Sayoc, devoted Trump supporter whose van was covered in Trump stickers. Sayoc cited Trump's 'enemy of the people' rhetoric as motivation. Trump's response: blamed media for anger his rhetoric created." />
+    <TimelineItem date="NOV 2018" badge="Retaliation" badgeType="serious" title="Acosta Press Pass Revoked" description="White House revokes CNN's Jim Acosta's press credentials. White House claims Acosta 'placed hands' on intern (video shows he did not). Federal judge orders credentials restored, rules White House violated due process." />
+  </TimelineSection>
+
+  <TimelineSection title="2019-2020<br><span style='font-size:0.4em;color:var(--muted)'>More Journalists Targeted, Violence Normalized</span>">
+    <TimelineItem date="JAN 2019" badge="Ranking" badgeType="serious" title="World Press Freedom Ranking Drops" description="Reporters Without Borders downgrades U.S. press freedom ranking. Reason: 'Unprecedented' attacks on press by president. U.S. falls to 48th globally (from 32nd in 2016)." />
+    <TimelineItem date="MAR 2019" badge="Targeting" badgeType="catastrophic" title="Attacks April Ryan" description="Trump calls for firing of reporter April Ryan: 'She doesn't know what the hell she's doing. She's a loser.' Ryan, a Black female journalist, receives death threats. Man threatened to 'kill her on sight.' Had to hire personal security team." />
+    <TimelineItem date="SEP 2019" badge="Escalation" badgeType="catastrophic" title="Attacks Whistleblower and Press" description="'These people are scum... the press are so bad, so evil.' UN General Assembly, responding to Ukraine whistleblower story. Escalation from 'enemy' to 'evil' and 'scum.'" />
+    <TimelineItem date="MAR 2020" badge="COVID" badgeType="serious" title="COVID Briefing Attacks" description="Trump turns daily COVID briefings into attacks on journalists. Targets: Yamiche Alcindor (PBS), Weijia Jiang (CBS), Paula Reid (CBS), Kaitlan Collins (CNN). To Weijia Jiang (Asian-American): 'Ask China' (racist remark). To Yamiche Alcindor: 'That's a nasty question.'" />
+    <TimelineItem date="FEB 2024" badge="Dehumanization" badgeType="catastrophic" title="'Lowest Form of Humanity'" description="'These are sick people. These are bad people. These people are in many ways more dangerous than the people we're fighting outside... They are the lowest form of humanity.' South Carolina rally. Complete dehumanization." />
+  </TimelineSection>
+
+  <TimelineSection title="2025-2026<br><span style='font-size:0.4em;color:var(--muted)'>Second Term: Weaponizing Government Against Press</span>">
+    <TimelineItem date="JAN 2025" badge="Government Power" badgeType="catastrophic" title="Press Access Restricted" description="White House immediately restricts press pool access. Only 'friendly' journalists granted access. Fox News, Newsmax, OAN given priority. 'This is how state-controlled media begins.'" />
+    <TimelineItem date="MAR 2025" badge="Purge" badgeType="catastrophic" title="Voice of America Purge" description="Cancelled contracts with AP, Reuters, AFP for Voice of America. Replaced with pro-Trump media outlets. Systematically dismantling VOA independence." />
+    <TimelineItem date="APR 2025" badge="Investigation" badgeType="catastrophic" title="FCC Investigation of NPR/PBS as 'Communist'" description="Trump orders FCC to investigate NPR and PBS. Calls public broadcasting 'communist' propaganda. Authoritarian regimes systematically eliminate independent media." />
+    <TimelineItem date="MAY 2025" badge="Lawfare" badgeType="catastrophic" title="$20 Billion CBS Lawsuit Filed" description="Trump files $20 billion lawsuit against CBS News over '60 Minutes' interview editing (standard practice). Amount larger than CBS market cap -- designed to destroy company. Authoritarian leaders use lawfare to bankrupt independent press." />
+    <TimelineItem date="JUN 2025" badge="Defunding" badgeType="catastrophic" title="$1.1 Billion CPB Defunding Proposed" description="Trump administration proposes eliminating Corporation for Public Broadcasting funding. Would affect NPR, PBS, and 1,500+ local public radio and TV stations. Would eliminate independent journalism in many communities." />
+    <TimelineItem date="MAR 2026" badge="Wartime" badgeType="catastrophic" title="Attacking Press for Reporting Troop Deaths" description="Defense Secretary Hegseth dismisses questions about U.S. troop casualties: 'Tragic things happen in war. Next question.' Administration treats questions about dead troops as hostile media attacks." />
+  </TimelineSection>
+
+  <!-- INDIVIDUAL JOURNALISTS TARGETED -->
+  <SectionDivider label="Individual Targets" />
+  <SectionHeader
+    eyebrow="Named and Targeted"
+    title="Individual Journalists<br>Targeted by Name"
+    introText="Trump doesn't just attack 'the media' abstractly -- he targets individual journalists by name, directing his supporters' rage at specific people. This personal targeting has resulted in death threats, security requirements, and some journalists leaving the profession."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📺"
+      title="Jim Acosta (CNN)"
+      body="<strong>Attacks:</strong> 100+ times named at rallies, briefings, tweets<br><strong>Language:</strong> &quot;Terrible,&quot; &quot;fake news,&quot; &quot;enemy of the people&quot;<br><strong>Press pass:</strong> Revoked November 2018 (court ordered restoration)<br><strong>Consequence:</strong> Requires security detail, death threats, physical intimidation at rallies"
+      tag="100+ Attacks"
+    />
+    <CategoryCard
+      icon="📡"
+      title="Katy Tur (NBC News)"
+      body="<strong>First targeted:</strong> May 2016, Trump points her out at rally by name<br><strong>Attacks:</strong> &quot;Little Katy,&quot; &quot;third-rate reporter&quot;<br><strong>Security:</strong> Secret Service had to escort Tur to her car<br><strong>Consequence:</strong> Ongoing threats, described feeling &quot;targeted for violence&quot;"
+      tag="Secret Service Escort"
+    />
+    <CategoryCard
+      icon="🎙️"
+      title="April Ryan (American Urban Radio)"
+      body="<strong>Attacks:</strong> Trump calls for her firing: &quot;She's a loser&quot;<br><strong>Threats:</strong> Man threatened to &quot;kill her on sight&quot;<br><strong>Security:</strong> Had to hire personal security team, home security upgrades<br><strong>Pattern:</strong> Black female journalist faces racist and sexist threats"
+      tag="Death Threats"
+    />
+    <CategoryCard
+      icon="📋"
+      title="Yamiche Alcindor (PBS/NBC)"
+      body="<strong>Pattern:</strong> Regularly attacked during COVID briefings<br><strong>Trump:</strong> &quot;That's a nasty question&quot; (to legitimate inquiry)<br><strong>Consequence:</strong> Death threats after each Trump attack<br><strong>Racist threats:</strong> Black female journalist receives racist harassment"
+      tag="COVID Briefing Target"
+    />
+    <CategoryCard
+      icon="📰"
+      title="Maggie Haberman (New York Times)"
+      body="<strong>Attacks:</strong> &quot;Maggot Hagerman,&quot; &quot;third rate,&quot; &quot;liar&quot;<br><strong>Frequency:</strong> Dozens of tweets attacking her personally<br><strong>Pattern:</strong> Attacks increase when her reporting is accurate and damaging"
+      tag="Dozens of Attacks"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Weijia Jiang (CBS News)"
+      body="<strong>Incident:</strong> March 2020 COVID briefing<br><strong>Trump's racist remark:</strong> When Jiang (Asian-American) asked about testing, Trump said &quot;Ask China&quot;<br><strong>Consequence:</strong> Spike in racist threats, broader anti-Asian harassment"
+      tag="Racist Targeting"
+    />
+    <CategoryCard
+      icon="📻"
+      title="Joe Scarborough &amp; Mika Brzezinski (MSNBC)"
+      body="<strong>Attacks:</strong> &quot;Psycho Joe,&quot; &quot;low IQ Crazy Mika&quot;<br><strong>Specific:</strong> Trump tweeted Brzezinski was &quot;bleeding badly from a face-lift&quot;<br><strong>Response:</strong> Bipartisan condemnation of misogynistic attack"
+      tag="Misogynistic Attacks"
+    />
+    <CategoryCard
+      icon="✋"
+      title="Serge Kovaleski (New York Times)"
+      body="<strong>Attack:</strong> Trump physically mocked Kovaleski's disability on stage<br><strong>Context:</strong> Kovaleski has arthrogryposis (joint condition)<br><strong>Rally action:</strong> Trump flailed arms mockingly, mimicking disability<br><strong>Significance:</strong> Willingness to mock journalists for physical disability"
+      tag="Mocked Disability"
+    />
+  </CategoryGrid>
+
+  <!-- EXPERT ANALYSIS -->
+  <SectionDivider label="Expert Analysis" />
+  <SectionHeader
+    eyebrow="Press Freedom and Authoritarianism"
+    title="Expert Analysis"
+    introText="Leading scholars on press freedom, authoritarianism, and democracy on Trump's war against journalism."
+  />
+
+  <VoicesSection
+    eyebrow="Scholars and Press Freedom Experts"
+    title="Expert<br>Warnings"
+  >
+    <VoiceCard
+      quote="Trump's use of 'enemy of the people' is not accidental. It's the exact phrase Stalin used before purging journalists and opponents. When a leader systematically delegitimizes the free press, calls them enemies, and encourages violence against them, that's textbook authoritarianism."
+      attribution="<strong>Timothy Snyder</strong> &middot; Yale University<br>Professor of History"
+    />
+    <VoiceCard
+      quote="What Trump has done to press freedom in America is unprecedented in modern democratic history. He's normalized attacks on journalists, made 'fake news' a weapon against any inconvenient truth, and created a permission structure where violence against reporters is acceptable to his supporters."
+      attribution="<strong>Anne Applebaum</strong> &middot; Pulitzer Prize-winning journalist and historian"
+    />
+    <VoiceCard
+      quote="The pattern is clear: dehumanize journalists, delegitimize their work, encourage violence, then use state power to punish them financially and legally. The $20 billion CBS lawsuit isn't about justice -- it's about destruction. This is what Putin does, what Erdogan does, what Orban does."
+      attribution="<strong>Ruth Ben-Ghiat</strong> &middot; NYU<br>Expert on Authoritarianism"
+    />
+    <VoiceCard
+      quote="When Trump praises a congressman for body-slamming a reporter, tweets videos of himself violently attacking CNN, and calls journalists 'enemy of the people,' he's not expressing frustration with coverage. He's inciting violence. And it works -- we've seen death threats, attacks, murder. This is stochastic terrorism."
+      attribution="<strong>Jason Stanley</strong> &middot; Yale University<br>Author of &quot;How Fascism Works&quot;"
+    />
+    <VoiceCard
+      quote="A free press is the immune system of democracy. When a leader systematically attacks that immune system, delegitimizes it, tries to destroy it -- democracy becomes vulnerable to every disease. That's not hyperbole. It's what the history of authoritarian transitions shows us."
+      attribution="<strong>Steven Levitsky &amp; Daniel Ziblatt</strong> &middot; Harvard University<br>Authors of &quot;How Democracies Die&quot;"
+    />
+    <VoiceCard
+      quote="Trump's attacks on the press have done more damage to press freedom in America than anything in modern history. We now rank 45th in the World Press Freedom Index. Journalists require security details. Some have fled the profession. The Capital Gazette shooting was a direct result of this climate."
+      attribution="<strong>Joel Simon</strong> &middot; Former CEO of Committee to Protect Journalists"
+    />
+    <VoiceCard
+      quote="The historical parallels are undeniable. Hitler used 'Lugenpresse' (lying press) before attacking journalists. Stalin used 'enemy of the people' before purging them. Mussolini systematically destroyed independent media. Trump is following the same playbook, step by step."
+      attribution="<strong>Robert Paxton</strong> &middot; Columbia University<br>Leading Fascism Expert"
+    />
+  </VoicesSection>
+
+  <!-- DOCUMENTED VIOLENCE AND CONSEQUENCES -->
+  <ConsequencesGrid eyebrow="Documented Violence" title="The Toll on<br>American Journalism">
+    <ConsequenceRow>
+      <ConsequenceItem number="5" title="Journalists Murdered" description="Capital Gazette newsroom shooting (2018) after years of 'enemy of the people' rhetoric" />
+      <ConsequenceItem number="33%" title="Threatened" description="U.S. journalists who report being threatened with physical violence (Reuters Institute)" />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="400%" title="Threat Increase" description="Increase in threats against journalists during Trump presidency (CPJ data)" />
+      <ConsequenceItem number="45th" title="Press Freedom" description="U.S. ranking in 2024 World Press Freedom Index (down from 32nd in 2016)" />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="$20B" title="CBS Lawsuit" description="Designed to financially destroy major news organization -- larger than CBS market cap" />
+      <ConsequenceItem number="100+" title="'Enemy of People'" description="Times Trump used Stalin's phrase to describe American journalists" />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- SECOND TERM: WEAPONIZING GOVERNMENT -->
+  <SectionDivider label="Government Action" />
+  <SectionHeader
+    eyebrow="From Rhetoric to Government Power"
+    title="Second Term:<br>Weaponizing Government"
+    introText="Trump's first term was characterized by rhetoric and norm-breaking. His second term involves using actual government power to punish, control, and potentially destroy independent press."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💰"
+      title="Financial Warfare"
+      body="<strong>$20 billion CBS lawsuit:</strong> Amount larger than network's market cap -- designed to financially destroy<br><strong>$1.1 billion CPB defunding:</strong> Would eliminate NPR, PBS, 1,500+ local stations<br><strong>Legal costs as weapon:</strong> Even meritless lawsuits cost millions to defend"
+      tag="Destroy Independent Press"
+    />
+    <CategoryCard
+      icon="🔒"
+      title="Access and Credentials"
+      body="<strong>Press pool restricted:</strong> Only &quot;friendly&quot; journalists guaranteed access<br><strong>Credentials revocation:</strong> Using access as weapon against critical reporters<br><strong>Two-tiered system:</strong> Fox/Newsmax/OAN get priority, mainstream press restricted"
+      tag="Control Information"
+    />
+    <CategoryCard
+      icon="📡"
+      title="Government Media Control"
+      body="<strong>Voice of America purge:</strong> Independent journalists replaced with Trump loyalists<br><strong>FCC weaponization:</strong> Investigation of NPR/PBS as &quot;communist&quot;<br><strong>State-aligned media:</strong> Fox News elevated to quasi-official status"
+      tag="State Media"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="The Stakes for Democracy" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">A free press is not optional for democracy -- it is essential.</strong> When a leader systematically attacks, delegitimizes, encourages violence against, and then uses government power to financially destroy independent journalism, democracy cannot survive.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">Every authoritarian transition in history has involved controlling or eliminating the free press. Trump is following that playbook, step by step. The evidence is overwhelming: 5 journalists murdered, hundreds threatened, press freedom ranking collapsed, $20 billion lawsuits, public broadcasting defunded, independent journalists purged from government media.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- SOURCES -->
+  <ColoredSection>
+    <AlertBanner icon="📘" title="Sources" variant="blue">
+      <p>
+        <a href="https://rsf.org/en/country/united-states" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">Reporters Without Borders: United States Press Freedom Report</a><br>
+        <a href="https://cpj.org/reports/2020/04/trump-media-attacks-credibility-leaks/" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">Committee to Protect Journalists: Trump's Attacks on the Press</a><br>
+        <a href="https://www.theguardian.com/us-news/2018/jun/28/jarrod-ramos-capital-gazette-shooting-annapolis" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">Capital Gazette Shooting: 5 Journalists Killed</a><br>
+        <a href="https://www.aclu.org/news/free-speech/trumps-attacks-on-the-press" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">ACLU: Trump's Attacks on Press Freedom</a>
+      </p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Against<br>Critics"
+    description="How Trump turns decorated generals, cabinet members, and loyal allies into 'traitors' the moment they refuse to break the law."
+    linkText="Continue: Against Critics &rarr;"
+    linkHref="/dangerous-rhetoric/critics"
+  />
+
+  <PageNavigation
+    next={{ label: 'Against Critics', href: '/dangerous-rhetoric/critics' }}
+    currentIndex={0}
+    totalPages={5}
+  />
+
+</ResearchLayout>

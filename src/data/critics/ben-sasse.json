@@ -1,0 +1,115 @@
+{
+  "id": "ben-sasse",
+  "name": "Ben Sasse",
+  "role": "U.S. Senator from Nebraska",
+  "administration": null,
+  "years": "2015-2023",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "senator",
+  "photo": null,
+  "summary": "Former Republican Senator who denounced efforts to overturn the 2020 election as a dangerous ploy, called colleagues 'institutional arsonists,' and voted to convict Trump in his second impeachment trial.",
+  "keyStatements": [
+    {
+      "quote": "The president and his allies are playing with fire... But the president doesn\u2019t and neither do the institutional arsonist members of Congress who will object to the Electoral College vote.",
+      "date": "2020-12-31",
+      "source": "Fox News",
+      "context": "Facebook post on objections to Electoral College certification",
+      "url": "https://www.foxnews.com/politics/sasse-hawley-electoral-college-objection-institutional-arsonist-congress"
+    },
+    {
+      "quote": "Adults don't point a loaded gun at the heart of legitimate self-government.",
+      "date": "2020-12-31",
+      "source": "CBS News",
+      "context": "Quoted from his Facebook post",
+      "url": "https://www.cbsnews.com/news/election-results-gop-senators-reject-election-unless-commission-formed/"
+    },
+    {
+      "quote": "I agree with that. President Trump violated his oath of office to protect and defend the Constitution of the United States.",
+      "date": "2021-02-13",
+      "source": "Congressional Record (govinfo.gov)",
+      "context": "Senate floor remarks during impeachment trial",
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2021-02-13/html/CREC-2021-02-13-pt1-PgS736.htm"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2015-01-03",
+      "event": "Became U.S. Senator from Nebraska",
+      "significance": "Entered Senate"
+    },
+    {
+      "date": "2016",
+      "event": "Refused to endorse Trump",
+      "significance": "Wrote in Mike Pence for president"
+    },
+    {
+      "date": "2020-12-31",
+      "event": "Condemned effort to overturn the 2020 election",
+      "significance": "Called objectors 'institutional arsonists'"
+    },
+    {
+      "date": "2021-02-13",
+      "event": "Voted to convict Trump in second impeachment",
+      "significance": "One of seven Republicans to vote for conviction"
+    },
+    {
+      "date": "2023-01-03",
+      "event": "Left Senate",
+      "significance": "Became University of Florida president in 2023"
+    },
+    {
+      "date": "2024-07-31",
+      "event": "Resigned as University of Florida president",
+      "significance": "Stepped down from the role"
+    }
+  ],
+  "credibility": {
+    "background": "Former U.S. Senator, university president, historian with PhD from Yale",
+    "positions": [
+      "U.S. Senator from Nebraska (2015-2023)",
+      "President, University of Florida (2023-2024)",
+      "President, Midland University (2010-2015)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said efforts to overturn the 2020 election were 'playing with fire'",
+    "Called objecting members of Congress 'institutional arsonists'",
+    "Said Trump violated his oath of office"
+  ],
+  "endorsement": "Voted to convict Trump; did not support Trump in 2016 or 2020",
+  "sources": [
+    {
+      "title": "Sasse slams 'institutional arsonist members of Congress' who plan Electoral College objection",
+      "url": "https://www.foxnews.com/politics/sasse-hawley-electoral-college-objection-institutional-arsonist-congress",
+      "date": "2020-12-31",
+      "type": "news"
+    },
+    {
+      "title": "GOP senators say they will reject election results unless commission is formed",
+      "url": "https://www.cbsnews.com/news/election-results-gop-senators-reject-election-unless-commission-formed/",
+      "date": "2021-01-03",
+      "type": "news"
+    },
+    {
+      "title": "Congressional Record, Senate (Feb. 13, 2021)",
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2021-02-13/html/CREC-2021-02-13-pt1-PgS736.htm",
+      "date": "2021-02-13",
+      "type": "government"
+    },
+    {
+      "title": "Board of Trustees selects Dr. Ben Sasse as the University of Florida\u2019s 13th president",
+      "url": "https://news.ufl.edu/2022/11/ben-sasse-selected-president/",
+      "date": "2022-11-01",
+      "type": "news"
+    },
+    {
+      "title": "University of Florida President Ben Sasse announces resignation",
+      "url": "https://news.ufl.edu/2024/07/sasse-announces-resignation/",
+      "date": "2024-07-18",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

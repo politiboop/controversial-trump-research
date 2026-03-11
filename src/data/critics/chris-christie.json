@@ -1,0 +1,108 @@
+{
+  "id": "chris-christie",
+  "name": "Chris Christie",
+  "role": "Governor of New Jersey",
+  "administration": null,
+  "years": "2010-2018",
+  "militaryRank": null,
+  "category": "former-officials",
+  "subCategory": "governor",
+  "photo": null,
+  "summary": "Former Governor of New Jersey and 2024 Republican presidential candidate who called Trump unfit and said he would not enable Trump to become president again.",
+  "keyStatements": [
+    {
+      "quote": "His conduct is unacceptable. He's unfit.",
+      "date": "2023-12-07",
+      "source": "CNN transcript (NewsNight)",
+      "context": "Fourth Republican primary debate",
+      "url": "https://transcripts.cnn.com/show/ctmo/date/2023-12-07/segment/04"
+    },
+    {
+      "quote": "Anyone who is unwilling to say (Trump) is unfit to be president of the United States is unfit themselves to be president of the United States.",
+      "date": "2024-01-10",
+      "source": "CNN",
+      "context": "Campaign suspension coverage",
+      "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/01/10/chris-christie-ends-2024-presidential-campaign/"
+    },
+    {
+      "quote": "I'm going to make sure that in no way do I enable Donald Trump to ever be president of the United States again.",
+      "date": "2024-01-10",
+      "source": "CNN transcript (The Situation Room)",
+      "context": "Suspending 2024 campaign",
+      "url": "https://transcripts.cnn.com/show/sitroom/date/2024-01-10/segment/02"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2010-01-19",
+      "event": "Became Governor of New Jersey",
+      "significance": "Elected as Republican governor"
+    },
+    {
+      "date": "2016",
+      "event": "Ran for president, later endorsed Trump",
+      "significance": "Initially rival, became supporter"
+    },
+    {
+      "date": "2016-2020",
+      "event": "Advised Trump campaign and administration",
+      "significance": "Close relationship with Trump"
+    },
+    {
+      "date": "2020",
+      "event": "Helped Trump prepare for debates",
+      "significance": "Contracted COVID from Trump"
+    },
+    {
+      "date": "2021-01-06",
+      "event": "Broke with Trump after January 6",
+      "significance": "Called Trump's actions unacceptable"
+    },
+    {
+      "date": "2023-06-06",
+      "event": "Announced 2024 presidential campaign",
+      "significance": "Ran as anti-Trump Republican"
+    },
+    {
+      "date": "2024-01-10",
+      "event": "Suspended presidential campaign",
+      "significance": "Ended campaign warning about Trump"
+    }
+  ],
+  "credibility": {
+    "background": "Former Governor of New Jersey, U.S. Attorney, 2024 and 2016 Republican presidential candidate",
+    "positions": [
+      "Governor of New Jersey (2010-2018)",
+      "U.S. Attorney for District of New Jersey (2002-2008)",
+      "Republican presidential candidate (2016, 2024)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump unfit for office",
+    "Said he would not enable Trump to become president again",
+    "Criticized rivals who would not say Trump is unfit"
+  ],
+  "endorsement": "Has not endorsed Trump for 2024",
+  "sources": [
+    {
+      "title": "CNN transcript: NewsNight (Dec. 7, 2023)",
+      "url": "https://transcripts.cnn.com/show/ctmo/date/2023-12-07/segment/04",
+      "date": "2023-12-07",
+      "type": "transcript"
+    },
+    {
+      "title": "Chris Christie ends 2024 presidential campaign",
+      "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2024/01/10/chris-christie-ends-2024-presidential-campaign/",
+      "date": "2024-01-10",
+      "type": "news"
+    },
+    {
+      "title": "CNN transcript: The Situation Room (Jan. 10, 2024)",
+      "url": "https://transcripts.cnn.com/show/sitroom/date/2024-01-10/segment/02",
+      "date": "2024-01-10",
+      "type": "transcript"
+    }
+  ],
+  "party": "Republican"
+}

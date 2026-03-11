@@ -1,0 +1,101 @@
+{
+  "id": "cassidy-hutchinson",
+  "name": "Cassidy Hutchinson",
+  "role": "Special Assistant to the President",
+  "administration": "Trump Administration",
+  "years": "2019-2021",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "white-house-staff",
+  "photo": null,
+  "summary": "Former White House aide and January 6 Committee witness who testified that Trump knew supporters were armed on January 6 and later said she would vote for Kamala Harris in 2024.",
+  "keyStatements": [
+    {
+      "quote": "We're going to get charged with every crime imaginable if we make that movement happen.",
+      "date": "2022-06-28",
+      "source": "CNN (June 28, 2022 transcript)",
+      "context": "Cipollone warning about going to the Capitol",
+      "url": "https://transcripts.cnn.com/show/cnnt/date/2022-06-28/segment/01"
+    },
+    {
+      "quote": "The president said something to the effect of, 'I don't fucking care that they have weapons. They're not here to hurt me. Take the fucking mags away. Let my people in. They can march to the Capitol from here.'",
+      "date": "2022-06-28",
+      "source": "CNN (June 28, 2022 transcript)",
+      "context": "Trump's response to armed supporters at rally",
+      "url": "https://transcripts.cnn.com/show/cnnt/date/2022-06-28/segment/01"
+    },
+    {
+      "quote": "Donald Trump is the most grave threat we will face to our democracy in our lifetime, and potentially in American history.",
+      "date": "2023-09-26",
+      "source": "Simon & Schuster (book listing)",
+      "url": "https://www.simonandschuster.com/books/Enough/Cassidy-Hutchinson/9781668019895"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2019",
+      "event": "Joined Trump White House",
+      "significance": "Started as intern, rose to senior aide"
+    },
+    {
+      "date": "2020-2021",
+      "event": "Served as aide to Mark Meadows",
+      "significance": "Chief of Staff's special assistant"
+    },
+    {
+      "date": "2021-01-06",
+      "event": "Witnessed events of January 6",
+      "significance": "In White House during Capitol attack"
+    },
+    {
+      "date": "2022-06-28",
+      "event": "Testified before January 6 Committee",
+      "significance": "Provided explosive testimony about Trump"
+    },
+    {
+      "date": "2023-09-26",
+      "event": "Published memoir 'Enough'",
+      "significance": "Detailed experiences and Trump's unfitness"
+    },
+    {
+      "date": "2024-08-19",
+      "event": "Endorsed Kamala Harris",
+      "significance": "Crossed party lines"
+    }
+  ],
+  "credibility": {
+    "background": "Former White House aide with direct access to Oval Office operations, key January 6 witness",
+    "positions": [
+      "Special Assistant to the President (2019-2021)",
+      "Aide to White House Chief of Staff Mark Meadows (2020-2021)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Testified Trump knew supporters were armed on January 6",
+    "Testified Trump wanted armed supporters to march to the Capitol",
+    "Called Trump the gravest threat to democracy in her book"
+  ],
+  "endorsement": "Said she would vote for Kamala Harris in 2024",
+  "sources": [
+    {
+      "title": "Jan. 6 hearing transcript (June 28, 2022)",
+      "url": "https://transcripts.cnn.com/show/cnnt/date/2022-06-28/segment/01",
+      "date": "2022-06-28",
+      "type": "transcript"
+    },
+    {
+      "title": "Enough: A Memoir (Cassidy Hutchinson)",
+      "url": "https://www.simonandschuster.com/books/Enough/Cassidy-Hutchinson/9781668019895",
+      "date": "2023-09-26",
+      "type": "book"
+    },
+    {
+      "title": "Cassidy Hutchinson says she will vote for Kamala Harris",
+      "url": "https://www.cnn.com/2024/08/19/politics/cassidy-hutchinson-kamala-harris-endorsement/index.html",
+      "date": "2024-08-19",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

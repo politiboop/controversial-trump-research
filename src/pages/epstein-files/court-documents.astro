@@ -1,0 +1,350 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const epsteinTabs = [
+  { label: 'Overview', href: '/epstein-files' },
+  { label: 'The Relationship', href: '/epstein-files/the-relationship' },
+  { label: 'Court Documents', href: '/epstein-files/court-documents' },
+  { label: 'Allegations', href: '/epstein-files/allegations' },
+  { label: 'Evidence', href: '/epstein-files/evidence' },
+  { label: 'The Network', href: '/epstein-files/epstein-network' },
+];
+
+const tickerItems = [
+  "DOJ Deleted Document EFTA01660679 Referencing Trump — Then Restored It",
+  "Senate Judiciary Voted 24-19 Bipartisan to Subpoena AG Bondi",
+  "Trump Forced MTG to Resign for Calling for Transparency",
+  "Epstein's Black Book: Multiple Trump Phone Numbers",
+  "Flight Logs Document Trump on Epstein's Plane",
+  "Virginia Giuffre Case Documents Reference Trump",
+  "Only 3M of 6M Court-Ordered Documents Turned Over",
+];
+---
+
+<ResearchLayout title="Epstein Court Documents: DOJ Cover-Up and Legal Records" description="Comprehensive documentation of court filings, depositions, unsealed records related to Trump-Epstein connections, including the January 2026 DOJ document deletion and forced resignation of Marjorie Taylor Greene.">
+
+  <SeriesNav tabs={epsteinTabs} currentPath="/epstein-files/court-documents" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Epstein Files', href: '/epstein-files' },
+    { label: 'Court Documents' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 2 of 5 &middot; The Epstein Files"
+    title="COURT DOCUMENTS"
+    titleHighlight="COURT"
+    subtitle="Official legal records, depositions, and DOJ cover-up"
+    date="Court Filings &middot; Depositions &middot; DOJ Records &middot; Active Cover-Up"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <!-- CRITICAL ALERT -->
+  <ColoredSection background="#1a0a0a" borderColor="var(--red)">
+    <AlertBanner icon="&#x1F6A8;" title="Active DOJ Cover-Up &mdash; Senate Subpoenas AG Bondi" variant="red">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>March 5, 2026:</strong> The Senate Judiciary Committee voted <strong>24-19 on a bipartisan basis</strong> to subpoena Attorney General Pam Bondi over her handling of the Epstein files. Both Democrats and Republicans voted to compel testimony &mdash; the strongest congressional enforcement action against the DOJ cover-up yet. Bondi has overseen repeated deletion and hiding of Trump-related documents, surveillance of what Congress members search in the files, and turned over only 3 million of 6 million ordered documents.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>January 30, 2026:</strong> The DOJ deleted document EFTA01660679 containing &quot;numerous complaints and allegations involving powerful individuals, including Donald Trump&quot; immediately after it went viral. The document was restored hours later &mdash; possibly with redactions or alterations. This follows Trump's threat that his &quot;friends will get hurt&quot; if Epstein files were released.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>This is not historical documentation. This is happening now.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <IntroQuote
+    quote="Court documents and legal filings provide some of the most concrete evidence of Trump's connections to Jeffrey Epstein. These records include depositions, unsealed court documents, witness testimony under oath, and official government records. The January 2026 DOJ document deletion represents an unprecedented and ongoing attempt to suppress public access to this information."
+    citation="Based on Official Court Filings, Legal Depositions, and Government Records"
+  />
+
+  <!-- THE DOJ DOCUMENT DELETION -->
+  <SectionDivider label="DOJ Cover-Up" />
+  <SectionHeader
+    eyebrow="January 2026"
+    title="The DOJ Document<br>Deletion"
+    introText="An unprecedented and active attempt to suppress public information about Trump's connections to Epstein."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F5C2;&#xFE0F;"
+      title="Document EFTA01660679"
+      body="On January 30, 2026, document EFTA01660679 was discovered on the DOJ's FOIA Electronic Reading Room. Described as containing &quot;numerous complaints and allegations involving powerful individuals, including Donald Trump,&quot; it began circulating on social media. <strong>Within hours of going viral, the DOJ deleted it from public access.</strong>"
+      tag="Deleted"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F4E2;"
+      title="Public Response and Restoration"
+      body="The deletion sparked immediate public outcry and accusations of cover-up. After several hours and intense public pressure, the DOJ restored the document. However, serious questions remain about whether the restored version is identical to the original, or if redactions or alterations were made during the deletion period."
+      tag="Restored?"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F5E3;&#xFE0F;"
+      title="&quot;Friends Will Get Hurt&quot; Context"
+      body="This deletion occurred in the context of Trump's previous statement to Rep. Marjorie Taylor Greene that releasing Epstein files would result in his &quot;friends&quot; getting &quot;hurt.&quot; When Greene publicly called for releasing the files, Trump called her a &quot;TRAITOR&quot; on Truth Social and forced her resignation."
+      tag="Trump's Warning"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="&#x26A0;&#xFE0F;" title="What This Demonstrates" variant="red">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>Systematic cover-up:</strong> The deletion represents active suppression of public information by the DOJ under Trump's administration. The timing &mdash; immediately after the document went viral &mdash; demonstrates this was not accidental but a deliberate attempt to prevent public access.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Political intimidation:</strong> Trump's forced resignation of MTG, combined with the DOJ deletion, demonstrates a pattern of using government power and political retaliation to suppress transparency.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>What is being hidden:</strong> The extreme measures taken to suppress this document and prevent release of Epstein files suggest the concealed information is highly damaging. People do not engage in cover-ups and political retaliation to hide exculpatory information.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE MTG SITUATION -->
+  <SectionDivider label="Political Retaliation" />
+  <SectionHeader
+    eyebrow="Forced Resignation"
+    title="The Marjorie Taylor<br>Greene Situation"
+    introText="Trump destroyed the career of one of his most loyal political allies to prevent transparency about Epstein files."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4E3;"
+      title="MTG's Call for Transparency"
+      body="Rep. Marjorie Taylor Greene, previously one of Trump's most loyal congressional allies, publicly called for the release of all Jeffrey Epstein-related files. She stated that transparency was essential and that the American people deserved to know the full truth."
+      tag="Transparency"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x26A0;&#xFE0F;"
+      title="Trump's Warning: &quot;Friends Will Get Hurt&quot;"
+      body="Trump told Greene that releasing the Epstein files would result in his &quot;friends&quot; getting &quot;hurt.&quot; This acknowledges Trump has friends who would be damaged by release, suggests he has knowledge of what is in the files, and frames transparency as something to be opposed."
+      tag="Admission"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F4A2;"
+      title="Trump Calls MTG a &quot;TRAITOR&quot;"
+      body="When Greene proceeded with her public call for transparency despite Trump's warning, Trump posted on Truth Social calling her a &quot;TRAITOR&quot; (in all caps). A stunning reversal for Trump, who had previously praised Greene effusively and supported her political career."
+      tag="Retaliation"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F6AA;"
+      title="Forced Resignation"
+      body="Following Trump's denunciation, Greene was forced to resign from committee positions and effectively from Congress. While framed as her decision, the circumstances make clear this was the result of Trump's pressure campaign against her for supporting Epstein file transparency."
+      tag="Forced Out"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F50D;" title="What This Reveals" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong>Extreme opposition to transparency:</strong> The political cost Trump was willing to pay indicates how damaging he believes the information to be.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong>Consciousness of guilt:</strong> Innocent people typically support transparency that would exonerate them.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong>Willingness to abuse power:</strong> Using political influence to punish those who support transparency.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong>Pattern of protection:</strong> Protecting &quot;friends&quot; who would be harmed by disclosure rather than supporting justice for Epstein's victims.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- VIRGINIA GIUFFRE CASE -->
+  <SectionDivider label="Case Documents" />
+  <SectionHeader
+    eyebrow="Unsealed Records"
+    title="Virginia Giuffre<br>Case Documents"
+    introText="Thousands of pages of documents from the Virginia Giuffre cases have been unsealed, providing detailed testimony and evidence about Epstein's trafficking operation."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4C4;"
+      title="Case Background"
+      body="Virginia Giuffre (formerly Virginia Roberts) filed multiple civil cases alleging she was trafficked by Jeffrey Epstein and forced to have sexual relations with powerful men. Thousands of pages from these cases have been unsealed, providing detailed testimony about Epstein's operation."
+      tag="Background"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4DD;"
+      title="Trump References in Documents"
+      body="Trump's name appears in various contexts: as a social acquaintance of Epstein, in descriptions of parties and events, in testimony about Epstein's social circle, and in discussions of Epstein's recruitment methods and locations."
+      tag="Multiple References"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F3DB;&#xFE0F;"
+      title="Johanna Sjoberg Deposition"
+      body="Johanna Sjoberg, who alleged she was recruited and abused by Epstein, testified in a 2016 deposition unsealed in 2024. Her testimony includes references to Trump in the context of Epstein's social circle and events at Mar-a-Lago and other locations."
+      tag="Unsealed 2024"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x2696;&#xFE0F;" title="Legal Context" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">It is critical to note that mentions of Trump in these documents do not constitute allegations of criminal conduct. Trump's name appears primarily in the context of his documented social relationship with Epstein and as a figure in Epstein's social orbit. <strong style="color: var(--text);">However, these references do establish Trump was part of Epstein's circle during the period when Epstein was actively trafficking minors.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- 2009 BRADLEY EDWARDS INVESTIGATION -->
+  <SectionDivider label="2009 Investigation" />
+  <SectionHeader
+    eyebrow="Bradley Edwards"
+    title="2009 Investigation<br>Cooperation"
+    introText="Trump's cooperation with a victims' attorney &mdash; and its important caveats."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2705;"
+      title="Trump's Cooperation"
+      body="Bradley Edwards, an attorney representing multiple Epstein victims, stated that Trump was &quot;the only person&quot; who provided information voluntarily during his 2009 investigation. Edwards described Trump as &quot;very helpful&quot; and said Trump called him back and was willing to talk."
+      tag="Cooperation"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x26A0;&#xFE0F;"
+      title="Important Caveats"
+      body="<strong>Substance unknown:</strong> The specific information Trump provided has never been made public. <strong>Timing significant:</strong> This occurred in 2009, before Trump's presidential campaign. <strong>2026 opposition:</strong> Trump's current aggressive opposition to releasing Epstein files contradicts the cooperation narrative."
+      tag="Context"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Subsequent Defamation Case"
+      body="In 2019, Edwards sued Trump for defamation after Trump accused him of being involved in a conspiracy. This case was eventually dismissed. The legal dispute raises questions about their current relationship and whether Edwards still holds the same views about Trump's helpfulness."
+      tag="Later Dispute"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- BLACK BOOK AND PHONE RECORDS -->
+  <SectionDivider label="Contact Records" />
+  <SectionHeader
+    eyebrow="Official Records"
+    title="Epstein's Black Book<br>&amp; Phone Records"
+    introText="Epstein's seized address book and subpoenaed phone records document the extensive Trump-Epstein communication channels."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4D3;"
+      title="The Black Book"
+      body="Epstein's address book, seized by authorities and entered as evidence, contains: multiple phone numbers for Donald Trump including direct lines, phone numbers for Trump's wife, contact information for Trump's assistants and staff, and Trump Tower and Mar-a-Lago numbers."
+      tag="Multiple Entries"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4DE;"
+      title="Phone Records"
+      body="Subpoenaed phone records from Epstein's residences show multiple calls to and from Trump-associated numbers during the 1990s and early 2000s. These records corroborate the social relationship documented through other evidence."
+      tag="Corroborating"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- FLIGHT LOGS -->
+  <SectionDivider label="Flight Records" />
+  <SectionHeader
+    eyebrow="Official FAA Records"
+    title="Flight Logs"
+    introText="Flight logs from Epstein's private aircraft document Trump as a passenger."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2708;&#xFE0F;"
+      title="Documented Flight: January 5, 1997"
+      body="Palm Beach to Newark. Passengers included Trump, Mark Epstein (Jeffrey's brother), and others. Documented in official FAA records and pilot logs entered into evidence in legal proceedings."
+      tag="Flight Log"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F504;"
+      title="Trump's Claims vs. Evidence"
+      body="Trump has variously claimed he flew on Epstein's plane &quot;once&quot; or &quot;never.&quot; The documented evidence establishes at least one flight occurred. The discrepancy between Trump's public statements and documented evidence raises questions about what else he may be misrepresenting."
+      tag="Contradicted"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="What Flight Logs Show and Don't Show"
+      body="Flight logs document who was on specific flights. They do <strong>not</strong> show what occurred during flights, whether passengers knew about illegal activity, or the purpose of flights. Many people flew on Epstein's plane for legitimate reasons; being on a flight does not imply wrongdoing."
+      tag="Fair Context"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- SEALED AND UNRELEASED DOCUMENTS -->
+  <SectionDivider label="What Remains Hidden" />
+  <SectionHeader
+    eyebrow="Still Sealed"
+    title="Sealed and Unreleased<br>Documents"
+    introText="Substantial amounts of Epstein-related material remain under seal or have not been released."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F512;"
+      title="What Remains Sealed"
+      body="FBI investigative files. Additional depositions and witness testimony. Video and photographic evidence in federal custody. Contents of safes and storage seized from Epstein properties. Information about Epstein's financial transactions and payments."
+      tag="Hidden"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F6AB;"
+      title="Trump's Opposition to Release"
+      body="Trump has actively opposed calls to release remaining files. His administration has not released files within executive control. He punished MTG for calling for transparency. As president, Trump has the power to declassify and release these documents. <strong>If the files were exculpatory, releasing them would benefit Trump politically.</strong>"
+      tag="Opposition"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F4E2;"
+      title="Public Interest in Release"
+      body="Given Epstein's crimes against minors, there is a strong argument for releasing all files with only necessary redactions for victim privacy. Trump's opposition, combined with active suppression like the DOJ document deletion, suggests a cover-up rather than legitimate concerns."
+      tag="Transparency"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THESE DOCUMENTS MATTER -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x1F4DA;" title="Why These Court Documents Matter" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>Evidence under oath:</strong> Court documents include testimony given under oath, with penalties for perjury. This makes them more reliable than public statements or media reports.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Active cover-up:</strong> The January 2026 DOJ document deletion represents an unprecedented attempt to suppress public information. This is not historical &mdash; it is happening now, under Trump's administration.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Pattern of suppression:</strong> The DOJ deletion, combined with Trump's forced resignation of MTG and opposition to releasing files, demonstrates a systematic effort to prevent transparency.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>What is being hidden:</strong> The extreme measures taken &mdash; destroying political allies, deleting public documents, threatening &quot;friends will get hurt&quot; &mdash; suggest the concealed information is highly damaging. Innocent people do not engage in cover-ups and retaliation to hide exculpatory information.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="The Cover-Up<br>Is Active."
+    description="DOJ document deletion. Forced resignations. Congressional surveillance. Bipartisan subpoenas. This is not history &mdash; this is happening now."
+    linkText="Next: Allegations &#x2192;"
+    linkHref="/epstein-files/allegations"
+  />
+
+  <PageNavigation
+    prev={{ label: 'The Relationship', href: '/epstein-files/the-relationship' }}
+    next={{ label: 'Allegations', href: '/epstein-files/allegations' }}
+    currentIndex={1}
+    totalPages={5}
+  />
+
+</ResearchLayout>

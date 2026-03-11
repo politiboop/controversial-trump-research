@@ -1,0 +1,86 @@
+{
+  "id": "sarah-matthews",
+  "name": "Sarah Matthews",
+  "role": "White House Deputy Press Secretary",
+  "administration": "Trump Administration",
+  "years": "2020-2021",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "press-secretary",
+  "photo": null,
+  "summary": "Former White House Deputy Press Secretary who resigned on January 6 and became a key witness before the January 6 Committee, warning Trump is 'unfit for office.'",
+  "keyStatements": [
+    {
+      "quote": "It was obvious that he had no intention of stopping the violence. He was just trying to appease people.",
+      "date": "2022-07-21",
+      "source": "C-SPAN",
+      "context": "Jan. 6 Committee hearing",
+      "url": "https://www.c-span.org/video/?521651-1/sarah-matthews-testifies-january-6-committee"
+    },
+    {
+      "quote": "I thought that the president needed to tell people to go home. I thought that he was the only person who could do that.",
+      "date": "2022-07-21",
+      "source": "C-SPAN",
+      "context": "Jan. 6 Committee hearing",
+      "url": "https://www.c-span.org/video/?521651-1/sarah-matthews-testifies-january-6-committee"
+    },
+    {
+      "quote": "I don't think he should ever be president again.",
+      "date": "2024-08-19",
+      "source": "CNN",
+      "context": "Interview after endorsing Harris",
+      "url": "https://www.cnn.com/2024/08/19/politics/sarah-matthews-kamala-harris-endorsement/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2020-06-15",
+      "event": "Became Deputy White House Press Secretary",
+      "significance": "Joined Trump administration"
+    },
+    {
+      "date": "2021-01-06",
+      "event": "Resigned immediately after Capitol attack",
+      "significance": "Left over Trump's response to riot"
+    },
+    {
+      "date": "2022-07-21",
+      "event": "Testified before January 6 Committee",
+      "significance": "Provided evidence against Trump"
+    },
+    {
+      "date": "2024-08-19",
+      "event": "Endorsed Kamala Harris",
+      "significance": "Said Trump should never be president again"
+    }
+  ],
+  "credibility": {
+    "background": "Former White House Deputy Press Secretary, witnessed January 6 events firsthand",
+    "positions": [
+      "White House Deputy Press Secretary (2020-2021)",
+      "Trump campaign spokesperson (2020)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump had no intention of stopping January 6 violence",
+    "Said Trump was the only person who could tell supporters to go home",
+    "Said Trump should never be president again"
+  ],
+  "endorsement": "Endorsed Kamala Harris in 2024",
+  "sources": [
+    {
+      "title": "Jan. 6 Committee: Sarah Matthews testimony",
+      "url": "https://www.c-span.org/video/?521651-1/sarah-matthews-testifies-january-6-committee",
+      "date": "2022-07-21",
+      "type": "testimony"
+    },
+    {
+      "title": "Former Trump aide Sarah Matthews endorses Harris",
+      "url": "https://www.cnn.com/2024/08/19/politics/sarah-matthews-kamala-harris-endorsement/index.html",
+      "date": "2024-08-19",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

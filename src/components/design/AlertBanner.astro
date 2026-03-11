@@ -1,0 +1,105 @@
+---
+interface Props {
+  icon?: string;
+  title?: string;
+  variant?: 'red' | 'amber' | 'blue' | 'green';
+}
+
+const { icon, title, variant = 'red' } = Astro.props;
+
+const colorMap = {
+  red: 'var(--red)',
+  amber: 'var(--amber)',
+  blue: 'var(--blue)',
+  green: 'var(--green)',
+};
+
+const accentColor = colorMap[variant];
+---
+
+<div class="alert-banner fade-up" style={`border-left-color: ${accentColor}`}>
+  {icon && <span class="alert-icon">{icon}</span>}
+  <div class="alert-content">
+    {title && <div class="alert-title" style={`color: ${accentColor}`}>{title}</div>}
+    <slot />
+  </div>
+</div>
+
+<style>
+  .alert-banner {
+    background: var(--card);
+    border-left: 4px solid var(--red);
+    padding: 32px 36px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .alert-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .alert-title {
+    font-family: var(--font-heading);
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  .alert-content {
+    flex: 1;
+  }
+
+  .alert-content :global(p) {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.8vw, 18px);
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .alert-content :global(p + p) {
+    margin-top: 10px;
+  }
+
+  .alert-content :global(p strong) {
+    color: var(--text);
+  }
+
+  .alert-content :global(ul) {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.8vw, 18px);
+    color: var(--muted);
+    line-height: 1.8;
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+
+  .alert-content :global(ul strong) {
+    color: var(--text);
+  }
+
+  .alert-content :global(a) {
+    color: var(--red-bright);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .alert-content :global(blockquote) {
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 24px);
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .alert-content :global(.attribution) {
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+  }
+</style>

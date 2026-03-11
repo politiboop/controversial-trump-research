@@ -1,0 +1,103 @@
+{
+  "id": "george-conway",
+  "name": "George Conway",
+  "role": "Attorney and Conservative Commentator",
+  "administration": null,
+  "years": null,
+  "militaryRank": null,
+  "category": "former-associates",
+  "subCategory": "attorney",
+  "photo": null,
+  "summary": "Conservative attorney who became a prominent Trump critic, co-founding the Lincoln Project and saying Trump is unfit for office.",
+  "keyStatements": [
+    {
+      "quote": "I don't think he's fit to be president. I think he's unfit mentally and I think he's unfit morally.",
+      "date": "2019-08-18",
+      "source": "MSNBC (Deadline: White House)",
+      "context": "Interview with Nicolle Wallace",
+      "url": "https://www.msnbc.com/deadline-white-house/watch/george-conway-trump-is-unfit-mentally-and-morally-to-be-president-66234949922"
+    },
+    {
+      "quote": "The president is mentally ill.",
+      "date": "2020-02-06",
+      "source": "The Washington Post",
+      "context": "Op-ed about Trump's behavior and fitness",
+      "url": "https://www.washingtonpost.com/opinions/2020/02/06/president-is-mentally-ill/"
+    },
+    {
+      "quote": "He’s the most dangerous man in America.",
+      "date": "2020-10-02",
+      "source": "Washingtonian",
+      "context": "Interview on Trump’s danger and the Lincoln Project",
+      "url": "https://www.washingtonian.com/2020/10/02/george-conway-the-most-dangerous-man-in-america-is-donald-trump/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2016",
+      "event": "Supported Trump for president",
+      "significance": "Initially backed Trump"
+    },
+    {
+      "date": "2017",
+      "event": "Considered for DOJ positions",
+      "significance": "Trump considered him for roles"
+    },
+    {
+      "date": "2018",
+      "event": "Began publicly criticizing Trump",
+      "significance": "Started anti-Trump advocacy"
+    },
+    {
+      "date": "2019",
+      "event": "Co-founded Checks and Balances group",
+      "significance": "Conservative lawyers against Trump"
+    },
+    {
+      "date": "2019-12",
+      "event": "Co-founded Lincoln Project",
+      "significance": "Anti-Trump Republican PAC"
+    },
+    {
+      "date": "2020",
+      "event": "Endorsed Joe Biden",
+      "significance": "Crossed party lines"
+    }
+  ],
+  "credibility": {
+    "background": "Prominent conservative attorney, argued before Supreme Court, co-founder of Lincoln Project",
+    "positions": [
+      "Partner, Wachtell, Lipton, Rosen & Katz",
+      "Co-founder, Lincoln Project",
+      "Co-founder, Checks and Balances"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump unfit mentally and morally",
+    "Said Trump was mentally ill",
+    "Called Trump the most dangerous man in America"
+  ],
+  "endorsement": "Opposes Trump",
+  "sources": [
+    {
+      "title": "George Conway: Trump is unfit mentally and morally",
+      "url": "https://www.msnbc.com/deadline-white-house/watch/george-conway-trump-is-unfit-mentally-and-morally-to-be-president-66234949922",
+      "date": "2019-08-18",
+      "type": "interview"
+    },
+    {
+      "title": "The president is mentally ill",
+      "url": "https://www.washingtonpost.com/opinions/2020/02/06/president-is-mentally-ill/",
+      "date": "2020-02-06",
+      "type": "opinion"
+    },
+    {
+      "title": "George Conway: The Most Dangerous Man in America Is Donald Trump",
+      "url": "https://www.washingtonian.com/2020/10/02/george-conway-the-most-dangerous-man-in-america-is-donald-trump/",
+      "date": "2020-10-02",
+      "type": "interview"
+    }
+  ],
+  "party": "Republican"
+}

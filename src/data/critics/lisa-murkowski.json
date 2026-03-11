@@ -1,0 +1,102 @@
+{
+  "id": "lisa-murkowski",
+  "name": "Lisa Murkowski",
+  "role": "U.S. Senator from Alaska",
+  "administration": null,
+  "years": "2002-present",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "senator",
+  "photo": null,
+  "summary": "Republican Senator from Alaska who voted to convict Trump in his second impeachment trial, endorsed Nikki Haley in the 2024 GOP primary, and said she can't get behind Trump in the general election.",
+  "keyStatements": [
+    {
+      "quote": "President Trump\u2019s actions were an impeachable offense and his course of conduct amounts to incitement of insurrection.",
+      "date": "2021-02-14",
+      "source": "Murkowski Senate Press Release",
+      "context": "Statement after voting to convict",
+      "url": "https://www.murkowski.senate.gov/press/release/murkowski-votes-to-convict-president-donald-j-trump"
+    },
+    {
+      "quote": "I certainly can't get behind Donald Trump.",
+      "date": "2024-03-24",
+      "source": "CNN",
+      "context": "Interview with Manu Raju",
+      "url": "https://prod.transcripts.cnn.com/show/ip/date/2024-03-24/segment/01"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2002-12-20",
+      "event": "Appointed to U.S. Senate",
+      "significance": "Succeeded her father Frank Murkowski"
+    },
+    {
+      "date": "2016",
+      "event": "Withdrew support for Trump after Access Hollywood tape",
+      "significance": "Early break with Trump"
+    },
+    {
+      "date": "2017-07-28",
+      "event": "Voted against Obamacare repeal",
+      "significance": "Defied Trump and GOP leadership"
+    },
+    {
+      "date": "2018-10-05",
+      "event": "Voted against Brett Kavanaugh confirmation",
+      "significance": "Opposed Trump Supreme Court nominee"
+    },
+    {
+      "date": "2021-02-13",
+      "event": "Voted to convict Trump in second impeachment",
+      "significance": "One of seven Republicans to vote for conviction"
+    },
+    {
+      "date": "2024-03-01",
+      "event": "Endorsed Nikki Haley in GOP primary",
+      "significance": "Publicly rejected Trump candidacy"
+    },
+    {
+      "date": "2024-03-24",
+      "event": "Said she can't get behind Trump",
+      "significance": "Confirmed she would not support him in the general election"
+    }
+  ],
+  "credibility": {
+    "background": "Long-serving U.S. Senator known for independent streak, member of key Senate committees",
+    "positions": [
+      "U.S. Senator from Alaska (2002-present)",
+      "Member, Senate Energy and Natural Resources Committee",
+      "Member, Senate Appropriations Committee",
+      "Member, Senate Indian Affairs Committee"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump's actions amounted to incitement of insurrection",
+    "Said she can't get behind Trump in 2024",
+    "Endorsed Nikki Haley instead of Trump in the GOP primary"
+  ],
+  "endorsement": "Endorsed Nikki Haley in 2024 Republican primary; said she can't get behind Trump",
+  "sources": [
+    {
+      "title": "Murkowski Votes to Convict President Donald J. Trump",
+      "url": "https://www.murkowski.senate.gov/press/release/murkowski-votes-to-convict-president-donald-j-trump",
+      "date": "2021-02-14",
+      "type": "government"
+    },
+    {
+      "title": "Haley Campaign Press Release - Senator Lisa Murkowski Endorses Nikki Haley for President",
+      "url": "https://www.presidency.ucsb.edu/documents/haley-campaign-press-release-senator-lisa-murkowski-endorses-nikki-haley-for-president",
+      "date": "2024-03-01",
+      "type": "campaign"
+    },
+    {
+      "title": "CNN Inside Politics Sunday transcript (March 24, 2024)",
+      "url": "https://prod.transcripts.cnn.com/show/ip/date/2024-03-24/segment/01",
+      "date": "2024-03-24",
+      "type": "transcript"
+    }
+  ],
+  "party": "Republican"
+}

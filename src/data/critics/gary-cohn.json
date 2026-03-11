@@ -1,0 +1,90 @@
+{
+  "id": "gary-cohn",
+  "name": "Gary Cohn",
+  "role": "Director of the National Economic Council",
+  "administration": "Trump Administration",
+  "years": "2017-2018",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "economic-policy",
+  "photo": null,
+  "summary": "Former National Economic Council director who said the administration must do better in condemning white supremacists after Charlottesville.",
+  "keyStatements": [
+    {
+      "quote": "Citizens standing up for equality and freedom can never be equated with white supremacists, neo-Nazis, and the KKK.",
+      "date": "2017-08-15",
+      "source": "Financial Times",
+      "context": "Response to Trump's Charlottesville remarks",
+      "url": "https://www.ft.com/content/7d7a8a7e-83e3-11e7-94e2-c5b903247afd"
+    },
+    {
+      "quote": "This administration can and must do better in consistently and unequivocally condemning these groups and do everything we can to heal the deep divisions that exist in our communities.",
+      "date": "2017-08-15",
+      "source": "Financial Times",
+      "url": "https://www.ft.com/content/7d7a8a7e-83e3-11e7-94e2-c5b903247afd",
+      "context": "Response to Trump's Charlottesville remarks"
+    },
+    {
+      "quote": "Trump is just not worth it for the country.",
+      "date": "2023-07-18",
+      "source": "Politico",
+      "url": "https://www.politico.com/news/2023/07/18/gary-cohn-trump-not-worth-it-00106905"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-01-20",
+      "event": "Became Director of National Economic Council",
+      "significance": "Joined Trump administration"
+    },
+    {
+      "date": "2017-08",
+      "event": "Nearly resigned after Charlottesville",
+      "significance": "Criticized Trump's 'both sides' comment"
+    },
+    {
+      "date": "2018-03-06",
+      "event": "Resigned from White House",
+      "significance": "Left over steel and aluminum tariffs"
+    },
+    {
+      "date": "2020",
+      "event": "Did not endorse Trump for re-election",
+      "significance": "Distanced himself from Trump"
+    },
+    {
+      "date": "2023-07-18",
+      "event": "Said Trump is 'not worth it'",
+      "significance": "Opposes Trump's return"
+    }
+  ],
+  "credibility": {
+    "background": "Former Director of National Economic Council, former President and COO of Goldman Sachs",
+    "positions": [
+      "Director, National Economic Council (2017-2018)",
+      "President and COO, Goldman Sachs (2006-2017)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said white supremacists cannot be equated with those standing up for equality",
+    "Said the administration must do better condemning hate groups",
+    "Said Trump is not worth it for the country"
+  ],
+  "endorsement": "Has not endorsed Trump for 2024",
+  "sources": [
+    {
+      "title": "Gary Cohn on Charlottesville: condemning white supremacists",
+      "url": "https://www.ft.com/content/7d7a8a7e-83e3-11e7-94e2-c5b903247afd",
+      "date": "2017-08-15",
+      "type": "interview"
+    },
+    {
+      "title": "Gary Cohn: Trump is 'not worth it'",
+      "url": "https://www.politico.com/news/2023/07/18/gary-cohn-trump-not-worth-it-00106905",
+      "date": "2023-07-18",
+      "type": "news"
+    }
+  ],
+  "party": "Democrat"
+}

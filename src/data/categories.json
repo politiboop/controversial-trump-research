@@ -1,0 +1,161 @@
+{
+  "categories": {
+    "democracy": {
+      "id": "democracy",
+      "title": "Democracy & Rule of Law",
+      "icon": "🗽",
+      "description": "Attacks on the electoral process, democratic institutions, election fraud claims, and authoritarian threats to democracy itself",
+      "color": "#dc2626",
+      "examples": ["Big Lie", "January 6", "Dictator statements", "Voter suppression"]
+    },
+    "women": {
+      "id": "women",
+      "title": "Women & Sexual Misconduct",
+      "icon": "♀️",
+      "description": "Sexual assault allegations, attacks on women, and misogynistic behavior",
+      "color": "#ec4899",
+      "examples": ["E. Jean Carroll", "Access Hollywood", "Attacks on women"]
+    },
+    "racism": {
+      "id": "racism",
+      "title": "Racism & Xenophobia",
+      "icon": "✊",
+      "description": "Racist statements, xenophobic policies, and attacks on minorities",
+      "color": "#7c3aed",
+      "examples": ["Muslim ban", "Charlottesville", "Immigration cruelty"]
+    },
+    "corruption": {
+      "id": "corruption",
+      "title": "Corruption & Conflicts",
+      "icon": "💰",
+      "description": "Financial corruption, bribery, self-dealing, profiting from office, emoluments violations, and conflicts of interest",
+      "color": "#f59e0b",
+      "examples": ["Meme coin", "Qatar bribe", "Emoluments", "Foreign payments"]
+    },
+    "abuse-of-power": {
+      "id": "abuse-of-power",
+      "title": "Abuse of Power",
+      "icon": "⚖️",
+      "description": "Misusing presidential and executive powers for personal or political gain - DOJ weaponization, retaliation against critics, undermining federal institutions, and executive overreach",
+      "color": "#8b5cf6",
+      "examples": ["Jan 6 pardons", "DOJ targeting", "IG purges", "Cabinet retaliation", "Fed attacks"]
+    },
+    "character": {
+      "id": "character",
+      "title": "Character & Dishonesty",
+      "icon": "🎭",
+      "description": "Pathological lying, broken promises, fundamental character flaws, and general dishonesty not specifically about power abuse or corruption",
+      "color": "#64748b",
+      "examples": ["30,000+ lies", "Broken promises", "Alternative facts", "Crowd size lies"]
+    },
+    "narcissism": {
+      "id": "narcissism",
+      "title": "Narcissism & Self-Aggrandizement",
+      "icon": "🤳",
+      "description": "Putting his name/face on everything, vanity projects, and actions done purely for personal glorification",
+      "color": "#d946ef",
+      "examples": ["Stimulus check signature", "Nobel Prize obsession", "Trump branding on government"]
+    },
+    "rewriting-history": {
+      "id": "rewriting-history",
+      "title": "Rewriting History",
+      "icon": "📜",
+      "description": "Denying past statements, rewriting events, gaslighting about documented facts, and revisionist narratives",
+      "color": "#0891b2",
+      "examples": ["Jan 6 revisionism", "Denying documented quotes", "Rewriting policy positions"]
+    },
+    "ice-enforcement": {
+      "id": "ice-enforcement",
+      "title": "ICE & Immigration Enforcement",
+      "icon": "🚨",
+      "description": "Fatal shootings, wrongful detentions, family separations, and federal immigration enforcement abuses",
+      "color": "#dc2626",
+      "examples": ["Fatal ICE shootings", "US citizens detained", "Family separation"]
+    },
+    "public-health": {
+      "id": "public-health",
+      "title": "Public Health",
+      "icon": "🏥",
+      "description": "Pandemic mismanagement, anti-vaccine policies, healthcare cuts, cancer research cuts, and threats to public health",
+      "color": "#ef4444",
+      "examples": ["COVID failures", "Anti-vaccine stance", "Cancer research cuts", "Healthcare cuts", "RFK Jr. appointment"]
+    },
+    "absurd": {
+      "id": "absurd",
+      "title": "The Absurd Moments",
+      "icon": "🤦",
+      "description": "The greatest hits of bizarre statements and ridiculous proposals",
+      "color": "#10b981",
+      "examples": ["Nuking hurricanes", "Revolutionary War airports", "Buying Greenland"]
+    }
+  },
+  "severityLevels": {
+    "catastrophic": {
+      "level": "catastrophic",
+      "label": "Catastrophic",
+      "icon": "🔴",
+      "description": "Threatened democracy, caused deaths, or led to impeachment",
+      "color": "#991b1b"
+    },
+    "serious": {
+      "level": "serious",
+      "label": "Serious",
+      "icon": "🟠",
+      "description": "Criminal behavior, court rulings against, or major harm",
+      "color": "#c2410c"
+    },
+    "concerning": {
+      "level": "concerning",
+      "label": "Concerning",
+      "icon": "🟡",
+      "description": "Unethical, norm-breaking, or clearly verified",
+      "color": "#a16207"
+    },
+    "disputed": {
+      "level": "disputed",
+      "label": "Disputed",
+      "icon": "🔵",
+      "description": "Alleged or contested, Trump denies",
+      "color": "#1e40af"
+    },
+    "absurd": {
+      "level": "absurd",
+      "label": "Absurd",
+      "icon": "😂",
+      "description": "Ridiculous or bizarre but less harmful",
+      "color": "#059669"
+    }
+  },
+  "timelines": {
+    "pre-2016": {
+      "id": "pre-2016",
+      "label": "Before 2016",
+      "description": "Pre-presidency behavior and statements",
+      "range": "Before 2016"
+    },
+    "first-term": {
+      "id": "first-term",
+      "label": "First Term",
+      "description": "January 2017 - January 2021",
+      "range": "2017-2021"
+    },
+    "between-terms": {
+      "id": "between-terms",
+      "label": "Between Terms",
+      "description": "Post-presidency, pre-2024 campaign",
+      "range": "2021-2023"
+    },
+    "campaign-2024": {
+      "id": "campaign-2024",
+      "label": "2024 Campaign",
+      "description": "2024 presidential campaign",
+      "range": "2023-2024"
+    },
+    "second-term": {
+      "id": "second-term",
+      "label": "Second Term",
+      "description": "January 2025 - Present",
+      "range": "2025-2026"
+    }
+  }
+}

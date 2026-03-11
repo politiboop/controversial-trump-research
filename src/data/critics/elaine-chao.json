@@ -1,0 +1,79 @@
+{
+  "id": "elaine-chao",
+  "name": "Elaine Chao",
+  "role": "Secretary of Transportation",
+  "administration": "Trump Administration",
+  "years": "2017-2021",
+  "militaryRank": null,
+  "category": "former-cabinet",
+  "subCategory": "transportation",
+  "photo": null,
+  "summary": "Former Transportation Secretary who resigned after January 6, calling the attack \"entirely avoidable\" and saying she was deeply troubled by it.",
+  "keyStatements": [
+    {
+      "quote": "Yesterday, our country experienced a traumatic and entirely avoidable event as supporters of the President stormed the Capitol building following a rally he addressed. As I'm sure is the case with many of you, it has deeply troubled me in a way that I simply cannot set aside.",
+      "date": "2021-01-07",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2021/01/07/trump-riot-fallout-officials-quit-over-capitol-mob-attack.html"
+    },
+    {
+      "quote": "It has been the honor of a lifetime to serve the U.S. Department of Transportation.",
+      "date": "2021-01-07",
+      "source": "CNBC",
+      "context": "Resigning effective January 11",
+      "url": "https://www.cnbc.com/2021/01/07/trump-riot-fallout-officials-quit-over-capitol-mob-attack.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2001-2009",
+      "event": "Secretary of Labor under George W. Bush",
+      "significance": "First Asian-American woman in Cabinet"
+    },
+    {
+      "date": "2017-01-31",
+      "event": "Confirmed as Transportation Secretary",
+      "significance": "Joined Trump cabinet"
+    },
+    {
+      "date": "2021-01-07",
+      "event": "Resigned after January 6",
+      "significance": "First cabinet member to resign after attack"
+    },
+    {
+      "date": "2021-01-11",
+      "event": "Resignation took effect",
+      "significance": "Left before end of term"
+    }
+  ],
+  "credibility": {
+    "background": "Former Transportation Secretary, former Labor Secretary, first Asian-American woman in Cabinet",
+    "positions": [
+      "U.S. Secretary of Transportation (2017-2021)",
+      "U.S. Secretary of Labor (2001-2009)",
+      "Director, Peace Corps (1991-1992)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said the January 6 attack was entirely avoidable",
+    "Said the events deeply troubled her",
+    "Resigned after January 6"
+  ],
+  "endorsement": "Resigned in protest after January 6",
+  "sources": [
+    {
+      "title": "Trump riot fallout: Elaine Chao quits Cabinet",
+      "url": "https://www.cnbc.com/2021/01/07/trump-riot-fallout-officials-quit-over-capitol-mob-attack.html",
+      "date": "2021-01-07",
+      "type": "news"
+    },
+    {
+      "title": "Elaine Chao resigns as transportation secretary",
+      "url": "https://www.washingtonpost.com/local/trafficandcommuting/elaine-chao-resigns/2021/01/07/7fcbe17a-511f-11eb-bda4-615aaefd0555_story.html",
+      "date": "2021-01-07",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

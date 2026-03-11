@@ -1,0 +1,60 @@
+{
+  "id": "george-will",
+  "name": "George Will",
+  "role": "Conservative Columnist",
+  "administration": null,
+  "years": null,
+  "category": "republican-critics",
+  "party": "Republican (left party in 2016)",
+  "summary": "Pulitzer Prize-winning conservative columnist who left the Republican Party over Trump and became one of his most intellectually rigorous critics, regularly writing columns condemning Trump's character and policies.",
+  "keyStatements": [
+    {
+      "quote": "Trump has an unerring instinct for the lowest common denominator. His is a coarse and corrupting presidency... This unraveling presidency began with the Crybaby-in-Chief banging his spoon on his highchair tray to protest a photograph.",
+      "context": "Column criticizing Trump's presidency",
+      "date": "2017-01-25",
+      "source": "https://www.washingtonpost.com/opinions/trump-has-a-dangerous-disability/2017/05/03/56ca6118-2f6b-11e7-9534-00e4656c22aa_story.html"
+    },
+    {
+      "quote": "Donald Trump's damage to the Republican Party, although already considerable, has barely begun... Republicans might have an even worse election in 2020.",
+      "context": "Urging voters to vote against Republicans in 2018 midterms",
+      "date": "2018-06-22",
+      "source": "https://www.washingtonpost.com/opinions/vote-against-the-gop-this-november/2018/06/22/a6378306-7575-11e8-b4b7-308400242c2e_story.html"
+    },
+    {
+      "quote": "Trump is what he is, a floundering, inarticulate jumble of gnawing insecurities and not-at-all compensating vanities, which is pathetic.",
+      "context": "Analyzing Trump's character",
+      "date": "2019-09-05",
+      "source": "https://www.washingtonpost.com/opinions/trumps-behavior-is-not-normal-stop-treating-it-as-if-it-is/2019/09/05/d9d8c07e-cfd4-11e9-b29b-a528dc82154a_story.html"
+    }
+  ],
+  "background": "George Will is a Pulitzer Prize-winning conservative columnist who has written for The Washington Post since 1974. A leading intellectual voice of conservatism for decades, he was a registered Republican for most of his adult life. However, he left the Republican Party shortly before the 2016 Republican National Convention due to Trump's nomination, switching his registration to 'unaffiliated.'",
+  "oppositionReasons": [
+    "Believes Trump lacks the character, temperament, and intellect for presidency",
+    "Views Trump as antithetical to conservative principles and values",
+    "Opposes Trump's coarse rhetoric and attacks on institutions",
+    "Concerned about Trump's authoritarian tendencies",
+    "Believes Trump has corrupted the Republican Party beyond recognition"
+  ],
+  "notableActions": [
+    "Left the Republican Party in 2016 over Trump's nomination",
+    "Urged voters to vote against Republicans in 2018 to punish GOP for enabling Trump",
+    "Wrote dozens of columns systematically dismantling Trump's policies and character",
+    "Endorsed Joe Biden in 2020",
+    "Consistently defended constitutional conservatism against Trumpism"
+  ],
+  "credibility": {
+    "strengths": [
+      "Pulitzer Prize winner for commentary",
+      "Over 50 years of influential conservative writing",
+      "Deep knowledge of political philosophy and American history",
+      "Reputation for intellectual rigor and principled conservatism",
+      "Widely respected across political spectrum for consistency"
+    ],
+    "considerations": [
+      "Some view him as out of touch with working-class conservatives",
+      "His brand of conservatism has less influence in Trump-era GOP",
+      "Critics say he represents elitist establishment conservatism",
+      "Never held elected office or government position"
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "id": "john-mccain",
+  "name": "John McCain",
+  "role": "U.S. Senator from Arizona",
+  "administration": null,
+  "years": "1987-2018",
+  "militaryRank": "Captain, U.S. Navy (Retired)",
+  "category": "congress",
+  "subCategory": "senator",
+  "photo": null,
+  "summary": "War hero and U.S. Senator who criticized Trump, including after Trump's attack on his POW record, and cast the decisive vote against the 2017 Obamacare repeal.",
+  "keyStatements": [
+    {
+      "quote": "He's not a war hero. He was a war hero because he was captured. I like people who weren't captured.",
+      "date": "2015-07-18",
+      "source": "CNN",
+      "context": "Trump remark about McCain at the Family Leadership Summit",
+      "url": "https://www.cnn.com/2015/07/18/politics/donald-trump-john-mccain-war-hero/index.html"
+    },
+    {
+      "quote": "We are not the president's subordinates. We are his equals.",
+      "date": "2018-08-25",
+      "source": "Washington Post",
+      "context": "Excerpt from McCain's memoir released after his death",
+      "url": "https://www.washingtonpost.com/politics/2018/08/26/mccain-book-learn-how-respect-office-presidency/"
+    },
+    {
+      "quote": "Our relationship has been one of fair and unfair criticism, me of Mr. Trump. But at some point, I thought the presidency would show more respect for the office than he does for himself.",
+      "date": "2018-08-25",
+      "source": "Washington Post",
+      "context": "Excerpt from McCain's memoir",
+      "url": "https://www.washingtonpost.com/politics/2018/08/26/mccain-book-learn-how-respect-office-presidency/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1967-1973",
+      "event": "POW in Vietnam",
+      "significance": "Tortured for 5.5 years as prisoner of war"
+    },
+    {
+      "date": "1987-01-03",
+      "event": "Became U.S. Senator",
+      "significance": "Entered Senate"
+    },
+    {
+      "date": "2008",
+      "event": "Republican presidential nominee",
+      "significance": "Lost to Barack Obama"
+    },
+    {
+      "date": "2015-07",
+      "event": "Trump attacked McCain's military service",
+      "significance": "Start of public feud"
+    },
+    {
+      "date": "2016-10",
+      "event": "Withdrew support for Trump after Access Hollywood tape",
+      "significance": "Said he'd write in another candidate"
+    },
+    {
+      "date": "2017-07-28",
+      "event": "Cast decisive vote against Obamacare repeal",
+      "significance": "Thumbs down vote blocked Trump's priority"
+    },
+    {
+      "date": "2018-08-25",
+      "event": "Died from brain cancer",
+      "significance": "Requested Trump not attend funeral"
+    }
+  ],
+  "credibility": {
+    "background": "War hero, POW for 5.5 years in Vietnam, U.S. Senator for 31 years, 2008 Republican presidential nominee",
+    "positions": [
+      "U.S. Senator from Arizona (1987-2018)",
+      "U.S. Representative from Arizona (1983-1987)",
+      "Chairman, Senate Armed Services Committee (2015-2018)",
+      "Republican presidential nominee (2008)"
+    ],
+    "awards": [
+      "Silver Star",
+      "Bronze Star",
+      "Purple Heart",
+      "Distinguished Flying Cross"
+    ]
+  },
+  "oppositionReasons": [
+    "Trump attacked McCain's military service and POW status",
+    "Said the president should respect the office and the Constitution",
+    "Warned Congress are not the president's subordinates"
+  ],
+  "endorsement": "Did not support Trump; requested Trump not attend his funeral",
+  "sources": [
+    {
+      "title": "Trump: McCain was not a war hero",
+      "url": "https://www.cnn.com/2015/07/18/politics/donald-trump-john-mccain-war-hero/index.html",
+      "date": "2015-07-18",
+      "type": "news"
+    },
+    {
+      "title": "McCain book excerpt: Learn how to respect the office of the presidency",
+      "url": "https://www.washingtonpost.com/politics/2018/08/26/mccain-book-learn-how-respect-office-presidency/",
+      "date": "2018-08-26",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

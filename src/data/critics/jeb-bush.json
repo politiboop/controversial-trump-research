@@ -1,0 +1,60 @@
+{
+  "id": "jeb-bush",
+  "name": "Jeb Bush",
+  "role": "Former Governor of Florida",
+  "administration": null,
+  "years": "1999-2007",
+  "category": "republican-critics",
+  "party": "Republican",
+  "summary": "Former Florida Governor and 2016 presidential candidate who became a frequent target of Trump's attacks and emerged as a consistent critic of Trump's character and fitness for office.",
+  "keyStatements": [
+    {
+      "quote": "Donald Trump has not demonstrated that temperament or strength of character. He has not displayed a respect for the Constitution. And, he is not a consistent conservative.",
+      "context": "Explaining why he would not support Trump in 2016",
+      "date": "2016-05-06",
+      "source": "https://www.washingtonpost.com/news/post-politics/wp/2016/05/06/jeb-bush-says-he-will-not-vote-for-trump/"
+    },
+    {
+      "quote": "The American Presidency is an office that goes beyond just politics. It requires of its occupant great fortitude and humility and the temperament and strong character to deal with the unexpected challenges that will inevitably impact our nation in the next four years.",
+      "context": "Statement on not endorsing Trump",
+      "date": "2016-05-06",
+      "source": "https://www.politico.com/story/2016/05/jeb-bush-wont-vote-for-trump-222925"
+    },
+    {
+      "quote": "This is not conservatism... This is not leadership.",
+      "context": "Criticizing Trump's Muslim ban proposal",
+      "date": "2015-12-08",
+      "source": "https://www.cnn.com/2015/12/08/politics/jeb-bush-donald-trump-muslim-ban/"
+    }
+  ],
+  "background": "Jeb Bush served as Governor of Florida from 1999 to 2007 and is the son of President George H.W. Bush and brother of President George W. Bush. He entered the 2016 presidential race as a front-runner but struggled against Trump's attacks, which branded him as 'low energy.' Trump's dominance and personal attacks contributed to Bush's early exit from the race.",
+  "oppositionReasons": [
+    "Believes Trump lacks the temperament and character for the presidency",
+    "Opposes Trump's divisive rhetoric and personal attacks",
+    "Concerned about Trump's respect for constitutional principles",
+    "Questions Trump's commitment to conservative values",
+    "Views Trump's approach as damaging to Republican Party"
+  ],
+  "notableActions": [
+    "Refused to endorse or vote for Trump in 2016",
+    "Publicly criticized Trump's Muslim ban proposal",
+    "Challenged Trump directly in 2016 primary debates",
+    "Wrote op-eds criticizing Trump's policies and character",
+    "Maintained distance from Trump throughout his presidency"
+  ],
+  "credibility": {
+    "strengths": [
+      "Two-term governor of Florida, one of the largest states",
+      "Member of prominent Republican political family",
+      "Reputation as conservative reformer in education and government",
+      "Strong fundraising network and establishment support",
+      "Track record of electoral success in diverse state"
+    ],
+    "considerations": [
+      "Associated with Bush dynasty that some voters rejected",
+      "Campaign struggled to respond effectively to Trump's attacks",
+      "Some conservatives viewed him as too moderate on immigration",
+      "Early exit from 2016 race limited his platform"
+    ]
+  }
+}

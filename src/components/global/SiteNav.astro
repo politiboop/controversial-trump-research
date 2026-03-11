@@ -1,0 +1,196 @@
+---
+const navItems = [
+  { label: 'Science', href: '/attacks-on-science' },
+  { label: 'Fascism', href: '/fascism' },
+  { label: 'Democracy', href: '/attacking-democracy' },
+  { label: 'Rhetoric', href: '/dangerous-rhetoric' },
+  { label: 'Epstein', href: '/epstein-files' },
+  { label: 'Elections', href: '/election-rigging' },
+  { label: 'Critics', href: '/critics' },
+  { label: 'Posts', href: '/posts' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="/" class="site-nav-logo">
+      <span class="logo-the">THE</span>
+      <span class="logo-trump">TRUMP</span>
+      <span class="logo-tracker">TRACKER</span>
+      <span class="logo-tag">RESEARCH</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="site-nav-links">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class:list={['nav-link', { active: currentPath.startsWith(item.href) }]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="https://thetrumptracker.com" class="nav-cta" target="_blank" rel="noopener">
+        Controversies →
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.site-nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links.classList.toggle('open');
+    });
+  }
+</script>
+
+<style>
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--black);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-nav-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .site-nav-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .logo-the { color: var(--muted); }
+  .logo-trump { color: var(--red); }
+  .logo-tracker { color: var(--text); }
+  .logo-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--faint);
+    border: 1px solid var(--faint);
+    padding: 1px 6px;
+    margin-left: 8px;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    transition: transform 0.2s;
+  }
+
+  .site-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-link {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--red);
+  }
+
+  .nav-cta {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 5px 14px;
+    margin-left: 12px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .site-nav-links {
+      display: none;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+      flex-direction: column;
+      padding: 16px 24px;
+      gap: 8px;
+    }
+
+    .site-nav-links.open {
+      display: flex;
+    }
+
+    .nav-link {
+      padding: 10px 0;
+    }
+
+    .nav-cta {
+      margin-left: 0;
+      margin-top: 8px;
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="timeline-section">
+  <div class="timeline-inner">
+    <h2 class="timeline-title fade-up">
+      <Fragment set:html={title} />
+      {subtitle && <span class="timeline-subtitle">{subtitle}</span>}
+    </h2>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .timeline-section {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 70px 24px;
+  }
+
+  .timeline-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .timeline-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 72px);
+    margin-bottom: 50px;
+    color: var(--text);
+  }
+
+  .timeline-subtitle {
+    font-size: 0.55em;
+    color: var(--muted);
+  }
+</style>

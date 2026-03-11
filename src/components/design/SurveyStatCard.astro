@@ -1,0 +1,50 @@
+---
+interface Props {
+  label: string;
+  value: string;
+  description: string;
+  accentColor?: string;
+}
+
+const { label, value, description, accentColor = 'var(--red)' } = Astro.props;
+---
+
+<div class="survey-card fade-up" style={`border-top-color: ${accentColor}`}>
+  <div class="survey-label" style={`color: ${accentColor}`}>{label}</div>
+  <div class="survey-value" style={`color: ${accentColor}`}>{value}</div>
+  <div class="survey-desc" set:html={description} />
+</div>
+
+<style>
+  .survey-card {
+    background: var(--card);
+    border-top: 3px solid;
+    text-align: left;
+    padding: 28px;
+  }
+
+  .survey-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .survey-value {
+    font-family: var(--font-display);
+    font-size: 52px;
+    line-height: 1;
+  }
+
+  .survey-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+
+  .survey-desc :global(strong) {
+    color: var(--text);
+  }
+</style>

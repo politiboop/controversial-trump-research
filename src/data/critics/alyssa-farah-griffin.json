@@ -1,0 +1,91 @@
+{
+  "id": "alyssa-farah-griffin",
+  "name": "Alyssa Farah Griffin",
+  "role": "White House Director of Strategic Communications",
+  "administration": "Trump Administration",
+  "years": "2020",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "communications",
+  "photo": null,
+  "summary": "Former White House communications director and co-host of The View who said she is 'genuinely afraid' of Trump and voted for Kamala Harris in 2024.",
+  "keyStatements": [
+    {
+      "quote": "Just to be honest, I'm genuinely afraid of him.",
+      "date": "2023-03-02",
+      "source": "TheWrap",
+      "context": "The View discussion about Trump and retaliation",
+      "url": "https://www.thewrap.com/the-view-alyssa-farah-griffin-afraid-of-trump-video/"
+    },
+    {
+      "quote": "For the first time in my life, I voted for a Democrat. I voted for Kamala Harris.",
+      "date": "2024-11-05",
+      "source": "TheWrap",
+      "context": "The View Election Day episode",
+      "url": "https://www.thewrap.com/the-view-alyssa-farah-griffin-votes-kamala-harris/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-01",
+      "event": "Became Press Secretary to Vice President Pence",
+      "significance": "Joined Trump administration"
+    },
+    {
+      "date": "2019",
+      "event": "Became Pentagon Press Secretary",
+      "significance": "Moved to Department of Defense"
+    },
+    {
+      "date": "2020",
+      "event": "Became White House Director of Strategic Communications",
+      "significance": "Senior communications role"
+    },
+    {
+      "date": "2020-12",
+      "event": "Resigned from Trump administration",
+      "significance": "Left before end of term"
+    },
+    {
+      "date": "2023-03-02",
+      "event": "Said she was 'genuinely afraid' of Trump on The View",
+      "significance": "Public warning about a second Trump term"
+    },
+    {
+      "date": "2024-11-05",
+      "event": "Said she voted for Kamala Harris",
+      "significance": "First time voting for a Democrat"
+    }
+  ],
+  "credibility": {
+    "background": "Former Trump White House official, co-host of The View, Republican communications strategist",
+    "positions": [
+      "White House Director of Strategic Communications (2020)",
+      "Pentagon Press Secretary (2019-2020)",
+      "Press Secretary to Vice President (2017-2019)",
+      "Co-host of The View (2022-present)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said she is 'genuinely afraid' of Trump",
+    "Warned about retaliation if Trump returned to office",
+    "Voted for Kamala Harris instead of Trump in 2024"
+  ],
+  "endorsement": "Voted for Kamala Harris in 2024",
+  "sources": [
+    {
+      "title": "\u2018The View\u2019 Host Alyssa Farah Griffin Says She\u2019s \u2018Genuinely Afraid\u2019 of Trump",
+      "url": "https://www.thewrap.com/the-view-alyssa-farah-griffin-afraid-of-trump-video/",
+      "date": "2023-03-02",
+      "type": "news"
+    },
+    {
+      "title": "The View: Alyssa Farah Griffin Admits She Voted for Harris",
+      "url": "https://www.thewrap.com/the-view-alyssa-farah-griffin-votes-kamala-harris/",
+      "date": "2024-11-05",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

@@ -1,0 +1,32 @@
+---
+interface Props {
+  noPadding?: boolean;
+}
+
+const { noPadding } = Astro.props;
+---
+
+<div class:list={['category-grid', { 'no-pad': noPadding }]}>
+  <slot />
+</div>
+
+<style>
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  .category-grid.no-pad {
+    padding: 0;
+  }
+
+  @media (max-width: 640px) {
+    .category-grid {
+      padding: 0 12px 40px;
+    }
+  }
+</style>

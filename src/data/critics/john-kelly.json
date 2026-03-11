@@ -1,0 +1,86 @@
+{
+  "id": "john-kelly",
+  "name": "John F. Kelly",
+  "role": "White House Chief of Staff",
+  "administration": "Trump Administration",
+  "years": "2017-2019",
+  "militaryRank": "General, U.S. Marine Corps (Retired)",
+  "category": "former-cabinet",
+  "subCategory": "military-leader",
+  "photo": null,
+  "summary": "Trump's longest-serving Chief of Staff who called him a fascist and detailed his admiration for Adolf Hitler.",
+  "keyStatements": [
+    {
+      "quote": "Certainly the former president is in the far-right area, he's certainly an authoritarian, admires people who are dictators — he has said that. So he certainly falls into the general definition of fascist, for sure.",
+      "date": "2024-10-23",
+      "source": "PBS NewsHour (AP)",
+      "url": "https://www.pbs.org/newshour/politics/trump-said-hitler-did-some-good-things-and-wanted-generals-like-the-nazis-former-chief-of-staff-kelly-claims"
+    },
+    {
+      "quote": "He said on numerous occasions that Hitler 'did some good things, too.'",
+      "date": "2024-10-23",
+      "source": "PBS NewsHour (AP)",
+      "context": "Detailing Trump's fascination with Hitler",
+      "url": "https://www.pbs.org/newshour/politics/trump-said-hitler-did-some-good-things-and-wanted-generals-like-the-nazis-former-chief-of-staff-kelly-claims"
+    },
+    {
+      "quote": "A person that thinks those who defend their country in uniform, or are shot down or seriously wounded in combat, or spend years being tortured as POWs are all 'suckers' because 'there is nothing in it for them.'",
+      "date": "2023-10-03",
+      "source": "CNN (transcript)",
+      "context": "Statement confirming reports about Trump's remarks on servicemembers",
+      "url": "https://transcripts.cnn.com/show/cnr/date/2023-10-03/segment/22"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-07-31",
+      "event": "Appointed White House Chief of Staff",
+      "significance": "Became Trump's longest-serving Chief of Staff"
+    },
+    {
+      "date": "2019-01-02",
+      "event": "Left White House",
+      "significance": "Departed after 18 months of service"
+    },
+    {
+      "date": "2024-10-23",
+      "event": "Called Trump a fascist in interviews reported by AP/PBS",
+      "significance": "Unprecedented criticism from former Chief of Staff"
+    }
+  ],
+  "credibility": {
+    "background": "Four-star Marine general with 46 years of service, Gold Star father",
+    "positions": [
+      "White House Chief of Staff (2017-2019)",
+      "Secretary of Homeland Security (2017)",
+      "Commander, U.S. Southern Command (2012-2016)"
+    ],
+    "awards": [
+      "Defense Distinguished Service Medal",
+      "Silver Star",
+      "Bronze Star"
+    ]
+  },
+  "oppositionReasons": [
+    "Believes Trump meets the definition of fascist",
+    "Concerned about Trump's admiration for dictators",
+    "Witnessed Trump's disrespect for military service members",
+    "Saw Trump's lack of understanding of history and rule of law"
+  ],
+  "endorsement": "Did not endorse any candidate but urged voters to consider Trump unfit",
+  "sources": [
+    {
+      "title": "CNN Newsroom transcript (Oct. 3, 2023) — John Kelly statement on 'suckers' and 'losers'",
+      "url": "https://transcripts.cnn.com/show/cnr/date/2023-10-03/segment/22",
+      "date": "2023-10-03",
+      "type": "transcript"
+    },
+    {
+      "title": "Trump said Hitler 'did some good things' and wanted generals like the Nazis, former chief of staff Kelly claims",
+      "url": "https://www.pbs.org/newshour/politics/trump-said-hitler-did-some-good-things-and-wanted-generals-like-the-nazis-former-chief-of-staff-kelly-claims",
+      "date": "2024-10-23",
+      "type": "news"
+    }
+  ],
+  "party": "Independent"
+}

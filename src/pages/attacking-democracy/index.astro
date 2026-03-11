@@ -1,0 +1,209 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import NavigationGrid from '../../components/navigation/NavigationGrid.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+
+const democracyTabs = [
+  { label: 'Overview', href: '/attacking-democracy' },
+  { label: 'Purging Oversight', href: '/attacking-democracy/purging-oversight' },
+  { label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' },
+  { label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' },
+  { label: 'Weaponizing Government', href: '/attacking-democracy/weaponizing-government' },
+];
+
+const tickerItems = [
+  "17 Inspector Generals Fired in One Night",
+  "300,000+ Federal Workers Removed (~13% of Workforce)",
+  "Federal Judge Ruled IG Firings Unlawful",
+  "Loyalists Now Control FBI, DOJ, and Intelligence",
+  "50,000+ Career Positions Stripped of Protections",
+  "Schedule F Now Fully in Effect",
+  "Documented Targeting Across Multiple Agencies",
+  "Four-Step Authoritarian Consolidation Pattern",
+];
+
+const subpageCards = [
+  {
+    icon: '\u{1F5D1}\u{FE0F}',
+    title: 'Purging Oversight',
+    description: 'The Friday Night Massacre: 17 Inspector Generals fired in one night. Whistleblower protections removed. Independent oversight systematically dismantled.',
+    href: '/attacking-democracy/purging-oversight',
+    tag: '17 IGs Fired',
+  },
+  {
+    icon: '\u{1F464}',
+    title: 'Installing Loyalists',
+    description: 'FBI, DOJ, Pentagon, and intelligence agencies purged and restaffed with Trump allies. Career professionals replaced with political loyalists.',
+    href: '/attacking-democracy/installing-loyalists',
+    tag: 'FBI + DOJ + Pentagon',
+  },
+  {
+    icon: '\u{270B}',
+    title: 'Demanding Loyalty',
+    description: 'Loyalty tests for federal workers. Schedule F reclassification. Mass layoffs of career employees. Merit-based civil service transformed into political operation.',
+    href: '/attacking-democracy/demanding-loyalty',
+    tag: '300,000+ Removed',
+  },
+  {
+    icon: '\u{2694}\u{FE0F}',
+    title: 'Weaponizing Government',
+    description: 'DOJ, FBI, IRS, and military used against political enemies. Critics, journalists, and protesters targeted. Government power weaponized for political retaliation.',
+    href: '/attacking-democracy/weaponizing-government',
+    tag: 'Multiple Agencies',
+  },
+];
+---
+
+<ResearchLayout title="The Authoritarian Playbook - Attacking Democracy" description="How Trump is systematically dismantling democratic institutions through coordinated authoritarian tactics: purging oversight, installing loyalists, demanding loyalty, and weaponizing government.">
+
+  <SeriesNav tabs={democracyTabs} currentPath="/attacking-democracy" />
+
+  <Masthead
+    eyebrow="Four-Step Authoritarian Consolidation"
+    title="THE AUTHORITARIAN PLAYBOOK"
+    titleHighlight="AUTHORITARIAN"
+    subtitle="How Trump is Dismantling Democracy"
+    date="Purging Oversight &middot; Installing Loyalists &middot; Demanding Loyalty &middot; Weaponizing Government"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Trump is systematically dismantling democratic institutions through coordinated authoritarian tactics. This is not chaos &mdash; it is a deliberate playbook."
+    citation="Pattern Analysis of Documented Actions"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={17} label="Inspector Generals fired in one night (ruled unlawful by federal judge)" />
+    <StatCard target={300} suffix="K+" label="Federal workers removed (~13% of civilian workforce)" />
+    <StatCard target={50} suffix="K+" label="Career positions stripped of civil service protections via Schedule F" />
+    <StatCard target={0} label="Days of legally required notice given to Congress before IG firings" />
+  </StatGrid>
+
+  <!-- THE FOUR STEPS -->
+  <SectionDivider label="The Playbook" />
+  <SectionHeader
+    eyebrow="Four-Step Consolidation"
+    title="The Authoritarian<br>Playbook"
+    introText="Each step follows logically from the previous one. Each tactic enables and strengthens the others. This is how democracies slide toward authoritarianism."
+  />
+
+  <NavigationGrid cards={subpageCards} />
+
+  <!-- HOW EACH STEP ENABLES THE OTHERS -->
+  <SectionDivider label="Connected Tactics" />
+  <SectionHeader
+    eyebrow="Reinforcing Pattern"
+    title="How Each Step<br>Enables The Others"
+    introText="This is not random or chaotic. This is a recognizable authoritarian consolidation pattern used by leaders who seek to eliminate democratic constraints on their power."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F5D1}\u{FE0F}"
+      title="Purging Oversight Enables..."
+      body="Removes accountability, enabling weaponization. Creates positions for loyalists. Without independent watchdogs, no one investigates corruption or abuse of power."
+      tag="Step 1"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F464}"
+      title="Installing Loyalists Enables..."
+      body="Ensures government serves President personally. Enables enforcement of loyalty demands. With loyalists at FBI, DOJ, and Pentagon, government power can be directed against enemies."
+      tag="Step 2"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{270B}"
+      title="Demanding Loyalty Enables..."
+      body="Transforms merit-based government into partisan operation. When 300,000+ career professionals are replaced with political loyalists, no one remains to say &quot;that's illegal.&quot;"
+      tag="Step 3"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{2694}\u{FE0F}"
+      title="Weaponizing Government Enables..."
+      body="Intimidates remaining oversight and critics. Creates self-perpetuating cycle: removes remaining accountability, enabling more purges. Each act of retaliation intimidates resistance to the next."
+      tag="Step 4"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THIS IS A PLAYBOOK -->
+  <SectionDivider label="The Pattern" />
+  <SectionHeader
+    eyebrow="Why This Matters"
+    title="Why This Is<br>A Playbook"
+    introText="Key characteristics that make this a coordinated authoritarian strategy, not random chaos."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4CB}"
+      title="Systematic"
+      body="Each action follows logically from the previous one. Remove watchdogs, then install loyalists in their place, then demand loyalty from everyone below, then weaponize the whole apparatus."
+      tag="Pattern"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F517}"
+      title="Coordinated"
+      body="Multiple agencies targeted simultaneously. FBI, DOJ, Pentagon, intelligence, health, regulatory, and economic agencies all brought under loyalist control in parallel."
+      tag="Pattern"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F504}"
+      title="Reinforcing"
+      body="Each tactic enables and strengthens the others. Purging creates positions for loyalists. Loyalists enforce loyalty tests. Loyalty tests prevent resistance to weaponization."
+      tag="Pattern"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{1F4DA}"
+      title="Historical"
+      body="Documented pattern used by authoritarian regimes throughout history: Erdogan's Turkey, Putin's Russia, Orban's Hungary. When democracies slide, these are the steps taken."
+      tag="Pattern"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- WARNING: WHAT THIS MEANS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{26A0}\u{FE0F}" title="What This Means For Democracy" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">When independent oversight is removed, when loyalists control law enforcement and intelligence, when government serves a person rather than the Constitution &mdash; democracy becomes democracy in name only.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">The sequence matters:</strong> You cannot weaponize government if independent oversight exists. You cannot demand partisan loyalty if career professionals have civil service protections. You cannot install loyalists unless you first purge the independence.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>That is why it is a playbook.</strong> Each step makes the next one possible. And each step makes democracy weaker.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- RELATED INVESTIGATIONS -->
+  <ColoredSection>
+    <AlertBanner icon="\u{1F4D8}" title="Related Investigations" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);"><a href="/fascism" style="color: var(--red-bright); text-decoration: underline;">Path to Fascism</a>:</strong> Historical analysis of authoritarian consolidation tactics and how Trump's actions match scholarly frameworks.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);"><a href="/dangerous-rhetoric" style="color: var(--red-bright); text-decoration: underline;">Dangerous Rhetoric</a>:</strong> How Trump targets those who resist these tactics with threats and intimidation.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Begin: Purging<br>Oversight"
+    description="Start with Step 1: how Trump fired 17 Inspector Generals in one night and removed 300,000+ federal workers to eliminate independent oversight."
+    linkText="Read: Purging Oversight &rarr;"
+    linkHref="/attacking-democracy/purging-oversight"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,60 @@
+{
+  "id": "arnold-schwarzenegger",
+  "name": "Arnold Schwarzenegger",
+  "role": "Former Governor of California",
+  "administration": null,
+  "years": "2003-2011",
+  "category": "republican-critics",
+  "party": "Republican",
+  "summary": "Former California Governor and action movie star who became a vocal Trump critic, particularly on issues of immigration, the Capitol riot, and democratic norms, while maintaining his Republican identity.",
+  "keyStatements": [
+    {
+      "quote": "President Trump sought to overturn the results of an election, and of a fair election. He sought a coup by misleading people with lies... President Trump is a failed leader. He will go down in history as the worst president ever.",
+      "context": "Video message after the January 6 Capitol attack",
+      "date": "2021-01-10",
+      "source": "https://www.cnn.com/2021/01/10/politics/arnold-schwarzenegger-donald-trump-capitol-riot/index.html"
+    },
+    {
+      "quote": "I don't want to be associated with the people in the Capitol. I don't want to be associated with President Trump. I don't want to be associated with the people that made those speeches that riled everyone up.",
+      "context": "Explaining his decision to call himself a 'European American' rather than a Republican",
+      "date": "2021-02-21",
+      "source": "https://www.theguardian.com/us-news/2021/feb/21/arnold-schwarzenegger-republican-party-trump"
+    },
+    {
+      "quote": "To the men and women who would trade freedom for a pile of bricks and an immigration ban, I say: Your time will come. And it will pass.",
+      "context": "Criticizing Trump's border wall and immigration policies",
+      "date": "2017-02-26",
+      "source": "https://www.politico.com/story/2017/02/arnold-schwarzenegger-trump-immigration-235402"
+    }
+  ],
+  "background": "Arnold Schwarzenegger served as Governor of California from 2003 to 2011 after a successful career as a bodybuilder and Hollywood action star. An immigrant from Austria, he has been a Republican throughout his political career but has taken moderate positions on issues like climate change and immigration. He briefly hosted 'The Celebrity Apprentice' after Trump's presidency.",
+  "oppositionReasons": [
+    "Strongly opposes Trump's attempt to overturn 2020 election results",
+    "Condemns Trump's role in inciting the January 6 Capitol attack",
+    "Disagrees with Trump's immigration policies as an immigrant himself",
+    "Believes Trump has damaged American democracy and Republican Party",
+    "Opposes Trump's rejection of climate science and environmental policies"
+  ],
+  "notableActions": [
+    "Posted powerful video comparing Capitol riot to Kristallnacht",
+    "Temporarily distanced himself from Republican Party label after January 6",
+    "Consistently defended immigrants and criticized border wall",
+    "Called Trump 'the worst president ever' in public statements",
+    "Used his platform to defend democratic values and Constitution"
+  ],
+  "credibility": {
+    "strengths": [
+      "Two-term governor of largest U.S. state by population",
+      "Personal experience as immigrant gives authenticity on immigration issues",
+      "Massive public platform with millions of social media followers",
+      "History of bipartisan cooperation as governor",
+      "Consistent advocate for environmental protection"
+    ],
+    "considerations": [
+      "Mixed gubernatorial record with low approval ratings at times",
+      "Some conservatives view him as RINO (Republican In Name Only)",
+      "Personal scandals during and after governorship",
+      "Celebrity status can overshadow policy positions"
+    ]
+  }
+}

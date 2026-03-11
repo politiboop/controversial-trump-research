@@ -1,0 +1,779 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const rhetoricTabs = [
+  { label: 'Overview', href: '/dangerous-rhetoric' },
+  { label: 'Press', href: '/dangerous-rhetoric/press' },
+  { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+  { label: 'Democrats', href: '/dangerous-rhetoric/democrats' },
+  { label: 'Immigrants', href: '/dangerous-rhetoric/immigrants' },
+  { label: 'Women', href: '/dangerous-rhetoric/women' },
+];
+
+const tickerItems = [
+  "26+ Women Have Accused Trump of Sexual Assault or Misconduct",
+  "$88.3M Jury Verdict for Sexual Abuse and Defamation (E. Jean Carroll)",
+  "Access Hollywood: 'Grab 'em by the pussy'",
+  "100+ Documented Instances of Degrading Language Toward Women",
+  "Walked Into Teen Pageant Dressing Rooms While Contestants Were Undressed",
+  "Roe v. Wade Overturned by Trump's Supreme Court Appointees",
+  "'I Was Able to Kill Roe v. Wade' - Trump Bragging About Stripping Women's Rights",
+  "Kaitlan Collins Attacked for Asking About Epstein Victims (2026)",
+];
+
+const breadcrumbs = [
+  { label: 'Research', href: '/' },
+  { label: 'Dangerous Rhetoric', href: '/dangerous-rhetoric' },
+  { label: 'Against Women' },
+];
+---
+
+<ResearchLayout title="Dangerous Rhetoric Against Women" description="Comprehensive documentation of Trump's dangerous, misogynistic rhetoric - patterns of degradation, sexual violence, and attacks on women">
+
+  <SeriesNav tabs={rhetoricTabs} currentPath="/dangerous-rhetoric/women" />
+
+  <Breadcrumbs items={breadcrumbs} />
+
+  <Masthead
+    eyebrow="Dangerous Rhetoric Series"
+    title="AGAINST WOMEN"
+    titleHighlight="WOMEN"
+    subtitle="Comprehensive documentation of misogyny, sexual violence, and systematic degradation"
+    date="26+ Accusers &middot; $88.3M Verdict &middot; 40+ Years of Abuse"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <!-- CONTENT WARNING -->
+  <ColoredSection background="#1a0a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Content Warning" variant="red">
+      <p style="">This page contains explicit documentation of sexual assault, degradation, and misogynistic language. Trump's decades-long pattern of attacks on women includes sexual violence allegations, appearance-based attacks, and systematic dehumanization.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <HighlightBar text="40+ Years of Sexual Assault Allegations, Degradation, and Attacks on Women Who Challenge Him" variant="red" />
+
+  <IntroQuote
+    quote="Donald Trump's pattern of behavior toward women is not just misogyny -- it's a systematic attempt to degrade, dehumanize, and silence women who challenge him. This normalization of sexual violence and gender-based hatred has real-world consequences."
+    citation="Anti-Violence Advocates and Women's Rights Organizations"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={26} suffix="+" label="Women who have accused Trump of sexual assault or misconduct" accentColor="var(--red)" />
+    <StatCard target={88} prefix="$" suffix=".3M" label="Jury awarded E. Jean Carroll for sexual abuse and defamation" accentColor="var(--red)" />
+    <StatCard target={100} suffix="+" label="Documented instances of degrading language toward women" accentColor="var(--red)" />
+  </StatGrid>
+
+  <!-- RECENT ATTACKS 2026 -->
+  <SectionDivider label="2026 Attacks" />
+  <SectionHeader
+    eyebrow="Pattern Continues"
+    title="Recent Attacks<br>(2026)"
+    introText="Trump's attacks on women have escalated in his second term. Recent incidents demonstrate the ongoing pattern of attacking women's appearance, blaming victims, and using misogynistic language against female journalists and politicians who challenge him."
+  />
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="February 3, 2026 - Kaitlan Collins (CNN Journalist)" variant="red">
+      <p style=""><strong style="color: var(--text);">Context:</strong> During an Oval Office briefing, CNN's Kaitlan Collins asked Trump about the recently released Epstein Files, which included references to his associates Elon Musk and Commerce Secretary Howard Lutnick. When Collins asked about justice for women victimized by Epstein's operation, Trump became angry and attacked her personally.</p>
+      <p style="color: var(--red); margin-top: 12px; font-style: italic;"><strong>Trump's Attack:</strong> &quot;I don't think I've ever seen you smile&quot; ... &quot;You are the worst reporter&quot; ... &quot;No wonder CNN has no ratings, because of people like you&quot;</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Analysis:</strong> Rather than answer questions about Epstein victims, Trump attacked Collins's appearance (telling her to smile) and competence. This follows a decades-long pattern of telling female journalists to smile and attacking their appearance when they ask difficult questions.</p>
+      <p style="margin-top: 12px;"><strong>Sources:</strong> <a href="https://deadline.com/2026/02/trump-kaitlan-collins-epstein-files-1236707970/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Deadline</a>, <a href="https://www.thedailybeast.com/trump-melts-down-at-cnns-kaitlan-collins-cornering-him-on-epstein/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Daily Beast</a>, <a href="https://www.thewrap.com/media-platforms/journalism/donald-trump-kaitlan-collins-attack-smile-cnn/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">The Wrap</a></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="January 27-29, 2026 - Rep. Ilhan Omar (Congresswoman)" variant="red">
+      <p style=""><strong style="color: var(--text);">Context:</strong> On January 27, 2026, Rep. Ilhan Omar was attacked at a town hall in Minneapolis when a man tried to spray her with a substance from a syringe. Hours before the attack, Trump had mentioned Omar in a speech in Iowa. Earlier that week, Trump made false accusations about Omar's finances on social media.</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Trump's Statements:</strong></p>
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; margin-top: 8px; padding-left: 20px;">
+        <li><strong>Before the attack (Iowa speech, Jan 27):</strong> &quot;They have to show that they can love our country. They have to be proud. Not like Ilhan Omar&quot;</li>
+        <li><strong>After the attack (Jan 29):</strong> &quot;She probably had herself sprayed, knowing her&quot; (suggesting Omar staged her own attack) + &quot;I think she's a fraud&quot;</li>
+        <li><strong>That week:</strong> &quot;The DOJ and Congress are looking at Congresswoman Ilhan Omar, who left Somalia with NOTHING, and is now reportedly worth more than 44 Million Dollars&quot; (false accusation)</li>
+        <li><strong style="color: var(--red);">ESCALATION - February 3, 2026:</strong> After U.S. military strikes killed 14 ISIS operatives in Somalia, Trump posted a video of the strikes and wrote: <strong style="color: var(--red);">&quot;Was Ilhan Omar there to protect her corrupt 'homeland'?&quot;</strong> -- directly suggesting Omar, a sitting U.S. Congresswoman, is aligned with ISIS terrorists</li>
+      </ul>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Omar's Response:</strong> &quot;What the facts have shown since I've gotten into elected office is that every time the president of the United States has chosen to use hateful rhetoric to talk about me and the community that I represent, my death threats skyrocket.&quot;</p>
+      <p style="margin-top: 12px;"><strong>Sources:</strong> <a href="https://www.nbcnews.com/politics/congress/ilhan-omar-donald-trump-rhetoric-town-hall-attack-minneapolis-rcna256422" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">NBC News</a>, <a href="https://www.cnn.com/2026/01/29/politics/ilhan-omar-trump-conspiracy-theory" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">CNN</a>, <a href="https://fortune.com/2026/01/29/ilhan-omar-blames-trump-attacks-death-threats-skyrocket-fear-intimidation/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Fortune</a>, <a href="https://time.com/7358979/ilhan-omar-trump-hateful-speech-attack-threats/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">TIME</a></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="⚠️" title="Extreme Escalation: Accusing a U.S. Congresswoman of Terrorism" variant="red">
+      <p style="">Trump's February 3 statement suggesting Ilhan Omar was in Somalia &quot;to protect&quot; ISIS operatives represents an unprecedented escalation in dangerous rhetoric. The President of the United States publicly insinuated that a sitting member of Congress is a terrorist sympathizer aligned with ISIS.</p>
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; margin-top: 12px; padding-left: 20px;">
+        <li><strong style="color: var(--text);">Completely baseless</strong> -- Omar was not in Somalia and has no connection to ISIS</li>
+        <li><strong style="color: var(--text);">Puts Omar's life in danger</strong> -- Accusing someone of terrorism can incite violence from extremists</li>
+        <li><strong style="color: var(--text);">Undermines democracy</strong> -- Baselessly accusing opposition politicians of terrorism is authoritarian behavior</li>
+        <li><strong style="color: var(--text);">Targets a Muslim woman of color</strong> -- Part of Trump's pattern of Islamophobic and racist attacks</li>
+        <li><strong style="color: var(--text);">Came days after she was physically attacked</strong> -- Rather than condemn the attack, Trump escalated with even more dangerous rhetoric</li>
+      </ul>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>This is stochastic terrorism at the highest level -- the President suggesting a Congresswoman is a terrorist will inevitably lead to increased threats and potential violence against her.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PATTERN RECOGNITION -->
+  <CategoryGrid>
+    <CategoryCard
+      icon="👁️"
+      title="Appearance-Based Attacks on Women Journalists"
+      body="Telling Kaitlan Collins to smile follows decades of Trump telling female reporters to smile, relax, or calm down when they ask difficult questions"
+      tag="Ongoing Pattern"
+    />
+    <CategoryCard
+      icon="🎭"
+      title="Victim-Blaming"
+      body="Suggesting Ilhan Omar staged her own attack mirrors Trump's pattern of claiming women fabricate allegations against him or his allies"
+      tag="Deflection"
+    />
+    <CategoryCard
+      icon="⚠️"
+      title="Escalating to Terrorism Accusations"
+      body="After victim-blaming didn't work, Trump escalated to suggesting Omar is aligned with ISIS -- one of the most dangerous accusations possible"
+      tag="Extreme Danger"
+    />
+    <CategoryCard
+      icon="🎯"
+      title="Intersectional Targeting"
+      body="Both women are highly visible, professionally accomplished women who challenge Trump -- Omar as a Muslim woman of color, Collins as a journalist holding him accountable"
+      tag="Targeted Attacks"
+    />
+    <CategoryCard
+      icon="🔊"
+      title="Stochastic Terrorism"
+      body="Trump's rhetoric directly preceded Omar's attack, his response encouraged further attacks by denying the violence was real, then he escalated with ISIS accusations"
+      tag="Incitement"
+    />
+    <CategoryCard
+      icon="🛡️"
+      title="Protection of Powerful Men"
+      body="Trump attacked Collins specifically when she asked about justice for Epstein's victims -- deflecting from accountability for sexual violence"
+      tag="Deflection"
+    />
+  </CategoryGrid>
+
+  <!-- SEXUAL ASSAULT ALLEGATIONS -->
+  <SectionDivider label="Sexual Assault Allegations" />
+  <SectionHeader
+    eyebrow="26+ Accusers"
+    title="Sexual Assault and<br>Misconduct Allegations"
+    introText="At least 26 women have publicly accused Donald Trump of sexual assault, sexual harassment, or unwanted sexual contact. In 2023, a jury found Trump liable for sexual abuse and defamation of E. Jean Carroll -- a civil court ruling that Trump committed sexual assault."
+  />
+
+  <!-- E. Jean Carroll -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚖️" title="E. Jean Carroll: Court-Confirmed Sexual Abuse" variant="red">
+      <p style=""><strong style="color: var(--text);">Spring 1996 -- Bergdorf Goodman Department Store, New York</strong></p>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Allegation:</strong> Carroll, a journalist and advice columnist, accused Trump of raping her in a dressing room at Bergdorf Goodman. She detailed the assault in her 2019 book &quot;What Do We Need Men For?&quot;</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Trump's Response:</strong> &quot;She's not my type.&quot; Claimed he'd never met her (despite photo evidence). Continued to defame her publicly, calling her a liar and saying she made it up for book sales.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 16px;"><strong>Court Ruling (May 2023):</strong></p>
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; margin-top: 8px; padding-left: 20px;">
+        <li><strong style="color: var(--red);">Federal jury found Trump liable for sexual abuse</strong> (court found Carroll proved Trump sexually assaulted her)</li>
+        <li><strong>Found Trump liable for defamation</strong></li>
+        <li><strong>Awarded Carroll $5 million in damages</strong></li>
+        <li>Judge Lewis Kaplan clarified: The jury found Trump &quot;raped&quot; Carroll under common understanding of the word</li>
+      </ul>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 16px;"><strong>Second Defamation Trial (January 2024):</strong></p>
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; margin-top: 8px; padding-left: 20px;">
+        <li>Trump continued defaming Carroll after first verdict</li>
+        <li><strong style="color: var(--red);">Jury awarded Carroll $83.3 million in additional damages</strong></li>
+        <li>Total: <strong style="color: var(--red);">$88.3 million</strong> in judgments against Trump for sexual abuse and defamation</li>
+        <li>Trump continues to attack Carroll publicly despite court orders</li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Access Hollywood Tape -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="📹" title="The Access Hollywood Tape (2005)" variant="red">
+      <p style=""><strong style="color: var(--text);">October 7, 2016 -- Recording from 2005 Released</strong></p>
+      <p style="font-size: 16px; color: var(--red); line-height: 1.7; margin-top: 12px; font-style: italic; border-left: 3px solid var(--red); padding-left: 16px;">&quot;I just start kissing them. It's like a magnet. Just kiss. I don't even wait. And when you're a star, they let you do it. You can do anything.&quot;<br><br>&quot;Grab 'em by the pussy. You can do anything.&quot;</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 16px;"><strong>What This Describes:</strong> Trump bragging about committing sexual assault. &quot;I don't even wait&quot; means without consent. This is not &quot;locker room talk&quot; -- it's a description of sexual assault.</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Trump's Response:</strong> Initially apologized (&quot;I said it, I was wrong, and I apologize&quot;), then later dismissed it as &quot;locker room talk.&quot; Later claimed the tape might be fake (despite acknowledging it was real).</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--text);">Real-World Impact:</strong> After this tape, over a dozen women came forward with allegations matching Trump's own description of his behavior -- kissing women without consent, groping, forced touching.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Other Accusers -->
+  <TimelineSection title="26+ Accusers:<br>A Pattern Spanning Decades">
+    <TimelineItem
+      date="Early 1980s"
+      badge="Assault"
+      badgeType="catastrophic"
+      title="Jessica Leeds"
+      description="Trump grabbed her breasts and tried to put his hand up her skirt on an airplane. Trump's Response: 'She would not be my first choice, that I can tell you' (appearance-based attack on accuser)"
+    />
+    <TimelineItem
+      date="1989"
+      badge="Assault"
+      badgeType="catastrophic"
+      title="Ivana Trump"
+      description="Trump's first wife stated under oath in divorce deposition that Trump 'raped' her after painful scalp surgery. She later softened language but maintained the incident occurred. Trump lawyer Michael Cohen said 'you cannot rape your spouse' (legally incorrect)."
+    />
+    <TimelineItem
+      date="1997"
+      badge="Assault"
+      badgeType="catastrophic"
+      title="Jill Harth"
+      description="Trump forcibly groped her under her dress at Mar-a-Lago; filed lawsuit alleging attempted rape."
+    />
+    <TimelineItem
+      date="Early 1990s"
+      badge="Assault"
+      badgeType="catastrophic"
+      title="Kristin Anderson"
+      description="Trump slid his hand up her skirt and touched her vagina through her underwear at a nightclub."
+    />
+    <TimelineItem
+      date="1997"
+      badge="Assault"
+      badgeType="serious"
+      title="Cathy Heller"
+      description="Trump grabbed her and forcibly kissed her at Mar-a-Lago Mother's Day brunch."
+    />
+    <TimelineItem
+      date="1997"
+      badge="Assault"
+      badgeType="serious"
+      title="Temple Taggart McDowell"
+      description="Trump kissed her on the lips without consent when she was Miss Utah Teen USA."
+    />
+    <TimelineItem
+      date="2003"
+      badge="Assault"
+      badgeType="serious"
+      title="Mindy McGillivray"
+      description="Trump groped her at Mar-a-Lago while she was working as assistant photographer."
+    />
+    <TimelineItem
+      date="2005"
+      badge="Assault"
+      badgeType="serious"
+      title="Rachel Crooks"
+      description="Trump kissed her on the mouth without consent outside Trump Tower elevators when she was 22."
+    />
+    <TimelineItem
+      date="2005"
+      badge="Assault"
+      badgeType="serious"
+      title="Natasha Stoynoff"
+      description="Trump forcibly kissed her while she was interviewing him and Melania for People Magazine. Trump's Response: 'Look at her, I don't think so' (appearance-based attack)."
+    />
+    <TimelineItem
+      date="2007"
+      badge="Assault"
+      badgeType="catastrophic"
+      title="Summer Zervos"
+      description="Former 'The Apprentice' contestant; Trump kissed her, groped her breasts, thrust his genitals at her. She sued for defamation (case settled)."
+    />
+    <TimelineItem
+      date="2013"
+      badge="Assault"
+      badgeType="serious"
+      title="Cassandra Searles"
+      description="Trump continually grabbed her ass and invited her to his hotel room when she was Miss Washington USA."
+    />
+    <TimelineItem
+      date="2019"
+      badge="Assault"
+      badgeType="serious"
+      title="Alva Johnson"
+      description="Trump forcibly kissed her during 2016 campaign event in Florida."
+    />
+    <TimelineItem
+      date="Various"
+      badge="12+ More"
+      badgeType="catastrophic"
+      title="Additional Accusers"
+      description="Including: Lisa Boyne, Mariah Billado, Tasha Dixon, Bridget Sullivan, Melissa McGinn, Jennifer Murphy, Juliet Huddy, Ninni Laaksonen, Karena Virginia, Jessica Drake, and others. Common Pattern: Unwanted kissing, groping, forced touching, walking into dressing rooms of pageant contestants."
+    />
+  </TimelineSection>
+
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="📋" title="The Pattern of Abuse" variant="amber">
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; padding-left: 20px;">
+        <li><strong style="color: var(--text);">26+ women with similar stories</strong> spanning 40+ years</li>
+        <li><strong style="color: var(--text);">Consistent behavior:</strong> Kissing without consent, groping, forced touching</li>
+        <li><strong style="color: var(--text);">Abuse of power:</strong> Many were employees, contestants, or young women in vulnerable positions</li>
+        <li><strong style="color: var(--text);">Trump's response pattern:</strong> Deny, attack the accuser's appearance, call them liars, threaten lawsuits</li>
+        <li><strong style="color: var(--text);">Trump's own admission:</strong> Access Hollywood tape describes the exact behavior women accuse him of</li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- DEGRADING LANGUAGE PATTERNS -->
+  <SectionDivider label="Degrading Language" />
+  <SectionHeader
+    eyebrow="Systematic Misogyny"
+    title="Patterns of Degrading<br>Language Against Women"
+    introText="Beyond sexual assault, Trump has spent decades publicly degrading women through appearance attacks, sexual objectification, and dehumanizing language. This section documents his systematic pattern of misogyny."
+  />
+
+  <!-- Pattern 1: Appearance-Based Attacks -->
+  <TimelineSection title="Pattern 1: Appearance-Based<br>Attacks and Rating Women" subtitle="Trump routinely reduces women to their physical appearance, rates them on a scale, and uses appearance-based insults to dismiss or degrade women -- especially those who criticize or challenge him.">
+    <TimelineItem
+      date="Sep 2015"
+      badge="Appearance"
+      badgeType="serious"
+      title="Carly Fiorina (Republican Primary Opponent)"
+      description="'Look at that face! Would anyone vote for that? Can you imagine that, the face of our next president? I mean, she's a woman, and I'm not supposed to say bad things, but really, folks, come on. Are we serious?' -- Attacking a female Republican primary opponent's appearance to Rolling Stone magazine."
+    />
+    <TimelineItem
+      date="Aug 2015"
+      badge="Rating"
+      badgeType="serious"
+      title="Heidi Klum (Supermodel)"
+      description="'Heidi Klum. Sadly, she's no longer a 10.' -- Rating a woman's appearance on a numerical scale in interview with New York Times."
+    />
+    <TimelineItem
+      date="Aug 2012"
+      badge="Appearance"
+      badgeType="serious"
+      title="Arianna Huffington (Media Executive)"
+      description="'@ariannahuff is unattractive both inside and out. I fully understand why her former husband left her for a man -- he made a good decision.' -- Twitter attack combining appearance insult with homophobic implication."
+    />
+    <TimelineItem
+      date="Oct 2018"
+      badge="Appearance"
+      badgeType="serious"
+      title="Stormy Daniels (Adult Film Actress)"
+      description="Called Stormy Daniels 'horseface' in a tweet after she sued him over hush money payments. This is a woman he allegedly had an affair with while Melania was pregnant -- then degraded publicly when she spoke out."
+    />
+    <TimelineItem
+      date="2006-Present"
+      badge="Ongoing"
+      badgeType="catastrophic"
+      title="Rosie O'Donnell (Comedian, Long-time Target)"
+      description="'Rosie O'Donnell is disgusting, both inside and out. If you take a look at her, she's a slob.' ... 'Rosie's a loser. A real loser. I look forward to taking lots of money from my nice fat little Rosie.' Repeatedly called her 'fat pig.' Trump has attacked O'Donnell for nearly 20 years using weight-based and appearance-based insults."
+    />
+    <TimelineItem
+      date="2007"
+      badge="Shaming"
+      badgeType="serious"
+      title="Angelina Jolie (Actress)"
+      description="'I do like her. But she's been with so many guys she makes me look like a baby.' -- Classic slut-shaming, reducing a woman to her perceived sexual activity."
+    />
+    <TimelineItem
+      date="Oct 2012"
+      badge="Appearance"
+      badgeType="serious"
+      title="Bette Midler (Singer/Actress)"
+      description="'I don't particularly like Bette Midler, a woman who is very unattractive both inside and out.'"
+    />
+    <TimelineItem
+      date="Mar 2013"
+      badge="Dehumanizing"
+      badgeType="serious"
+      title="Kim Kardashian (Media Personality)"
+      description="'Does everyone know that pig @KimKardashian is the worst?' -- Called Kim Kardashian a 'pig' and later commented on her pregnancy weight gain."
+    />
+  </TimelineSection>
+
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="📊" title="Appearance Attack Pattern Analysis" variant="amber">
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; padding-left: 20px;">
+        <li><strong style="color: var(--text);">Reduces women to appearance:</strong> Dismisses women's accomplishments, intelligence, or criticism by attacking their looks</li>
+        <li><strong style="color: var(--text);">Rating system:</strong> Openly rates women on numerical scale (1-10)</li>
+        <li><strong style="color: var(--text);">Weight-based attacks:</strong> Repeatedly uses &quot;fat,&quot; &quot;pig,&quot; &quot;slob&quot; against women</li>
+        <li><strong style="color: var(--text);">&quot;Inside and out&quot;:</strong> Frequently uses phrase &quot;unattractive both inside and out&quot; -- attacking both appearance and character</li>
+        <li><strong style="color: var(--text);">Punishment for criticism:</strong> Women who criticize Trump receive appearance-based attacks in retaliation</li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Pattern 2: "Nasty Woman" -->
+  <TimelineSection title="Pattern 2: &quot;Nasty Woman&quot;" subtitle="Trump uses the word 'nasty' almost exclusively against women -- particularly women who challenge his authority, criticize him, or run against him. This gendered slur is designed to silence and demean women in positions of power.">
+    <TimelineItem
+      date="Oct 19, 2016"
+      badge="Gendered"
+      badgeType="serious"
+      title="Hillary Clinton (Presidential Debate)"
+      description="'Such a nasty woman.' Said during presidential debate when Clinton was discussing Social Security. Additional attacks: 'Crooked Hillary,' questioned her stamina, said she doesn't 'look presidential,' mocked her for taking a bathroom break during debate."
+    />
+    <TimelineItem
+      date="2019-Present"
+      badge="Ongoing"
+      badgeType="catastrophic"
+      title="Kamala Harris (Vice President, 2024 Opponent)"
+      description="Called 'nasty' repeatedly (dozens of times). Also: 'She's a bum' (Aug 2024), 'She's dumb as a rock' (Jul 2024), 'She's not smart' (multiple instances). Despite her career as prosecutor and Attorney General. Racial Component: Also questioned Harris's racial identity ('Is she Indian or is she Black?'), a racist attack on her biracial heritage."
+    />
+    <TimelineItem
+      date="Jun 2019"
+      badge="Gendered"
+      badgeType="serious"
+      title="Meghan Markle (Duchess of Sussex)"
+      description="'I didn't know that she was nasty.' After being told Markle called him 'misogynistic' and 'divisive.' Later denied saying it despite audio recording."
+    />
+    <TimelineItem
+      date="Sep 2017"
+      badge="Gendered"
+      badgeType="serious"
+      title="Carmen Yulin Cruz (San Juan Mayor)"
+      description="After Hurricane Maria devastated Puerto Rico, Mayor Cruz criticized the federal response. Trump attacked her leadership while Puerto Ricans were dying from lack of water, electricity, and medical care. Later deleted reference calling her 'nasty.'"
+    />
+    <TimelineItem
+      date="Sep 2020"
+      badge="Gendered"
+      badgeType="serious"
+      title="Kristen Welker (NBC Journalist)"
+      description="'She's always been terrible and unfair, just like most of the Fake News reporters.' Pre-emptively attacked NBC's Kristen Welker before she moderated presidential debate."
+    />
+  </TimelineSection>
+
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="📊" title="'Nasty' Pattern Analysis" variant="amber">
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; padding-left: 20px;">
+        <li><strong style="color: var(--text);">Gendered slur:</strong> Trump rarely uses &quot;nasty&quot; against men, almost exclusively against women</li>
+        <li><strong style="color: var(--text);">Targets women in power:</strong> Presidential opponents, vice president, journalists, elected officials</li>
+        <li><strong style="color: var(--text);">Punishment for speaking out:</strong> Women who criticize Trump or challenge him are labeled &quot;nasty&quot;</li>
+        <li><strong style="color: var(--text);">Especially harsh toward women of color:</strong> Black and brown women receive &quot;nasty&quot; label plus additional racist attacks</li>
+        <li><strong style="color: var(--text);">Silencing tactic:</strong> &quot;Nasty&quot; dismisses women's legitimate criticism as personal character flaw</li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Pattern 3: Menstruation References -->
+  <TimelineSection title="Pattern 3: Menstruation References<br>and Sexualized Degradation" subtitle="Trump has made multiple references to women's menstruation and reproductive functions as insults -- a form of sexualized degradation designed to humiliate women publicly.">
+    <TimelineItem
+      date="Aug 7, 2015"
+      badge="Degradation"
+      badgeType="catastrophic"
+      title="Megyn Kelly (Fox News Anchor)"
+      description="'You could see there was blood coming out of her eyes, blood coming out of her wherever.' After Kelly asked about his history of calling women 'fat pigs, dogs, slobs, and disgusting animals' during a Republican debate. Republican Erick Erickson disinvited Trump from his conservative conference in response."
+    />
+    <TimelineItem
+      date="Jun 29, 2017"
+      badge="Presidential"
+      badgeType="catastrophic"
+      title="Mika Brzezinski (MSNBC Host)"
+      description="'I heard poorly rated @Morning_Joe speaks badly of me... Then how come low I.Q. Crazy Mika, along with Psycho Joe, came to Mar-a-Lago... She was bleeding badly from a face-lift. I said no!' As SITTING PRESIDENT, attacked a female journalist with graphic imagery. Republicans including Lindsey Graham, Ben Sasse, Susan Collins, and Paul Ryan condemned this tweet."
+    />
+    <TimelineItem
+      date="2011"
+      badge="Degradation"
+      badgeType="serious"
+      title="Breastfeeding Attorney (Elizabeth Beck)"
+      description="During a 2011 deposition, attorney Elizabeth Beck asked for a medical break to pump breast milk. Trump called her 'disgusting' and walked out. Beck: 'He got up, his face got red, he shook his finger at me and he screamed, You're disgusting, you're disgusting, and he ran out of there.'"
+    />
+  </TimelineSection>
+
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="📊" title="Sexual Degradation Pattern" variant="amber">
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; padding-left: 20px;">
+        <li><strong style="color: var(--text);">Weaponizes female biology:</strong> Uses menstruation, breastfeeding, and reproductive functions as insults</li>
+        <li><strong style="color: var(--text);">Public humiliation:</strong> Makes these comments publicly to maximize degradation</li>
+        <li><strong style="color: var(--text);">Sexualizes criticism:</strong> When women question him, he reduces them to their biology</li>
+        <li><strong style="color: var(--text);">Graphic imagery:</strong> Uses explicitly violent or graphic language (&quot;bleeding badly&quot;)</li>
+        <li><strong style="color: var(--text);">Presidential platform:</strong> Continued this behavior as President of the United States</li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Pattern 4: Attacks on Black Women -->
+  <SectionDivider label="Intersectional Attacks" />
+  <SectionHeader
+    eyebrow="Misogyny + Racism"
+    title="Pattern 4: Systematic Attacks<br>on Black Women"
+    introText="Trump's attacks on Black women combine misogyny with racism, resulting in particularly vicious and dehumanizing rhetoric. Black women face both gendered attacks and racist attacks on their intelligence, appearance, and legitimacy."
+  />
+
+  <TimelineSection title="Targeting Black Women<br>in Public Life">
+    <TimelineItem
+      date="2019-Present"
+      badge="Ongoing"
+      badgeType="catastrophic"
+      title="Kamala Harris (Vice President, 2024 Presidential Candidate)"
+      description="Racist: 'Is she Indian or is she Black?' (questioning racial identity). Promoted birther-style conspiracy theories. Misogynistic: Called 'nasty' dozens of times, 'dumb as a rock,' 'not smart,' 'a bum.' Sexualized: Amplified posts implying she slept her way to political positions, repeatedly referenced past relationship with Willie Brown."
+    />
+    <TimelineItem
+      date="Jun 2018"
+      badge="Racist"
+      badgeType="catastrophic"
+      title="Maxine Waters (Congresswoman)"
+      description="'An extraordinarily low IQ person.' 'She has to immediately take a test for her IQ.' Repeatedly attacked Rep. Waters's intelligence after she criticized his family separation policy. Trump has a pattern of calling Black women 'low IQ.'"
+    />
+    <TimelineItem
+      date="Aug 2018"
+      badge="Dehumanizing"
+      badgeType="catastrophic"
+      title="Omarosa Manigault Newman (Former White House Aide)"
+      description="'When you give a crazed, crying lowlife a break, and give her a job at the White House, I guess it just didn't work out. Good work by General Kelly for quickly firing that dog!' Called her a 'dog' (dehumanizing), 'lowlife,' and 'crazed' (gendered attack suggesting hysteria). Trump personally hired Omarosa."
+    />
+    <TimelineItem
+      date="2017-2020"
+      badge="Ongoing"
+      badgeType="serious"
+      title="April Ryan (White House Correspondent)"
+      description="'You're a loser. You're a loser.' 'She doesn't know what she's talking about.' Repeatedly attacked veteran White House correspondent. Real-World Danger: Ryan received so many death threats from Trump supporters that she had to hire security, costing over $100,000."
+    />
+    <TimelineItem
+      date="Nov 2018"
+      badge="Dismissive"
+      badgeType="serious"
+      title="Abby Phillip (CNN Correspondent)"
+      description="'What a stupid question. But I watch you a lot. You ask a lot of stupid questions.' Called her question 'stupid' twice when she asked about Acting AG Matthew Whitaker."
+    />
+    <TimelineItem
+      date="Nov 2018"
+      badge="Deflection"
+      badgeType="serious"
+      title="Yamiche Alcindor (PBS NewsHour Correspondent)"
+      description="'That's such a racist question... I mean, honestly, I know you have it written down and everything.' After Alcindor asked about emboldening white nationalists, he called HER question racist -- classic deflection."
+    />
+    <TimelineItem
+      date="2022-Present"
+      badge="Ongoing"
+      badgeType="catastrophic"
+      title="Letitia James (New York Attorney General)"
+      description="Called her 'racist' and 'corrupt' after she brought civil fraud charges against Trump ($454 million judgment). Pattern: Black woman in authority position = automatic accusations of incompetence and corruption."
+    />
+    <TimelineItem
+      date="2023-Present"
+      badge="Ongoing"
+      badgeType="catastrophic"
+      title="Fani Willis (Fulton County District Attorney)"
+      description="'She's out of control.' 'She's got a lot of problems.' After DA Willis brought RICO charges for attempting to overturn Georgia's 2020 election, Trump and allies launched attacks questioning her competence, professionalism, and personal life."
+    />
+  </TimelineSection>
+
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="📊" title="Intersectional Attack Pattern -- Misogyny + Racism" variant="amber">
+      <ul style="font-size: 15px; color: var(--muted); line-height: 1.8; padding-left: 20px;">
+        <li><strong style="color: var(--text);">&quot;Low IQ&quot; attacks:</strong> Repeatedly questions Black women's intelligence (Maxine Waters, Kamala Harris, others)</li>
+        <li><strong style="color: var(--text);">Dehumanization:</strong> Uses animal language (&quot;dog&quot;) against Black women specifically</li>
+        <li><strong style="color: var(--text);">Questioning legitimacy:</strong> Birther-style attacks on Black women's credentials, racial identity, or right to hold office</li>
+        <li><strong style="color: var(--text);">Hysteria narrative:</strong> Calls Black women &quot;crazy,&quot; &quot;crazed,&quot; &quot;out of control&quot; -- gendered AND racist stereotype</li>
+        <li><strong style="color: var(--text);">Professional Black women targeted most:</strong> Politicians, journalists, prosecutors face the harshest attacks</li>
+        <li><strong style="color: var(--text);">Real-world violence:</strong> Black women receive death threats and require security after Trump's attacks</li>
+        <li><strong style="color: var(--text);">Pattern of dismissal:</strong> Systematically dismisses Black women's questions, authority, and expertise</li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- ADDITIONAL MISOGYNISTIC BEHAVIOR -->
+  <SectionDivider label="Additional Patterns" />
+  <SectionHeader
+    eyebrow="Decades of Abuse"
+    title="Additional Patterns of<br>Misogynistic Behavior"
+    introText="Beyond public rhetoric, Trump has a documented history of misogynistic behavior in private and professional settings."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👙"
+      title="Miss Universe Pageant Abuse"
+      body="Trump owned Miss Universe/USA/Teen USA pageants 1996-2015. Multiple contestants reported he walked into dressing rooms while women were changing (including teen contestants as young as 15). Called Alicia Machado 'Miss Piggy' and 'Miss Housekeeping.' Trump admitted on Howard Stern (2005): 'I'll go backstage... everyone's getting dressed... I'm allowed to go in because I'm the owner... they're standing there with no clothes.'"
+      tag="Minors Involved"
+    />
+    <CategoryCard
+      icon="💼"
+      title="Workplace Sexual Harassment"
+      body="Multiple women reported harassment in Trump's workplaces. The Apprentice contestants allege sexual assault during show events. Barbara Res (Trump Organization VP) described Trump rating women's appearances in workplace, making comments about bodies, creating hostile work environment."
+      tag="Pattern of Abuse"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Howard Stern Interviews: Decades of Degradation"
+      body="17 years of appearances reveal consistent objectification: On daughter Ivanka: 'Is it wrong to be more sexually attracted to your own daughter than your wife?' On Princess Diana: said he would have 'nailed her' but she'd have to take HIV test (shortly after her death). Agreed consent from wife would be 'work.' Bragged about infidelity."
+      tag="17 Years"
+    />
+    <CategoryCard
+      icon="👨‍👩‍👧"
+      title="Comments About His Own Daughters"
+      body="Sexualizing comments about Ivanka: 'If Ivanka weren't my daughter, perhaps I'd be dating her' (The View, 2006). 'If I weren't happily married and, ya know, her father...' (Rolling Stone, 2015). Asked what they have in common, said: 'Well, I was going to say sex' (Wendy Williams Show, 2013). Commented on baby Tiffany's potential breast size."
+      tag="Disturbing"
+    />
+    <CategoryCard
+      icon="🤰"
+      title="Attacks on Pregnant Women and Mothers"
+      body="Called attorney 'disgusting' for requesting break to pump breast milk. Mocked Kim Kardashian's pregnancy weight gain. Said pregnancy is 'an inconvenience for a business.' Barbara Res reported Trump's view of pregnancy as burden on his businesses."
+      tag="Dehumanizing"
+    />
+    <CategoryCard
+      icon="🗳️"
+      title="Women's Rights and Policy"
+      body="Appointed 3 Supreme Court justices who overturned Roe v. Wade. Bragged: 'I was able to kill Roe v. Wade.' Said women who have abortions should face 'some form of punishment' (2016). Cut Planned Parenthood funding. Reinstated and expanded global gag rule blocking international women's health funding."
+      tag="Rights Stripped"
+    />
+  </CategoryGrid>
+
+  <!-- REAL-WORLD CONSEQUENCES -->
+  <SectionDivider label="Real-World Consequences" />
+  <SectionHeader
+    eyebrow="Documented Impact"
+    title="The Normalization of<br>Misogyny and Violence"
+    introText="Trump's rhetoric against women doesn't exist in a vacuum. It has real, measurable consequences for women's safety, equality, and participation in public life."
+  />
+
+  <ConsequencesGrid eyebrow="Documented Consequences" title="Measurable<br>Real-World Harm">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="Rise in Misogynistic Violence"
+        description="Spike in gendered harassment and threats, death threats to women Trump attacks, schools reported boys using 'grab them by the pussy' to harass girls, April Ryan required armed security costing $100,000+"
+      />
+      <ConsequenceItem
+        number="02"
+        title="Silencing of Women's Voices"
+        description="Chilling effect on reporting sexual assault, women leaving public life due to harassment, discrediting accusers makes other victims less likely to come forward, career retaliation for women who criticize Trump"
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Undermining #MeToo and Accountability"
+        description="Message to survivors: 'Even with 26+ accusers, a recorded confession, and jury verdict, a man can still become President.' Emboldening abusers. Mocked Christine Blasey Ford's testimony. E. Jean Carroll verdict denied by supporters."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Impact on Women in Politics"
+        description="Gendered double standards amplified, 'Lock her up' chants normalizing threats against women candidates, women at all levels report harassment mimicking Trump's language, reinforces barrier to women's leadership"
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="05"
+        title="Cultural Impact: Teaching Boys and Girls"
+        description="Boys learn: You can treat women as objects and still become President. Girls learn: Your appearance matters more than intelligence. Teachers reported boys mimicking Trump's language. Normalizes abuse when President models it."
+      />
+      <ConsequenceItem
+        number="06"
+        title="Women's Health and Reproductive Rights"
+        description="Roe v. Wade overturned -- maternal mortality rising in states with bans. Cuts to Planned Parenthood affect millions. Weakened enforcement of pregnancy discrimination and harassment laws. Global gag rule affected developing countries."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- EXPERT ANALYSIS -->
+  <SectionDivider label="Expert Analysis" />
+  <SectionHeader
+    eyebrow="Misogyny, Power, and Violence"
+    title="Expert Analysis"
+    introText="Gender studies scholars, anti-violence educators, and movement leaders on the significance and impact of Trump's pattern of misogynistic behavior."
+  />
+
+  <VoicesSection
+    eyebrow="Scholars on Gender-Based Violence"
+    title="In Their<br>Own Words"
+    introText="Experts who study patriarchal violence, gender dynamics, and political rhetoric assess Trump's systematic attacks on women."
+  >
+    <VoiceCard
+      quote="Trump's language toward women is classic patriarchal violence. He reduces women to their bodies, punishes them for speaking, and uses sexual humiliation as a weapon. This is the language of abuse, not politics."
+      attribution="<strong>Dr. Rachel Moran</strong><br>Gender Studies Expert, Researcher on Male Violence"
+    />
+    <VoiceCard
+      quote="Trump represents a backlash against women's equality. His attacks on women -- particularly professional women and women of color -- are about reasserting male dominance in the face of changing gender norms."
+      attribution="<strong>Dr. Michael Kimmel</strong> &middot; Sociologist<br>Author of &quot;Angry White Men&quot;"
+    />
+    <VoiceCard
+      quote="Trump's pattern of attacking women who challenge him serves a specific purpose: to warn other women that if they speak up, they will be humiliated, degraded, and destroyed. It's a silencing tactic as old as patriarchy itself."
+      attribution="<strong>Dr. Soraya Chemaly</strong><br>Author of &quot;Rage Becomes Her: The Power of Women's Anger&quot;"
+    />
+    <VoiceCard
+      quote="When a sitting President brags about sexual assault and faces no consequences, it sends a message to every man in America that women's bodies are not their own. This has real-world consequences for sexual violence prevention."
+      attribution="<strong>Dr. Jackson Katz</strong><br>Anti-Violence Educator, Creator of &quot;Tough Guise&quot;"
+    />
+    <VoiceCard
+      quote="Trump's election despite multiple sexual assault allegations told survivors: your pain doesn't matter, your voice doesn't matter, your safety doesn't matter. We're still fighting to overcome that message."
+      attribution="<strong>Tarana Burke</strong><br>Founder of #MeToo Movement"
+    />
+    <VoiceCard
+      quote="Trump doesn't just attack individual women -- he perpetuates a system that devalues all women. His obsession with women's appearance, his reduction of women to sexual objects, his punishment of women who don't submit -- this is systemic misogyny."
+      attribution="<strong>Dr. Susan Bordo</strong><br>Gender Studies Scholar, Author"
+    />
+  </VoicesSection>
+
+  <!-- THE PATTERN IS CLEAR -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="The Pattern Is Clear" variant="red">
+      <p style="">This is not about political disagreement. This is not about being &quot;tough&quot; or &quot;telling it like it is.&quot; This is a <strong style="color: var(--text);">systematic pattern of abuse, degradation, and violence against women</strong> spanning 40+ years.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <StatGrid>
+    <StatCard target={26} suffix="+" label="Accusers with similar stories across decades. Court verdict finding sexual abuse. Trump's own recorded confession." accentColor="var(--red)" />
+    <StatCard target={100} suffix="+" label="Degrading comments: Appearance attacks, weight shaming, sexual objectification, dehumanizing language." accentColor="var(--red)" />
+  </StatGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🎯"
+      title="Systematic Targeting"
+      body="Women who challenge him face sustained attacks. Black women face intersectional misogyny and racism."
+      tag="40+ Years"
+    />
+    <CategoryCard
+      icon="⚡"
+      title="Real-World Harm"
+      body="Death threats, harassment, silencing of women's voices, normalization of violence, rollback of reproductive rights."
+      tag="Documented Impact"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="The Question Is Not Whether Trump Is a Misogynist" variant="red">
+      <p style=""><strong style="color: var(--text);">This is who Donald Trump is.</strong> A man who brags about sexual assault, degrades women publicly, attacks accusers, and faces no consequences. A man who has taught a generation of boys that women are objects and taught girls that their voices don't matter.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>The evidence is overwhelming. The question is whether we, as a society, will continue to excuse, enable, and reward this behavior -- or whether we'll finally say: enough.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- RESOURCES -->
+  <ColoredSection background="#0a0a12" borderColor="var(--accent)">
+    <AlertBanner icon="📞" title="Resources for Survivors" variant="blue">
+      <p style=""><strong style="color: var(--text);">RAINN National Sexual Assault Hotline:</strong> <strong style="color: var(--accent);">1-800-656-4673</strong> (24/7 confidential support) -- <a href="https://www.rainn.org" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">www.rainn.org</a></p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);">National Domestic Violence Hotline:</strong> <strong style="color: var(--accent);">1-800-799-7233</strong> (24/7 support) -- <a href="https://www.thehotline.org" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">www.thehotline.org</a></p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);">Time's Up Legal Defense Fund:</strong> Provides legal support for survivors of sexual harassment -- <a href="https://nwlc.org/times-up-legal-defense-fund/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">nwlc.org</a></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- SOURCES -->
+  <ColoredSection background="#0a0a0f" borderColor="var(--border)">
+    <AlertBanner icon="📚" title="Sources and Further Reading" variant="blue">
+      <ul style="padding-left: 20px;">
+        <li><a href="https://www.businessinsider.com/women-accused-trump-sexual-misconduct-list-2017-12" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Business Insider: All the Women Who Have Accused Trump of Sexual Misconduct</a></li>
+        <li><a href="https://www.pbs.org/newshour/politics/assault-allegations-donald-trump-recapped" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">PBS: Sexual Assault Allegations Against Donald Trump</a></li>
+        <li><a href="https://www.nytimes.com/2023/05/09/nyregion/trump-carroll-jury-verdict.html" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">New York Times: Jury Finds Trump Liable for Sexual Abuse and Defamation</a></li>
+        <li><a href="https://www.newyorker.com/news/news-desk/listening-to-what-trumps-accusers-have-told-us" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">The New Yorker: Listening to What Trump's Accusers Have Told Us</a></li>
+        <li><a href="https://www.theatlantic.com/politics/archive/2017/12/what-about-the-19-women-who-accused-trump/547724/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">The Atlantic: What About the 19 Women Who Accused Trump?</a></li>
+        <li><a href="https://apnews.com/article/donald-trump-us-news-ap-top-news-elections-politics-970830b2461b73e2e771fa3b00a4c89c" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">AP: Trump's History of Degrading Women</a></li>
+        <li><a href="https://time.com/5047771/donald-trump-comments-billy-bush/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Time: Access Hollywood Tape Transcript</a></li>
+      </ul>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Return to<br>Overview"
+    description="Review the complete dangerous rhetoric documentation covering all target groups -- press, critics, Democrats, immigrants, and women."
+    linkText="&larr; Dangerous Rhetoric Overview"
+    linkHref="/dangerous-rhetoric"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Against Immigrants', href: '/dangerous-rhetoric/immigrants' }}
+    currentIndex={4}
+    totalPages={5}
+  />
+
+</ResearchLayout>

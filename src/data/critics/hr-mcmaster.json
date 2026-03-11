@@ -1,0 +1,87 @@
+{
+  "id": "hr-mcmaster",
+  "name": "H.R. McMaster",
+  "role": "National Security Advisor",
+  "administration": "Trump Administration",
+  "years": "2017-2018",
+  "militaryRank": "Lieutenant General, U.S. Army (Retired)",
+  "category": "former-administration",
+  "subCategory": "military-leader",
+  "photo": null,
+  "summary": "Former National Security Advisor who detailed Trump's dangerous ideas and said he abandoned his constitutional oath on January 6.",
+  "keyStatements": [
+    {
+      "quote": "Trump abandoned his oath to 'support and defend the Constitution,' a president's highest obligation.",
+      "date": "2024-08-25",
+      "source": "CNN (Peter Bergen analysis)",
+      "context": "Regarding January 6 Capitol attack",
+      "url": "https://www.peterbergen.com/gen-mcmasters-blistering-account-of-the-trump-white-house/"
+    },
+    {
+      "quote": "Why don't we just bomb the drugs?",
+      "date": "2024-08-25",
+      "source": "CBS News",
+      "context": "Example of outlandish Trump remark about Mexico",
+      "url": "https://www.cbsnews.com/news/hr-mcmaster-former-national-security-adviser-face-the-nation-transcript-08-25-2024/"
+    },
+    {
+      "quote": "Why don't we take out the whole North Korean Army during one of their parades?",
+      "date": "2024-08-25",
+      "source": "CBS News",
+      "context": "Example of dangerous Trump proposal",
+      "url": "https://www.cbsnews.com/news/hr-mcmaster-former-national-security-adviser-face-the-nation-transcript-08-25-2024/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-02-20",
+      "event": "Appointed National Security Advisor",
+      "significance": "Became Trump's second National Security Advisor"
+    },
+    {
+      "date": "2018-04-09",
+      "event": "Left White House",
+      "significance": "Replaced by John Bolton"
+    },
+    {
+      "date": "2024-08-27",
+      "event": "Published memoir critical of Trump",
+      "significance": "Detailed dangerous proposals and constitutional violations"
+    }
+  ],
+  "credibility": {
+    "background": "Three-star Army general, veteran of Gulf War, Operation Iraqi Freedom, and Afghanistan",
+    "positions": [
+      "National Security Advisor (2017-2018)",
+      "Director, Army Capabilities Integration Center (2014-2017)",
+      "Commander, Maneuver Center of Excellence (2012-2014)"
+    ],
+    "awards": [
+      "Silver Star",
+      "Bronze Star Medal with Valor",
+      "Purple Heart"
+    ]
+  },
+  "oppositionReasons": [
+    "Trump abandoned his constitutional oath on January 6",
+    "Trump proposed dangerous and outlandish military actions",
+    "Oval Office meetings were exercises in 'competitive sycophancy'",
+    "Trump lacks understanding of national security"
+  ],
+  "endorsement": "Opposes Trump's return to office",
+  "sources": [
+    {
+      "title": "At War with Ourselves: My Tour of Duty in the Trump White House",
+      "url": "https://www.harperlibrarybookclub.com/9780062899552/at-war-with-ourselves/",
+      "date": "2024-08-27",
+      "type": "book"
+    },
+    {
+      "title": "Gen. McMaster’s blistering account of the Trump White House (analysis)",
+      "url": "https://www.peterbergen.com/gen-mcmasters-blistering-account-of-the-trump-white-house/",
+      "date": "2024-08-25",
+      "type": "news"
+    }
+  ],
+  "party": "Independent"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "john-kasich",
+  "name": "John Kasich",
+  "role": "Former Governor of Ohio",
+  "administration": null,
+  "years": "2011-2019",
+  "category": "republican-critics",
+  "party": "Republican",
+  "summary": "Former Ohio Governor and 2016 presidential candidate who became one of Trump's most prominent Republican critics, refusing to endorse him and speaking at the 2020 Democratic National Convention.",
+  "keyStatements": [
+    {
+      "quote": "I'm a Republican, but I am, first and foremost, an American. And right now, in our country, the most important thing we can do is choose the right leader.",
+      "context": "Speaking at the 2020 Democratic National Convention endorsing Joe Biden",
+      "date": "2020-08-17",
+      "source": "https://www.cnn.com/2020/08/17/politics/john-kasich-rnc-biden/index.html"
+    },
+    {
+      "quote": "I think that the path to the presidency is a path that people have to feel comfortable with. And when you stomp on people, when you say insulting things, it becomes very difficult.",
+      "context": "Criticizing Trump's campaign rhetoric in 2016",
+      "date": "2016-03-13",
+      "source": "https://www.politico.com/story/2016/03/john-kasich-donald-trump-220711"
+    },
+    {
+      "quote": "He's just not fit to be president of the United States... The person who sits in the Oval Office must bring Americans together.",
+      "context": "Explaining his opposition to Trump",
+      "date": "2020-08-17",
+      "source": "https://www.theguardian.com/us-news/2020/aug/17/john-kasich-joe-biden-republican-trump"
+    }
+  ],
+  "background": "John Kasich served as Governor of Ohio from 2011 to 2019 and was a U.S. Representative from 1983 to 2001. He ran for president in 2016, positioning himself as a moderate alternative to Trump. Despite Trump winning the Republican nomination, Kasich refused to endorse him and skipped the 2016 Republican National Convention held in his home state.",
+  "oppositionReasons": [
+    "Believes Trump's rhetoric is divisive and destructive to American unity",
+    "Opposes Trump's populist approach and personal attacks on opponents",
+    "Concerned about Trump's temperament and fitness for office",
+    "Disagrees with Trump's handling of racial tensions and protests",
+    "Believes Trump has damaged Republican Party values and conservatism"
+  ],
+  "notableActions": [
+    "Refused to endorse Trump in 2016 and 2020",
+    "Skipped the 2016 Republican National Convention in Cleveland, his home state",
+    "Spoke at the 2020 Democratic National Convention endorsing Joe Biden",
+    "Consistently criticized Trump throughout his presidency",
+    "Advocated for bipartisanship and moderation in politics"
+  ],
+  "credibility": {
+    "strengths": [
+      "Two-term governor of crucial swing state Ohio",
+      "18 years of congressional experience",
+      "Reputation as pragmatic conservative willing to work across party lines",
+      "Successfully balanced Ohio's budget and expanded Medicaid",
+      "Maintained consistent principles despite political pressure"
+    ],
+    "considerations": [
+      "Some conservatives view him as too moderate or establishment",
+      "His 2016 presidential campaign gained little traction",
+      "Speaking at DNC alienated some Republican voters"
+    ]
+  }
+}

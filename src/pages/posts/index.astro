@@ -1,0 +1,430 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import CTASection from '../../components/design/CTASection.astro';
+
+import categoriesData from '../../data/categories.json';
+
+const postFiles = import.meta.glob('../../data/posts/*.json', { eager: true });
+const posts = Object.values(postFiles).map((mod: any) => mod.default || mod);
+
+// Sort by id descending (post-030 before post-001)
+posts.sort((a, b) => {
+  const numA = parseInt(a.id.replace('post-', ''));
+  const numB = parseInt(b.id.replace('post-', ''));
+  return numB - numA;
+});
+
+const categories = categoriesData.categories;
+
+// Collect category usage stats
+const categoryCounts: Record<string, number> = {};
+let totalLinkedControversies = 0;
+
+posts.forEach((post) => {
+  categoryCounts[post.category] = (categoryCounts[post.category] || 0) + 1;
+  totalLinkedControversies += (post.controversyIds || []).length;
+});
+
+const usedCategories = Object.entries(categoryCounts)
+  .map(([id, count]) => ({
+    ...categories[id],
+    count,
+  }))
+  .sort((a, b) => b.count - a.count);
+
+const uniqueCategoryCount = usedCategories.length;
+
+// Format date helper
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<ResearchLayout title="Analysis & Posts" description="Original analysis connecting controversies, examining patterns, and providing context for ongoing events.">
+
+  <Masthead
+    eyebrow="The Trump Tracker · Research Division"
+    title="ANALYSIS &amp; <span class='word-red'>POSTS</span>"
+    subtitle="Original Analysis Connecting Controversies and Patterns"
+    date="30 posts sourced from documented evidence"
+  />
+
+  <StatGrid>
+    <StatCard target={posts.length} label="Original analysis posts" />
+    <StatCard target={uniqueCategoryCount} label="Categories covered" />
+    <StatCard target={totalLinkedControversies} label="Total linked controversies" />
+  </StatGrid>
+
+  <SectionHeader
+    eyebrow="Filter & Browse"
+    title="The <span class='word-red'>Feed</span>"
+    introText="Each post connects documented controversies with original analysis. Filter by category or scroll through all posts."
+  />
+
+  <!-- Filter Section -->
+  <div class="filter-section container">
+    <div class="filter-bar">
+      <div class="filter-select-wrapper">
+        <select id="category-filter" class="filter-select">
+          <option value="all">All Categories ({posts.length})</option>
+          {usedCategories.map((cat) => (
+            <option value={cat.id}>
+              {cat.icon} {cat.title} ({cat.count})
+            </option>
+          ))}
+        </select>
+      </div>
+      <div class="results-count" id="results-count">
+        Showing <strong>{posts.length}</strong> of {posts.length} posts
+      </div>
+    </div>
+  </div>
+
+  <!-- Posts Feed -->
+  <div class="posts-feed container">
+    {posts.map((post) => {
+      const cat = categories[post.category];
+      const controversyCount = (post.controversyIds || []).length;
+      return (
+        <a
+          href={`/posts/${post.id}`}
+          class="post-card fade-up"
+          data-category={post.category}
+          style={`--card-accent: ${cat?.color || 'var(--red)'}`}
+        >
+          <div class="post-card-header">
+            <span class="category-badge" style={`--badge-color: ${cat?.color || 'var(--red)'}`}>
+              <span class="category-icon">{cat?.icon}</span>
+              <span class="category-title">{cat?.title}</span>
+            </span>
+            <span class="post-date">{formatDate(post.date)}</span>
+          </div>
+
+          <div class="post-text" set:html={post.text.replace(/\n/g, '<br>')} />
+
+          <div class="post-card-footer">
+            <div class="post-meta">
+              {controversyCount > 0 && (
+                <span class="evidence-count">
+                  {controversyCount} linked controvers{controversyCount === 1 ? 'y' : 'ies'}
+                </span>
+              )}
+              {post.hashtags && post.hashtags.length > 0 && (
+                <span class="hashtags">
+                  {post.hashtags.map((tag: string) => (
+                    <span class="hashtag">#{tag}</span>
+                  ))}
+                </span>
+              )}
+            </div>
+            <span class="read-more">Read more &rarr;</span>
+          </div>
+        </a>
+      );
+    })}
+
+    <div class="no-results" id="no-results" style="display: none;">
+      <p>No posts found for this category.</p>
+    </div>
+  </div>
+
+  <HighlightBar text="Every post is backed by documented evidence. Every controversy links to official sources." />
+
+  <CTASection
+    title="Explore All<br><span class='word-red'>Controversies</span>"
+    description="Search, filter, and explore 255+ documented Trump controversies with full sources and severity ratings."
+    linkText="Open The Trump Tracker &rarr;"
+    linkHref="https://thetrumptracker.com"
+  />
+
+</ResearchLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filter = document.getElementById('category-filter') as HTMLSelectElement;
+    const resultsCount = document.getElementById('results-count');
+    const noResults = document.getElementById('no-results');
+    const cards = document.querySelectorAll('.post-card') as NodeListOf<HTMLElement>;
+    const totalPosts = cards.length;
+
+    if (!filter || !resultsCount || !noResults) return;
+
+    filter.addEventListener('change', () => {
+      const selected = filter.value;
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (selected === 'all' || category === selected) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      resultsCount.innerHTML = `Showing <strong>${visibleCount}</strong> of ${totalPosts} posts`;
+      noResults.style.display = visibleCount === 0 ? '' : 'none';
+    });
+  });
+</script>
+
+<style>
+  /* Filter Section */
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .filter-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 8px;
+  }
+
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .filter-select-wrapper {
+    position: relative;
+  }
+
+  .filter-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 40px 10px 16px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    min-width: 260px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23888880' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+
+  .filter-select:hover,
+  .filter-select:focus {
+    border-color: var(--red);
+    outline: none;
+  }
+
+  .filter-select option {
+    background: var(--surface);
+    color: var(--text);
+    padding: 8px;
+  }
+
+  .results-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .results-count :global(strong) {
+    color: var(--text);
+  }
+
+  /* Posts Feed */
+  .posts-feed {
+    padding-top: 32px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Post Card */
+  .post-card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--card-accent, var(--red));
+    padding: 28px 32px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  }
+
+  .post-card:hover {
+    background: #222;
+    border-color: var(--card-accent, var(--red));
+    transform: translateX(4px);
+    text-decoration: none;
+  }
+
+  .post-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .category-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--badge-color, var(--red));
+    border: 1px solid var(--badge-color, var(--red));
+    padding: 4px 10px;
+  }
+
+  .category-icon {
+    font-size: 13px;
+  }
+
+  .category-title {
+    line-height: 1;
+  }
+
+  .post-date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 1px;
+  }
+
+  .post-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+    white-space: pre-line;
+    margin-bottom: 20px;
+  }
+
+  .post-card-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .evidence-count {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--amber);
+    border: 1px solid rgba(232, 124, 30, 0.3);
+    padding: 3px 8px;
+  }
+
+  .hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .hashtag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+
+  .post-card:hover .hashtag {
+    color: var(--text);
+  }
+
+  .read-more {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    white-space: nowrap;
+    transition: letter-spacing 0.2s;
+  }
+
+  .post-card:hover .read-more {
+    letter-spacing: 3px;
+  }
+
+  /* No Results */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .no-results p {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .post-card {
+      padding: 20px 18px;
+    }
+
+    .post-card-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .post-card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .filter-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .filter-select {
+      min-width: 100%;
+      width: 100%;
+    }
+
+    .post-text {
+      font-size: 15px;
+    }
+  }
+</style>

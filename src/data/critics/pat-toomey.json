@@ -1,0 +1,60 @@
+{
+  "id": "pat-toomey",
+  "name": "Pat Toomey",
+  "role": "Former U.S. Senator from Pennsylvania",
+  "administration": null,
+  "years": "2011-2023",
+  "category": "republican-critics",
+  "party": "Republican",
+  "summary": "Former Pennsylvania Senator who supported Trump on most policies but became a vocal critic after the 2020 election, voting to convict Trump in his second impeachment trial and condemning his actions surrounding January 6.",
+  "keyStatements": [
+    {
+      "quote": "I do think the president committed impeachable offenses, but I don't know what's going to land on the Senate floor, if anything.",
+      "context": "After the January 6 Capitol attack",
+      "date": "2021-01-09",
+      "source": "https://www.foxnews.com/politics/toomey-trump-committed-impeachable-offenses"
+    },
+    {
+      "quote": "President Trump's conduct was unconscionable. He dishonored his office and betrayed the country.",
+      "context": "Statement explaining his vote to convict Trump in second impeachment",
+      "date": "2021-02-13",
+      "source": "https://www.politico.com/news/2021/02/13/pat-toomey-trump-impeachment-468954"
+    },
+    {
+      "quote": "I don't think he should be the nominee... I don't think he can win. And I think if he's the nominee, we're very likely to lose the Senate and the House.",
+      "context": "On Trump running in 2024",
+      "date": "2022-11-14",
+      "source": "https://www.cnn.com/2022/11/14/politics/pat-toomey-trump-2024/index.html"
+    }
+  ],
+  "background": "Pat Toomey served as U.S. Senator from Pennsylvania from 2011 to 2023. A fiscal conservative and former president of the Club for Growth, Toomey generally supported Trump's economic policies and judicial appointments. However, he became increasingly critical of Trump's behavior, particularly his false claims about the 2020 election and role in the January 6 Capitol attack. Toomey announced he would not seek re-election in 2022.",
+  "oppositionReasons": [
+    "Condemned Trump's attempts to overturn 2020 election results",
+    "Believed Trump's actions surrounding January 6 were impeachable",
+    "Concerned Trump's 2024 candidacy would hurt Republican electoral prospects",
+    "Opposed Trump's false claims about election fraud",
+    "Viewed Trump's post-election conduct as betrayal of office"
+  ],
+  "notableActions": [
+    "One of seven Republican senators to vote to convict Trump in second impeachment trial",
+    "Called for Trump to resign after January 6 attack",
+    "Publicly stated Trump should not be 2024 Republican nominee",
+    "Defended 2020 election integrity against Trump's claims",
+    "Retired from Senate rather than face pro-Trump primary challenge"
+  ],
+  "credibility": {
+    "strengths": [
+      "Two-term U.S. Senator from crucial swing state",
+      "Supported Trump on most policy matters, showing independence on criticism",
+      "Strong conservative credentials on fiscal and economic issues",
+      "Former president of influential Club for Growth",
+      "Reputation for principled stands on constitutional matters"
+    ],
+    "considerations": [
+      "Generally supportive of Trump policies until post-election period",
+      "Retired rather than facing potential pro-Trump primary opponent",
+      "Some conservatives viewed impeachment vote as betrayal",
+      "Limited criticism of Trump during most of his presidency"
+    ]
+  }
+}

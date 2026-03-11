@@ -1,0 +1,33 @@
+:root {
+  /* Colors */
+  --black: #0a0a0a;
+  --deep: #111111;
+  --surface: #181818;
+  --card: #1e1e1e;
+  --border: #2a2a2a;
+  --red: #d42b2b;
+  --red-bright: #ff3a3a;
+  --red-glow: rgba(212, 43, 43, 0.15);
+  --amber: #e87c1e;
+  --amber-dim: rgba(232, 124, 30, 0.12);
+  --green: #2a9d58;
+  --green-bright: #3ddc84;
+  --green-dim: rgba(42, 157, 88, 0.12);
+  --blue: #1e6fe8;
+  --blue-bright: #5b9cf6;
+  --blue-dim: rgba(30, 111, 232, 0.12);
+  --text: #f0ece4;
+  --muted: #888880;
+  --faint: #444440;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Crimson Pro', Georgia, serif;
+  --font-heading: 'Oswald', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* Spacing */
+  --container-max: 1200px;
+  --section-padding: 70px 24px;
+  --card-padding: 36px 32px;
+}

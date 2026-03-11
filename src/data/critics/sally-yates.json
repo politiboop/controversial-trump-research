@@ -1,0 +1,92 @@
+{
+  "id": "sally-yates",
+  "name": "Sally Yates",
+  "role": "Acting Attorney General",
+  "administration": "Trump Administration",
+  "years": "2017",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "justice-department",
+  "photo": null,
+  "summary": "Former Acting Attorney General who was fired after refusing to defend Trump's travel ban, saying she was not convinced it was lawful.",
+  "keyStatements": [
+    {
+      "quote": "I am not convinced that the defense of the executive order is consistent with these responsibilities nor am I convinced that the executive order is lawful.",
+      "date": "2017-01-30",
+      "source": "Department of Justice memo",
+      "context": "Memo directing DOJ not to defend the travel ban",
+      "url": "https://www.justice.gov/opa/file/930601/download"
+    },
+    {
+      "quote": "We have to be on guard against a president who doesn't respect the rule of law.",
+      "date": "2020-10-05",
+      "source": "PBS NewsHour",
+      "context": "Interview about rule of law and the 2020 election",
+      "url": "https://www.pbs.org/newshour/show/why-former-acting-ag-sally-yates-says-rule-of-law-is-on-the-ballot"
+    },
+    {
+      "quote": "The attack on the rule of law is unprecedented and dangerous.",
+      "date": "2020-10-05",
+      "source": "PBS NewsHour",
+      "context": "Same interview",
+      "url": "https://www.pbs.org/newshour/show/why-former-acting-ag-sally-yates-says-rule-of-law-is-on-the-ballot"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2015-01-09",
+      "event": "Became Deputy Attorney General",
+      "significance": "Under Obama"
+    },
+    {
+      "date": "2017-01-20",
+      "event": "Became Acting Attorney General",
+      "significance": "During Trump transition"
+    },
+    {
+      "date": "2017-01-30",
+      "event": "Refused to defend travel ban",
+      "significance": "Defied Trump order"
+    },
+    {
+      "date": "2017-01-30",
+      "event": "Fired by Trump",
+      "significance": "Dismissed same day"
+    },
+    {
+      "date": "2020",
+      "event": "Warned about Trump's attacks on rule of law",
+      "significance": "Continued criticism"
+    }
+  ],
+  "credibility": {
+    "background": "Former Acting Attorney General, former Deputy Attorney General, federal prosecutor",
+    "positions": [
+      "Acting Attorney General (2017)",
+      "Deputy Attorney General (2015-2017)",
+      "U.S. Attorney for Northern District of Georgia (2010-2015)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said the travel ban was likely unlawful",
+    "Warned Trump did not respect the rule of law",
+    "Said attacks on rule of law were unprecedented and dangerous"
+  ],
+  "endorsement": "Opposes Trump's approach to justice and rule of law",
+  "sources": [
+    {
+      "title": "DOJ memo from Acting Attorney General Sally Q. Yates (Jan. 30, 2017)",
+      "url": "https://www.justice.gov/opa/file/930601/download",
+      "date": "2017-01-30",
+      "type": "government"
+    },
+    {
+      "title": "Why former acting AG Sally Yates says rule of law is on the ballot",
+      "url": "https://www.pbs.org/newshour/show/why-former-acting-ag-sally-yates-says-rule-of-law-is-on-the-ballot",
+      "date": "2020-10-05",
+      "type": "interview"
+    }
+  ],
+  "party": "Democrat"
+}

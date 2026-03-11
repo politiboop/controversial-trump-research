@@ -1,0 +1,105 @@
+{
+  "id": "william-mcraven",
+  "name": "William McRaven",
+  "role": "Commander, U.S. Special Operations Command",
+  "administration": null,
+  "years": "2011-2014",
+  "militaryRank": "Admiral, U.S. Navy (Retired)",
+  "category": "military-leader",
+  "subCategory": "special-operations",
+  "photo": null,
+  "summary": "Retired four-star admiral who oversaw the raid that killed Osama bin Laden and publicly criticized Trump in a 2018 Washington Post op-ed after the Brennan clearance revocation.",
+  "keyStatements": [
+    {
+      "quote": "I would consider it an honor if you would revoke my security clearance as well, so I can add my name to the list of men and women who have spoken up against your presidency.",
+      "date": "2018-08-16",
+      "source": "Washington Post op-ed",
+      "context": "After Trump revoked John Brennan's clearance",
+      "url": "https://www.washingtonpost.com/opinions/revoke-my-security-clearance-too-mr-president/2018/08/16/8b149b02-a178-11e8-93e3-24d1703d2a7a_story.html"
+    },
+    {
+      "quote": "If you think for a moment that your McCarthy-era tactics will suppress the voices of criticism, you are sadly mistaken. The criticism will continue until you become the leader we prayed you would be.",
+      "date": "2018-08-16",
+      "source": "Washington Post op-ed",
+      "url": "https://www.washingtonpost.com/opinions/revoke-my-security-clearance-too-mr-president/2018/08/16/8b149b02-a178-11e8-93e3-24d1703d2a7a_story.html"
+    },
+    {
+      "quote": "This president has shown that he is willing to attack the very institutions that keep our democracy intact. That is the greatest threat to democracy in my lifetime.",
+      "date": "2019-09-01",
+      "source": "CBS News",
+      "url": "https://www.cbsnews.com/news/admiral-william-mcraven-trump-attacks-on-media-press-cbsn-originals/",
+      "context": "Face the Nation interview"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1977",
+      "event": "Commissioned as Navy officer",
+      "significance": "Began military career"
+    },
+    {
+      "date": "2011-05-02",
+      "event": "Oversaw raid that killed Osama bin Laden",
+      "significance": "As commander of JSOC"
+    },
+    {
+      "date": "2011-08-08",
+      "event": "Became Commander of SOCOM",
+      "significance": "Led all U.S. special operations forces"
+    },
+    {
+      "date": "2014-08-28",
+      "event": "Retired from Navy",
+      "significance": "Completed 37 years of service"
+    },
+    {
+      "date": "2014-2018",
+      "event": "Chancellor of University of Texas System",
+      "significance": "Led major university system"
+    },
+    {
+      "date": "2018-08-16",
+      "event": "Published op-ed asking Trump to revoke his clearance",
+      "significance": "Criticized attacks on officials and the press"
+    },
+    {
+      "date": "2019-09-01",
+      "event": "Warned Trump's attacks on media were a threat to democracy",
+      "significance": "Criticized attacks on press and institutions"
+    }
+  ],
+  "credibility": {
+    "background": "Four-star admiral who led the raid that killed Osama bin Laden, commanded all U.S. special operations forces",
+    "positions": [
+      "Commander, U.S. Special Operations Command (2011-2014)",
+      "Commander, Joint Special Operations Command (2008-2011)",
+      "Chancellor, University of Texas System (2014-2018)"
+    ],
+    "awards": [
+      "Defense Distinguished Service Medal",
+      "Defense Superior Service Medal",
+      "Legion of Merit",
+      "Bronze Star Medal"
+    ]
+  },
+  "oppositionReasons": [
+    "Criticized Trump's attacks on critics and the press",
+    "Said Trump's attacks on institutions threaten democracy"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "Adm. William H. McRaven asks Trump to revoke his security clearance",
+      "url": "https://www.washingtonpost.com/opinions/revoke-my-security-clearance-too-mr-president/2018/08/16/8b149b02-a178-11e8-93e3-24d1703d2a7a_story.html",
+      "date": "2018-08-16",
+      "type": "op-ed"
+    },
+    {
+      "title": "McRaven calls Trump's attacks on media a threat to democracy",
+      "url": "https://www.cbsnews.com/news/admiral-william-mcraven-trump-attacks-on-media-press-cbsn-originals/",
+      "date": "2019-09-01",
+      "type": "news"
+    }
+  ],
+  "party": "Independent"
+}

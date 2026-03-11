@@ -1,0 +1,96 @@
+{
+  "id": "larry-hogan",
+  "name": "Larry Hogan",
+  "role": "Governor of Maryland",
+  "administration": null,
+  "years": "2015-2023",
+  "militaryRank": null,
+  "category": "former-officials",
+  "subCategory": "governor",
+  "photo": null,
+  "summary": "Former Republican Governor of Maryland who said neither Trump nor Harris had earned his vote in 2024 and who wrote in Ronald Reagan in 2020 instead of voting for Trump.",
+  "keyStatements": [
+    {
+      "quote": "Neither one of the two candidates has earned my vote.",
+      "date": "2024-09-29",
+      "source": "CBS News",
+      "context": "Face the Nation interview",
+      "url": "https://www.cbsnews.com/news/larry-hogan-2024-presidential-race-endorsement/"
+    },
+    {
+      "quote": "I didn't vote for him in 2016 or 2020 and I've made that pretty clear.",
+      "date": "2024-09-29",
+      "source": "CBS News",
+      "context": "Face the Nation interview",
+      "url": "https://www.cbsnews.com/news/larry-hogan-2024-presidential-race-endorsement/"
+    },
+    {
+      "quote": "I voted for Ronald Reagan.",
+      "date": "2020-10-16",
+      "source": "CBS News",
+      "context": "Explaining his 2020 write-in vote",
+      "url": "https://www.cbsnews.com/news/larry-hogan-ronald-reagan-vote/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2015-01-21",
+      "event": "Became Governor of Maryland",
+      "significance": "Elected as Republican in blue state"
+    },
+    {
+      "date": "2016-11-08",
+      "event": "Did not vote for Trump",
+      "significance": "Wrote in his father's name"
+    },
+    {
+      "date": "2018",
+      "event": "Re-elected governor",
+      "significance": "Won by large margin despite Trump"
+    },
+    {
+      "date": "2020-10-16",
+      "event": "Wrote in Ronald Reagan for president",
+      "significance": "Refused to support Trump"
+    },
+    {
+      "date": "2023-01-18",
+      "event": "Completed second term as governor",
+      "significance": "Left office"
+    },
+    {
+      "date": "2024-09-29",
+      "event": "Said neither Trump nor Harris had earned his vote",
+      "significance": "Confirmed he would not support Trump"
+    }
+  ],
+  "credibility": {
+    "background": "Popular two-term Republican Governor of Democratic-leaning Maryland, businessman",
+    "positions": [
+      "Governor of Maryland (2015-2023)",
+      "Chair, National Governors Association (2019-2020)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said neither Trump nor Harris had earned his vote",
+    "Said he did not vote for Trump in 2016 or 2020",
+    "Wrote in Ronald Reagan in 2020 instead of voting for Trump"
+  ],
+  "endorsement": "No endorsement; said neither Trump nor Harris had earned his vote in 2024",
+  "sources": [
+    {
+      "title": "Larry Hogan says \"neither one of the two candidates has earned my vote\" in presidential race",
+      "url": "https://www.cbsnews.com/news/larry-hogan-2024-presidential-race-endorsement/",
+      "date": "2024-09-29",
+      "type": "news"
+    },
+    {
+      "title": "Republican Gov. Larry Hogan casts write-in ballot for Ronald Reagan instead of voting for Trump",
+      "url": "https://www.cbsnews.com/news/larry-hogan-ronald-reagan-vote/",
+      "date": "2020-10-16",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "rex-tillerson",
+  "name": "Rex Tillerson",
+  "role": "Secretary of State",
+  "administration": "Trump Administration",
+  "years": "2017-2018",
+  "militaryRank": null,
+  "category": "former-cabinet",
+  "subCategory": "state-department",
+  "photo": null,
+  "summary": "Former Secretary of State and ExxonMobil CEO who was fired by Trump via tweet and later called Trump 'undisciplined' and a 'moron' who doesn't like to read.",
+  "keyStatements": [
+    {
+      "quote": "He doesn't like to read. He doesn't read briefing reports. He doesn't like to get into the details of a lot of things. He's pretty undisciplined, doesn't like to read, doesn't read briefing reports, doesn't like to get into the details.",
+      "date": "2019-02-07",
+      "source": "CBS This Morning",
+      "context": "Interview about working with Trump",
+      "url": "https://www.cbsnews.com/news/rex-tillerson-describes-trump-as-undisciplined-doesnt-like-to-read/"
+    },
+    {
+      "quote": "What was challenging for me coming from the disciplined, highly process-oriented Exxon Mobil corporation is to go to work for a man who is pretty undisciplined, doesn't like to read, doesn't read briefing reports, doesn't like to get into the details of a lot of things.",
+      "date": "2019-02-07",
+      "source": "CBS This Morning",
+      "url": "https://www.cbsnews.com/news/rex-tillerson-describes-trump-as-undisciplined-doesnt-like-to-read/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-02-01",
+      "event": "Confirmed as Secretary of State",
+      "significance": "Joined Trump cabinet"
+    },
+    {
+      "date": "2017-10-01",
+      "event": "Reportedly called Trump a 'moron'",
+      "significance": "Report described tensions with Trump"
+    },
+    {
+      "date": "2018-03-13",
+      "event": "Fired by Trump via tweet",
+      "significance": "Dismissed without warning"
+    },
+    {
+      "date": "2019",
+      "event": "Gave public interview criticizing Trump",
+      "significance": "Broke silence on Trump's fitness"
+    },
+    {
+      "date": "2019-02-07",
+      "event": "Gave interview criticizing Trump's discipline",
+      "significance": "Discussed leadership style after leaving office"
+    }
+  ],
+  "credibility": {
+    "background": "Former Secretary of State, former CEO of ExxonMobil, extensive international business experience",
+    "positions": [
+      "U.S. Secretary of State (2017-2018)",
+      "Chairman and CEO, ExxonMobil (2006-2016)",
+      "President, ExxonMobil (2004-2006)"
+    ],
+    "awards": [
+      "Order of Friendship (Russia)",
+      "Boy Scouts Distinguished Eagle Scout Award"
+    ]
+  },
+  "oppositionReasons": [
+    "Said Trump was undisciplined and didn't like to read",
+    "Said Trump didn't engage with details or briefings"
+  ],
+  "endorsement": "Opposes Trump's return to office",
+  "sources": [
+    {
+      "title": "Tillerson: Trump 'undisciplined,' doesn't like to read",
+      "url": "https://www.cbsnews.com/news/rex-tillerson-describes-trump-as-undisciplined-doesnt-like-to-read/",
+      "date": "2019-02-07",
+      "type": "interview"
+    },
+    {
+      "title": "Tillerson reportedly called Trump a 'moron' after cabinet meeting",
+      "url": "https://www.nbcnews.com/politics/white-house/tillerson-reportedly-called-trump-moron-after-cabinet-meeting-n806671",
+      "date": "2017-10-01",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

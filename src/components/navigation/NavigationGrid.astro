@@ -1,0 +1,101 @@
+---
+interface NavCard {
+  icon?: string;
+  title: string;
+  description: string;
+  href: string;
+  tag?: string;
+}
+
+interface Props {
+  cards: NavCard[];
+}
+
+const { cards } = Astro.props;
+---
+
+<div class="nav-grid">
+  {cards.map(card => (
+    <a href={card.href} class="nav-card fade-up">
+      {card.icon && <span class="nav-card-icon">{card.icon}</span>}
+      <div class="nav-card-title">{card.title}</div>
+      <div class="nav-card-desc">{card.description}</div>
+      {card.tag && <span class="nav-card-tag">{card.tag}</span>}
+      <span class="nav-card-arrow">→</span>
+    </a>
+  ))}
+</div>
+
+<style>
+  .nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  .nav-card {
+    background: var(--card);
+    padding: 32px;
+    border-left: 4px solid var(--red);
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .nav-card:hover {
+    background: #222;
+    transform: translateX(4px);
+    text-decoration: none;
+  }
+
+  .nav-card-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .nav-card-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .nav-card-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .nav-card-tag {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-transform: uppercase;
+    border: 1px solid var(--red);
+    padding: 3px 10px;
+  }
+
+  .nav-card-arrow {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--faint);
+    transition: color 0.2s;
+  }
+
+  .nav-card:hover .nav-card-arrow {
+    color: var(--red);
+  }
+</style>

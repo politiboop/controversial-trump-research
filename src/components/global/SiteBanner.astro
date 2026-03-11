@@ -1,0 +1,37 @@
+---
+interface Props {
+  text: string;
+  href?: string;
+}
+
+const { text, href } = Astro.props;
+---
+
+<div class="site-banner">
+  {href ? (
+    <a href={href} class="banner-text">{text}</a>
+  ) : (
+    <p class="banner-text">{text}</p>
+  )}
+</div>
+
+<style>
+  .site-banner {
+    background: var(--red);
+    padding: 8px 24px;
+    text-align: center;
+  }
+
+  .banner-text {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  a.banner-text:hover {
+    text-decoration: underline;
+  }
+</style>

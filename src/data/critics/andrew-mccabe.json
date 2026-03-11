@@ -1,0 +1,96 @@
+{
+  "id": "andrew-mccabe",
+  "name": "Andrew McCabe",
+  "role": "Deputy Director of the FBI",
+  "administration": "Trump Administration",
+  "years": "2016-2018",
+  "militaryRank": null,
+  "category": "intelligence-community",
+  "subCategory": "fbi",
+  "photo": null,
+  "summary": "Former FBI Deputy Director fired by Trump who said the FBI had reason to investigate whether there was an inappropriate relationship between Trump and Russia and that Trump may have obstructed justice.",
+  "keyStatements": [
+    {
+      "quote": "The president may have been engaged in obstruction of justice in the firing of Jim Comey.",
+      "date": "2019-02-17",
+      "source": "60 Minutes (transcript via Time)",
+      "url": "https://time.com/5531604/andrew-mccabe-60-minutes-interview-transcript/"
+    },
+    {
+      "quote": "Is there an inappropriate relationship, a connection between this president and our most fearsome enemy, the government of Russia?",
+      "date": "2019-02-17",
+      "source": "60 Minutes (transcript via Time)",
+      "context": "Explaining why the FBI opened a counterintelligence investigation",
+      "url": "https://time.com/5531604/andrew-mccabe-60-minutes-interview-transcript/"
+    },
+    {
+      "quote": "I don't care. I believe Putin.",
+      "date": "2019-02-17",
+      "source": "60 Minutes (transcript via Time)",
+      "context": "Recounting Trump's response to intelligence on North Korea",
+      "url": "https://time.com/5531604/andrew-mccabe-60-minutes-interview-transcript/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2016-01-29",
+      "event": "Became Deputy Director of FBI",
+      "significance": "Under Director Comey"
+    },
+    {
+      "date": "2017-05-09",
+      "event": "Became Acting FBI Director",
+      "significance": "After Comey was fired"
+    },
+    {
+      "date": "2018-01-29",
+      "event": "Stepped down as Deputy Director",
+      "significance": "Planned retirement"
+    },
+    {
+      "date": "2018-03-16",
+      "event": "Fired by Trump",
+      "significance": "Dismissed 26 hours before retirement"
+    },
+    {
+      "date": "2019-02-17",
+      "event": "60 Minutes interview aired",
+      "significance": "Discussed obstruction and counterintelligence probe rationale"
+    },
+    {
+      "date": "2020",
+      "event": "Published book 'The Threat'",
+      "significance": "Detailed Trump's attacks on FBI"
+    }
+  ],
+  "credibility": {
+    "background": "Former FBI Deputy Director, 21-year FBI career, led counterterrorism and national security investigations",
+    "positions": [
+      "Deputy Director, FBI (2016-2018)",
+      "Acting Director, FBI (2017)",
+      "Assistant Director, FBI Counterterrorism Division"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump may have obstructed justice in the Comey firing",
+    "Said the FBI had reason to investigate a possible Trump-Russia connection",
+    "Raised concerns about Trump trusting Putin over U.S. intelligence"
+  ],
+  "endorsement": "Opposes Trump's presidency",
+  "sources": [
+    {
+      "title": "Read the Transcript of Ex-FBI Deputy McCabe's CBS Interview",
+      "url": "https://time.com/5531604/andrew-mccabe-60-minutes-interview-transcript/",
+      "date": "2019-02-17",
+      "type": "transcript"
+    },
+    {
+      "title": "McCabe says possible 'inappropriate relationship' between Trump, Russia prompted probe",
+      "url": "https://www.cbsnews.com/news/andrew-mccabe-60-minutes-possible-inappropriate-relationship-between-trump-russia-prompted-probe/",
+      "date": "2019-02-16",
+      "type": "news"
+    }
+  ],
+  "party": "Democrat"
+}

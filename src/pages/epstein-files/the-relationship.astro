@@ -1,0 +1,349 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const epsteinTabs = [
+  { label: 'Overview', href: '/epstein-files' },
+  { label: 'The Relationship', href: '/epstein-files/the-relationship' },
+  { label: 'Court Documents', href: '/epstein-files/court-documents' },
+  { label: 'Allegations', href: '/epstein-files/allegations' },
+  { label: 'Evidence', href: '/epstein-files/evidence' },
+  { label: 'The Network', href: '/epstein-files/epstein-network' },
+];
+
+const tickerItems = [
+  "\"Terrific Guy\" — Trump's 2002 Praise of Epstein",
+  "\"Likes Beautiful Women... Many on the Younger Side\" — Trump, 2002",
+  "15+ Year Documented Social Relationship",
+  "1992 Mar-a-Lago Party Video: Trump and Epstein with Young Women",
+  "Flight Logs Document Trump on Epstein's Plane",
+  "Epstein's Black Book: Multiple Trump Phone Numbers",
+  "Trump's Narrative Shifted from Praise to \"Wasn't a Fan\"",
+];
+---
+
+<ResearchLayout title="The Trump-Epstein Relationship: Timeline and Documentation" description="Comprehensive documentation of the social relationship between Donald Trump and Jeffrey Epstein, including Trump's statements, documented interactions, and witness accounts spanning from the 1980s through their claimed falling out.">
+
+  <SeriesNav tabs={epsteinTabs} currentPath="/epstein-files/the-relationship" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Epstein Files', href: '/epstein-files' },
+    { label: 'The Relationship' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 1 of 5 &middot; The Epstein Files"
+    title="THE TRUMP-EPSTEIN RELATIONSHIP"
+    titleHighlight="RELATIONSHIP"
+    subtitle="Documented timeline of a 15+ year social relationship"
+    date="Trump's Own Statements &middot; Photos &middot; Witnesses &middot; Court Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Donald Trump and Jeffrey Epstein maintained a documented social relationship spanning from the 1980s through the early 2000s. This relationship is established through Trump's own public statements, photographs, witness accounts, and contemporaneous reporting."
+    citation="Based on Court Records, Trump's Own Statements, and Verified Reporting"
+  />
+
+  <!-- WHAT TRUMP SAID ABOUT EPSTEIN -->
+  <SectionDivider label="Trump's Own Words" />
+  <SectionHeader
+    eyebrow="Direct Quotes"
+    title="What Trump Said<br>About Epstein"
+    introText="Trump's public statements about Epstein evolved dramatically as Epstein's legal troubles became public &mdash; from enthusiastic praise to claims of minimal relationship."
+  />
+
+  <VoicesSection
+    eyebrow="2002: Public Praise"
+    title="Trump Praised Epstein<br>Publicly"
+    introText="In a 2002 New York Magazine profile of Epstein, Trump gave an extensive quote praising their friendship and acknowledging Epstein's preference for young women."
+  >
+    <VoiceCard
+      quote="I've known Jeff for 15 years. Terrific guy. He's a lot of fun to be with. It is even said that he likes beautiful women as much as I do, and many of them are on the younger side. No doubt about it &mdash; Jeffrey enjoys his social life."
+      attribution="<strong>Donald Trump</strong> &middot; New York Magazine, 2002"
+    />
+  </VoicesSection>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F4DD;" title="Why This Quote Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This statement, given in 2002, establishes that Trump and Epstein's social relationship began around 1987. Trump's characterization of Epstein as a &quot;terrific guy&quot; and his acknowledgment that Epstein liked women &quot;on the younger side&quot; demonstrates <strong style="color: var(--text);">Trump's awareness of Epstein's preferences and his apparent lack of concern about them.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4C5;"
+      title="2015-2016: Initial Distancing"
+      body="During the 2016 presidential campaign, as questions about the Epstein relationship emerged, Trump began publicly distancing himself. He claimed he &quot;was not a fan&quot; of Epstein and suggested their relationship was more limited than previously indicated."
+      tag="Campaign Era"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F6A8;"
+      title="2019: After Epstein's Arrest"
+      body="Following Epstein's July 2019 arrest on federal sex trafficking charges, Trump told reporters: &quot;I had a falling out with him a long time ago. I don't think I've spoken to him for 15 years. I wasn't a fan.&quot;"
+      tag="Post-Arrest"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4F1;"
+      title="2024: &quot;Fake News&quot; Claims"
+      body="In 2024, as more Epstein-related documents were unsealed, Trump claimed on Truth Social that media coverage of his Epstein connections was &quot;fake news&quot; and that he &quot;banned&quot; Epstein from Mar-a-Lago."
+      tag="Denial"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x1F50D;" title="Analysis of Shifting Narratives" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;">Trump's public statements about Epstein have evolved significantly over time &mdash; from enthusiastic praise in 2002 (&quot;terrific guy&quot;) to claims of minimal relationship and a &quot;falling out&quot; after Epstein's arrest. <strong>The timeline of these shifting narratives corresponds directly with Epstein's legal troubles becoming public, suggesting strategic distancing rather than consistent recollection.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- DOCUMENTED INTERACTIONS -->
+  <SectionDivider label="Documented Interactions" />
+  <SectionHeader
+    eyebrow="Verified Events"
+    title="Documented<br>Interactions"
+    introText="Multiple documented events establish the extent of the Trump-Epstein social relationship."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F3E0;"
+      title="1992: Mar-a-Lago Party"
+      body="In November 1992, Trump hosted a party at Mar-a-Lago attended by Jeffrey Epstein. Video footage from the event, obtained by NBC News in 2019, shows Trump and Epstein together, laughing and talking while gesturing toward women dancing. The guest list appears to have included only Trump, Epstein, and approximately 28 young women flown in for the event."
+      tag="Video Evidence"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x26A0;&#xFE0F;"
+      title="1997: George Houraney Warning"
+      body="George Houraney stated that Trump asked him to organize a &quot;calendar girl&quot; competition at Mar-a-Lago in 1992. Houraney later told reporters he warned Trump about Epstein: &quot;I said, 'Look, Donald, I know Jeff really well, I can't have him going after younger girls.'&quot; Trump responded: &quot;Look, I'm putting my name on this.&quot;"
+      tag="Warning Ignored"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F37E;"
+      title="Late 1990s - Early 2000s: Social Circuit"
+      body="Multiple witnesses and contemporaneous reports document Trump and Epstein socializing together in Manhattan and Palm Beach. They were photographed together at multiple social events. Phone records from Epstein's address book included multiple phone numbers for Trump, Trump's wife, and Trump family members."
+      tag="Documented"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x2708;&#xFE0F;"
+      title="2000: Rides on Epstein's Plane"
+      body="Flight logs show Trump flew on Epstein's private plane at least once in January 2000, from Palm Beach to Newark. Mark Epstein, Jeffrey's brother, was also on the flight. Trump has variously claimed he only flew once or never &mdash; the documented evidence contradicts claims of no relationship."
+      tag="Flight Logs"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2753;"
+      title="2004-2005: Claimed &quot;Falling Out&quot;"
+      body="Trump has claimed he had a &quot;falling out&quot; with Epstein in this timeframe. Various accounts suggest this may have been related to a real estate deal in Palm Beach, though specifics remain disputed. No contemporaneous documentation of the falling out has been made public. Epstein's 2006 arrest occurred shortly after."
+      tag="Unverified"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- WITNESS ACCOUNTS -->
+  <SectionDivider label="Witnesses" />
+
+  <VoicesSection
+    eyebrow="Under Oath and On Record"
+    title="Witness<br>Accounts"
+    introText="Multiple independent witnesses have confirmed the Trump-Epstein social relationship through court proceedings and media interviews."
+  >
+    <VoiceCard
+      quote="Trump and Epstein were 'good friends' who socialized regularly in Palm Beach and New York in the 1990s and early 2000s."
+      attribution="<strong>Tom Barrack</strong> &middot; Longtime Trump friend and advisor<br>Confirmed in court proceedings"
+    />
+    <VoiceCard
+      quote="I said, 'Look, Donald, I know Jeff really well, I can't have him going after younger girls.' He responded: 'Look, I'm putting my name on this. I wouldn't put my name on it and have a scandal.'"
+      attribution="<strong>George Houraney</strong> &middot; Event organizer<br>Warned Trump about Epstein's behavior in 1992"
+    />
+    <VoiceCard
+      quote="Trump was 'the only person' who provided useful information voluntarily to the investigation. He was 'very helpful' and spoke with us willingly."
+      attribution="<strong>Bradley Edwards</strong> &middot; Epstein victims' attorney<br>2009 investigation cooperation"
+    />
+    <VoiceCard
+      quote="Trump told me Epstein was a 'great guy' before Epstein's arrest, but later changed his characterization after the legal troubles became public."
+      attribution="<strong>James Patterson</strong> &middot; Author<br>Interviewed Trump for Epstein book"
+    />
+  </VoicesSection>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F4DD;" title="Mark Epstein (Jeffrey's Brother)" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Mark Epstein confirmed Trump and Jeffrey were friends and socialized together, including Trump flying on Jeffrey's plane. Mark was present on the documented January 2000 flight.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- COMPREHENSIVE TIMELINE -->
+  <SectionDivider label="Full Timeline" />
+
+  <TimelineSection title="Comprehensive<br>Timeline">
+    <TimelineItem
+      date="Mid-1980s"
+      title="Trump and Epstein Meet"
+      description="Trump and Epstein reportedly meet in New York/Palm Beach social circles. Both are wealthy figures in Manhattan elite society."
+    />
+    <TimelineItem
+      date="~1987"
+      title="Social Relationship Begins"
+      description="Based on Trump's 2002 statement ('I've known Jeff for 15 years'), the social relationship begins around this time."
+    />
+    <TimelineItem
+      date="1992"
+      badge="VIDEO EVIDENCE"
+      badgeType="serious"
+      title="Mar-a-Lago Party"
+      description="Video shows Trump and Epstein together with young women. George Houraney later reports warning Trump about Epstein's behavior toward young girls."
+    />
+    <TimelineItem
+      date="Late 1990s"
+      title="Social Circuit"
+      description="Multiple photographs document Trump and Epstein together at social events in New York and Palm Beach. Epstein's 'black book' includes Trump family phone numbers."
+    />
+    <TimelineItem
+      date="Jan 2000"
+      badge="FLIGHT LOGS"
+      badgeType="serious"
+      title="Trump on Epstein's Plane"
+      description="Flight logs document Trump on Epstein's plane from Palm Beach to Newark."
+    />
+    <TimelineItem
+      date="2002"
+      badge="TRUMP'S OWN WORDS"
+      badgeType="catastrophic"
+      title="'Terrific Guy' Quote"
+      description="Trump gives effusive praise of Epstein to New York Magazine, calling him 'terrific guy' and noting his preference for women 'on the younger side.'"
+    />
+    <TimelineItem
+      date="2004-2005"
+      title="Claimed 'Falling Out'"
+      description="Trump claims they had a 'falling out' around this time, though no contemporaneous documentation exists. Possible connection to Palm Beach real estate deal."
+    />
+    <TimelineItem
+      date="2006"
+      title="Epstein Arrested in Palm Beach"
+      description="Epstein arrested on solicitation charges. Plea deal results in minimal jail time."
+    />
+    <TimelineItem
+      date="2015-2016"
+      title="Campaign Distancing"
+      description="During presidential campaign, Trump begins publicly distancing from Epstein, claiming limited relationship."
+    />
+    <TimelineItem
+      date="Jul 2019"
+      title="Epstein Arrested on Federal Charges"
+      description="After Epstein's arrest on federal sex trafficking charges, Trump claims he 'wasn't a fan' and hadn't spoken to Epstein in 15 years."
+    />
+    <TimelineItem
+      date="Aug 2019"
+      badge="DEATH IN CUSTODY"
+      badgeType="catastrophic"
+      title="Epstein Dies"
+      description="Epstein dies in federal custody, ruled suicide."
+    />
+    <TimelineItem
+      date="2024"
+      title="'Fake News' Claims"
+      description="As more documents are unsealed, Trump claims media coverage is 'fake news' and that he banned Epstein from Mar-a-Lago."
+    />
+    <TimelineItem
+      date="Jan 2026"
+      badge="DOJ COVER-UP"
+      badgeType="catastrophic"
+      title="DOJ Deletes Documents Twice"
+      description="DOJ deletes Trump-related Epstein document twice. Trump forces MTG to resign for calling for transparency. AG Bondi hides files and surveils Congress."
+    />
+    <TimelineItem
+      date="Feb 2026"
+      badge="EXPOSED"
+      badgeType="catastrophic"
+      title="Cover-Up Expands"
+      description="Lutnick admits visiting Epstein's island after lying about cutting ties. Maxwell offers testimony-for-clemency deal. FBI interviews with Trump accuser revealed then hidden."
+    />
+    <TimelineItem
+      date="Mar 2026"
+      badge="BIPARTISAN"
+      badgeType="serious"
+      title="Senate Subpoenas AG Bondi"
+      description="Senate Judiciary votes 24-19 bipartisan to subpoena AG Bondi. Only 3M of 6M court-ordered documents turned over. Active DOJ cover-up continues."
+    />
+  </TimelineSection>
+
+  <!-- WHY THIS MATTERS -->
+  <SectionDivider label="Why It Matters" />
+  <SectionHeader
+    eyebrow="Significance"
+    title="Why This Relationship<br>Matters"
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F9D1;&#x200D;&#x2696;&#xFE0F;"
+      title="Character and Judgment"
+      body="The documented social relationship between Trump and a convicted sex trafficker, spanning over 15 years, raises legitimate questions about Trump's judgment, character, and awareness of Epstein's criminal behavior."
+      tag="Fitness"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F440;"
+      title="Awareness of Behavior"
+      body="Trump's 2002 statement that Epstein &quot;likes beautiful women as much as I do, and many of them are on the younger side&quot; demonstrates Trump was aware of Epstein's preferences for young women at least 17 years before Epstein's 2019 arrest."
+      tag="His Own Words"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x26A0;&#xFE0F;"
+      title="Warning Ignored"
+      body="George Houraney explicitly warned Trump about Epstein's behavior around young women in 1992 &mdash; yet Trump continued the relationship for years. This suggests Trump may have prioritized social connections over concerns about potential misconduct."
+      tag="1992"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F504;"
+      title="Pattern of Distancing"
+      body="Trump's evolving narrative &mdash; from enthusiastic praise to claims of minimal relationship &mdash; follows the pattern of Epstein's legal troubles, suggesting strategic repositioning rather than honest recollection."
+      tag="Shifting Stories"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="The Relationship<br>Is Documented."
+    description="Trump's own words, photographs, witness accounts, flight logs, and phone records all confirm a 15+ year social relationship with a convicted sex trafficker."
+    linkText="Next: Court Documents &#x2192;"
+    linkHref="/epstein-files/court-documents"
+  />
+
+  <PageNavigation
+    next={{ label: 'Court Documents', href: '/epstein-files/court-documents' }}
+    currentIndex={0}
+    totalPages={5}
+  />
+
+</ResearchLayout>

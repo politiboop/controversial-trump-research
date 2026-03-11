@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE RECKONING — Trump's War on Science & Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --surface: #181818;
+    --card: #1e1e1e;
+    --border: #2a2a2a;
+    --red: #d42b2b;
+    --red-bright: #ff3a3a;
+    --red-glow: rgba(212,43,43,0.15);
+    --amber: #e87c1e;
+    --amber-dim: rgba(232,124,30,0.12);
+    --green: #2a9d58;
+    --green-dim: rgba(42,157,88,0.12);
+    --blue: #1e6fe8;
+    --blue-dim: rgba(30,111,232,0.12);
+    --text: #f0ece4;
+    --muted: #888880;
+    --faint: #444440;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .masthead {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px 60px;
+    border-bottom: 1px solid var(--red);
+    overflow: hidden;
+  }
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,43,43,0.18) 0%, transparent 70%);
+  }
+  .masthead-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .masthead-eyebrow span {
+    display: inline-block;
+    border: 1px solid var(--red);
+    padding: 4px 12px;
+  }
+  .masthead h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 12vw, 160px);
+    line-height: 0.88;
+    letter-spacing: -1px;
+    color: var(--text);
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .masthead h1 .word-red { color: var(--red); }
+  .masthead-sub {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(14px, 2.5vw, 20px);
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+  .masthead-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 2px;
+    position: relative;
+  }
+
+  /* TICKER */
+  .ticker-wrap {
+    background: var(--red);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px 0;
+  }
+  .ticker {
+    display: inline-block;
+    animation: ticker 40s linear infinite;
+  }
+  .ticker span {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 0 40px;
+  }
+  .ticker span::before { content: "◆ "; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* LAYOUT */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* INTRO QUOTE */
+  .intro-section {
+    padding: 80px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .intro-section blockquote {
+    font-size: clamp(22px, 3.5vw, 34px);
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+  .intro-section cite {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 2px;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  /* DIVIDER */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 24px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  .section-divider::before, .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-divider-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--faint);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* STAT GRID */
+  .stat-section {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 24px;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .stat-card {
+    background: var(--card);
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .stat-card:hover { background: #222; }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--red);
+  }
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 72px);
+    color: var(--red-bright);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 8px;
+    display: block;
+    line-height: 1.4;
+  }
+
+  /* SECTION HEADERS */
+  .section-header {
+    padding: 70px 24px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-header .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 7vw, 90px);
+    line-height: 0.9;
+    color: var(--text);
+  }
+  .section-header .intro-text {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 700px;
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* CATEGORY CARDS */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+  .category-card {
+    background: var(--card);
+    padding: 36px 32px;
+    border-left: 4px solid var(--red);
+    transition: transform 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .category-card:hover {
+    background: #222;
+    transform: translateX(4px);
+  }
+  .category-card.amber { border-left-color: var(--amber); }
+  .category-card.green { border-left-color: var(--green); }
+  .category-card.blue { border-left-color: var(--blue); }
+  .category-tag.green-tag { color: var(--green); border-color: var(--green); }
+  .category-tag.blue-tag { color: var(--blue); border-color: var(--blue); }
+  .category-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .category-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .category-body {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .category-body strong { color: var(--text); font-weight: 600; }
+  .category-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--red);
+    text-transform: uppercase;
+    border: 1px solid var(--red);
+    padding: 3px 10px;
+  }
+  .category-card.amber .category-tag { color: var(--amber); border-color: var(--amber); }
+
+  /* TIMELINE */
+  .timeline-section {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 70px 24px;
+  }
+  .timeline-inner { max-width: 900px; margin: 0 auto; }
+  .timeline-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 72px);
+    margin-bottom: 50px;
+    color: var(--text);
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 140px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+  .timeline-item:hover .timeline-content { opacity: 1; }
+  .timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 1px;
+    padding-top: 4px;
+    padding-right: 16px;
+  }
+  .timeline-content { padding-left: 24px; }
+  .timeline-content h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .timeline-content p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .timeline-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 2px 8px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .badge-catastrophic { background: rgba(212,43,43,0.2); color: var(--red-bright); }
+  .badge-serious { background: rgba(232,124,30,0.15); color: var(--amber); }
+
+  /* VOICES */
+  .voices-section {
+    padding: 70px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .voices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .voice-card {
+    background: var(--card);
+    padding: 32px;
+    border-top: 3px solid var(--border);
+    position: relative;
+  }
+  .voice-card::before {
+    content: '"';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    color: var(--red);
+    position: absolute;
+    top: 10px; left: 24px;
+    line-height: 1;
+    opacity: 0.3;
+  }
+  .voice-quote {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-top: 20px;
+  }
+  .voice-attribution {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  /* CONSEQUENCES */
+  .consequences-section {
+    background: #120a0a;
+    border-top: 2px solid var(--red);
+    padding: 70px 24px;
+  }
+  .consequences-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .consequence-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+  @media (max-width: 640px) { .consequence-row { grid-template-columns: 1fr; } }
+  .consequence-item {
+    background: var(--card);
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .consequence-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--red);
+    line-height: 1;
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  .consequence-text h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .consequence-text p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 80px 24px;
+    text-align: center;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+  }
+  .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 7vw, 80px);
+    color: var(--text);
+    margin-bottom: 20px;
+    line-height: 0.9;
+  }
+  .cta-section p {
+    font-size: 18px;
+    color: var(--muted);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+  .cta-link {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 2px solid var(--red);
+    padding: 14px 36px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .cta-link:hover {
+    background: var(--red);
+    color: #fff;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 1px;
+  }
+  footer a { color: var(--red); text-decoration: none; }
+
+  /* FADE-IN ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--red); }
+
+  /* HIGHLIGHT BAR */
+  .highlight-bar {
+    background: var(--red);
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .highlight-bar p {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(15px, 2.5vw, 20px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 640px) {
+    .timeline-item { grid-template-columns: 90px 1fr; }
+    .timeline-item::before { left: 90px; }
+    .category-grid { padding: 0 12px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-eyebrow"><span>Documented Evidence · Updated March 2026</span></div>
+  <h1>THE <span class="word-red">WAR</span><br>ON SCIENCE</h1>
+  <p class="masthead-sub">How the Trump Administration is Dismantling Human Health, the Earth, and Wildlife</p>
+  <p class="masthead-date">SOURCE: Senate PSI Report · thetrumptracker.com · CDC · NIH · EPA · FDA Public Records</p>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>57 Documented Attacks on Scientific Integrity</span>
+    <span>20,500+ Scientists & Health Workers Fired</span>
+    <span>US Lost Measles Elimination Status</span>
+    <span>Whooping Cough Up 1,000%</span>
+    <span>$500M mRNA Research Cancelled</span>
+    <span>All 17 Vaccine Experts Fired</span>
+    <span>EPA Revokes Climate Endangerment Finding</span>
+    <span>$600M HIV Prevention Funding Cut</span>
+    <span>694 NIH Grants Cancelled</span>
+    <span>10,000 Health Workers Fired in One Day</span>
+    <span>1,817 Fish & Wildlife Staff Fired</span>
+    <span>2,700 National Park Service Staff Cut</span>
+    <span>7,000+ Forest Service & BLM Workers Gone</span>
+    <span>NOAA Budget Cut 27% — Climate Research Arm Eliminated</span>
+    <span>32 Bills Introduced to Weaken Endangered Species Act</span>
+    <span>Gray Wolves Delisted — Open Season Allowed</span>
+    <span>48% of Scientists Now Self-Censor</span>
+    <span>Mauna Loa Observatory Climate Data at Risk</span>
+    <span>420+ Environmental Rollbacks Since Jan 2025</span>
+    <span>Migratory Bird Protections Stripped</span>
+    <span>57 Documented Attacks on Scientific Integrity</span>
+    <span>20,500+ Scientists & Health Workers Fired</span>
+    <span>US Lost Measles Elimination Status</span>
+    <span>Whooping Cough Up 1,000%</span>
+    <span>$500M mRNA Research Cancelled</span>
+    <span>All 17 Vaccine Experts Fired</span>
+    <span>EPA Revokes Climate Endangerment Finding</span>
+    <span>$600M HIV Prevention Funding Cut</span>
+    <span>694 NIH Grants Cancelled</span>
+    <span>10,000 Health Workers Fired in One Day</span>
+    <span>1,817 Fish & Wildlife Staff Fired</span>
+    <span>2,700 National Park Service Staff Cut</span>
+    <span>7,000+ Forest Service & BLM Workers Gone</span>
+    <span>NOAA Budget Cut 27% — Climate Research Arm Eliminated</span>
+    <span>32 Bills Introduced to Weaken Endangered Species Act</span>
+    <span>Gray Wolves Delisted — Open Season Allowed</span>
+    <span>48% of Scientists Now Self-Censor</span>
+    <span>Mauna Loa Observatory Climate Data at Risk</span>
+    <span>420+ Environmental Rollbacks Since Jan 2025</span>
+    <span>Migratory Bird Protections Stripped</span>
+  </div>
+</div>
+
+<!-- INTRO QUOTE -->
+<section class="intro-section fade-up">
+  <blockquote>
+    "The harms from the Trump Administration's cuts and firings will accumulate for years, indeed for decades, to come: lives that might have been saved by studies the Administration defunded; the loss of scientific innovation as scientists flee to countries where their work is not censored."
+  </blockquote>
+  <cite>— Senate Permanent Subcommittee on Investigations, September 9, 2025</cite>
+</section>
+
+<!-- HIGHLIGHT BAR -->
+<div class="highlight-bar">
+  <p>🚨 The Senate documented 57 attacks on scientific integrity in just 8 months. They have accelerated every month since.</p>
+</div>
+
+<!-- STATS -->
+<section class="stat-section">
+  <div class="stat-grid">
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="57">0</span>
+      <span class="stat-label">Documented attacks on scientific integrity (first 8 months)</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="20500" data-suffix="+">0</span>
+      <span class="stat-label">Scientists & health workers fired or forced out</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="10000">0</span>
+      <span class="stat-label">HHS employees laid off in a single day (April 1, 2025)</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-prefix="$" data-target="500" data-suffix="M">0</span>
+      <span class="stat-label">mRNA vaccine research cancelled — 22 studies cut</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="17">0</span>
+      <span class="stat-label">Vaccine advisory committee members fired; replaced with skeptics</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="694">0</span>
+      <span class="stat-label">NIH research grants cancelled worth $2.4 billion</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="2855">0</span>
+      <span class="stat-label">Measles cases in 2025 — US lost elimination status for first time in decades</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="10" data-suffix="×">0</span>
+      <span class="stat-label">Increase in whooping cough cases — 28,783 by Sept 2025</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-prefix="$" data-target="600" data-suffix="M">0</span>
+      <span class="stat-label">HIV & STD prevention funding cancelled, targeting Democrat-led states</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="1817">0</span>
+      <span class="stat-label">US Fish & Wildlife Service staff fired — endangered species left unprotected</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="7000" data-suffix="+">0</span>
+      <span class="stat-label">Forest Service & Bureau of Land Management workers cut</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="420" data-suffix="+">0</span>
+      <span class="stat-label">Environmental actions threatening climate, health & wildlife (NRDC tracking)</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="48" data-suffix="%">0</span>
+      <span class="stat-label">Scientists who report self-censoring their work due to political pressure</span>
+    </div>
+    <div class="stat-card fade-up">
+      <span class="stat-number" data-target="32">0</span>
+      <span class="stat-label">Bills introduced in 2025 aimed at weakening the Endangered Species Act</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: SILENCING SCIENCE -->
+<div class="section-header fade-up container">
+  <div class="eyebrow">Chapter I</div>
+  <h2>Silencing<br>the Scientists</h2>
+  <p class="intro-text">The first step in destroying inconvenient science: muzzle the scientists who produce it.</p>
+</div>
+
+<div class="category-grid">
+  <div class="category-card fade-up">
+    <span class="category-icon">🤐</span>
+    <div class="category-title">Communications Blackout</div>
+    <div class="category-body">On <strong>January 21, 2025</strong>, the CDC was ordered to pause all federal health communications — failing to issue its weekly Morbidity and Mortality Weekly Report for the first time in agency history. Information about bird flu and drug overdose deaths was withheld from the public.</div>
+    <span class="category-tag">Day One</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">🗑️</span>
+    <div class="category-title">Purging Federal Databases</div>
+    <div class="category-body">On <strong>January 29, 2025</strong>, the administration removed websites and purged agency databases — eliminating safe food choices during pregnancy and HIV prevention information. A CDC advisory board called it <strong>"unprecedented."</strong></div>
+    <span class="category-tag">Data Erasure</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">📕</span>
+    <div class="category-title">Journal Publication Ban</div>
+    <div class="category-body">On <strong>January 31, 2025</strong>, CDC researchers were blocked from publishing in any journal. Staff were forced to retract already-submitted work to ensure no <strong>"forbidden terms"</strong> appeared — including "race," "bias," and "disparity."</div>
+    <span class="category-tag">Censorship</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">🌡️</span>
+    <div class="category-title">Suppressed Measles Forecast</div>
+    <div class="category-body">On <strong>March 24, 2025</strong>, during the worst measles outbreak in decades, CDC leaders ordered staff <em>not to release</em> a report showing high risk in areas with lagging vaccination rates. The public was left in the dark.</div>
+    <span class="category-tag">Public Health Crisis</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">🔬</span>
+    <div class="category-title">Ultra-Processed Food Research Censored</div>
+    <div class="category-body">NIH's top researcher on ultra-processed foods, <strong>Dr. Kevin Hall</strong>, resigned on April 16, 2025 after leadership suppressed his findings. He stated NIH made him feel he could no longer <em>"freely conduct unbiased science."</em></div>
+    <span class="category-tag">Suppression</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">📊</span>
+    <div class="category-title">Economic Data Manipulation</div>
+    <div class="category-body">The BLS Commissioner was <strong>fired</strong> after a weak jobs report — the first in 140-year history. In November 2025, the October jobs report was cancelled for the first time in <strong>75+ years</strong>, creating a permanent blind spot in US employment records.</div>
+    <span class="category-tag">Data Suppression</span>
+  </div>
+</div>
+
+<!-- SECTION: THE PURGE -->
+<div class="section-divider"><div class="section-divider-label">Chapter II</div></div>
+<div class="section-header fade-up container">
+  <div class="eyebrow">Chapter II</div>
+  <h2>The Great<br>Purge</h2>
+  <p class="intro-text">Fire every expert who won't compromise their integrity. Install loyalists who will.</p>
+</div>
+
+<div class="category-grid">
+  <div class="category-card fade-up">
+    <span class="category-icon">💀</span>
+    <div class="category-title">April 1, 2025: Mass Firing Day</div>
+    <div class="category-body">10,000 HHS employees were laid off in a single day. <strong>2,473 fired from CDC. 2,519 from FDA. 1,312 from NIH.</strong> The Childhood Lead Poisoning Prevention Program was eliminated — at the same time lead exposure forced closure of Milwaukee schools, displacing 1,800 students.</div>
+    <span class="category-tag">Catastrophic</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">💉</span>
+    <div class="category-title">All 17 Vaccine Experts Fired</div>
+    <div class="category-body">On <strong>June 9, 2025</strong>, Kennedy dismissed all 17 members of the Advisory Committee on Immunization Practices — the first such mass firing in history. Replacements included people with records of expressing unfounded doubts about vaccine safety. One new member had posted memes about gun violence 48 hours after a police officer was killed at CDC headquarters.</div>
+    <span class="category-tag">Unprecedented</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">🧑‍⚕️</span>
+    <div class="category-title">Top FDA Vaccine Regulator Forced Out</div>
+    <div class="category-body"><strong>Dr. Peter Marks</strong> resigned on March 28, 2025 — saying Kennedy wanted <em>"subservient confirmation of his misinformation and lies,"</em> not transparency. Kennedy had sought to "edit" the vaccine safety database. Marks refused.</div>
+    <span class="category-tag">Integrity Purge</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">🏥</span>
+    <div class="category-title">Hired Discredited Researchers</div>
+    <div class="category-body"><strong>David Geier</strong> — disciplined for practicing medicine without a license — was hired to lead HHS efforts to find "the cause" of autism. His studies linking vaccines and autism were retracted and widely condemned as methodologically unsound.</div>
+    <span class="category-tag">Pseudoscience</span>
+  </div>
+  <div class="category-card fade-up">
+    <span class="category-icon">🌍</span>
+    <div class="category-title">EPA Gutted to 40-Year Low</div>
+    <div class="category-body">EPA staffing dropped to <strong>12,849 employees</strong> — the lowest in 40 years — after losing over 4,000 workers (24% of its workforce). Scientists with 30 years of experience were replaced by nothing. The Office of Research and Development was dissolved entirely.</div>
+    <span class="category-tag">Environmental</span>
+  </div>
+  <div class="category-card amber fade-up">
+    <span class="category-icon">🔢</span>
+    <div class="category-title">CDC Removes 6 Vaccines from Schedule</div>
+    <div class="category-body">Under RFK Jr., the CDC removed six previously recommended childhood vaccines — <strong>rotavirus, meningitis, hepatitis A, hepatitis B, HPV, and chickenpox</strong> — without scientific review. All 17 expert advisors who were fired to clear the path for this decision.</div>
+    <span class="category-tag">Children at Risk</span>
+  </div>
+</div>
+
+<!-- CLIMATE SECTION -->
+<section class="highlight-bar" style="background: #1a0e00; border-top: 2px solid var(--amber); border-bottom: 2px solid var(--amber);">
+  <p style="color: var(--amber);">🌡️ "This isn't deregulation. This is denial of science itself." — Former EPA Administrator Gina McCarthy, on the revocation of the Endangerment Finding</p>
+</section>
+
+<div class="section-header fade-up container">
+  <div class="eyebrow">Chapter III</div>
+  <h2>Destroying<br>the Planet</h2>
+  <p class="intro-text">Eliminating the legal foundations of environmental protection — one signature at a time.</p>
+</div>
+
+<div class="category-grid">
+  <div class="category-card amber fade-up">
+    <span class="category-icon">💨</span>
+    <div class="category-title">EPA Endangerment Finding Revoked</div>
+    <div class="category-body">On <strong>February 12, 2026</strong>, the EPA revoked the Endangerment Finding — the scientific determination that greenhouse gases endanger public health. Called the <em>"largest deregulatory action in history,"</em> this eliminates the legal foundation for ALL federal climate regulations, contradicting the consensus of <strong>97%+ of climate scientists</strong>. 18 states immediately filed lawsuits.</div>
+    <span class="category-tag">Climate Catastrophe</span>
+  </div>
+  <div class="category-card amber fade-up">
+    <span class="category-icon">🧴</span>
+    <div class="category-title">Defense Production Act for Cancer-Linked Chemical</div>
+    <div class="category-body">On <strong>February 19, 2026</strong>, Trump invoked wartime law to mandate domestic production of <strong>glyphosate</strong> — classified by the WHO as "probably carcinogenic." Bayer donated $1M to Trump's inauguration. RFK Jr., who once won a $289M verdict against Monsanto for glyphosate cancer — now defends the order.</div>
+    <span class="category-tag">Carcinogen</span>
+  </div>
+  <div class="category-card amber fade-up">
+    <span class="category-icon">🦅</span>
+    <div class="category-title">National Parks: History & Science Erased</div>
+    <div class="category-body">In <strong>January 2026</strong>, National Park Service removed climate change and Native American history displays from visitor centers nationwide. At Yellowstone, interpretive panels about climate impacts were removed. Staff received directives to eliminate <em>"politically sensitive"</em> content.</div>
+    <span class="category-tag">Erasure</span>
+  </div>
+  <div class="category-card amber fade-up">
+    <span class="category-icon">🌎</span>
+    <div class="category-title">Withdrew from World Health Organization</div>
+    <div class="category-body">On <strong>January 20, 2025</strong>, Trump withdrew the US from the WHO — abandoning international cooperation on pandemic preparedness, disease surveillance, and global health emergencies at the exact moment a bird flu outbreak was ongoing.</div>
+    <span class="category-tag">Isolationism</span>
+  </div>
+  <div class="category-card amber fade-up">
+    <span class="category-icon">⛽</span>
+    <div class="category-title">Coal Power Ordered for the Pentagon</div>
+    <div class="category-body">Trump signed an executive order directing the Department of Defense to purchase electricity from <strong>coal-fired power plants</strong> — using the military as a taxpayer-funded subsidy for the fossil fuel industry, reversing clean energy commitments.</div>
+    <span class="category-tag">Fossil Fuels</span>
+  </div>
+  <div class="category-card amber fade-up">
+    <span class="category-icon">🦠</span>
+    <div class="category-title">Pandemic Preparedness Gutted</div>
+    <div class="category-body">The administration cancelled <strong>$11.4 billion in CDC grants</strong>, terminated 29+ grants for antivirals targeting future outbreaks (Ebola, dengue, chikungunya), and cancelled a Moderna bird flu vaccine contract during an <em>active bird flu outbreak</em> that had already killed people.</div>
+    <span class="category-tag">Existential Risk</span>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+  <div class="timeline-inner">
+    <h2 class="timeline-title fade-up">A Complete<br>Chronology<br><span style="font-size:0.55em;color:var(--muted);">Jan 2025 — Mar 2026 · 38 Events</span></h2>
+
+    <!-- JANUARY 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jan 20, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Day One: WHO Withdrawal, Paris Climate Exit, Wind Energy Freeze, 17 Watchdogs Fired</h3>
+        <p>Executive orders pulled the US from the World Health Organization and the Paris Climate Agreement, paused all wind energy permitting, and fired 17 independent Inspectors General — removing every federal government watchdog in a single day.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jan 21, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Communications Blackout — CDC Misses Weekly Report for First Time in History</h3>
+        <p>All federal health communications paused. CDC failed to issue its Morbidity and Mortality Weekly Report — never missed in agency history. Critical bird flu and drug overdose death data withheld from the public.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jan 27–31, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Federal Grant Freeze Attempted, EPA Advisory Boards Fired, Agency Databases Purged</h3>
+        <p>Jan 27: Attempted to freeze all federal grant funding. Jan 28: All EPA scientific advisory board members fired. Jan 29: Agency databases purged — pregnancy nutrition info and HIV prevention resources deleted. Jan 31: CDC researchers banned from publishing in any scientific journal; existing submissions forced to retract.</p>
+      </div>
+    </div>
+    <!-- FEBRUARY 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 4, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>RFK Jr. Eliminates 6 Vaccines from CDC Guidance Without Scientific Review</h3>
+        <p>MMR, hepatitis A & B, HPV, chickenpox, and varicella removed from CDC immunization recommendations by directive — bypassing the advisory committee that was later fired to prevent future resistance.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 6, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>USAID Cuts Abandon Dozens of Clinical Trial Patients Mid-Treatment</h3>
+        <p>Patients receiving experimental drugs and medical devices were abruptly cut off from the researchers monitoring them. Studies included malaria treatment for children under 5 and tuberculosis treatment for children and teens. No transition plan provided.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 14–18, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Thousands Fired at CDC, FDA, NIH — 10% of National Science Foundation Staff Cut</h3>
+        <p>Mass firings across all major health and science agencies, including the first wave of CDC, FDA, and NIH terminations. The National Science Foundation loses 10% of its workforce in a single action.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 27, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>880 NOAA Employees Fired in One Day — Including Hurricane Center and Storm Prediction Center Staff</h3>
+        <p>7.3% of NOAA's total workforce terminated overnight, including staff at the National Hurricane Center and Storm Prediction Center. 25% of the NOAA Environmental Modeling Center let go. Weather balloon launches immediately curtailed. A federal judge later ruled the firings unlawful — but the damage was done.</p>
+      </div>
+    </div>
+    <!-- MARCH 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Mar 15, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>694 NIH Research Grants Cancelled — $2.4 Billion in Science Destroyed</h3>
+        <p>Cancer treatment, Alzheimer's disease, infectious diseases, rare diseases, and active clinical trials terminated. Patients in mid-trial cut off from monitoring. Some of these studies had run for decades.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Mar 24, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Measles Forecast Suppressed During Worst Outbreak in Decades</h3>
+        <p>CDC leaders ordered staff not to release a report showing high outbreak risk in areas with lagging vaccination rates. The public was deliberately kept in the dark during an escalating public health emergency.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Mar 25, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>Discredited Researcher Hired to Lead Vaccine-Autism Study</h3>
+        <p>David Geier — disciplined for practicing medicine without a license in Maryland — hired to lead HHS efforts to find "the cause" of autism. His vaccine-autism studies were retracted and condemned as methodologically unsound by the scientific community.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Mar 26, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>$11.4 Billion in Public Health Grants Rescinded</h3>
+        <p>State and local health departments lose COVID-19 response, testing, and vaccination funding overnight. Simultaneously, bird flu vaccine contracts with Moderna were cancelled mid-active outbreak.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Mar 28, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Top FDA Vaccine Regulator Dr. Peter Marks Forced Out</h3>
+        <p>Dr. Marks — who led the COVID vaccine approval — resigned after Kennedy demanded "subservient confirmation of his misinformation and lies." Kennedy had sought to personally "edit" the federal vaccine safety database. Marks refused.</p>
+      </div>
+    </div>
+    <!-- APRIL 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Apr 1, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>10,000 HHS Employees Fired in a Single Day — "April Fools" Purge</h3>
+        <p>2,473 fired from CDC. 2,519 from FDA. 1,312 from NIH. The Childhood Lead Poisoning Prevention Program, NIOSH workplace safety division, Birth Defects surveillance, the Office of Smoking and Health, and all federal HIV prevention experts eliminated simultaneously. The National Youth Tobacco Survey cancelled during a vaping epidemic.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Apr 15, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>46% of CDC Public Health Databases Go Dark</h3>
+        <p>Analysis by the Union of Concerned Scientists finds nearly half of all CDC public health databases have stopped updating or been taken offline — including critical disease surveillance systems used to forecast outbreaks before they spread.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Apr 16, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>NIH's Top Ultra-Processed Foods Researcher Censored and Forced Out</h3>
+        <p>Dr. Kevin Hall's findings on ultra-processed foods were suppressed by NIH leadership. He resigned stating he could no longer "freely conduct unbiased science." His research had broad public health implications for America's obesity and metabolic disease crises.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Apr 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>Migratory Bird Act Gutted — Industrial Bird Deaths Now Legal</h3>
+        <p>Interior Department reinstates rule eliminating penalties for "incidental" bird deaths from oil drilling, power lines, and open waste pits. Simple safeguards like covering pits or switching off tower lights — which kill millions of birds annually — are now legally consequence-free for corporations.</p>
+      </div>
+    </div>
+    <!-- MAY 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">May 1–5, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>NIOSH Gutted, PBS/NPR Defunded, DOGE Given Authority Over NIH Grants</h3>
+        <p>Most remaining NIOSH workplace safety staff laid off — including those who evaluate breathing equipment for first responders and treat 9/11-related illness. PBS and NPR defunded by executive order. DOGE given direct authority to stop any NIH grant at will.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">May 22, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>MAHA Commission Health Report Released — Contains Fake Citations</h3>
+        <p>The Make America Healthy Again Commission report cited studies that do not exist. After reporting exposed the fake citations, HHS updated at least 18 references — several citing studies whose actual authors say the report misinterpreted their work entirely.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">May 27–28, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>COVID Vaccine Recommendations Changed Without Experts; Bird Flu Vaccine Cancelled Mid-Outbreak</h3>
+        <p>FDA Commissioner changed COVID vaccine recommendations without consulting ACIP — saying the committee would "just rubber stamp everything." One day later, the Moderna bird flu vaccine contract was cancelled despite an active outbreak that had already killed people and early trials showing "rapid, potent, durable immune response."</p>
+      </div>
+    </div>
+    <!-- JUNE 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jun 9, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>All 17 Vaccine Advisory Experts Fired — First Mass ACIP Purge in US History</h3>
+        <p>Replaced with people who have records of expressing unfounded doubts about vaccine safety. One new member posted memes hinting at gun violence against government officials 48 hours after a police officer was killed at CDC headquarters.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jun 15, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>US Loses Measles Elimination Status — First Time in Decades</h3>
+        <p>WHO revokes US measles elimination status after 2,855 cases — the highest in 33 years. Four deaths. The direct, documented consequence of dismantling vaccine guidance and firing every expert who maintained it.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jun 18, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>FDA's Lead Gene Therapy Reviewer Escorted Out — No Explanation Given</h3>
+        <p>Dr. Nicole Verdun, FDA's lead reviewer of cell and gene therapies, placed on administrative leave and escorted from the building. HHS stated FDA needed staff "aligned" with the administration — a loyalty test applied to one of America's most advanced medical research areas.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jun 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>Department of Defense Stops Sharing Weather Data with Scientists</h3>
+        <p>The Pentagon announces it will no longer provide critical weather data to NOAA staff and civilian scientists — further degrading the atmospheric observation network that underpins weather forecasting, hurricane tracking, and crop planning across the US.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jun 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>59 Million Acres of Protected National Forest Opened to Logging</h3>
+        <p>Agriculture Secretary Rollins announces plans to repeal the Clinton-era Roadless Rule — which had protected 59 million acres of National Forest from road construction, logging, and industrial extraction for over two decades. California, Washington, and Massachusetts immediately filed lawsuits.</p>
+      </div>
+    </div>
+    <!-- JULY 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jul 4–5, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Texas Flooding Kills 100+ — NOAA Staffing Cuts Directly Implicated</h3>
+        <p>Catastrophic flash flooding across six Central Texas counties became the deadliest inland US flooding event in nearly 50 years. The Austin/San Antonio NOAA forecasting office had recently lost its Warning Coordination Meteorologist — the critical link between forecasters, emergency managers, and the public — to DOGE layoffs.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jul 18, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>EPA Office of Research and Development Dissolved</h3>
+        <p>The EPA's entire research arm — responsible for the science underpinning air quality standards, water safety regulations, and chemical risk assessments — is dissolved. Dozens of scientists with 20–30 years of institutional expertise replaced by nothing.</p>
+      </div>
+    </div>
+    <!-- AUGUST 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Aug 5, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>$500 Million in mRNA Vaccine Research Abandoned — 22 Studies Defunded</h3>
+        <p>BARDA terminates 22 contracts for mRNA vaccine development across universities and biotech firms. Public health experts call it a direct threat to national security: "This lessens our preparedness for the next emerging pathogen or pandemic."</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Aug 15, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Bureau of Labor Statistics Commissioner Fired — First in 140-Year History</h3>
+        <p>Dr. Erika McEntarfer fired immediately after a weak jobs report. Former Treasury Secretary Larry Summers: "Way beyond anything Richard Nixon ever did." Commerce Secretary Lutnick told federal statisticians that independence is "nonsense."</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Aug 27, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>CDC Director Fired; Three Senior Officials Resign in Protest</h3>
+        <p>CDC Director Susan Monarez fired after refusing Kennedy's demands to change vaccine policy and fire top CDC staff. Three other senior officials resign the same day in protest, citing an agency no longer able to function by scientific standards.</p>
+      </div>
+    </div>
+    <!-- SEPTEMBER 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Sep 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Whooping Cough Surges to 28,783 Cases — 10× Prior Year Levels</h3>
+        <p>Direct, documented consequence of vaccine recommendation changes and the destruction of public health infrastructure. Infants — too young to be fully vaccinated — are the most vulnerable. Senate releases its 57-attack report the same month.</p>
+      </div>
+    </div>
+    <!-- NOVEMBER 2025 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Nov 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>Endangered Species Act Protections Stripped — Wolves, Grizzlies, Monarchs, Manatees at Risk</h3>
+        <p>Proposed ESA rule changes would strip newly listed threatened species of automatic protections. Gray wolves delisted nationwide. Grizzly bears delisted in Greater Yellowstone. Florida manatee, Monarch butterfly, California spotted owl, and Greater sage-grouse left unprotected even after federal listing — opening them to killing and trapping.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Nov 19, 2025</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>October Jobs Report Cancelled — First Time in 900+ Months Employment Data Not Collected</h3>
+        <p>October 2025 is now permanently missing from US employment records due to the 43-day government shutdown. National Economic Council Director admitted: "We'll never actually know what the unemployment rate was in October." A democracy that stops publishing its own statistics has stopped telling its citizens the truth.</p>
+      </div>
+    </div>
+    <!-- JANUARY 2026 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jan 5, 2026</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>CDC Guts Childhood Vaccine Schedule — 6 Vaccines Removed Without Review</h3>
+        <p>Following a December 2025 presidential memorandum, the CDC updates the childhood immunization schedule — reducing the number of vaccines recommended for all children with no scientific review process and no advisory committee vote.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Jan 27, 2026</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>Climate Science and Native American History Erased from National Parks</h3>
+        <p>National Park Service ordered to remove climate change exhibits, environmental impact displays, and Indigenous history panels from visitor centers nationwide. Yellowstone, the Grand Canyon, Glacier, and Zion among parks affected. Staff received directives to eliminate all "politically sensitive" content.</p>
+      </div>
+    </div>
+    <!-- FEBRUARY 2026 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 9, 2026</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>$600 Million in HIV and STD Prevention Funding Cancelled — Targeting Democratic States</h3>
+        <p>CDC cancels $600M in grants to California, Colorado, Illinois, and Minnesota — four states with the nation's largest HIV-positive populations. Funding covered testing, treatment, PrEP access, and STD surveillance. Public health officials warn this will directly reverse decades of HIV prevention progress.</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 12, 2026</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>EPA Revokes Endangerment Finding — Legal Basis for ALL Climate Regulation Eliminated</h3>
+        <p>Called "the largest deregulatory action in American history." Eliminates all federal authority to regulate greenhouse gases, contradicting the consensus of 97%+ of climate scientists. 18 states and environmental groups file lawsuits immediately. Former EPA Administrator: "This isn't deregulation. This is denial of science itself."</p>
+      </div>
+    </div>
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Feb 19, 2026</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-serious">Serious</span>
+        <h3>Defense Production Act — Wartime Law Invoked to Mandate Cancer-Linked Pesticide</h3>
+        <p>Wartime powers invoked to mandate domestic production of glyphosate, a WHO-classified probable carcinogen. Bayer donated $1M to Trump's inauguration. RFK Jr. — who once won a $289M verdict against Monsanto for glyphosate cancer — now defends the order. Environmental Working Group: "I can't envision a bigger middle finger to every MAHA mom than this."</p>
+      </div>
+    </div>
+    <!-- MARCH 2026 -->
+    <div class="timeline-item fade-up">
+      <div class="timeline-date">Mar 9, 2026</div>
+      <div class="timeline-content">
+        <span class="timeline-badge badge-catastrophic">Catastrophic</span>
+        <h3>CDC Strips 6 Childhood Vaccines from Recommended List — All Expert Advisors Were Pre-Fired</h3>
+        <p>Rotavirus, meningitis, hepatitis A, hepatitis B, HPV, and chickenpox removed from universal recommendations. No scientific review. No advisory committee vote — because all 17 advisors were fired in June 2025 and replaced with skeptics specifically to enable this outcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="voices-section fade-up container">
+  <div class="section-header" style="padding: 0 0 0 0;">
+    <div class="eyebrow">Expert Warnings</div>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px,6vw,72px); line-height: 0.9;">They Warned Us.<br>We Were Ignored.</h2>
+    <p class="intro-text">Before the Senate confirmed RFK Jr., an unprecedented coalition issued dire warnings. Every single one has come true.</p>
+  </div>
+  <div class="voices-grid">
+    <div class="voice-card fade-up">
+      <p class="voice-quote">"Robert F. Kennedy Jr. is one of the most dangerous individuals ever considered for a Cabinet position. His consistent denial of safe, effective vaccines would put American lives at risk."</p>
+      <div class="voice-attribution">77 Nobel Laureates<br>December 10, 2024</div>
+    </div>
+    <div class="voice-card fade-up">
+      <p class="voice-quote">"Kennedy was not interested in transparency but rather 'subservient confirmation of his misinformation and lies.' I refused when the Secretary sought to 'edit' the vaccine safety database."</p>
+      <div class="voice-attribution">Dr. Peter Marks<br>Former FDA Director of Biologics<br>Forced to resign March 28, 2025</div>
+    </div>
+    <div class="voice-card fade-up">
+      <p class="voice-quote">"NIH leadership made me feel I could no longer freely conduct unbiased science."</p>
+      <div class="voice-attribution">Dr. Kevin Hall<br>NIH's Top Ultra-Processed Foods Researcher<br>Resigned April 16, 2025</div>
+    </div>
+    <div class="voice-card fade-up">
+      <p class="voice-quote">"Kennedy's appointment would have 'catastrophic and irreversible consequences' for disease prevention and pandemic preparedness."</p>
+      <div class="voice-attribution">All 9 Living Former CDC Directors<br>Joint Warning Letter, December 2024</div>
+    </div>
+    <div class="voice-card fade-up">
+      <p class="voice-quote">"This isn't deregulation. This is denial of science itself."</p>
+      <div class="voice-attribution">Gina McCarthy<br>Former EPA Administrator<br>On the Endangerment Finding Revocation, Feb 2026</div>
+    </div>
+    <div class="voice-card fade-up">
+      <p class="voice-quote">"Robert F. Kennedy Jr.'s nomination as Secretary of Health and Human Services is a clear and present danger to the nation's health."</p>
+      <div class="voice-attribution">17,000+ Doctors, Nurses & Health Professionals<br>Open Letter, December 2024</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSEQUENCES -->
+<section class="consequences-section">
+  <div class="consequences-inner">
+    <div class="section-header" style="padding: 0 0 40px; max-width: 100%;">
+      <div class="eyebrow">Real-World Consequences</div>
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px,6vw,80px); line-height:0.9;">The Damage<br>Already Done</h2>
+    </div>
+    <div class="consequence-row">
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">01</div>
+        <div class="consequence-text">
+          <h4>Children Dying of Preventable Disease</h4>
+          <p>4 deaths from measles. Whooping cough infections surged 1,000% to 28,783 cases — infants are most vulnerable. Diseases eliminated by vaccines are returning.</p>
+        </div>
+      </div>
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">02</div>
+        <div class="consequence-text">
+          <h4>Clinical Trial Patients Abandoned</h4>
+          <p>Patients taking experimental drugs or using new medical devices were cut off from researchers monitoring them mid-trial. Studies included malaria treatment for children under 5.</p>
+        </div>
+      </div>
+    </div>
+    <div class="consequence-row">
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">03</div>
+        <div class="consequence-text">
+          <h4>HIV Epidemic Reversed</h4>
+          <p>$600 million in HIV/STD prevention funding cut from states with the highest HIV-positive populations. Decades of progress on prevention, testing, and PrEP access are being erased.</p>
+        </div>
+      </div>
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">04</div>
+        <div class="consequence-text">
+          <h4>Cancer Research Destroyed</h4>
+          <p>$2.4 billion in NIH cancer grants cancelled. NIH budget cut by 40% proposed. Ongoing studies halted. The next breakthrough treatment may never be discovered.</p>
+        </div>
+      </div>
+    </div>
+    <div class="consequence-row">
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">05</div>
+        <div class="consequence-text">
+          <h4>Pandemic Preparedness Gutted</h4>
+          <p>Bird flu vaccine cancelled mid-outbreak. 29+ antiviral grants for Ebola, dengue, and chikungunya terminated. mRNA platform funding cut. The US is unprepared for the next pandemic.</p>
+        </div>
+      </div>
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">06</div>
+        <div class="consequence-text">
+          <h4>Climate Protection Legally Eliminated</h4>
+          <p>The Endangerment Finding revocation removes ALL federal authority to regulate greenhouse gases — dismantling decades of environmental law. Unchecked pollution, for years to come.</p>
+        </div>
+      </div>
+    </div>
+    <div class="consequence-row">
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">07</div>
+        <div class="consequence-text">
+          <h4>Scientific Talent Fleeing America</h4>
+          <p>Scientists are accepting positions in Canada, Europe, and Asia. The next generation of American innovation is being permanently displaced.</p>
+        </div>
+      </div>
+      <div class="consequence-item fade-up">
+        <div class="consequence-num">08</div>
+        <div class="consequence-text">
+          <h4>A Generation Growing Up Distrusting Science</h4>
+          <p>When the government calls science "ideology" and erases data from national parks and textbooks, it erodes public trust in fact itself — with consequences that outlast any administration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WILDLIFE SECTION -->
+<div class="section-divider container"><div class="section-divider-label">Chapter IV</div></div>
+
+<div class="section-header fade-up container">
+  <div class="eyebrow">Chapter IV</div>
+  <h2>Extinction<br>by Policy</h2>
+  <p class="intro-text">Fifty years of wildlife protection — dismantled in one term. The Endangered Species Act is under its most coordinated assault in history.</p>
+</div>
+
+<section style="background: var(--deep); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding: 20px 0 40px;">
+  <div class="stat-grid" style="max-width:1200px; margin: 0 auto; padding: 0 24px;">
+    <div class="stat-card fade-up" style="border-top-color: var(--green);">
+      <span class="stat-number" style="color:#3ddc84;" data-target="1817">0</span>
+      <span class="stat-label">US Fish & Wildlife Service staff fired — the agency that decides which species survive</span>
+    </div>
+    <div class="stat-card fade-up" style="border-top-color: var(--green);">
+      <span class="stat-number" style="color:#3ddc84;" data-target="2700">0</span>
+      <span class="stat-label">National Park Service staff cut — 90+ parks reported service failures</span>
+    </div>
+    <div class="stat-card fade-up" style="border-top-color: var(--green);">
+      <span class="stat-number" style="color:#3ddc84;" data-target="99" data-suffix="%">0</span>
+      <span class="stat-label">Of ESA-listed species saved from extinction — now under threat of rollback</span>
+    </div>
+    <div class="stat-card fade-up" style="border-top-color: var(--green);">
+      <span class="stat-number" style="color:#3ddc84;" data-target="44" data-suffix="%">0</span>
+      <span class="stat-label">Fish & Wildlife Service budget cut proposed — would gut endangered species protections</span>
+    </div>
+  </div>
+</section>
+
+<div class="category-grid container" style="padding-top:40px;">
+  <div class="category-card green fade-up">
+    <span class="category-icon">🐺</span>
+    <div class="category-title">Gray Wolves Delisted Nationwide</div>
+    <div class="category-body">The 2026 appropriations bill delists gray wolves across the entire country, allowing mass hunting and trapping under state-permitted hunts. Wolves were recovered through decades of science-based conservation work. The bill ignores the scientific process entirely and bars judicial review of the decision.</div>
+    <span class="category-tag green-tag">Extinction Risk</span>
+  </div>
+  <div class="category-card green fade-up">
+    <span class="category-icon">🐻</span>
+    <div class="category-title">Grizzly Bears Delisted — Hunting Allowed</div>
+    <div class="category-body">Grizzly bears in the Greater Yellowstone ecosystem are stripped of federal protection, opening them to cruel hunting and trapping. Funding for grizzly bear <em>and bison</em> reintroduction programs is simultaneously cut. The bill explicitly ignores the science-based reasoning for their protection.</div>
+    <span class="category-tag green-tag">Trophy Hunting</span>
+  </div>
+  <div class="category-card green fade-up">
+    <span class="category-icon">🦅</span>
+    <div class="category-title">Migratory Bird Protections Stripped</div>
+    <div class="category-body">In April 2025, the Interior Department reinstated a rule eliminating penalties for "incidental" bird deaths from industrial activities — oil drilling, power lines, open waste pits. For decades, courts required companies to take simple, cheap safeguards. Simple measures like covering pits or switching off tower lights <strong>kill millions of birds annually</strong> when neglected — now legally consequence-free.</div>
+    <span class="category-tag green-tag">MBTA Gutted</span>
+  </div>
+  <div class="category-card green fade-up">
+    <span class="category-icon">🦋</span>
+    <div class="category-title">Monarch Butterfly, Manatee & Spotted Owl Left Unprotected</div>
+    <div class="category-body">Proposed ESA rule changes would strip newly listed <em>threatened</em> species of automatic protection from killing and trapping — leaving the Florida manatee, Monarch butterfly, California spotted owl, and Greater sage-grouse unprotected for years even after federal listing. <strong>80% of Americans support the ESA</strong>. This is a giveaway to extraction industries, not a reflection of public will.</div>
+    <span class="category-tag green-tag">Species at Risk</span>
+  </div>
+  <div class="category-card green fade-up">
+    <span class="category-icon">🌲</span>
+    <div class="category-title">59 Million Acres of Forest Opened to Logging</div>
+    <div class="category-body">Agriculture Secretary Brooke Rollins announced plans to repeal the Clinton-era Roadless Rule — which has protected <strong>59 million acres</strong> of National Forest from road construction and logging for over two decades. California, Washington, and Massachusetts immediately sued.</div>
+    <span class="category-tag green-tag">Old-Growth Destroyed</span>
+  </div>
+  <div class="category-card green fade-up">
+    <span class="category-icon">🔫</span>
+    <div class="category-title">Lead Ammunition Allowed on Federal Lands</div>
+    <div class="category-body">Congress moved to prohibit federal regulation of lead ammunition and tackle on federal lands — despite scientific consensus that lead poisoning from ammunition kills bald eagles, golden eagles, mountain lions, black bears, common loons, and the critically endangered California condor. Lead fragments from gut piles contaminate the food chain for scavengers and predators.</div>
+    <span class="category-tag green-tag">Lead Poisoning</span>
+  </div>
+</div>
+
+<!-- NOAA / WEATHER SECTION -->
+<section style="background: #090d18; border-top: 2px solid var(--blue); padding: 70px 24px;">
+  <div class="container">
+    <div class="section-header" style="padding: 0 0 40px; max-width:100%;">
+      <div class="eyebrow" style="color: #5b9cf6;">Chapter V</div>
+      <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(42px,7vw,90px); line-height:0.9;">Blinding<br>America</h2>
+      <p class="intro-text">NOAA tracks hurricanes, tornadoes, wildfires, droughts, and the ocean systems that feed the planet. Trump is destroying it — while weather grows more extreme.</p>
+    </div>
+
+    <div class="stat-grid" style="margin-bottom: 40px;">
+      <div class="stat-card fade-up" style="border-top-color:#5b9cf6;">
+        <span class="stat-number" style="color:#5b9cf6;" data-target="880">0</span>
+        <span class="stat-label">NOAA employees abruptly fired on Feb 27, 2025 — 7.3% of total staff in one day</span>
+      </div>
+      <div class="stat-card fade-up" style="border-top-color:#5b9cf6;">
+        <span class="stat-number" style="color:#5b9cf6;" data-target="27" data-suffix="%">0</span>
+        <span class="stat-label">Proposed cut to NOAA's entire budget — weather labs, climate research, ocean monitoring</span>
+      </div>
+      <div class="stat-card fade-up" style="border-top-color:#5b9cf6;">
+        <span class="stat-number" style="color:#5b9cf6;" data-prefix="$" data-target="31" data-suffix="B">0</span>
+        <span class="stat-label">Annual economic benefit of NOAA weather forecasts — now being dismantled</span>
+      </div>
+      <div class="stat-card fade-up" style="border-top-color:#5b9cf6;">
+        <span class="stat-number" style="color:#5b9cf6;" data-target="75" data-suffix="%">0</span>
+        <span class="stat-label">Proposed cut to NOAA's research office budget — including the National Severe Storms Laboratory</span>
+      </div>
+    </div>
+
+    <div class="category-grid" style="padding: 0;">
+      <div class="category-card blue fade-up">
+        <span class="category-icon">🌀</span>
+        <div class="category-title">Hurricane Forecasting Crippled</div>
+        <div class="category-body">Staffing cuts have already curtailed the <strong>daily launch of weather balloons</strong> that collect altitude data — the backbone of storm forecasts. Some NOAA offices are left without any forecasters on-site overnight. The 2025 hurricane season was predicted to be above-normal — with reduced staff and degraded data. A 24-hour storm warning reduces damage by <strong>30%</strong>. Fewer warnings mean more deaths.</div>
+        <span class="category-tag blue-tag">Public Safety</span>
+      </div>
+      <div class="category-card blue fade-up">
+        <span class="category-icon">🌡️</span>
+        <div class="category-title">Climate Research Arm Targeted for Elimination</div>
+        <div class="category-body">The FY2026 budget <strong>eliminates all funding</strong> for NOAA's climate, weather, and ocean laboratories and cooperative institutes — 80 university partnerships. The Office of Oceanic and Atmospheric Research, the world's leading governmental climate science body, is proposed for total dissolution. Funding for regional climate data, sea grants, and climate competitive research is zeroed out.</div>
+        <span class="category-tag blue-tag">Climate Science</span>
+      </div>
+      <div class="category-card blue fade-up">
+        <span class="category-icon">🌊</span>
+        <div class="category-title">Mauna Loa Observatory & Ocean Buoy Network at Risk</div>
+        <div class="category-body">Mauna Loa Observatory has collected continuous climate data since the 1950s — producing the iconic Keeling Curve that tracks atmospheric CO₂. The NOAA-funded Argo network of <strong>4,000 ocean buoys</strong> monitors ocean temperature and salinity worldwide, feeding hurricane, drought, and crop forecasts across the entire US farm belt. Both are now targeted for defunding.</div>
+        <span class="category-tag blue-tag">Irreplaceable Data</span>
+      </div>
+      <div class="category-card blue fade-up">
+        <span class="category-icon">🌾</span>
+        <div class="category-title">America's Food Supply Blinded</div>
+        <div class="category-body">Farmers rely on NOAA climate and weather data to decide what to plant, when to harvest, and how to manage water — especially critical as weather grows more volatile. The National Climate Assessment, which translated climate data into actionable farm guidance, was <strong>cancelled in April 2025</strong>. The result: farmers making billion-dollar decisions with degraded, politically filtered information.</div>
+        <span class="category-tag blue-tag">Food Security</span>
+      </div>
+      <div class="category-card blue fade-up">
+        <span class="category-icon">📡</span>
+        <div class="category-title">Next-Generation Weather Satellites Defunded</div>
+        <div class="category-body">NOAA began terminating contracts for its next-generation geostationary weather satellites — the instruments that provide continuous imagery of North America and the surrounding oceans. NOAA scientists unanimously told leadership the replacement plan was <strong>"a terrible idea harming forecasting"</strong> — and were ignored. The US is investing less in weather infrastructure as extreme storms intensify.</div>
+        <span class="category-tag blue-tag">Infrastructure</span>
+      </div>
+      <div class="category-card blue fade-up">
+        <span class="category-icon">🌍</span>
+        <div class="category-title">Global Weather Forecasting Weakened</div>
+        <div class="category-body">Europe's leading meteorological center (ECMWF) reported <strong>a measurable drop</strong> in observations delivered by NOAA — already degrading international weather models that billions of people depend on. Former NOAA Administrator Rick Spinrad confirmed 25% of the NOAA Environmental Modeling Center was terminated. "Once a certain amount of damage is done, it's not recoverable," warned the director of CIRES.</div>
+        <span class="category-tag blue-tag">Global Impact</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENTISTS SPEAK SECTION -->
+<section style="background: var(--black); border-top: 1px solid var(--border); padding: 70px 24px;">
+  <div class="container">
+    <div class="section-header fade-up" style="padding: 0 0 40px; max-width:100%;">
+      <div class="eyebrow">Chapter VI</div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,7vw,90px);line-height:0.9;">The Scientists<br>Are Screaming</h2>
+      <p class="intro-text">A nationwide survey of nearly 1,400 ecologists, marine biologists, and conservation scientists reveals what's happening inside American science right now.</p>
+    </div>
+
+    <!-- SURVEY BAR CHARTS -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:50px;">
+      <div class="stat-card fade-up" style="border-top-color:var(--red);text-align:left;padding:28px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Self-Censorship</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--red-bright);line-height:1;">48%</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.6;">of surveyed scientists report being <strong style="color:var(--text)">silenced</strong> — pressured to self-censor language in reports, grant proposals, and public communications. Terms banned include "climate change," "climate models," and even "diverse."</div>
+      </div>
+      <div class="stat-card fade-up" style="border-top-color:var(--amber);text-align:left;padding:28px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Career Exodus</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--amber);line-height:1;">Decades</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.6;">Scientists describe <strong style="color:var(--text)">a severe early-career bottleneck</strong> — cut training programs, reduced graduate admissions, rescinded offers. Opportunities overseas are growing. "I worry we will lose a generation of gifted researchers and conservationists."</div>
+      </div>
+      <div class="stat-card fade-up" style="border-top-color:var(--green);text-align:left;padding:28px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Irreversible Harm</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#3ddc84;line-height:1;">Now</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.6;">Multiple respondents concluded that <strong style="color:var(--text)">the damage is already irreversible</strong> — time-sensitive data collection halted, institutional knowledge destroyed, long-term monitoring programs abandoned. "The public will not be able to depend on the accuracy of information in federal reports."</div>
+      </div>
+    </div>
+
+    <!-- FIELD-BY-FIELD IMPACT GRID -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;">
+      <div style="background:var(--card);padding:24px;border-top:3px solid var(--red);" class="fade-up">
+        <div style="font-size:28px;margin-bottom:10px;">🧬</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--text);">Cancer & Alzheimer's</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">$2.4B in NIH grants cancelled. 40% budget cut proposed. Ongoing studies halted mid-experiment. Treatments that might have saved millions — never discovered.</div>
+      </div>
+      <div style="background:var(--card);padding:24px;border-top:3px solid var(--red);" class="fade-up">
+        <div style="font-size:28px;margin-bottom:10px;">🦠</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--text);">Pandemic Preparedness</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">Bird flu vaccine cancelled mid-outbreak. mRNA platform defunded. Ebola, dengue, and chikungunya antiviral grants eliminated. The next pandemic will find us unprepared.</div>
+      </div>
+      <div style="background:var(--card);padding:24px;border-top:3px solid var(--amber);" class="fade-up">
+        <div style="font-size:28px;margin-bottom:10px;">🌊</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--text);">Ocean Science</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">NOAA's marine fisheries service gutted. Argo buoy network at risk. Fish stock monitoring degraded. Coastal communities lose early warning systems for toxic algal blooms and dead zones.</div>
+      </div>
+      <div style="background:var(--card);padding:24px;border-top:3px solid var(--amber);" class="fade-up">
+        <div style="font-size:28px;margin-bottom:10px;">🌱</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--text);">Agriculture & Soil</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">National Climate Assessment cancelled. Seasonal crop forecasts degraded. Farmers in the Midwest and California lose the predictive tools needed to survive a climate-volatile future.</div>
+      </div>
+      <div style="background:var(--card);padding:24px;border-top:3px solid var(--green);" class="fade-up">
+        <div style="font-size:28px;margin-bottom:10px;">🐦</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--text);">Ecology & Wildlife</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">1,817 Fish & Wildlife staff fired. ESA definition of "harm" narrowed. Critical habitat protections narrowed. 32 anti-wildlife bills introduced. A generation of conservation work erased.</div>
+      </div>
+      <div style="background:var(--card);padding:24px;border-top:3px solid var(--green);" class="fade-up">
+        <div style="font-size:28px;margin-bottom:10px;">🏔️</div>
+        <div style="font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;color:var(--text);">Public Lands</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;">2,700 NPS staff cut. 7,000+ Forest Service and BLM workers gone. 59 million acres of protected forest opened to logging. National park maintenance backlogs soaring during record visitation.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;background:var(--card);border-left:4px solid var(--red);padding:32px 36px;" class="fade-up">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--red);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;">From The Wildlife Society Survey of 1,400 Scientists, 2025</div>
+      <blockquote style="font-style:italic;font-size:clamp(18px,2.5vw,24px);line-height:1.5;color:var(--text);">"Since January 20, I have observed the state grow bolder with its willingness to reject scientific information that does not conform with its desired policies. The harm may be irreparable by the end of this administration — or at least it will take decades to repair."</blockquote>
+      <div style="margin-top:16px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;">— Anonymous Federal Scientist, Wildlife Society National Survey, September 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>The Record<br>Is Clear.</h2>
+  <p>Every number above is sourced. Every scientist is real. Every child who gets measles is preventable. This is not politics — this is documented harm.</p>
+  <a class="cta-link" href="https://thetrumptracker.com/attacks-on-science" target="_blank">Read the Full Documentation →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Sources: <a href="https://thetrumptracker.com" target="_blank">thetrumptracker.com</a> · Senate PSI Report (Sept 9, 2025) · CDC · NIH · EPA · FDA · NOAA · Center for Biological Diversity · NRDC White House Watch · Sierra Club · Earthjustice · The Wildlife Society National Survey · Georgetown Environmental Law Review · CFR · Scientific American · CNN · Newsweek</p>
+  <p style="margin-top:10px;">Data compiled through March 2026. Every claim is sourced from official government actions, congressional testimony, peer-reviewed surveys, or statements from officials and scientists.</p>
+</footer>
+
+<script>
+// COUNTER ANIMATION
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const step = target / (duration / 16);
+  let current = 0;
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    const display = target > 999
+      ? Math.floor(current).toLocaleString()
+      : Math.floor(current);
+    el.textContent = prefix + display + suffix;
+  }, 16);
+}
+
+// INTERSECTION OBSERVER
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Trigger counters
+      entry.target.querySelectorAll('[data-target]').forEach(el => {
+        if (!el.dataset.animated) {
+          el.dataset.animated = 'true';
+          animateCounter(el);
+        }
+      });
+      // Also trigger if the element itself is a counter
+      if (entry.target.dataset && entry.target.dataset.target && !entry.target.dataset.animated) {
+        entry.target.dataset.animated = 'true';
+        animateCounter(entry.target);
+      }
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+document.querySelectorAll('[data-target]').forEach(el => observer.observe(el));
+
+// Stagger delay for grids
+document.querySelectorAll('.category-grid .category-card, .stat-grid .stat-card, .voices-grid .voice-card').forEach((card, i) => {
+  card.style.transitionDelay = `${(i % 3) * 0.08}s`;
+});
+</script>
+</body>
+</html>

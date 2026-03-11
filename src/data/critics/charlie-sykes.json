@@ -1,0 +1,82 @@
+{
+  "id": "charlie-sykes",
+  "name": "Charlie Sykes",
+  "role": "Conservative Radio Host and Commentator",
+  "administration": null,
+  "years": null,
+  "militaryRank": null,
+  "category": "commentators",
+  "subCategory": "conservative-media",
+  "photo": null,
+  "summary": "Conservative commentator and former Milwaukee talk radio host who said he would vote for Joe Biden in 2020 and endorsed Kamala Harris in 2024, arguing Trump should never be allowed near power again.",
+  "keyStatements": [
+    {
+      "quote": "I just think we have to end this particular segment of American history.",
+      "date": "2020-09-09",
+      "source": "Wisconsin Public Radio",
+      "context": "Explaining why he planned to vote for Joe Biden",
+      "url": "https://www.wpr.org/history/conflicts-disasters/wisconsin-conservative-voice-charlie-sykes-voting-joe-biden"
+    },
+    {
+      "quote": "The only two candidates who have a chance to win this election are Kamala Harris and Donald Trump. By voting for Kamala Harris, I think that we draw the line and say that Donald Trump should never be allowed anywhere near power again.",
+      "date": "2024-10-11",
+      "source": "Wisconsin Public Radio",
+      "context": "Announcing support for Kamala Harris",
+      "url": "https://www.wpr.org/news/conservative-commentator-charlie-sykes-2-former-gop-state-officials-endorse-harris"
+    },
+    {
+      "quote": "It is about our constitutional norm. It’s about the kind of country that we want to be.",
+      "date": "2024-10-11",
+      "source": "Wisconsin Public Radio",
+      "context": "Explaining why the election is about democracy rather than policy",
+      "url": "https://www.wpr.org/news/conservative-commentator-charlie-sykes-2-former-gop-state-officials-endorse-harris"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1993-2016",
+      "event": "Conservative talk radio host in Milwaukee",
+      "significance": "Prominent voice in Wisconsin conservative media"
+    },
+    {
+      "date": "2020-09-09",
+      "event": "Said he would vote for Joe Biden",
+      "significance": "Public break with Trump in the 2020 election"
+    },
+    {
+      "date": "2024-10-11",
+      "event": "Endorsed Kamala Harris",
+      "significance": "Said Trump should never be allowed near power again"
+    }
+  ],
+  "credibility": {
+    "background": "Long-time conservative radio host, author, editor of The Bulwark",
+    "positions": [
+      "Editor-at-Large, The Bulwark (2018-present)",
+      "Conservative radio host, WTMJ (1993-2016)",
+      "MSNBC contributor"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump should never be allowed near power again",
+    "Framed the election as a choice about constitutional norms",
+    "Said the country needed to end the Trump era"
+  ],
+  "endorsement": "Voted for Joe Biden in 2020 and endorsed Kamala Harris in 2024",
+  "sources": [
+    {
+      "title": "Wisconsin Conservative Voice Charlie Sykes Is Voting For Joe Biden",
+      "url": "https://www.wpr.org/history/conflicts-disasters/wisconsin-conservative-voice-charlie-sykes-voting-joe-biden",
+      "date": "2020-09-09",
+      "type": "news"
+    },
+    {
+      "title": "Conservative commentator Charlie Sykes, 2 former GOP state officials endorse Harris",
+      "url": "https://www.wpr.org/news/conservative-commentator-charlie-sykes-2-former-gop-state-officials-endorse-harris",
+      "date": "2024-10-11",
+      "type": "news"
+    }
+  ],
+  "party": "Independent"
+}

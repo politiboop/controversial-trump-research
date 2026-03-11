@@ -1,0 +1,91 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  titleHighlight?: string;
+  subtitle?: string;
+  date?: string;
+}
+
+const { eyebrow, title, titleHighlight, subtitle, date } = Astro.props;
+---
+
+<header class="masthead">
+  <div class="masthead-eyebrow"><span>{eyebrow}</span></div>
+  <h1>
+    {titleHighlight ? (
+      <Fragment set:html={title.replace(titleHighlight, `<span class="word-red">${titleHighlight}</span>`)} />
+    ) : (
+      <Fragment set:html={title} />
+    )}
+  </h1>
+  {subtitle && <p class="masthead-sub">{subtitle}</p>}
+  {date && <p class="masthead-date">{date}</p>}
+</header>
+
+<style>
+  .masthead {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px 60px;
+    border-bottom: 1px solid var(--red);
+    overflow: hidden;
+  }
+
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 43, 43, 0.18) 0%, transparent 70%);
+  }
+
+  .masthead-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .masthead-eyebrow span {
+    display: inline-block;
+    border: 1px solid var(--red);
+    padding: 4px 12px;
+  }
+
+  .masthead h1 {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 12vw, 160px);
+    line-height: 0.88;
+    letter-spacing: -1px;
+    color: var(--text);
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .masthead h1 :global(.word-red) {
+    color: var(--red);
+  }
+
+  .masthead-sub {
+    font-family: var(--font-heading);
+    font-size: clamp(14px, 2.5vw, 20px);
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+
+  .masthead-date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 2px;
+    position: relative;
+  }
+</style>

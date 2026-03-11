@@ -1,0 +1,360 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const epsteinTabs = [
+  { label: 'Overview', href: '/epstein-files' },
+  { label: 'The Relationship', href: '/epstein-files/the-relationship' },
+  { label: 'Court Documents', href: '/epstein-files/court-documents' },
+  { label: 'Allegations', href: '/epstein-files/allegations' },
+  { label: 'Evidence', href: '/epstein-files/evidence' },
+  { label: 'The Network', href: '/epstein-files/epstein-network' },
+];
+
+const tickerItems = [
+  "1992 Mar-a-Lago Party Video: Trump and Epstein with ~28 Young Women",
+  "Multiple Photographs from 1990s-2000s Social Events",
+  "Epstein's Black Book: Multiple Trump Phone Numbers, Family Contacts",
+  "Flight Logs: Trump on Epstein's Plane, Palm Beach to Newark",
+  "Properties Less Than 3 Miles Apart in Palm Beach",
+  "Trump's 2002 Quote Cannot Be Dismissed as 'Fake News'",
+  "Contemporaneous Media Reports Predate Any Controversy",
+];
+---
+
+<ResearchLayout title="Documentary Evidence: Photos, Records, and Documentation" description="Comprehensive documentation of photographic evidence, flight logs, phone records, property records, and other documentary evidence of Trump-Epstein connections.">
+
+  <SeriesNav tabs={epsteinTabs} currentPath="/epstein-files/evidence" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Epstein Files', href: '/epstein-files' },
+    { label: 'Evidence' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 4 of 5 &middot; The Epstein Files"
+    title="DOCUMENTARY EVIDENCE"
+    titleHighlight="EVIDENCE"
+    subtitle="Photos, flight logs, phone records, and official documentation"
+    date="Photographic Evidence &middot; FAA Records &middot; Phone Records &middot; Property Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Documentary evidence provides objective, contemporaneous documentation of the Trump-Epstein relationship. Unlike testimony that can be disputed or memories that can fade, documentary evidence &mdash; photographs, official records, flight logs, phone records &mdash; establishes facts that cannot be easily explained away."
+    citation="Official Records, Court Evidence, and Verified Documentation"
+  />
+
+  <!-- PHOTOGRAPHIC EVIDENCE -->
+  <SectionDivider label="Visual Evidence" />
+  <SectionHeader
+    eyebrow="Photos and Video"
+    title="Photographic<br>Evidence"
+    introText="Multiple photographs and video footage document Trump and Epstein together across many years."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F3AC;"
+      title="1992 Mar-a-Lago Party Video"
+      body="<strong>Source:</strong> NBC News, July 2019.<br><br>Video shows Trump and Epstein together at a party, talking, laughing, and gesturing toward women dancing. The party reportedly featured Trump, Epstein, and approximately 28 young women described as &quot;calendar girls&quot; flown in for the event. <strong>Perhaps the most damning visual evidence.</strong>"
+      tag="Video Evidence"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4F8;"
+      title="Social Event Photographs (1990s-2000s)"
+      body="<strong>2000 Mar-a-Lago:</strong> Trump and Epstein with Ghislaine Maxwell. <strong>1997 Victoria's Secret Fashion Show:</strong> Both in attendance. <strong>Multiple NYC events:</strong> Together or in close proximity. <strong>Private gatherings:</strong> Socializing together at private parties."
+      tag="Multiple Photos"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F464;"
+      title="Photographs with Ghislaine Maxwell"
+      body="Multiple photographs show Trump with Ghislaine Maxwell, Epstein's convicted co-conspirator: 2000 photo with Trump, Melania, Epstein, and Maxwell at Mar-a-Lago. Maxwell photographed at Trump properties and events. Reports indicate Maxwell attended events at Mar-a-Lago and Trump Tower."
+      tag="Co-Conspirator"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F4F7;" title="What Photos Establish" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The photographic evidence conclusively establishes: Trump and Epstein socialized together regularly over many years. They attended parties and events together, both public and private. They appeared comfortable and friendly, consistent with close social relationship. Trump's properties (Mar-a-Lago) were used for social events involving Epstein. <strong style="color: var(--text);">Trump also socialized with Ghislaine Maxwell, Epstein's co-conspirator in sex trafficking.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- FLIGHT LOGS -->
+  <SectionDivider label="Travel Records" />
+  <SectionHeader
+    eyebrow="Official FAA Records"
+    title="Flight Logs and<br>Travel Records"
+    introText="Flight logs from Epstein's private aircraft document Trump as a passenger."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2708;&#xFE0F;"
+      title="Epstein's Private Jet Flight Logs"
+      body="Flight logs from Jeffrey Epstein's private aircraft were obtained through legal proceedings and FOIA requests. These logs document passengers, dates, and routes for flights on Epstein's planes, including his Boeing 727 (often referred to as the &quot;Lolita Express&quot;)."
+      tag="Official Records"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4C5;"
+      title="Documented Trump Flight: January 5, 1997"
+      body="Flight log documents Donald Trump as a passenger from Palm Beach, Florida to Newark, New Jersey. Other passengers included Mark Epstein (Jeffrey's brother). Documented in official FAA records and pilot logs entered into evidence in legal proceedings."
+      tag="Confirmed"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F504;"
+      title="Trump's Conflicting Statements"
+      body="In some statements, Trump claimed he never flew on Epstein's plane. In others, he acknowledged flying once, from Florida to New York. Trump has claimed this was just a &quot;hitch&quot; or favor. <strong>The documented evidence confirms at least one flight, contradicting his &quot;never&quot; claims.</strong>"
+      tag="Contradicted"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x2696;&#xFE0F;" title="What Flight Logs Do and Don't Prove" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">What they prove:</strong> Trump flew on Epstein's plane at least once. Trump was comfortable enough to accept private plane travel. The relationship was close enough for this favor. Trump has been inconsistent about this documented fact.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">What they don't prove:</strong> What occurred during the flight. Knowledge of or participation in illegal activity. Flights to Epstein's private island (the documented Trump flight was domestic). Whether there were other undocumented flights.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">Many prominent figures flew on Epstein's planes for legitimate reasons. Flight log presence alone does not imply wrongdoing. However, it provides one more piece of documentary evidence of the relationship during the period Epstein was actively committing crimes.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PHONE RECORDS AND ADDRESS BOOKS -->
+  <SectionDivider label="Communication Records" />
+  <SectionHeader
+    eyebrow="Seized Evidence"
+    title="Phone Records and<br>Address Books"
+    introText="Epstein's seized address book and phone records document extensive Trump contact information."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4D3;"
+      title="Epstein's &quot;Black Book&quot;"
+      body="Seized by authorities during the 2006 investigation and entered as evidence. <strong>Trump entries include:</strong> multiple direct phone numbers, Trump Tower numbers, Mar-a-Lago numbers, phone numbers for Trump's wife, contact info for Trump's assistants and staff, and emergency contact numbers."
+      tag="Extensive Entries"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4DE;"
+      title="Subpoenaed Phone Records"
+      body="Phone records from Epstein's residences show multiple calls to and from Trump-associated numbers during the 1990s and early 2000s. While call content is unknown, the frequency and pattern corroborate the social relationship documented through other evidence."
+      tag="Multiple Calls"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F4CB;" title="What Phone Records Establish" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Regular communication between Trump and Epstein. Epstein had multiple ways to contact Trump directly. The relationship involved Trump's family/household (wife's number included). Trump was important enough to Epstein to maintain detailed contact information. <strong style="color: var(--text);">The extensive nature of the entries indicates Trump was a regular and important contact, not a distant acquaintance.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PROPERTY RECORDS -->
+  <SectionDivider label="Geographic Evidence" />
+  <SectionHeader
+    eyebrow="Property Records"
+    title="Property Records and<br>Geographic Connections"
+    introText="Trump and Epstein operated in the same physical and social spaces during the period of Epstein's crimes."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F3D6;&#xFE0F;"
+      title="Palm Beach Proximity"
+      body="Trump's Mar-a-Lago and Epstein's mansion were less than 3 miles apart. Both were members of Palm Beach high society. <strong>Mar-a-Lago:</strong> Trump's club where Epstein was a guest. <strong>Epstein's mansion:</strong> 358 El Brillo Way, site of many documented crimes."
+      tag="&lt;3 Miles"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F3D9;&#xFE0F;"
+      title="Manhattan Connections"
+      body="Both maintained significant Manhattan presence: Trump Tower and Epstein's East 71st Street mansion were nearby. Overlapping social circles in Manhattan elite society. Both attended events at the same venues and clubs."
+      tag="Same Circles"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x2753;"
+      title="The Mar-a-Lago Ban Question"
+      body="Trump claims he &quot;banned&quot; Epstein from Mar-a-Lago. <strong>Problems:</strong> No specific date provided. No contemporaneous evidence of ban. 1992 video shows Epstein at Mar-a-Lago. If ban occurred, why did Trump continue praising Epstein publicly in 2002?"
+      tag="Disputed"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- MEDIA REPORTS -->
+  <SectionDivider label="Contemporaneous Documentation" />
+  <SectionHeader
+    eyebrow="Created Before Controversy"
+    title="Media Reports and<br>Contemporaneous Documentation"
+    introText="Reporting from the 1990s and 2000s &mdash; created before any controversy &mdash; cannot be dismissed as fabricated."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4F0;"
+      title="2002 New York Magazine Profile"
+      body="Profile of Jeffrey Epstein included Trump's quote: &quot;I've known Jeff for 15 years. Terrific guy. He's a lot of fun to be with. It is even said that he likes beautiful women as much as I do, and many of them are on the younger side.&quot; <strong>This quote cannot be dismissed as &quot;fake news&quot; since it was given directly by Trump.</strong>"
+      tag="Trump's Words"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4FA;"
+      title="NBC News 1992 Video Release (2019)"
+      body="NBC News obtained and published previously unreleased video footage from a 1992 Mar-a-Lago party after Epstein's 2019 arrest. Major news organizations verified the authenticity. The video provides visual documentation that corroborates witness accounts and contradicts Trump's later claims."
+      tag="Verified"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4F0;"
+      title="Miami Herald Investigation (2018)"
+      body="Julie K. Brown's &quot;Perversion of Justice&quot; series exposed details of Epstein's crimes and the 2008 plea deal. Included information about Epstein's social circle, including Trump. This investigation led directly to Epstein's 2019 federal indictment."
+      tag="Investigative"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F4DD;" title="Contemporaneous Media Establishes" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Throughout the 1990s and early 2000s, Trump and Epstein were mentioned together in society pages, gossip columns, and media reports: party attendance lists, social columns, published photos, mentions of friendship. <strong style="color: var(--text);">This contemporaneous documentation &mdash; created before anyone knew Epstein would become a convicted sex offender &mdash; cannot be dismissed as fabricated or politically motivated.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- WITNESS CORROBORATION -->
+  <SectionDivider label="Corroboration" />
+
+  <VoicesSection
+    eyebrow="Multiple Independent Sources"
+    title="Witness Corroboration of<br>Documentary Evidence"
+    introText="The documentary evidence is corroborated by testimony from multiple independent witnesses."
+  >
+    <VoiceCard
+      quote="I warned Trump about Epstein's behavior around young women before the 1992 Mar-a-Lago party."
+      attribution="<strong>George Houraney</strong> &middot; Event organizer<br>Corroborates video evidence"
+    />
+    <VoiceCard
+      quote="Trump and Epstein were 'good friends' who socialized regularly."
+      attribution="<strong>Tom Barrack</strong> &middot; Trump advisor<br>Corroborates social event photos"
+    />
+    <VoiceCard
+      quote="Trump and Jeffrey were friends. Trump flew on Jeffrey's plane."
+      attribution="<strong>Mark Epstein</strong> &middot; Jeffrey's brother<br>Corroborates flight logs"
+    />
+  </VoicesSection>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F517;" title="Consistency Across Evidence Types" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Photos show them together &rarr; Corroborated by witness accounts. Phone records show communication &rarr; Corroborated by Trump's own 2002 statement. Flight logs show Trump on plane &rarr; Corroborated by Mark Epstein's testimony. Property proximity &rarr; Corroborated by accounts of mutual social circle. <strong style="color: var(--text);">Each type of evidence supports and validates the others, creating comprehensive documentation.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- WHAT EVIDENCE PROVES -->
+  <SectionDivider label="Assessment" />
+  <SectionHeader
+    eyebrow="Beyond Reasonable Dispute"
+    title="What the Evidence<br>Conclusively Establishes"
+  />
+
+  <ConsequencesGrid eyebrow="Established Beyond Dispute" title="Documented<br>Facts">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="Extensive Social Relationship"
+        description="Trump and Epstein maintained a close social relationship for 15+ years, with regular interaction at parties, events, and private gatherings."
+      />
+      <ConsequenceItem
+        number="02"
+        title="Multiple Contact Methods"
+        description="Epstein had Trump's personal numbers, staff contacts, property numbers. The relationship involved Trump's family household."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Trump's Awareness"
+        description="Trump acknowledged in 2002 that Epstein liked women 'on the younger side' and praised him as 'terrific guy' despite this knowledge."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Later Distancing"
+        description="Trump's narrative shifted dramatically after Epstein's legal troubles, suggesting strategic repositioning rather than honest recollection."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x2696;&#xFE0F;" title="What Evidence Does Not Prove" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Does not prove Trump participated in Epstein's crimes. Does not prove Trump had knowledge of specific criminal acts. Does not prove Trump witnessed abuse or trafficking. Does not prove the specific content of their conversations or activities together.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x1F50D;" title="What Evidence Strongly Suggests" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>Close friendship:</strong> Far more extensive than Trump later claimed. <strong>Awareness of preferences:</strong> Trump's 2002 comment about &quot;younger side&quot; shows awareness. <strong>Lack of concern:</strong> Despite awareness, Trump continued friendship and praised Epstein publicly. <strong>Deliberate distancing:</strong> Changing narrative appears strategic. <strong>Something to hide:</strong> Aggressive opposition to file release suggests damaging information exists.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- WHY THIS MATTERS -->
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4F0;"
+      title="Cannot Be Dismissed as &quot;Fake News&quot;"
+      body="Documentary evidence &mdash; especially contemporaneous evidence created before any controversy &mdash; cannot be dismissed as fabricated or politically motivated. Trump's own quote, verified photos, official flight logs, and seized records are unimpeachable."
+      tag="Undeniable"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F504;"
+      title="Contradicts Trump's Narrative"
+      body="The documentary evidence directly contradicts Trump's claims of minimal or distant relationship with Epstein. Trump has been caught in provable lies about this relationship."
+      tag="Proven Lies"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F50D;"
+      title="Supports Demands for Transparency"
+      body="The documentary evidence shows there is much more to this relationship than Trump acknowledges. If his involvement was truly innocent, releasing all files would exonerate him. <strong>His opposition to transparency suggests the opposite.</strong>"
+      tag="Release the Files"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="The Evidence<br>Is Undeniable."
+    description="Photos, flight logs, phone records, property records, Trump's own words, and media reports &mdash; all corroborated by multiple independent witnesses."
+    linkText="Next: The Epstein Network &#x2192;"
+    linkHref="/epstein-files/epstein-network"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Allegations', href: '/epstein-files/allegations' }}
+    next={{ label: 'Epstein Network', href: '/epstein-files/epstein-network' }}
+    currentIndex={3}
+    totalPages={5}
+  />
+
+</ResearchLayout>

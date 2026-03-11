@@ -1,0 +1,93 @@
+{
+  "id": "bill-kristol",
+  "name": "Bill Kristol",
+  "role": "Conservative Commentator and Editor",
+  "administration": null,
+  "years": null,
+  "militaryRank": null,
+  "category": "commentators",
+  "subCategory": "conservative-media",
+  "photo": null,
+  "summary": "Conservative commentator and Weekly Standard co-founder who publicly called Trump unfit in 2016 and later urged support for Joe Biden in 2020.",
+  "keyStatements": [
+    {
+      "quote": "[Trump is] unfit to be president of the United States.",
+      "date": "2016-08-03",
+      "source": "CNN (The Lead with Jake Tapper transcript)",
+      "context": "Panel discussion on Trump's comments about the Khan family",
+      "url": "https://transcripts.cnn.com/show/cg/date/2016-08-03/segment/02"
+    },
+    {
+      "quote": "He is unstable. I really think so.",
+      "date": "2016-08-03",
+      "source": "CNN (The Lead with Jake Tapper transcript)",
+      "context": "Same segment; assessment of Trump's temperament",
+      "url": "https://transcripts.cnn.com/show/cg/date/2016-08-03/segment/02"
+    },
+    {
+      "quote": "We need a president who has a good plan to deal with COVID.",
+      "date": "2020-10-08",
+      "source": "Jewish Journal",
+      "context": "\"2 Bills 4 Biden\" video supporting Joe Biden",
+      "url": "https://jewishjournal.com/culture/arts/322698/video-billy-crystal-and-bill-kristol-encourage-jews-to-vote-for-biden/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1995",
+      "event": "Co-founded The Weekly Standard",
+      "significance": "Launched a conservative magazine that ran for 23 years"
+    },
+    {
+      "date": "2016-08-03",
+      "event": "Called Trump unfit and unstable on CNN",
+      "significance": "Public Never Trump stance"
+    },
+    {
+      "date": "2018-12-14",
+      "event": "The Weekly Standard announced it would close",
+      "significance": "Magazine shut down after 23 years"
+    },
+    {
+      "date": "2020-10-08",
+      "event": "Appeared in \"2 Bills 4 Biden\" video",
+      "significance": "Encouraged voters to support Joe Biden"
+    }
+  ],
+  "credibility": {
+    "background": "Influential conservative intellectual, founded The Weekly Standard, former chief of staff to VP Dan Quayle",
+    "positions": [
+      "Founder and Editor, The Weekly Standard (1995-2018)",
+      "Chief of Staff to Vice President Dan Quayle (1989-1993)",
+      "Director, Defending Democracy Together"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump unfit for the presidency",
+    "Said Trump was unstable",
+    "Argued for Biden as the better choice to handle COVID"
+  ],
+  "endorsement": "Supported Joe Biden in 2020",
+  "sources": [
+    {
+      "title": "The Lead with Jake Tapper (CNN) transcript, Aug. 3, 2016",
+      "url": "https://transcripts.cnn.com/show/cg/date/2016-08-03/segment/02",
+      "date": "2016-08-03",
+      "type": "transcript"
+    },
+    {
+      "title": "VIDEO: Billy Crystal and Bill Kristol Encourage Jews to Vote for Biden",
+      "url": "https://jewishjournal.com/culture/arts/322698/video-billy-crystal-and-bill-kristol-encourage-jews-to-vote-for-biden/",
+      "date": "2020-10-08",
+      "type": "news"
+    },
+    {
+      "title": "The Weekly Standard is closing after 23 years",
+      "url": "https://www.axios.com/2018/12/14/weekly-standard-conservative-magazine-closing-trump",
+      "date": "2018-12-14",
+      "type": "news"
+    }
+  ],
+  "party": "Independent"
+}

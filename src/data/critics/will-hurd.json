@@ -1,0 +1,95 @@
+{
+  "id": "will-hurd",
+  "name": "Will Hurd",
+  "role": "U.S. Representative from Texas",
+  "administration": null,
+  "years": "2015-2021",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "representative",
+  "photo": null,
+  "summary": "Former CIA officer and Republican Congressman who called Trump a 'lawless, selfish, failed politician,' ran in the 2024 GOP primary, and later endorsed Nikki Haley.",
+  "keyStatements": [
+    {
+      "quote": "Donald Trump is a lawless, selfish, failed politician.",
+      "date": "2023-06-22",
+      "source": "CNN",
+      "context": "Campaign launch",
+      "url": "https://www.cnn.com/2023/06/22/politics/will-hurd-2024-campaign/index.html"
+    },
+    {
+      "quote": "I am endorsing Nikki Haley for president of the United States.",
+      "date": "2023-11-09",
+      "source": "CNN",
+      "context": "Endorsement after ending his campaign",
+      "url": "https://www.cnn.com/2023/11/09/politics/will-hurd-endorses-nikki-haley/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2000-2009",
+      "event": "CIA operations officer",
+      "significance": "Worked in cybersecurity and Middle East"
+    },
+    {
+      "date": "2015-01-03",
+      "event": "Elected to U.S. House",
+      "significance": "Became congressman"
+    },
+    {
+      "date": "2019",
+      "event": "Announced retirement from Congress",
+      "significance": "Would not seek re-election"
+    },
+    {
+      "date": "2021-01-03",
+      "event": "Left Congress",
+      "significance": "Retired after three terms"
+    },
+    {
+      "date": "2023-06-22",
+      "event": "Announced 2024 presidential campaign",
+      "significance": "Ran as anti-Trump Republican"
+    },
+    {
+      "date": "2023-10-09",
+      "event": "Suspended presidential campaign",
+      "significance": "Ended campaign early"
+    },
+    {
+      "date": "2023-11-09",
+      "event": "Endorsed Nikki Haley",
+      "significance": "Backed another anti-Trump candidate"
+    }
+  ],
+  "credibility": {
+    "background": "Former CIA operations officer, U.S. Representative, cybersecurity expert",
+    "positions": [
+      "U.S. Representative from Texas (2015-2021)",
+      "CIA Operations Officer (2000-2009)",
+      "Senior Vice President, FusionX"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Trump is lawless, selfish, and failed",
+    "Trump divides the country",
+    "Trump lacks integrity"
+  ],
+  "endorsement": "Endorsed Nikki Haley in 2023",
+  "sources": [
+    {
+      "title": "Will Hurd calls Trump lawless and selfish",
+      "url": "https://www.cnn.com/2023/06/22/politics/will-hurd-2024-campaign/index.html",
+      "date": "2023-06-22",
+      "type": "news"
+    },
+    {
+      "title": "Will Hurd endorses Nikki Haley for president",
+      "url": "https://www.cnn.com/2023/11/09/politics/will-hurd-endorses-nikki-haley/index.html",
+      "date": "2023-11-09",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

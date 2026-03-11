@@ -1,0 +1,37 @@
+{
+  "id": "john-boehner",
+  "name": "John Boehner",
+  "role": "Speaker of the House (2011-2015)",
+  "administration": "Congressional Leadership",
+  "years": "1991-2015",
+  "category": "congress",
+  "party": "Republican",
+  "summary": "Former Speaker of the House who called the January 6 Capitol attack a 'bloody insurrection' and has been sharply critical of Trump's role in it. Boehner, who led House Republicans for nearly a decade, represents the traditional conservative Republican establishment that has been marginalized under Trump.",
+  "keyStatements": [
+    {
+      "quote": "That bloody insurrection for nothing other than selfish reasons, perpetrated by so-called patriots who trespassed and trashed and tried to take over the Capitol.",
+      "context": "Discussing January 6 attack in his memoir",
+      "date": "2021-04-13",
+      "source": "On the House memoir"
+    },
+    {
+      "quote": "Donald Trump, in my view, helped create this environment.",
+      "context": "On Trump's role in creating conditions for January 6",
+      "source": "USA Today interview"
+    }
+  ],
+  "background": "John Boehner served as Speaker of the House from 2011 to 2015 and represented Ohio's 8th congressional district for 24 years. He was House Majority Leader from 2006 to 2007 and Minority Leader from 2007 to 2011. Boehner was a traditional conservative Republican who struggled with the Tea Party wing of his caucus and resigned in 2015 amid internal GOP divisions. Since leaving Congress, he has been critical of the direction Trump has taken the Republican Party.",
+  "oppositionReasons": [
+    "Holds Trump responsible for creating conditions that led to January 6 insurrection",
+    "Believes Trump has damaged the Republican Party and American democracy",
+    "Concerned about Trump's undermining of democratic norms and institutions",
+    "Troubled by Trump's divisive rhetoric and conspiracy theories"
+  ],
+  "notableActions": [
+    "Called January 6 a 'bloody insurrection' in his memoir",
+    "Publicly blamed Trump for role in Capitol attack",
+    "Warned about Trump's impact on Republican Party",
+    "Advocated for traditional conservative values over Trumpism"
+  ],
+  "credibility": "As a former Speaker of the House who led congressional Republicans through difficult periods including the Tea Party era, Boehner's criticism of Trump carries substantial weight. His traditional conservative credentials and decades of service in Republican leadership make his opposition particularly significant."
+}

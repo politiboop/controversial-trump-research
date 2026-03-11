@@ -1,0 +1,376 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const democracyTabs = [
+  { label: 'Overview', href: '/attacking-democracy' },
+  { label: 'Purging Oversight', href: '/attacking-democracy/purging-oversight' },
+  { label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' },
+  { label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' },
+  { label: 'Weaponizing Government', href: '/attacking-democracy/weaponizing-government' },
+];
+
+const tickerItems = [
+  "Kash Patel: FBI Director (No FBI Experience)",
+  "Dan Bongino: FBI Deputy (Podcast Host)",
+  "Todd Blanche: Deputy AG (Trump's Defense Lawyer)",
+  "Pam Bondi: AG (Epstein Files Controller)",
+  "Pete Hegseth: Defense Secretary (Fox News Host)",
+  "Tulsi Gabbard: DNI (Amplified Russian Propaganda)",
+  "RFK Jr.: HHS Secretary (Anti-Vaccine Activist)",
+  "Alina Habba: Disqualified Twice by Federal Judges",
+];
+---
+
+<ResearchLayout title="Installing Loyalists - Attacking Democracy" description="How Trump installed personal loyalists at FBI, DOJ, Pentagon, and intelligence agencies to ensure government serves him personally rather than the Constitution.">
+
+  <SeriesNav tabs={democracyTabs} currentPath="/attacking-democracy/installing-loyalists" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Attacking Democracy', href: '/attacking-democracy' },
+    { label: 'Installing Loyalists' }
+  ]} />
+
+  <Masthead
+    eyebrow="Step 2 of 4 &middot; Attacking Democracy"
+    title="INSTALLING LOYALISTS"
+    titleHighlight="LOYALISTS"
+    subtitle="How Trump Replaced Career Professionals with Personal Allies"
+    date="FBI &middot; DOJ &middot; Pentagon &middot; Intelligence &middot; Health &middot; Economic"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Trump has systematically replaced career professionals at FBI, DOJ, Pentagon, and intelligence agencies with personal loyalists who pledge allegiance to him rather than the Constitution. This transforms government from serving the law to serving one man."
+    citation="Documented Pattern of Loyalist Appointments"
+  />
+
+  <!-- POWER CENTERS -->
+  <StatGrid>
+    <StatCard target={5} label="Major power centers with loyalist appointees: Law Enforcement, Military, Intelligence, Health, Economic" />
+    <StatCard target={2} label="Federal judges ruled Habba appointment unlawful &mdash; administration keeps trying to bypass Senate" />
+    <StatCard target={0} label="Years of FBI experience held by the new FBI Director and Deputy Director combined" />
+  </StatGrid>
+
+  <!-- WHAT MAKES A LOYALIST -->
+  <SectionDivider label="Defining Loyalism" />
+  <SectionHeader
+    eyebrow="The Key Distinction"
+    title="What Makes Someone<br>A &quot;Loyalist&quot;?"
+    introText="Not every Trump appointee is a loyalist. The distinction matters."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2757}"
+      title="Loyalist Characteristics"
+      body="Public declarations of personal loyalty to Trump (not just policy agreement). History of defending Trump's illegal or unethical actions without reservation. Willingness to use government power for Trump's personal benefit rather than public interest. Lack of independent professional credentials for the position. Selection based on loyalty rather than competence."
+      tag="Definition"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{2753}"
+      title="The Key Question"
+      body="Does this person serve the law and Constitution, or do they serve Trump personally? The evidence below shows appointees who clearly fall into the latter category. Their qualifying characteristic is not expertise, experience, or competence &mdash; it is personal loyalty."
+      tag="Standard"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- LAW ENFORCEMENT -->
+  <SectionDivider label="Law Enforcement Power" />
+  <SectionHeader
+    eyebrow="FBI &amp; DOJ"
+    title="Law Enforcement<br>Power"
+    introText="The FBI and Department of Justice are supposed to operate independently from political influence. Their power to investigate, prosecute, and enforce federal law makes them democracy's most essential accountability mechanisms. Trump has installed loyalists at the top of both institutions."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2696}\u{FE0F}"
+      title="Attorney General: Pam Bondi"
+      body="Former Florida AG (2011-2019). Never charged Jeffrey Epstein despite being state's top prosecutor &mdash; he was arrested by federal prosecutors just six months after she left office. <strong>DOJ under Bondi caught systematically removing documents mentioning Trump from Epstein file releases.</strong> Bipartisan House Oversight vote (24-19, 5 Republicans joining Democrats) to subpoena Bondi over Epstein file handling. Proposed DOJ rule to block state bar ethics investigations of her own staff. Installed Trump's personal lawyer Alina Habba as NJ US Attorney without Senate confirmation &mdash; ruled unlawful twice."
+      tag="Attorney General"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F50D}"
+      title="FBI Director: Kash Patel"
+      body="Former Trump White House aide. No prior FBI experience. Published enemies list of &quot;government gangsters&quot; to investigate. Actively promoted false 2020 election fraud claims. <strong>Fired a dozen agents from CI-12, the FBI's Iran counterintelligence unit, days before the Iran war.</strong> Used FBI jet for 10+ personal trips including Milan Winter Olympics. Said: &quot;We will go out and find the conspirators not just in government but in the media.&quot;"
+      tag="FBI Director"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F3A7}"
+      title="FBI Deputy Director: Dan Bongino"
+      body="Conservative talk radio host and podcast personality. Former Secret Service agent (left 2011). No FBI experience. No management experience of large organizations. Amplified false claims of election fraud. Regularly attacked FBI leadership as &quot;deep state.&quot; Hosted show where Trump called to &quot;nationalize voting.&quot; <strong>A podcast host with no FBI experience is the #2 official at the FBI.</strong>"
+      tag="FBI Deputy"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4BC}"
+      title="Deputy AG: Todd Blanche"
+      body="Trump's personal criminal defense attorney in classified documents case, Jan 6 case, hush money case, and civil fraud case. Personally conducted two days of interviews with convicted sex trafficker Ghislaine Maxwell &mdash; close friend of Maxwell's lawyer. <strong>Failed to ask Maxwell about emails where Epstein claims Trump was &quot;at the house with a victim for many hours.&quot;</strong> Owned $159,000+ in crypto while shutting down DOJ crypto investigations."
+      tag="Deputy AG"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{274C}"
+      title="NJ US Attorney: Alina Habba (Disqualified Twice)"
+      body="Trump's personal lawyer with no prosecutorial experience. Installed without Senate confirmation. Federal judge ruled appointment violated Appointments Clause &mdash; upheld on appeal. Habba departed December 2025. Bondi replaced her with &quot;triumvirate&quot; &mdash; judge ruled this also unlawful (March 9, 2026). <strong>Judge Brann: &quot;The President doesn't like that he cannot simply appoint whomever he wants.&quot;</strong>"
+      tag="Ruled Unlawful x2"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Expert Assessments"
+    title="What Experts Say<br>About Law Enforcement"
+  >
+    <VoiceCard
+      quote="Kash Patel has no business running the FBI. His only qualification is absolute loyalty to Donald Trump, and he has publicly stated he will use the FBI to go after Trump's political enemies. This is not normal. This is what happens in authoritarian countries."
+      attribution="<strong>Andrew McCabe</strong> &middot; Former FBI Deputy Director"
+    />
+    <VoiceCard
+      quote="Pam Bondi has been failing Epstein's victims for years &mdash; first as Florida AG when she declined to pursue charges, and now as US Attorney General where her department has systematically removed documents that mention the president."
+      attribution="<strong>Bloomberg Opinion</strong> &middot; July 2025"
+    />
+    <VoiceCard
+      quote="This is like being investigated by the police, then when you become mayor, making your defense lawyer the police chief. The conflict of interest is so obvious it's hard to believe it's happening. But that's the point &mdash; it's so brazen that it normalizes corruption."
+      attribution="<strong>Legal Ethics Professor</strong> (speaking anonymously)"
+    />
+  </VoicesSection>
+
+  <!-- MILITARY POWER -->
+  <SectionDivider label="Military Power" />
+  <SectionHeader
+    eyebrow="Department of Defense"
+    title="Military<br>Power"
+    introText="The military's oath is to the Constitution, not to any president. Trump has installed a loyalist with no management experience to lead the world's most powerful military."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F396}\u{FE0F}"
+      title="Defense Secretary: Pete Hegseth"
+      body="Fox News host. No Pentagon or defense policy experience. Built career defending Trump on TV rather than gaining defense experience. <strong>Now leading an unauthorized war with Iran &mdash; 7 US troops killed, 1,200+ Iranian civilians dead including children at a girls' school.</strong> Dismissed troop deaths as media trying to &quot;make the president look bad.&quot; Pentagon spent $93B in one month including $2M king crab, $6.9M lobster, $98K Steinway piano. Banned military from 33+ elite universities. Purged generals: ordered 20% cut to four-star generals, fired first women to lead Navy and Coast Guard."
+      tag="Defense Secretary"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Military Assessment"
+    title="Defense Experts<br>Respond"
+  >
+    <VoiceCard
+      quote="Pete Hegseth is unqualified to run the Pentagon. He's a TV personality, not a defense expert. His views on war crimes and military justice are dangerous. But his real qualification is obvious: he's loyal to Trump."
+      attribution="<strong>Retired Four-Star General</strong> (speaking anonymously)"
+    />
+  </VoicesSection>
+
+  <!-- INTELLIGENCE POWER -->
+  <SectionDivider label="Intelligence Power" />
+  <SectionHeader
+    eyebrow="DNI &amp; CIA"
+    title="Intelligence<br>Power"
+    introText="Intelligence agencies protect national security by gathering and analyzing information about threats. Their power is immense and their work is secret. Independence from political pressure is essential. Trump has installed loyalists at the top."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F575}\u{FE0F}"
+      title="DNI: Tulsi Gabbard"
+      body="Former Democratic Congresswoman who left party and endorsed Trump. No intelligence community experience. Secret 2017 trip to meet Assad. Repeatedly amplified Russian talking points about Ukraine. Promoted claims about U.S. bioweapons labs in Ukraine (Russian disinformation). <strong>Whistleblower complaint (2026):</strong> Bypassed normal NSA distribution channels on an intercept about Jared Kushner's influence on Trump regarding Iran. Directed NSA to route classified details only to herself. <strong>The suppressed intelligence about Kushner's foreign influence on Iran policy was hidden before the US went to war with Iran.</strong>"
+      tag="DNI"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F3E2}"
+      title="CIA Director: John Ratcliffe"
+      body="Former DNI and Republican Congressman. As DNI, released classified intelligence in ways that benefited Trump politically. Made public statement about Hunter Biden laptop before 2020 election (breaking intelligence protocol). Contradicted intelligence community assessments that Russia favored Trump in 2020. Career intelligence officials warned during first nomination that he would politicize intelligence."
+      tag="CIA Director"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Intelligence Community"
+    title="National Security<br>Experts Respond"
+  >
+    <VoiceCard
+      quote="Tulsi Gabbard's appointment is a gift to America's adversaries. She has repeatedly parroted Russian propaganda, defended Assad, and attacked the intelligence community. Allied intelligence services will think twice before sharing sensitive information."
+      attribution="<strong>Former Senior Intelligence Official</strong>"
+    />
+    <VoiceCard
+      quote="John Ratcliffe's tenure as DNI showed he was willing to declassify and release intelligence for Trump's political benefit. That's disqualifying. The CIA Director must keep intelligence apolitical. Ratcliffe has proven he won't."
+      attribution="<strong>Former CIA Official</strong>"
+    />
+  </VoicesSection>
+
+  <!-- HEALTH & REGULATORY -->
+  <SectionDivider label="Health &amp; Regulatory Power" />
+  <SectionHeader
+    eyebrow="HHS, CDC, EPA"
+    title="Health &amp;<br>Regulatory Power"
+    introText="Federal health and regulatory agencies protect Americans from disease, unsafe products, and environmental hazards. Their decisions are supposed to be guided by science and evidence. Trump has installed loyalists who reject the scientific consensus of the agencies they now lead."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F3E5}"
+      title="HHS Secretary: Robert F. Kennedy Jr."
+      body="Anti-vaccine activist and conspiracy theorist. No medical degree or public health training. Built career attacking vaccine safety despite overwhelming scientific consensus. Flew on Epstein's jet at least twice (initially lied about number). <strong>Fired all 17 members of CDC's Advisory Committee on Immunization Practices.</strong> Stripped 6 of 17 childhood vaccines from universal recommendation: rotavirus, meningitis, hepatitis A, hepatitis B, flu, COVID, and RSV. Trump's DOJ argued in court that RFK Jr. alone decides &quot;what public health proof is within HHS purview.&quot;"
+      tag="HHS Secretary"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Medical Experts"
+    title="Public Health<br>Response"
+  >
+    <VoiceCard
+      quote="Appointing Robert F. Kennedy Jr. to lead HHS is like appointing an arsonist to lead the fire department. He has spent decades undermining the scientific evidence for vaccines. Children will die from preventable diseases because of this appointment."
+      attribution="<strong>Dr. Peter Hotez</strong> &middot; Dean of Tropical Medicine, Baylor College of Medicine"
+    />
+  </VoicesSection>
+
+  <!-- ECONOMIC POWER -->
+  <SectionDivider label="Economic Power" />
+  <SectionHeader
+    eyebrow="Federal Reserve"
+    title="Economic &amp;<br>Financial Power"
+    introText="The Federal Reserve controls monetary policy and interest rates. Its independence from political interference has been a cornerstone of American economic stability since 1913. Trump is attempting to end that independence."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F3E6}"
+      title="Fed Chair Jerome Powell &mdash; Attempted Removal"
+      body="Powell was appointed by Trump (2018), reappointed by Biden (2022). Under the Federal Reserve Act, the Chair can only be removed &quot;for cause.&quot; Trump has repeatedly called for Powell's removal over interest rate decisions. <strong>No president has ever successfully removed a Fed Chair before their term ended in 111 years of Federal Reserve history.</strong> Removing a Fed Chair without legal cause would be ILLEGAL under the Federal Reserve Act."
+      tag="Unprecedented Attack"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{1F4B5}"
+      title="The Replacement: Kevin Warsh"
+      body="Trump nominated Kevin Warsh to replace Powell as Federal Reserve Chair (January 30, 2026). Hours after the nomination was announced, Warsh's name appeared in the 2026 Epstein file releases &mdash; on a 2010 email list labeled &quot;St. Barth's Christmas 2010&quot; forwarded to Epstein. <strong>Another Epstein-connected appointee in a position of immense power over the American economy.</strong>"
+      tag="Epstein Connection"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Economic Experts"
+    title="Why Fed Independence<br>Matters"
+  >
+    <VoiceCard
+      quote="Presidential interference in Federal Reserve decisions would be catastrophic for American economic credibility. If the president can simply fire a Fed chair for raising interest rates, the Fed becomes just another political tool &mdash; and our economy becomes as unstable as any banana republic's."
+      attribution="<strong>Former Federal Reserve Official</strong>"
+    />
+  </VoicesSection>
+
+  <!-- WHY THIS PATTERN MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{26A0}\u{FE0F}" title="Why This Pattern Matters" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">These appointees share defining characteristics: personal loyalty to Trump is their primary qualification, public history of defending Trump regardless of evidence or law, attacks on the institutions they now lead, lack of traditional qualifications, and willingness to use power for Trump's benefit rather than public interest.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>When the FBI Director pledges to investigate Trump's enemies, when the Attorney General is Trump's defense lawyer, when military leadership is chosen for TV loyalty rather than expertise &mdash; democracy depends on institutions checking executive power, and those institutions are now run by people who serve Trump personally.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- WHAT THIS ENABLES -->
+  <SectionDivider label="What This Enables" />
+  <SectionHeader
+    eyebrow="Connected Tactics"
+    title="What Installing<br>Loyalists Enables"
+    introText="Installing loyalists at FBI, DOJ, Pentagon, and intelligence agencies is not just about personnel &mdash; it transforms what government can do."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2694}\u{FE0F}"
+      title="Enables: Weaponizing Government"
+      body="With loyalists controlling FBI, DOJ, and intelligence, government power can be deployed against political enemies without institutional resistance. Kash Patel publicly pledged to investigate journalists. Todd Blanche controls DOJ prosecutions. Tulsi Gabbard coordinated FBI raid on Georgia election office.<br><br><strong><a href='/attacking-democracy/weaponizing-government' style='color: var(--red-bright); text-decoration: underline;'>See: Weaponizing Government &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{270B}"
+      title="Enables: Demanding Loyalty"
+      body="With loyalists running FBI and DOJ, loyalty tests can be enforced on remaining federal workers. Career employees who refuse personal allegiance to Trump face investigation or termination by Trump loyalists. 300,000+ workers removed. Schedule F now in effect.<br><br><strong><a href='/attacking-democracy/demanding-loyalty' style='color: var(--red-bright); text-decoration: underline;'>See: Demanding Loyalty &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F5F3}\u{FE0F}"
+      title="Enables: Election Rigging"
+      body="Loyalist control of FBI and DOJ allows Trump to use federal law enforcement to interfere in elections &mdash; raiding election offices, seizing ballots, attempting federal takeover of state elections. FBI raided Georgia election office on Trump's orders. Career agents would refuse; loyalists comply.<br><br><strong><a href='/election-rigging' style='color: var(--red-bright); text-decoration: underline;'>See: Election Rigging &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- PATTERN ALERT -->
+  <ColoredSection>
+    <AlertBanner icon="\u{26A0}\u{FE0F}" title="Pattern Alert" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Installing loyalists is Step 2 of the authoritarian playbook precisely because it enables Steps 3 and 4. You cannot demand loyalty or weaponize government if career professionals run institutions. Once loyalists are installed, they enforce loyalty tests on subordinates and deploy power against enemies. That is the sequence, and it is deliberate.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PLAYBOOK CONNECTION -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{1F517}" title="How Installing Loyalists Enables The Authoritarian Playbook" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Purging oversight creates positions for loyalists:</strong> When 17 Inspector Generals are fired, when 300,000+ federal workers are removed, those positions are refilled with people chosen for loyalty rather than competence.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Loyalists enforce loyalty demands:</strong> With FBI and DOJ led by Trump allies, loyalty tests for federal workers can be enforced. Career employees who refuse personal loyalty face investigation or termination.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Loyalists enable weaponization:</strong> When FBI Director Kash Patel says he will investigate Trump's enemies, when AG Todd Blanche controls DOJ prosecutions, when DNI Tulsi Gabbard oversees intelligence &mdash; government power can be deployed against political opponents without resistance.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>That is why it is a playbook.</strong> Each step enables the others. And once all four are in place, democracy depends on institutions that no longer exist.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- RELATED -->
+  <ColoredSection>
+    <AlertBanner icon="\u{1F4D8}" title="Related Documentation" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);"><a href="/attacking-democracy/purging-oversight" style="color: var(--red-bright); text-decoration: underline;">Purging Oversight</a>:</strong> How Trump removed independent watchdogs to create positions for loyalists.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/attacking-democracy/demanding-loyalty" style="color: var(--red-bright); text-decoration: underline;">Demanding Loyalty</a>:</strong> How loyalists enforce loyalty tests on remaining federal workers.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/attacking-democracy/weaponizing-government" style="color: var(--red-bright); text-decoration: underline;">Weaponizing Government</a>:</strong> How loyalist appointees use government power against Trump's enemies.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/fascism/trumps-actions" style="color: var(--red-bright); text-decoration: underline;">Trump's Actions (Fascism)</a>:</strong> How installing loyalists aligns with fascist consolidation tactics.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Demanding<br>Loyalty"
+    description="With loyalists installed at every power center, Step 3 transforms the entire federal workforce: personal loyalty oaths replacing constitutional duty."
+    linkText="Continue: Demanding Loyalty &rarr;"
+    linkHref="/attacking-democracy/demanding-loyalty"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Purging Oversight', href: '/attacking-democracy/purging-oversight' }}
+    next={{ label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' }}
+    currentIndex={1}
+    totalPages={4}
+  />
+
+</ResearchLayout>

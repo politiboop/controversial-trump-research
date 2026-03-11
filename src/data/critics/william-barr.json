@@ -1,0 +1,71 @@
+{
+  "id": "william-barr",
+  "name": "William Barr",
+  "role": "Attorney General",
+  "administration": "Trump Administration",
+  "years": "2019-2020",
+  "militaryRank": null,
+  "category": "former-cabinet",
+  "subCategory": "justice-department",
+  "photo": null,
+  "summary": "Former Attorney General who broke with Trump after the 2020 election and called Trump's fraud claims \"bullshit\" in sworn testimony.",
+  "keyStatements": [
+    {
+      "quote": "We realized from the beginning it was just bullshit.",
+      "date": "2022-06-13",
+      "source": "January 6 Committee testimony (via Washington Post)",
+      "context": "On Trump's election fraud claims",
+      "url": "https://www.washingtonpost.com/politics/2022/06/13/barr-trump-election-fraud-bullshit/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2019-02-14",
+      "event": "Confirmed as Attorney General",
+      "significance": "Second time serving as AG (first under George H.W. Bush)"
+    },
+    {
+      "date": "2019-03",
+      "event": "Released summary of Mueller Report",
+      "significance": "Defended Trump"
+    },
+    {
+      "date": "2020-12-01",
+      "event": "Announced no evidence of widespread election fraud",
+      "significance": "First major break with Trump"
+    },
+    {
+      "date": "2020-12-14",
+      "event": "Resigned as Attorney General",
+      "significance": "Left after refusing to back fraud claims"
+    },
+    {
+      "date": "2022-06-13",
+      "event": "January 6 Committee video testimony aired",
+      "significance": "Called fraud claims 'bullshit'"
+    }
+  ],
+  "credibility": {
+    "background": "Former Attorney General under two presidents, former CIA General Counsel, conservative legal scholar",
+    "positions": [
+      "U.S. Attorney General (2019-2020)",
+      "U.S. Attorney General (1991-1993)",
+      "Deputy Attorney General (1990-1991)",
+      "Assistant Attorney General (1989-1990)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Trump's election fraud claims were baseless 'bullshit'"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "Barr: Trump election fraud claims were 'bullshit'",
+      "url": "https://www.washingtonpost.com/politics/2022/06/13/barr-trump-election-fraud-bullshit/",
+      "date": "2022-06-13",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

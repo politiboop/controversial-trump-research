@@ -1,0 +1,100 @@
+{
+  "id": "cindy-mccain",
+  "name": "Cindy McCain",
+  "role": "Widow of Senator John McCain",
+  "administration": null,
+  "years": null,
+  "militaryRank": null,
+  "category": "former-associates",
+  "subCategory": "political-family",
+  "photo": null,
+  "summary": "Widow of Senator John McCain who endorsed Joe Biden on September 22, 2020, citing a country-first ethic and calling Biden a good and honest man.",
+  "keyStatements": [
+    {
+      "quote": "My husband John lived by a code: country first. We are Republicans, yes, but Americans foremost. There's only one candidate in this race who stands up for our values as a nation, and that is Joe Biden.",
+      "date": "2020-09-22",
+      "source": "The American Presidency Project",
+      "url": "https://www.presidency.ucsb.edu/documents/press-release-cindy-mccain-endorses-joe-biden-for-president"
+    },
+    {
+      "quote": "Joe and I don't always agree, but he is a good and honest man and I believe he has the power to bring this country together.",
+      "date": "2020-09-22",
+      "source": "The American Presidency Project",
+      "url": "https://www.presidency.ucsb.edu/documents/press-release-cindy-mccain-endorses-joe-biden-for-president"
+    },
+    {
+      "quote": "There is too much at risk in this election to sit on the sidelines.",
+      "date": "2020-09-22",
+      "source": "The American Presidency Project",
+      "url": "https://www.presidency.ucsb.edu/documents/press-release-cindy-mccain-endorses-joe-biden-for-president"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1980",
+      "event": "Married John McCain",
+      "significance": "Became political spouse"
+    },
+    {
+      "date": "2008",
+      "event": "Campaigned during McCain's presidential run",
+      "significance": "Active in Republican politics"
+    },
+    {
+      "date": "2015-2018",
+      "event": "Witnessed Trump's attacks on her husband",
+      "significance": "Trump repeatedly insulted McCain"
+    },
+    {
+      "date": "2018-08-25",
+      "event": "Husband John McCain died",
+      "significance": "Trump not invited to funeral"
+    },
+    {
+      "date": "2020-09-22",
+      "event": "Endorsed Joe Biden",
+      "significance": "Cited a country-first ethic"
+    },
+    {
+      "date": "2021-06-23",
+      "event": "Biden announced intent to nominate her as UN food agencies ambassador",
+      "significance": "Selected for U.S. Ambassador to UN Agencies for Food and Agriculture"
+    }
+  ],
+  "credibility": {
+    "background": "Widow of Senator John McCain, businesswoman, humanitarian, U.S. Ambassador",
+    "positions": [
+      "U.S. Ambassador to UN Agencies for Food and Agriculture (2021-present)",
+      "Chair, McCain Institute",
+      "Board Chair, Hensley Beverage Company"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Cited a country-first ethic in opposing Trump",
+    "Praised Biden as a good and honest man who could unite the country",
+    "Said the stakes were too high to sit out the election"
+  ],
+  "endorsement": "Endorsed Joe Biden in 2020",
+  "sources": [
+    {
+      "title": "Press Release: Cindy McCain Endorses Joe Biden for President",
+      "url": "https://www.presidency.ucsb.edu/documents/press-release-cindy-mccain-endorses-joe-biden-for-president",
+      "date": "2020-09-22",
+      "type": "statement"
+    },
+    {
+      "title": "Biden will nominate Cindy McCain as ambassador to UN food agencies",
+      "url": "https://apnews.com/article/joe-biden-cindy-mccain-united-nations-ambassador-5b764f4e9a2a1b2f5d9f3c6d8e51e0f0",
+      "date": "2021-06-23",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}
+
+
+
+
+
+

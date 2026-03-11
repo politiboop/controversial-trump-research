@@ -1,0 +1,206 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const fascismTabs = [
+  { label: 'Overview', href: '/fascism' },
+  { label: 'Expert Consensus', href: '/fascism/expert-consensus' },
+  { label: 'Defining Fascism', href: '/fascism/defining-fascism' },
+  { label: "Trump's Actions", href: '/fascism/trumps-actions' },
+  { label: 'Historical Comparisons', href: '/fascism/historical-comparisons' },
+];
+
+const tickerItems = [
+  "200+ Historians Signed Open Letter",
+  "34 of 35 Constitutional Scholars Agree",
+  "400+ International Scholars Issued Warning",
+  "John Kelly: 'Falls Into Definition of Fascist'",
+  "Mark Milley: 'Most Dangerous Person to This Country'",
+  "Robert Paxton Changed His Assessment After Jan 6",
+  "17 Former Trump Officials Warned He's Unfit",
+];
+---
+
+<ResearchLayout title="Expert Consensus - Path to Fascism" description="Leading historians, political scientists, and former Trump officials warn that Trump exhibits fascist characteristics. See what 200+ experts say.">
+
+  <SeriesNav tabs={fascismTabs} currentPath="/fascism/expert-consensus" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Fascism', href: '/fascism' },
+    { label: 'Expert Consensus' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 1 of 4 · Path to Fascism"
+    title="EXPERT CONSENSUS"
+    titleHighlight="CONSENSUS"
+    subtitle="Why calling Trump fascist is mainstream expert assessment, not fringe opinion"
+    date="Source: Open Letters · Peer-Reviewed Research · Official Statements"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="After January 6, 2021, scholars who had previously resisted the term changed their position. Here is what leading experts — historians, political scientists, constitutional scholars, and Trump's own officials — are saying."
+    citation="Post-January 6 Expert Reassessment"
+  />
+
+  <!-- COLLECTIVE STATEMENTS -->
+  <SectionHeader
+    eyebrow="Collective Statements"
+    title="Hundreds of<br>Experts Agree"
+    introText="Multiple groups of experts have signed collective statements warning about authoritarian and fascist characteristics in Trump's actions."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📜"
+      title="200+ Historians: Open Letter Warning"
+      body="<em>&quot;We, the undersigned historians, write to express our alarm at the ongoing assault on democracy... We are witnessing the historic attempt by a defeated president to overturn our election and seize power through intimidation and violence... The events of January 6 were a clear manifestation of fascist tactics... We must call this what it is: an attempted coup and an act of domestic terrorism inspired by fascist ideology.&quot;</em><br><br><strong>Signatories include:</strong> Leading scholars from Harvard, Yale, Princeton, Columbia, Stanford, and dozens of other institutions."
+      tag="December 2021"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Constitutional Scholars Consensus"
+      body="<em>&quot;34 of 35 constitutional law experts surveyed agree: Donald Trump's actions constitute authoritarianism and disqualify him from office under the 14th Amendment insurrection clause.&quot;</em><br><br><strong>Source:</strong> Survey of Constitutional Law Professors"
+      tag="2024"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="International Scholars Against Fascism"
+      body="<em>&quot;As scholars of fascism and authoritarianism from around the world, we are issuing this warning: The Trump administration displays clear authoritarian and fascist characteristics. History shows us what happens when such movements gain power.&quot;</em><br><br><strong>Signatories include:</strong> Scholars specializing in fascism, Holocaust studies, and authoritarianism from 15+ countries."
+      tag="400+ Scholars · October 2020"
+    />
+  </CategoryGrid>
+
+  <!-- TEXTBOOK FASCISM -->
+  <SectionDivider label="Individual Expert Assessments" />
+  <SectionHeader
+    eyebrow="&quot;Textbook Fascism&quot;"
+    title="Leading Scholars<br>Sound the Alarm"
+    introText="Experts identifying clear fascist characteristics in Trump's behavior and rhetoric."
+  />
+
+  <VoicesSection
+    eyebrow="Academic Experts"
+    title="In Their<br>Own Words"
+    introText="These are not political commentators — they are the world's foremost scholars on fascism and authoritarianism."
+  >
+    <VoiceCard
+      quote="Trump's incitement of the invasion of the Capitol on January 6, 2021 removes my objection to the fascist label. His open encouragement of civic violence to overturn an election crosses a red line. The label now seems not just acceptable but necessary."
+      attribution="<strong>Robert Paxton</strong> · Columbia University<br>World's leading fascism expert, author of &quot;The Anatomy of Fascism&quot;<br>January 11, 2021"
+    />
+    <VoiceCard
+      quote="If it looks like a fascist, and it quacks like a fascist, then maybe it's a fascist. Trump's rhetoric and actions check all the boxes of classical fascism."
+      attribution="<strong>Timothy Snyder</strong> · Yale University<br>Professor of History, author of &quot;On Tyranny&quot; and &quot;The Road to Unfreedom&quot;<br>2020"
+    />
+    <VoiceCard
+      quote="Trump exhibits textbook fascist characteristics: ultranationalism, scapegoating of minorities, rejection of democratic norms, cult of personality, and use of political violence."
+      attribution="<strong>Ruth Ben-Ghiat</strong> · New York University<br>Professor of History, expert on fascism and authoritarianism, author of &quot;Strongmen&quot;<br>2021"
+    />
+    <VoiceCard
+      quote="What we're seeing with Trump is fascism. Not proto-fascism, not fascist-adjacent, but fascism. The evidence is overwhelming."
+      attribution="<strong>Jason Stanley</strong> · Yale University<br>Professor of Philosophy, author of &quot;How Fascism Works&quot;<br>2023"
+    />
+  </VoicesSection>
+
+  <!-- FORMER TRUMP OFFICIALS -->
+  <HighlightBar text="17 Former Trump Officials Have Warned He Is Unfit for Office" />
+
+  <SectionHeader
+    eyebrow="Former Trump Officials"
+    title="His Own<br>People Warn"
+    introText="These are not political opponents — these are people who worked directly for Trump and saw his behavior up close."
+  />
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Why This Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">These officials had access Trump's opponents did not have. They saw how he operates behind closed doors. <strong style="color: var(--text);">Their warnings carry extraordinary weight.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <VoicesSection
+    eyebrow="Behind Closed Doors"
+    title="Trump's Own<br>Officials Speak"
+    introText="People who served in the Trump administration and witnessed his behavior firsthand."
+  >
+    <VoiceCard
+      quote="He certainly falls into the general definition of fascist, for sure. He certainly prefers the dictator approach to government."
+      attribution="<strong>John Kelly</strong> · Former White House Chief of Staff (2017-2019)<br>Retired 4-star Marine General, Trump's longest-serving Chief of Staff<br>October 2023 · The New York Times"
+    />
+    <VoiceCard
+      quote="I think he's dangerous. I think Donald Trump is the most dangerous person to this country."
+      attribution="<strong>Mark Milley</strong> · Former Chairman of the Joint Chiefs of Staff<br>Highest-ranking military officer, served under Trump<br>2023 · Bob Woodward's &quot;War&quot;"
+    />
+    <VoiceCard
+      quote="Donald Trump is the first president in my lifetime who does not try to unite the American people — does not even pretend to try. Instead, he tries to divide us."
+      attribution="<strong>James Mattis</strong> · Former Secretary of Defense (2017-2019)<br>Retired 4-star Marine General<br>June 2020 · The Atlantic"
+    />
+    <VoiceCard
+      quote="Trump's actions represent a clear and present danger to American democracy and the Constitution."
+      attribution="<strong>Mark Esper</strong> · Former Secretary of Defense (2019-2020)<br>Trump-appointed Defense Secretary<br>2022 · &quot;A Sacred Oath&quot; (memoir)"
+    />
+  </VoicesSection>
+
+  <!-- HISTORICAL PARALLELS SECTION -->
+  <SectionDivider label="Historical Parallels" />
+  <SectionHeader
+    eyebrow="Scholar-Validated Comparisons"
+    title="Historical<br>Parallels"
+    introText="Experts drawing comparisons to historical fascist movements."
+  />
+
+  <VoicesSection
+    eyebrow="History Echoes"
+    title="Scholars See<br>the Patterns"
+  >
+    <VoiceCard
+      quote="The parallels between Trump's rise and the rise of European fascism in the 1920s and 1930s are striking and deeply concerning."
+      attribution="<strong>Sarah Churchwell</strong> · University of London<br>Professor of American Literature and Public Understanding of the Humanities<br>2020 · The Guardian"
+    />
+    <VoiceCard
+      quote="Trump's tactics — from blaming minorities for economic problems to attacking the free press — mirror those used by fascist leaders throughout history."
+      attribution="<strong>Madeleine Albright</strong> · Former Secretary of State<br>Expert on authoritarianism, author of &quot;Fascism: A Warning&quot;<br>2018"
+    />
+  </VoicesSection>
+
+  <!-- CONCLUSION -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="📊" title="What the Evidence Shows">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This is not partisan rhetoric — it is scholarly consensus. Experts who have spent their careers studying fascism and authoritarianism see clear patterns in Trump's behavior. Former officials who worked directly for him confirm these assessments.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>When 200+ historians, constitutional scholars, and Trump's own officials all issue the same warning, it deserves serious consideration.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Define<br>the Terms"
+    description="Now that we have seen expert consensus, let us examine the scholarly definitions and frameworks they are applying."
+    linkText="Continue: Defining Fascism →"
+    linkHref="/fascism/defining-fascism"
+  />
+
+  <PageNavigation
+    next={{ label: 'Defining Fascism', href: '/fascism/defining-fascism' }}
+    currentIndex={0}
+    totalPages={4}
+  />
+
+</ResearchLayout>

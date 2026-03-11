@@ -1,0 +1,78 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Research and documentation from The Trump Tracker' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — The Trump Tracker Research</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <slot />
+  <script>
+    // Counter animation for stat numbers
+    function animateCounter(el: HTMLElement) {
+      const target = parseInt(el.dataset.target || '0');
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        const display = target > 999
+          ? Math.floor(current).toLocaleString()
+          : Math.floor(current);
+        el.textContent = prefix + display + suffix;
+      }, 16);
+    }
+
+    // IntersectionObserver for fade-up and counter animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          entry.target.querySelectorAll('[data-target]').forEach(el => {
+            const htmlEl = el as HTMLElement;
+            if (!htmlEl.dataset.animated) {
+              htmlEl.dataset.animated = 'true';
+              animateCounter(htmlEl);
+            }
+          });
+          const target = entry.target as HTMLElement;
+          if (target.dataset && target.dataset.target && !target.dataset.animated) {
+            target.dataset.animated = 'true';
+            animateCounter(target);
+          }
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('[data-target]').forEach(el => observer.observe(el));
+
+    // Stagger delay for grid items
+    document.querySelectorAll('.category-grid .category-card, .stat-grid .stat-card, .voices-grid .voice-card').forEach((card, i) => {
+      (card as HTMLElement).style.transitionDelay = `${(i % 3) * 0.08}s`;
+    });
+  </script>
+</body>
+</html>

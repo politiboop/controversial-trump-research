@@ -1,0 +1,364 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const fascismTabs = [
+  { label: 'Overview', href: '/fascism' },
+  { label: 'Expert Consensus', href: '/fascism/expert-consensus' },
+  { label: 'Defining Fascism', href: '/fascism/defining-fascism' },
+  { label: "Trump's Actions", href: '/fascism/trumps-actions' },
+  { label: 'Historical Comparisons', href: '/fascism/historical-comparisons' },
+];
+
+const tickerItems = [
+  "12 of 14 Eco Fascism Criteria Met",
+  "30,000+ False or Misleading Claims",
+  "Muslim Ban · 'Poisoning the Blood' · 'Shithole Countries'",
+  "January 6 Coup Attempt · 91 Criminal Charges",
+  "17 Inspector Generals Fired",
+  "'I Alone Can Fix It' · 'I Need Loyalty'",
+  "2,000+ Attacks on Press",
+  "Schedule F: Loyalty Tests for 50,000+ Civil Servants",
+  "2026 Midterm Rigging in Progress",
+];
+---
+
+<ResearchLayout title="Trump's Actions - Path to Fascism" description="Comprehensive documentation of Trump's words and actions measured against scholarly fascism criteria, with full sources.">
+
+  <SeriesNav tabs={fascismTabs} currentPath="/fascism/trumps-actions" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Fascism', href: '/fascism' },
+    { label: "Trump's Actions" }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 3 of 4 · Path to Fascism"
+    title="TRUMP'S ACTIONS"
+    titleHighlight="ACTIONS"
+    subtitle="Documented evidence measured against scholarly fascism criteria"
+    date="Every claim sourced · Every quote verified · Every action documented"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Using the frameworks established by Eco, Britt, Paxton, and Stanley, this section systematically documents how Trump's words and actions align with fascist characteristics. Each claim is sourced and linked to verifiable evidence."
+    citation="Methodology"
+  />
+
+  <HighlightBar text="Trump Meets 12 of 14 Eco Fascism Criteria" />
+
+  <!-- CHARACTERISTIC 1: ULTRANATIONALISM -->
+  <SectionHeader
+    eyebrow="Eco #5 · Britt #1 · Stanley #5"
+    title="Ultranationalism<br>& Xenophobia"
+    introText="Obsessive focus on national greatness; 'us vs. them' mentality; fear and hatred of outsiders and minorities."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏴"
+      title="&quot;Make America Great Again&quot;"
+      body="Campaign slogan and rhetoric invoking undefined past American greatness; nostalgic appeal to mythic golden age.<br><br><strong>2015-Present:</strong> &quot;MAGA&quot; as central messaging.<br><strong>Implication:</strong> America currently degraded; restoration needed."
+      tag="Mythic Past"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="Muslim Ban"
+      body="Executive Order 13769 banning travel from seven Muslim-majority countries.<br><br><strong>January 27, 2017:</strong> Signed executive order.<br><strong>Campaign promise (2015):</strong> &quot;Total and complete shutdown of Muslims entering the United States.&quot;<br><strong>Legal status:</strong> Challenged in courts as discriminatory."
+      tag="Religious Targeting"
+    />
+    <CategoryCard
+      icon="💬"
+      title="&quot;Shithole Countries&quot;"
+      body="Referred to Haiti, El Salvador, and African nations as &quot;shithole countries&quot; in Oval Office meeting.<br><br><strong>January 11, 2018:</strong> Remarks in immigration meeting.<br><strong>Context:</strong> Questioned why U.S. accepts immigrants from these nations.<br><strong>Source:</strong> Washington Post, confirmed by senators present."
+      tag="January 2018"
+    />
+    <CategoryCard
+      icon="⚔️"
+      title="&quot;Invading&quot; Migrants"
+      body="Repeatedly characterized asylum seekers and migrants as &quot;invading&quot; America.<br><br><strong>October 2018:</strong> &quot;This is an invasion of our Country.&quot;<br><strong>Rhetoric:</strong> Dehumanizing language portraying immigrants as military threat.<br><strong>Consequence:</strong> <a href='/dangerous-rhetoric' style='color: var(--red-bright); text-decoration: underline;'>Linked to El Paso shooter's manifesto.</a>"
+      tag="Dehumanization"
+    />
+    <CategoryCard
+      icon="🩸"
+      title="&quot;Poisoning the Blood&quot;"
+      body="Claimed immigrants are &quot;poisoning the blood of our country&quot; — <strong>direct Nazi rhetoric.</strong><br><br><strong>December 2023:</strong> Campaign rally statement.<br><strong>Historical parallel:</strong> Hitler's <em>Mein Kampf</em> used identical &quot;blood poisoning&quot; language.<br><strong>Expert reaction:</strong> Historians immediately noted Nazi parallel."
+      tag="Nazi Rhetoric"
+    />
+    <CategoryCard
+      icon="📝"
+      title="Birtherism"
+      body="Spent years promoting racist conspiracy theory that Barack Obama was not born in America.<br><br><strong>2011-2016:</strong> Led birther movement.<br><strong>Implication:</strong> First Black president inherently foreign, not legitimate."
+      tag="2011-2016"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="🎓" title="Expert Assessment">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><em>&quot;Trump's rhetoric on immigration and minorities follows classic fascist pattern of scapegoating and dehumanization.&quot;</em> <strong style="color: var(--text);">— Ruth Ben-Ghiat, NYU historian</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CHARACTERISTIC 2: SCAPEGOATING -->
+  <SectionDivider label="Fascist Characteristic" />
+  <SectionHeader
+    eyebrow="Eco #7,8 · Britt #3 · Paxton · Stanley #6"
+    title="Scapegoating &<br>Enemies"
+    introText="Unifying cause against perceived threat; enemies simultaneously strong and weak; obsession with conspiracies."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🕵️"
+      title="&quot;Deep State&quot; Conspiracy"
+      body="Promoted conspiracy theory of shadowy government insiders undermining him.<br><br>Characterized career civil servants as disloyal conspirators. Justified firing Inspector Generals and independent officials. Created narrative of persecution by own government."
+      tag="Conspiracy Theory"
+    />
+    <CategoryCard
+      icon="📰"
+      title="&quot;Enemy of the People&quot;"
+      body="Repeatedly called press &quot;enemy of the people&quot; — <strong>Stalin's phrase.</strong><br><br><strong>2017-Present:</strong> Hundreds of attacks on media.<br><strong>Historical parallel:</strong> Stalin used identical phrase to justify purges.<br><strong>Impact:</strong> <a href='/dangerous-rhetoric-press' style='color: var(--red-bright); text-decoration: underline;'>Threats and violence against journalists increased.</a>"
+      tag="Stalin's Phrase"
+    />
+    <CategoryCard
+      icon="🎯"
+      title="Democrats as &quot;Enemies&quot;"
+      body="Characterized political opponents not as adversaries but enemies to be destroyed.<br><br>&quot;Enemy from within&quot; — referring to Democrats. Called for investigations and prosecution of opponents. Suggested military action against domestic critics."
+      tag="Political Opponents"
+    />
+  </CategoryGrid>
+
+  <!-- CHARACTERISTIC 3: ATTACKS ON DEMOCRATIC INSTITUTIONS -->
+  <SectionDivider label="Fascist Characteristic" />
+  <SectionHeader
+    eyebrow="Eco #4 · Britt #14 · Paxton"
+    title="Attacks on<br>Democracy"
+    introText="Disagreement is treason; election denial; systematic dismantling of accountability mechanisms."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="January 6 Coup Attempt"
+      body="Incited violent mob to overturn 2020 election results.<br><br><strong>January 6, 2021:</strong> &quot;Fight like hell&quot; speech before Capitol attack.<br><strong>91 criminal charges filed</strong> related to election interference.<br><strong>Legal ruling:</strong> Federal judge ruled actions &quot;criminal conspiracy.&quot;<br><strong><a href='/election-rigging' style='color: var(--red-bright); text-decoration: underline;'>Full documentation →</a></strong>"
+      tag="Coup Attempt"
+    />
+    <CategoryCard
+      icon="🔍"
+      title="17 Inspector Generals Fired"
+      body="Systematically removed independent oversight.<br><br><strong>2025:</strong> Fired 17 Inspector Generals in coordinated purge.<br><strong>Legal status:</strong> Federal judge ruled firings violated federal law.<br><strong>Purpose:</strong> Eliminate independent accountability.<br><strong><a href='/attacking-democracy/purging-oversight' style='color: var(--red-bright); text-decoration: underline;'>Full documentation →</a></strong>"
+      tag="Oversight Destroyed"
+    />
+    <CategoryCard
+      icon="🗳️"
+      title="2026 Midterm Rigging"
+      body="Actively attempting to rig 2026 midterm elections.<br><br><strong>January 2026:</strong> FBI raid on Georgia election office on Trump's orders. Attempting to &quot;nationalize voting&quot; (unconstitutional federal takeover).<br><strong>March 2026:</strong> Allies push to invoke emergency powers ahead of midterms — send federal agents to polls, seize election infrastructure.<br><strong><a href='/election-rigging' style='color: var(--red-bright); text-decoration: underline;'>Full documentation →</a></strong>"
+      tag="Active Threat"
+    />
+    <CategoryCard
+      icon="📜"
+      title="Executive Order to End Birthright Citizenship"
+      body="Attempted to override 14th Amendment by executive order — blocked by four federal judges.<br><br><strong>January 20, 2025:</strong> Signed EO on day one of second term. Reagan-appointed judge called it &quot;blatantly unconstitutional.&quot; 14th Amendment guarantees citizenship to all born on U.S. soil (since 1868). No president has ever overridden a constitutional amendment by executive order."
+      tag="Unconstitutional"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Targeting Law Firms by Executive Order"
+      body="Used executive orders to punish law firms for representing his opponents — all struck down as unconstitutional.<br><br><strong>March 2025:</strong> Targeted Perkins Coie, WilmerHale, Susman Godfrey, Jenner &amp; Block. Called Perkins Coie &quot;the most evil law firm in America&quot; for representing Democrats. All four orders struck down as First Amendment violations.<br><strong>March 2, 2026:</strong> DOJ dropped all appeals — complete defeat."
+      tag="First Amendment Violation"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="Critical Alert">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>This is not historical — Trump is actively dismantling democratic safeguards RIGHT NOW.</strong> The 2026 midterm rigging is happening as you read this.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CHARACTERISTIC 4: CULT OF PERSONALITY -->
+  <SectionDivider label="Fascist Characteristic" />
+  <SectionHeader
+    eyebrow="Eco #1,13 · Paxton"
+    title="Cult of<br>Personality"
+    introText="Leader above law; personality worship; loyalty to person over country/constitution."
+  />
+
+  <VoicesSection
+    eyebrow="In His Own Words"
+    title="Demands for<br>Personal Loyalty"
+    introText="Trump's demand for personal loyalty over institutional loyalty follows classic fascist pattern."
+  >
+    <VoiceCard
+      quote="I need loyalty. I expect loyalty."
+      attribution="To FBI Director James Comey, 2017"
+    />
+    <VoiceCard
+      quote="You're either with me or against me."
+      attribution="Repeated mantra to officials"
+    />
+    <VoiceCard
+      quote="I alone can fix it."
+      attribution="2016 RNC Speech"
+    />
+    <VoiceCard
+      quote="I have an Article 2 where I have the right to do whatever I want as President."
+      attribution="2019"
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📋"
+      title="Loyalty Tests"
+      body="Required federal workers to pass loyalty tests.<br><br><strong>2025-2026:</strong> Systematic loyalty testing of federal workforce. Schedule F now in effect: 50,000+ civil servants stripped of protections. AG Bondi blocked ethics investigations into loyalist attorneys (March 2026).<br><strong>Result:</strong> Merit system replaced with personal loyalty system.<br><strong><a href='/attacking-democracy/purging-oversight' style='color: var(--red-bright); text-decoration: underline;'>Full documentation →</a></strong>"
+      tag="Loyalty System"
+    />
+    <CategoryCard
+      icon="🚪"
+      title="Firing Independent Officials"
+      body="Systematically removed officials who would not pledge personal loyalty.<br><br>James Comey (FBI Director). Jeff Sessions (Attorney General). 17 Inspector Generals. Patel fired entire Iran counterintelligence unit weeks before war. Hegseth banned military recruitment at 33+ &quot;elite&quot; universities.<br><strong>Pattern:</strong> Independence = disloyalty = firing."
+      tag="Purge Pattern"
+    />
+  </CategoryGrid>
+
+  <!-- CHARACTERISTIC 5: REJECTION OF TRUTH -->
+  <SectionDivider label="Fascist Characteristic" />
+  <SectionHeader
+    eyebrow="Eco #2,14 · Britt #6,11 · Stanley #2,3,4"
+    title="Rejection of Truth &<br>Anti-Intellectualism"
+    introText="Alternative facts; attacks on experts, education, and truth; replacement of reality with propaganda."
+  />
+
+  <StatGrid>
+    <StatCard target={30000} suffix="+" label="False or misleading claims during presidency (Washington Post count)" />
+    <StatCard target={2000} suffix="+" label="Attacks on press as 'fake news' or 'enemy of the people'" />
+  </StatGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🔄"
+      title="&quot;Alternative Facts&quot;"
+      body="Administration openly promoted &quot;alternative facts&quot; as equivalent to truth.<br><br><strong>January 2017:</strong> Kellyanne Conway: &quot;Alternative facts&quot; about inauguration crowd. Pattern established: Reject objective reality, substitute preferred narrative."
+      tag="January 2017"
+    />
+    <CategoryCard
+      icon="🔬"
+      title="Attacks on Expertise"
+      body="Systematic attacks on scientists, doctors, and experts.<br><br>COVID: Overruled CDC, promoted hydroxychloroquine, suggested injecting bleach. Climate: Called climate science a &quot;hoax.&quot;<br><strong>March 2026:</strong> CDC stripped recommendations for 6 childhood vaccines under RFK Jr.<br><strong>March 2026:</strong> EPA at 40-year staffing low — 12,849 employees, 24% of workforce gone. Economics: Contradicted own advisors; economy now losing 92,000 jobs/month.<br><strong>Pattern:</strong> Expertise dismissed, then the experts themselves removed."
+      tag="War on Science"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Defunded PBS, NPR, Shut Down Public Broadcasting"
+      body="Eliminated federal funding for public media, forcing Corporation for Public Broadcasting to shut down.<br><br><strong>May 1, 2025:</strong> Executive order to defund NPR and PBS as &quot;biased media.&quot;<br><strong>July 2025:</strong> Congress rescinded $1.1 billion for CPB through 2027.<br><strong>August 2025:</strong> CPB announced shutdown, eliminated majority of staff by Sept 30.<br><strong>Classic fascist pattern:</strong> Eliminating independent media and educational programming."
+      tag="Media Silenced"
+    />
+    <CategoryCard
+      icon="🏫"
+      title="Dismantled Department of Education"
+      body="Systematically dismantled federal education oversight and infrastructure.<br><br><strong>March 20, 2025:</strong> Executive order to dismantle Department of Education.<br><strong>March 2025:</strong> Fired 1,400 employees — half the department's workforce.<br><strong>November 2025:</strong> Transferred core functions to other agencies (legally challenged).<br><strong>Threatens:</strong> Special education protections, Title IX enforcement, student loans, educational equity."
+      tag="Education Destroyed"
+    />
+    <CategoryCard
+      icon="📊"
+      title="Manipulating Economic Data"
+      body="Fired statisticians, suppressed data, violated embargo rules — <strong>&quot;way beyond anything Richard Nixon ever did.&quot;</strong><br><br><strong>August 2025:</strong> Fired first-ever BLS Commissioner for unfavorable jobs report in 140-year history.<br><strong>November 2025:</strong> First time in 900+ months monthly employment data not collected — October 2025 permanently missing.<br><strong>January 2026:</strong> Posted jobs data 12 hours before official release (unprecedented).<br>Commerce Secretary: Told statisticians independence is &quot;nonsense.&quot;"
+      tag="Data Manipulation"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="🎓" title="Expert Assessment">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><em>&quot;Attacks on education and independent media are hallmarks of authoritarian regimes. By dismantling public broadcasting and the Department of Education, Trump is systematically undermining the informed citizenry democracy requires.&quot;</em> <strong style="color: var(--text);">— Timothy Snyder, Yale historian</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="📊" title="Senate Investigation: 57 Attacks on Science — Now Escalating" variant="amber">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7;">The Senate Permanent Subcommittee on Investigations documented 57 separate instances where Trump's administration undermined scientific institutions, suppressed research, and fired 20,500+ scientists and health workers. Since that report, the war on science has escalated:</p>
+      <ul style="margin-left: 1.5rem; margin-top: 0.75rem; font-size: 15px; color: var(--muted); line-height: 1.8;">
+        <li>Censoring scientific publications and purging public health data</li>
+        <li><strong style="color: var(--text);">RFK Jr. stripped CDC recommendations for 6 childhood vaccines</strong> — polio, MMR, chickenpox, hepatitis B, HPV, flu</li>
+        <li><strong style="color: var(--text);">EPA at 40-year staffing low</strong> — only 12,849 employees remain (24% gone)</li>
+        <li><strong style="color: var(--text);">VA cutting 14,000 medical positions</strong> — 1.2 million veterans losing providers</li>
+        <li><strong style="color: var(--text);">$665 billion in Medicaid cuts</strong> — 300+ hospitals at risk of closure</li>
+        <li>Cancelling $500M in pandemic preparedness research</li>
+        <li>Abandoning clinical trial patients mid-treatment</li>
+      </ul>
+      <p style="margin-top: 1rem; font-size: 15px;"><strong><a href="/attacks-on-science" style="color: var(--amber); text-decoration: underline;">Full Documentation: Trump's War on Science →</a></strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CHARACTERISTIC 6: USE OF VIOLENCE -->
+  <SectionDivider label="Fascist Characteristic" />
+  <SectionHeader
+    eyebrow="Eco #9,11 · Paxton · Stanley #7"
+    title="Use of Violence &<br>Threat of Violence"
+    introText="Political violence encouraged; paramilitary groups; redemptive violence."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="January 6 Incitement"
+      body="<strong>Speech before attack:</strong> &quot;If you don't fight like hell, you're not going to have a country anymore.&quot;<br><br><strong>Outcome:</strong> 5 dead, 140+ officers injured, Capitol breached.<br><strong>Legal consequence:</strong> 91 criminal charges related to coup attempt."
+      tag="Insurrection"
+    />
+    <CategoryCard
+      icon="✊"
+      title="&quot;Stand Back and Stand By&quot;"
+      body="<strong>Context:</strong> Asked to denounce Proud Boys during 2020 debate.<br><strong>Response:</strong> &quot;Proud Boys, stand back and stand by.&quot;<br><br><strong>Impact:</strong> Proud Boys leaders later charged with seditious conspiracy for January 6."
+      tag="Proud Boys"
+    />
+    <CategoryCard
+      icon="📋"
+      title="Pardoning January 6 Rioters"
+      body="<strong>January 2025:</strong> Pardoned violent insurrectionists.<br><br><strong>Message:</strong> Political violence on Trump's behalf is acceptable.<br><strong>Impact:</strong> Normalizes future political violence."
+      tag="Pardons"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text={'Full documentation: <a href="/dangerous-rhetoric" style="color: white; text-decoration: underline;">See Dangerous Rhetoric page →</a>'} />
+
+  <!-- CONCLUSION -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="📋" title="The Pattern Is Clear">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This is not cherry-picking — these are systematic patterns across multiple scholarly criteria. Trump exhibits ultranationalism, scapegoating, attacks on democratic institutions, cult of personality, rejection of truth, and use of political violence.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Every claim above is documented and sourced. The evidence is not ambiguous — it is overwhelming.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="The Record<br>Is Clear."
+    description="Next, see how these tactics compare to those used by historical fascist movements — validated by expert analysis."
+    linkText="Continue: Historical Comparisons →"
+    linkHref="/fascism/historical-comparisons"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Historical Comparisons', href: '/fascism/historical-comparisons' }}
+    currentIndex={2}
+    totalPages={4}
+  />
+
+</ResearchLayout>

@@ -1,0 +1,73 @@
+{
+  "id": "dan-coats",
+  "name": "Dan Coats",
+  "role": "Director of National Intelligence",
+  "administration": "Trump Administration",
+  "years": "2017-2019",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "intelligence",
+  "photo": null,
+  "summary": "Former Director of National Intelligence who warned that Trump's alleged mishandling of classified documents could cost lives.",
+  "keyStatements": [
+    {
+      "quote": "People's lives could be lost",
+      "date": "2024-02-26",
+      "source": "Newsweek",
+      "context": "Warning about Trump's alleged possession of classified documents",
+      "url": "https://www.newsweek.com/dan-coats-raises-red-flag-donald-trump-behavior-lives-could-lost-1873503"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-03-15",
+      "event": "Confirmed as Director of National Intelligence",
+      "significance": "Became Trump's top intelligence official"
+    },
+    {
+      "date": "2019-08-15",
+      "event": "Left office",
+      "significance": "Resignation became effective"
+    },
+    {
+      "date": "2024-02-26",
+      "event": "Raised concerns about classified documents",
+      "significance": "Warned about national security risks from Trump's behavior"
+    }
+  ],
+  "credibility": {
+    "background": "Former U.S. Senator and Ambassador to Germany with extensive national security experience",
+    "positions": [
+      "Director of National Intelligence (2017-2019)",
+      "U.S. Senator from Indiana (1989-1999, 2011-2017)",
+      "U.S. Ambassador to Germany (2001-2005)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Warned that mishandling classified documents could put lives at risk",
+    "Raised concerns about national security risks from classified documents"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "Ex-Trump aide raises red flag on Donald's behavior: 'Lives could be lost'",
+      "url": "https://www.newsweek.com/dan-coats-raises-red-flag-donald-trump-behavior-lives-could-lost-1873503",
+      "date": "2024-02-26",
+      "type": "news"
+    },
+    {
+      "title": "PN41 \u2014 Daniel Coats \u2014 Office of the Director of National Intelligence",
+      "url": "https://www.congress.gov/nomination/115th-congress/41",
+      "date": "2017-03-15",
+      "type": "government"
+    },
+    {
+      "title": "DNI Daniel R. Coats Resignation Letter",
+      "url": "https://www.dni.gov/index.php/careers/348-newsroom/press-releases/3367-dni-daniel-r-coats-resignation-letter",
+      "date": "2019-07-28",
+      "type": "government"
+    }
+  ],
+  "party": "Republican"
+}

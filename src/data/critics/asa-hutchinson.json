@@ -1,0 +1,115 @@
+{
+  "id": "asa-hutchinson",
+  "name": "Asa Hutchinson",
+  "role": "Governor of Arkansas",
+  "administration": null,
+  "years": "2015-2023",
+  "militaryRank": null,
+  "category": "former-officials",
+  "subCategory": "governor",
+  "photo": null,
+  "summary": "Former Arkansas governor and 2024 Republican presidential candidate who said Trump disqualified himself because of January 6 and that Trump should not be president again.",
+  "keyStatements": [
+    {
+      "quote": "Trump has disqualified himself, in my judgment, from his actions on January 6th and leading up to that.",
+      "date": "2022-07-01",
+      "source": "CBS News",
+      "url": "https://www.cbsnews.com/news/governor-asa-hutchinson-abortion-arkansas/"
+    },
+    {
+      "quote": "I do not believe that Donald Trump should be the next president of the United States. ... Jan. 6 really disqualifies him for the future.",
+      "date": "2023-01-01",
+      "source": "ABC News (This Week) via ABC7 Chicago",
+      "context": "Interview with Jonathan Karl",
+      "url": "https://abc7chicago.com/post/asa-hutchinson-arkansas-governor-donald-trump-jan-6/12637806/"
+    },
+    {
+      "quote": "Donald Trump's actions on January 6 should disqualify him from ever being President again.",
+      "date": "2023-07-18",
+      "source": "The American Presidency Project",
+      "context": "Statement on Trump being a target of the January 6 investigation",
+      "url": "https://www.presidency.ucsb.edu/documents/statement-governor-asa-hutchinson-news-donald-trump-being-target-the-january-6th"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2015-01-13",
+      "event": "Became Governor of Arkansas",
+      "significance": "Elected as Republican governor"
+    },
+    {
+      "date": "2022-07-01",
+      "event": "Said Trump 'disqualified himself' because of January 6",
+      "significance": "Publicly opposed a 2024 Trump run"
+    },
+    {
+      "date": "2023-01-10",
+      "event": "Completed second term as governor",
+      "significance": "Left office"
+    },
+    {
+      "date": "2023-04-02",
+      "event": "Announced 2024 presidential campaign",
+      "significance": "Announced run on ABC \u201cThis Week\u201d"
+    },
+    {
+      "date": "2023-07-18",
+      "event": "Statement on Trump being a target of the Jan. 6 investigation",
+      "significance": "Said Trump should be disqualified from future office"
+    },
+    {
+      "date": "2024-01-16",
+      "event": "Suspended presidential campaign",
+      "significance": "Ended campaign after Iowa caucuses"
+    }
+  ],
+  "credibility": {
+    "background": "Former Governor of Arkansas, former Homeland Security official, former U.S. Attorney",
+    "positions": [
+      "Governor of Arkansas (2015-2023)",
+      "Under Secretary for Border and Transportation Security, DHS (2003-2005)",
+      "Administrator, Drug Enforcement Administration (2001-2003)",
+      "U.S. Representative from Arkansas (1997-2001)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said January 6 disqualified Trump",
+    "Said Trump should not be president again",
+    "Said Trump's actions on January 6 should disqualify him from future office"
+  ],
+  "endorsement": "Said he would not support Trump in 2024",
+  "sources": [
+    {
+      "title": "Gov. Asa Hutchinson on 2024: 'Trump has disqualified himself'",
+      "url": "https://www.cbsnews.com/news/governor-asa-hutchinson-abortion-arkansas/",
+      "date": "2022-07-01",
+      "type": "news"
+    },
+    {
+      "title": "Jan 6 'disqualifies' Donald Trump from GOP presidential nomination, Arkansas Governor Asa Hutchinson says",
+      "url": "https://abc7chicago.com/post/asa-hutchinson-arkansas-governor-donald-trump-jan-6/12637806/",
+      "date": "2023-01-01",
+      "type": "news"
+    },
+    {
+      "title": "Statement by Governor Asa Hutchinson on News of Donald Trump Being a Target of the January 6th Investigation",
+      "url": "https://www.presidency.ucsb.edu/documents/statement-governor-asa-hutchinson-news-donald-trump-being-target-the-january-6th",
+      "date": "2023-07-18",
+      "type": "statement"
+    },
+    {
+      "title": "Former Arkansas Gov. Asa Hutchinson ends his 2024 campaign after sixth-place finish in Iowa caucuses",
+      "url": "https://apnews.com/article/asa-hutchinson-drops-out-republican-race-a450d5e669df0f341586b21c51dfe858",
+      "date": "2024-01-16",
+      "type": "news"
+    },
+    {
+      "title": "Former Arkansas Gov. Asa Hutchinson announces 2024 presidential bid",
+      "url": "https://www.cnbc.com/2023/04/02/former-arkansas-gov-asa-hutchinson-announces-2024-presidential-bid.html",
+      "date": "2023-04-02",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

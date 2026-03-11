@@ -1,0 +1,83 @@
+{
+  "id": "matthew-pottinger",
+  "name": "Matthew Pottinger",
+  "role": "Deputy National Security Advisor",
+  "administration": "Trump Administration",
+  "years": "2019-2021",
+  "militaryRank": "Major, U.S. Marine Corps (Retired)",
+  "category": "former-administration",
+  "subCategory": "national-security",
+  "photo": null,
+  "summary": "Former Deputy National Security Advisor and Marine who resigned after January 6 and testified about his decision to leave following Trump's tweet attacking Mike Pence.",
+  "keyStatements": [
+    {
+      "quote": "I read that tweet. And made a decision at that moment to resign.",
+      "date": "2022-07-21",
+      "source": "CBS News",
+      "context": "On why he resigned",
+      "url": "https://www.cbsnews.com/news/matthew-pottinger-testimony-house-jan-6-committee-hearing/"
+    },
+    {
+      "quote": "I simply didn't want to be associated with the events that were unfolding at the Capitol.",
+      "date": "2022-07-21",
+      "source": "CBS News",
+      "context": "January 6 Committee testimony",
+      "url": "https://www.cbsnews.com/news/matthew-pottinger-testimony-house-jan-6-committee-hearing/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017",
+      "event": "Joined National Security Council",
+      "significance": "Became Asia director"
+    },
+    {
+      "date": "2019-09-04",
+      "event": "Became Deputy National Security Advisor",
+      "significance": "Senior NSC role"
+    },
+    {
+      "date": "2021-01-06",
+      "event": "Resigned on January 6",
+      "significance": "Left immediately after Capitol attack"
+    },
+    {
+      "date": "2022-07-21",
+      "event": "Testified before January 6 Committee",
+      "significance": "Provided evidence against Trump"
+    }
+  ],
+  "credibility": {
+    "background": "Former Deputy National Security Advisor, Marine Corps veteran, former journalist in China",
+    "positions": [
+      "Deputy National Security Advisor (2019-2021)",
+      "Senior Director for Asia, NSC (2018-2019)",
+      "Director for China, NSC (2017-2018)",
+      "U.S. Marine Corps officer"
+    ],
+    "awards": [
+      "Bronze Star",
+      "Combat Action Ribbon"
+    ]
+  },
+  "oppositionReasons": [
+    "Resigned after Trump's January 6 tweet about Mike Pence",
+    "Said he did not want to be associated with events at the Capitol"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "Who is Matthew Pottinger? Former Trump national security official testifies at Jan. 6 hearing",
+      "url": "https://www.cbsnews.com/news/matthew-pottinger-testimony-house-jan-6-committee-hearing/",
+      "date": "2022-07-21",
+      "type": "news"
+    },
+    {
+      "title": "Top China adviser among White House resignations after Capitol violence",
+      "url": "https://www.straitstimes.com/world/united-states/top-china-adviser-among-white-house-resignations-after-capitol-violence",
+      "date": "2021-01-07",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

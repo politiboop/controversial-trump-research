@@ -1,0 +1,228 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const rhetoricTabs = [
+  { label: 'Overview', href: '/dangerous-rhetoric' },
+  { label: 'Press', href: '/dangerous-rhetoric/press' },
+  { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+  { label: 'Democrats', href: '/dangerous-rhetoric/democrats' },
+  { label: 'Immigrants', href: '/dangerous-rhetoric/immigrants' },
+  { label: 'Women', href: '/dangerous-rhetoric/women' },
+];
+
+const tickerItems = [
+  "23 Dead in El Paso Massacre -- Shooter Cited Trump's 'Invasion' Rhetoric",
+  "21% Increase in FBI-Reported Hate Crimes (2016-2017)",
+  "5,500+ Children Separated from Families at Border",
+  "1,000+ Children Still Not Reunited with Parents",
+  "'Poisoning the Blood' -- Language from Hitler's Mein Kampf",
+  "'Vermin,' 'Animals,' 'Invaders' -- Nazi-Era Dehumanization",
+  "Muslim Ban: Religious Discrimination as Policy",
+  "'Shithole Countries' -- Explicit Racist Preference",
+];
+---
+
+<ResearchLayout title="Dangerous Rhetoric Against Immigrants and Minorities" description="Trump's escalating dehumanization of immigrants and minorities - from 'rapists' to 'poisoning the blood' - and its deadly consequences">
+
+  <SeriesNav tabs={rhetoricTabs} currentPath="/dangerous-rhetoric/immigrants" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Dangerous Rhetoric', href: '/dangerous-rhetoric' },
+    { label: 'Against Immigrants' }
+  ]} />
+
+  <Masthead
+    eyebrow="Page 4 of 5 &middot; Dangerous Rhetoric"
+    title="DEHUMANIZATION<br>CAMPAIGN"
+    titleHighlight="DEHUMANIZATION"
+    subtitle="From &quot;rapists&quot; to &quot;poisoning the blood&quot; -- Nazi-era language with deadly consequences"
+    date="Timeline &middot; Nazi Parallels &middot; El Paso Massacre"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <HighlightBar text="Trump has systematically dehumanized immigrants using language that directly echoes Nazi Germany -- 'poisoning the blood,' 'vermin,' 'animals,' 'invaders'" variant="red" />
+
+  <IntroQuote
+    quote="From his campaign launch in 2015 calling Mexican immigrants 'rapists' to his 2023 rallies claiming immigrants are 'poisoning the blood of our country' -- language historians identify as directly from Hitler's Mein Kampf -- Trump has built his political career on the systematic dehumanization of immigrants and minorities."
+    citation="Historical Analysis of Dehumanization Rhetoric"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={23} label="Dead in El Paso massacre by shooter citing Trump's 'invasion' rhetoric" accentColor="var(--red)" />
+    <StatCard target={21} suffix="%" label="Increase in FBI-reported hate crimes during Trump's rise (2016-2017)" accentColor="var(--red)" />
+    <StatCard target={5500} suffix="+" label="Children separated from families at border under 'zero tolerance'" accentColor="var(--red)" />
+    <StatCard target={1000} suffix="+" label="Children still not reunited with parents; some parents deported, children lost" accentColor="var(--amber)" />
+  </StatGrid>
+
+  <!-- EXPERT WARNING -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Expert Warning: Genocidal Language" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Leading historians including Yale's Jason Stanley and NYU's Ruth Ben-Ghiat have documented the precise parallels between Trump's language and Nazi dehumanization tactics that preceded genocide. Terms like &quot;vermin,&quot; &quot;animals,&quot; &quot;infest,&quot; &quot;invasion,&quot; and &quot;blood poisoning&quot; are the <strong style="color: var(--text);">exact same words</strong> used by fascist regimes to strip people of their humanity before escalating to violence.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">The consequences are documented and deadly: The El Paso shooter explicitly cited Trump's &quot;invasion&quot; rhetoric in his manifesto before murdering 23 people. <strong style="color: var(--text);">This rhetoric kills people.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CHRONOLOGICAL TIMELINE -->
+  <SectionDivider label="Timeline" />
+  <SectionHeader
+    eyebrow="Escalating Dehumanization"
+    title="Chronological<br>Timeline"
+    introText="This timeline documents Trump's systematic escalation of racist and dehumanizing rhetoric, with exact dates, quotes, and context. The pattern shows deliberate escalation from political attacks to language historians identify as genocidal warning signs."
+  />
+
+  <TimelineSection title="2015-2016<br><span style='font-size:0.4em;color:var(--muted)'>Campaign Built on Racism</span>">
+    <TimelineItem date="JUN 2015" badge="Foundation" badgeType="catastrophic" title="Campaign Launch: 'They're Rapists'" description="'When Mexico sends its people, they're not sending their best... They're bringing drugs. They're bringing crime. They're rapists.' Trump launches campaign with broad characterization of Mexican immigrants as criminals. Fact check: immigrants commit crimes at lower rates than native-born Americans." />
+    <TimelineItem date="NOV 2015" badge="False Claim" badgeType="serious" title="'Thousands' Celebrating 9/11" description="'I watched in Jersey City, New Jersey, where thousands of people were cheering as that building was coming down.' Completely false claim about Muslim Americans. Debunked by local police, news reports, officials." />
+    <TimelineItem date="DEC 2015" badge="Religious Ban" badgeType="catastrophic" title="Muslim Ban Announcement" description="'Donald J. Trump is calling for a total and complete shutdown of Muslims entering the United States.' First explicit call for religious discrimination as policy. Violates First Amendment's Establishment Clause. Historical parallel: targeting religious minority echoes Nazi tactics." />
+    <TimelineItem date="MAR 2016" badge="Islamophobia" badgeType="serious" title="'Islam Hates Us'" description="'I think Islam hates us.' Attributes hatred to entire religion (1.8 billion people). When asked if he meant 'radical Islam,' Trump refused to narrow it." />
+    <TimelineItem date="JUN 2016" badge="Racism" badgeType="catastrophic" title="'Mexican Judge' Attack" description="About Judge Gonzalo Curiel: 'He's a Mexican.' Judge Curiel was born in Indiana. Paul Ryan called this 'textbook definition of a racist comment.'" />
+    <TimelineItem date="AUG 2016" badge="Gold Star" badgeType="serious" title="Khizr Khan Gold Star Family Attack" description="Khizr Khan, father of slain Muslim American soldier, criticized Trump at DNC. Trump implied his wife 'wasn't allowed' to speak because of Muslim faith. Veterans groups condemned attacks on Gold Star family." />
+  </TimelineSection>
+
+  <TimelineSection title="2017-2018<br><span style='font-size:0.4em;color:var(--muted)'>Presidential Power for Discrimination</span>">
+    <TimelineItem date="JAN 2017" badge="Executive Order" badgeType="catastrophic" title="Muslim Ban Executive Order" description="Executive Order 13769 bans entry from seven Muslim-majority countries. Green card holders detained at airports, families separated, refugees turned away. Eventually upheld 5-4 by Supreme Court." />
+    <TimelineItem date="JAN 2018" badge="Racism" badgeType="catastrophic" title="'Shithole Countries'" description="'Why are we having all these people from shithole countries come here?' (Haiti, El Salvador, African nations) 'We should have more people from places like Norway.' President explicitly states preference for white European immigrants over Black and Brown immigrants." />
+    <TimelineItem date="APR 2018" badge="Dehumanization" badgeType="catastrophic" title="'Animals' Language Begins" description="'These aren't people. These are animals.' Speaking about MS-13 but language applied broadly. Holocaust scholars warned this language is dangerous. 'These aren't people' is dehumanization rhetoric used before genocides." />
+    <TimelineItem date="MAY 2018" badge="Nazi Parallel" badgeType="catastrophic" title="'Infest' Language" description="'...pour into and infest our Country.' 'Infest' -- term for vermin, not humans. Nazi propaganda referred to Jews 'infesting' Germany. Historians noted precise echo of Nazi dehumanization language." />
+    <TimelineItem date="JUN 2018" badge="Family Separation" badgeType="catastrophic" title="Family Separation Policy" description="'Zero tolerance' policy separates 5,500+ children from parents. Children as young as 4 months old taken from parents. Children in cages on concrete floors. Audio released of children crying for parents. Pediatricians and psychologists called this 'torture,' 'child abuse.'" />
+    <TimelineItem date="AUG 2019" badge="Massacre" badgeType="catastrophic" title="El Paso Massacre: 23 Dead" description="Shooter kills 23 people at Walmart targeting Hispanics. Manifesto explicitly cites Trump's 'invasion' rhetoric. Drove 10+ hours to target Hispanic community. Deadliest attack on Latinos in modern U.S. history." />
+  </TimelineSection>
+
+  <TimelineSection title="2019-2024<br><span style='font-size:0.4em;color:var(--muted)'>Escalation to Nazi-Era Language</span>">
+    <TimelineItem date="JUL 2019" badge="Racism" badgeType="catastrophic" title="'Go Back' to 'Your Countries'" description="Told four congresswomen of color to 'go back to the crime infested places from which they came.' Three of the four were born in the U.S. The fourth was a naturalized U.S. citizen." />
+    <TimelineItem date="SEP 2023" badge="Nazi Language" badgeType="catastrophic" title="'Poisoning the Blood of Our Country'" description="'They're poisoning the blood of our country.' Historians identify as directly from Hitler's Mein Kampf: 'blood poisoning' was Nazi 'blood purity' rhetoric used to justify genocide. Trump doubled down: 'I never read Mein Kampf.'" />
+    <TimelineItem date="OCT 2023" badge="Nazi Language" badgeType="catastrophic" title="'Vermin' Speech" description="'We will root out the communists, Marxists, fascists and the radical left thugs that live like vermin within the confines of our country.' 'Vermin' directly echoes Hitler and Mussolini dehumanization rhetoric." />
+    <TimelineItem date="SEP 2024" badge="Hoax" badgeType="serious" title="'Eating the Pets' -- Springfield Hoax" description="'They're eating the dogs. They're eating the cats.' Spread debunked conspiracy about Haitian immigrants in Springfield, Ohio. Bomb threats forced school evacuations. Local officials condemned Trump for endangering their community." />
+    <TimelineItem date="2024" badge="Escalation" badgeType="catastrophic" title="'Invasion,' 'Criminals,' 'Not People'" description="Throughout 2024 campaign, Trump escalated anti-immigrant rhetoric: 'It's an invasion.' 'They're not people.' 'They're animals.' Each rally pushed the language further. Studies show each escalation correlates with spike in anti-immigrant hate crimes." />
+  </TimelineSection>
+
+  <!-- NAZI PARALLELS -->
+  <SectionDivider label="Historical Parallels" />
+  <SectionHeader
+    eyebrow="Scholar-Documented Parallels"
+    title="Nazi-Era<br>Parallels"
+    introText="Leading historians have documented the precise parallels between Trump's language and historical fascist dehumanization tactics."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🩸"
+      title="'Poisoning the Blood'"
+      body="<strong>Trump (2023):</strong> &quot;They're poisoning the blood of our country&quot;<br><strong>Hitler (Mein Kampf):</strong> &quot;Blood poisoning&quot; and &quot;blood purity&quot; rhetoric used to justify racial laws, then genocide<br><strong>Expert:</strong> Yale's Timothy Snyder confirmed direct parallel"
+      tag="Mein Kampf"
+    />
+    <CategoryCard
+      icon="🐀"
+      title="'Vermin'"
+      body="<strong>Trump (2023):</strong> &quot;Radical left thugs that live like vermin&quot;<br><strong>Nazi propaganda:</strong> Jews depicted as rats and vermin in propaganda films<br><strong>Mussolini:</strong> Used &quot;vermin&quot; to describe political opponents before persecution<br><strong>Pattern:</strong> Dehumanization precedes violence in every case"
+      tag="Nazi Propaganda"
+    />
+    <CategoryCard
+      icon="🦠"
+      title="'Infest'"
+      body="<strong>Trump (2018):</strong> Immigrants &quot;infest our Country&quot;<br><strong>Nazi propaganda:</strong> Jews described as &quot;infesting&quot; Germany<br><strong>Purpose:</strong> Comparing humans to parasites or vermin removes their humanity<br><strong>Historical result:</strong> Dehumanization language preceded Holocaust"
+      tag="Dehumanization"
+    />
+    <CategoryCard
+      icon="⚔️"
+      title="'Invasion'"
+      body="<strong>Trump (2018-2024):</strong> Immigration is an &quot;invasion&quot; of America<br><strong>El Paso shooter (2019):</strong> Manifesto titled &quot;The Hispanic Invasion of Texas&quot;<br><strong>Result:</strong> 23 dead, direct citation of Trump's language<br><strong>Pattern:</strong> Military framing justifies military response"
+      tag="23 Dead"
+    />
+    <CategoryCard
+      icon="🐾"
+      title="'Animals,' 'Not People'"
+      body="<strong>Trump (2018):</strong> &quot;These aren't people. These are animals.&quot;<br><strong>Historical context:</strong> Every genocide preceded by language denying victims' humanity<br><strong>Rwanda:</strong> Tutsis called &quot;cockroaches&quot; before genocide<br><strong>Holocaust scholars:</strong> Warned this language is dangerous"
+      tag="Genocide Warning"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="Muslim Ban / Religious Targeting"
+      body="<strong>Trump (2015):</strong> &quot;Total and complete shutdown of Muslims entering the United States&quot;<br><strong>Historical parallel:</strong> Targeting religious minority for exclusion echoes Nazi tactics against Jews<br><strong>Constitutional issue:</strong> Violates First Amendment Establishment Clause<br><strong>Implementation:</strong> Executive Order 13769 (January 2017)"
+      tag="Religious Discrimination"
+    />
+  </CategoryGrid>
+
+  <!-- EXPERT ANALYSIS -->
+  <SectionDivider label="Expert Analysis" />
+
+  <VoicesSection
+    eyebrow="Historians and Scholars"
+    title="Expert<br>Warnings"
+    introText="What the world's leading scholars on fascism, genocide, and authoritarianism say about Trump's rhetoric against immigrants."
+  >
+    <VoiceCard
+      quote="When a political leader uses the language of 'blood purity' and 'vermin,' those are not metaphors. Those are the exact words used by Nazi Germany to justify persecution and genocide. We have a responsibility to recognize this language for what it is."
+      attribution="<strong>Timothy Snyder</strong> &middot; Yale University<br>Professor of History, author of &quot;On Tyranny&quot;"
+    />
+    <VoiceCard
+      quote="The El Paso shooting was not an aberration -- it was the predictable result of years of dehumanization rhetoric. When a president calls immigrants 'invaders' and 'animals,' some supporters will act on that language. The shooter's manifesto literally cited Trump's words."
+      attribution="<strong>Jason Stanley</strong> &middot; Yale University<br>Author of &quot;How Fascism Works&quot;"
+    />
+    <VoiceCard
+      quote="Trump's rhetoric follows the classic pattern of authoritarian leaders: identify a minority group, blame them for society's problems, dehumanize them with animal and disease metaphors, then escalate to policies of exclusion and violence. This is what fascist movements do."
+      attribution="<strong>Ruth Ben-Ghiat</strong> &middot; NYU<br>Expert on Authoritarianism, author of &quot;Strongmen&quot;"
+    />
+  </VoicesSection>
+
+  <!-- DOCUMENTED VIOLENCE AND CONSEQUENCES -->
+  <ConsequencesGrid eyebrow="Human Cost" title="Deadly<br>Consequences">
+    <ConsequenceRow>
+      <ConsequenceItem number="23" title="El Paso Dead" description="Shooter cited Trump's 'invasion' rhetoric in manifesto before targeting Hispanics at Walmart (August 2019)" />
+      <ConsequenceItem number="21%" title="Hate Crime Surge" description="FBI-reported hate crimes increased during Trump's rise (2016-2017), with anti-immigrant and anti-Muslim crimes spiking" />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="5,500+" title="Children Separated" description="Under 'zero tolerance' policy. Children as young as 4 months old. Cages, concrete floors, mylar blankets." />
+      <ConsequenceItem number="1,000+" title="Still Not Reunited" description="Children not yet reunited with parents. Some parents deported, children lost in system. Pediatricians called it 'torture.'" />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Why This Matters" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This is not about immigration policy disagreements. This is about a president using the <strong style="color: var(--text);">exact same dehumanization language</strong> that preceded history's worst atrocities. When historians who study genocide say &quot;this language is dangerous,&quot; when a mass shooter cites that language in his manifesto, when hate crimes surge in response to that rhetoric -- we have an obligation to document it and call it what it is.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Fact check reminder:</strong> Studies consistently show immigrants commit crimes at lower rates than native-born Americans. Trump's rhetoric is not based on data -- it is designed to dehumanize.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Against<br>Women"
+    description="Decades of degradation, 26+ sexual assault accusations, $88.3M in jury awards, and systematic attacks on any woman who challenges him."
+    linkText="Continue: Against Women &rarr;"
+    linkHref="/dangerous-rhetoric/women"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Against Democrats', href: '/dangerous-rhetoric/democrats' }}
+    next={{ label: 'Against Women', href: '/dangerous-rhetoric/women' }}
+    currentIndex={3}
+    totalPages={5}
+  />
+
+</ResearchLayout>

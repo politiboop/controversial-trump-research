@@ -1,0 +1,87 @@
+{
+  "id": "susan-collins",
+  "name": "Susan Collins",
+  "role": "U.S. Senator from Maine",
+  "administration": null,
+  "years": "1997-present",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "senator",
+  "photo": null,
+  "summary": "Moderate Republican Senator from Maine who condemned Trump's Ukraine conduct in the first impeachment and later wrote in Nikki Haley in 2024.",
+  "keyStatements": [
+    {
+      "quote": "The president did, in fact, pressure a foreign government to help him in his reelection. His personal interest in the investigation of a political rival was inseparable from any legitimate foreign policy objective.",
+      "date": "2020-02-05",
+      "source": "Congressional Record",
+      "context": "Explaining her vote in the first impeachment",
+      "url": "https://www.congress.gov/crec/2020/02/05/CREC-2020-02-05-pt1-PgS720-2.pdf"
+    },
+    {
+      "quote": "January 6th was a terrible, terrible day for our country. And there is no doubt in my mind that the president's actions and his words prior to that day were a contributing factor in what happened.",
+      "date": "2021-02-05",
+      "source": "CNN",
+      "context": "Interview on Trump's role in January 6",
+      "url": "https://www.cnn.com/2021/02/05/politics/susan-collins-trump-january-6/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1997-01-03",
+      "event": "Became U.S. Senator from Maine",
+      "significance": "Entered Senate"
+    },
+    {
+      "date": "2020-02-05",
+      "event": "Voted to acquit in first impeachment",
+      "significance": "Condemned Trump's Ukraine conduct"
+    },
+    {
+      "date": "2021-02-13",
+      "event": "Voted to convict Trump in second impeachment",
+      "significance": "One of seven Republicans to vote for conviction"
+    },
+    {
+      "date": "2024-11-05",
+      "event": "Wrote in Nikki Haley for president",
+      "significance": "Refused to vote for Trump"
+    }
+  ],
+  "credibility": {
+    "background": "Long-serving moderate Republican Senator, known for independent voting record and bipartisan work",
+    "positions": [
+      "U.S. Senator from Maine (1997-present)",
+      "Ranking Member, Senate Aging Committee",
+      "Member, Senate Appropriations Committee",
+      "Member, Senate Intelligence Committee"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump pressured a foreign government for his reelection",
+    "Said Trump's actions contributed to January 6",
+    "Said Trump put personal interest ahead of national interest"
+  ],
+  "endorsement": "Wrote in Nikki Haley in 2024",
+  "sources": [
+    {
+      "title": "Congressional Record: Collins impeachment remarks",
+      "url": "https://www.congress.gov/crec/2020/02/05/CREC-2020-02-05-pt1-PgS720-2.pdf",
+      "date": "2020-02-05",
+      "type": "government"
+    },
+    {
+      "title": "Susan Collins says Trump's words contributed to Jan. 6",
+      "url": "https://www.cnn.com/2021/02/05/politics/susan-collins-trump-january-6/index.html",
+      "date": "2021-02-05",
+      "type": "news"
+    },
+    {
+      "title": "Susan Collins says she wrote in Nikki Haley",
+      "url": "https://www.politico.com/news/2024/11/05/susan-collins-wrote-in-nikki-haley-00188213",
+      "date": "2024-11-05",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

@@ -1,0 +1,66 @@
+---
+interface Tab {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  tabs: Tab[];
+  currentPath: string;
+}
+
+const { tabs, currentPath } = Astro.props;
+---
+
+<nav class="series-nav">
+  <div class="series-nav-inner">
+    {tabs.map(tab => (
+      <a
+        href={tab.href}
+        class:list={['series-tab', { active: currentPath === tab.href || currentPath.startsWith(tab.href + '/') }]}
+      >
+        {tab.label}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<style>
+  .series-nav {
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .series-nav-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 0;
+  }
+
+  .series-tab {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .series-tab:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .series-tab.active {
+    color: var(--red);
+    border-bottom-color: var(--red);
+  }
+</style>

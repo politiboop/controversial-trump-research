@@ -1,0 +1,103 @@
+---
+interface Props {
+  date: string;
+  badge?: string;
+  badgeType?: 'catastrophic' | 'serious';
+  title: string;
+  description: string;
+}
+
+const { date, badge, badgeType = 'catastrophic', title, description } = Astro.props;
+---
+
+<div class="timeline-item fade-up">
+  <div class="timeline-date">{date}</div>
+  <div class="timeline-content">
+    {badge && <span class:list={['timeline-badge', `badge-${badgeType}`]}>{badge}</span>}
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 140px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item:hover .timeline-content {
+    opacity: 1;
+  }
+
+  .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 1px;
+    padding-top: 4px;
+    padding-right: 16px;
+  }
+
+  .timeline-content {
+    padding-left: 24px;
+  }
+
+  .timeline-content h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .timeline-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 2px 8px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .badge-catastrophic {
+    background: rgba(212, 43, 43, 0.2);
+    color: var(--red-bright);
+  }
+
+  .badge-serious {
+    background: rgba(232, 124, 30, 0.15);
+    color: var(--amber);
+  }
+
+  @media (max-width: 640px) {
+    .timeline-item {
+      grid-template-columns: 90px 1fr;
+    }
+
+    .timeline-item::before {
+      left: 90px;
+    }
+  }
+</style>

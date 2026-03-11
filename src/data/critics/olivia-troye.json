@@ -1,0 +1,74 @@
+{
+  "id": "olivia-troye",
+  "name": "Olivia Troye",
+  "role": "Homeland Security Advisor to Vice President Pence",
+  "administration": "Trump Administration",
+  "years": "2018-2020",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "national-security",
+  "photo": null,
+  "summary": "Former homeland security advisor to Vice President Pence who resigned in 2020 and endorsed Joe Biden, criticizing Trump's COVID-19 response.",
+  "keyStatements": [
+    {
+      "quote": "He is more concerned about himself and his reelection than he is about people dying.",
+      "date": "2020-09-23",
+      "source": "CNN",
+      "context": "Video endorsement of Joe Biden",
+      "url": "https://www.cnn.com/2020/09/23/politics/olivia-troye-biden-endorsement/index.html"
+    },
+    {
+      "quote": "That became clear to me when we were talking about the coronavirus response.",
+      "date": "2020-09-23",
+      "source": "CNN",
+      "context": "Explaining her break with Trump",
+      "url": "https://www.cnn.com/2020/09/23/politics/olivia-troye-biden-endorsement/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2018",
+      "event": "Joined Vice President's office",
+      "significance": "Became homeland security advisor"
+    },
+    {
+      "date": "2020",
+      "event": "Served on White House Coronavirus Task Force",
+      "significance": "Witnessed Trump's COVID response firsthand"
+    },
+    {
+      "date": "2020-08",
+      "event": "Resigned from administration",
+      "significance": "Left over Trump's handling of pandemic"
+    },
+    {
+      "date": "2020-09-23",
+      "event": "Publicly endorsed Joe Biden",
+      "significance": "Released video criticizing Trump"
+    }
+  ],
+  "credibility": {
+    "background": "Former homeland security and counterterrorism advisor, national security professional with experience in DHS and DOD",
+    "positions": [
+      "Homeland Security Advisor to Vice President Pence (2018-2020)",
+      "White House Coronavirus Task Force member (2020)",
+      "Department of Homeland Security official",
+      "Department of Defense official"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump prioritized reelection over Americans' lives during COVID-19",
+    "Cited concerns about the coronavirus response"
+  ],
+  "endorsement": "Endorsed Joe Biden in 2020",
+  "sources": [
+    {
+      "title": "Ex-Pence aide Olivia Troye endorses Biden",
+      "url": "https://www.cnn.com/2020/09/23/politics/olivia-troye-biden-endorsement/index.html",
+      "date": "2020-09-23",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

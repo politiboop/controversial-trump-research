@@ -1,0 +1,39 @@
+---
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<div class="section-divider">
+  <div class="section-divider-label">{label}</div>
+</div>
+
+<style>
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 24px;
+    margin: 20px auto;
+    max-width: var(--container-max);
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-divider-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--faint);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+</style>

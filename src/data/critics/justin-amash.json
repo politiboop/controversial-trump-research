@@ -1,0 +1,91 @@
+{
+  "id": "justin-amash",
+  "name": "Justin Amash",
+  "role": "U.S. Representative from Michigan",
+  "administration": null,
+  "years": "2011-2021",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "representative",
+  "photo": null,
+  "summary": "Former Republican congressman who became the first GOP House member to call for Trump's impeachment after the Mueller report and later left the Republican Party.",
+  "keyStatements": [
+    {
+      "quote": "President Trump has engaged in impeachable conduct.",
+      "date": "2019-05-18",
+      "source": "Twitter",
+      "context": "Thread on the Mueller report",
+      "url": "https://x.com/justinamash/status/1129438839244232705"
+    },
+    {
+      "quote": "Attorney General Barr has intentionally misrepresented Mueller's report.",
+      "date": "2019-05-18",
+      "source": "Twitter",
+      "context": "Same thread",
+      "url": "https://x.com/justinamash/status/1129438839244232705"
+    },
+    {
+      "quote": "Today, I am declaring my independence and leaving the Republican Party.",
+      "date": "2019-07-04",
+      "source": "Washington Post",
+      "context": "Op-ed announcing departure",
+      "url": "https://www.washingtonpost.com/opinions/2019/07/04/justin-amash-im-leaving-republican-party/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2011-01-03",
+      "event": "Elected to U.S. House",
+      "significance": "Began congressional career as Republican"
+    },
+    {
+      "date": "2019-05-18",
+      "event": "Called for impeachment after Mueller report",
+      "significance": "First GOP House member to do so"
+    },
+    {
+      "date": "2019-07-04",
+      "event": "Left Republican Party",
+      "significance": "Became independent"
+    },
+    {
+      "date": "2020-04-28",
+      "event": "Joined Libertarian Party",
+      "significance": "Only Libertarian in Congress"
+    },
+    {
+      "date": "2021-01-03",
+      "event": "Left Congress",
+      "significance": "Did not seek re-election"
+    }
+  ],
+  "credibility": {
+    "background": "Former U.S. Representative, first Republican to call for Trump's impeachment, constitutional conservative",
+    "positions": [
+      "U.S. Representative from Michigan (2011-2021)",
+      "Member, Michigan State House of Representatives (2009-2011)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump engaged in impeachable conduct",
+    "Said Barr misrepresented Mueller's report",
+    "Left the Republican Party over Trump-era politics"
+  ],
+  "endorsement": "Opposed Trump's presidency",
+  "sources": [
+    {
+      "title": "Justin Amash tweet thread on impeachment",
+      "url": "https://x.com/justinamash/status/1129438839244232705",
+      "date": "2019-05-18",
+      "type": "social"
+    },
+    {
+      "title": "Justin Amash: I'm leaving the Republican Party",
+      "url": "https://www.washingtonpost.com/opinions/2019/07/04/justin-amash-im-leaving-republican-party/",
+      "date": "2019-07-04",
+      "type": "opinion"
+    }
+  ],
+  "party": "Libertarian"
+}

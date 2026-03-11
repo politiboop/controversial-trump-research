@@ -1,0 +1,63 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  introText?: string;
+}
+
+const { eyebrow, title, introText } = Astro.props;
+---
+
+<section class="voices-section fade-up container">
+  <div class="voices-header">
+    {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+    <h2 set:html={title} />
+    {introText && <p class="intro-text">{introText}</p>}
+  </div>
+  <div class="voices-grid">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .voices-section {
+    padding: 70px 24px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .voices-header {
+    margin-bottom: 0;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .voices-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 72px);
+    line-height: 0.9;
+    color: var(--text);
+  }
+
+  .intro-text {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 700px;
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  .voices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+</style>

@@ -1,0 +1,794 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+
+export async function getStaticPaths() {
+  const criticFiles = import.meta.glob('../../data/critics/*.json', { eager: true });
+  return Object.values(criticFiles).map((mod: any) => ({
+    params: { id: mod.default.id },
+    props: { critic: mod.default }
+  }));
+}
+
+const { critic } = Astro.props;
+
+function formatDate(dateStr: string): string {
+  if (!dateStr) return '';
+  const parts = dateStr.split('-');
+  if (parts.length === 2) {
+    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+  }
+  if (parts.length === 3) {
+    const d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+  return dateStr;
+}
+
+function categoryLabel(cat: string): string {
+  const labels: Record<string, string> = {
+    'former-cabinet': 'Former Cabinet',
+    'congress': 'Congress',
+    'military': 'Military',
+    'intelligence': 'Intelligence',
+    'legal': 'Legal',
+    'republican-strategist': 'Republican Strategist',
+    'former-staff': 'Former Staff',
+    'conservative-media': 'Conservative Media',
+    'state-official': 'State Official',
+  };
+  return labels[cat] || cat.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function partyColor(party: string | undefined): string {
+  if (!party) return '#6b7280';
+  const colors: Record<string, string> = {
+    'Republican': '#dc2626',
+    'Democrat': '#2563eb',
+    'Independent': '#6b7280',
+    'Libertarian': '#eab308',
+  };
+  return colors[party] || '#6b7280';
+}
+
+function sourceTypeBadge(type: string): string {
+  const badges: Record<string, string> = {
+    'news': 'News',
+    'transcript': 'Transcript',
+    'statement': 'Statement',
+    'book': 'Book',
+    'interview': 'Interview',
+    'video': 'Video',
+    'opinion': 'Opinion',
+    'report': 'Report',
+  };
+  return badges[type] || type.charAt(0).toUpperCase() + type.slice(1);
+}
+---
+
+<ResearchLayout title={`${critic.name} - Critics of Trump`} description={critic.summary}>
+
+  <Breadcrumbs items={[
+    { label: 'Home', href: '/' },
+    { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+    { label: critic.name }
+  ]} />
+
+  <!-- HEADER -->
+  <header class="critic-header">
+    <div class="critic-header-inner">
+      <div class="critic-meta-top">
+        <span class="critic-role">{critic.role}</span>
+        {critic.administration && (
+          <span class="critic-admin">· {critic.administration}</span>
+        )}
+        {critic.years && (
+          <span class="critic-years">· {critic.years}</span>
+        )}
+      </div>
+
+      <h1 class="critic-name">{critic.name}</h1>
+
+      <div class="critic-badges">
+        {critic.militaryRank && (
+          <span class="badge badge-military">{critic.militaryRank}</span>
+        )}
+        {critic.party && (
+          <span class="badge badge-party" style={`border-color: ${partyColor(critic.party)}; color: ${partyColor(critic.party)}`}>
+            {critic.party}
+          </span>
+        )}
+        <span class="badge badge-category">{categoryLabel(critic.category)}</span>
+      </div>
+
+      <button class="share-btn" id="share-btn" aria-label="Share this page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        <span class="share-text">Share</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <section class="summary-section">
+    <div class="summary-inner">
+      <div class="summary-label">Summary</div>
+      <p class="summary-text">{critic.summary}</p>
+    </div>
+  </section>
+
+  <!-- KEY STATEMENTS -->
+  {critic.keyStatements && critic.keyStatements.length > 0 && (
+    <section class="statements-section">
+      <div class="statements-inner">
+        <div class="section-eyebrow">In Their Own Words</div>
+        <h2 class="section-title">Key Statements</h2>
+
+        <div class="statements-list">
+          {critic.keyStatements.map((stmt: any) => (
+            <div class="statement-card fade-up">
+              <div class="statement-quote-mark">&ldquo;</div>
+              <blockquote class="statement-quote">{stmt.quote}</blockquote>
+              <div class="statement-meta">
+                <span class="statement-date">{formatDate(stmt.date)}</span>
+                <span class="statement-divider">·</span>
+                {stmt.url ? (
+                  <a href={stmt.url} target="_blank" rel="noopener noreferrer" class="statement-source">{stmt.source}</a>
+                ) : (
+                  <span class="statement-source">{stmt.source}</span>
+                )}
+              </div>
+              {stmt.context && (
+                <div class="statement-context">{stmt.context}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- TIMELINE -->
+  {critic.timeline && critic.timeline.length > 0 && (
+    <TimelineSection title={`Timeline`}>
+      {critic.timeline.map((item: any) => (
+        <TimelineItem
+          date={formatDate(item.date)}
+          title={item.event}
+          description={item.significance}
+        />
+      ))}
+    </TimelineSection>
+  )}
+
+  <!-- CREDIBILITY & BACKGROUND -->
+  {critic.credibility && (
+    <section class="credibility-section">
+      <div class="credibility-inner">
+        <div class="section-eyebrow">Why This Matters</div>
+        <h2 class="section-title">Credibility &amp; Background</h2>
+
+        {critic.credibility.background && (
+          <div class="credibility-background fade-up">
+            <AlertBanner title="Background" variant="blue">
+              <p style="font-size: 16px; color: var(--text); line-height: 1.7;">{critic.credibility.background}</p>
+            </AlertBanner>
+          </div>
+        )}
+
+        <div class="credibility-grid">
+          {critic.credibility.positions && critic.credibility.positions.length > 0 && (
+            <div class="credibility-card fade-up">
+              <h3 class="credibility-card-title">Positions Held</h3>
+              <ul class="credibility-list">
+                {critic.credibility.positions.map((pos: string) => (
+                  <li>{pos}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {critic.credibility.awards && critic.credibility.awards.length > 0 && (
+            <div class="credibility-card fade-up">
+              <h3 class="credibility-card-title">Awards &amp; Honors</h3>
+              <ul class="credibility-list awards-list">
+                {critic.credibility.awards.map((award: string) => (
+                  <li>{award}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- REASONS FOR OPPOSITION -->
+  {critic.oppositionReasons && critic.oppositionReasons.length > 0 && (
+    <section class="opposition-section">
+      <div class="opposition-inner">
+        <div class="section-eyebrow">Analysis</div>
+        <h2 class="section-title">Reasons for Opposition</h2>
+
+        <ol class="opposition-list">
+          {critic.oppositionReasons.map((reason: string, i: number) => (
+            <li class="opposition-item fade-up">
+              <span class="opposition-number">{String(i + 1).padStart(2, '0')}</span>
+              <span class="opposition-text">{reason}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
+  <!-- ELECTORAL POSITION -->
+  {critic.endorsement && (
+    <section class="endorsement-section">
+      <div class="endorsement-inner">
+        <AlertBanner title="Electoral Position" variant="amber">
+          <p style="font-size: 17px; color: var(--text); line-height: 1.7;">{critic.endorsement}</p>
+        </AlertBanner>
+      </div>
+    </section>
+  )}
+
+  <!-- SOURCES -->
+  {critic.sources && critic.sources.length > 0 && (
+    <section class="sources-section">
+      <div class="sources-inner">
+        <div class="section-eyebrow">Documentation</div>
+        <h2 class="section-title">Sources</h2>
+
+        <div class="sources-list">
+          {critic.sources.map((source: any) => (
+            <a href={source.url} target="_blank" rel="noopener noreferrer" class="source-card fade-up">
+              <div class="source-card-top">
+                <span class="source-type-badge">{sourceTypeBadge(source.type)}</span>
+                {source.date && (
+                  <span class="source-date">{formatDate(source.date)}</span>
+                )}
+              </div>
+              <div class="source-title">{source.title}</div>
+              <div class="source-url">{source.url}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- NAVIGATION -->
+  <CTASection
+    title="All Critics"
+    description="Explore the full list of Republican officials, military leaders, and former staff who have spoken out against Trump."
+    linkText="View All Critics"
+    linkHref="/dangerous-rhetoric/critics"
+  />
+
+</ResearchLayout>
+
+<script>
+  const btn = document.getElementById('share-btn');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      const title = document.title;
+      const url = window.location.href;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title, url });
+        } catch (e) {
+          // User cancelled share
+        }
+      } else {
+        try {
+          await navigator.clipboard.writeText(url);
+          const textEl = btn.querySelector('.share-text');
+          if (textEl) {
+            textEl.textContent = 'Copied!';
+            setTimeout(() => { textEl.textContent = 'Share'; }, 2000);
+          }
+        } catch (e) {
+          // Clipboard not available
+        }
+      }
+    });
+  }
+</script>
+
+<style>
+  /* ================================================================
+     HEADER
+     ================================================================ */
+  .critic-header {
+    position: relative;
+    padding: 60px 24px 50px;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .critic-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212, 43, 43, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .critic-header-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .critic-meta-top {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .critic-name {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 10vw, 120px);
+    line-height: 0.9;
+    color: var(--text);
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+
+  .critic-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .badge-military {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  .badge-category {
+    border-color: var(--faint);
+    color: var(--muted);
+  }
+
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .share-btn:hover {
+    border-color: var(--text);
+    color: var(--text);
+  }
+
+  /* ================================================================
+     SUMMARY
+     ================================================================ */
+  .summary-section {
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 24px;
+  }
+
+  .summary-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .summary-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+
+  .summary-text {
+    font-family: var(--font-body);
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 800px;
+  }
+
+  /* ================================================================
+     SECTION SHARED STYLES
+     ================================================================ */
+  .section-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 72px);
+    line-height: 0.9;
+    color: var(--text);
+    margin-bottom: 40px;
+  }
+
+  /* ================================================================
+     KEY STATEMENTS
+     ================================================================ */
+  .statements-section {
+    padding: 70px 24px;
+  }
+
+  .statements-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .statements-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+
+  .statement-card {
+    background: var(--card);
+    padding: 36px 32px 28px;
+    border-top: 3px solid var(--border);
+    position: relative;
+  }
+
+  .statement-quote-mark {
+    font-family: var(--font-display);
+    font-size: 80px;
+    color: var(--red);
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    line-height: 1;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .statement-quote {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-top: 20px;
+  }
+
+  .statement-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .statement-date {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    text-transform: uppercase;
+  }
+
+  .statement-divider {
+    color: var(--faint);
+    font-size: 12px;
+  }
+
+  .statement-source {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a.statement-source:hover {
+    color: var(--text);
+  }
+
+  .statement-context {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--faint);
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+  /* ================================================================
+     CREDIBILITY & BACKGROUND
+     ================================================================ */
+  .credibility-section {
+    padding: 70px 24px;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .credibility-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .credibility-background {
+    margin-bottom: 32px;
+  }
+
+  .credibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .credibility-card {
+    background: var(--card);
+    padding: 32px;
+    border-left: 4px solid var(--blue);
+  }
+
+  .credibility-card-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .credibility-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .credibility-list li {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .credibility-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 50%;
+  }
+
+  .credibility-list li:last-child {
+    border-bottom: none;
+  }
+
+  .awards-list li::before {
+    background: var(--amber);
+  }
+
+  /* ================================================================
+     OPPOSITION REASONS
+     ================================================================ */
+  .opposition-section {
+    padding: 70px 24px;
+  }
+
+  .opposition-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .opposition-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+  }
+
+  .opposition-item {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .opposition-item:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .opposition-number {
+    font-family: var(--font-display);
+    font-size: 36px;
+    color: var(--red);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 48px;
+  }
+
+  .opposition-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  /* ================================================================
+     ENDORSEMENT
+     ================================================================ */
+  .endorsement-section {
+    padding: 0 24px 0;
+  }
+
+  .endorsement-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  /* ================================================================
+     SOURCES
+     ================================================================ */
+  .sources-section {
+    padding: 70px 24px;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+  }
+
+  .sources-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .sources-list {
+    display: grid;
+    gap: 16px;
+  }
+
+  .source-card {
+    display: block;
+    background: var(--card);
+    padding: 24px 28px;
+    border-left: 3px solid var(--border);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .source-card:hover {
+    border-left-color: var(--red);
+    background: #222;
+    transform: translateX(4px);
+  }
+
+  .source-card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .source-type-badge {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    background: rgba(212, 43, 43, 0.15);
+    color: var(--red);
+  }
+
+  .source-date {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--faint);
+  }
+
+  .source-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .source-url {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--faint);
+    word-break: break-all;
+    line-height: 1.4;
+  }
+
+  /* ================================================================
+     RESPONSIVE
+     ================================================================ */
+  @media (max-width: 640px) {
+    .critic-name {
+      font-size: clamp(36px, 10vw, 64px);
+    }
+
+    .critic-meta-top {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .statements-list {
+      grid-template-columns: 1fr;
+    }
+
+    .credibility-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .opposition-item {
+      gap: 14px;
+    }
+
+    .opposition-number {
+      font-size: 28px;
+      width: 36px;
+    }
+  }
+</style>

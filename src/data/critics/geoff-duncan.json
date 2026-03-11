@@ -1,0 +1,92 @@
+{
+  "id": "geoff-duncan",
+  "name": "Geoff Duncan",
+  "role": "Lieutenant Governor of Georgia",
+  "administration": null,
+  "years": "2019-2023",
+  "militaryRank": null,
+  "category": "former-officials",
+  "subCategory": "state-official",
+  "photo": null,
+  "summary": "Former Republican Lieutenant Governor of Georgia who said Trump was morally bankrupt, rejected 2020 election lies, and endorsed Joe Biden at the 2024 Democratic National Convention.",
+  "keyStatements": [
+    {
+      "quote": "I'm committed to beating Donald Trump. And while I'll support policy that I believe in, that doesn't mean I have to support a morally bankrupt human being.",
+      "date": "2024-08-20",
+      "source": "CNN",
+      "context": "Interview about endorsing Biden",
+      "url": "https://www.cnn.com/2024/08/20/politics/geoff-duncan-biden-endorsement/index.html"
+    },
+    {
+      "quote": "I'm confident that President Biden is the right person for the job at the right time.",
+      "date": "2024-08-20",
+      "source": "CNN",
+      "context": "Endorsing Biden at the DNC",
+      "url": "https://www.cnn.com/2024/08/20/politics/geoff-duncan-biden-endorsement/index.html"
+    },
+    {
+      "quote": "Trump lost Georgia. It's not a political statement. It's just a fact.",
+      "date": "2021-05-10",
+      "source": "CNN",
+      "context": "Interview on Georgia election results",
+      "url": "https://www.cnn.com/2021/05/10/politics/geoff-duncan-trump-election-lies/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2019-01-14",
+      "event": "Became Lieutenant Governor of Georgia",
+      "significance": "Elected as Republican"
+    },
+    {
+      "date": "2021-05-10",
+      "event": "Said Trump lost Georgia and spread election lies",
+      "significance": "Publicly rejected false claims"
+    },
+    {
+      "date": "2022-05-02",
+      "event": "Announced he would not seek re-election",
+      "significance": "Declined to run for another term"
+    },
+    {
+      "date": "2024-08-20",
+      "event": "Endorsed Joe Biden at DNC",
+      "significance": "Crossed party lines"
+    }
+  ],
+  "credibility": {
+    "background": "Former Lieutenant Governor of Georgia, former state legislator, businessman",
+    "positions": [
+      "Lieutenant Governor of Georgia (2019-2023)",
+      "Georgia State Senator (2012-2019)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump morally bankrupt",
+    "Rejected Trump's election lies about Georgia",
+    "Said Biden was the right person for the job"
+  ],
+  "endorsement": "Endorsed Joe Biden in 2024",
+  "sources": [
+    {
+      "title": "Georgia’s former Lt. Gov. Geoff Duncan endorses Biden",
+      "url": "https://www.cnn.com/2024/08/20/politics/geoff-duncan-biden-endorsement/index.html",
+      "date": "2024-08-20",
+      "type": "news"
+    },
+    {
+      "title": "Georgia’s Lt. Gov. says Trump lost the state and spreads election lies",
+      "url": "https://www.cnn.com/2021/05/10/politics/geoff-duncan-trump-election-lies/index.html",
+      "date": "2021-05-10",
+      "type": "news"
+    },
+    {
+      "title": "Georgia Lt. Gov. Geoff Duncan won’t seek reelection",
+      "url": "https://apnews.com/article/geoff-duncan-georgia-lieutenant-governor-reelection-2022-1d0a6a2bb6b0a285c6a1f2b2c8db7f6a",
+      "date": "2022-05-02",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

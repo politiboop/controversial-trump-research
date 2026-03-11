@@ -1,0 +1,517 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import CTASection from '../../components/design/CTASection.astro';
+
+// Import all critic JSON files
+const criticModules = import.meta.glob('../../data/critics/*.json', { eager: true });
+const critics = Object.values(criticModules).map((mod: any) => mod.default || mod);
+
+// Sort alphabetically by name
+critics.sort((a, b) => a.name.localeCompare(b.name));
+
+// Category display name mapping
+const categoryLabels: Record<string, string> = {
+  'former-cabinet': 'Former Cabinet',
+  'military-leader': 'Military Leader',
+  'former-administration': 'Former Administration',
+  'congress': 'Congress',
+  'former-officials': 'Former Officials',
+  'republican-critics': 'Republican Critics',
+  'republican-official': 'Republican Official',
+};
+
+function getCategoryLabel(cat: string): string {
+  return categoryLabels[cat] || cat.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+// Extract unique categories with counts
+const categoryCounts: Record<string, number> = {};
+critics.forEach(c => {
+  const cat = c.category || 'unknown';
+  categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+});
+const uniqueCategories = Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]);
+
+// Extract unique parties with counts
+const partyCounts: Record<string, number> = {};
+critics.forEach(c => {
+  const party = c.party || 'Unknown';
+  // Normalize party names (some have notes like "Republican (left party in 2016)")
+  const normalizedParty = party.startsWith('Republican') ? 'Republican'
+    : party.startsWith('Democrat') ? 'Democrat'
+    : party.startsWith('Independent') ? 'Independent'
+    : party.startsWith('Libertarian') ? 'Libertarian'
+    : party;
+  partyCounts[normalizedParty] = (partyCounts[normalizedParty] || 0) + 1;
+});
+const uniqueParties = Object.entries(partyCounts).sort((a, b) => b[1] - a[1]);
+
+// Party badge colors
+const partyColors: Record<string, string> = {
+  'Republican': '#dc2626',
+  'Democrat': '#2563eb',
+  'Independent': '#6b7280',
+  'Libertarian': '#eab308',
+};
+
+function getPartyColor(party: string): string {
+  if (party.startsWith('Republican')) return partyColors['Republican'];
+  if (party.startsWith('Democrat')) return partyColors['Democrat'];
+  if (party.startsWith('Independent')) return partyColors['Independent'];
+  if (party.startsWith('Libertarian')) return partyColors['Libertarian'];
+  return '#6b7280';
+}
+
+function getNormalizedParty(party: string): string {
+  if (party.startsWith('Republican')) return 'Republican';
+  if (party.startsWith('Democrat')) return 'Democrat';
+  if (party.startsWith('Independent')) return 'Independent';
+  if (party.startsWith('Libertarian')) return 'Libertarian';
+  return party;
+}
+
+// Stat counts
+const totalCritics = critics.length;
+const totalCategories = uniqueCategories.length;
+const republicanCount = partyCounts['Republican'] || 0;
+const militaryCount = critics.filter(c => c.category === 'military-leader' || c.militaryRank).length;
+
+// Truncate summary
+function truncateSummary(summary: string, maxLen = 150): string {
+  if (!summary || summary.length <= maxLen) return summary || '';
+  return summary.slice(0, maxLen).replace(/\s+\S*$/, '') + '...';
+}
+
+// Ticker items
+const tickerItems = [
+  `${totalCritics} Former Officials Have Spoken Out`,
+  `${republicanCount} Republicans Who Broke Ranks`,
+  `${militaryCount} Military Leaders Among Critics`,
+  "Former Secretaries of Defense, State, and Homeland Security",
+  "The Chairman of the Joint Chiefs Called Trump 'Fascist to the Core'",
+  "His Own Chief of Staff Said Trump Praised Hitler",
+  "Two Former Vice Presidential Nominees Endorsed His Opponent",
+  "Multiple Trump-Appointed Officials Turned Against Him",
+];
+---
+
+<ResearchLayout title="Critics & Whistleblowers | The Trump Tracker" description="69 former officials, military leaders, and Republican figures who spoke out against Donald Trump — sourced and documented.">
+
+  <Masthead
+    eyebrow="The Trump Tracker · Research Division"
+    title="CRITICS &amp; <span class='word-red'>WHISTLEBLOWERS</span>"
+    subtitle="Former Officials Who Spoke Out Against Trump"
+    date={`${totalCritics} DOCUMENTED CRITICS · UPDATED MARCH 2026`}
+  />
+
+  <Ticker items={tickerItems} />
+
+  <HighlightBar text={`${totalCritics} former officials, military leaders, cabinet members, and Republican figures have publicly spoken out against Donald Trump — many of whom served in his own administration.`} />
+
+  <StatGrid>
+    <StatCard target={totalCritics} label="Former officials and leaders who spoke out against Trump" />
+    <StatCard target={totalCategories} label="Categories of critics — cabinet, military, Congress, and more" />
+    <StatCard target={republicanCount} label="Republicans who broke ranks to criticize Trump" />
+    <StatCard target={militaryCount} label="Military leaders — generals and admirals who served their country" />
+  </StatGrid>
+
+  <SectionHeader
+    eyebrow="Browse All Critics"
+    title="The Full<br>Record"
+    introText="Search, filter, and explore every documented critic. Click any card to read their full profile, key statements, and timeline."
+  />
+
+  <!-- Filter Section -->
+  <div class="filter-section">
+    <div class="filter-container">
+
+      <div class="search-wrapper">
+        <input
+          type="text"
+          id="critic-search"
+          class="search-input"
+          placeholder="Search by name, role, or keywords..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Category</div>
+        <div class="filter-buttons" id="category-filters">
+          <button class="filter-btn active" data-category="all">All ({totalCritics})</button>
+          {uniqueCategories.map(([cat, count]) => (
+            <button class="filter-btn" data-category={cat}>{getCategoryLabel(cat)} ({count})</button>
+          ))}
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">Party</div>
+        <div class="filter-buttons" id="party-filters">
+          <button class="filter-btn active" data-party="all">All ({totalCritics})</button>
+          {uniqueParties.map(([party, count]) => (
+            <button class="filter-btn" data-party={party}>{party} ({count})</button>
+          ))}
+        </div>
+      </div>
+
+      <div class="results-count" id="results-count">
+        Showing <strong>{totalCritics}</strong> of {totalCritics} critics
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Critics Grid -->
+  <div class="critics-section">
+    <div class="critics-grid" id="critics-grid">
+      {critics.map((critic) => {
+        const normalizedParty = getNormalizedParty(critic.party || 'Unknown');
+        const partyColor = getPartyColor(critic.party || 'Unknown');
+        return (
+          <a
+            href={`/critics/${critic.id}`}
+            class="critic-card fade-up"
+            data-name={critic.name.toLowerCase()}
+            data-role={(critic.role || '').toLowerCase()}
+            data-summary={(critic.summary || '').toLowerCase()}
+            data-category={critic.category || ''}
+            data-party={normalizedParty}
+          >
+            <div class="card-header">
+              <h3 class="card-name">{critic.name}</h3>
+              <span class="party-badge" style={`background: ${partyColor}`}>{normalizedParty}</span>
+            </div>
+            <p class="card-role">{critic.role}</p>
+            {critic.militaryRank && (
+              <span class="military-badge">{critic.militaryRank}</span>
+            )}
+            <p class="card-summary">{truncateSummary(critic.summary)}</p>
+            <div class="card-footer">
+              <span class="category-tag">{getCategoryLabel(critic.category || '')}</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <CTASection
+    title="The Record<br>Is Clear."
+    description="These are the people who served alongside Donald Trump — his own cabinet, his generals, his staff. They saw him up close, and they spoke out."
+    linkText="Browse All Controversies &rarr;"
+    linkHref="https://thetrumptracker.com"
+  />
+
+</ResearchLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('critic-search') as HTMLInputElement;
+    const cards = document.querySelectorAll('.critic-card') as NodeListOf<HTMLElement>;
+    const resultsCount = document.getElementById('results-count');
+    const categoryBtns = document.querySelectorAll('#category-filters .filter-btn') as NodeListOf<HTMLButtonElement>;
+    const partyBtns = document.querySelectorAll('#party-filters .filter-btn') as NodeListOf<HTMLButtonElement>;
+    const totalCount = cards.length;
+
+    let activeCategory = 'all';
+    let activeParty = 'all';
+    let searchTerm = '';
+
+    function filterCards() {
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const name = card.dataset.name || '';
+        const role = card.dataset.role || '';
+        const summary = card.dataset.summary || '';
+        const category = card.dataset.category || '';
+        const party = card.dataset.party || '';
+
+        const matchesSearch = !searchTerm
+          || name.includes(searchTerm)
+          || role.includes(searchTerm)
+          || summary.includes(searchTerm);
+
+        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+        const matchesParty = activeParty === 'all' || party === activeParty;
+
+        if (matchesSearch && matchesCategory && matchesParty) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (resultsCount) {
+        resultsCount.innerHTML = `Showing <strong>${visibleCount}</strong> of ${totalCount} critics`;
+      }
+    }
+
+    searchInput?.addEventListener('input', () => {
+      searchTerm = searchInput.value.toLowerCase().trim();
+      filterCards();
+    });
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.category || 'all';
+        filterCards();
+      });
+    });
+
+    partyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        partyBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeParty = btn.dataset.party || 'all';
+        filterCards();
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Filter Section */
+  .filter-section {
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 24px;
+  }
+
+  .filter-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .search-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+  }
+
+  .search-input::placeholder {
+    color: var(--faint);
+  }
+
+  .search-input:focus {
+    border-color: var(--red);
+  }
+
+  .filter-group {
+    margin-bottom: 20px;
+  }
+
+  .filter-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    background: var(--surface);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--red);
+    color: var(--text);
+  }
+
+  .filter-btn.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+
+  .results-count {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Critics Grid */
+  .critics-section {
+    background: var(--black);
+    padding: 40px 24px 80px;
+  }
+
+  .critics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  /* Critic Card */
+  .critic-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border-left: 3px solid var(--red);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+  }
+
+  .critic-card:hover {
+    background: #222;
+    transform: translateX(4px);
+    text-decoration: none;
+  }
+
+  .critic-card.hidden {
+    display: none;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .card-name {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .party-badge {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 3px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .card-role {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+  }
+
+  .military-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--amber);
+    border: 1px solid var(--amber);
+    padding: 2px 8px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  .card-summary {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    flex: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  .category-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 2px 8px;
+  }
+
+  .card-arrow {
+    font-size: 18px;
+    color: var(--faint);
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .critic-card:hover .card-arrow {
+    color: var(--red);
+    transform: translateX(4px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .critics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+      gap: 6px;
+    }
+
+    .filter-btn {
+      font-size: 10px;
+      padding: 5px 10px;
+    }
+  }
+</style>

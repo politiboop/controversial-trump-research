@@ -1,0 +1,197 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import NavigationGrid from '../../components/navigation/NavigationGrid.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+
+const fascismTabs = [
+  { label: 'Overview', href: '/fascism' },
+  { label: 'Expert Consensus', href: '/fascism/expert-consensus' },
+  { label: 'Defining Fascism', href: '/fascism/defining-fascism' },
+  { label: "Trump's Actions", href: '/fascism/trumps-actions' },
+  { label: 'Historical Comparisons', href: '/fascism/historical-comparisons' },
+];
+
+const tickerItems = [
+  "200+ Historians Signed Open Letter Warning of Authoritarian Threat",
+  "12 of 14 Eco Fascism Criteria Met",
+  "17 Former Trump Officials Warned He's Unfit",
+  "500+ Political Scientists Say U.S. Moving Toward Authoritarianism",
+  "4 Scholarly Frameworks Analyzed",
+  "Frameworks Established 1995–2018 — Before Trump",
+  "Scholar-Validated Historical Parallels",
+  "Expert Consensus: Not Hyperbole",
+];
+
+const subpageCards = [
+  {
+    icon: '🎓',
+    title: 'Expert Consensus',
+    description: 'Leading historians, political scientists, and former Trump officials warn that Trump exhibits fascist characteristics. See what 200+ experts say.',
+    href: '/fascism/expert-consensus',
+    tag: '200+ Experts',
+  },
+  {
+    icon: '📚',
+    title: 'Defining Fascism',
+    description: 'Scholarly frameworks from Umberto Eco, Lawrence Britt, Robert Paxton, and Jason Stanley that define fascism with objective, verifiable criteria.',
+    href: '/fascism/defining-fascism',
+    tag: '4 Frameworks',
+  },
+  {
+    icon: '📋',
+    title: "Trump's Actions",
+    description: "Comprehensive documentation of Trump's words and actions measured against scholarly fascism criteria, with full sources.",
+    href: '/fascism/trumps-actions',
+    tag: '12/14 Criteria Met',
+  },
+  {
+    icon: '📖',
+    title: 'Historical Comparisons',
+    description: "Side-by-side comparisons of Trump's tactics with historical fascist leaders, validated by expert analysis.",
+    href: '/fascism/historical-comparisons',
+    tag: 'Scholar-Validated',
+  },
+];
+---
+
+<ResearchLayout title="Path to Fascism" description="Comprehensive scholarly analysis demonstrating why 'fascism' is an accurate description of Trump, not hyperbole — with expert consensus, definitions, documented actions, and historical comparisons.">
+
+  <SeriesNav tabs={fascismTabs} currentPath="/fascism" />
+
+  <Masthead
+    eyebrow="Scholarly Analysis · Four Lines of Evidence"
+    title="PATH TO FASCISM"
+    titleHighlight="FASCISM"
+    subtitle="Why &quot;fascism&quot; is an accurate description, not hyperbole"
+    date="Expert Consensus · Scholarly Definitions · Documented Actions · Historical Parallels"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="After January 6, 2021, leading scholars who had previously resisted the term changed their assessment. They now warn that Trump's actions match historical patterns of fascist movements."
+    citation="Scholarly Consensus, Post-January 6 Reassessment"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={200} suffix="+" label="Historians signed open letter warning of authoritarian threat" />
+    <StatCard target={12} suffix="/14" label="Trump meets Eco fascism criteria" />
+    <StatCard target={17} label="Former Trump officials warned he's unfit for office" />
+    <StatCard target={500} suffix="+" label="Political scientists say U.S. moving toward authoritarianism" />
+  </StatGrid>
+
+  <!-- METHODOLOGY -->
+  <SectionDivider label="Our Approach" />
+  <SectionHeader
+    eyebrow="Methodology"
+    title="How We<br>Evaluate"
+    introText="Rigorous standards applied to every claim. Every source cited. Every framework established before Trump."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📖"
+      title="What Sources We Use"
+      body="Academic research from peer-reviewed journals and scholarly books. Court documents and legal filings. Verified news reports from established outlets. Expert analysis from historians, political scientists, and legal scholars. <strong>Direct quotes with full context.</strong>"
+      tag="Sources"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="🔬"
+      title="How We Evaluate Claims"
+      body="Multiple source verification for all factual claims. Expert consensus privileged over individual opinion. Primary sources cited whenever possible. <strong>Full transparency about source types and reliability.</strong>"
+      tag="Standards"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="📐"
+      title="Why These Frameworks"
+      body="Widely cited in academic literature. Based on historical analysis of fascist regimes. <strong>Established before Trump's presidency</strong> (not created to target him). Used by mainstream scholars across the political spectrum."
+      tag="Framework Selection"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Acknowledgment"
+      body="We recognize the sensitivity of this topic. The term &quot;fascism&quot; is used here based on scholarly criteria and expert consensus, not as political rhetoric. <strong>We welcome scrutiny of our sources and methodology.</strong>"
+      tag="Transparency"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- EXPLORE THE EVIDENCE -->
+  <SectionDivider label="The Evidence" />
+  <SectionHeader
+    eyebrow="Four Lines of Evidence"
+    title="Explore the<br>Evidence"
+    introText="This analysis presents four comprehensive areas of evidence, each building on the last."
+  />
+
+  <NavigationGrid cards={subpageCards} />
+
+  <!-- REAL-WORLD CONNECTIONS -->
+  <SectionDivider label="Applied Analysis" />
+  <SectionHeader
+    eyebrow="Theory Meets Reality"
+    title="How Scholarly Analysis<br>Connects to Actions"
+    introText="The fascism frameworks are not abstract theory — they describe specific tactics being deployed right now."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🗳️"
+      title="Fraudulent Elections (Britt #14)"
+      body="One of Lawrence Britt's 14 characteristics of fascism is &quot;fraudulent elections&quot; — using government power to manipulate election outcomes.<br><br><strong><a href='/election-rigging' style='color: var(--red-bright); text-decoration: underline;'>See Documentation: Election Rigging →</a></strong>"
+      tag="Active Threat"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Dismantling Democratic Institutions"
+      body="Every scholarly framework identifies systematic dismantling of democratic checks as central to fascist consolidation.<br><br><strong><a href='/attacking-democracy' style='color: var(--red-bright); text-decoration: underline;'>See Documentation: Attacking Democracy →</a></strong>"
+      tag="All Frameworks"
+    />
+    <CategoryCard
+      icon="👥"
+      title="Dehumanization & Scapegoating"
+      body="Multiple frameworks identify fear of difference, identification of enemies/scapegoats, and hierarchy as core fascist characteristics. (Eco #5, Britt #3, Stanley #5)<br><br><strong><a href='/dangerous-rhetoric' style='color: var(--red-bright); text-decoration: underline;'>See Documentation: Dangerous Rhetoric →</a></strong>"
+      tag="Core Pattern"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Why This Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">When scholars warn that Trump exhibits fascist characteristics, they are not using political labels — they are applying established academic frameworks to documented actions. <strong style="color: var(--text);">The frameworks came first (1995, 2003, 2004, 2018). Trump's actions match them.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CRITICAL CONTEXT -->
+  <ColoredSection>
+    <AlertBanner icon="📘" title="Why This Analysis Matters" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Understanding fascism is not about name-calling — it is about recognizing patterns that have led to democratic collapse throughout history. Scholars use these frameworks to identify warning signs before authoritarian consolidation becomes irreversible.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">The evidence presented in these pages comes from experts who have spent their careers studying authoritarianism, democracy, and fascist movements. <strong style="color: var(--text);">Their warnings deserve serious consideration.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="The Evidence<br>Is Clear."
+    description="Four lines of evidence. Hundreds of experts. Decades of scholarship. This is not partisan rhetoric — it is scholarly consensus."
+    linkText="Begin: Expert Consensus →"
+    linkHref="/fascism/expert-consensus"
+  />
+
+</ResearchLayout>

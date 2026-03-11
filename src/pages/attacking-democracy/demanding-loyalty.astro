@@ -1,0 +1,327 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const democracyTabs = [
+  { label: 'Overview', href: '/attacking-democracy' },
+  { label: 'Purging Oversight', href: '/attacking-democracy/purging-oversight' },
+  { label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' },
+  { label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' },
+  { label: 'Weaponizing Government', href: '/attacking-democracy/weaponizing-government' },
+];
+
+const tickerItems = [
+  "300,000+ Federal Workers Removed (~13% of Workforce)",
+  "50,000+ Positions Stripped of Civil Service Protections",
+  "Schedule F Now Fully in Effect",
+  "Mandatory Loyalty Questionnaires Documented",
+  "76,000+ Workers Fired Outright",
+  "~100,000 Workers Resigned Under Pressure",
+  "EPA at 40-Year Staffing Low (24% Gone)",
+  "VA Cutting 14,000 Medical Positions",
+  "Largest Federal Workforce Purge in American History",
+];
+---
+
+<ResearchLayout title="Demanding Loyalty - Attacking Democracy" description="How Trump transformed merit-based civil service into a partisan political operation through loyalty tests, oaths, and ideological screening.">
+
+  <SeriesNav tabs={democracyTabs} currentPath="/attacking-democracy/demanding-loyalty" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Attacking Democracy', href: '/attacking-democracy' },
+    { label: 'Demanding Loyalty' }
+  ]} />
+
+  <Masthead
+    eyebrow="Step 3 of 4 &middot; Attacking Democracy"
+    title="DEMANDING LOYALTY"
+    titleHighlight="LOYALTY"
+    subtitle="How Trump Transformed Federal Service Into Political Operation"
+    date="Schedule F &middot; Loyalty Tests &middot; Mass Terminations &middot; Political Screening"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Trump is requiring federal workers to pledge personal loyalty through tests, oaths, and political screening. This replaces merit-based civil service &mdash; where employees serve the Constitution &mdash; with a partisan political operation where employees serve Trump personally."
+    citation="Documented Transformation of Federal Service"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={300} suffix="K+" label="Federal employees removed (~13% of civilian workforce)" />
+    <StatCard target={50} suffix="K+" label="Positions now at-will political appointments via Schedule F" />
+    <StatCard target={76} suffix="K+" label="Workers fired outright" />
+    <StatCard target={14} suffix="K" label="VA medical positions being cut (1.2 million veterans lose providers)" />
+  </StatGrid>
+
+  <!-- HOW FEDERAL SERVICE IS SUPPOSED TO WORK -->
+  <SectionDivider label="How It Should Work" />
+  <SectionHeader
+    eyebrow="Traditional Civil Service"
+    title="How Federal Service<br>Is Supposed to Work"
+    introText="The modern civil service system was created to prevent government from becoming a tool of political patronage. It is built on three core principles that protect democracy."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4DC}"
+      title="Principle 1: Oath to the Constitution"
+      body="&quot;I do solemnly swear that I will support and defend the Constitution of the United States against all enemies, foreign and domestic...&quot; &mdash; Federal oath of office (5 U.S.C. &sect; 3331). Federal employees swear an oath to the Constitution &mdash; not to any president, party, or person. Employees serve the law, can say &quot;no&quot; to illegal orders, and their first duty is to the Constitution even if it conflicts with the president's wishes."
+      tag="Principle 1"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="\u{1F3C6}"
+      title="Principle 2: Merit-Based Hiring"
+      body="Federal jobs are filled based on qualifications, experience, and competitive exams &mdash; not political connections or loyalty tests. This ensures a competent workforce with professional expertise, protection from political pressure, continuity across administrations, and institutional knowledge preserved across elections. <strong>2.4 million civilian federal workers, ~90% are career civil servants (not political appointees).</strong>"
+      tag="Principle 2"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="\u{1F4A1}"
+      title="Principle 3: Institutional Independence"
+      body="Career civil servants provide independent analysis based on evidence, law, and expertise &mdash; not political considerations. Scientists report findings honestly. Inspectors General investigate without interference. Career attorneys follow the law. Intelligence analysts assess threats objectively. <strong>Independent professional judgment ensures government operates based on facts, not what the president wants to hear.</strong>"
+      tag="Principle 3"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- TRUMP'S TRANSFORMATION -->
+  <SectionDivider label="Trump's Transformation" />
+  <SectionHeader
+    eyebrow="Loyalty Over Law"
+    title="Trump's Transformation:<br>Loyalty Over Law"
+    introText="Trump is systematically replacing these principles with a system of personal loyalty through executive orders, policy directives, and mass terminations."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4CB}"
+      title="Mechanism 1: Schedule F"
+      body="Executive Order reclassifying ~50,000 career federal positions as &quot;policy-influencing&quot; roles that can be filled and fired at will &mdash; stripping civil service protections. <strong>October 2020:</strong> Trump issues EO creating Schedule F. <strong>January 2021:</strong> Biden revokes. <strong>January 2025:</strong> Trump reissues on first day. <strong>March 2026:</strong> Schedule F now fully in effect. Particularly targets senior career employees at EPA, HHS, State Department, Treasury, and regulatory agencies &mdash; the people with expertise who can identify illegal actions."
+      tag="Loyalty Mechanism 1"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{270B}"
+      title="Mechanism 2: Mandatory Loyalty Tests"
+      body="Federal workers required to complete surveys about their views on Trump policies. Questions about 2020 election (loyalty test on election fraud claims), January 6 (loyalty test on Capitol attack narrative), Trump investigations. Social media reviewed for criticism of Trump. New hires evaluated for political alignment. One-on-one loyalty interviews. <strong>EPA scientists</strong> required to affirm support for Trump's climate policies. <strong>HHS employees</strong> questioned about COVID policy views. <strong>DOJ attorneys</strong> reviewed for participation in Trump-related investigations."
+      tag="Loyalty Mechanism 2"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4E4}"
+      title="Mechanism 3: Mass Terminations"
+      body="<strong>300,000+ federal workers removed</strong> (~13% of civilian workforce). 76,000+ fired outright. ~100,000 resigned under pressure. EPA at 40-year staffing low (12,849 employees, 24% gone). VA cutting 14,000 medical positions. &quot;Return to office&quot; mandate used as loyalty test &mdash; workers given days to relocate or resign. Clearly designed to force resignations rather than improve productivity. <strong>Largest purge of the federal workforce in American history.</strong>"
+      tag="Loyalty Mechanism 3"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Expert Assessments"
+    title="What Experts Say<br>About the Transformation"
+  >
+    <VoiceCard
+      quote="Schedule F is designed to purge the civil service of anyone who might say 'no' to Trump. It's patronage on a scale we haven't seen since the 1800s. Once implemented, federal agencies will be run by Trump loyalists, not career professionals. That's the goal."
+      attribution="<strong>Donald Kettl</strong> &middot; Professor of Public Policy, University of Texas at Austin"
+    />
+    <VoiceCard
+      quote="Requiring federal workers to pledge loyalty to Trump personally &mdash; rather than to the Constitution &mdash; is textbook authoritarianism. It's how you transform a professional civil service into a political army. And once you've done that, the government no longer serves the public. It serves Trump."
+      attribution="<strong>Max Stier</strong> &middot; President and CEO, Partnership for Public Service"
+    />
+    <VoiceCard
+      quote="This is the largest purge of the federal workforce in American history. It's not about remote work &mdash; it's about removing anyone who might resist Trump's agenda. When you fire 300,000 people and replace them with loyalists, you're not improving government. You're weaponizing it."
+      attribution="<strong>Former Federal Personnel Official</strong> (speaking anonymously for safety)"
+    />
+  </VoicesSection>
+
+  <!-- BEFORE AND AFTER COMPARISON -->
+  <SectionDivider label="Side-by-Side Comparison" />
+  <SectionHeader
+    eyebrow="Before vs. After"
+    title="Before and After:<br>The Transformation"
+    introText="The transformation from merit-based civil service to loyalty-based political operation is stark."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2705}"
+      title="Traditional: Oath to Constitution"
+      body="&quot;Support and defend the Constitution&quot; &mdash; oath to law, not person. Employees serve the law, not the president's personal interests."
+      tag="Before"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="\u{274C}"
+      title="Trump's System: Loyalty to Trump"
+      body="Loyalty tests require personal allegiance to Trump, not Constitution. Employees must align with Trump policies or face termination."
+      tag="After"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{2705}"
+      title="Traditional: Merit-Based Hiring"
+      body="Qualifications, experience, competitive exams. Protected from political pressure. Career professionals who know their agencies."
+      tag="Before"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="\u{274C}"
+      title="Trump's System: Loyalty-Based"
+      body="Political screening, ideological alignment, personal allegiance. Schedule F: 50,000+ positions stripped of protections; at-will termination."
+      tag="After"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{2705}"
+      title="Traditional: Independent Judgment"
+      body="Career employees provide independent expert judgment. Continuity across administrations. Employees can report concerns with whistleblower protections."
+      tag="Before"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="\u{274C}"
+      title="Trump's System: Serve or Be Fired"
+      body="300,000+ workers removed; institutional knowledge deliberately destroyed. Dissent = disloyalty = termination. Purpose of government: serve Trump's personal interests."
+      tag="After"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="Historical comparison: Trump is returning to the spoils system (1829&ndash;1883) where government jobs were rewards for political loyalty. The Pendleton Act of 1883 ended this. Trump is bringing it back." variant="red" />
+
+  <!-- WHY THIS MATTERS -->
+  <SectionDivider label="Why This Matters" />
+  <SectionHeader
+    eyebrow="Consequences"
+    title="Why This<br>Transformation Matters"
+    introText="When federal workers must pledge loyalty to Trump personally rather than to the Constitution, democracy cannot function."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F6AB}"
+      title="No One Can Say &quot;No&quot;"
+      body="Saying no to illegal orders = disloyalty = termination. Without anyone willing to refuse unconstitutional directives, there are no checks on executive power."
+      tag="Consequence"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4C9}"
+      title="Expertise Disappears"
+      body="Jobs go to loyalists, not qualified professionals. Institutional knowledge built over decades is destroyed. Government cannot function competently when loyalty replaces expertise."
+      tag="Consequence"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F910}"
+      title="Whistleblowing Becomes Impossible"
+      body="Reporting misconduct = disloyalty. Without whistleblowers, corruption, waste, and abuse go unreported and unchecked."
+      tag="Consequence"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{1F512}"
+      title="Government Becomes a Tool"
+      body="Government exists for Trump's personal benefit, not public service. This is how democracy dies &mdash; institutions that check power become instruments of power."
+      tag="Consequence"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- WHAT THIS ENABLES -->
+  <SectionDivider label="What This Enables" />
+  <SectionHeader
+    eyebrow="Connected Tactics"
+    title="What Demanding<br>Loyalty Enables"
+    introText="Transforming federal service from merit-based to loyalty-based does not just change personnel &mdash; it changes what government will do."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2694}\u{FE0F}"
+      title="Enables: Weaponization Without Resistance"
+      body="When federal workers must pledge loyalty to Trump personally, no one can say &quot;that's illegal&quot; when Trump orders political targeting. Georgia FBI raid proceeded without internal resistance. IRS audits of Trump critics happen without whistleblowers. Schedule F eliminates 50,000 positions' independence.<br><br><strong><a href='/attacking-democracy/weaponizing-government' style='color: var(--red-bright); text-decoration: underline;'>See: Weaponizing Government &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F5F3}\u{FE0F}"
+      title="Enables: Election Rigging"
+      body="Federal workers who owe jobs to Trump will not resist when ordered to interfere in elections. Career election officials with civil service protections would refuse illegal orders; political appointees chosen for loyalty will comply. 300,000+ workers removed = removal of institutional memory that knows election law limits federal power.<br><br><strong><a href='/election-rigging' style='color: var(--red-bright); text-decoration: underline;'>See: Election Rigging &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4B0}"
+      title="Enables: Corruption Without Accountability"
+      body="Career professionals flag fraud, waste, and abuse regardless of party. Political loyalists protect the person who hired them. Mass purge of career staff eliminates institutional checks on corruption. Contracts awarded to Trump allies, regulatory decisions favoring Trump businesses, grant decisions based on politics.<br><br><strong><a href='/browse?category=corruption' style='color: var(--red-bright); text-decoration: underline;'>View Corruption Controversies &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- PATTERN ALERT -->
+  <ColoredSection>
+    <AlertBanner icon="\u{26A0}\u{FE0F}" title="Pattern Alert" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Demanding loyalty is Step 3 because it completes the transformation. Step 1 (Purging Oversight) removes accountability. Step 2 (Installing Loyalists) puts Trump allies in charge. Step 3 (Demanding Loyalty) ensures everyone below loyalist leadership serves Trump too. Once complete, government operates as Trump's personal instrument &mdash; no career professionals remain to resist, report, or refuse. That is when Step 4 (Weaponization) becomes systematic and unstoppable.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PLAYBOOK CONNECTION -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{1F517}" title="How Demanding Loyalty Enables The Authoritarian Playbook" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Purging oversight creates fear:</strong> When 17 Inspector Generals are fired, remaining employees see the message: independence = termination. This makes loyalty demands effective.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Installing loyalists enforces loyalty demands:</strong> With FBI led by Kash Patel and DOJ led by Todd Blanche, loyalty tests can be enforced. Federal workers who refuse face investigation by Trump loyalists.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Loyalty demands enable weaponization:</strong> When 300,000+ career employees are replaced with political loyalists, government can be weaponized without resistance. No career professionals remain to say &quot;that is illegal.&quot;</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>That is why it is a playbook.</strong> Each step enables the others. Once loyalty replaces merit, government serves Trump personally &mdash; which enables every other authoritarian tactic.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- RELATED -->
+  <ColoredSection>
+    <AlertBanner icon="\u{1F4D8}" title="Related Documentation" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);"><a href="/attacking-democracy/purging-oversight" style="color: var(--red-bright); text-decoration: underline;">Purging Oversight</a>:</strong> How removing independent watchdogs enables loyalty demands.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/attacking-democracy/installing-loyalists" style="color: var(--red-bright); text-decoration: underline;">Installing Loyalists</a>:</strong> Who enforces loyalty tests at FBI, DOJ, and federal agencies.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/attacking-democracy/weaponizing-government" style="color: var(--red-bright); text-decoration: underline;">Weaponizing Government</a>:</strong> What loyalist government does once loyalty is established.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/fascism/defining-fascism" style="color: var(--red-bright); text-decoration: underline;">Defining Fascism</a>:</strong> How loyalty demands align with fascist characteristics.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Weaponizing<br>Government"
+    description="With oversight purged, loyalists installed, and loyalty demanded &mdash; the final step: using government power against political enemies, critics, and journalists."
+    linkText="Continue: Weaponizing Government &rarr;"
+    linkHref="/attacking-democracy/weaponizing-government"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' }}
+    next={{ label: 'Weaponizing Government', href: '/attacking-democracy/weaponizing-government' }}
+    currentIndex={2}
+    totalPages={4}
+  />
+
+</ResearchLayout>

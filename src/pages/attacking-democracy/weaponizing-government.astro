@@ -1,0 +1,567 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const democracyTabs = [
+  { label: 'Overview', href: '/attacking-democracy' },
+  { label: 'Purging Oversight', href: '/attacking-democracy/purging-oversight' },
+  { label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' },
+  { label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' },
+  { label: 'Weaponizing Government', href: '/attacking-democracy/weaponizing-government' },
+];
+
+const tickerItems = [
+  "FBI Raided Georgia Election Office on Trump's Orders",
+  "IRS Audits of Comey + McCabe: 1 in 30 Million Chance",
+  "Kash Patel: 'We Will Come After People in the Media'",
+  "4 Law Firm Executive Orders Struck Down as Unconstitutional",
+  "DHS Issuing Record Administrative Subpoenas to Unmask Critics",
+  "Minnesota $259M Medicaid Funding Withheld",
+  "Military Deployed Against Peaceful Protesters (Lafayette Square)",
+  "Bondi Blocked Ethics Investigations of DOJ Staff",
+];
+---
+
+<ResearchLayout title="Weaponizing Government - Attacking Democracy" description="How Trump uses DOJ, FBI, IRS, and military against political enemies, critics, journalists, and protesters &mdash; deploying government power for political retaliation.">
+
+  <SeriesNav tabs={democracyTabs} currentPath="/attacking-democracy/weaponizing-government" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Attacking Democracy', href: '/attacking-democracy' },
+    { label: 'Weaponizing Government' }
+  ]} />
+
+  <Masthead
+    eyebrow="Step 4 of 4 &middot; Attacking Democracy"
+    title="WEAPONIZING GOVERNMENT"
+    titleHighlight="WEAPONIZING"
+    subtitle="How Trump Uses Federal Power Against Political Enemies"
+    date="DOJ &middot; FBI &middot; IRS &middot; Military &middot; DHS &middot; Federal Funding"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Trump is using DOJ, FBI, IRS, and military power against political enemies, critics, journalists, and protesters. This is government weaponization: deploying federal power for political retaliation rather than legitimate law enforcement purposes."
+    citation="Documented Patterns of Political Targeting"
+  />
+
+  <!-- WHAT IS WEAPONIZATION -->
+  <SectionDivider label="Definition" />
+  <SectionHeader
+    eyebrow="Understanding the Threat"
+    title="What &quot;Weaponization&quot;<br>Means"
+    introText="Government weaponization is the use of government powers &mdash; law enforcement, regulatory authority, military force, or investigative power &mdash; for political purposes rather than legitimate public interest."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2694}\u{FE0F}"
+      title="What Weaponization Does"
+      body="<strong>Punishes political enemies</strong> through investigation, prosecution, or harassment. <strong>Intimidates critics</strong> into silence through threat of government action. <strong>Rewards allies</strong> by protecting them from legitimate accountability. <strong>Manipulates democratic processes</strong> through selective enforcement of law."
+      tag="Definition"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{2696}\u{FE0F}"
+      title="The Key Distinction"
+      body="Legitimate law enforcement investigates crimes and enforces laws equally. Weaponization targets individuals based on their political position, not their actions. When investigations disproportionately target political opponents while allies face no consequences for similar conduct &mdash; that is weaponization."
+      tag="Standard"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- WARNING SIGNS -->
+  <SectionHeader
+    eyebrow="How to Identify"
+    title="Warning Signs<br>of Weaponization"
+    introText="How do you distinguish legitimate law enforcement from weaponization? Look for these patterns."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="1"
+      title="Political Pattern in Targeting"
+      body="Investigations disproportionately target political opponents, critics, or journalists who report negatively on the administration. <em>Example: Trump directs FBI to investigate journalists who publish critical stories.</em>"
+      tag="Warning Sign"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="2"
+      title="Pretextual Justifications"
+      body="Claimed legal basis is implausible cover for political motivation. Investigation starts with target, then searches for potential crimes. <em>Example: IRS audits of Trump critics using vague &quot;suspicious activity&quot; justifications.</em>"
+      tag="Warning Sign"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="3"
+      title="Departure from Standard Procedures"
+      body="Actions violate normal protocols, escalate beyond what evidence supports, or bypass standard review processes. <em>Example: FBI raids Georgia election office without standard predicate for federal jurisdiction.</em>"
+      tag="Warning Sign"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="4"
+      title="Timing Aligned with Political Goals"
+      body="Government action coincides with political needs &mdash; election season, congressional testimony, critical news coverage. <em>Example: Investigations announced right before testimony by former Trump officials.</em>"
+      tag="Warning Sign"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="5"
+      title="Protection of Allies"
+      body="Selective non-enforcement: allies face no consequences for similar or worse conduct that triggers investigation of enemies. <em>Example: Trump allies who defied congressional subpoenas face no prosecution; critics prosecuted.</em>"
+      tag="Warning Sign"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="6"
+      title="Public Statements Revealing Motive"
+      body="President or officials publicly state intent to &quot;go after&quot; or &quot;investigate&quot; political enemies before any evidence of wrongdoing. <em>Example: Trump's public threats to prosecute Biden family, Hillary Clinton, January 6 Committee.</em>"
+      tag="Warning Sign"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- WHY WEAPONIZATION DESTROYS DEMOCRACY -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{26A0}\u{FE0F}" title="Why Weaponization Destroys Democracy" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Intimidation effect:</strong> Critics self-censor when they see others investigated for dissent. <strong style="color: var(--text);">Accountability disappears:</strong> When law enforcement serves the president, who holds the president accountable? <strong style="color: var(--text);">Rule of law collapses:</strong> Law becomes a weapon for power, not a check on power.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Democratic participation chilled:</strong> People will not run for office, testify, or speak out if it triggers government retaliation. Once weaponization is established, it becomes self-perpetuating &mdash; each act of retaliation intimidates potential resistance to the next.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <VoicesSection
+    eyebrow="Expert Warning"
+    title="What This<br>Means"
+  >
+    <VoiceCard
+      quote="When the president can use FBI, DOJ, and IRS against political opponents, democracy becomes democracy in name only. You still have elections, but people are afraid to oppose the president. That's not democracy &mdash; that's authoritarianism with elections."
+      attribution="<strong>Rachel Kleinfeld</strong> &middot; Senior Fellow, Carnegie Endowment for International Peace"
+    />
+  </VoicesSection>
+
+  <!-- DOCUMENTED CASES: DOJ/FBI -->
+  <SectionDivider label="Documented Cases" />
+  <SectionHeader
+    eyebrow="Category 1"
+    title="DOJ &amp; FBI: Political<br>Prosecutions"
+    introText="The Department of Justice and FBI are supposed to operate independently from political influence. Trump has directed investigations of political enemies and protected allies from accountability."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F3DB}\u{FE0F}"
+      title="January 6 Committee Members"
+      body="Trump publicly threatened prosecution of all J6 Committee members. FBI Director Kash Patel stated intent to investigate Committee for &quot;misconduct.&quot; No legitimate legal basis for investigation (Congressional oversight is constitutionally protected). <em>Pattern: Retaliation against those who investigated Trump.</em>"
+      tag="Political Targeting"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F464}"
+      title="Biden Family"
+      body="Trump repeatedly called for prosecution of Joe Biden and Hunter Biden. DOJ opened investigations into Biden family finances. Investigations expanded beyond initial scope without new evidence. <em>Pattern: Investigation of political opponent and family.</em>"
+      tag="Political Targeting"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4F0}"
+      title="Journalists and News Organizations"
+      body="Trump threatened to investigate journalists who published classified information leaks. DOJ seized phone records of reporters at CNN, New York Times, Washington Post. FBI Director Patel stated intent to investigate journalists as &quot;conspirators.&quot; <em>Pattern: Intimidation of press and punishment for critical coverage.</em>"
+      tag="Press Targeting"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F6E1}\u{FE0F}"
+      title="Former Trump Officials Who Testified"
+      body="John Bolton, Bill Barr, Mark Esper, and others who testified about Trump's conduct face threats of investigation. Security clearances revoked for critics. <em>Pattern: Retaliation against whistleblowers and witnesses.</em>"
+      tag="Retaliation"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F91D}"
+      title="Selective Non-Prosecution of Allies"
+      body="Trump allies who defied congressional subpoenas (Steve Bannon, Peter Navarro) received pardons. No prosecution of Trump associates who made false statements to Congress. DOJ dropped cases against Trump allies after political pressure. <em>Pattern: Protection of allies from accountability.</em>"
+      tag="Double Standard"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{1F6AB}"
+      title="Bondi Blocks Ethics Investigations (March 2026)"
+      body="AG Bondi issued new rule shielding DOJ political appointees from internal ethics investigations. Ethics office can no longer investigate attorneys who carry out politically motivated prosecutions. <strong>Effectively removes the last internal check on DOJ weaponization.</strong>"
+      tag="Accountability Destroyed"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F575}\u{FE0F}"
+      title="Gabbard Whistleblower Complaint (March 2026)"
+      body="Intelligence community whistleblower filed complaint alleging DNI Gabbard bypassed secure NSA channels. Allegedly shared classified Iran intelligence with Jared Kushner through unofficial back channels. Kushner has no security clearance and billions in Saudi business interests. <em>Pattern: Sharing classified intelligence with politically connected private citizens.</em>"
+      tag="Intelligence Abuse"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="&quot;We will find the conspirators not just in government but in the media. Yes, we're going to come after the people in the media.&quot; &mdash; Kash Patel, FBI Director" variant="red" />
+
+  <!-- IRS TARGETING -->
+  <SectionDivider label="IRS Weaponization" />
+  <SectionHeader
+    eyebrow="Category 2"
+    title="IRS: Targeted Audits<br>of Trump Critics"
+    introText="The IRS has legal authority to audit tax returns, but that authority must be exercised neutrally. Using IRS audits to harass political enemies is one of the most well-documented forms of government weaponization historically."
+  />
+
+  <StatGrid>
+    <StatCard target={1} prefix="1 in " suffix="M" label="Probability of both Comey and McCabe receiving intensive audits by chance: ~1 in 30,000,000" />
+  </StatGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4B5}"
+      title="Comey and McCabe: Statistically Impossible Audits"
+      body="Both James Comey and Andrew McCabe (former FBI leadership) subjected to rare &quot;intensive audits&quot; after being fired by Trump. Statistical probability of both facing intensive audit: approximately 1 in 30 million. Audits began shortly after they testified publicly about Trump. IRS refused to explain audit selection process."
+      tag="1 in 30 Million"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4CA}"
+      title="Lincoln Project and Never Trump Republicans"
+      body="Multiple Lincoln Project founders received audit notifications. Timing coincided with Lincoln Project's most aggressive anti-Trump campaigns. Audits focused on political activity and donor relationships. Trump critics face audits at rates far exceeding statistical norms."
+      tag="Pattern"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- MILITARY WEAPONIZATION -->
+  <SectionDivider label="Military Deployment" />
+  <SectionHeader
+    eyebrow="Category 3"
+    title="Military: Deployment<br>Against Domestic Protests"
+    introText="The military's role is national defense, not domestic law enforcement. The Posse Comitatus Act restricts using military for domestic policing."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F3DB}\u{FE0F}"
+      title="Lafayette Square (June 2020)"
+      body="Trump ordered military and federal forces to clear peaceful protesters. Used tear gas and rubber bullets for photo opportunity. Chairman of Joint Chiefs Mark Milley later apologized for participating. Defense Secretary Esper pushed back and was later fired."
+      tag="Documented"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F6A8}"
+      title="Threats and 2026 Domestic Deployment"
+      body="Trump called protesters &quot;terrorists&quot; and threatened military deployment. Invoked Insurrection Act language to justify military use domestically. Trump officials have discussed using military for immigration enforcement. Pentagon loyalists installed to ensure compliance with deployment orders. Legal reviews of Posse Comitatus restrictions conducted to find workarounds."
+      tag="Ongoing"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- DHS SURVEILLANCE -->
+  <SectionDivider label="DHS Surveillance" />
+  <SectionHeader
+    eyebrow="Category 4"
+    title="DHS: Surveillance and<br>Intimidation of Critics"
+    introText="Department of Homeland Security has systematically used administrative subpoenas &mdash; which require no judicial oversight &mdash; to unmask anonymous social media users who criticize Trump administration policies or document ICE enforcement operations."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4F1}"
+      title="@montcowatch Instagram Account"
+      body="Anonymous account sharing immigrant rights resources in Montgomery County, PA. DHS sent administrative subpoena to Meta demanding account owner's identity. Claimed ICE agents were being &quot;stalked&quot; but provided no evidence. ACLU represented account owner; DHS withdrew subpoena after lawsuit filed."
+      tag="Targeting Critics"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4E7}"
+      title="American Retiree Critic"
+      body="Retired American sent critical email to DHS lead attorney. <strong>Within hours</strong>, DHS issued administrative subpoena to Google for his information. Federal agents later visited his home to question him about the email. ACLU filed motion to quash on February 2, 2026."
+      tag="Immediate Retaliation"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4F2}"
+      title="Systematic Instagram Targeting"
+      body="At least four other Instagram accounts documenting ICE raids targeted with administrative subpoenas. All accounts were anonymous. All subpoenas withdrawn after ACLU filed lawsuits. Record numbers of subpoenas in first 6 months of Trump's second term compared to all previous administrations. <strong>Pattern of withdraw-after-lawsuit suggests subpoenas designed for intimidation, not legitimate investigation.</strong>"
+      tag="Systematic"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F9CA}"
+      title="The Intimidation Pattern"
+      body="Issue subpoena (target learns government is tracking them) &rarr; Target gets lawyers (expensive and time-consuming) &rarr; DHS withdraws without explanation (no accountability) &rarr; <strong>Chilling effect achieved:</strong> Others see what happens to critics and self-censor. Even though DHS withdrew all challenged subpoenas, the damage is done."
+      tag="Chilling Effect"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Legal Response"
+    title="Constitutional<br>Rights Under Attack"
+  >
+    <VoiceCard
+      quote="Recording police activity and sharing it anonymously is constitutionally protected speech."
+      attribution="<strong>ACLU</strong> &middot; Legal filing, February 2, 2026"
+    />
+    <VoiceCard
+      quote="This is part of a broader strategy to intimidate people who document immigration activity or criticize government actions. The government is using surveillance powers not for legitimate law enforcement purposes, but to identify and target critics."
+      attribution="<strong>ACLU Statement</strong> on DHS Administrative Subpoenas"
+    />
+  </VoicesSection>
+
+  <!-- TARGETING LAW FIRMS -->
+  <SectionDivider label="Targeting Lawyers" />
+  <SectionHeader
+    eyebrow="Category 5"
+    title="Targeting Law Firms<br>for Representing Opponents"
+    introText="Beginning in March 2025, Trump signed executive orders targeting law firms that had previously represented his political opponents. The Sixth Amendment guarantees the right to counsel."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2696}\u{FE0F}"
+      title="Perkins Coie"
+      body="Targeted for representing the Democratic Party. Trump called them &quot;the most evil law firm in America.&quot; EO revoked security clearances, barred federal contracts. <em>Pattern: Retaliation against legal representation of political opponents.</em>"
+      tag="Struck Down"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{2696}\u{FE0F}"
+      title="WilmerHale"
+      body="Targeted because Special Counsel Robert Mueller was a former partner. EO directed agencies to refuse engagement with the firm. <em>Pattern: Punishing firm for partner's role in investigating Trump.</em>"
+      tag="Struck Down"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{2696}\u{FE0F}"
+      title="All Four Orders Struck Down"
+      body="Federal courts ruled all four executive orders unconstitutional. Judges found orders violated First Amendment and due process. Courts ruled orders were retaliatory, designed to chill legal representation. <strong>March 2, 2026: DOJ quietly dropped all appeals, effectively conceding defeat.</strong>"
+      tag="Unconstitutional"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Legal Community"
+    title="The Legal Profession<br>Responds"
+  >
+    <VoiceCard
+      quote="Targeting lawyers for representing clients the president dislikes is something that happens in authoritarian regimes, not democracies."
+      attribution="<strong>American Bar Association</strong> &middot; Condemning the executive orders"
+    />
+  </VoicesSection>
+
+  <!-- WITHHOLDING FUNDING -->
+  <SectionDivider label="Funding Coercion" />
+  <SectionHeader
+    eyebrow="Category 6"
+    title="Withholding Federal Funding<br>as Political Coercion"
+    introText="The Trump administration has weaponized federal funding &mdash; money appropriated by Congress for specific purposes &mdash; to coerce states into political compliance."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F3E5}"
+      title="Minnesota Medicaid Funding ($259 Million)"
+      body="February 25, 2026: VP JD Vance announced withholding $259 million in Medicaid funding from Minnesota. Framed as response to non-cooperation with immigration enforcement. Widely seen as political retaliation against former VP candidate Gov. Tim Walz. Affects 1.4 million Minnesotans enrolled in Medicaid (low-income, children, elderly, disabled). <strong>The Impoundment Control Act of 1974 prohibits the president from refusing to spend funds Congress has appropriated.</strong>"
+      tag="Illegal Under ICA"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- GEORGIA CASE STUDY -->
+  <SectionDivider label="Case Study" />
+  <SectionHeader
+    eyebrow="Detailed Analysis"
+    title="Case Study: Georgia<br>Ballot Seizure"
+    introText="The FBI raid on the Fulton County election office represents one of the clearest examples of government weaponization. It shows all six warning signs in a single case."
+  />
+
+  <TimelineSection title="Georgia Raid Timeline">
+    <TimelineItem
+      date="May 13, 2026"
+      title="Trump Demands Investigation"
+      description="Trump posts on Truth Social demanding investigation of Georgia election officials."
+    />
+    <TimelineItem
+      date="May 14, 2026"
+      title="DOJ Announces Investigation"
+      description="DOJ announces investigation of &quot;election irregularities&quot; in Georgia."
+    />
+    <TimelineItem
+      date="May 15, 2026 (2:00 AM)"
+      badge="RAID"
+      badgeType="red"
+      title="FBI Raids Fulton County Election Office"
+      description="Armed agents seize voting machines and ballots from 2020, 2024, and 2026 elections. No warrant shown to election officials. Raid coordinated with Georgia state police. National Guard present to &quot;secure&quot; area. <strong>Context: Fulton County was investigating Trump for election interference (the &quot;find 11,780 votes&quot; call).</strong>"
+    />
+    <TimelineItem
+      date="May 15, 2026"
+      title="Trump Celebrates"
+      description="Trump celebrates raid on social media. No evidence of wrongdoing announced; ballots remain in federal custody."
+    />
+  </TimelineSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{2714}\u{FE0F}"
+      title="All Six Warning Signs Present"
+      body="<strong>1. Political targeting:</strong> Raid targeted office investigating Trump. <strong>2. Pretextual justification:</strong> No specific allegations; federal jurisdiction over state elections is narrow. <strong>3. Departure from procedure:</strong> Armed pre-dawn raid instead of subpoena. <strong>4. Political timing:</strong> 48 hours after Trump's social media demand. <strong>5. Protection of allies:</strong> Officials who supported Trump's fraud claims face no investigation. <strong>6. Public motive:</strong> Trump demanded investigation publicly, then celebrated publicly."
+      tag="Template for Abuse"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="Expert Assessment"
+    title="Georgia Raid:<br>Expert Reaction"
+  >
+    <VoiceCard
+      quote="This is one of the most brazen examples of government weaponization I've seen. The FBI raided the election office that was investigating Trump, seized potential evidence against Trump, and did so 48 hours after Trump demanded it on social media. This isn't law enforcement. It's the president using federal police power against those investigating him."
+      attribution="<strong>Former Federal Prosecutor</strong> (speaking anonymously for safety)"
+    />
+    <VoiceCard
+      quote="What happened in Georgia is what happens in authoritarian countries. The leader faces investigation, so he uses federal police to raid the investigators and seize the evidence. That's not complicated. That's not a legal gray area. That's authoritarianism."
+      attribution="<strong>Legal Scholar</strong> specializing in democratic backsliding"
+    />
+    <VoiceCard
+      quote="The timing tells you everything. Trump posts on Tuesday demanding investigation. DOJ announces Wednesday. FBI raids Thursday. That's not how law enforcement works. That's how political retaliation works."
+      attribution="<strong>Former FBI Official</strong>"
+    />
+  </VoicesSection>
+
+  <!-- WHY WEAPONIZATION IS THE FINAL STEP -->
+  <SectionDivider label="Why Step 4" />
+  <SectionHeader
+    eyebrow="The Final Step"
+    title="Why Weaponization Is<br>The Final Step"
+    introText="Weaponization is Step 4 of the authoritarian playbook &mdash; and it is the most dangerous because it makes the playbook permanent."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="1"
+      title="Requires the Other Three Steps"
+      body="Cannot weaponize with oversight intact (IGs would expose it). Cannot weaponize without loyalists (career agents would refuse). Cannot weaponize if staff resist (whistleblowers would report it). <strong>That is why Steps 1-3 come first.</strong>"
+      tag="Prerequisites"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F504}"
+      title="Creates Self-Perpetuating Cycle"
+      body="Critics self-censor when they see others investigated. Whistleblowers stay silent when whistleblowing triggers retaliation. Politicians do not resist when resistance means DOJ investigation. Journalists do not publish when publishing means FBI seizure. <strong>Each act of weaponization intimidates resistance to the next.</strong>"
+      tag="Cycle"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F3DB}\u{FE0F}"
+      title="Democracy Cannot Survive"
+      body="Democracy depends on the rule of law &mdash; the principle that law constrains power rather than serving power. When the president can use FBI, DOJ, IRS, and military against enemies: law becomes a weapon, opposition becomes impossible, elections lose meaning, accountability disappears. <strong>That is not democracy. That is authoritarianism with elections.</strong>"
+      tag="End State"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- HOW WEAPONIZATION PROTECTS THE PLAYBOOK -->
+  <SectionDivider label="Self-Perpetuating" />
+  <SectionHeader
+    eyebrow="The Cycle"
+    title="How Weaponization Creates<br>A Permanent Cycle"
+    introText="Weaponization is not just the final step &mdash; it is the step that makes the playbook permanent. Once government power can be deployed against enemies, it protects and reinforces all the other authoritarian tactics."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F5D1}\u{FE0F}"
+      title="Protects: Purged Oversight Stays Purged"
+      body="Anyone who tries to restore independent oversight faces investigation. Congress members who try to restore IG independence face DOJ/FBI investigation. Whistleblowers face IRS audits. Journalists face threats of prosecution. State officials face FBI raids.<br><br><strong><a href='/attacking-democracy/purging-oversight' style='color: var(--red-bright); text-decoration: underline;'>Back to: Purging Oversight &rarr;</a></strong>"
+      tag="Protected"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F464}"
+      title="Protects: Loyalists Stay in Power"
+      body="Loyalists control FBI/DOJ/military and can weaponize those institutions to protect themselves. Senators who question loyalist nominees face investigation. Former officials who testify against loyalists face retaliation. Loyalists use their positions to investigate critics.<br><br><strong><a href='/attacking-democracy/installing-loyalists' style='color: var(--red-bright); text-decoration: underline;'>Back to: Installing Loyalists &rarr;</a></strong>"
+      tag="Protected"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{270B}"
+      title="Enforces: Loyalty Becomes Permanent"
+      body="Weaponized government ensures federal workers remain loyal. Dissent becomes impossible when disloyalty triggers investigation, audit, or prosecution. Workers see what happens to others (Comey, McCabe) and stay silent. Self-censorship becomes universal.<br><br><strong><a href='/attacking-democracy/demanding-loyalty' style='color: var(--red-bright); text-decoration: underline;'>Back to: Demanding Loyalty &rarr;</a></strong>"
+      tag="Enforced"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F5F3}\u{FE0F}"
+      title="Enables: Election Rigging Without Consequences"
+      body="State officials who protect elections face FBI raids. Federal workers who would refuse illegal election interference have been purged. DOJ lawsuits against states backed by threat of investigation. Journalists who report on election rigging threatened with prosecution.<br><br><strong><a href='/election-rigging' style='color: var(--red-bright); text-decoration: underline;'>See: Election Rigging &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- CRITICAL WARNING -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{1F6A8}" title="CRITICAL" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This is why weaponization is the final step. Steps 1-3 build the machinery (remove oversight, install loyalists, demand loyalty). Step 4 uses that machinery to protect itself and eliminate threats. Once weaponization is operational, the playbook becomes self-perpetuating.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Anyone who tries to restore democracy faces investigation, audit, or prosecution. That is how authoritarianism becomes permanent &mdash; not through a single coup, but through systematic elimination of anyone who might resist.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE COMPLETE PLAYBOOK -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{1F4CB}" title="The Complete Authoritarian Playbook" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Step 1 &mdash; <a href='/attacking-democracy/purging-oversight' style='color: var(--red-bright); text-decoration: underline;'>Purge Oversight</a>:</strong> Remove independent watchdogs (17 IGs fired, whistleblower protections eliminated). This prevents weaponization from being exposed.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Step 2 &mdash; <a href='/attacking-democracy/installing-loyalists' style='color: var(--red-bright); text-decoration: underline;'>Install Loyalists</a>:</strong> Place personal allies at FBI (Kash Patel), DOJ (Todd Blanche), Pentagon (Pete Hegseth), Intelligence (Tulsi Gabbard). This ensures federal power serves Trump personally.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Step 3 &mdash; <a href='/attacking-democracy/demanding-loyalty' style='color: var(--red-bright); text-decoration: underline;'>Demand Loyalty</a>:</strong> Require 300,000+ federal workers to pledge personal allegiance through tests, purges, and political screening. This eliminates internal resistance.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Step 4 &mdash; Weaponize Government (this page):</strong> Use DOJ, FBI, IRS, and military against enemies. This intimidates remaining opposition and creates self-perpetuating cycle.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 16px;"><strong>Each step makes the next one possible. Weaponization makes all of them permanent. It is not chaos. It is not incompetence. It is a systematic, deliberate consolidation of authoritarian control. And it is happening right now.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- RELATED -->
+  <ColoredSection>
+    <AlertBanner icon="\u{1F4D8}" title="Related Documentation" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);"><a href="/attacking-democracy" style="color: var(--red-bright); text-decoration: underline;">The Authoritarian Playbook (Overview)</a>:</strong> How all four steps work together to dismantle democracy.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/election-rigging" style="color: var(--red-bright); text-decoration: underline;">Election Rigging</a>:</strong> How weaponization enables election interference (Georgia FBI raid).</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/fascism" style="color: var(--red-bright); text-decoration: underline;">Path to Fascism</a>:</strong> How weaponization aligns with fascist consolidation tactics.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);"><a href="/dangerous-rhetoric" style="color: var(--red-bright); text-decoration: underline;">Dangerous Rhetoric: Critics</a>:</strong> Trump's rhetoric that justifies and encourages weaponization.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Return to<br>Overview"
+    description="Review the complete four-step authoritarian playbook and how each tactic enables the others."
+    linkText="Attacking Democracy Overview &rarr;"
+    linkHref="/attacking-democracy"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' }}
+    currentIndex={3}
+    totalPages={4}
+  />
+
+</ResearchLayout>

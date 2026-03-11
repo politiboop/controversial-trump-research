@@ -1,0 +1,87 @@
+{
+  "id": "mitt-romney",
+  "name": "Mitt Romney",
+  "role": "U.S. Senator from Utah",
+  "administration": null,
+  "years": "2019-2025",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "senator",
+  "photo": null,
+  "summary": "Former Republican presidential nominee and U.S. Senator who became Trump's most prominent GOP critic in Congress, voting to convict him in both impeachment trials.",
+  "keyStatements": [
+    {
+      "quote": "He is not fit for office. He should not be president again. He's not only unfit for office, but I can't imagine that the American people would elect him for re-election.",
+      "date": "2023-09-19",
+      "source": "The Hill",
+      "context": "Interview about Trump and 2024",
+      "url": "https://thehill.com/homenews/senate/4214098-romney-trump-not-fit-for-office/"
+    },
+    {
+      "quote": "I believe that the president's conduct was wrong and egregious. The president asked a foreign government to investigate his political rival. The president withheld vital military funds from that government to press it to do so.",
+      "date": "2020-02-05",
+      "source": "Congressional Record",
+      "context": "Voting to convict Trump in first impeachment",
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2020-02-05/html/CREC-2020-02-05-pt1-PgS707.htm"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2012-11-06",
+      "event": "Lost presidential election to Barack Obama",
+      "significance": "Republican presidential nominee"
+    },
+    {
+      "date": "2019-01-03",
+      "event": "Sworn in as U.S. Senator from Utah",
+      "significance": "Entered Senate during Trump presidency"
+    },
+    {
+      "date": "2020-02-05",
+      "event": "Voted to convict Trump in first impeachment",
+      "significance": "Only Republican to vote for conviction"
+    },
+    {
+      "date": "2021-02-13",
+      "event": "Voted to convict Trump in second impeachment",
+      "significance": "One of seven Republicans to vote for conviction"
+    },
+    {
+      "date": "2023-09-13",
+      "event": "Announced retirement from Senate",
+      "significance": "Will not seek re-election in 2024"
+    }
+  ],
+  "credibility": {
+    "background": "Former Governor of Massachusetts, Republican presidential nominee, U.S. Senator, successful businessman",
+    "positions": [
+      "U.S. Senator from Utah (2019-2025)",
+      "Governor of Massachusetts (2003-2007)",
+      "Republican Presidential Nominee (2012)",
+      "CEO of Bain Capital"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Trump is not fit for office",
+    "Trump's conduct in withholding aid to Ukraine was wrong",
+    "Trump's role in January 6 attack on Capitol",
+    "Trump lacks character and integrity for the presidency"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "Romney says Trump is 'not fit for office'",
+      "url": "https://thehill.com/homenews/senate/4214098-romney-trump-not-fit-for-office/",
+      "date": "2023-09-19",
+      "type": "news"
+    },
+    {
+      "title": "Congressional Record, Senate (Feb. 5, 2020)",
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2020-02-05/html/CREC-2020-02-05-pt1-PgS707.htm",
+      "date": "2020-02-05",
+      "type": "government"
+    }
+  ],
+  "party": "Republican"
+}

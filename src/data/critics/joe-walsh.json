@@ -1,0 +1,98 @@
+{
+  "id": "joe-walsh",
+  "name": "Joe Walsh",
+  "role": "U.S. Representative from Illinois",
+  "administration": null,
+  "years": "2011-2013",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "representative",
+  "photo": null,
+  "summary": "Former Tea Party congressman who challenged Trump in the 2020 Republican primary and later endorsed Joe Biden.",
+  "keyStatements": [
+    {
+      "quote": "Trump is unfit. He's a would-be dictator.",
+      "date": "2019-08-25",
+      "source": "CNN",
+      "context": "Announcing primary challenge",
+      "url": "https://www.cnn.com/2019/08/25/politics/joe-walsh-2020-trump-challenge/index.html"
+    },
+    {
+      "quote": "I'm going to do everything I can to help elect Joe Biden as our next president.",
+      "date": "2020-08-16",
+      "source": "CNN",
+      "context": "Endorsing Biden",
+      "url": "https://www.cnn.com/2020/08/16/politics/joe-walsh-endorses-joe-biden/index.html"
+    },
+    {
+      "quote": "On January 6, 2021, Donald Trump committed the most un-American act ever by a President. On that day, he ended his legacy. And on that day, he lost me forever.",
+      "date": "2021-01-07",
+      "source": "Twitter",
+      "context": "Statement after January 6",
+      "url": "https://x.com/WalshFreedom/status/1347240086537658369"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2011-01-03",
+      "event": "Elected to U.S. House of Representatives",
+      "significance": "Tea Party wave election"
+    },
+    {
+      "date": "2013-01-03",
+      "event": "Left Congress after one term",
+      "significance": "Lost re-election bid"
+    },
+    {
+      "date": "2019-08-25",
+      "event": "Announced primary challenge to Trump",
+      "significance": "Ran against Trump in 2020 GOP primary"
+    },
+    {
+      "date": "2020-02-07",
+      "event": "Dropped out of GOP primary",
+      "significance": "Ended presidential campaign"
+    },
+    {
+      "date": "2020-08-16",
+      "event": "Endorsed Joe Biden",
+      "significance": "Crossed party lines"
+    }
+  ],
+  "credibility": {
+    "background": "Former U.S. Representative, Tea Party leader, conservative radio host, 2020 Republican primary challenger to Trump",
+    "positions": [
+      "U.S. Representative from Illinois (2011-2013)",
+      "Conservative radio host (2013-2019)",
+      "2020 Republican presidential candidate"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump unfit and a would-be dictator",
+    "Condemned Trump's actions on January 6",
+    "Supported Biden as the alternative"
+  ],
+  "endorsement": "Endorsed Joe Biden in 2020",
+  "sources": [
+    {
+      "title": "Joe Walsh says he'll challenge Trump in 2020",
+      "url": "https://www.cnn.com/2019/08/25/politics/joe-walsh-2020-trump-challenge/index.html",
+      "date": "2019-08-25",
+      "type": "news"
+    },
+    {
+      "title": "Joe Walsh endorses Joe Biden",
+      "url": "https://www.cnn.com/2020/08/16/politics/joe-walsh-endorses-joe-biden/index.html",
+      "date": "2020-08-16",
+      "type": "news"
+    },
+    {
+      "title": "Joe Walsh on Trump and January 6",
+      "url": "https://x.com/WalshFreedom/status/1347240086537658369",
+      "date": "2021-01-07",
+      "type": "social"
+    }
+  ],
+  "party": "Republican"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "preet-bharara",
+  "name": "Preet Bharara",
+  "role": "U.S. Attorney for Southern District of New York",
+  "administration": "Obama Administration",
+  "years": "2009-2017",
+  "militaryRank": null,
+  "category": "former-officials",
+  "subCategory": "prosecutor",
+  "photo": null,
+  "summary": "Former U.S. Attorney who was fired by Trump after refusing to resign and later warned that Trump's attacks on institutions are authoritarian in nature.",
+  "keyStatements": [
+    {
+      "quote": "The thing that concerns me the most is the attack on institutions... These attacks are authoritarian in nature.",
+      "date": "2018-02-28",
+      "source": "CNN",
+      "context": "Interview about attacks on DOJ, FBI, judiciary, and press",
+      "url": "https://www.cnn.com/2018/02/28/politics/preet-bharara-trump-authoritarian/index.html"
+    },
+    {
+      "quote": "What we're seeing is unprecedented. A president who believes he is above the law.",
+      "date": "2019-04-18",
+      "source": "PBS NewsHour",
+      "context": "Interview following the Mueller report",
+      "url": "https://www.pbs.org/newshour/show/preet-bharara-on-mueller-report-trump-claims-of-total-exoneration"
+    },
+    {
+      "quote": "I think Donald Trump's unfitness for office is manifest.",
+      "date": "2020-10-05",
+      "source": "MSNBC",
+      "context": "Interview during 2020 campaign",
+      "url": "https://www.msnbc.com/11th-hour/watch/preet-bharara-trump-s-unfitness-for-office-is-manifest-93286853784"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2009-08-13",
+      "event": "Became U.S. Attorney for SDNY",
+      "significance": "Nominated by Obama"
+    },
+    {
+      "date": "2017-03-10",
+      "event": "Asked to stay by Trump",
+      "significance": "Trump personally requested he stay"
+    },
+    {
+      "date": "2017-03-11",
+      "event": "Fired by Trump",
+      "significance": "Dismissed day after refusing to resign"
+    },
+    {
+      "date": "2017-present",
+      "event": "Host of 'Stay Tuned with Preet' podcast",
+      "significance": "Commentator on Trump and rule of law"
+    },
+    {
+      "date": "2018",
+      "event": "Warned about Trump's authoritarianism",
+      "significance": "Criticized attacks on institutions"
+    }
+  ],
+  "credibility": {
+    "background": "Former U.S. Attorney for Southern District of New York, renowned prosecutor",
+    "positions": [
+      "U.S. Attorney, Southern District of New York (2009-2017)",
+      "Assistant U.S. Attorney, SDNY (2000-2005)",
+      "Chief Counsel, U.S. Senate Judiciary Committee (2005-2009)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said attacks on institutions are authoritarian",
+    "Said Trump believed he was above the law",
+    "Said Trump's unfitness for office was manifest"
+  ],
+  "endorsement": "Opposes Trump's presidency",
+  "sources": [
+    {
+      "title": "Preet Bharara: Attacks on institutions are authoritarian",
+      "url": "https://www.cnn.com/2018/02/28/politics/preet-bharara-trump-authoritarian/index.html",
+      "date": "2018-02-28",
+      "type": "news"
+    },
+    {
+      "title": "Preet Bharara on Mueller report and rule of law",
+      "url": "https://www.pbs.org/newshour/show/preet-bharara-on-mueller-report-trump-claims-of-total-exoneration",
+      "date": "2019-04-18",
+      "type": "interview"
+    },
+    {
+      "title": "Preet Bharara: Trump’s unfitness for office is manifest",
+      "url": "https://www.msnbc.com/11th-hour/watch/preet-bharara-trump-s-unfitness-for-office-is-manifest-93286853784",
+      "date": "2020-10-05",
+      "type": "interview"
+    }
+  ],
+  "party": "Democrat"
+}

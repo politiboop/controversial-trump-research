@@ -1,0 +1,105 @@
+{
+  "id": "michael-hayden",
+  "name": "Michael Hayden",
+  "role": "Director of Central Intelligence",
+  "administration": "George W. Bush and Obama Administrations",
+  "years": "2006-2009",
+  "militaryRank": "General, U.S. Air Force (Retired)",
+  "category": "intelligence-community",
+  "subCategory": "cia-director",
+  "photo": null,
+  "summary": "Former CIA and NSA Director who warned that Trump's style did not fit the intelligence community and said intelligence would be \"dead\" under another Trump term.",
+  "keyStatements": [
+    {
+      "quote": "None of that fits into the intelligence picture.",
+      "date": "2016-11-10",
+      "source": "CBS News",
+      "context": "On Trump's approach to facts and intelligence",
+      "url": "https://www.cbsnews.com/news/2016-race-general-michael-hayden-donald-trump-presidency-national-security-concerns/"
+    },
+    {
+      "quote": "If there was another Trump administration, intelligence would be dead.",
+      "date": "2020-12-07",
+      "source": "CBS News",
+      "context": "CBSN Red & Blue interview",
+      "url": "https://www.cbsnews.com/news/michael-hayden-former-cia-director-intelligence-community-will-recover-under-biden/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1999-03-13",
+      "event": "Became Director of NSA",
+      "significance": "Led National Security Agency"
+    },
+    {
+      "date": "2005-04-21",
+      "event": "Became first Director of National Intelligence",
+      "significance": "Principal Deputy DNI"
+    },
+    {
+      "date": "2006-05-30",
+      "event": "Became CIA Director",
+      "significance": "Confirmed under Bush"
+    },
+    {
+      "date": "2009-02-12",
+      "event": "Left CIA",
+      "significance": "End of tenure"
+    },
+    {
+      "date": "2018",
+      "event": "Warned about Trump and intelligence culture",
+      "significance": "Public criticism of Trump's approach"
+    },
+    {
+      "date": "2020-08-20",
+      "event": "Signed GOP national security endorsement of Biden",
+      "significance": "Joined letter calling Trump unfit"
+    },
+    {
+      "date": "2020-12-07",
+      "event": "Warned intelligence would be \"dead\" under another Trump term",
+      "significance": "Sharp warning about a second Trump term"
+    }
+  ],
+  "credibility": {
+    "background": "Former CIA Director, NSA Director, Air Force general, decades in intelligence",
+    "positions": [
+      "Director of Central Intelligence (2006-2009)",
+      "Director, National Security Agency (1999-2005)",
+      "Principal Deputy Director of National Intelligence (2005-2006)"
+    ],
+    "awards": [
+      "Defense Distinguished Service Medal",
+      "Air Force Distinguished Service Medal",
+      "Legion of Merit"
+    ]
+  },
+  "oppositionReasons": [
+    "Said Trump's approach does not fit intelligence culture",
+    "Warned intelligence would be \"dead\" under another Trump term",
+    "Signed letter calling Trump unfit to serve another term"
+  ],
+  "endorsement": "Signed 2020 national security officials' endorsement of Biden",
+  "sources": [
+    {
+      "title": "Why Gen. Michael Hayden thinks President-elect Donald Trump doesn't fit into \"intelligence picture\"",
+      "url": "https://www.cbsnews.com/news/2016-race-general-michael-hayden-donald-trump-presidency-national-security-concerns/",
+      "date": "2016-11-10",
+      "type": "news"
+    },
+    {
+      "title": "Former CIA director says intelligence community will recover under Biden",
+      "url": "https://www.cbsnews.com/news/michael-hayden-former-cia-director-intelligence-community-will-recover-under-biden/",
+      "date": "2020-12-07",
+      "type": "news"
+    },
+    {
+      "title": "Over 70 Republican National Security Officials Endorse Biden, Deem Trump 'Dangerously Unfit' For President",
+      "url": "https://www.forbes.com/sites/jemimamcevoy/2020/08/20/over-70-republican-national-security-officials-endorse-biden-deem-trump-dangerously-unfit-for-president/",
+      "date": "2020-08-20",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

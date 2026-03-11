@@ -1,0 +1,60 @@
+{
+  "id": "michael-steele",
+  "name": "Michael Steele",
+  "role": "Former RNC Chairman",
+  "administration": null,
+  "years": "2009-2011",
+  "category": "republican-critics",
+  "party": "Republican",
+  "summary": "Former Chairman of the Republican National Committee who became one of Trump's most outspoken Republican critics, frequently appearing on MSNBC to criticize Trump's policies, character, and impact on the GOP.",
+  "keyStatements": [
+    {
+      "quote": "Donald Trump is a cancer on the conservative movement and the Republican Party... He has systematically deconstructed what it means to be a Republican.",
+      "context": "Discussing Trump's impact on the Republican Party",
+      "date": "2019-08-05",
+      "source": "https://www.msnbc.com/msnbc/watch/michael-steele-trump-is-a-cancer-on-the-conservative-movement-65360965844"
+    },
+    {
+      "quote": "This is no longer a party. It's a cult. It is completely beholden to the leader of the cult.",
+      "context": "Describing the Republican Party under Trump",
+      "date": "2020-09-24",
+      "source": "https://thehill.com/homenews/media/518146-michael-steele-gop-is-a-cult-completely-beholden-to-trump/"
+    },
+    {
+      "quote": "When you have a president who is actively working against the interests of the country, who is putting himself above the Constitution, who is putting himself above the rule of law, that's a problem.",
+      "context": "Criticizing Trump's actions during presidency",
+      "date": "2020-06-02",
+      "source": "https://www.cnn.com/2020/06/02/politics/michael-steele-trump-george-floyd/index.html"
+    }
+  ],
+  "background": "Michael Steele served as Chairman of the Republican National Committee from 2009 to 2011, becoming the first African American to hold the position. He previously served as Lieutenant Governor of Maryland from 2003 to 2007. After leaving the RNC, he became a political analyst and has been a senior advisor to the Lincoln Project, a group of Republicans opposing Trump.",
+  "oppositionReasons": [
+    "Believes Trump has corrupted Republican Party values and principles",
+    "Opposes Trump's divisive rhetoric on race and immigration",
+    "Views Trump as authoritarian threat to democratic institutions",
+    "Criticizes Republican enablement of Trump's behavior",
+    "Concerned about Trump's damage to conservative movement"
+  ],
+  "notableActions": [
+    "Joined the Lincoln Project to oppose Trump's re-election",
+    "Regular political analyst on MSNBC criticizing Trump",
+    "Publicly endorsed Joe Biden in 2020",
+    "Called for Republicans to abandon Trump after January 6",
+    "Consistently challenged GOP leaders for enabling Trump"
+  ],
+  "credibility": {
+    "strengths": [
+      "Former chairman of Republican National Committee",
+      "First African American RNC chairman",
+      "Former Lieutenant Governor of Maryland",
+      "Deep understanding of Republican Party operations",
+      "Consistent conservative principles independent of Trump"
+    ],
+    "considerations": [
+      "Some view his MSNBC role as catering to liberal audience",
+      "Lost GOP establishment support due to Trump criticism",
+      "Mixed record as RNC chairman with 2010 midterm success but internal conflicts",
+      "Seen by some Trump supporters as part of 'Never Trump' movement"
+    ]
+  }
+}

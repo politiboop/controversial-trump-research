@@ -1,0 +1,94 @@
+{
+  "id": "nikki-haley",
+  "name": "Nikki Haley",
+  "role": "U.S. Ambassador to the United Nations",
+  "administration": "Trump Administration",
+  "years": "2017-2018",
+  "militaryRank": null,
+  "category": "former-cabinet",
+  "subCategory": "ambassador",
+  "photo": null,
+  "summary": "Former UN Ambassador and South Carolina Governor who ran against Trump in the 2024 GOP primary, then said he needed to earn her voters and later said she would vote for him.",
+  "keyStatements": [
+    {
+      "quote": "It's now up to Donald Trump to earn the votes of those in our party who did not support him.",
+      "date": "2024-03-06",
+      "source": "CNN",
+      "context": "Suspending her campaign",
+      "url": "https://www.cnn.com/2024/03/06/politics/nikki-haley-suspends-campaign/index.html"
+    },
+    {
+      "quote": "I will be voting for Trump.",
+      "date": "2024-05-22",
+      "source": "CNN",
+      "context": "Remarks after dropping out of the GOP primary",
+      "url": "https://www.cnn.com/2024/05/22/politics/nikki-haley-vote-for-trump/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2011-2017",
+      "event": "Governor of South Carolina",
+      "significance": "First female and minority governor of SC"
+    },
+    {
+      "date": "2017-01-25",
+      "event": "Confirmed as UN Ambassador",
+      "significance": "Joined Trump cabinet"
+    },
+    {
+      "date": "2018-12-31",
+      "event": "Left UN Ambassador role",
+      "significance": "Resigned on good terms"
+    },
+    {
+      "date": "2023-02-15",
+      "event": "Announced 2024 presidential campaign",
+      "significance": "Challenged Trump for GOP nomination"
+    },
+    {
+      "date": "2024-01-23",
+      "event": "Called Trump 'unhinged'",
+      "significance": "Escalated criticism during primary"
+    },
+    {
+      "date": "2024-03-06",
+      "event": "Suspended presidential campaign",
+      "significance": "Ended race after Super Tuesday"
+    },
+    {
+      "date": "2024-05-22",
+      "event": "Said she would vote for Trump",
+      "significance": "Backed him after dropping out"
+    }
+  ],
+  "credibility": {
+    "background": "Former UN Ambassador, Governor of South Carolina, daughter of immigrants, 2024 presidential candidate",
+    "positions": [
+      "U.S. Ambassador to the United Nations (2017-2018)",
+      "Governor of South Carolina (2011-2017)",
+      "Member, South Carolina House of Representatives (2005-2011)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Said Trump needed to earn the votes of Republicans who did not support him",
+    "Withheld endorsement when suspending her campaign"
+  ],
+  "endorsement": "Said she would vote for Trump on 2024-05-22",
+  "sources": [
+    {
+      "title": "Nikki Haley suspends her presidential campaign",
+      "url": "https://www.cnn.com/2024/03/06/politics/nikki-haley-suspends-campaign/index.html",
+      "date": "2024-03-06",
+      "type": "news"
+    },
+    {
+      "title": "Nikki Haley says she will vote for Trump",
+      "url": "https://www.cnn.com/2024/05/22/politics/nikki-haley-vote-for-trump/index.html",
+      "date": "2024-05-22",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

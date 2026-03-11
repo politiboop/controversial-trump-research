@@ -1,0 +1,87 @@
+{
+  "id": "ty-cobb",
+  "name": "Ty Cobb",
+  "role": "White House Special Counsel",
+  "administration": "Trump Administration",
+  "years": "2017-2018",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "white-house-counsel",
+  "photo": null,
+  "summary": "Former White House lawyer who later called Trump a threat to democracy and said he was the greatest threat the country has faced.",
+  "keyStatements": [
+    {
+      "quote": "Trump is a 'deeply wounded narcissist' and a threat to democracy.",
+      "date": "2023-06-13",
+      "source": "CNN",
+      "context": "Interview after classified documents indictment",
+      "url": "https://www.cnn.com/2023/06/13/politics/ty-cobb-trump-documents-indictment/index.html"
+    },
+    {
+      "quote": "There is no question that he obstructed justice. It's not a close question.",
+      "date": "2023-06-13",
+      "source": "CNN",
+      "context": "On Trump's handling of classified documents",
+      "url": "https://www.cnn.com/2023/06/13/politics/ty-cobb-trump-documents-indictment/index.html"
+    },
+    {
+      "quote": "He's the greatest threat this country has ever faced.",
+      "date": "2024-10-09",
+      "source": "CNN",
+      "context": "Interview warning about a second Trump term",
+      "url": "https://www.cnn.com/2024/10/09/politics/ty-cobb-trump-greatest-threat/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-07-31",
+      "event": "Joined White House as Special Counsel",
+      "significance": "Hired to handle Russia probe"
+    },
+    {
+      "date": "2018-05-02",
+      "event": "Left White House",
+      "significance": "Resigned from position"
+    },
+    {
+      "date": "2023-06-13",
+      "event": "Called Trump a threat to democracy",
+      "significance": "Spoke out after classified documents indictment"
+    },
+    {
+      "date": "2024-10-09",
+      "event": "Called Trump the greatest threat the country has faced",
+      "significance": "Warned about a second term"
+    }
+  ],
+  "credibility": {
+    "background": "Former White House Special Counsel, veteran lawyer with decades of experience",
+    "positions": [
+      "White House Special Counsel (2017-2018)",
+      "Partner, Hogan Lovells",
+      "Federal prosecutor"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump a threat to democracy",
+    "Said Trump obstructed justice in the documents case",
+    "Called Trump the greatest threat the country has faced"
+  ],
+  "endorsement": "Opposes Trump's return to office",
+  "sources": [
+    {
+      "title": "Ty Cobb calls Trump a threat to democracy, says he obstructed justice",
+      "url": "https://www.cnn.com/2023/06/13/politics/ty-cobb-trump-documents-indictment/index.html",
+      "date": "2023-06-13",
+      "type": "news"
+    },
+    {
+      "title": "Ty Cobb: Trump is the greatest threat this country has ever faced",
+      "url": "https://www.cnn.com/2024/10/09/politics/ty-cobb-trump-greatest-threat/index.html",
+      "date": "2024-10-09",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

@@ -1,0 +1,355 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const epsteinTabs = [
+  { label: 'Overview', href: '/epstein-files' },
+  { label: 'The Relationship', href: '/epstein-files/the-relationship' },
+  { label: 'Court Documents', href: '/epstein-files/court-documents' },
+  { label: 'Allegations', href: '/epstein-files/allegations' },
+  { label: 'Evidence', href: '/epstein-files/evidence' },
+  { label: 'The Network', href: '/epstein-files/epstein-network' },
+];
+
+const tickerItems = [
+  "Allegations Are Not Proof — All Claims Properly Qualified with Legal Status",
+  "Katie Johnson Case: Filed in Federal Court, Withdrawn Under Death Threats",
+  "Virginia Giuffre: Trump Was Part of Epstein's Circle but Did Not Witness Abuse",
+  "E. Jean Carroll: Jury Found Trump Liable for Sexual Abuse (2023)",
+  "25+ Women Have Accused Trump of Sexual Misconduct",
+  "Trump Aggressively Opposes Releasing Epstein Files",
+];
+---
+
+<ResearchLayout title="Legal Allegations: Court-Filed Claims with Full Context" description="Comprehensive documentation of legal allegations filed in court related to Trump and Epstein, with proper legal qualification, case status, and expert analysis.">
+
+  <SeriesNav tabs={epsteinTabs} currentPath="/epstein-files/allegations" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Epstein Files', href: '/epstein-files' },
+    { label: 'Allegations' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 3 of 5 &middot; The Epstein Files"
+    title="LEGAL ALLEGATIONS"
+    titleHighlight="ALLEGATIONS"
+    subtitle="Court-filed claims with full legal context"
+    date="Legal Standards &middot; Case Details &middot; Proper Qualification &middot; Responsible Analysis"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <!-- CONTENT WARNING -->
+  <ColoredSection background="#1a0a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x26A0;&#xFE0F;" title="Content Warning" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;">This page documents legal allegations involving sexual assault and abuse of minors. Content is presented with appropriate professional standards and sensitivity, but readers should be aware of the serious nature of the subject matter. <strong>All allegations are properly qualified with legal status and context.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <IntroQuote
+    quote="Legal allegations represent claims made in formal court filings. This documentation presents allegations filed in court related to Trump and Epstein, with full legal context including case status, legal standards, and outcome. It is critical to understand that an allegation is not proof, and that many allegations are disputed or have been dismissed."
+    citation="Documented with Highest Standards of Legal Accuracy and Sensitivity"
+  />
+
+  <!-- LEGAL STANDARDS -->
+  <SectionDivider label="Legal Framework" />
+  <SectionHeader
+    eyebrow="Understanding Context"
+    title="Understanding<br>Legal Standards"
+    introText="Before examining specific allegations, it is essential to understand the legal framework for evaluating them."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4D6;"
+      title="What Is an Allegation?"
+      body="An allegation is a claim made in a legal proceeding. Allegations must be taken seriously and investigated, but they are not proof. They can be: <strong>Proven</strong> (established in court), <strong>Admitted</strong> (acknowledged by accused), <strong>Settled</strong> (resolved without admission), <strong>Dismissed</strong> (thrown out for legal reasons), or <strong>Unresolved</strong> (still pending)."
+      tag="Definition"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Why Dismissed Cases Matter"
+      body="Cases can be dismissed for reasons unrelated to truth: technical deficiencies in filing, statute of limitations, lack of jurisdiction, procedural issues, or voluntary withdrawal. <strong>A dismissal does not mean allegations were false, nor does it mean they were true.</strong>"
+      tag="Context"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4CA;"
+      title="Civil vs. Criminal Standards"
+      body="<strong>Civil cases</strong> require &quot;preponderance of evidence&quot; (more likely than not). <strong>Criminal cases</strong> require &quot;beyond reasonable doubt&quot; (very high certainty). Allegations can be true but not provable beyond reasonable doubt, which is why civil cases sometimes succeed where criminal prosecution fails."
+      tag="Standards"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- KATIE JOHNSON CASE -->
+  <SectionDivider label="Federal Case" />
+  <SectionHeader
+    eyebrow="2016 Federal Lawsuit"
+    title="Katie Johnson Case"
+    introText="A civil lawsuit filed in federal court alleging assault by Trump and Epstein, withdrawn under reported death threats."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4C4;"
+      title="Case Details"
+      body="In April 2016, a woman using the pseudonym &quot;Katie Johnson&quot; filed a civil lawsuit in California federal court alleging that Donald Trump and Jeffrey Epstein raped her in 1994 when she was 13 years old. Initially dismissed for technical filing issues. Refiled in New York federal court in June 2016 with additional details and a corroborating witness declaration."
+      tag="Filed 2016"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4DD;"
+      title="The Allegations"
+      body="Johnson was 13 in 1994 when recruited to attend parties at Epstein's Manhattan residence. Trump allegedly raped her at one or more parties. Trump allegedly made threats against her and her family. Epstein allegedly participated in and facilitated the abuse."
+      tag="Allegations"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F464;"
+      title="Corroborating Witness"
+      body="The refiled lawsuit included a declaration from &quot;Tiffany Doe,&quot; who claimed to have been employed by Epstein and to have witnessed Trump's interactions with Johnson and other minors at Epstein's residence in 1994-1995. The declaration provided specific details about events at Epstein's parties."
+      tag="Witness Declaration"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x274C;"
+      title="Case Withdrawal"
+      body="In November 2016, days before a scheduled press conference, the case was voluntarily dismissed. The attorney stated Johnson had received death threats and was too frightened to proceed. A scheduled press conference where Johnson was to reveal her identity was canceled."
+      tag="Withdrawn"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Legal Status: Dismissed/Withdrawn"
+      body="The case never proceeded to discovery or trial. No evidence was tested in court. No judicial determination was made about the truth or falsity of the allegations. <strong>The truth cannot be determined from available information.</strong>"
+      tag="Not Adjudicated"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F50D;" title="Balanced Evaluation" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong>Factors raising credibility concerns:</strong> Initial filing had technical deficiencies. Plaintiff used pseudonym and never publicly revealed identity. Timing during 2016 election raised political suspicions. Case withdrawn before any evidence testing. No corroborating physical evidence presented.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong>Factors supporting credibility:</strong> Alleged events occurred at Epstein's residence during confirmed Trump-Epstein social relationship period. Corroborating witness declaration provided specific details. Death threats are consistent with pattern of intimidation in other Epstein cases. Details align with known facts about Epstein's residence and activities in 1994. Reluctance to come forward is typical of sexual assault survivors.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- REFERENCES IN OTHER CASES -->
+  <SectionDivider label="Other Cases" />
+  <SectionHeader
+    eyebrow="Epstein Survivor Testimony"
+    title="References in Other<br>Epstein Cases"
+    introText="Multiple Epstein survivors have testified about Trump's presence in Epstein's social circle."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4DD;"
+      title="Virginia Giuffre Depositions"
+      body="Giuffre testified Trump was present at some of Epstein's properties. She stated she did not personally witness Trump engage in sexual activity with minors. In a 2016 deposition: &quot;Donald Trump was a good friend of Jeffrey's&quot; and Trump &quot;didn't partake in any&quot; of Epstein's sex with minors as far as she saw."
+      tag="Deposition"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4DD;"
+      title="Johanna Sjoberg Deposition"
+      body="Johanna Sjoberg, who alleged she was recruited and abused by Epstein, provided deposition testimony unsealed in 2024. Her testimony includes references to Trump in the context of Epstein's social circle. Like Giuffre, she establishes Trump's presence in Epstein's orbit but does not allege Trump engaged in criminal conduct."
+      tag="Unsealed 2024"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4DD;"
+      title="Maria Farmer Allegations"
+      body="Maria Farmer, who has alleged Epstein and Maxwell abused her, has described Trump as part of Epstein's social circle and expressed concern about the relationship. She has not alleged Trump personally abused her or that she witnessed Trump engage in criminal conduct."
+      tag="Public Statements"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F50E;&#xFE0F;" title="Pattern Across Testimonies" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Across multiple witnesses and survivors, a consistent pattern emerges: <strong style="color: var(--text);">Trump was part of Epstein's social circle during the period Epstein was actively trafficking minors.</strong> Witnesses place Trump at Epstein's properties and events. However, none of the publicly available testimony from survivors who have testified under oath alleges they personally witnessed Trump engage in sexual activity with minors or that Trump directly participated in Epstein's trafficking operation.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- BROADER PATTERN -->
+  <SectionDivider label="Broader Context" />
+  <SectionHeader
+    eyebrow="Beyond Epstein"
+    title="Trump's History of Sexual<br>Misconduct Allegations"
+    introText="The Epstein-related allegations exist within a broader pattern of sexual misconduct allegations against Trump."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="E. Jean Carroll Case"
+      body="Jury found Trump liable for sexual abuse in civil trial (2023). This is a <strong>proven</strong> finding &mdash; not an allegation."
+      tag="Proven"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F399;&#xFE0F;"
+      title="Access Hollywood Tape"
+      body="Trump recorded bragging about grabbing women's genitals without consent: &quot;When you're a star, they let you do it.&quot; Trump's own words on tape."
+      tag="His Own Words"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F4CB;"
+      title="25+ Accusers"
+      body="Trump has been accused of sexual misconduct by more than 25 women in various contexts unrelated to Epstein. Including Summer Zervos, Jill Harth, and many others alleging inappropriate touching, kissing, or sexual assault."
+      tag="Pattern"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F5E3;&#xFE0F;"
+      title="Comments About Young Women"
+      body="2002: Epstein likes women &quot;on the younger side.&quot; 1992: About 10-year-old girl: &quot;I am going to be dating her in 10 years.&quot; Multiple comments about his daughter Ivanka's appearance. Allegations of entering teen beauty pageant dressing rooms."
+      tag="Documented"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x26A0;&#xFE0F;" title="Why This Pattern Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">When evaluating Epstein-related allegations against Trump, this broader pattern is relevant context. Trump's documented history of sexual misconduct allegations, inappropriate comments about young women, ownership of beauty pageants, and friendship with a convicted sex trafficker create a pattern that affects how reasonable people evaluate his character and fitness for office. <strong style="color: var(--text);">This does not prove any specific allegation, but it is relevant context for understanding credibility concerns.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- TRUMP'S RESPONSES -->
+  <SectionDivider label="Response Pattern" />
+  <SectionHeader
+    eyebrow="Consistent Pattern"
+    title="Trump's Responses<br>to Allegations"
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x274C;"
+      title="Standard Response Pattern"
+      body="Categorical denials. Attacks on accusers' credibility, appearance, or motives. Claims allegations are politically motivated. Threats of or actual defamation lawsuits. Claims of &quot;fake news&quot; or media conspiracy."
+      tag="Repeated"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F504;"
+      title="Shifting Epstein Narrative"
+      body="<strong>Before arrest:</strong> Acknowledged friendship, praised Epstein. <strong>After 2016:</strong> Claimed limited relationship, &quot;falling out.&quot; <strong>2019+:</strong> &quot;I wasn't a fan,&quot; minimal contact. <strong>2024-present:</strong> &quot;Fake news,&quot; claimed Mar-a-Lago ban."
+      tag="Evolution"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F6AB;"
+      title="Opposition to Transparency"
+      body="Rather than supporting release of files (which would presumably exonerate him): told MTG files would hurt &quot;friends,&quot; forced her resignation, overseen DOJ deletion of documents, AG Bondi surveilled Congress members, Senate Judiciary forced to subpoena. <strong>Only 3M of 6M ordered documents turned over.</strong>"
+      tag="Cover-Up"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- RESPONSIBLE CONCLUSIONS -->
+  <SectionDivider label="Conclusions" />
+  <SectionHeader
+    eyebrow="Balanced Assessment"
+    title="Responsible<br>Conclusions"
+    introText="A careful accounting of what can be stated as fact, what cannot, and what questions remain."
+  />
+
+  <ConsequencesGrid eyebrow="What Can Be Stated as Fact" title="Established<br>Facts">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="15+ Year Relationship"
+        description="Trump maintained a documented social relationship with Jeffrey Epstein, a convicted sex trafficker."
+      />
+      <ConsequenceItem
+        number="02"
+        title="Public Praise"
+        description="Trump praised Epstein publicly and acknowledged his preference for women 'on the younger side.'"
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Federal Allegations Filed"
+        description="Allegations of sexual assault were formally filed in federal court against Trump and Epstein jointly."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Aggressive Opposition"
+        description="Trump has aggressively opposed releasing Epstein files and punished allies who called for transparency."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x2696;&#xFE0F;" title="What Cannot Be Stated as Fact" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">No court has found Trump participated in Epstein's crimes. No survivor testimony publicly available alleges they witnessed Trump engage in sexual activity with minors. The truth of the Katie Johnson allegations cannot be determined from available evidence. Trump's knowledge of Epstein's criminal activity during their friendship is not definitively established.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x2753;" title="Questions That Remain Unanswered" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;">What is in the sealed Epstein files that Trump is protecting? Why is Trump willing to force out political allies to prevent transparency? Who are the &quot;friends&quot; Trump said would be &quot;hurt&quot; by file release? What was in DOJ document EFTA01660679 that prompted immediate deletion? When did Trump become aware of Epstein's criminal behavior, and what did he do with that knowledge? Why has Trump's narrative about his Epstein relationship shifted so dramatically over time?</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CHARACTER AND FITNESS -->
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F9D1;&#x200D;&#x2696;&#xFE0F;"
+      title="Character and Fitness"
+      body="Even setting aside unproven allegations, the established facts raise serious questions: 15+ year friendship with a sex trafficker demonstrates catastrophically poor judgment. Praising Epstein and joking about his preference for young women shows callous disregard. Aggressive opposition to transparency suggests consciousness of guilt."
+      tag="Assessment"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4E2;"
+      title="Demand for Transparency"
+      body="Citizens have the right to know about serious allegations involving candidates for office. The active cover-up efforts &mdash; DOJ deletion, forced resignations, threats against allies &mdash; demonstrate Trump has something to hide. Citizens should demand release of all Epstein-related files with only necessary redactions for victim privacy."
+      tag="Public Interest"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="The Questions<br>Remain."
+    description="What is in the sealed Epstein files? Why is Trump willing to destroy allies to prevent transparency? What is being hidden?"
+    linkText="Next: Evidence &#x2192;"
+    linkHref="/epstein-files/evidence"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Court Documents', href: '/epstein-files/court-documents' }}
+    next={{ label: 'Evidence', href: '/epstein-files/evidence' }}
+    currentIndex={2}
+    totalPages={5}
+  />
+
+</ResearchLayout>

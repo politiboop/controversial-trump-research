@@ -1,0 +1,30 @@
+---
+interface Props {
+  accentColor?: string;
+}
+
+const { accentColor } = Astro.props;
+---
+
+<section class="stat-section">
+  <div class="stat-grid">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .stat-section {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 24px;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+</style>

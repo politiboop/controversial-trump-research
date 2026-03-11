@@ -1,0 +1,98 @@
+{
+  "id": "adam-kinzinger",
+  "name": "Adam Kinzinger",
+  "role": "U.S. Representative from Illinois",
+  "administration": null,
+  "years": "2011-2023",
+  "militaryRank": "Lieutenant Colonel, U.S. Air Force (Reserves)",
+  "category": "congress",
+  "subCategory": "representative",
+  "photo": null,
+  "summary": "Former Republican Congressman and Air Force officer who served on the January 6 Committee and became one of Trump's most vocal GOP critics, endorsing Kamala Harris in 2024.",
+  "keyStatements": [
+    {
+      "quote": "Donald Trump is a weak man pretending to be strong. He is a small man pretending to be big. He's a faithless man pretending to be righteous.",
+      "date": "2024-08-22",
+      "source": "Time (DNC speech transcript)",
+      "url": "https://time.com/7014257/adam-kinzinger-2024-dnc-speech-full-transcript/"
+    },
+    {
+      "quote": "My party has utterly failed the American people at truth.",
+      "date": "2022-06-19",
+      "source": "ABC News (This Week)",
+      "context": "Interview about January 6 hearings",
+      "url": "https://www.goodmorningamerica.com/news/story/adam-kinzinger-thinks-donald-trump-criminal-involvement-jan-85482800"
+    },
+    {
+      "quote": "Vote for our bedrock values. And vote for Kamala Harris.",
+      "date": "2024-08-22",
+      "source": "Time (DNC speech transcript)",
+      "url": "https://time.com/7014257/adam-kinzinger-2024-dnc-speech-full-transcript/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2011-01-03",
+      "event": "Elected to U.S. House of Representatives",
+      "significance": "Began congressional career"
+    },
+    {
+      "date": "2021-01-13",
+      "event": "Voted to impeach Trump",
+      "significance": "One of 10 House Republicans to vote for impeachment after January 6"
+    },
+    {
+      "date": "2021-07-01",
+      "event": "Appointed to January 6 Committee",
+      "significance": "One of two Republicans on the committee"
+    },
+    {
+      "date": "2021-10-29",
+      "event": "Announced he would not seek re-election",
+      "significance": "Cited redistricting and political climate"
+    },
+    {
+      "date": "2023-01-03",
+      "event": "Left Congress",
+      "significance": "Did not seek re-election"
+    },
+    {
+      "date": "2024-08-22",
+      "event": "Endorsed Kamala Harris",
+      "significance": "Crossed party lines to oppose Trump"
+    }
+  ],
+  "credibility": {
+    "background": "U.S. Representative, Lieutenant Colonel in Air Force Reserve, served on January 6 Committee, veteran of Iraq and Afghanistan",
+    "positions": [
+      "U.S. Representative from Illinois (2011-2023)",
+      "Lieutenant Colonel, U.S. Air Force (Reserves)",
+      "Member, January 6 Committee (2021-2023)",
+      "Senior Political Commentator, CNN (2023-present)"
+    ],
+    "awards": [
+      "Air Medal"
+    ]
+  },
+  "oppositionReasons": [
+    "Called Trump weak and lacking moral character",
+    "Said his party failed the American people at truth",
+    "Endorsed Kamala Harris in 2024"
+  ],
+  "endorsement": "Endorsed Kamala Harris at the 2024 Democratic National Convention",
+  "sources": [
+    {
+      "title": "The Full Speech Republican Adam Kinzinger Gave at the Democratic National Convention",
+      "url": "https://time.com/7014257/adam-kinzinger-2024-dnc-speech-full-transcript/",
+      "date": "2024-08-22",
+      "type": "transcript"
+    },
+    {
+      "title": "Adam Kinzinger thinks Donald Trump 'is guilty of knowing what he did' in Jan. 6 insurrection",
+      "url": "https://www.goodmorningamerica.com/news/story/adam-kinzinger-thinks-donald-trump-criminal-involvement-jan-85482800",
+      "date": "2022-06-19",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

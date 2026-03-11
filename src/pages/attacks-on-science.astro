@@ -1,0 +1,443 @@
+---
+import ResearchLayout from '../layouts/ResearchLayout.astro';
+import Masthead from '../components/design/Masthead.astro';
+import Ticker from '../components/design/Ticker.astro';
+import IntroQuote from '../components/design/IntroQuote.astro';
+import HighlightBar from '../components/design/HighlightBar.astro';
+import StatGrid from '../components/design/StatGrid.astro';
+import StatCard from '../components/design/StatCard.astro';
+import SectionHeader from '../components/design/SectionHeader.astro';
+import SectionDivider from '../components/design/SectionDivider.astro';
+import CategoryGrid from '../components/design/CategoryGrid.astro';
+import CategoryCard from '../components/design/CategoryCard.astro';
+import TimelineSection from '../components/design/TimelineSection.astro';
+import TimelineItem from '../components/design/TimelineItem.astro';
+import VoicesSection from '../components/design/VoicesSection.astro';
+import VoiceCard from '../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../components/design/ConsequenceItem.astro';
+import CTASection from '../components/design/CTASection.astro';
+import ColoredSection from '../components/design/ColoredSection.astro';
+import SurveyStatCard from '../components/design/SurveyStatCard.astro';
+import FieldImpactCard from '../components/design/FieldImpactCard.astro';
+import AlertBanner from '../components/design/AlertBanner.astro';
+
+const tickerItems = [
+  "57 Documented Attacks on Scientific Integrity",
+  "20,500+ Scientists & Health Workers Fired",
+  "US Lost Measles Elimination Status",
+  "Whooping Cough Up 1,000%",
+  "$500M mRNA Research Cancelled",
+  "All 17 Vaccine Experts Fired",
+  "EPA Revokes Climate Endangerment Finding",
+  "$600M HIV Prevention Funding Cut",
+  "694 NIH Grants Cancelled",
+  "10,000 Health Workers Fired in One Day",
+  "1,817 Fish & Wildlife Staff Fired",
+  "2,700 National Park Service Staff Cut",
+  "7,000+ Forest Service & BLM Workers Gone",
+  "NOAA Budget Cut 27% — Climate Research Arm Eliminated",
+  "32 Bills Introduced to Weaken Endangered Species Act",
+  "Gray Wolves Delisted — Open Season Allowed",
+  "48% of Scientists Now Self-Censor",
+  "Mauna Loa Observatory Climate Data at Risk",
+  "420+ Environmental Rollbacks Since Jan 2025",
+  "Migratory Bird Protections Stripped",
+];
+---
+
+<ResearchLayout title="Trump's War on Science" description="How the Trump Administration is dismantling human health, the earth, and wildlife — documented evidence from January 2025 through March 2026.">
+
+  <Masthead
+    eyebrow="Documented Evidence · Updated March 2026"
+    title="THE <span class='word-red'>WAR</span><br>ON SCIENCE"
+    subtitle="How the Trump Administration is Dismantling Human Health, the Earth, and Wildlife"
+    date="SOURCE: Senate PSI Report · thetrumptracker.com · CDC · NIH · EPA · FDA Public Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The harms from the Trump Administration's cuts and firings will accumulate for years, indeed for decades, to come: lives that might have been saved by studies the Administration defunded; the loss of scientific innovation as scientists flee to countries where their work is not censored."
+    citation="Senate Permanent Subcommittee on Investigations, September 9, 2025"
+  />
+
+  <HighlightBar text="🚨 The Senate documented 57 attacks on scientific integrity in just 8 months. They have accelerated every month since." />
+
+  <!-- STATS -->
+  <StatGrid>
+    <StatCard target={57} label="Documented attacks on scientific integrity (first 8 months)" />
+    <StatCard target={20500} suffix="+" label="Scientists & health workers fired or forced out" />
+    <StatCard target={10000} label="HHS employees laid off in a single day (April 1, 2025)" />
+    <StatCard target={500} prefix="$" suffix="M" label="mRNA vaccine research cancelled — 22 studies cut" />
+    <StatCard target={17} label="Vaccine advisory committee members fired; replaced with skeptics" />
+    <StatCard target={694} label="NIH research grants cancelled worth $2.4 billion" />
+    <StatCard target={2855} label="Measles cases in 2025 — US lost elimination status for first time in decades" />
+    <StatCard target={10} suffix="×" label="Increase in whooping cough cases — 28,783 by Sept 2025" />
+    <StatCard target={600} prefix="$" suffix="M" label="HIV & STD prevention funding cancelled, targeting Democrat-led states" />
+    <StatCard target={1817} label="US Fish & Wildlife Service staff fired — endangered species left unprotected" />
+    <StatCard target={7000} suffix="+" label="Forest Service & Bureau of Land Management workers cut" />
+    <StatCard target={420} suffix="+" label="Environmental actions threatening climate, health & wildlife (NRDC tracking)" />
+    <StatCard target={48} suffix="%" label="Scientists who report self-censoring their work due to political pressure" />
+    <StatCard target={32} label="Bills introduced in 2025 aimed at weakening the Endangered Species Act" />
+  </StatGrid>
+
+  <!-- CHAPTER I: SILENCING SCIENCE -->
+  <SectionHeader
+    eyebrow="Chapter I"
+    title="Silencing<br>the Scientists"
+    introText="The first step in destroying inconvenient science: muzzle the scientists who produce it."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🤐"
+      title="Communications Blackout"
+      body="On <strong>January 21, 2025</strong>, the CDC was ordered to pause all federal health communications — failing to issue its weekly Morbidity and Mortality Weekly Report for the first time in agency history. Information about bird flu and drug overdose deaths was withheld from the public."
+      tag="Day One"
+    />
+    <CategoryCard
+      icon="🗑️"
+      title="Purging Federal Databases"
+      body="On <strong>January 29, 2025</strong>, the administration removed websites and purged agency databases — eliminating safe food choices during pregnancy and HIV prevention information. A CDC advisory board called it <strong>&quot;unprecedented.&quot;</strong>"
+      tag="Data Erasure"
+    />
+    <CategoryCard
+      icon="📕"
+      title="Journal Publication Ban"
+      body="On <strong>January 31, 2025</strong>, CDC researchers were blocked from publishing in any journal. Staff were forced to retract already-submitted work to ensure no <strong>&quot;forbidden terms&quot;</strong> appeared — including &quot;race,&quot; &quot;bias,&quot; and &quot;disparity.&quot;"
+      tag="Censorship"
+    />
+    <CategoryCard
+      icon="🌡️"
+      title="Suppressed Measles Forecast"
+      body="On <strong>March 24, 2025</strong>, during the worst measles outbreak in decades, CDC leaders ordered staff <em>not to release</em> a report showing high risk in areas with lagging vaccination rates. The public was left in the dark."
+      tag="Public Health Crisis"
+    />
+    <CategoryCard
+      icon="🔬"
+      title="Ultra-Processed Food Research Censored"
+      body="NIH's top researcher on ultra-processed foods, <strong>Dr. Kevin Hall</strong>, resigned on April 16, 2025 after leadership suppressed his findings. He stated NIH made him feel he could no longer <em>&quot;freely conduct unbiased science.&quot;</em>"
+      tag="Suppression"
+    />
+    <CategoryCard
+      icon="📊"
+      title="Economic Data Manipulation"
+      body="The BLS Commissioner was <strong>fired</strong> after a weak jobs report — the first in 140-year history. In November 2025, the October jobs report was cancelled for the first time in <strong>75+ years</strong>, creating a permanent blind spot in US employment records."
+      tag="Data Suppression"
+    />
+  </CategoryGrid>
+
+  <!-- CHAPTER II: THE PURGE -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II"
+    title="The Great<br>Purge"
+    introText="Fire every expert who won't compromise their integrity. Install loyalists who will."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💀"
+      title="April 1, 2025: Mass Firing Day"
+      body="10,000 HHS employees were laid off in a single day. <strong>2,473 fired from CDC. 2,519 from FDA. 1,312 from NIH.</strong> The Childhood Lead Poisoning Prevention Program was eliminated — at the same time lead exposure forced closure of Milwaukee schools, displacing 1,800 students."
+      tag="Catastrophic"
+    />
+    <CategoryCard
+      icon="💉"
+      title="All 17 Vaccine Experts Fired"
+      body="On <strong>June 9, 2025</strong>, Kennedy dismissed all 17 members of the Advisory Committee on Immunization Practices — the first such mass firing in history. Replacements included people with records of expressing unfounded doubts about vaccine safety. One new member had posted memes about gun violence 48 hours after a police officer was killed at CDC headquarters."
+      tag="Unprecedented"
+    />
+    <CategoryCard
+      icon="🧑‍⚕️"
+      title="Top FDA Vaccine Regulator Forced Out"
+      body="<strong>Dr. Peter Marks</strong> resigned on March 28, 2025 — saying Kennedy wanted <em>&quot;subservient confirmation of his misinformation and lies,&quot;</em> not transparency. Kennedy had sought to &quot;edit&quot; the vaccine safety database. Marks refused."
+      tag="Integrity Purge"
+    />
+    <CategoryCard
+      icon="🏥"
+      title="Hired Discredited Researchers"
+      body="<strong>David Geier</strong> — disciplined for practicing medicine without a license — was hired to lead HHS efforts to find &quot;the cause&quot; of autism. His studies linking vaccines and autism were retracted and widely condemned as methodologically unsound."
+      tag="Pseudoscience"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="EPA Gutted to 40-Year Low"
+      body="EPA staffing dropped to <strong>12,849 employees</strong> — the lowest in 40 years — after losing over 4,000 workers (24% of its workforce). Scientists with 30 years of experience were replaced by nothing. The Office of Research and Development was dissolved entirely."
+      tag="Environmental"
+    />
+    <CategoryCard
+      icon="🔢"
+      title="CDC Removes 6 Vaccines from Schedule"
+      body="Under RFK Jr., the CDC removed six previously recommended childhood vaccines — <strong>rotavirus, meningitis, hepatitis A, hepatitis B, HPV, and chickenpox</strong> — without scientific review. All 17 expert advisors who were fired to clear the path for this decision."
+      tag="Children at Risk"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- CLIMATE SECTION -->
+  <HighlightBar
+    text={'🌡️ "This isn\'t deregulation. This is denial of science itself." — Former EPA Administrator Gina McCarthy, on the revocation of the Endangerment Finding'}
+    variant="amber"
+  />
+
+  <SectionHeader
+    eyebrow="Chapter III"
+    title="Destroying<br>the Planet"
+    introText="Eliminating the legal foundations of environmental protection — one signature at a time."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💨"
+      title="EPA Endangerment Finding Revoked"
+      body="On <strong>February 12, 2026</strong>, the EPA revoked the Endangerment Finding — the scientific determination that greenhouse gases endanger public health. Called the <em>&quot;largest deregulatory action in history,&quot;</em> this eliminates the legal foundation for ALL federal climate regulations, contradicting the consensus of <strong>97%+ of climate scientists</strong>. 18 states immediately filed lawsuits."
+      tag="Climate Catastrophe"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="🧴"
+      title="Defense Production Act for Cancer-Linked Chemical"
+      body="On <strong>February 19, 2026</strong>, Trump invoked wartime law to mandate domestic production of <strong>glyphosate</strong> — classified by the WHO as &quot;probably carcinogenic.&quot; Bayer donated $1M to Trump's inauguration. RFK Jr., who once won a $289M verdict against Monsanto for glyphosate cancer — now defends the order."
+      tag="Carcinogen"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="🦅"
+      title="National Parks: History & Science Erased"
+      body="In <strong>January 2026</strong>, National Park Service removed climate change and Native American history displays from visitor centers nationwide. At Yellowstone, interpretive panels about climate impacts were removed. Staff received directives to eliminate <em>&quot;politically sensitive&quot;</em> content."
+      tag="Erasure"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="🌎"
+      title="Withdrew from World Health Organization"
+      body="On <strong>January 20, 2025</strong>, Trump withdrew the US from the WHO — abandoning international cooperation on pandemic preparedness, disease surveillance, and global health emergencies at the exact moment a bird flu outbreak was ongoing."
+      tag="Isolationism"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="⛽"
+      title="Coal Power Ordered for the Pentagon"
+      body="Trump signed an executive order directing the Department of Defense to purchase electricity from <strong>coal-fired power plants</strong> — using the military as a taxpayer-funded subsidy for the fossil fuel industry, reversing clean energy commitments."
+      tag="Fossil Fuels"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="🦠"
+      title="Pandemic Preparedness Gutted"
+      body="The administration cancelled <strong>$11.4 billion in CDC grants</strong>, terminated 29+ grants for antivirals targeting future outbreaks (Ebola, dengue, chikungunya), and cancelled a Moderna bird flu vaccine contract during an <em>active bird flu outbreak</em> that had already killed people."
+      tag="Existential Risk"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- TIMELINE -->
+  <TimelineSection title="A Complete<br>Chronology" subtitle="Jan 2025 — Mar 2026 · 38 Events">
+    <TimelineItem date="Jan 20, 2025" badge="Catastrophic" badgeType="catastrophic" title="Day One: WHO Withdrawal, Paris Climate Exit, Wind Energy Freeze, 17 Watchdogs Fired" description="Executive orders pulled the US from the World Health Organization and the Paris Climate Agreement, paused all wind energy permitting, and fired 17 independent Inspectors General — removing every federal government watchdog in a single day." />
+    <TimelineItem date="Jan 21, 2025" badge="Catastrophic" badgeType="catastrophic" title="Communications Blackout — CDC Misses Weekly Report for First Time in History" description="All federal health communications paused. CDC failed to issue its Morbidity and Mortality Weekly Report — never missed in agency history. Critical bird flu and drug overdose death data withheld from the public." />
+    <TimelineItem date="Jan 27–31, 2025" badge="Catastrophic" badgeType="catastrophic" title="Federal Grant Freeze Attempted, EPA Advisory Boards Fired, Agency Databases Purged" description="Jan 27: Attempted to freeze all federal grant funding. Jan 28: All EPA scientific advisory board members fired. Jan 29: Agency databases purged — pregnancy nutrition info and HIV prevention resources deleted. Jan 31: CDC researchers banned from publishing in any scientific journal; existing submissions forced to retract." />
+    <TimelineItem date="Feb 4, 2025" badge="Catastrophic" badgeType="catastrophic" title="RFK Jr. Eliminates 6 Vaccines from CDC Guidance Without Scientific Review" description="MMR, hepatitis A & B, HPV, chickenpox, and varicella removed from CDC immunization recommendations by directive — bypassing the advisory committee that was later fired to prevent future resistance." />
+    <TimelineItem date="Feb 6, 2025" badge="Catastrophic" badgeType="catastrophic" title="USAID Cuts Abandon Dozens of Clinical Trial Patients Mid-Treatment" description="Patients receiving experimental drugs and medical devices were abruptly cut off from the researchers monitoring them. Studies included malaria treatment for children under 5 and tuberculosis treatment for children and teens. No transition plan provided." />
+    <TimelineItem date="Feb 14–18, 2025" badge="Catastrophic" badgeType="catastrophic" title="Thousands Fired at CDC, FDA, NIH — 10% of National Science Foundation Staff Cut" description="Mass firings across all major health and science agencies, including the first wave of CDC, FDA, and NIH terminations. The National Science Foundation loses 10% of its workforce in a single action." />
+    <TimelineItem date="Feb 27, 2025" badge="Serious" badgeType="serious" title="880 NOAA Employees Fired in One Day — Including Hurricane Center and Storm Prediction Center Staff" description="7.3% of NOAA's total workforce terminated overnight, including staff at the National Hurricane Center and Storm Prediction Center. 25% of the NOAA Environmental Modeling Center let go. Weather balloon launches immediately curtailed. A federal judge later ruled the firings unlawful — but the damage was done." />
+    <TimelineItem date="Mar 15, 2025" badge="Catastrophic" badgeType="catastrophic" title="694 NIH Research Grants Cancelled — $2.4 Billion in Science Destroyed" description="Cancer treatment, Alzheimer's disease, infectious diseases, rare diseases, and active clinical trials terminated. Patients in mid-trial cut off from monitoring. Some of these studies had run for decades." />
+    <TimelineItem date="Mar 24, 2025" badge="Catastrophic" badgeType="catastrophic" title="Measles Forecast Suppressed During Worst Outbreak in Decades" description="CDC leaders ordered staff not to release a report showing high outbreak risk in areas with lagging vaccination rates. The public was deliberately kept in the dark during an escalating public health emergency." />
+    <TimelineItem date="Mar 25, 2025" badge="Serious" badgeType="serious" title="Discredited Researcher Hired to Lead Vaccine-Autism Study" description="David Geier — disciplined for practicing medicine without a license in Maryland — hired to lead HHS efforts to find 'the cause' of autism. His vaccine-autism studies were retracted and condemned as methodologically unsound by the scientific community." />
+    <TimelineItem date="Mar 26, 2025" badge="Catastrophic" badgeType="catastrophic" title="$11.4 Billion in Public Health Grants Rescinded" description="State and local health departments lose COVID-19 response, testing, and vaccination funding overnight. Simultaneously, bird flu vaccine contracts with Moderna were cancelled mid-active outbreak." />
+    <TimelineItem date="Mar 28, 2025" badge="Catastrophic" badgeType="catastrophic" title="Top FDA Vaccine Regulator Resigns — 'Subservient Confirmation of Misinformation'" description="Dr. Peter Marks, director of FDA's Center for Biologics, resigns stating Kennedy demanded 'subservient confirmation of his misinformation and lies' and attempted to edit the vaccine safety database." />
+    <TimelineItem date="Apr 1, 2025" badge="Catastrophic" badgeType="catastrophic" title="10,000 HHS Employees Fired in a Single Day" description="2,473 from CDC. 2,519 from FDA. 1,312 from NIH. Lead Poisoning Prevention Program eliminated while Milwaukee schools close for lead contamination. The largest single-day mass firing in HHS history." />
+    <TimelineItem date="Apr 16, 2025" badge="Serious" badgeType="serious" title="Top NIH Researcher Resigns — Ultra-Processed Food Science Suppressed" description="Dr. Kevin Hall resigns after NIH leadership suppresses his research on ultra-processed foods, saying the agency made him feel he could no longer 'freely conduct unbiased science.'" />
+    <TimelineItem date="Apr 2025" badge="Serious" badgeType="serious" title="Migratory Bird Protections Stripped — Millions of Birds Now Legally Killed" description="Interior Department reinstates rule eliminating penalties for 'incidental' bird deaths from oil drilling, power lines, and open waste pits. Decades of corporate safeguards legally erased." />
+    <TimelineItem date="Jun 9, 2025" badge="Catastrophic" badgeType="catastrophic" title="All 17 Vaccine Advisory Committee Members Fired and Replaced with Skeptics" description="First mass firing of the Advisory Committee on Immunization Practices in history. Replaced with members who have records of expressing unfounded doubts about vaccine safety." />
+    <TimelineItem date="Jun 15, 2025" badge="Catastrophic" badgeType="catastrophic" title="US Loses Measles Elimination Status — First Time in Decades" description="WHO revokes US measles elimination status after 2,855 cases — the highest in 33 years. Four deaths. The direct, documented consequence of dismantling vaccine guidance and firing every expert who maintained it." />
+    <TimelineItem date="Jun 18, 2025" badge="Serious" badgeType="serious" title="FDA's Lead Gene Therapy Reviewer Escorted Out — No Explanation Given" description="Dr. Nicole Verdun, FDA's lead reviewer of cell and gene therapies, placed on administrative leave and escorted from the building. HHS stated FDA needed staff 'aligned' with the administration." />
+    <TimelineItem date="Jun 2025" badge="Serious" badgeType="serious" title="Department of Defense Stops Sharing Weather Data with Scientists" description="The Pentagon announces it will no longer provide critical weather data to NOAA staff and civilian scientists — further degrading the atmospheric observation network that underpins weather forecasting, hurricane tracking, and crop planning." />
+    <TimelineItem date="Jun 2025" badge="Serious" badgeType="serious" title="59 Million Acres of Protected National Forest Opened to Logging" description="Agriculture Secretary Rollins announces plans to repeal the Clinton-era Roadless Rule — which had protected 59 million acres of National Forest from road construction, logging, and industrial extraction for over two decades." />
+    <TimelineItem date="Jul 4–5, 2025" badge="Catastrophic" badgeType="catastrophic" title="Texas Flooding Kills 100+ — NOAA Staffing Cuts Directly Implicated" description="Catastrophic flash flooding across six Central Texas counties became the deadliest inland US flooding event in nearly 50 years. The Austin/San Antonio NOAA forecasting office had recently lost its Warning Coordination Meteorologist to DOGE layoffs." />
+    <TimelineItem date="Jul 18, 2025" badge="Catastrophic" badgeType="catastrophic" title="EPA Office of Research and Development Dissolved" description="The EPA's entire research arm — responsible for the science underpinning air quality standards, water safety regulations, and chemical risk assessments — is dissolved." />
+    <TimelineItem date="Aug 5, 2025" badge="Catastrophic" badgeType="catastrophic" title="$500 Million in mRNA Vaccine Research Abandoned — 22 Studies Defunded" description="BARDA terminates 22 contracts for mRNA vaccine development across universities and biotech firms. Public health experts call it a direct threat to national security." />
+    <TimelineItem date="Aug 15, 2025" badge="Catastrophic" badgeType="catastrophic" title="Bureau of Labor Statistics Commissioner Fired — First in 140-Year History" description="Dr. Erika McEntarfer fired immediately after a weak jobs report. Former Treasury Secretary Larry Summers: 'Way beyond anything Richard Nixon ever did.'" />
+    <TimelineItem date="Aug 27, 2025" badge="Catastrophic" badgeType="catastrophic" title="CDC Director Fired; Three Senior Officials Resign in Protest" description="CDC Director Susan Monarez fired after refusing Kennedy's demands to change vaccine policy and fire top CDC staff. Three other senior officials resign the same day in protest." />
+    <TimelineItem date="Sep 2025" badge="Catastrophic" badgeType="catastrophic" title="Whooping Cough Surges to 28,783 Cases — 10× Prior Year Levels" description="Direct, documented consequence of vaccine recommendation changes and the destruction of public health infrastructure. Infants — too young to be fully vaccinated — are the most vulnerable." />
+    <TimelineItem date="Nov 2025" badge="Catastrophic" badgeType="catastrophic" title="Endangered Species Act Protections Stripped — Wolves, Grizzlies, Monarchs, Manatees at Risk" description="Gray wolves delisted nationwide. Grizzly bears delisted in Greater Yellowstone. Florida manatee, Monarch butterfly, California spotted owl, and Greater sage-grouse left unprotected." />
+    <TimelineItem date="Nov 19, 2025" badge="Catastrophic" badgeType="catastrophic" title="October Jobs Report Cancelled — First Time in 900+ Months Employment Data Not Collected" description="October 2025 is now permanently missing from US employment records due to the 43-day government shutdown." />
+    <TimelineItem date="Jan 5, 2026" badge="Catastrophic" badgeType="catastrophic" title="CDC Guts Childhood Vaccine Schedule — 6 Vaccines Removed Without Review" description="Following a December 2025 presidential memorandum, the CDC updates the childhood immunization schedule — reducing the number of vaccines recommended with no scientific review process." />
+    <TimelineItem date="Jan 27, 2026" badge="Serious" badgeType="serious" title="Climate Science and Native American History Erased from National Parks" description="National Park Service ordered to remove climate change exhibits, environmental impact displays, and Indigenous history panels from visitor centers nationwide." />
+    <TimelineItem date="Feb 9, 2026" badge="Catastrophic" badgeType="catastrophic" title="$600 Million in HIV and STD Prevention Funding Cancelled — Targeting Democratic States" description="CDC cancels $600M in grants to California, Colorado, Illinois, and Minnesota. Funding covered testing, treatment, PrEP access, and STD surveillance." />
+    <TimelineItem date="Feb 12, 2026" badge="Catastrophic" badgeType="catastrophic" title="EPA Revokes Endangerment Finding — Legal Basis for ALL Climate Regulation Eliminated" description="Called 'the largest deregulatory action in American history.' Eliminates all federal authority to regulate greenhouse gases. 18 states file lawsuits immediately." />
+    <TimelineItem date="Feb 19, 2026" badge="Serious" badgeType="serious" title="Defense Production Act — Wartime Law Invoked to Mandate Cancer-Linked Pesticide" description="Wartime powers invoked to mandate domestic production of glyphosate, a WHO-classified probable carcinogen. Bayer donated $1M to Trump's inauguration." />
+    <TimelineItem date="Mar 9, 2026" badge="Catastrophic" badgeType="catastrophic" title="CDC Strips 6 Childhood Vaccines from Recommended List — All Expert Advisors Were Pre-Fired" description="Rotavirus, meningitis, hepatitis A, hepatitis B, HPV, and chickenpox removed from universal recommendations. No scientific review. No advisory committee vote — because all 17 advisors were fired in June 2025." />
+  </TimelineSection>
+
+  <!-- VOICES -->
+  <VoicesSection
+    eyebrow="Expert Warnings"
+    title="They Warned Us.<br>We Were Ignored."
+    introText="Before the Senate confirmed RFK Jr., an unprecedented coalition issued dire warnings. Every single one has come true."
+  >
+    <VoiceCard
+      quote="Robert F. Kennedy Jr. is one of the most dangerous individuals ever considered for a Cabinet position. His consistent denial of safe, effective vaccines would put American lives at risk."
+      attribution="77 Nobel Laureates<br>December 10, 2024"
+    />
+    <VoiceCard
+      quote="Kennedy was not interested in transparency but rather 'subservient confirmation of his misinformation and lies.' I refused when the Secretary sought to 'edit' the vaccine safety database."
+      attribution="Dr. Peter Marks<br>Former FDA Director of Biologics<br>Forced to resign March 28, 2025"
+    />
+    <VoiceCard
+      quote="NIH leadership made me feel I could no longer freely conduct unbiased science."
+      attribution="Dr. Kevin Hall<br>NIH's Top Ultra-Processed Foods Researcher<br>Resigned April 16, 2025"
+    />
+    <VoiceCard
+      quote="Kennedy's appointment would have 'catastrophic and irreversible consequences' for disease prevention and pandemic preparedness."
+      attribution="All 9 Living Former CDC Directors<br>Joint Warning Letter, December 2024"
+    />
+    <VoiceCard
+      quote="This isn't deregulation. This is denial of science itself."
+      attribution="Gina McCarthy<br>Former EPA Administrator<br>On the Endangerment Finding Revocation, Feb 2026"
+    />
+    <VoiceCard
+      quote="Robert F. Kennedy Jr.'s nomination as Secretary of Health and Human Services is a clear and present danger to the nation's health."
+      attribution="17,000+ Doctors, Nurses & Health Professionals<br>Open Letter, December 2024"
+    />
+  </VoicesSection>
+
+  <!-- CONSEQUENCES -->
+  <ConsequencesGrid eyebrow="Real-World Consequences" title="The Damage<br>Already Done">
+    <ConsequenceRow>
+      <ConsequenceItem number="01" title="Children Dying of Preventable Disease" description="4 deaths from measles. Whooping cough infections surged 1,000% to 28,783 cases — infants are most vulnerable. Diseases eliminated by vaccines are returning." />
+      <ConsequenceItem number="02" title="Clinical Trial Patients Abandoned" description="Patients taking experimental drugs or using new medical devices were cut off from researchers monitoring them mid-trial. Studies included malaria treatment for children under 5." />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="03" title="HIV Epidemic Reversed" description="$600 million in HIV/STD prevention funding cut from states with the highest HIV-positive populations. Decades of progress on prevention, testing, and PrEP access are being erased." />
+      <ConsequenceItem number="04" title="Cancer Research Destroyed" description="$2.4 billion in NIH cancer grants cancelled. NIH budget cut by 40% proposed. Ongoing studies halted. The next breakthrough treatment may never be discovered." />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="05" title="Pandemic Preparedness Gutted" description="Bird flu vaccine cancelled mid-outbreak. 29+ antiviral grants for Ebola, dengue, and chikungunya terminated. mRNA platform funding cut. The US is unprepared for the next pandemic." />
+      <ConsequenceItem number="06" title="Climate Protection Legally Eliminated" description="The Endangerment Finding revocation removes ALL federal authority to regulate greenhouse gases — dismantling decades of environmental law. Unchecked pollution, for years to come." />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="07" title="Scientific Talent Fleeing America" description="Scientists are accepting positions in Canada, Europe, and Asia. The next generation of American innovation is being permanently displaced." />
+      <ConsequenceItem number="08" title="A Generation Growing Up Distrusting Science" description="When the government calls science 'ideology' and erases data from national parks and textbooks, it erodes public trust in fact itself — with consequences that outlast any administration." />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- CHAPTER IV: WILDLIFE -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV"
+    title="Extinction<br>by Policy"
+    introText="Fifty years of wildlife protection — dismantled in one term. The Endangered Species Act is under its most coordinated assault in history."
+  />
+
+  <ColoredSection>
+    <div class="stat-grid">
+      <StatCard target={1817} label="US Fish & Wildlife Service staff fired — the agency that decides which species survive" accentColor="var(--green-bright)" />
+      <StatCard target={2700} label="National Park Service staff cut — 90+ parks reported service failures" accentColor="var(--green-bright)" />
+      <StatCard target={99} suffix="%" label="Of ESA-listed species saved from extinction — now under threat of rollback" accentColor="var(--green-bright)" />
+      <StatCard target={44} suffix="%" label="Fish & Wildlife Service budget cut proposed — would gut endangered species protections" accentColor="var(--green-bright)" />
+    </div>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard icon="🐺" title="Gray Wolves Delisted Nationwide" body="The 2026 appropriations bill delists gray wolves across the entire country, allowing mass hunting and trapping under state-permitted hunts. Wolves were recovered through decades of science-based conservation work. The bill ignores the scientific process entirely and bars judicial review of the decision." tag="Extinction Risk" variant="green" />
+    <CategoryCard icon="🐻" title="Grizzly Bears Delisted — Hunting Allowed" body="Grizzly bears in the Greater Yellowstone ecosystem are stripped of federal protection, opening them to cruel hunting and trapping. Funding for grizzly bear <em>and bison</em> reintroduction programs is simultaneously cut." tag="Trophy Hunting" variant="green" />
+    <CategoryCard icon="🦅" title="Migratory Bird Protections Stripped" body="In April 2025, the Interior Department reinstated a rule eliminating penalties for &quot;incidental&quot; bird deaths from industrial activities — oil drilling, power lines, open waste pits. Simple measures like covering pits or switching off tower lights <strong>kill millions of birds annually</strong> when neglected — now legally consequence-free." tag="MBTA Gutted" variant="green" />
+    <CategoryCard icon="🦋" title="Monarch Butterfly, Manatee & Spotted Owl Left Unprotected" body="Proposed ESA rule changes would strip newly listed <em>threatened</em> species of automatic protection from killing and trapping — leaving the Florida manatee, Monarch butterfly, California spotted owl, and Greater sage-grouse unprotected for years. <strong>80% of Americans support the ESA</strong>." tag="Species at Risk" variant="green" />
+    <CategoryCard icon="🌲" title="59 Million Acres of Forest Opened to Logging" body="Agriculture Secretary Brooke Rollins announced plans to repeal the Clinton-era Roadless Rule — which has protected <strong>59 million acres</strong> of National Forest from road construction and logging for over two decades. California, Washington, and Massachusetts immediately sued." tag="Old-Growth Destroyed" variant="green" />
+    <CategoryCard icon="🔫" title="Lead Ammunition Allowed on Federal Lands" body="Congress moved to prohibit federal regulation of lead ammunition and tackle on federal lands — despite scientific consensus that lead poisoning from ammunition kills bald eagles, golden eagles, mountain lions, black bears, common loons, and the critically endangered California condor." tag="Lead Poisoning" variant="green" />
+  </CategoryGrid>
+
+  <!-- CHAPTER V: NOAA / WEATHER -->
+  <ColoredSection background="#090d18" borderColor="var(--blue)">
+    <SectionHeader
+      eyebrow="Chapter V"
+      title="Blinding<br>America"
+      introText="NOAA tracks hurricanes, tornadoes, wildfires, droughts, and the ocean systems that feed the planet. Trump is destroying it — while weather grows more extreme."
+      eyebrowColor="var(--blue-bright)"
+    />
+
+    <div class="stat-grid" style="margin-bottom: 40px;">
+      <StatCard target={880} label="NOAA employees abruptly fired on Feb 27, 2025 — 7.3% of total staff in one day" accentColor="var(--blue-bright)" />
+      <StatCard target={27} suffix="%" label="Proposed cut to NOAA's entire budget — weather labs, climate research, ocean monitoring" accentColor="var(--blue-bright)" />
+      <StatCard target={31} prefix="$" suffix="B" label="Annual economic benefit of NOAA weather forecasts — now being dismantled" accentColor="var(--blue-bright)" />
+      <StatCard target={75} suffix="%" label="Proposed cut to NOAA's research office budget — including the National Severe Storms Laboratory" accentColor="var(--blue-bright)" />
+    </div>
+
+    <CategoryGrid noPadding>
+      <CategoryCard icon="🌀" title="Hurricane Forecasting Crippled" body="Staffing cuts have already curtailed the <strong>daily launch of weather balloons</strong> that collect altitude data — the backbone of storm forecasts. Some NOAA offices are left without any forecasters on-site overnight. A 24-hour storm warning reduces damage by <strong>30%</strong>. Fewer warnings mean more deaths." tag="Public Safety" variant="blue" />
+      <CategoryCard icon="🌡️" title="Climate Research Arm Targeted for Elimination" body="The FY2026 budget <strong>eliminates all funding</strong> for NOAA's climate, weather, and ocean laboratories and cooperative institutes — 80 university partnerships. The Office of Oceanic and Atmospheric Research is proposed for total dissolution." tag="Climate Science" variant="blue" />
+      <CategoryCard icon="🌊" title="Mauna Loa Observatory & Ocean Buoy Network at Risk" body="Mauna Loa Observatory has collected continuous climate data since the 1950s — producing the iconic Keeling Curve. The NOAA-funded Argo network of <strong>4,000 ocean buoys</strong> monitors ocean temperature and salinity worldwide. Both are now targeted for defunding." tag="Irreplaceable Data" variant="blue" />
+      <CategoryCard icon="🌾" title="America's Food Supply Blinded" body="Farmers rely on NOAA climate and weather data to decide what to plant, when to harvest, and how to manage water. The National Climate Assessment was <strong>cancelled in April 2025</strong>. The result: farmers making billion-dollar decisions with degraded, politically filtered information." tag="Food Security" variant="blue" />
+      <CategoryCard icon="📡" title="Next-Generation Weather Satellites Defunded" body="NOAA began terminating contracts for its next-generation geostationary weather satellites. NOAA scientists unanimously told leadership the replacement plan was <strong>&quot;a terrible idea harming forecasting&quot;</strong> — and were ignored." tag="Infrastructure" variant="blue" />
+      <CategoryCard icon="🌍" title="Global Weather Forecasting Weakened" body="Europe's leading meteorological center (ECMWF) reported <strong>a measurable drop</strong> in observations delivered by NOAA — already degrading international weather models that billions of people depend on." tag="Global Impact" variant="blue" />
+    </CategoryGrid>
+  </ColoredSection>
+
+  <!-- CHAPTER VI: SCIENTISTS SPEAK -->
+  <ColoredSection background="var(--black)">
+    <SectionHeader
+      eyebrow="Chapter VI"
+      title="The Scientists<br>Are Screaming"
+      introText="A nationwide survey of nearly 1,400 ecologists, marine biologists, and conservation scientists reveals what's happening inside American science right now."
+    />
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:50px;">
+      <SurveyStatCard
+        label="Self-Censorship"
+        value="48%"
+        description='of surveyed scientists report being <strong>silenced</strong> — pressured to self-censor language in reports, grant proposals, and public communications. Terms banned include "climate change," "climate models," and even "diverse."'
+        accentColor="var(--red)"
+      />
+      <SurveyStatCard
+        label="Career Exodus"
+        value="Decades"
+        description="Scientists describe <strong>a severe early-career bottleneck</strong> — cut training programs, reduced graduate admissions, rescinded offers. Opportunities overseas are growing."
+        accentColor="var(--amber)"
+      />
+      <SurveyStatCard
+        label="Irreversible Harm"
+        value="Now"
+        description="Multiple respondents concluded that <strong>the damage is already irreversible</strong> — time-sensitive data collection halted, institutional knowledge destroyed, long-term monitoring programs abandoned."
+        accentColor="var(--green)"
+      />
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;">
+      <FieldImpactCard icon="🧬" title="Cancer & Alzheimer's" description="$2.4B in NIH grants cancelled. 40% budget cut proposed. Ongoing studies halted mid-experiment. Treatments that might have saved millions — never discovered." accentColor="var(--red)" />
+      <FieldImpactCard icon="🦠" title="Pandemic Preparedness" description="Bird flu vaccine cancelled mid-outbreak. mRNA platform defunded. Ebola, dengue, and chikungunya antiviral grants eliminated. The next pandemic will find us unprepared." accentColor="var(--red)" />
+      <FieldImpactCard icon="🌊" title="Ocean Science" description="NOAA's marine fisheries service gutted. Argo buoy network at risk. Fish stock monitoring degraded. Coastal communities lose early warning systems for toxic algal blooms and dead zones." accentColor="var(--amber)" />
+      <FieldImpactCard icon="🌱" title="Agriculture & Soil" description="National Climate Assessment cancelled. Seasonal crop forecasts degraded. Farmers in the Midwest and California lose the predictive tools needed to survive a climate-volatile future." accentColor="var(--amber)" />
+      <FieldImpactCard icon="🐦" title="Ecology & Wildlife" description="1,817 Fish & Wildlife staff fired. ESA definition of 'harm' narrowed. Critical habitat protections narrowed. 32 anti-wildlife bills introduced. A generation of conservation work erased." accentColor="var(--green)" />
+      <FieldImpactCard icon="🏔️" title="Public Lands" description="2,700 NPS staff cut. 7,000+ Forest Service and BLM workers gone. 59 million acres of protected forest opened to logging. National park maintenance backlogs soaring during record visitation." accentColor="var(--green)" />
+    </div>
+
+    <div style="margin-top:40px;">
+      <AlertBanner title="From The Wildlife Society Survey of 1,400 Scientists, 2025">
+        <blockquote>"Since January 20, I have observed the state grow bolder with its willingness to reject scientific information that does not conform with its desired policies. The harm may be irreparable by the end of this administration — or at least it will take decades to repair."</blockquote>
+        <div class="attribution">— Anonymous Federal Scientist, Wildlife Society National Survey, September 2025</div>
+      </AlertBanner>
+    </div>
+  </ColoredSection>
+
+  <!-- CTA -->
+  <CTASection
+    title="The Record<br>Is Clear."
+    description="Every number above is sourced. Every scientist is real. Every child who gets measles is preventable. This is not politics — this is documented harm."
+    linkText="Browse All Controversies →"
+    linkHref="https://thetrumptracker.com"
+  />
+
+</ResearchLayout>
+
+<style>
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+</style>

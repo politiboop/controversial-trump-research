@@ -1,0 +1,98 @@
+{
+  "id": "john-brennan",
+  "name": "John Brennan",
+  "role": "Director of Central Intelligence",
+  "administration": "Obama Administration",
+  "years": "2013-2017",
+  "militaryRank": null,
+  "category": "intelligence-community",
+  "subCategory": "cia-director",
+  "photo": null,
+  "summary": "Former CIA Director whose security clearance was revoked by Trump and who called Trump's conduct 'nothing short of treasonous' and a threat to national security.",
+  "keyStatements": [
+    {
+      "quote": "Donald Trump's press conference performance in Helsinki rises to & exceeds the threshold of 'high crimes & misdemeanors.' It was nothing short of treasonous.",
+      "date": "2018-07-16",
+      "source": "Twitter",
+      "context": "After Trump's Helsinki summit with Putin",
+      "url": "https://x.com/JohnBrennan/status/1018964517674106880"
+    },
+    {
+      "quote": "When the full extent of your venality, moral turpitude, and political corruption becomes known, you will take your rightful place as a disgraced demagogue in the dustbin of history.",
+      "date": "2018-05-24",
+      "source": "Twitter",
+      "context": "Reply to Trump tweet",
+      "url": "https://x.com/JohnBrennan/status/999370525712855040"
+    },
+    {
+      "quote": "Trump is drunk on power and he's destroying our democracy.",
+      "date": "2020-02-10",
+      "source": "MSNBC",
+      "context": "Interview after his book release",
+      "url": "https://www.msnbc.com/11th-hour/watch/john-brennan-trump-is-drunk-on-power-and-destroying-our-democracy-78982213575"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2013-03-08",
+      "event": "Became CIA Director",
+      "significance": "Confirmed under Obama"
+    },
+    {
+      "date": "2017-01-20",
+      "event": "Left CIA when Trump took office",
+      "significance": "End of tenure"
+    },
+    {
+      "date": "2018-07-16",
+      "event": "Called Trump's Helsinki performance treasonous",
+      "significance": "Harsh criticism of Trump"
+    },
+    {
+      "date": "2018-08-15",
+      "event": "Trump revoked his security clearance",
+      "significance": "Retaliation for criticism"
+    },
+    {
+      "date": "2020",
+      "event": "Endorsed Joe Biden",
+      "significance": "Supported Democrat"
+    }
+  ],
+  "credibility": {
+    "background": "Former CIA Director, spent 25 years at CIA, senior intelligence official",
+    "positions": [
+      "Director of Central Intelligence (2013-2017)",
+      "Deputy National Security Advisor (2013)",
+      "Director of National Counterterrorism Center (2004-2005)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump's Helsinki performance treasonous",
+    "Called Trump a disgraced demagogue",
+    "Said Trump was drunk on power and destroying democracy"
+  ],
+  "endorsement": "Endorsed Joe Biden in 2020",
+  "sources": [
+    {
+      "title": "John Brennan tweet on Helsinki",
+      "url": "https://x.com/JohnBrennan/status/1018964517674106880",
+      "date": "2018-07-16",
+      "type": "social"
+    },
+    {
+      "title": "John Brennan tweet on Trump venality",
+      "url": "https://x.com/JohnBrennan/status/999370525712855040",
+      "date": "2018-05-24",
+      "type": "social"
+    },
+    {
+      "title": "Brennan: Trump is drunk on power and destroying democracy",
+      "url": "https://www.msnbc.com/11th-hour/watch/john-brennan-trump-is-drunk-on-power-and-destroying-our-democracy-78982213575",
+      "date": "2020-02-10",
+      "type": "interview"
+    }
+  ],
+  "party": "Democrat"
+}

@@ -1,0 +1,278 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import NavigationGrid from '../../components/navigation/NavigationGrid.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+
+const rhetoricTabs = [
+  { label: 'Overview', href: '/dangerous-rhetoric' },
+  { label: 'Press', href: '/dangerous-rhetoric/press' },
+  { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+  { label: 'Democrats', href: '/dangerous-rhetoric/democrats' },
+  { label: 'Immigrants', href: '/dangerous-rhetoric/immigrants' },
+  { label: 'Women', href: '/dangerous-rhetoric/women' },
+];
+
+const tickerItems = [
+  "January 6: 5 Dead, 140+ Police Injured After Months of Rhetoric",
+  "26+ Women Accused Trump of Sexual Misconduct",
+  "Hate Crimes Increased During Trump Presidency",
+  "Pipe Bombs Mailed to 16 Trump Critics",
+  "El Paso Shooter Cited Trump's 'Invasion' Rhetoric",
+  "Experts Warn: Stochastic Terrorism",
+  "Capital Gazette: 5 Journalists Murdered",
+  "1,000+ Election Workers Quit Due to Death Threats",
+];
+
+const subpageCards = [
+  {
+    icon: '📰',
+    title: 'Against the Press',
+    description: 'From &quot;fake news&quot; to &quot;enemy of the people&quot; to encouraging violence against journalists, with deadly consequences including the Capital Gazette shooting.',
+    href: '/dangerous-rhetoric/press',
+    tag: '5 Journalists Killed',
+  },
+  {
+    icon: '🎯',
+    title: 'Against Critics & Dissenters',
+    description: 'Decorated generals, cabinet members, and allies turned into &quot;traitors&quot; the moment they refused to break the law for Trump.',
+    href: '/dangerous-rhetoric/critics',
+    tag: 'Loyalty Above All',
+  },
+  {
+    icon: '🔴',
+    title: 'Against Democrats',
+    description: 'From &quot;Lock her up&quot; to &quot;enemy from within&quot; to suggesting military violence against political opponents.',
+    href: '/dangerous-rhetoric/democrats',
+    tag: 'January 6 Attack',
+  },
+  {
+    icon: '🌎',
+    title: 'Against Immigrants & Minorities',
+    description: 'Dehumanization using Nazi-era language: &quot;poisoning the blood,&quot; &quot;vermin,&quot; &quot;animals&quot; -- with deadly consequences.',
+    href: '/dangerous-rhetoric/immigrants',
+    tag: 'El Paso Massacre',
+  },
+  {
+    icon: '👩',
+    title: 'Against Women',
+    description: 'Decades of degradation, 26+ sexual assault accusations, and systematic attacks on any woman who challenges him.',
+    href: '/dangerous-rhetoric/women',
+    tag: '26+ Accusers',
+  },
+];
+---
+
+<ResearchLayout title="Dangerous Rhetoric" description="Trump's pattern of dehumanizing and violent rhetoric against different groups">
+
+  <SeriesNav tabs={rhetoricTabs} currentPath="/dangerous-rhetoric" />
+
+  <Masthead
+    eyebrow="Comprehensive Documentation"
+    title="DANGEROUS RHETORIC"
+    titleHighlight="RHETORIC"
+    subtitle="Systematic documentation of violent and dehumanizing language"
+    date="Stochastic Terrorism &middot; Dehumanization &middot; Real-World Violence"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <HighlightBar text="A Pattern of Dangerous, Violent Rhetoric -- Experts Warn This Is Stochastic Terrorism" variant="red" />
+
+  <IntroQuote
+    quote="Throughout his political career, Trump has used language that experts characterize as dangerous and unprecedented for an American president. He doesn't just disagree with opponents -- he dehumanizes them, suggests violence against them, and creates a permission structure for his supporters to act on that violence."
+    citation="Pattern Analysis of Presidential Rhetoric"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={5} label="Dead on January 6 after months of 'Stop the Steal' rhetoric" accentColor="var(--red)" />
+    <StatCard target={26} suffix="+" label="Women who accused Trump of sexual misconduct -- he attacks them as liars" accentColor="var(--red)" />
+    <StatCard target={23} label="Killed in El Paso massacre by shooter citing Trump's rhetoric" accentColor="var(--red)" />
+    <StatCard target={16} label="Pipe bombs mailed to Trump critics after years of 'enemy' rhetoric" accentColor="var(--red)" />
+  </StatGrid>
+
+  <!-- INTRO CONTEXT -->
+  <SectionDivider label="The Pattern" />
+  <SectionHeader
+    eyebrow="Systematic Analysis"
+    title="How Rhetoric<br>Becomes Violence"
+    introText="The pattern is clear and consistent: Anyone who opposes Trump becomes a target. Democrats are &quot;enemies from within&quot; who should face military action. Women are degraded and attacked. Immigrants are &quot;animals&quot; &quot;poisoning the blood.&quot; Journalists are &quot;enemies of the people.&quot; Even former allies who dare to criticize him become traitors deserving punishment."
+  />
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Stochastic Terrorism" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Experts on political violence warn this is <strong style="color: var(--text);">stochastic terrorism</strong> -- rhetoric that, while not explicitly calling for violence, increases the statistical likelihood that someone will commit acts of violence. When a president repeatedly calls opponents &quot;enemies&quot; and &quot;vermin,&quot; when he suggests they should be shot or arrested, he creates an environment where violence becomes normalized and even expected.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE ESCALATION PATTERN -->
+  <SectionDivider label="The Escalation" />
+  <SectionHeader
+    eyebrow="Predictable Pattern"
+    title="The Escalation<br>Pattern"
+    introText="Trump's rhetoric follows a predictable escalation pattern that has been documented across every target group."
+  />
+
+  <TimelineSection title="Six Steps<br>to Violence">
+    <TimelineItem
+      date="STEP 1"
+      badge="Identify"
+      badgeType="serious"
+      title="Identify the Enemy"
+      description="Labels target as threat: 'Democrat,' 'immigrant,' 'journalist,' 'traitor'"
+    />
+    <TimelineItem
+      date="STEP 2"
+      badge="Dehumanize"
+      badgeType="serious"
+      title="Dehumanize"
+      description="Uses animal/disease metaphors: 'vermin,' 'animals,' 'poisoning the blood'"
+    />
+    <TimelineItem
+      date="STEP 3"
+      badge="Threaten"
+      badgeType="catastrophic"
+      title="Portray as Existential Threat"
+      description="Claims they're destroying America, threatening families, must be stopped"
+    />
+    <TimelineItem
+      date="STEP 4"
+      badge="Incite"
+      badgeType="catastrophic"
+      title="Suggest Violence (Implicitly or Explicitly)"
+      description="'Use military,' 'second amendment people,' 'knock the crap out of them,' 'nine barrels'"
+    />
+    <TimelineItem
+      date="STEP 5"
+      badge="Violence"
+      badgeType="catastrophic"
+      title="Violence Occurs"
+      description="Supporter attacks target, Trump denies responsibility or defends attacker"
+    />
+    <TimelineItem
+      date="STEP 6"
+      badge="Repeat"
+      badgeType="catastrophic"
+      title="Repeat and Escalate"
+      description="Pattern normalizes violence, each cycle makes next violence more likely"
+    />
+  </TimelineSection>
+
+  <!-- EXPLORE BY TARGET GROUP -->
+  <SectionDivider label="By Target Group" />
+  <SectionHeader
+    eyebrow="Comprehensive Documentation"
+    title="Rhetoric by<br>Target Group"
+    introText="Click each category to see comprehensive documentation of Trump's dangerous rhetoric against specific groups. Each page includes chronological timelines, specific quotes, and real-world violent consequences."
+  />
+
+  <NavigationGrid cards={subpageCards} />
+
+  <!-- EXPERT WARNINGS -->
+  <SectionDivider label="Expert Analysis" />
+  <SectionHeader
+    eyebrow="Stochastic Terrorism"
+    title="Expert Warnings"
+    introText="What is stochastic terrorism? The use of mass public communication to incite random actors to carry out violent or terrorist acts that are statistically predictable but individually unpredictable."
+  />
+
+  <VoicesSection
+    eyebrow="Scholars on Political Violence"
+    title="In Their<br>Own Words"
+    introText="The leader creates an environment of rage and fear, dehumanizes targets, and while not explicitly calling for violence, makes violence statistically likely."
+  >
+    <VoiceCard
+      quote="When you call people 'vermin' and 'enemies,' you're not just insulting them -- you're creating a permission structure for violence. This is how authoritarian leaders throughout history have justified persecution."
+      attribution="<strong>Ruth Ben-Ghiat</strong> &middot; NYU<br>Expert on Authoritarianism"
+    />
+    <VoiceCard
+      quote="Trump's rhetoric is textbook incitement. He identifies enemies, dehumanizes them, portrays them as existential threats, then expresses frustration that something isn't being done about them. This pattern has predictable, violent results."
+      attribution="<strong>Jason Stanley</strong> &middot; Yale University<br>Author of &quot;How Fascism Works&quot;"
+    />
+    <VoiceCard
+      quote="The 'will no one rid me of this turbulent priest?' phenomenon. Trump doesn't have to explicitly call for violence -- he just has to make it clear who the enemies are and express desire for them to be dealt with. His supporters hear the message."
+      attribution="<strong>Timothy Snyder</strong> &middot; Yale University<br>Historian"
+    />
+  </VoicesSection>
+
+  <!-- REAL-WORLD VIOLENCE -->
+  <SectionDivider label="Consequences" />
+  <SectionHeader
+    eyebrow="Documented Violence"
+    title="Real-World Violence<br>Connected to Rhetoric"
+    introText="Trump's rhetoric has led to measurable, documented violence. These are not isolated incidents -- they are a pattern of cause and effect."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="January 6, 2021 - Capitol Attack"
+      body="<strong>Rhetoric:</strong> Months of &quot;Stop the Steal,&quot; &quot;fight like hell,&quot; &quot;trial by combat&quot;<br><strong>Result:</strong> 5 dead, 140+ police injured, attack on democracy<br><strong>Trump's Response:</strong> &quot;We love you, you're very special&quot;"
+      tag="5 Dead"
+    />
+    <CategoryCard
+      icon="📦"
+      title="October 2018 - Pipe Bombs to Critics"
+      body="<strong>Rhetoric:</strong> Years calling Obama, Clinton, CNN &quot;enemies,&quot; suggested violence<br><strong>Result:</strong> Cesar Sayoc mailed pipe bombs to 16 Trump critics<br><strong>Trump's Response:</strong> Blamed media for &quot;anger in society&quot;"
+      tag="16 Targets"
+    />
+    <CategoryCard
+      icon="💀"
+      title="August 2019 - El Paso Massacre"
+      body="<strong>Rhetoric:</strong> &quot;Invasion&quot; language about immigrants, dehumanization<br><strong>Result:</strong> Shooter killed 23 people targeting Hispanics, manifesto echoed Trump's language<br><strong>Trump's Response:</strong> Denied his rhetoric played any role"
+      tag="23 Dead"
+    />
+    <CategoryCard
+      icon="⚠️"
+      title="October 2020 - Michigan Kidnapping Plot"
+      body="<strong>Rhetoric:</strong> &quot;LIBERATE MICHIGAN&quot; tweets attacking Gov. Whitmer<br><strong>Result:</strong> Armed militia plotted to kidnap and execute governor<br><strong>Trump's Response:</strong> Continued attacking Whitmer at rallies"
+      tag="Assassination Plot"
+    />
+    <CategoryCard
+      icon="🗳️"
+      title="Ongoing - Threats Against Election Workers"
+      body="<strong>Rhetoric:</strong> Called election officials criminals, suggested they committed treason<br><strong>Result:</strong> Mass resignations due to death threats, armed intimidation at homes<br><strong>Trump's Response:</strong> Continues attacking election officials"
+      tag="1,000+ Quit"
+    />
+    <CategoryCard
+      icon="📰"
+      title="Ongoing - Violence Against Journalists"
+      body="<strong>Rhetoric:</strong> &quot;Enemy of the people,&quot; encouraged violence at rallies<br><strong>Result:</strong> Capital Gazette shooting (5 dead), attacks on reporters, death threats<br><strong>Trump's Response:</strong> Continues &quot;enemy of the people&quot; rhetoric"
+      tag="5 Journalists Killed"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Why This Documentation Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This is not about partisan disagreement. It is about documenting a dangerous pattern that experts on political violence and authoritarianism warn is unprecedented for an American president.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">When leaders use dehumanizing language and violent imagery, when they identify &quot;enemies&quot; and suggest violence is justified, people get hurt. The evidence is overwhelming and the pattern is clear.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>The question is not whether Trump's rhetoric is dangerous -- the evidence proves it is.</strong> The question is whether we will continue to tolerate and normalize this rhetoric, or whether we will demand accountability for language that has measurably led to violence, threats, and attacks on Americans.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Explore the<br>Evidence"
+    description="Five comprehensive sections documenting Trump's dangerous rhetoric against specific groups, with timelines, quotes, and real-world consequences."
+    linkText="Begin: Against the Press &rarr;"
+    linkHref="/dangerous-rhetoric/press"
+  />
+
+</ResearchLayout>

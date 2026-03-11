@@ -1,0 +1,248 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const rhetoricTabs = [
+  { label: 'Overview', href: '/dangerous-rhetoric' },
+  { label: 'Press', href: '/dangerous-rhetoric/press' },
+  { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+  { label: 'Democrats', href: '/dangerous-rhetoric/democrats' },
+  { label: 'Immigrants', href: '/dangerous-rhetoric/immigrants' },
+  { label: 'Women', href: '/dangerous-rhetoric/women' },
+];
+
+const tickerItems = [
+  "January 6: 5 Dead, 140+ Police Injured",
+  "16 Pipe Bombs Mailed to Democrats in 2018",
+  "'Enemy from Within' -- Suggests Military Against Democrats",
+  "'Hang Mike Pence' -- Capitol Mob Chants",
+  "'Nine Barrels Shooting at Her' -- About Liz Cheney",
+  "1,000+ Election Workers Quit Due to Death Threats",
+  "'Second Amendment People' Comment About Clinton",
+  "'Vermin' -- Nazi-Era Language About Political Opponents",
+];
+---
+
+<ResearchLayout title="Dangerous Rhetoric Against Democrats" description="Trump's escalating violent rhetoric against Democrats and political opponents">
+
+  <SeriesNav tabs={rhetoricTabs} currentPath="/dangerous-rhetoric/democrats" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Dangerous Rhetoric', href: '/dangerous-rhetoric' },
+    { label: 'Against Democrats' }
+  ]} />
+
+  <Masthead
+    eyebrow="Page 3 of 5 &middot; Dangerous Rhetoric"
+    title="AGAINST POLITICAL<br>OPPONENTS"
+    titleHighlight="OPPONENTS"
+    subtitle="From &quot;Lock her up&quot; to &quot;enemy from within&quot; to military violence"
+    date="Timeline &middot; Case Studies &middot; Stochastic Terrorism"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Trump's rhetoric against Democrats and political opponents follows a clear pattern: start with insults, escalate to accusations of treason and criminality, dehumanize as 'enemies,' suggest violent remedies, and watch as his supporters act on those suggestions. This isn't hyperbole -- it's a documented pattern that has resulted in death threats, assassination attempts, pipe bombs, and the January 6th attack on the Capitol."
+    citation="Pattern Analysis of Anti-Democratic Rhetoric"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={5} label="Dead in January 6 Capitol attack after months of 'Stop the Steal' rhetoric" accentColor="var(--red)" />
+    <StatCard target={140} suffix="+" label="Police officers attacked by mob believing Trump's claims" accentColor="var(--red)" />
+    <StatCard target={16} label="Democrats sent pipe bombs by Trump supporter in 2018" accentColor="var(--red)" />
+    <StatCard target={1000} suffix="+" label="Election workers who quit due to death threats after Trump's attacks" accentColor="var(--amber)" />
+  </StatGrid>
+
+  <!-- CHRONOLOGICAL TIMELINE -->
+  <SectionDivider label="Timeline" />
+  <SectionHeader
+    eyebrow="From Insults to Violence"
+    title="Chronological<br>Timeline"
+    introText="This timeline documents Trump's systematic escalation from political attacks to violent rhetoric against Democrats and anyone who opposes him. Each entry includes the exact date, platform, and context."
+  />
+
+  <TimelineSection title="2015-2016<br><span style='font-size:0.4em;color:var(--muted)'>Building the Foundation of Violent Rhetoric</span>">
+    <TimelineItem date="DEC 2015" badge="Rally Violence" badgeType="serious" title="Rally Violence Begins" description="'Get him out of here!' 'I'd like to punch him in the face, I'll tell you.' First explicit call for violence at rally against protesters. Las Vegas rally." />
+    <TimelineItem date="FEB 2016" badge="Incitement" badgeType="catastrophic" title="Promising to Pay Legal Fees for Violence" description="'Knock the crap out of them, would you? Seriously. I promise you, I will pay for the legal fees.' Trump promises to pay legal fees for supporters who commit violence. Nevada rally." />
+    <TimelineItem date="MAR 2016" badge="Endorsing" badgeType="serious" title="Endorsing Supporter Violence" description="'Part of the problem... is nobody wants to hurt each other anymore.' Trump laments that people don't want to be violent anymore. St. Louis rally." />
+    <TimelineItem date="AUG 2016" badge="Assassination" badgeType="catastrophic" title="'Second Amendment People'" description="'If she gets to pick her judges, nothing you can do, folks. Although the Second Amendment people, maybe there is.' Widely interpreted as suggesting gun owners could assassinate Clinton. Secret Service spoke with Trump campaign." />
+    <TimelineItem date="OCT 2016" badge="Lock Her Up" badgeType="catastrophic" title="'Lock Her Up' -- Threatening to Jail Opponent" description="'If I win, I am going to instruct my attorney general to get a special prosecutor... Because you'd be in jail.' Second presidential debate. Unprecedented in American democracy: threatening to imprison political opponents." />
+  </TimelineSection>
+
+  <TimelineSection title="2017-2018<br><span style='font-size:0.4em;color:var(--muted)'>Weaponizing Presidential Power</span>">
+    <TimelineItem date="JUL 2017" badge="Violence Video" badgeType="catastrophic" title="CNN Wrestling Violence Video" description="Trump tweets video of himself body-slamming and punching person with CNN logo. President tweets video depicting violence against media." />
+    <TimelineItem date="SEP 2017" badge="Targeting" badgeType="serious" title="Calling for NFL Players to Be Fired" description="'Get that son of a bitch off the field right now!' Trump targets peaceful protesters (predominantly Black athletes) with demands for punishment. Alabama rally." />
+    <TimelineItem date="OCT 2018" badge="Body Slam" badgeType="catastrophic" title="Praising Body-Slamming Reporter" description="'Any guy that can do a body slam, he's my kind of guy.' About Gianforte assaulting Guardian reporter. Two weeks before pipe bombs to critics." />
+    <TimelineItem date="OCT 2018" badge="Pipe Bombs" badgeType="catastrophic" title="Pipe Bomb Campaign -- 16 Targets" description="16 pipe bombs mailed to: Obama, Clinton, Biden, Soros, CNN, Holder, Maxine Waters, Cory Booker, Kamala Harris, De Niro, Clapper, Steyer. Perpetrator Cesar Sayoc: van covered in Trump stickers. Trump blamed media for 'anger.'" />
+  </TimelineSection>
+
+  <TimelineSection title="2019-2020<br><span style='font-size:0.4em;color:var(--muted)'>Impeachment and Escalation</span>">
+    <TimelineItem date="SEP 2019" badge="Execution" badgeType="catastrophic" title="Suggesting Whistleblower Execution" description="'You know what we used to do in the old days when we were smart? Right? With spies and treason, right? We used to handle them a little differently than we do now.' Trump suggests whistleblower should be executed. Leaked audio from private event." />
+    <TimelineItem date="OCT 2019" badge="Treason" badgeType="catastrophic" title="Adam Schiff 'Treason'" description="'Arrest for Treason?' Trump calls for arrest of House Intelligence Committee Chairman for constitutional oversight duty. Schiff receives death threats, requires security detail." />
+    <TimelineItem date="APR 2020" badge="Liberate" badgeType="catastrophic" title="'LIBERATE' Tweets -- Inciting Armed Protests" description="'LIBERATE MICHIGAN!' 'LIBERATE MINNESOTA!' 'LIBERATE VIRGINIA!' Trump incites armed protests against Democratic governors. Armed militias storm Michigan Capitol; later, group plots to kidnap and execute Gov. Whitmer." />
+    <TimelineItem date="OCT 2020" badge="Kidnapping Plot" badgeType="catastrophic" title="Michigan Kidnapping Plot -- Trump Continues Attacking Victim" description="FBI arrests 13 people planning to kidnap Gov. Whitmer, put her on 'trial' for 'treason,' and execute her. Trump's response: leads crowd in 'Lock her up' chants about Whitmer at Michigan rally." />
+  </TimelineSection>
+
+  <TimelineSection title="Nov 2020 - Jan 2021<br><span style='font-size:0.4em;color:var(--muted)'>&quot;Stop the Steal&quot; and January 6</span>">
+    <TimelineItem date="NOV 2020" badge="Big Lie" badgeType="catastrophic" title="Election Night: The Big Lie Begins" description="'Frankly, we did win this election... This is a fraud on the American public.' Trump begins 'Big Lie' with no evidence. Sets stage for two months of escalating rhetoric leading to violence." />
+    <TimelineItem date="NOV-DEC" badge="Targeting" badgeType="catastrophic" title="Systematic Attack on Election Workers" description="Trump personally names election workers, calls them criminals. Targets: Brad Raffensperger, Ruby Freeman, Shaye Moss, Michigan and Arizona officials. Consequence: death threats, armed protesters at homes, mass resignations. Freeman went into hiding for months." />
+    <TimelineItem date="DEC 2020" badge="Call to Action" badgeType="catastrophic" title="'Will Be Wild!'" description="'Big protest in D.C. on January 6th. Be there, will be wild!' Trump calls supporters to DC for day Congress certifies election. Extremist groups immediately begin organizing, discussing weapons and violence." />
+    <TimelineItem date="JAN 2 2021" badge="Coercion" badgeType="catastrophic" title="Raffensperger Phone Call" description="'I just want to find 11,780 votes... That's a criminal offense. That's a big risk to you.' Trump pressures Georgia Secretary of State to 'find' votes. Indicted August 2023." />
+    <TimelineItem date="JAN 6 2021" badge="Insurrection" badgeType="catastrophic" title="'Fight Like Hell' -- January 6 Attack" description="'If you don't fight like hell, you're not going to have a country anymore.' Mob attacks Capitol: 5 dead, 140+ police injured. Built gallows, chanted 'Hang Mike Pence.' Trump's response when told Pence was in danger: 'So what?'" />
+    <TimelineItem date="JAN 6 2021" badge="Validation" badgeType="catastrophic" title="'We Love You, You're Very Special'" description="Trump finally tells rioters to leave hours after attack began, but tells them he loves them and they're special. Validates their violence while technically asking them to stop." />
+  </TimelineSection>
+
+  <TimelineSection title="2021-2024<br><span style='font-size:0.4em;color:var(--muted)'>Exile, Revenge, and Return</span>">
+    <TimelineItem date="SEP 2021" badge="Execution" badgeType="catastrophic" title="Calls for Milley's Execution" description="'This is an act so egregious that, in times gone by, the punishment would have been DEATH!' Trump calls for execution of Chairman of Joint Chiefs for following constitutional chain of command." />
+    <TimelineItem date="AUG 2022" badge="Attack" badgeType="catastrophic" title="FBI Cincinnati Attack After Mar-a-Lago Search" description="Trump supporter Ricky Shiffer attacks FBI office day after Mar-a-Lago search. Posted on Truth Social about 'call to arms.' Killed in shootout with police." />
+    <TimelineItem date="OCT 2023" badge="Nazi Language" badgeType="catastrophic" title="'Vermin' Speech" description="'We pledge to root out the communists, Marxists, fascists and the radical left thugs that live like vermin within the confines of our country.' 'Vermin' language directly echoes Hitler and Mussolini." />
+    <TimelineItem date="OCT 2024" badge="Military" badgeType="catastrophic" title="'Enemy from Within' -- Military Against Democrats" description="'The enemy from within... radical left lunatics. It should be very easily handled by, if necessary, by National Guard, or if really necessary, by the military.' Specifically names Pelosi and Schiff as enemies requiring military action." />
+    <TimelineItem date="OCT 2024" badge="Firing Squad" badgeType="catastrophic" title="Cheney: 'Nine Barrels Shooting at Her'" description="'Let's put her with a rifle standing there with nine barrels shooting at her, OK? Let's see how she feels about it, when the guns are trained on her face.' Explicit firing squad imagery about former Republican ally." />
+  </TimelineSection>
+
+  <!-- CASE STUDIES -->
+  <SectionDivider label="Case Studies" />
+  <SectionHeader
+    eyebrow="How Rhetoric Becomes Violence"
+    title="Case Studies"
+    introText="Detailed analysis of how Trump's rhetoric against specific targets escalated from insults to real-world violence."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👩"
+      title="Hillary Clinton: 'Lock Her Up' to Pipe Bombs"
+      body="<strong>Phase 1:</strong> &quot;Crooked Hillary&quot; -- political opponent<br><strong>Phase 2:</strong> &quot;She should be in jail&quot; -- criminal accusations<br><strong>Phase 3:</strong> &quot;Second Amendment people&quot; could &quot;do something&quot; -- violent suggestion<br><strong>Phase 4:</strong> Years of &quot;enemy&quot; rhetoric<br><strong>Phase 5:</strong> Cesar Sayoc mails pipe bomb to Clinton's home (2018)<br><strong>Phase 6:</strong> Trump blames media, never stops &quot;Lock her up&quot; chants"
+      tag="Pipe Bomb"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Mike Pence: Loyal Deputy to 'Hang Mike Pence'"
+      body="<strong>Phase 1:</strong> Unwavering loyal Vice President (2017-2020)<br><strong>Phase 2:</strong> Trump demands Pence reject electoral votes (unconstitutional)<br><strong>Phase 3:</strong> Public pressure campaign: &quot;Pence will have to come through&quot;<br><strong>Phase 4:</strong> January 6: &quot;Pence didn't have the courage&quot;<br><strong>Phase 5:</strong> Mob chants &quot;Hang Mike Pence!&quot; Gallows erected. Pence 40 feet from mob<br><strong>Phase 6:</strong> Trump's response to Pence in danger: &quot;So what?&quot;"
+      tag="Gallows Erected"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Adam Schiff: 'Treason' and Military Threats"
+      body="<strong>Phase 1:</strong> Standard congressional oversight of Ukraine call<br><strong>Phase 2:</strong> Trump tweets &quot;Arrest for Treason?&quot; about Schiff<br><strong>Phase 3:</strong> Years of attacks: &quot;Shifty Schiff,&quot; &quot;pencil neck,&quot; &quot;watermelon head&quot;<br><strong>Phase 4:</strong> &quot;Enemy from within... handled by military&quot;<br><strong>Phase 5:</strong> Regular death threats, security detail required, family targeted<br><strong>Historical parallel:</strong> Declaring opposition as &quot;internal enemies&quot; requiring military force is textbook authoritarianism"
+      tag="Military Threats"
+    />
+    <CategoryCard
+      icon="🎯"
+      title="Liz Cheney: Ally to Firing Squad Imagery"
+      body="<strong>Phase 1:</strong> House GOP leadership, 93% Trump voting record<br><strong>Phase 2:</strong> January 6: Voted to impeach, joined January 6 Committee<br><strong>Phase 3:</strong> Stripped of leadership, primaried and defeated<br><strong>Phase 4:</strong> &quot;Nine barrels shooting at her... guns trained on her face&quot;<br><strong>Phase 5:</strong> 24/7 security detail required, family threatened<br><strong>Message:</strong> No amount of prior loyalty protects you if you prioritize Constitution over Trump"
+      tag="Firing Squad"
+    />
+  </CategoryGrid>
+
+  <!-- STOCHASTIC TERRORISM -->
+  <SectionDivider label="Stochastic Terrorism" />
+  <SectionHeader
+    eyebrow="Understanding the Pattern"
+    title="Stochastic<br>Terrorism"
+    introText="The use of mass communication to incite random actors to carry out violent or terrorist acts that are statistically predictable but individually unpredictable."
+  />
+
+  <VoicesSection
+    eyebrow="Experts on Political Violence"
+    title="Expert<br>Analysis"
+  >
+    <VoiceCard
+      quote="Trump has mastered the art of directing violence without explicitly calling for it. He identifies enemies, dehumanizes them, expresses frustration that they're still free, and waits. His supporters hear the message loud and clear."
+      attribution="<strong>Jason Stanley</strong> &middot; Yale University<br>Author of &quot;How Fascism Works&quot;"
+    />
+    <VoiceCard
+      quote="The 'enemy from within' rhetoric is especially dangerous because it combines dehumanization with a suggestion of legitimate state violence. When a president says opponents should face military action, he's not just encouraging vigilante violence -- he's threatening to use government power against Americans."
+      attribution="<strong>Ruth Ben-Ghiat</strong> &middot; NYU<br>Expert on Authoritarianism"
+    />
+    <VoiceCard
+      quote="This follows the pattern of authoritarian leaders throughout history: declare opposition as traitors, suggest they deserve punishment, let supporters act on those suggestions, then deny responsibility. It's textbook stochastic terrorism."
+      attribution="<strong>Timothy Snyder</strong> &middot; Yale University<br>Historian"
+    />
+    <VoiceCard
+      quote="Trump's 'Second Amendment people' comment about Clinton, the 'hang Mike Pence' chants, the 'nine barrels' comment about Cheney -- these aren't isolated incidents. They're a systematic pattern of violence incitement with real, measurable consequences."
+      attribution="<strong>Barbara F. Walter</strong> &middot; UC San Diego<br>Author of &quot;How Civil Wars Start&quot;"
+    />
+  </VoicesSection>
+
+  <!-- DOCUMENTED VIOLENCE -->
+  <ConsequencesGrid eyebrow="Documented Violence" title="Real-World<br>Consequences">
+    <ConsequenceRow>
+      <ConsequenceItem number="5" title="Dead on January 6" description="1 shot by police, 1 beaten, 3 medical emergencies. 1,000+ arrested, 500+ convicted. Rioters cited Trump's rhetoric." />
+      <ConsequenceItem number="140+" title="Police Injured" description="Officers beaten with flagpoles, sprayed with chemicals, crushed in doorways. $30 million in damage to Capitol." />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="16" title="Pipe Bombs (2018)" description="Cesar Sayoc mailed bombs to Obama, Clinton, Biden, Soros, CNN, and 11 others. Van covered in Trump stickers. 20-year sentence." />
+      <ConsequenceItem number="13" title="Michigan Plot (2020)" description="Arrested for plotting to kidnap Gov. Whitmer, put her on 'trial,' and execute her. Catalyst: Trump's 'LIBERATE MICHIGAN' tweets." />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="1,000+" title="Election Workers Quit" description="Mass resignations due to death threats after Trump's attacks. Ruby Freeman forced into hiding. Giuliani liable for $148 million." />
+      <ConsequenceItem number="400%" title="Threat Increase" description="Threats to Congress increased 400% during Trump presidency. Every Democrat Trump targets sees spike in credible threats." />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- ESCALATION PATTERN -->
+  <SectionDivider label="The Pattern" />
+  <SectionHeader
+    eyebrow="Systematic Escalation"
+    title="The Escalation<br>Pattern"
+    introText="The escalation pattern is consistent across every target."
+  />
+
+  <TimelineSection title="From Insults<br>to Violence">
+    <TimelineItem date="STEP 1" badge="Identify" badgeType="serious" title="Identify as Opponent" description="Anyone who criticizes Trump, votes against him, investigates him, testifies against him, or simply disagrees. Initial language: 'Opponent,' 'critic,' 'hater,' 'loser.'" />
+    <TimelineItem date="STEP 2" badge="Criminalize" badgeType="serious" title="Escalate to Criminality" description="'Crooked Hillary,' 'Corrupt Joe Biden,' 'Criminal Schiff,' 'Fraud' election workers. Claims they're committing crimes, breaking laws, stealing elections." />
+    <TimelineItem date="STEP 3" badge="Dehumanize" badgeType="catastrophic" title="Dehumanize as 'Enemy'" description="'Enemy from within,' 'vermin,' 'animals,' 'sick people.' No longer fellow Americans with different views -- they're existential threats." />
+    <TimelineItem date="STEP 4" badge="Incite" badgeType="catastrophic" title="Suggest Violent Remedy" description="'Second Amendment people,' 'nine barrels,' 'hang Mike Pence,' 'use military,' 'knock the crap out of them.' Sometimes explicit, often implicit." />
+    <TimelineItem date="STEP 5" badge="Violence" badgeType="catastrophic" title="Supporter Violence Occurs" description="Pipe bombs, January 6 attack, death threats, assassination plots. Attacker often cites Trump's rhetoric, uses his language." />
+    <TimelineItem date="STEP 6" badge="Repeat" badgeType="catastrophic" title="Deny, Deflect, Repeat" description="Denies responsibility, blames media, sometimes defends attacker, continues same rhetoric. Violence normalized, permission structure reinforced, cycle repeats." />
+  </TimelineSection>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="The Human Cost" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Trump's rhetoric has direct, measurable consequences: pipe bombs mailed to Obama, Clinton, and other Democrats. Armed mobs at the Capitol chanting &quot;Hang Mike Pence.&quot; Election workers and their families receiving death threats and fleeing their homes. Members of Congress requiring 24/7 security due to credible assassination threats.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>This is not about partisan disagreement. This is about a president who uses violent language that predictably results in violence against Americans.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Against<br>Immigrants"
+    description="Nazi-era language -- 'poisoning the blood,' 'vermin,' 'animals' -- used to dehumanize immigrants, with deadly consequences including the El Paso massacre."
+    linkText="Continue: Against Immigrants &rarr;"
+    linkHref="/dangerous-rhetoric/immigrants"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Against Critics', href: '/dangerous-rhetoric/critics' }}
+    next={{ label: 'Against Immigrants', href: '/dangerous-rhetoric/immigrants' }}
+    currentIndex={2}
+    totalPages={5}
+  />
+
+</ResearchLayout>

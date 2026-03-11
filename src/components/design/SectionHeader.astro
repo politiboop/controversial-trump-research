@@ -1,0 +1,49 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  introText?: string;
+  eyebrowColor?: string;
+}
+
+const { eyebrow, title, introText, eyebrowColor } = Astro.props;
+const eyebrowStyle = eyebrowColor ? `color: ${eyebrowColor}` : '';
+---
+
+<div class="section-header fade-up container">
+  {eyebrow && <div class="eyebrow" style={eyebrowStyle}>{eyebrow}</div>}
+  <h2 set:html={title} />
+  {introText && <p class="intro-text">{introText}</p>}
+</div>
+
+<style>
+  .section-header {
+    padding: 70px 24px 40px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 7vw, 90px);
+    line-height: 0.9;
+    color: var(--text);
+  }
+
+  .intro-text {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 700px;
+    margin-top: 20px;
+    font-style: italic;
+  }
+</style>

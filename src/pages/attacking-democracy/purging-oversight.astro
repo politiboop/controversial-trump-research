@@ -1,0 +1,403 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const democracyTabs = [
+  { label: 'Overview', href: '/attacking-democracy' },
+  { label: 'Purging Oversight', href: '/attacking-democracy/purging-oversight' },
+  { label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' },
+  { label: 'Demanding Loyalty', href: '/attacking-democracy/demanding-loyalty' },
+  { label: 'Weaponizing Government', href: '/attacking-democracy/weaponizing-government' },
+];
+
+const tickerItems = [
+  "17 Inspector Generals Fired in One Night",
+  "300,000+ Federal Workers Removed",
+  "Federal Judge Ruled Firings Unlawful",
+  "0 Days Notice Given (Law Requires 30)",
+  "150,000+ Workers Took Buyouts Under Pressure",
+  "50,000+ Targeted by Schedule F",
+  "EPA at 40-Year Staffing Low",
+  "VA Cutting 14,000 Medical Positions",
+  "First BLS Commissioner Fired in 140-Year History",
+];
+---
+
+<ResearchLayout title="Purging Oversight - Attacking Democracy" description="The Friday Night Massacre: 17 Inspector Generals fired, 300,000+ federal workers removed, DOJ and FBI purged. Comprehensive documentation of Trump's systematic dismantling of independent oversight.">
+
+  <SeriesNav tabs={democracyTabs} currentPath="/attacking-democracy/purging-oversight" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Attacking Democracy', href: '/attacking-democracy' },
+    { label: 'Purging Oversight' }
+  ]} />
+
+  <Masthead
+    eyebrow="Step 1 of 4 &middot; Attacking Democracy"
+    title="PURGING OVERSIGHT"
+    titleHighlight="OVERSIGHT"
+    subtitle="How Trump Systematically Dismantled Government Oversight and Replaced It With Loyalty"
+    date="January 2025 &ndash; Present &middot; Documented Actions"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <!-- ALERT BANNER -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{1F6A8}" title="Systematic Dismantling of Government Oversight" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">January 2025 &ndash; Present:</strong> Trump has fired 17 Inspector Generals, removed 300,000+ federal workers (~13% of the civilian workforce), purged DOJ and FBI leadership, and installed political loyalists across every agency. A federal judge ruled the IG firings unlawful. Courts froze the mass layoffs, but the Supreme Court allowed them to continue.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>This is textbook authoritarian consolidation of power &mdash; dismantling independent oversight to eliminate accountability.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <IntroQuote
+    quote="In a functioning democracy, independent watchdogs ensure government operates with integrity. Career professionals apply expertise regardless of which party holds power. Trump is systematically destroying all of this."
+    citation="Pattern Analysis of Documented Oversight Purges"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={17} label="Inspector Generals fired in one night (Jan 24, 2025) &mdash; ruled unlawful by federal judge" />
+    <StatCard target={300} suffix="K+" label="Federal workers removed (~13% of civilian federal workforce)" />
+    <StatCard target={150} suffix="K+" label="Workers who took buyouts under pressure" />
+    <StatCard target={50} suffix="K+" label="Career employees targeted by Schedule F reclassification" />
+    <StatCard target={0} label="Days of required 30-day notice given to Congress before IG firings" />
+  </StatGrid>
+
+  <!-- FRIDAY NIGHT MASSACRE -->
+  <SectionDivider label="The Inspector General Massacre" />
+  <SectionHeader
+    eyebrow="January 24, 2025"
+    title="The Friday Night<br>Massacre"
+    introText="On January 24, 2025 &mdash; just five days into his second term &mdash; Trump fired at least 17 Inspector Generals in a late-night purge. By law, they cannot be fired without 30 days notice to Congress. Trump gave zero notice."
+  />
+
+  <TimelineSection title="The IG Purge Timeline">
+    <TimelineItem
+      date="January 24, 2025"
+      badge="CRITICAL"
+      badgeType="red"
+      title="The Friday Night Purge"
+      description="Late Friday night: Trump announced immediate firing of at least 17 Inspector Generals across federal departments and agencies. Agencies affected included: Department of Defense, State Department, Transportation, HUD, Energy, Interior, Veterans Affairs, EPA, Social Security Administration, Small Business Administration, and 7 more. <strong>All dismissals were effective immediately. Zero advance notice was given to Congress, despite federal law requiring 30 days.</strong>"
+    />
+    <TimelineItem
+      date="Federal Law Violated"
+      badge="UNLAWFUL"
+      badgeType="red"
+      title="The Inspector General Act of 1978"
+      description="Federal law explicitly requires the president to provide 30-day advance notice to Congress before any dismissal of Inspector Generals. <strong>Trump gave: ZERO days notice.</strong>"
+    />
+    <TimelineItem
+      date="September 2025"
+      badge="RULING"
+      title="Federal Judge: Firings Were Unlawful"
+      description="Judge Ana Reyes ruled Trump violated the 1978 Inspector General Act when he fired 17 agency inspectors general without notifying Congress. However, the judge concluded fired IGs hadn't demonstrated &quot;irreparable harm&quot; and argued Trump could lawfully fire them again in 30 days, as long as he gives advance notice. <strong>Translation: Trump broke the law, but the judge would not reinstate the watchdogs. The purge succeeded.</strong>"
+    />
+  </TimelineSection>
+
+  <VoicesSection
+    eyebrow="Even Republicans Objected"
+    title="Why Inspector<br>Generals Matter"
+    introText="Inspectors General are the government's internal watchdogs. They investigate fraud, waste, and abuse in federal agencies. They are designed to be independent from political pressure, report directly to Congress, and cannot be fired without cause and 30-day notice."
+  >
+    <VoiceCard
+      quote="I don't understand why one would fire individuals whose mission is to root out waste, fraud and abuse."
+      attribution="<strong>Senator Susan Collins</strong> (R-ME)<br>Republican Senator"
+    />
+  </VoicesSection>
+
+  <HighlightBar text="When you fire all the watchdogs at once with no notice and in violation of federal law, you are not &quot;draining the swamp.&quot; You are eliminating anyone who can investigate your corruption." variant="red" />
+
+  <!-- FEDERAL WORKFORCE PURGE -->
+  <SectionDivider label="The Federal Workforce Purge" />
+  <SectionHeader
+    eyebrow="300,000+ Workers Gone"
+    title="The Federal<br>Workforce Purge"
+    introText="The Inspector General firings were just the beginning. Trump has systematically removed over 300,000 federal workers &mdash; approximately 13% of the entire civilian federal workforce &mdash; through forced buyouts, mass layoffs, and Schedule F reclassifications."
+  />
+
+  <TimelineSection title="Workforce Destruction Timeline">
+    <TimelineItem
+      date="January 2025"
+      badge="EXECUTIVE ORDER"
+      title="Schedule F: Weaponizing Job Classifications"
+      description="Executive order reclassifies career civil servants as political appointees, stripping job protections and making it easy to fire anyone deemed &quot;disloyal.&quot; Targets an estimated 50,000+ career federal workers. First attempted in Trump's first term but rescinded by Biden. Trump reinstated it on day one of his second term."
+    />
+    <TimelineItem
+      date="2025 &ndash; 2026"
+      badge="CRITICAL"
+      badgeType="red"
+      title="The Numbers: 300,000+ Federal Workers Removed"
+      description="300,000+ fewer federal employees as of March 2026 (~13% of civilian federal workforce eliminated). 150,000+ workers took &quot;buyouts&quot; (often under pressure). Tens of thousands laid off outright. 50,000+ stripped of protections by Schedule F. <strong>EPA at 40-year staffing low</strong> &mdash; 12,849 employees, 24% of workforce gone. <strong>VA cutting 14,000 medical positions</strong> &mdash; 1.2 million veterans lose providers. 16,000 Army + 12,000 Air Force + 1,600 Marine civilians took resignation offers."
+    />
+    <TimelineItem
+      date="Legal Battles"
+      badge="COURTS"
+      title="Courts Freeze, Supreme Court Allows"
+      description="Lower courts initially froze the mass firings, ruling they violated federal civil service protections. <strong>July 8, 2025:</strong> The Supreme Court overrode lower court orders, allowing the workforce reductions to continue. The purge continues, legal challenges ongoing."
+    />
+  </TimelineSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F3DB}\u{FE0F}"
+      title="Why Career Civil Servants Matter"
+      body="The civil service was created to prevent corruption. Career professionals serve regardless of which party is in power, apply expertise and institutional knowledge, are protected from political retaliation, serve the Constitution not the president, and ensure continuity and competence in government. <strong>When you replace experts with loyalists, you don't get better government. You get a government that serves one person.</strong>"
+      tag="Context"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- DOJ AND FBI PURGE -->
+  <SectionDivider label="DOJ &amp; FBI Purge" />
+  <SectionHeader
+    eyebrow="Accountability Agencies Targeted"
+    title="DOJ &amp; FBI: Installing Loyalists<br>at Crime-Investigating Agencies"
+    introText="The DOJ and FBI are the agencies that investigate federal crimes &mdash; including corruption, election interference, and abuse of power. Purging independent professionals and installing political loyalists at these specific agencies is about preventing accountability."
+  />
+
+  <TimelineSection title="DOJ &amp; FBI Leadership Purge">
+    <TimelineItem
+      date="January 2025"
+      badge="FBI DIRECTOR"
+      badgeType="red"
+      title="Kash Patel: FBI Director"
+      description="Known for extreme loyalty to Trump. Has called for prosecuting Trump's critics and the media. Promoted conspiracy theories. <strong>As FBI Director:</strong> Fired the Iran counterintelligence unit weeks before Trump started a war with Iran. Used FBI jet for 10+ personal trips including the Paris Olympics, Mar-a-Lago, and Kentucky Derby. Purged dozens of senior FBI officials who would not pledge loyalty. Requested list of FBI employees who worked January 6 cases for targeting."
+    />
+    <TimelineItem
+      date="January 2025"
+      badge="FBI DEPUTY"
+      badgeType="red"
+      title="Dan Bongino: FBI Deputy Director"
+      description="Conservative media personality and podcaster. Former Secret Service agent. No FBI experience. Prominent Trump defender and conspiracy theorist. Hosted the show where Trump called to &quot;nationalize voting.&quot; <strong>A podcast host with no FBI experience is now the #2 official at the FBI.</strong>"
+    />
+    <TimelineItem
+      date="February 2025"
+      title="Paul Abbate Forced to Retire"
+      description="Career FBI official, Deputy FBI Director under Chris Wray, given extension to ensure smooth transition. Announced &quot;retiring&quot; effective immediately after Patel and Bongino took over. Career professional forced out to make room for Trump loyalists."
+    />
+    <TimelineItem
+      date="Ongoing 2025&ndash;2026"
+      badge="PURGE"
+      badgeType="red"
+      title="Widespread FBI and DOJ Purges"
+      description="Dozens of senior FBI officials pushed out under Patel and Bongino. Top agents in charge of big-city field offices removed. More than a dozen prosecutors from Jack Smith's team fired. Termination letters stated they cannot be &quot;trusted&quot; to implement Trump's agenda. DOJ requesting list of thousands of FBI employees who worked Jan 6 cases. 24 senior DOJ officials reassigned in political retribution."
+    />
+    <TimelineItem
+      date="September 2025"
+      badge="LAWSUIT"
+      title="Senior FBI Agents Sue for Wrongful Termination"
+      description="Three senior FBI agents filed lawsuit alleging Trump administration launched &quot;campaign of retribution,&quot; fired senior officials who refused to demonstrate loyalty to Trump, firings were for improper political reasons, and violated civil service protections."
+    />
+  </TimelineSection>
+
+  <VoicesSection
+    eyebrow="What Experts Say"
+    title="The Meaning of<br>the DOJ/FBI Purge"
+  >
+    <VoiceCard
+      quote="President Trump would rather have the FBI and DOJ full of blind admirers and loyalists than experienced law enforcement officers."
+      attribution="<strong>Senator Dick Durbin</strong><br>U.S. Senator"
+    />
+    <VoiceCard
+      quote="We will go out and find the conspirators not just in government but in the media. Yes, we're going to come after the people in the media."
+      attribution="<strong>Kash Patel</strong> &middot; FBI Director<br>Steve Bannon's War Room, December 2023"
+    />
+  </VoicesSection>
+
+  <HighlightBar text="When the people who investigate crimes work for the person who commits them, there is no rule of law. There is only power." variant="red" />
+
+  <!-- LOYALTY TESTS AND PARANOIA -->
+  <SectionDivider label="Culture of Fear" />
+  <SectionHeader
+    eyebrow="Beyond Personnel"
+    title="Loyalty Tests,<br>Paranoia, and Enforcers"
+    introText="This is not just about removing people. It is about installing a culture of fear and loyalty throughout the federal government."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4CB}"
+      title="Loyalty Tests for National Security Officials"
+      body="Reports document Trump administration requiring &quot;loyalty tests&quot; for national security officials, including: questioning about personal political views, demands for pledges of loyalty to Trump personally, investigations into past statements or social media, and removal of anyone deemed insufficiently loyal."
+      tag="Documented"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F50A}"
+      title="Laura Loomer: &quot;Blunt Enforcer of Allegiance&quot;"
+      body="Far-right activist Laura Loomer emerged as what Politico described as a &quot;blunt enforcer of allegiance to Trump,&quot; overseeing widespread loyalty purges across the executive branch, creating atmosphere of &quot;paranoia&quot; among federal employees, and identifying and removing perceived disloyal workers."
+      tag="Enforcer"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{1F6AB}"
+      title="Atmosphere of Paranoia"
+      body="Academic analysis described the purges as creating an atmosphere of &quot;paranoia&quot; within the executive branch, where career employees fear speaking honestly, professional disagreement is treated as disloyalty, expertise is subordinated to political alignment, and whistleblowers face retaliation."
+      tag="Impact"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- HOW PURGING ENABLES EVERYTHING -->
+  <SectionDivider label="What This Enables" />
+  <SectionHeader
+    eyebrow="Connected Tactics"
+    title="How Purging Oversight<br>Enables Everything Else"
+    introText="Purging independent oversight is not an isolated action. It is the infrastructure that enables every other abuse of power."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F5F3}\u{FE0F}"
+      title="Enables: Election Rigging"
+      body="With FBI/DOJ loyalists in place: FBI raids election offices (Georgia) without independent oversight. DOJ sues states for voter rolls without career lawyers objecting. No independent IG to investigate abuse of federal law enforcement.<br><br><strong><a href='/attacking-democracy/weaponizing-government' style='color: var(--red-bright); text-decoration: underline;'>See: Weaponizing Government &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4B0}"
+      title="Enables: Corruption"
+      body="With watchdogs removed: Trump meme coin enriches him personally (no IG investigation). Foreign payments flow without oversight. Emoluments violations unchecked. Self-dealing goes uninvestigated.<br><br><strong><a href='/browse?category=corruption' style='color: var(--red-bright); text-decoration: underline;'>View Corruption Controversies &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F3AF}"
+      title="Enables: Retaliation Against Critics"
+      body="With loyal FBI/DOJ: Journalists arrested. Prosecutors target political opponents. Threats to prosecute Obama, Clinton, others. No independent check on weaponization.<br><br><strong><a href='/dangerous-rhetoric' style='color: var(--red-bright); text-decoration: underline;'>See: Dangerous Rhetoric &rarr;</a></strong>"
+      tag="Enabled"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{26A1}"
+      title="Enables: Abuse of Power"
+      body="With career professionals gone: Executive orders bypass normal review. Policy decisions ignore expertise. Legal guardrails removed. No one says &quot;no&quot; to the president.<br><br><strong><a href='/browse?category=abuse-of-power' style='color: var(--red-bright); text-decoration: underline;'>See: Abuse of Power &rarr;</a></strong>"
+      tag="Enabled"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- SUPPRESSING STATISTICAL DATA -->
+  <SectionDivider label="Suppressing Data" />
+  <SectionHeader
+    eyebrow="Transparent Data Destroyed"
+    title="Suppressing Economic<br>and Statistical Data"
+    introText="Democracies require transparent, reliable data so citizens can hold leaders accountable. Trump is systematically undermining economic statistics and firing statisticians who will not manipulate data."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4CA}"
+      title="Firing Statistical Agency Leaders"
+      body="<strong>August 15, 2025:</strong> Fired Dr. Erika McEntarfer, Bureau of Labor Statistics Commissioner, immediately after weak jobs report &mdash; <strong>first BLS Commissioner ever fired in 140-year history.</strong> Former Treasury Secretary Larry Summers called it &quot;way beyond anything Richard Nixon ever did.&quot; Commerce Secretary Lutnick told federal statisticians that independence is &quot;nonsense.&quot;"
+      tag="Unprecedented"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F4C9}"
+      title="Permanently Destroying Economic Records"
+      body="<strong>November 19, 2025:</strong> Cancelled October 2025 jobs report &mdash; <strong>first time in 900+ months (75+ years) that monthly employment data was not collected.</strong> October 2025 permanently missing from U.S. employment records. Caused by 43-day government shutdown (longest in U.S. history)."
+      tag="First in 75 Years"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{23F0}"
+      title="Violating Data Embargo Rules"
+      body="<strong>January 8, 2026:</strong> Posted December jobs data on Truth Social 12 hours before official release. Economist Justin Wolfers: &quot;unprecedented &mdash; no prior White House had ever released market-moving jobs data ahead of schedule.&quot; Laws provide up to 5 years in jail or $250,000 fine &mdash; no penalties imposed."
+      tag="Market Manipulation"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- THE AUTHORITARIAN PATTERN -->
+  <SectionDivider label="The Big Picture" />
+  <SectionHeader
+    eyebrow="Historical Pattern"
+    title="How Democracies<br>Become Dictatorships"
+    introText="Political scientists studying authoritarian consolidation identify a consistent pattern."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="\u{1F4DC}"
+      title="The Authoritarian Checklist"
+      body="1. Attack the judiciary &mdash; Trump has done this. 2. <strong>Purge independent oversight &mdash; HAPPENING NOW.</strong> 3. Control law enforcement &mdash; Trump has done this. 4. Silence the press &mdash; Trump attacking. 5. Rig elections &mdash; Trump attempting. 6. Declare emergency powers &mdash; Watch this space."
+      tag="Historical Pattern"
+      variant="red"
+    />
+    <CategoryCard
+      icon="\u{1F393}"
+      title="Academic Analysis"
+      body="Peer-reviewed journal article by Donald Moynihan described the purges as: &quot;An anti-statist restructuring of American government centered around political loyalty... unprecedented... in violation of federal law... with the intent of replacing employees with workers more aligned with his agenda.&quot;"
+      tag="Scholarly"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="\u{26A0}\u{FE0F}"
+      title="What Happens If This Succeeds"
+      body="No one investigates corruption (IGs gone). No one stops illegal orders (career lawyers gone). No one protects civil rights (DOJ/FBI loyalists). No one challenges abuses (fear/paranoia). No one says &quot;that's illegal&quot; (loyalty &gt; law). <strong>Democracy dies &mdash; not with a bang, but bureaucratically.</strong>"
+      tag="Consequence"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- THE CORE TRUTH -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="\u{1F525}" title="The Core Truth" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Everything else documented on this site becomes possible when you eliminate independent oversight.</strong></p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">You cannot rig elections if career DOJ lawyers object. You cannot raid political opponents if independent FBI agents refuse. You cannot hide corruption if Inspectors General investigate. You cannot weaponize government if civil servants serve the Constitution.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>That is why Trump fired the watchdogs, purged the professionals, and installed the loyalists. This is not about efficiency or reorganization. This is about power without accountability.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PATTERN ALERT -->
+  <ColoredSection>
+    <AlertBanner icon="\u{26A0}\u{FE0F}" title="Pattern Alert" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Notice how removing oversight enables multiple authoritarian tactics. This is not coincidence &mdash; it is the playbook. You cannot rig elections, engage in corruption, or weaponize government if independent watchdogs are investigating. That is why Step 1 is always: <em>remove the watchdogs</em>.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- HOPE -->
+  <ColoredSection>
+    <AlertBanner icon="\u{1F4D8}" title="The Choice Still Exists" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Federal judges have ruled some firings unlawful. Lawsuits continue. Congress can act. Whistleblowers can speak. The press can investigate. Citizens can resist.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">But the window is closing.</strong> Once loyalists fully control law enforcement, the judiciary, and oversight, resistance becomes prosecution. Dissent becomes sedition. Democracy becomes a memory.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>History will record that we saw this happening.</strong> The only question is whether we will record that we stopped it.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Installing<br>Loyalists"
+    description="With oversight purged, Step 2 of the playbook becomes possible: installing personal loyalists at FBI, DOJ, Pentagon, and intelligence agencies."
+    linkText="Continue: Installing Loyalists &rarr;"
+    linkHref="/attacking-democracy/installing-loyalists"
+  />
+
+  <PageNavigation
+    next={{ label: 'Installing Loyalists', href: '/attacking-democracy/installing-loyalists' }}
+    currentIndex={0}
+    totalPages={4}
+  />
+
+</ResearchLayout>

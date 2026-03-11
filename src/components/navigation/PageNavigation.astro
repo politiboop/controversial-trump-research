@@ -1,0 +1,101 @@
+---
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  prev?: NavLink;
+  next?: NavLink;
+  currentIndex?: number;
+  totalPages?: number;
+}
+
+const { prev, next, currentIndex, totalPages } = Astro.props;
+---
+
+<nav class="page-navigation">
+  <div class="page-nav-inner">
+    {prev ? (
+      <a href={prev.href} class="page-nav-link prev">
+        <span class="page-nav-dir">← Previous</span>
+        <span class="page-nav-label">{prev.label}</span>
+      </a>
+    ) : (
+      <div />
+    )}
+
+    {totalPages && currentIndex !== undefined && (
+      <div class="page-nav-progress">
+        <span class="page-nav-count">{currentIndex + 1} / {totalPages}</span>
+      </div>
+    )}
+
+    {next ? (
+      <a href={next.href} class="page-nav-link next">
+        <span class="page-nav-dir">Next →</span>
+        <span class="page-nav-label">{next.label}</span>
+      </a>
+    ) : (
+      <div />
+    )}
+  </div>
+</nav>
+
+<style>
+  .page-navigation {
+    border-top: 1px solid var(--border);
+    padding: 40px 24px;
+  }
+
+  .page-nav-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .page-nav-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 40%;
+  }
+
+  .page-nav-link.next {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .page-nav-dir {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .page-nav-label {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  .page-nav-link:hover .page-nav-label {
+    color: var(--red);
+  }
+
+  .page-nav-progress {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--faint);
+  }
+</style>

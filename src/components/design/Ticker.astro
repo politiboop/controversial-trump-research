@@ -1,0 +1,41 @@
+---
+interface Props {
+  items: string[];
+}
+
+const { items } = Astro.props;
+// Duplicate items for seamless infinite scroll
+const allItems = [...items, ...items];
+---
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    {allItems.map(item => <span>{item}</span>)}
+  </div>
+</div>
+
+<style>
+  .ticker-wrap {
+    background: var(--red);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px 0;
+  }
+
+  .ticker {
+    display: inline-block;
+    animation: ticker 40s linear infinite;
+  }
+
+  .ticker span {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 0 40px;
+  }
+
+  .ticker span::before {
+    content: "◆ ";
+  }
+</style>

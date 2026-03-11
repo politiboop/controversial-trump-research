@@ -1,0 +1,51 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+}
+
+const { eyebrow, title } = Astro.props;
+---
+
+<section class="consequences-section">
+  <div class="consequences-inner">
+    <div class="consequences-header">
+      {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+      <h2 set:html={title} />
+    </div>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .consequences-section {
+    background: #120a0a;
+    border-top: 2px solid var(--red);
+    padding: 70px 24px;
+  }
+
+  .consequences-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .consequences-header {
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .consequences-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 80px);
+    line-height: 0.9;
+    color: var(--text);
+  }
+</style>

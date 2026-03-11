@@ -1,0 +1,93 @@
+{
+  "id": "anthony-scaramucci",
+  "name": "Anthony Scaramucci",
+  "role": "White House Communications Director",
+  "administration": "Trump Administration",
+  "years": "2017",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "communications",
+  "photo": null,
+  "summary": "Former White House communications director who later called Trump a 'clear and present danger' and described his behavior as early-stage fascism, and helped launch the pro-Biden Right Side PAC.",
+  "keyStatements": [
+    {
+      "quote": "We recognize that the president is a clear and present danger to the American society\u2014the American culture.",
+      "date": "2019-08-18",
+      "source": "Newsweek",
+      "context": "Fox News interview with Howard Kurtz",
+      "url": "https://www.newsweek.com/scaramucci-trump-cult-deprogram-1454931"
+    },
+    {
+      "quote": "He may not have early-stage dementia, but he definitely has early-stage fascism.",
+      "date": "2019-10-22",
+      "source": "TheWrap",
+      "context": "Vanity Fair New Establishment Summit",
+      "url": "https://www.thewrap.com/anthony-scaramucci-predicts-trump-will-be-impeached-and-removed-from-office/"
+    },
+    {
+      "quote": "He's going to get impeached.",
+      "date": "2019-10-22",
+      "source": "TheWrap",
+      "context": "Vanity Fair New Establishment Summit",
+      "url": "https://www.thewrap.com/anthony-scaramucci-predicts-trump-will-be-impeached-and-removed-from-office/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-07-21",
+      "event": "Appointed White House Communications Director",
+      "significance": "Joined Trump administration"
+    },
+    {
+      "date": "2017-07-31",
+      "event": "Fired after 11 days",
+      "significance": "Shortest tenure in the role"
+    },
+    {
+      "date": "2019-08-18",
+      "event": "Called Trump a 'clear and present danger'",
+      "significance": "Public break with Trump on national TV"
+    },
+    {
+      "date": "2020-06-17",
+      "event": "Helped launch Right Side PAC to support Joe Biden",
+      "significance": "Organized anti-Trump Republican effort"
+    }
+  ],
+  "credibility": {
+    "background": "Former White House Communications Director, hedge fund manager, financier",
+    "positions": [
+      "White House Communications Director (2017)",
+      "Founder, SkyBridge Capital",
+      "Goldman Sachs investment banker"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Called Trump a 'clear and present danger' to American society",
+    "Described Trump's behavior as early-stage fascism",
+    "Supported efforts to defeat Trump in 2020"
+  ],
+  "endorsement": "Supported Joe Biden in 2020 via Right Side PAC",
+  "sources": [
+    {
+      "title": "Anthony Scaramucci: The Left Should \u2018Deprogram\u2019 Trump Supporters Like They\u2019re in a \u2018Cult\u2019",
+      "url": "https://www.newsweek.com/scaramucci-trump-cult-deprogram-1454931",
+      "date": "2019-08-18",
+      "type": "news"
+    },
+    {
+      "title": "Anthony Scaramucci Predicts Trump Will Be Impeached and Removed From Office",
+      "url": "https://www.thewrap.com/anthony-scaramucci-predicts-trump-will-be-impeached-and-removed-from-office/",
+      "date": "2019-10-22",
+      "type": "news"
+    },
+    {
+      "title": "GOP Operatives Launch PAC To Convince Republicans To Vote For Biden",
+      "url": "https://www.forbes.com/sites/tommybeer/2020/06/17/gop-operatives-launch-pac-to-convince-republicans-to-vote-for-biden/",
+      "date": "2020-06-17",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

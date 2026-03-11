@@ -1,0 +1,39 @@
+---
+interface Props {
+  text: string;
+  variant?: 'red' | 'amber';
+}
+
+const { text, variant = 'red' } = Astro.props;
+---
+
+<div class:list={['highlight-bar', variant]}>
+  <p set:html={text} />
+</div>
+
+<style>
+  .highlight-bar {
+    background: var(--red);
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+  .highlight-bar p {
+    font-family: var(--font-heading);
+    font-size: clamp(15px, 2.5vw, 20px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .highlight-bar.amber {
+    background: #1a0e00;
+    border-top: 2px solid var(--amber);
+    border-bottom: 2px solid var(--amber);
+  }
+
+  .highlight-bar.amber p {
+    color: var(--amber);
+  }
+</style>

@@ -1,0 +1,311 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const rhetoricTabs = [
+  { label: 'Overview', href: '/dangerous-rhetoric' },
+  { label: 'Press', href: '/dangerous-rhetoric/press' },
+  { label: 'Critics', href: '/dangerous-rhetoric/critics' },
+  { label: 'Democrats', href: '/dangerous-rhetoric/democrats' },
+  { label: 'Immigrants', href: '/dangerous-rhetoric/immigrants' },
+  { label: 'Women', href: '/dangerous-rhetoric/women' },
+];
+
+const tickerItems = [
+  "John Kelly: Called Trump Fascist -- Now 'Bully' and 'Lowlife'",
+  "General Milley: Trump Called for His Execution",
+  "Jeff Sessions: First Endorser Destroyed for Following Law",
+  "Bill Barr: 'Great AG' to 'Disappointment' for Telling Truth",
+  "Mitt Romney: GOP Nominee Now 'RINO' and 'Traitor'",
+  "Liz Cheney: 'Nine Barrels Shooting at Her'",
+  "MTG: From Trump's 'Favorite' to 'Wacky' and 'TRAITOR'",
+  "Inspector Generals: Fired for Investigating",
+];
+---
+
+<ResearchLayout title="Dangerous Rhetoric Against Critics and Dissenters" description="Trump's pattern of attacking former allies and critics - absolute loyalty demanded, any dissent equals betrayal">
+
+  <SeriesNav tabs={rhetoricTabs} currentPath="/dangerous-rhetoric/critics" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Dangerous Rhetoric', href: '/dangerous-rhetoric' },
+    { label: 'Against Critics' }
+  ]} />
+
+  <Masthead
+    eyebrow="Page 2 of 5 &middot; Dangerous Rhetoric"
+    title="FROM ALLY<br>TO ENEMY"
+    titleHighlight="ENEMY"
+    subtitle="The Loyalty Test: Absolute obedience or total destruction"
+    date="Case Studies &middot; Pattern Analysis &middot; Authoritarian Playbook"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <HighlightBar text="Trump demands absolute loyalty. Any dissent -- any refusal to violate oaths, break laws, or abandon principles -- is treated as betrayal deserving the most extreme retaliation." variant="red" />
+
+  <IntroQuote
+    quote="The pattern is unmistakable and chilling: Trump surrounds himself with highly qualified, loyal people -- generals, cabinet members, intelligence officials, Republican allies. They serve him faithfully. Then comes the moment of truth: Trump asks them to do something illegal, unethical, or unconstitutional. They refuse. And suddenly, these decorated veterans and respected officials become 'traitors,' 'weaklings,' and threats deserving execution."
+    citation="Pattern Analysis: From Ally to Enemy"
+  />
+
+  <!-- THE THREE-PHASE CYCLE -->
+  <SectionDivider label="The Pattern" />
+  <SectionHeader
+    eyebrow="Predictable Cycle"
+    title="Loyalty &rarr; Dissent<br>&rarr; Enemy"
+    introText="The consequences are real and measurable: careers destroyed, reputations smeared, death threats received, security clearances revoked, and in Trump's own words, suggestions that some critics deserve the death penalty for 'treason.'"
+  />
+
+  <TimelineSection title="The Three-Phase<br>Cycle">
+    <TimelineItem
+      date="PHASE 1"
+      badge="Honeymoon"
+      badgeType="serious"
+      title="The Honeymoon"
+      description="Trump praises them effusively: 'The best,' 'great person,' 'tremendous.' Demands and receives unwavering loyalty. Person serves faithfully, often defending Trump publicly. Examples: General Kelly ('a true star'), General Mattis ('the closest thing to General George Patton'), Jeff Sessions ('a great man'), Bill Barr ('a great Attorney General')."
+    />
+    <TimelineItem
+      date="PHASE 2"
+      badge="Breaking Point"
+      badgeType="catastrophic"
+      title="The Moment of Truth"
+      description="Trump asks them to do something illegal, unethical, or unconstitutional. OR: They publicly acknowledge a truth Trump denies (election results, COVID severity, legal facts). OR: They refuse to fire someone Trump wants gone, investigate someone Trump targets, or ignore legal constraints. Examples: Sessions recused from Russia investigation; Pence refused to overturn election; Kelly called Trump fascist; Milley followed constitutional chain of command."
+    />
+    <TimelineItem
+      date="PHASE 3"
+      badge="Purge"
+      badgeType="catastrophic"
+      title="The Purge"
+      description="Immediate firing or forced resignation. Public humiliation: 'Weakling,' 'disaster,' 'disgrace,' 'dumb as a rock.' Accusations of crimes: 'Treason,' 'corruption.' Suggestions of extreme punishment: prison, execution, military tribunals. Permanent enemy status: years of ongoing attacks. Message to others: This is what happens when you say no to Trump."
+    />
+  </TimelineSection>
+
+  <!-- CASE STUDIES -->
+  <SectionDivider label="Case Studies" />
+  <SectionHeader
+    eyebrow="Patriots Turned 'Traitors'"
+    title="Case Studies"
+    introText="These are not partisan Democrats or media critics. These are highly decorated military officers, respected Republicans, and Trump's own handpicked appointees. Their crime? Putting country, constitution, or truth above personal loyalty to Trump."
+  />
+
+  <!-- General Kelly -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="⭐" title="General John Kelly: From 'True Star' to 'Bully' Who Called Trump Fascist" variant="amber">
+      <p><strong>Background:</strong> 4-star Marine Corps General. Gold Star father (son killed in Afghanistan 2010). Trump's Homeland Security Secretary (2017), Chief of Staff (2017-2019).</p>
+      <p><strong>Trump's praise:</strong> &quot;He's a true star. Spectacular.&quot; &quot;General Kelly is doing a fantastic job.&quot; &quot;He's a great, great American.&quot;</p>
+      <p><strong>Breaking points:</strong> Tried to establish proper White House procedures. Pushed back on illegal directives. Defended Lt. Col. Vindman. Publicly stated Trump met definition of fascist (October 2024). Confirmed Trump said Hitler &quot;did some good things.&quot;</p>
+      <p style="color: var(--red-bright);"><strong>Trump's attacks:</strong> &quot;John Kelly is a bully but a weak person.&quot; &quot;He was a stiff. He was a bad leader.&quot; &quot;Kelly is a lowlife.&quot;</p>
+      <p style="color: var(--text); font-style: italic;">&quot;A person that has nothing but contempt for our democratic institutions, our Constitution, and the rule of law... He certainly falls into the general definition of fascist, for sure.&quot; -- Kelly's warning to America, October 2024</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- General Milley -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="General Mark Milley: From Chairman to 'Treasonous' Target for Execution" variant="red">
+      <p><strong>Background:</strong> 4-star Army General. Chairman of the Joint Chiefs of Staff (2019-2023). 43 years of military service. Combat veteran. Appointed by Trump (2019).</p>
+      <p><strong>Breaking points:</strong> After January 6, followed proper protocol to ensure military could not be used for coup attempt. Reassured China that U.S. would not launch surprise attack. Later described Trump as &quot;fascist to the core&quot; and &quot;the most dangerous person to this country.&quot;</p>
+      <p style="color: var(--red-bright);"><strong>Trump calls for execution (September 2021):</strong> &quot;If the story of 'Dumbass' General Mark Milley... is true, then I assume he would be tried for TREASON... This is an act so egregious that, in times gone by, the punishment would have been DEATH!&quot;</p>
+      <p><strong>What Milley actually did:</strong> Followed established protocols for military-to-military communications. Ensured military remained under civilian control. Briefed Defense Secretary about all actions.</p>
+      <p style="color: var(--text);"><strong>The message:</strong> Trump's own Chairman of the Joint Chiefs -- a decorated combat veteran with 43 years of service -- is now subject to calls for execution because he prioritized the Constitution over personal loyalty to Trump.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Jeff Sessions -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="⚖️" title="Jeff Sessions: From 'Great Man' to 'Disaster' and 'Dumb Southerner'" variant="amber">
+      <p><strong>Background:</strong> U.S. Senator from Alabama (1997-2017). First sitting Senator to endorse Trump (2016). Appointed Attorney General (2017).</p>
+      <p><strong>Trump's praise:</strong> &quot;Jeff Sessions is a great man.&quot; &quot;He's been so loyal and so wonderful.&quot;</p>
+      <p><strong>The single decision:</strong> Sessions recused himself from Russia investigation (March 2017). DOJ ethics officials recommended recusal. It was legally and ethically necessary.</p>
+      <p style="color: var(--red-bright);"><strong>Trump's attacks:</strong> &quot;Jeff Sessions is a disaster.&quot; &quot;I don't have an Attorney General.&quot; &quot;Sessions was a dumb Southerner.&quot; &quot;He couldn't get elected dogcatcher in Alabama.&quot;</p>
+      <p><strong>2020 revenge:</strong> Trump endorsed Sessions' opponent in Senate primary. Sessions lost despite 20 years as Alabama's Senator. Career destroyed for following legal ethics rules.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Bill Barr -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="⚖️" title="Bill Barr: From 'Great Attorney General' to Enemy for Acknowledging Election Results" variant="amber">
+      <p><strong>Loyalty record:</strong> Defended Trump on Russia investigation. Mischaracterized Mueller Report. Intervened in Roger Stone sentencing. Ordered clearing of Lafayette Square protesters. Consistently used DOJ to favor Trump's interests.</p>
+      <p><strong>Breaking point:</strong> December 1, 2020: Barr stated publicly: &quot;We have not seen fraud on a scale that could have effected a different outcome in the election.&quot; Refused to use DOJ to overturn election. Resigned rather than participate in coup attempt.</p>
+      <p style="color: var(--red-bright);"><strong>Trump's attacks:</strong> &quot;Bill Barr was a disappointment in every sense of the word.&quot; &quot;He's a coward.&quot; &quot;He was afraid. He was weak.&quot;</p>
+      <p style="color: var(--text); font-style: italic;">Barr later said: &quot;The claims of fraud were all bulls--t.&quot; &quot;I don't think he should be president again.&quot; &quot;He's all about him all the time. It's narcissism.&quot;</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Mitt Romney -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="🗳️" title="Mitt Romney: From Republican Nominee to 'RINO' and 'Traitor'" variant="amber">
+      <p><strong>Background:</strong> 2012 Republican Presidential Nominee. Governor of Massachusetts. U.S. Senator from Utah. Lifelong Republican with impeccable conservative credentials.</p>
+      <p><strong>Breaking point:</strong> February 5, 2020: Romney voted to convict Trump on abuse of power -- only Republican to do so. Cited religious faith and oath to Constitution.</p>
+      <p style="color: var(--red-bright);"><strong>Trump's attacks:</strong> &quot;Romney is a pompous ass.&quot; &quot;He's a RINO!&quot; &quot;Romney is a total loser.&quot; &quot;Mitt Romney is a traitor to the Republican Party.&quot; &quot;He should be expelled from the Republican Party.&quot;</p>
+      <p><strong>Consequences:</strong> Booed at Republican events. Utah Republican Party censured him. Death threats from Trump supporters. Chose not to run for reelection in 2024. The former Republican presidential nominee became a pariah in his own party.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Liz Cheney -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Liz Cheney: From GOP Leader to 'Nine Barrels Shooting at Her'" variant="red">
+      <p><strong>Background:</strong> House Republican Conference Chair (3rd highest GOP leadership). Daughter of Vice President Dick Cheney. 93% voting record with Trump's positions.</p>
+      <p><strong>Breaking point:</strong> January 13, 2021: Voted to impeach Trump for inciting January 6 insurrection. &quot;There has never been a greater betrayal by a President of the United States of his office and his oath to the Constitution.&quot;</p>
+      <p style="color: var(--red-bright);"><strong>Trump's firing squad comment (October 31, 2024):</strong> &quot;She's a radical war hawk. Let's put her with a rifle standing there with nine barrels shooting at her, OK? Let's see how she feels about it, you know, when the guns are trained on her face.&quot;</p>
+      <p><strong>Consequences:</strong> Removed from House GOP leadership. Lost Republican primary to Trump-backed opponent. Requires 24/7 security detail. Family members threatened.</p>
+      <p style="color: var(--text); font-style: italic;">Cheney: &quot;This is how dictators destroy free nations. They threaten those who speak against them with death.&quot;</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Dr. Fauci -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="🔬" title="Dr. Anthony Fauci: From Respected Expert to 'Fire Fauci' Target" variant="amber">
+      <p><strong>Background:</strong> Director, National Institute of Allergy and Infectious Diseases (1984-2022). Advised every president from Reagan to Biden (7 presidents). 50+ years of public health service. Leading infectious disease expert globally.</p>
+      <p><strong>Breaking point:</strong> Corrected Trump's false claims about COVID. Contradicted Trump on hydroxychloroquine efficacy. Warned against premature reopening. Advocated for masks when Trump resisted.</p>
+      <p style="color: var(--red-bright);"><strong>Trump's attacks:</strong> &quot;Dr. Fauci is a disaster.&quot; &quot;People are tired of hearing Fauci and all these idiots.&quot; Retweeted &quot;#FireFauci&quot; hashtags.</p>
+      <p><strong>Consequences:</strong> Death threats against Fauci and family. Required federal security protection. Daughters harassed. Home address published. Rally chants of &quot;Fire Fauci!&quot; GOP members called him &quot;mass murderer.&quot;</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Marjorie Taylor Greene -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="🎯" title="MTG: From Trump's 'Favorite' to 'Wacky' and 'TRAITOR'" variant="amber">
+      <p><strong>Background:</strong> One of Trump's most vocal and extreme defenders. Defended Trump through both impeachments, January 6, indictments. Promoted QAnon and election fraud claims.</p>
+      <p><strong>Trump's praise:</strong> &quot;Marjorie Taylor Greene is a real winner, a fighter.&quot; &quot;She's strong, she's smart, she's a true patriot.&quot;</p>
+      <p><strong>Breaking point:</strong> Greene joined bipartisan effort to release Epstein files. Trump told her he opposed the release because &quot;his friends will get hurt.&quot; When Greene suggested Epstein survivors visit Oval Office, Trump said they &quot;hadn't done anything to earn the honor.&quot;</p>
+      <p style="color: var(--red-bright);"><strong>Trump's attacks:</strong> &quot;Wacky.&quot; &quot;A ranting lunatic.&quot; &quot;TRAITOR.&quot; Withdrew all political support.</p>
+      <p><strong>Consequence:</strong> Greene announced resignation from Congress (November 2025). One of Trump's most loyal allies forced out. Even the most devoted defenders are expendable.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Inspector Generals & Others -->
+  <CategoryGrid>
+    <CategoryCard
+      icon="🔍"
+      title="Inspector Generals: Fired for Investigating"
+      body="<strong>What they are:</strong> Independent watchdogs investigating waste, fraud, and misconduct.<br><strong>First term:</strong> Michael Atkinson (fired for handling Ukraine whistleblower), Glenn Fine (removed from CARES Act oversight), Steve Linick (fired while investigating Pompeo).<br><strong>Second term:</strong> Dozens more fired, replaced with Trump loyalists. Systematic dismantling of independent oversight."
+      tag="Oversight Destroyed"
+    />
+    <CategoryCard
+      icon="📖"
+      title="John Bolton: From NSA to 'Dumbest of All'"
+      body="<strong>Background:</strong> National Security Advisor (2018-2019). Trump-appointed.<br><strong>Break:</strong> Fired/resigned September 2019. Published book revealing Trump's misconduct.<br><strong>Trump's attacks:</strong> &quot;One of the dumbest people in Washington.&quot; &quot;A liar and a creep.&quot;<br><strong>Pattern:</strong> Trusted advisor to &quot;dumbest person&quot; for documenting unfitness."
+      tag="Book = Enemy"
+    />
+    <CategoryCard
+      icon="🏦"
+      title="Jerome Powell: Fed Chair Becomes 'Enemy'"
+      body="<strong>Background:</strong> Chairman of the Federal Reserve. Appointed by Trump (2018).<br><strong>'Crime':</strong> Made monetary policy decisions based on data, not Trump's demands.<br><strong>Trump's attacks:</strong> &quot;Jerome Powell is an enemy of the people.&quot; Compared to Xi Jinping. &quot;He's a bonehead.&quot;<br><strong>2025:</strong> DOJ launched unprecedented criminal investigation of Fed Chair."
+      tag="Independence Attacked"
+    />
+  </CategoryGrid>
+
+  <!-- EXPERT ANALYSIS -->
+  <SectionDivider label="Expert Analysis" />
+  <SectionHeader
+    eyebrow="Cult of Personality"
+    title="Expert Analysis"
+    introText="How historians and political scientists analyze Trump's systematic purge of anyone who dares to say no."
+  />
+
+  <VoicesSection
+    eyebrow="Scholars on Authoritarianism"
+    title="Expert<br>Warnings"
+  >
+    <VoiceCard
+      quote="What we're seeing is a textbook cult of personality. Trump doesn't just demand policy agreement -- he demands total personal loyalty that supersedes law, ethics, constitution, and truth. The moment anyone places principle above Trump, they become an enemy. This is how authoritarian leaders consolidate power: eliminate anyone capable of saying no."
+      attribution="<strong>Ruth Ben-Ghiat</strong> &middot; NYU<br>Expert on Authoritarianism"
+    />
+    <VoiceCard
+      quote="The pattern is clear: Trump surrounds himself with qualified people, then tests their loyalty by asking them to break laws or norms. Those who refuse are purged and vilified. This creates a ratchet effect where only the most unethical, compliant individuals remain."
+      attribution="<strong>Timothy Snyder</strong> &middot; Yale University<br>Historian"
+    />
+    <VoiceCard
+      quote="Look at who Trump has attacked: decorated generals, his own Attorney General, the Fed Chair, Inspector Generals, public health experts, Republican party leaders. These aren't radical leftists -- they're conservative, accomplished professionals. Their common thread? They all said 'no' to Trump at least once."
+      attribution="<strong>Steven Levitsky</strong> &middot; Harvard University<br>Author of &quot;How Democracies Die&quot;"
+    />
+    <VoiceCard
+      quote="The attacks on Kelly, Milley, and other military leaders are particularly dangerous. Trump is signaling to future military officers that following the Constitution and refusing illegal orders will result in accusations of treason and suggestions of execution."
+      attribution="<strong>Kori Schake</strong> &middot; American Enterprise Institute<br>Former Defense Official"
+    />
+    <VoiceCard
+      quote="When a leader fires every independent watchdog, attacks every expert who disagrees, and demands absolute loyalty from all officials, that's not democratic governance -- it's authoritarian consolidation."
+      attribution="<strong>Anne Applebaum</strong> &middot; Journalist and Historian<br>Author of &quot;Twilight of Democracy&quot;"
+    />
+  </VoicesSection>
+
+  <!-- REAL-WORLD CONSEQUENCES -->
+  <ConsequencesGrid eyebrow="Chilling Effect" title="Real-World<br>Consequences">
+    <ConsequenceRow>
+      <ConsequenceItem number="01" title="Destruction of Expertise" description="Qualified experts refuse to serve in government, knowing any disagreement can end career and result in death threats" />
+      <ConsequenceItem number="02" title="Erosion of Oversight" description="Systematic firing of Inspector Generals and watchdogs eliminates accountability -- no one left to investigate corruption" />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="03" title="Military Leadership Crisis" description="Attacks on Generals Kelly, Milley, Mattis send message: loyalty to Trump over Constitution. Future officers may fear refusing illegal orders" />
+      <ConsequenceItem number="04" title="Republican Party Transformation" description="Romney (RINO), Cheney (purged), Sessions (destroyed). GOP transformed from political party to Trump loyalty cult" />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem number="05" title="Death Threats and Violence" description="Every critic Trump targets receives death threats. Milley, Fauci, Cheney, Schiff all require security protection" />
+      <ConsequenceItem number="06" title="Normalization of Corruption" description="Sessions fired for following ethics rules. Barr became 'disappointment' for refusing to lie. Only unethical loyalists remain" />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- THE AUTHORITARIAN PLAYBOOK -->
+  <SectionDivider label="Historical Pattern" />
+  <SectionHeader
+    eyebrow="The Authoritarian Handbook"
+    title="The Authoritarian<br>Playbook"
+    introText="Historians identify Trump's pattern as classic authoritarian consolidation of power. The steps are always the same."
+  />
+
+  <TimelineSection title="Five Steps to<br>Consolidation">
+    <TimelineItem date="STEP 1" badge="Loyalty" badgeType="serious" title="Demand Personal Loyalty Over Institutional Loyalty" description="Trump demands FBI Director loyalty pledge (Comey refused, was fired). Asks military leaders to be 'his generals' not America's. Requires Cabinet members to praise him publicly." />
+    <TimelineItem date="STEP 2" badge="Purge" badgeType="catastrophic" title="Purge Those Who Refuse" description="Comey, Sally Yates, Jeff Sessions, Preet Bharara, dozens of inspectors general. Replace with loyalists willing to prioritize Trump over law/constitution." />
+    <TimelineItem date="STEP 3" badge="Vilify" badgeType="catastrophic" title="Publicly Vilify the Purged" description="Every person fired/resigned becomes 'disaster,' 'weak,' 'corrupt,' 'traitor.' Use most extreme language: treason, execution, enemy of the people." />
+    <TimelineItem date="STEP 4" badge="Fear" badgeType="catastrophic" title="Create Climate of Fear" description="Supporters send death threats (Trump never condemns, often encourages). Political careers destroyed (Sessions, Cheney, Romney). Message: This is what happens when you say no." />
+    <TimelineItem date="STEP 5" badge="Consolidate" badgeType="catastrophic" title="Consolidate Power with Only the Compliant" description="Each purge leaves only more compliant officials. Ratchet effect: loyalty standards get higher, ethical standards get lower. Eventually surrounded only by people willing to do anything." />
+  </TimelineSection>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Why This Pattern Matters" variant="red">
+      <p>This is not about individual policy disputes or personal vendettas. This is a systematic pattern showing how Trump eliminates anyone capable of constraining his power.</p>
+      <p>The people Trump has attacked represent the guardrails of American democracy: independent judiciary, professional military leadership, nonpartisan civil service, free press, expert agencies, congressional oversight. He attacks them precisely because they might say &quot;no&quot; to him.</p>
+      <p style="color: var(--text);"><strong>In Trump's second term, there are no guardrails left.</strong> Everyone who might have constrained him -- Kelly, Mattis, Milley, Sessions, Barr, Pence -- is gone. The pattern is complete. The consolidation is happening. And anyone who speaks up becomes the next enemy.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Next: Against<br>Democrats"
+    description="From 'Lock her up' to 'enemy from within' to suggesting military violence against political opponents -- with deadly consequences."
+    linkText="Continue: Against Democrats &rarr;"
+    linkHref="/dangerous-rhetoric/democrats"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Against the Press', href: '/dangerous-rhetoric/press' }}
+    next={{ label: 'Against Democrats', href: '/dangerous-rhetoric/democrats' }}
+    currentIndex={1}
+    totalPages={5}
+  />
+
+</ResearchLayout>

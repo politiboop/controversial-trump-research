@@ -1,0 +1,87 @@
+{
+  "id": "jeff-flake",
+  "name": "Jeff Flake",
+  "role": "U.S. Senator from Arizona",
+  "administration": null,
+  "years": "2013-2019",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "senator",
+  "photo": null,
+  "summary": "Former Republican senator who delivered a major Senate floor speech warning against the undermining of democratic norms and later endorsed Kamala Harris in 2024.",
+  "keyStatements": [
+    {
+      "quote": "We must never regard as 'normal' the regular and casual undermining of our democratic norms and ideals.",
+      "date": "2017-10-24",
+      "source": "Congressional Record",
+      "context": "Senate floor speech announcing retirement",
+      "url": "https://www.congress.gov/crec/2017/10/24/CREC-2017-10-24-pt1-PgS6661-2.pdf"
+    },
+    {
+      "quote": "We must never meekly accept the daily sundering of our country — the personal attacks, the threats against principles, freedoms and institutions, the flagrant disregard for truth or decency.",
+      "date": "2017-10-24",
+      "source": "Congressional Record",
+      "context": "Same speech",
+      "url": "https://www.congress.gov/crec/2017/10/24/CREC-2017-10-24-pt1-PgS6661-2.pdf"
+    },
+    {
+      "quote": "For that reason, I'm endorsing Kamala Harris.",
+      "date": "2024-10-11",
+      "source": "The Arizona Republic",
+      "context": "Announcement of endorsement",
+      "url": "https://www.azcentral.com/story/news/politics/arizona/2024/10/11/jeff-flake-endorses-kamala-harris/75606814007/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2013-01-03",
+      "event": "Became U.S. Senator from Arizona",
+      "significance": "Moved to Senate"
+    },
+    {
+      "date": "2017-10-24",
+      "event": "Announced retirement from Senate",
+      "significance": "Delivered floor speech warning against undermining democratic norms"
+    },
+    {
+      "date": "2019-01-03",
+      "event": "Left Senate",
+      "significance": "Retired from politics"
+    },
+    {
+      "date": "2024-10-11",
+      "event": "Endorsed Kamala Harris",
+      "significance": "Said country over party"
+    }
+  ],
+  "credibility": {
+    "background": "Former U.S. Senator and Representative, U.S. Ambassador to Turkey",
+    "positions": [
+      "U.S. Senator from Arizona (2013-2019)",
+      "U.S. Representative from Arizona (2001-2013)",
+      "U.S. Ambassador to Turkey (2021-present)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Warned against the casual undermining of democratic norms",
+    "Condemned attacks on institutions and disregard for truth",
+    "Said country should come before party"
+  ],
+  "endorsement": "Endorsed Kamala Harris in 2024",
+  "sources": [
+    {
+      "title": "Congressional Record, Oct. 24, 2017 (Flake speech)",
+      "url": "https://www.congress.gov/crec/2017/10/24/CREC-2017-10-24-pt1-PgS6661-2.pdf",
+      "date": "2017-10-24",
+      "type": "government"
+    },
+    {
+      "title": "Jeff Flake endorses Kamala Harris for president",
+      "url": "https://www.azcentral.com/story/news/politics/arizona/2024/10/11/jeff-flake-endorses-kamala-harris/75606814007/",
+      "date": "2024-10-11",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

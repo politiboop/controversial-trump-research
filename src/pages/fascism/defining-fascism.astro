@@ -1,0 +1,274 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const fascismTabs = [
+  { label: 'Overview', href: '/fascism' },
+  { label: 'Expert Consensus', href: '/fascism/expert-consensus' },
+  { label: 'Defining Fascism', href: '/fascism/defining-fascism' },
+  { label: "Trump's Actions", href: '/fascism/trumps-actions' },
+  { label: 'Historical Comparisons', href: '/fascism/historical-comparisons' },
+];
+
+const tickerItems = [
+  "Eco: 14 Characteristics of Ur-Fascism (1995)",
+  "Britt: 14 Characteristics of Fascist Regimes (2003)",
+  "Paxton: The Anatomy of Fascism (2004)",
+  "Stanley: How Fascism Works — 10 Pillars (2018)",
+  "All Frameworks Pre-Date Trump's Presidency",
+  "Based on Historical Analysis of Actual Fascist Regimes",
+  "Used by Mainstream Scholars Across Political Spectrum",
+];
+---
+
+<ResearchLayout title="Defining Fascism - Path to Fascism" description="Scholarly frameworks from Umberto Eco, Lawrence Britt, Robert Paxton, and Jason Stanley that define fascism with objective, verifiable criteria.">
+
+  <SeriesNav tabs={fascismTabs} currentPath="/fascism/defining-fascism" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Fascism', href: '/fascism' },
+    { label: 'Defining Fascism' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 2 of 4 · Path to Fascism"
+    title="DEFINING FASCISM"
+    titleHighlight="FASCISM"
+    subtitle="Scholarly frameworks and objective criteria for identifying fascism"
+    date="Source: Eco (1995) · Britt (2003) · Paxton (2004) · Stanley (2018)"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Fascism is not a political label — it is a scholarly term with specific meaning. Leading academics have developed rigorous frameworks for identifying fascist movements based on historical analysis. These frameworks were established long before Trump's presidency."
+    citation="Academic Context"
+  />
+
+  <!-- WHY DEFINITIONS MATTER -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="📐" title="Why Definitions Matter" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Without clear criteria, &quot;fascism&quot; becomes mere insult.</strong> Scholars use precise frameworks to distinguish fascist movements from other forms of authoritarianism. These definitions are not arbitrary — they are based on decades of historical research analyzing actual fascist regimes.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">The frameworks below come from leading experts in fascism studies. None were created to target Trump specifically. They exist to help us recognize dangerous patterns before they become irreversible.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- FRAMEWORK 1: UMBERTO ECO -->
+  <SectionDivider label="Framework 1" />
+  <SectionHeader
+    eyebrow="Umberto Eco · 1995"
+    title="Ur-Fascism:<br>14 Characteristics"
+    introText="Italian philosopher who lived under Mussolini's fascism as a child. His essay is one of the most widely cited frameworks for identifying fascist movements."
+  />
+
+  <ColoredSection>
+    <AlertBanner icon="📘" title="About This Framework" variant="blue">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Key insight:</strong> Fascism has no single defining feature, but rather a cluster of characteristics. A movement exhibiting many of these traits warrants the fascist label.</p>
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);">Source:</strong> &quot;Ur-Fascism&quot; by Umberto Eco, <em>The New York Review of Books</em>, 1995</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard title="1. Cult of Tradition" body="Belief that all truth has already been revealed by tradition." tag="#1" variant="red" />
+    <CategoryCard title="2. Rejection of Modernism" body="Views Enlightenment rationalism as descent into depravity; anti-intellectualism." tag="#2" variant="red" />
+    <CategoryCard title="3. Action for Action's Sake" body="Action valued without intellectual reflection; &quot;thinking is emasculation.&quot;" tag="#3" variant="red" />
+    <CategoryCard title="4. Disagreement Is Treason" body="Critical thinking viewed as betrayal; dissent equals disloyalty." tag="#4" variant="red" />
+    <CategoryCard title="5. Fear of Difference" body="Intolerance of diversity; fear and hatred of outsiders." tag="#5" variant="red" />
+    <CategoryCard title="6. Appeal to Social Frustration" body="Exploitation of economic or social anxiety; channeling resentment." tag="#6" variant="red" />
+    <CategoryCard title="7. Obsession with a Plot" body="Followers feel besieged by internal and external enemies." tag="#7" variant="red" />
+    <CategoryCard title="8. Enemies Simultaneously Strong and Weak" body="Foes depicted as overwhelming threat yet easily defeated." tag="#8" variant="red" />
+    <CategoryCard title="9. Pacifism Is Trafficking with the Enemy" body="Life is permanent warfare; peace is treason." tag="#9" variant="red" />
+    <CategoryCard title="10. Contempt for the Weak" body="Elitism; celebration of strength, disdain for vulnerability." tag="#10" variant="red" />
+    <CategoryCard title="11. Cult of Heroism and Death" body="Hero worship; willingness to die for the cause." tag="#11" variant="red" />
+    <CategoryCard title="12. Machismo and Weaponry" body="Disdain for women; cult of masculinity and weapons." tag="#12" variant="red" />
+    <CategoryCard title="13. Selective Populism" body="Leader claims to speak for &quot;the people&quot; (selectively defined)." tag="#13" variant="red" />
+    <CategoryCard title="14. Newspeak" body="Impoverished vocabulary limiting critical thinking." tag="#14" variant="red" />
+  </CategoryGrid>
+
+  <!-- FRAMEWORK 2: LAWRENCE BRITT -->
+  <SectionDivider label="Framework 2" />
+  <SectionHeader
+    eyebrow="Lawrence Britt · 2003"
+    title="14 Characteristics<br>of Fascist Regimes"
+    introText="Political scientist who analyzed fascist regimes of the 20th century — Hitler, Mussolini, Franco, Suharto, Pinochet — to identify common patterns."
+  />
+
+  <ColoredSection>
+    <AlertBanner icon="📙" title="About This Framework" variant="amber">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Key insight:</strong> Despite different cultural contexts, all fascist regimes exhibited remarkably similar characteristics.</p>
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);">Source:</strong> &quot;Fascism Anyone?&quot; by Lawrence Britt, <em>Free Inquiry Magazine</em>, 2003</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard title="1. Powerful and Continuing Nationalism" body="Constant use of patriotic mottos, slogans, symbols, songs, and rhetoric." tag="#1" variant="amber" />
+    <CategoryCard title="2. Disdain for Human Rights" body="Fear used as motivational tool to ignore rights abuses." tag="#2" variant="amber" />
+    <CategoryCard title="3. Identification of Enemies/Scapegoats" body="Unifying cause against perceived threat or foe; scapegoating." tag="#3" variant="amber" />
+    <CategoryCard title="4. Supremacy of the Military" body="Military funded disproportionately despite domestic needs." tag="#4" variant="amber" />
+    <CategoryCard title="5. Rampant Sexism" body="Traditional gender roles; opposition to abortion/homosexuality." tag="#5" variant="amber" />
+    <CategoryCard title="6. Controlled Mass Media" body="Media directly or indirectly controlled; censorship and propaganda." tag="#6" variant="amber" />
+    <CategoryCard title="7. Obsession with National Security" body="Fear used to justify policies; suspension of liberties." tag="#7" variant="amber" />
+    <CategoryCard title="8. Religion and Government Intertwined" body="Religious rhetoric by leaders; appearance of religiosity." tag="#8" variant="amber" />
+    <CategoryCard title="9. Corporate Power Protected" body="Business elite protected; labor suppressed." tag="#9" variant="amber" />
+    <CategoryCard title="10. Labor Power Suppressed" body="National labor movement suppressed; organizing power eliminated." tag="#10" variant="amber" />
+    <CategoryCard title="11. Disdain for Intellectuals and Arts" body="Hostility toward academia, artists, and education; censorship." tag="#11" variant="amber" />
+    <CategoryCard title="12. Obsession with Crime and Punishment" body="Police given unlimited power; law and order rhetoric." tag="#12" variant="amber" />
+    <CategoryCard title="13. Rampant Cronyism and Corruption" body="Appointees are friends and associates; no accountability." tag="#13" variant="amber" />
+    <CategoryCard title="14. Fraudulent Elections" body="Elections manipulated by smear campaigns, legislation, vote rigging." tag="#14" variant="amber" />
+  </CategoryGrid>
+
+  <!-- FRAMEWORK 3: ROBERT PAXTON -->
+  <SectionDivider label="Framework 3" />
+  <SectionHeader
+    eyebrow="Robert Paxton · 2004"
+    title="The Anatomy<br>of Fascism"
+    introText="Columbia University historian, world's leading expert on fascism — author of the definitive scholarly text on the subject."
+  />
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="📕" title="Paxton's Definition">
+      <blockquote style="font-style: italic; font-size: 17px; line-height: 1.6; color: var(--text); border-left: 3px solid var(--red); padding-left: 20px; margin: 16px 0;">&quot;Fascism may be defined as a form of political behavior marked by obsessive preoccupation with community decline, humiliation, or victimhood and by compensatory cults of unity, energy, and purity, in which a mass-based party of committed nationalist militants, working in uneasy but effective collaboration with traditional elites, abandons democratic liberties and pursues with redemptive violence and without ethical or legal restraints goals of internal cleansing and external expansion.&quot;</blockquote>
+      <p style="font-size: 12px; color: var(--muted); margin-top: 12px; font-family: var(--font-mono); letter-spacing: 1px;">SOURCE: &quot;THE ANATOMY OF FASCISM&quot; BY ROBERT PAXTON, 2004</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard title="Sense of Overwhelming Crisis" body="Beyond the reach of any traditional solutions." tag="Key Element" variant="red" />
+    <CategoryCard title="Primacy of the Group" body="Individual rights subordinated to the group's needs." tag="Key Element" variant="red" />
+    <CategoryCard title="Group as Victim" body="Belief that one's group is victim, justifying any action." tag="Key Element" variant="red" />
+    <CategoryCard title="Integration Through Violence" body="Need for closer integration of a purer community, by consent if possible, or by exclusionary violence if necessary." tag="Key Element" variant="red" />
+    <CategoryCard title="Authority by Natural Leaders" body="Need for authority by natural chiefs (always combative), culminating in a national chieftain who alone is capable of incarnating the group's historical destiny." tag="Key Element" variant="red" />
+    <CategoryCard title="Beauty of Violence" body="Beauty of violence and the efficacy of will, when devoted to the group's success." tag="Key Element" variant="red" />
+    <CategoryCard title="Right to Dominate" body="Right of the chosen people to dominate others without restraint from any kind of human or divine law." tag="Key Element" variant="red" />
+  </CategoryGrid>
+
+  <!-- FRAMEWORK 4: JASON STANLEY -->
+  <SectionDivider label="Framework 4" />
+  <SectionHeader
+    eyebrow="Jason Stanley · 2018"
+    title="How Fascism<br>Works: 10 Pillars"
+    introText="Yale University philosopher. Analyzes how fascist politics function in practice — not just what leaders believe, but how they manipulate politics, language, and social divisions."
+  />
+
+  <ColoredSection>
+    <AlertBanner icon="📗" title="About This Framework" variant="green">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Key insight:</strong> Fascism is not just about what leaders believe, but how they manipulate politics, language, and social divisions.</p>
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7; margin-top: 8px;"><strong style="color: var(--text);">Source:</strong> &quot;How Fascism Works&quot; by Jason Stanley, 2018</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard title="1. Mythic Past" body="Nostalgia for fabricated glorious past; promise of restoration." tag="#1" variant="green" />
+    <CategoryCard title="2. Propaganda" body="Repeated lies creating alternative reality; entertainment replaces news." tag="#2" variant="green" />
+    <CategoryCard title="3. Anti-Intellectualism" body="Attack on universities, experts, and &quot;elites&quot;; celebration of ignorance." tag="#3" variant="green" />
+    <CategoryCard title="4. Unreality" body="Replacement of factual reality with conspiratorial fiction." tag="#4" variant="green" />
+    <CategoryCard title="5. Hierarchy" body="Natural social order with dominant group; others inferior." tag="#5" variant="green" />
+    <CategoryCard title="6. Victimhood" body="Dominant group portrayed as victims of minority groups." tag="#6" variant="green" />
+    <CategoryCard title="7. Law and Order" body="Selective enforcement protecting dominant group." tag="#7" variant="green" />
+    <CategoryCard title="8. Sexual Anxiety" body="Panic about threats to traditional gender/sexual norms." tag="#8" variant="green" />
+    <CategoryCard title="9. Sodom and Gomorrah" body="Urban corruption vs. rural purity; city vs. country." tag="#9" variant="green" />
+    <CategoryCard title="10. Arbeit Macht Frei" body="Work dignifies; laziness explained by racial/ethnic characteristics." tag="#10" variant="green" />
+  </CategoryGrid>
+
+  <!-- COMMONALITIES ACROSS FRAMEWORKS -->
+  <SectionDivider label="Synthesis" />
+  <SectionHeader
+    eyebrow="Cross-Framework Analysis"
+    title="Commonalities<br>Across Frameworks"
+    introText="Despite different methodologies, all four frameworks identify the same core characteristics. This scholarly consensus gives us confidence in these criteria."
+  />
+
+  <ConsequencesGrid eyebrow="Shared Characteristics" title="The Core<br>Patterns">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="Ultranationalism"
+        description="Eco #1,5 · Britt #1 · Paxton · Stanley #1 — Obsessive focus on national glory, 'us vs. them' mentality, xenophobia."
+      />
+      <ConsequenceItem
+        number="02"
+        title="Scapegoating of Outgroups"
+        description="Eco #5,7,8 · Britt #3 · Paxton · Stanley #5,6 — Blaming minorities for problems; dehumanization; 'enemies within.'"
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Cult of Personality / Strongman"
+        description="Eco #1,13 · Britt #14 · Paxton · Stanley #7 — Leader above law; personality worship; demand for loyalty."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Rejection of Democratic Norms"
+        description="Eco #4 · Britt #14 · Paxton · Stanley #7 — Disagreement is treason; election denial; attacks on institutions."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="05"
+        title="Use of Violence / Threat of Violence"
+        description="Eco #9,11 · Britt #12 · Paxton · Stanley #7 — Political violence encouraged; law and order rhetoric; paramilitary groups."
+      />
+      <ConsequenceItem
+        number="06"
+        title="Mythic Past"
+        description="Eco #1 · Britt #1 · Paxton · Stanley #1 — Nostalgia for fabricated golden age; promise of restoration."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="07"
+        title="Attacks on Truth / Reality"
+        description="Eco #14 · Britt #6 · Paxton · Stanley #2,4 — Propaganda; alternative facts; attacks on press and experts."
+      />
+      <ConsequenceItem
+        number="08"
+        title="Victimhood Narrative"
+        description="Eco #7,8 · Britt #3 · Paxton · Stanley #6 — Dominant group portrayed as victims; persecution complex."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- KEY TAKEAWAY -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="🎯" title="Key Takeaway" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">These are not cherry-picked characteristics designed to target Trump. They are scholarly frameworks established through decades of historical research. <strong style="color: var(--text);">The fact that they all identify similar patterns gives us confidence these are genuine markers of fascist movements.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="Definitions<br>Established."
+    description="With these objective, scholarly frameworks established, we can now examine Trump's actions against these criteria."
+    linkText="Continue: Trump's Actions →"
+    linkHref="/fascism/trumps-actions"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Expert Consensus', href: '/fascism/expert-consensus' }}
+    next={{ label: 'Historical Comparisons', href: '/fascism/historical-comparisons' }}
+    currentIndex={1}
+    totalPages={4}
+  />
+
+</ResearchLayout>

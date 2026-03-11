@@ -1,0 +1,22 @@
+---
+// A row of 2 consequence items side by side
+---
+
+<div class="consequence-row">
+  <slot />
+</div>
+
+<style>
+  .consequence-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: 640px) {
+    .consequence-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

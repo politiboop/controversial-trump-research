@@ -1,0 +1,251 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import NavigationGrid from '../../components/navigation/NavigationGrid.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+
+const epsteinTabs = [
+  { label: 'Overview', href: '/epstein-files' },
+  { label: 'The Relationship', href: '/epstein-files/the-relationship' },
+  { label: 'Court Documents', href: '/epstein-files/court-documents' },
+  { label: 'Allegations', href: '/epstein-files/allegations' },
+  { label: 'Evidence', href: '/epstein-files/evidence' },
+  { label: 'The Network', href: '/epstein-files/epstein-network' },
+];
+
+const tickerItems = [
+  "15+ Year Documented Relationship Between Trump and Epstein",
+  "DOJ Deleted Trump-Related Epstein Documents at Least Twice",
+  "Senate Judiciary Voted 24-19 Bipartisan to Subpoena AG Bondi",
+  "Maxwell Offered Testimony-for-Clemency Deal",
+  "Commerce Secretary Lutnick Caught Lying About Epstein Island Visit",
+  "DOJ Surveilling Congress Members Reviewing Epstein Files",
+  "Only 3M of 6M Court-Ordered Documents Turned Over",
+  "Trump Forced MTG to Resign for Calling for Transparency",
+];
+
+const subpageCards = [
+  {
+    icon: '\u{1F465}',
+    title: 'The Relationship',
+    description: 'Documented social relationship from 1980s through claimed falling out. Timeline, statements, witness accounts, and documented interactions.',
+    href: '/epstein-files/the-relationship',
+    tag: '15+ Years',
+  },
+  {
+    icon: '\u{2696}\u{FE0F}',
+    title: 'Court Documents',
+    description: 'Official court documents, depositions, unsealed records, and the January 2026 DOJ document deletion and cover-up.',
+    href: '/epstein-files/court-documents',
+    tag: 'DOJ Cover-Up',
+  },
+  {
+    icon: '\u{1F4CB}',
+    title: 'Allegations',
+    description: 'Court-filed allegations with full context, legal status, and expert analysis. Documented with appropriate legal rigor.',
+    href: '/epstein-files/allegations',
+    tag: 'Legal Cases',
+  },
+  {
+    icon: '\u{1F4F8}',
+    title: 'Evidence',
+    description: 'Photographic evidence, flight logs, phone records, property records, and official documentation of interactions.',
+    href: '/epstein-files/evidence',
+    tag: 'Photos & Records',
+  },
+  {
+    icon: '\u{1F517}',
+    title: 'Epstein Network',
+    description: 'Individuals in Trump\'s circle with documented Epstein ties. Cabinet members, advisors, business associates, personal friends.',
+    href: '/epstein-files/epstein-network',
+    tag: 'Multiple Connections',
+  },
+];
+---
+
+<ResearchLayout title="The Epstein Files: Documented Connections" description="Comprehensive documentation of Trump's connections to Jeffrey Epstein, including court documents, evidence, allegations, and the Epstein network in Trump's circle.">
+
+  <SeriesNav tabs={epsteinTabs} currentPath="/epstein-files" />
+
+  <Masthead
+    eyebrow="Documented Connections &middot; Court Records &middot; Active Cover-Up"
+    title="THE EPSTEIN FILES"
+    titleHighlight="EPSTEIN"
+    subtitle="Comprehensive documentation of Trump&apos;s connections to Jeffrey Epstein"
+    date="Court Documents &middot; Evidence &middot; Allegations &middot; Network Analysis"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <!-- CRITICAL ALERT -->
+  <ColoredSection background="#1a0a0a" borderColor="var(--red)">
+    <AlertBanner icon="&#x1F6A8;" title="LATEST: Active DOJ Cover-Up of Epstein Files" variant="red">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>February 19, 2026:</strong> Journalist Roger Sollenberger discovered that the FBI conducted <strong>four separate interviews</strong> in 2019 with a woman accusing Trump of sexually assaulting her as a minor (1983-1985). Epstein allegedly introduced her to Trump. The interview records have been <strong>&quot;removed from public viewing&quot;</strong> despite the Epstein Files Transparency Act requiring they be public. AG Bondi claims &quot;no evidence&quot; exists &mdash; while her DOJ hides the evidence.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>March 5, 2026:</strong> The Senate Judiciary Committee voted <strong>24-19 on a bipartisan basis</strong> to subpoena AG Bondi over her handling of the Epstein files. Both Democrats and Republicans voted to compel testimony about DOJ's repeated deletion, restoration, and hiding of Trump-related Epstein documents.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>February 11, 2026:</strong> AG Pam Bondi was caught at a House Judiciary hearing with a printout labeled &quot;Jayapal Pramila Search History&quot; &mdash; a log of what Rep. Jayapal searched in the Epstein files at the DOJ. <strong>Trump's DOJ is surveilling what members of Congress search in the Epstein files.</strong></p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>February 10, 2026:</strong> Commerce Secretary Howard Lutnick admitted under oath to visiting Epstein's private island in 2012 for lunch &mdash; after previously claiming he cut off all contact with Epstein after 2005. DOJ documents show Lutnick remained in contact with Epstein as recently as 2018.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>February 9, 2026:</strong> Convicted sex trafficker Ghislaine Maxwell appeared before the House Oversight Committee, pleaded the Fifth, and refused to answer any questions. Her lawyer offered a deal: Maxwell will testify that Trump is &quot;innocent of any wrongdoing&quot; <strong>if Trump grants her presidential clemency</strong>. A convicted child sex trafficker proposing to trade predetermined testimony for freedom.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>January 30, 2026:</strong> The DOJ deleted document EFTA01660679 containing &quot;numerous complaints and allegations involving powerful individuals, including Donald Trump&quot; immediately after it went viral, then restored it hours later. The DOJ has now removed and restored Trump-related Epstein documents at least twice.</p>
+      <p style="font-size: 16px; margin-top: 16px;"><strong><a href="/epstein-files/court-documents" style="color: white; text-decoration: underline;">View Full Documentation &#x2192;</a></strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <IntroQuote
+    quote="Jeffrey Epstein was a convicted sex offender and trafficker whose crimes implicated numerous powerful individuals. Donald Trump's documented connections to Epstein, combined with aggressive opposition to releasing Epstein-related files and apparent DOJ cover-up efforts, raise serious questions about what is being hidden and who is being protected."
+    citation="Based on Court Records, Official Documents, and Verified Reporting"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={15} suffix="+" label="Years of documented social relationship between Trump and Epstein" />
+    <StatCard target={24} suffix="-19" label="Bipartisan Senate vote to subpoena AG Bondi over Epstein files" />
+    <StatCard target={3} suffix="M" label="Of 6 million court-ordered documents turned over by DOJ" />
+    <StatCard target={4} label="FBI interviews with Trump accuser hidden from public view" />
+  </StatGrid>
+
+  <!-- CONTENT WARNING -->
+  <ColoredSection>
+    <AlertBanner icon="&#x26A0;&#xFE0F;" title="Content Warning &amp; Methodology" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This documentation involves allegations of sexual misconduct and trafficking. Content is presented with appropriate sensitivity and professional journalistic standards. All content is sourced from court records, official documents, photographs, and verified reporting.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">All allegations are properly qualified with legal status. <strong style="color: var(--text);">An allegation is not proof.</strong> Dismissed cases are clearly identified. No claim is presented as established fact unless proven in court or admitted by parties.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- EVIDENCE CATEGORIES -->
+  <SectionDivider label="The Evidence" />
+  <SectionHeader
+    eyebrow="Five Lines of Documentation"
+    title="Explore the<br>Evidence"
+    introText="Click any category below to view comprehensive documentation. Each area is fully sourced from court records, official documents, and verified reporting."
+  />
+
+  <NavigationGrid cards={subpageCards} />
+
+  <!-- KEY DOCUMENTED FACTS -->
+  <SectionDivider label="Key Findings" />
+  <SectionHeader
+    eyebrow="Established Facts"
+    title="Key Documented<br>Facts"
+    introText="Each finding is documented with sources, context, and evidence in respective subpages."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F465;"
+      title="Extensive Social Relationship"
+      body="Trump and Epstein socialized regularly in 1980s-2000s, documented through photos, witnesses, and Trump's own statements. Trump called Epstein a &quot;terrific guy&quot; who likes women &quot;on the younger side.&quot;"
+      tag="Documented"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F6AB;"
+      title="Opposition to Transparency"
+      body="Trump threatened political retaliation against allies who supported releasing Epstein files. Told MTG his &quot;friends will get hurt.&quot; Called her a &quot;TRAITOR&quot; and forced her resignation."
+      tag="Pattern"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F5C2;&#xFE0F;"
+      title="DOJ Document Deletion"
+      body="January 2026: DOJ deleted documents referencing Trump at least twice, followed by restoration with possible redactions. Only 3M of 6M court-ordered documents turned over."
+      tag="Active Cover-Up"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F517;"
+      title="Epstein Network in Power"
+      body="Multiple individuals with documented Epstein connections hold or held positions in Trump administration, cabinet, or personal orbit. Labor Secretary gave Epstein lenient plea deal."
+      tag="Systematic"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Maxwell's Quid Pro Quo"
+      body="Convicted sex trafficker Ghislaine Maxwell offered to testify Trump is &quot;innocent&quot; in exchange for presidential clemency. Predetermined testimony is not testimony &mdash; it is a transaction."
+      tag="Corruption"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F50D;"
+      title="DOJ Spying on Congress"
+      body="AG Bondi caught with printout of Rep. Jayapal's search history from Epstein file review at DOJ. Surveillance of what lawmakers search in a child sex trafficking case."
+      tag="Unprecedented"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F3DB;&#xFE0F;"
+      title="Bipartisan Subpoena"
+      body="Senate Judiciary voted 24-19 to subpoena AG Bondi over Epstein file handling (March 5, 2026). Both Democrats and Republicans demanding accountability for DOJ cover-up."
+      tag="Bipartisan"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F3E2;"
+      title="Cabinet Member Exposed"
+      body="Commerce Secretary Howard Lutnick admitted visiting Epstein's island in 2012 after lying about cutting off contact in 2005. DOJ documents show contact as recently as 2018. Trump stands behind him."
+      tag="Proven Lie"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THIS MATTERS -->
+  <SectionDivider label="Context" />
+  <SectionHeader
+    eyebrow="Why This Documentation Matters"
+    title="Character, Judgment<br>&amp; Accountability"
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F9D1;&#x200D;&#x2696;&#xFE0F;"
+      title="Character and Judgment"
+      body="The individuals a president associates with reflect on their character, judgment, and fitness for office. A documented 15+ year social relationship with a convicted sex trafficker raises legitimate questions."
+      tag="Fitness for Office"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F50D;"
+      title="Transparency and Accountability"
+      body="Aggressive opposition to releasing Epstein-related files, including threatening political allies who support transparency, suggests potential concealment of damaging information."
+      tag="Public Interest"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F6E1;&#xFE0F;"
+      title="Pattern of Protection"
+      body="DOJ deletion of documents, systematic intimidation, Epstein-connected individuals in Trump's inner circle, and a convicted sex trafficker offering favorable testimony for clemency indicate a pattern worthy of serious scrutiny."
+      tag="Systematic"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F4DD;"
+      title="Journalistic Standards"
+      body="This documentation maintains the highest standards of verification, sourcing, and context. All allegations are properly qualified with legal status. All evidence is sourced from official records, court documents, or verified reporting."
+      tag="Methodology"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="The Documentation<br>Is Comprehensive."
+    description="Five areas of evidence. Court records. Official documents. Verified reporting. This is documented fact, not speculation."
+    linkText="Begin: The Relationship &#x2192;"
+    linkHref="/epstein-files/the-relationship"
+  />
+
+</ResearchLayout>

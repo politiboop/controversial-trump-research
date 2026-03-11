@@ -1,0 +1,347 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const epsteinTabs = [
+  { label: 'Overview', href: '/epstein-files' },
+  { label: 'The Relationship', href: '/epstein-files/the-relationship' },
+  { label: 'Court Documents', href: '/epstein-files/court-documents' },
+  { label: 'Allegations', href: '/epstein-files/allegations' },
+  { label: 'Evidence', href: '/epstein-files/evidence' },
+  { label: 'The Network', href: '/epstein-files/epstein-network' },
+];
+
+const tickerItems = [
+  "Acosta Gave Epstein Lenient Plea Deal — Trump Made Him Labor Secretary",
+  "Barr's Father Hired Epstein at Dalton School — Trump Made Him AG",
+  "Two Epstein Defense Attorneys on Trump's Impeachment Team",
+  "Lutnick Lied About Cutting Ties — Visited Epstein Island in 2012",
+  "Musk Lied: Claimed He 'REFUSED' Island Visit — Emails Show He Planned Visits",
+  "Bannon: Hundreds of Friendly Texts with Epstein Revealed in 2026",
+  "Maxwell Offered Testimony-for-Clemency Deal",
+  "AG Bondi Controls Epstein Files — Failed to Investigate Epstein as FL AG",
+];
+---
+
+<ResearchLayout title="The Epstein Network in Trump's Circle" description="Comprehensive documentation of individuals with documented Epstein connections who hold or held positions in Trump's administration, cabinet, personal orbit, or business operations.">
+
+  <SeriesNav tabs={epsteinTabs} currentPath="/epstein-files/epstein-network" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Epstein Files', href: '/epstein-files' },
+    { label: 'The Network' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 5 of 5 &middot; The Epstein Files"
+    title="THE EPSTEIN NETWORK"
+    titleHighlight="NETWORK"
+    subtitle="Documented connections between Trump associates and Jeffrey Epstein"
+    date="Cabinet Members &middot; Legal Team &middot; Advisors &middot; Business Associates"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="What makes this network particularly concerning is the number of Epstein-connected individuals who hold or held significant positions in Trump's administration, cabinet, personal circle, or business operations. One or two connections might be coincidence. This systematic pattern raises serious questions."
+    citation="Based on Court Records, Flight Logs, DOJ Documents, and Verified Reporting"
+  />
+
+  <!-- IMPORTANT CONTEXT -->
+  <ColoredSection>
+    <AlertBanner icon="&#x2696;&#xFE0F;" title="Important Context and Qualifications" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">What &quot;Epstein connection&quot; means:</strong> Social relationship, business relationship, employment, flight logs, address book presence, or legal representation.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Critical qualification:</strong> Having a documented connection to Epstein does not mean the individual knew about, participated in, or condoned Epstein's crimes. Many prominent people had legitimate connections before his criminal activity was widely known. Each connection must be evaluated in context.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Why the pattern matters:</strong> While individual connections may be innocent, the systematic pattern raises questions about the extent of Trump's Epstein connection, personnel vetting, why Trump might oppose releasing files, and whether the network extended into positions of government power.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- CABINET AND ADMINISTRATION OFFICIALS -->
+  <SectionDivider label="Cabinet Officials" />
+  <SectionHeader
+    eyebrow="Positions of Power"
+    title="Cabinet and Administration<br>Officials"
+    introText="Multiple individuals with documented Epstein connections held cabinet-level positions in Trump's administration."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Alexander Acosta &mdash; Labor Secretary"
+      body="<strong>Epstein Connection:</strong> As U.S. Attorney for S.D. Florida in 2008, oversaw the controversial plea deal that let Epstein plead to state charges and serve just 13 months with work release, avoiding federal sex trafficking charges. A federal judge later ruled this deal violated the Crime Victims' Rights Act.<br><br><strong>Significance:</strong> Trump appointed the prosecutor who protected Epstein to his cabinet. Resigned July 2019 after Epstein's arrest."
+      tag="Plea Deal"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F3DB;&#xFE0F;"
+      title="William Barr &mdash; Attorney General"
+      body="<strong>Epstein Connection:</strong> Father Donald Barr hired Epstein to teach at Dalton School in 1974 despite no degree. Barr worked at Kirkland &amp; Ellis, which represented Epstein in plea deal. As AG, oversaw DOJ when Epstein was arrested and died in custody. Did not recuse despite connections.<br><br><strong>Significance:</strong> The AG who oversaw Epstein's death had family and professional Epstein connections."
+      tag="Family Ties"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F3E2;"
+      title="Howard Lutnick &mdash; Commerce Secretary (2025)"
+      body="<strong>Epstein Connection:</strong> 2026 DOJ documents reveal Lutnick visited Epstein's private island in December 2012 &mdash; <strong>seven years after claiming he cut ties in 2005</strong>, four years after Epstein's conviction. DOJ documents show contact as recently as 2018. Admitted island visit under oath.<br><br><strong>Sources:</strong> CNBC, PBS NewsHour, CNN"
+      tag="Proven Lie"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F3DB;&#xFE0F;"
+      title="Pam Bondi &mdash; Attorney General (2025)"
+      body="<strong>Epstein Connection:</strong> As Florida AG (2011-2019), took no action against Epstein despite his FL activities. Received $25,000 from Trump's foundation while considering Trump University fraud investigation &mdash; chose not to investigate. <strong>As current AG:</strong> DOJ deleted Trump-related documents twice, turned over only 3M of 6M ordered documents, surveilled Congress members' Epstein file searches. Senate Judiciary voted 24-19 bipartisan to subpoena her."
+      tag="Active Cover-Up"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F4BC;"
+      title="Wilbur Ross &mdash; Commerce Secretary (2017)"
+      body="<strong>Epstein Connection:</strong> Worked at N.M. Rothschild &amp; Sons in the 1990s when the bank had financial dealings with Epstein. Later at WL Ross &amp; Co., which reportedly had some business connections to Epstein-related entities. Ross has not commented extensively on these connections."
+      tag="Business Ties"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4B0;"
+      title="Steven Mnuchin &mdash; Treasury Secretary"
+      body="<strong>Epstein Connection:</strong> Worked at Goldman Sachs, which had financial relationships with Epstein-connected entities. Moved in New York and Hollywood social circles that overlapped with Epstein's network. Connection primarily through overlapping financial industry and social networks."
+      tag="Overlapping Circles"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- LEGAL TEAM -->
+  <SectionDivider label="Legal Representation" />
+  <SectionHeader
+    eyebrow="Epstein's Lawyers"
+    title="Legal Team<br>and Advisors"
+    introText="Trump selected two of Epstein's former defense attorneys for his own impeachment defense team."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Alan Dershowitz &mdash; Impeachment Defense"
+      body="<strong>Epstein Connection:</strong> Member of Epstein's legal defense team during 2008 plea deal. Flight logs document him on Epstein's plane multiple times. Virginia Giuffre alleged she was forced to have sex with Dershowitz &mdash; allegations he vehemently denies. Wrote op-eds arguing Epstein's victims were not really victims.<br><br><strong>Significance:</strong> Trump chose an Epstein attorney accused by a survivor to defend him in impeachment."
+      tag="Epstein's Lawyer"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x2696;&#xFE0F;"
+      title="Kenneth Starr &mdash; Impeachment Defense"
+      body="<strong>Epstein Connection:</strong> Member of Epstein's legal defense team during 2008 plea deal negotiations, along with Dershowitz. Famous for investigating Bill Clinton in the 1990s, Starr helped negotiate the controversial plea deal resulting in minimal punishment for Epstein.<br><br><strong>Significance:</strong> Two of Epstein's former defense attorneys on Trump's impeachment team is a remarkable concentration."
+      tag="Epstein's Lawyer"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- BUSINESS ASSOCIATES AND INNER CIRCLE -->
+  <SectionDivider label="Inner Circle" />
+  <SectionHeader
+    eyebrow="Advisors and Associates"
+    title="Business Associates and<br>Personal Circle"
+    introText="Key Trump advisors and associates with documented Epstein connections."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4F1;"
+      title="Steve Bannon &mdash; Chief Strategist"
+      body="<strong>2026 File Release:</strong> Hundreds of friendly text messages between Bannon and Epstein revealed. They discussed Trump, including &quot;poking fun at the president.&quot; In 2019, Epstein asked if Bannon received an Apple Watch he sent for Christmas. Bannon maintained friendly, regular contact through August 2019 &mdash; over a decade after conviction.<br><br><strong>Sources:</strong> CNBC, PBS NewsHour, CNN"
+      tag="Texts Revealed"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="&#x1F680;"
+      title="Elon Musk &mdash; DOGE Co-Head, Close Ally"
+      body="<strong>2026 File Release:</strong> Emails show Musk reached out to Epstein on at least two occasions to plan visits to Epstein's island. Epstein offered helicopter transportation. <strong>Musk's lie (September 2025):</strong> &quot;Epstein tried to get me to go to his island and I REFUSED.&quot; The emails prove he actively coordinated visits &mdash; four years after Epstein's 2008 conviction.<br><br><strong>Sources:</strong> CNBC, PBS, CNN"
+      tag="Proven Lie"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F465;"
+      title="Tom Barrack &mdash; Friend and Advisor"
+      body="<strong>Epstein Connection:</strong> Part of the same Palm Beach and New York social circles as Epstein. In court proceedings, confirmed Trump and Epstein were &quot;good friends&quot; who socialized regularly. Chairman of Trump's inaugural committee.<br><br><strong>Significance:</strong> Key Trump confidant who confirmed the Trump-Epstein friendship."
+      tag="Confirmed"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4BC;"
+      title="Bill Gates &mdash; Business Associate"
+      body="Not a Trump official, but included for context. Gates met with Epstein multiple times after 2008 conviction. Flight logs document Gates on Epstein's plane. Gates acknowledged meetings but stated they were related to philanthropy. Demonstrates the extent of Epstein's network across elites."
+      tag="Context"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4B0;"
+      title="Leon Black &mdash; Financial Connection"
+      body="Apollo Global Management co-founder. Paid Epstein at least $158 million for tax and estate planning services between 2012-2017 &mdash; after Epstein's conviction. Resigned as Apollo CEO in 2021 amid controversy. Another prominent figure maintaining extensive financial relationship after conviction."
+      tag="$158M After Conviction"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- MAR-A-LAGO AND PALM BEACH -->
+  <SectionDivider label="Social Network" />
+  <SectionHeader
+    eyebrow="Palm Beach Connections"
+    title="Mar-a-Lago Members and<br>Palm Beach Connections"
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F464;"
+      title="Ghislaine Maxwell"
+      body="<strong>Trump Connection:</strong> Photographed with Trump multiple times at Mar-a-Lago and other events. After her arrest, Trump said: &quot;I wish her well, frankly. I've met her numerous times over the years.&quot;<br><br><strong>Epstein Connection:</strong> Convicted co-conspirator in sex trafficking. Serving 20-year sentence. <strong>Offered testimony-for-clemency deal in February 2026.</strong>"
+      tag="Convicted Trafficker"
+      variant="red"
+    />
+    <CategoryCard
+      icon="&#x1F3D6;&#xFE0F;"
+      title="Palm Beach Social Circle"
+      body="Multiple members of Palm Beach high society were part of both Trump's and Epstein's social circles in the 1990s-2000s: Mar-a-Lago members who socialized with Epstein, business figures in both orbits, social figures at mutual events, real estate professionals who worked with both."
+      tag="Overlapping"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- MEDIA AND PR -->
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F4E3;"
+      title="Peggy Siegal &mdash; PR Consultant"
+      body="Helped Epstein rehabilitate his image after 2008 conviction by facilitating attendance at social and cultural events with prominent figures. Organized events in New York social circles that included Trump and Trump associates."
+      tag="Image Rehabilitation"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x1F4F0;"
+      title="Reporters and Media Figures"
+      body="Various journalists and media figures socialized with both Trump and Epstein in New York and Palm Beach: society columnists, business journalists, media figures attending events involving both individuals."
+      tag="Media Overlap"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- PATTERN ANALYSIS -->
+  <SectionDivider label="Pattern Analysis" />
+  <SectionHeader
+    eyebrow="Systemic Assessment"
+    title="What the Network<br>Reveals"
+    introText="The pattern of Epstein-connected individuals in positions of power is not random coincidence."
+  />
+
+  <ConsequencesGrid eyebrow="Concentration in Positions of Power" title="Power<br>Positions">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="Attorney General"
+        description="William Barr oversaw DOJ during Epstein's death and document sealing. Family and professional connections to Epstein."
+      />
+      <ConsequenceItem
+        number="02"
+        title="Labor Secretary"
+        description="Alexander Acosta had given Epstein the lenient plea deal. Appointed to cabinet, resigned only after renewed scrutiny."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Legal Team"
+        description="Multiple Epstein defense attorneys joined Trump's impeachment defense. Remarkable concentration of Epstein representation."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Current AG"
+        description="Pam Bondi controls all federal Epstein files. Failed to investigate Epstein as FL AG. Actively blocking transparency."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x2753;" title="Vetting Failure or Deliberate Choice?" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>Option 1: Vetting failure</strong> &mdash; Trump's administration failed to identify or care about Epstein connections during personnel selection. This would indicate catastrophic failure in background checks.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Option 2: Deliberate choice</strong> &mdash; Trump knowingly selected individuals with Epstein connections, possibly because of shared networks, possibly for other reasons. This would indicate conscious decision to elevate Epstein-connected individuals.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Neither explanation reflects well on Trump's judgment or fitness for office.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <ColoredSection>
+    <AlertBanner icon="&#x1F50D;" title="Context for Opposition to Transparency" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Trump's &quot;friends will get hurt&quot; statement makes more sense in context of this extensive network. Protecting multiple cabinet members, advisors, and associates may explain the opposition. The network suggests Trump's connection to Epstein's world was more extensive than claimed. <strong style="color: var(--text);">Release of files might expose a systematic pattern rather than an isolated social relationship.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE BROADER NETWORK -->
+  <SectionDivider label="Broader Context" />
+  <SectionHeader
+    eyebrow="Fair Context"
+    title="The Broader Epstein<br>Network"
+    introText="Epstein's network extended far beyond Trump's circle &mdash; but what distinguishes Trump's situation is the pattern."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="&#x1F30D;"
+      title="Epstein's Network Was Broad"
+      body="Bill Clinton flew on Epstein's plane multiple times. Prince Andrew settled civil case with Giuffre. Numerous academics accepted Epstein's financial support. Business leaders and cultural institutions had connections. <strong>Epstein deliberately cultivated relationships for social legitimacy and protection.</strong>"
+      tag="Fair Context"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="&#x26A0;&#xFE0F;"
+      title="What Makes Trump Different"
+      body="Not simply that people in his circle had connections (true of many elite networks), but: the concentration in positions of government power, Trump's own 15+ year friendship, aggressive opposition to transparency, use of political power to punish transparency seekers, knowledge of file contents (&quot;friends will get hurt&quot;), and DOJ document deletion under his administration."
+      tag="Unique Pattern"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- WHY THIS MATTERS -->
+  <ColoredSection background="#120a0a" borderColor="var(--amber)">
+    <AlertBanner icon="&#x1F4DA;" title="Why the Epstein Network Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7;"><strong>Pattern of connections:</strong> While any individual connection might be explained as coincidence, the systematic pattern of multiple Epstein-connected individuals in Trump's administration, cabinet, legal team, and personal circle suggests something beyond random chance.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Positions of power over Epstein matters:</strong> Particularly concerning is that individuals with Epstein connections held positions giving them power over Epstein-related matters.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Context for cover-up:</strong> The extensive network provides context for Trump's extreme opposition to releasing files. The &quot;friends will get hurt&quot; statement suggests protecting not just himself but a network.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px;"><strong>Demand for accountability:</strong> The American people deserve full transparency about Epstein's crimes and connections. What is being protected, and why?</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="The Network Is<br>Documented."
+    description="Cabinet members. Legal team. Close advisors. Business associates. The pattern of Epstein-connected individuals in Trump's circle is not random."
+    linkText="Return to Overview &#x2192;"
+    linkHref="/epstein-files"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Evidence', href: '/epstein-files/evidence' }}
+    currentIndex={4}
+    totalPages={5}
+  />
+
+</ResearchLayout>

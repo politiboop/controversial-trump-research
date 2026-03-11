@@ -1,0 +1,72 @@
+{
+  "id": "mike-mullen",
+  "name": "Mike Mullen",
+  "role": "Chairman of the Joint Chiefs of Staff",
+  "administration": "George W. Bush and Barack Obama Administrations",
+  "years": "2007-2011",
+  "militaryRank": "Admiral, U.S. Navy (Retired)",
+  "category": "military-leader",
+  "subCategory": "joint-chiefs",
+  "photo": null,
+  "summary": "Former Chairman of the Joint Chiefs who wrote the Atlantic op-ed 'I Cannot Remain Silent' condemning the Lafayette Square photo op and warning against politicizing the armed forces.",
+  "keyStatements": [
+    {
+      "quote": "He laid bare his disdain for the rights of peaceful protest in this country, gave succor to the leaders of other countries who take comfort in our domestic strife, and risked further politicizing the men and women of our armed forces.",
+      "date": "2020-06-01",
+      "source": "The Atlantic",
+      "context": "Criticizing Trump's Lafayette Square photo op",
+      "url": "https://www.theatlantic.com/ideas/archive/2020/06/mike-mullen-cant-remain-silent/612596/"
+    },
+    {
+      "quote": "Fellow Americans are not the enemy, and must never become so.",
+      "date": "2020-06-01",
+      "source": "The Atlantic",
+      "url": "https://www.theatlantic.com/ideas/archive/2020/06/mike-mullen-cant-remain-silent/612596/"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2007-10-01",
+      "event": "Became Chairman of Joint Chiefs of Staff",
+      "significance": "Appointed by President George W. Bush"
+    },
+    {
+      "date": "2011-09-30",
+      "event": "Completed service as Chairman",
+      "significance": "Served under both Bush and Obama"
+    },
+    {
+      "date": "2020-06-01",
+      "event": "Published op-ed 'I Cannot Remain Silent'",
+      "significance": "Condemned the Lafayette Square photo op and warned against politicizing the armed forces"
+    }
+  ],
+  "credibility": {
+    "background": "Four-star admiral who served as the nation's highest-ranking military officer",
+    "positions": [
+      "Chairman of the Joint Chiefs of Staff (2007-2011)",
+      "Chief of Naval Operations (2005-2007)",
+      "Vice Chief of Naval Operations (2004-2005)"
+    ],
+    "awards": [
+      "Defense Distinguished Service Medal",
+      "Navy Distinguished Service Medal",
+      "Legion of Merit"
+    ]
+  },
+  "oppositionReasons": [
+    "Said Trump showed disdain for rights of peaceful protest",
+    "Warned Trump risked politicizing the armed forces",
+    "Said Trump's actions gave comfort to autocratic foreign leaders"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "I Cannot Remain Silent",
+      "url": "https://www.theatlantic.com/ideas/archive/2020/06/mike-mullen-cant-remain-silent/612596/",
+      "date": "2020-06-01",
+      "type": "op-ed"
+    }
+  ],
+  "party": "Independent"
+}

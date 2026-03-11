@@ -1,0 +1,90 @@
+{
+  "id": "paul-ryan",
+  "name": "Paul Ryan",
+  "role": "Speaker of the House",
+  "administration": null,
+  "years": "2015-2019",
+  "militaryRank": null,
+  "category": "congress",
+  "subCategory": "speaker",
+  "photo": null,
+  "summary": "Former Speaker of the House and 2012 Republican vice presidential nominee who retired from Congress in 2019 and was quoted in Tim Alberta's book criticizing Trump and the party's direction.",
+  "keyStatements": [
+    {
+      "quote": "Trump's a populist, authoritarian narcissist.",
+      "date": "2019-04-02",
+      "source": "American Carnage (Tim Alberta)",
+      "context": "Reported private remarks in a book",
+      "url": "https://www.harpercollins.com/products/american-carnage-tim-alberta"
+    },
+    {
+      "quote": "If we Republicans have to lose the White House for a generation, so be it, because the alternative is suicide for the party and for the country.",
+      "date": "2019-04-02",
+      "source": "American Carnage (Tim Alberta)",
+      "context": "Private comments about Trump",
+      "url": "https://www.harpercollins.com/products/american-carnage-tim-alberta"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1999-01-03",
+      "event": "Elected to U.S. House of Representatives",
+      "significance": "Began congressional career"
+    },
+    {
+      "date": "2012-08-11",
+      "event": "Selected as Romney's running mate",
+      "significance": "Republican VP nominee"
+    },
+    {
+      "date": "2015-10-29",
+      "event": "Became Speaker of the House",
+      "significance": "Led House during Trump presidency"
+    },
+    {
+      "date": "2016",
+      "event": "Endorsed Trump reluctantly",
+      "significance": "Gave tepid support"
+    },
+    {
+      "date": "2018-04-11",
+      "event": "Announced retirement from Congress",
+      "significance": "Left rather than work with Trump"
+    },
+    {
+      "date": "2019-01-03",
+      "event": "Left Congress",
+      "significance": "Retired from politics"
+    },
+    {
+      "date": "2019-04-02",
+      "event": "Book 'American Carnage' reported private criticisms of Trump",
+      "significance": "Revealed strong internal objections"
+    }      
+  ],
+  "credibility": {
+    "background": "Former Speaker of the House, Chairman of House Ways and Means Committee, 2012 Republican vice presidential nominee",
+    "positions": [
+      "Speaker of the U.S. House of Representatives (2015-2019)",
+      "Chairman, House Ways and Means Committee (2015)",
+      "Chairman, House Budget Committee (2011-2015)",
+      "U.S. Representative from Wisconsin (1999-2019)"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Trump is a populist, authoritarian narcissist",
+    "Trump would be suicide for the party and country",
+    "Trump lacks basic honesty and integrity"
+  ],
+  "endorsement": "No endorsement publicly announced",
+  "sources": [
+    {
+      "title": "American Carnage (Tim Alberta)",
+      "url": "https://www.harpercollins.com/products/american-carnage-tim-alberta",
+      "date": "2019-04-02",
+      "type": "book"
+    }
+  ],
+  "party": "Republican"
+}

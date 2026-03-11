@@ -1,0 +1,95 @@
+{
+  "id": "miles-taylor",
+  "name": "Miles Taylor",
+  "role": "Chief of Staff at Department of Homeland Security",
+  "administration": "Trump Administration",
+  "years": "2017-2019",
+  "militaryRank": null,
+  "category": "former-administration",
+  "subCategory": "homeland-security",
+  "photo": null,
+  "summary": "Former DHS Chief of Staff who wrote the anonymous New York Times 'Resistance' op-ed and later endorsed Joe Biden, calling Trump 'a man without character.'",
+  "keyStatements": [
+    {
+      "quote": "I am part of the resistance inside the Trump administration.",
+      "date": "2018-09-05",
+      "source": "The New York Times",
+      "context": "Anonymous op-ed",
+      "url": "https://www.nytimes.com/2018/09/05/opinion/trump-white-house-anonymous-resistance.html"
+    },
+    {
+      "quote": "Donald Trump is a man without character.",
+      "date": "2020-08-17",
+      "source": "CNN",
+      "context": "Video endorsement of Joe Biden",
+      "url": "https://www.cnn.com/2020/08/17/politics/miles-taylor-biden-endorsement/index.html"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2017-01-20",
+      "event": "Joined Department of Homeland Security",
+      "significance": "Started in Trump administration"
+    },
+    {
+      "date": "2018-09-05",
+      "event": "Published anonymous 'Resistance' op-ed",
+      "significance": "Warned about Trump from inside (revealed as author in 2020)"
+    },
+    {
+      "date": "2019-06",
+      "event": "Left DHS",
+      "significance": "Resigned from administration"
+    },
+    {
+      "date": "2020-08-17",
+      "event": "Publicly endorsed Joe Biden",
+      "significance": "Released video calling Trump characterless"
+    },
+    {
+      "date": "2020-10-28",
+      "event": "Revealed himself as 'Anonymous'",
+      "significance": "Confirmed authorship of NY Times op-ed"
+    },
+    {
+      "date": "2019-11-19",
+      "event": "Published book 'A Warning'",
+      "significance": "Detailed Trump's unfitness"
+    }
+  ],
+  "credibility": {
+    "background": "Former DHS Chief of Staff, author of anonymous resistance op-ed, national security professional",
+    "positions": [
+      "Chief of Staff, Department of Homeland Security (2017-2019)",
+      "Deputy Chief of Staff, DHS",
+      "Counselor to the DHS Secretary"
+    ],
+    "awards": []
+  },
+  "oppositionReasons": [
+    "Trump is a man without character or principle",
+    "Trump is unfit for the office of president"
+  ],
+  "endorsement": "Endorsed Joe Biden in 2020",
+  "sources": [
+    {
+      "title": "Former DHS official Miles Taylor endorses Biden",
+      "url": "https://www.cnn.com/2020/08/17/politics/miles-taylor-biden-endorsement/index.html",
+      "date": "2020-08-17",
+      "type": "video"
+    },
+    {
+      "title": "I Am Part of the Resistance Inside the Trump Administration",
+      "url": "https://www.nytimes.com/2018/09/05/opinion/trump-white-house-anonymous-resistance.html",
+      "date": "2018-09-05",
+      "type": "op-ed"
+    },
+    {
+      "title": "'Anonymous' revealed as Miles Taylor",
+      "url": "https://www.nytimes.com/2020/10/28/us/politics/miles-taylor-anonymous-trump.html",
+      "date": "2020-10-28",
+      "type": "news"
+    }
+  ],
+  "party": "Republican"
+}

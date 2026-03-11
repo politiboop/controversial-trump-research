@@ -1,0 +1,45 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  accentColor?: string;
+}
+
+const { icon, title, description, accentColor = 'var(--red)' } = Astro.props;
+---
+
+<div class="field-card fade-up" style={`border-top-color: ${accentColor}`}>
+  <div class="field-icon">{icon}</div>
+  <div class="field-title">{title}</div>
+  <div class="field-desc">{description}</div>
+</div>
+
+<style>
+  .field-card {
+    background: var(--card);
+    padding: 24px;
+    border-top: 3px solid var(--red);
+  }
+
+  .field-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .field-title {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .field-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+</style>
