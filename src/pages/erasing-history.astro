@@ -1,0 +1,300 @@
+---
+import ResearchLayout from '../layouts/ResearchLayout.astro';
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro';
+import Masthead from '../components/design/Masthead.astro';
+import Ticker from '../components/design/Ticker.astro';
+import IntroQuote from '../components/design/IntroQuote.astro';
+import HighlightBar from '../components/design/HighlightBar.astro';
+import StatGrid from '../components/design/StatGrid.astro';
+import StatCard from '../components/design/StatCard.astro';
+import SectionHeader from '../components/design/SectionHeader.astro';
+import SectionDivider from '../components/design/SectionDivider.astro';
+import CategoryGrid from '../components/design/CategoryGrid.astro';
+import CategoryCard from '../components/design/CategoryCard.astro';
+import TimelineSection from '../components/design/TimelineSection.astro';
+import TimelineItem from '../components/design/TimelineItem.astro';
+import VoicesSection from '../components/design/VoicesSection.astro';
+import VoiceCard from '../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../components/design/ConsequenceItem.astro';
+import AlertBanner from '../components/design/AlertBanner.astro';
+import ColoredSection from '../components/design/ColoredSection.astro';
+import CTASection from '../components/design/CTASection.astro';
+
+const tickerItems = [
+  "White House Rewrites January 6 as 'Peaceful Protest'",
+  "Slavery Memorial Removed from President's House",
+  "National Parks Ordered to Erase Climate & Native History",
+  "Smithsonian Museums Censored by Executive Order",
+  "1776 Commission Minimizes Slavery — Condemned by Historians",
+  "'Those who control the past control the future' — George Orwell",
+];
+---
+
+<ResearchLayout title="Erasing History: Government-Directed Historical Revisionism" description="15 documented cases of the Trump administration erasing slavery memorials, censoring museums, rewriting January 6, and controlling what children learn about American history.">
+
+  <Breadcrumbs items={[{label: 'Research', href: '/'}, {label: 'Erasing History'}]} />
+
+  <Masthead
+    eyebrow="The Trump Tracker · Research Division"
+    title="ERASING <span class='word-red'>HISTORY</span>"
+    titleHighlight="HISTORY"
+    subtitle="How the Administration Rewrites the Past to Control the Present"
+    date="15 Documented Cases · Updated March 2026"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <HighlightBar text="This is not about politics. This is a government directing the removal of documented history from museums, parks, websites, and schools." />
+
+  <IntroQuote
+    quote="Who controls the past controls the future: who controls the present controls the past. Every record has been destroyed or falsified, every book rewritten, every picture has been repainted, every statue and street building has been renamed, every date has been altered."
+    citation="George Orwell, 1984"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={15} label="Documented cases of government-directed historical erasure" />
+    <StatCard target={6} suffix="+" label="Museums, parks, and monuments censored or dismantled" />
+    <StatCard target={1000000} suffix="+" label="COVID deaths denied, minimized, or rewritten" />
+    <StatCard target={1} prefix="" label="Condemned by the American Historical Association" />
+  </StatGrid>
+
+  <!-- ===== SECTION 1: PHYSICAL ERASURE ===== -->
+  <SectionDivider label="Physical Erasure" />
+  <SectionHeader
+    eyebrow="Monuments · Museums · Memorials"
+    title="Erasing What<br>You Can See"
+    introText="The administration has physically removed memorials, censored museum exhibits, and ordered the erasure of documented history from public spaces. These are not policy disagreements — they are the literal destruction and concealment of historical evidence."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⛓️"
+      title="Slavery Memorial Removed from President's House"
+      body="National Park Service dismantled exhibits about slavery at the President's House in Philadelphia — a memorial honoring nine enslaved people owned by George Washington. The exhibit, which opened in 2010 after years of community advocacy, included plaques and displays documenting the lives of Oney Judge, Hercules, and others who were enslaved in the building that served as the first executive mansion. <strong>Physical historical evidence, destroyed by government order.</strong>"
+      tag="Catastrophic"
+      variant="red"
+    />
+    <CategoryCard
+      icon="🏔️"
+      title="National Parks Ordered to Erase Climate & Native History"
+      body="In January 2026, the Trump administration ordered the National Park Service to remove dozens of signs, exhibits, and displays related to climate change, environmental science, and the historical mistreatment of Native Americans from iconic parks including Grand Canyon, Glacier, Zion, Big Bend, and Little Bighorn. Text about Native American displacement and boarding schools that 'violently erased cultural identities' was ordered removed. <strong>The government is erasing history about erasing history.</strong>"
+      tag="Serious"
+      variant="red"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Smithsonian Museums Censored by Executive Order"
+      body="Trump signed Executive Order 14253, 'Restoring Truth and Sanity to American History,' targeting Smithsonian museums. The order prohibits exhibits that 'degrade shared American values' or 'divide Americans based on race.' It closed the Office of Diversity and banned the Women's History Museum from celebrating trans women. <strong>The nation's museums — now subject to presidential censorship.</strong>"
+      tag="Catastrophic"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- ===== SECTION 2: REWRITING THE RECORD ===== -->
+  <SectionDivider label="Official Records" />
+  <SectionHeader
+    eyebrow="Government Websites · Official Statements"
+    title="Rewriting the<br>Official Record"
+    introText="Beyond physical erasure, the administration has systematically rewritten official government records, websites, and public statements to replace documented reality with preferred narratives."
+  />
+
+  <ColoredSection background="#1a0505" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="FLAGSHIP CASE: January 6 Website Revisionism" variant="red">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 12px;">On Inauguration Day 2025, the White House created an official page at <strong style="color: var(--text);">whitehouse.gov/j6</strong> reframing the Capitol attack:</p>
+      <ul style="margin-left: 1.2rem; margin-bottom: 12px;">
+        <li><strong style="color: var(--text);">Official title:</strong> &quot;January 6: A Date Which Will Live in Infamy&quot; (echoing Pearl Harbor language)</li>
+        <li><strong style="color: var(--text);">Describes the attack as:</strong> A &quot;peaceful protest turned tragedy&quot;</li>
+        <li><strong style="color: var(--text);">Calls convicted rioters:</strong> &quot;Hostages&quot; and &quot;political prisoners&quot;</li>
+        <li><strong style="color: var(--text);">Omits:</strong> That 5 people died, 140+ police officers were injured, 1,500+ people were criminally charged, and Proud Boys and Oath Keepers were convicted of seditious conspiracy</li>
+      </ul>
+      <p style="font-size: 15px; color: var(--red-bright); font-weight: 700; margin: 0;"><strong>This is the U.S. government officially rewriting a documented attack on the Capitol.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="☠️"
+      title="COVID Response Revisionism"
+      body="Trump claims his COVID-19 response was 'amazing' while over 1 million Americans died. In a 2020 recording by Bob Woodward, Trump admitted he wanted to 'play it down' even as the virus spread. Has repeatedly claimed 'nobody died' under his watch. <strong>Over 1 million deaths — rewritten as a success story.</strong>"
+      tag="Catastrophic"
+      variant="red"
+    />
+    <CategoryCard
+      icon="📊"
+      title="State of the Union 2026: Dozens of False Claims"
+      body="Every major fact-checking organization documented widespread false and misleading claims in Trump's 2026 SOTU address. Claimed $18 trillion in investment — his own White House website said $9.7 trillion. Falsely claimed 'stagnant economy' and record crime when data showed the opposite. <strong>Official presidential address, documented as largely false.</strong>"
+      tag="Serious"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="💰"
+      title="Economic Record Revisionism"
+      body="Claims he 'built the greatest economy in history' and 'rescued' America from economic disaster. In reality, he inherited a strong economy from Obama — 75 consecutive months of job growth before he took office. Takes credit for continuing Obama-era trends while excluding the 2020 COVID crash from 'his record.' <strong>75 months of inherited growth, claimed as his own.</strong>"
+      tag="Concerning"
+      variant="amber"
+    />
+  </CategoryGrid>
+
+  <!-- ===== SECTION 3: CONTROLLING EDUCATION ===== -->
+  <SectionDivider label="Education" />
+  <SectionHeader
+    eyebrow="Schools · Curriculum · What Children Learn"
+    title="Controlling What<br>Children Learn"
+    introText="The administration has used executive orders, funding threats, and federal commissions to control what schools can teach about American history — specifically targeting accurate instruction about slavery, racism, and systemic inequality."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📜"
+      title="1776 Commission: Rewriting the American Story"
+      body="Trump's 1776 Commission, reestablished by executive order in January 2025, released a report arguing that slavery was 'more the rule than the exception throughout human history' — minimizing America's specific history. <strong>The American Historical Association condemned the report</strong> for presenting 'a politicized narrative without consulting professional U.S. historians.' The report was written without a single professional historian of the United States on the commission."
+      tag="Catastrophic"
+      variant="red"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="Banning 'Critical Race Theory' to Censor History"
+      body="Trump's January 2025 executive order on K-12 education directed federal agencies to restrict funding for schools that teach content described as 'radical indoctrination,' including critical race theory and any content about systemic racism. <strong>Uses federal funding as a weapon to control what schools can teach about American history.</strong>"
+      tag="Serious"
+      variant="red"
+    />
+  </CategoryGrid>
+
+  <!-- ===== SECTION 4: DENYING HIS OWN WORDS ===== -->
+  <SectionDivider label="Personal Denial" />
+  <SectionHeader
+    eyebrow="Documented Statements · Recorded Evidence"
+    title="Denying His<br>Own Words"
+    introText="Beyond rewriting national history, Trump routinely denies his own documented statements — even when recordings, screenshots, photos, and flight logs prove otherwise. This is not spin or interpretation. These are verifiable denials of documented facts."
+  />
+
+  <TimelineSection title="The Pattern of<br>Personal Denial" subtitle="Denying documented statements and relationships">
+    <TimelineItem
+      date="DEC 2022-2023"
+      badge="GASLIGHTING"
+      badgeType="serious"
+      title="Denied Calling to 'Terminate' the Constitution"
+      description="Posted on Truth Social in December 2022 that 'fraud allows for the termination of all rules, regulations, and articles, even those found in the Constitution.' When pressed by reporters, claimed he 'never said that' and later tried to claim it was about something else. The post remains on Truth Social. Condemned by members of both parties."
+    />
+    <TimelineItem
+      date="2024"
+      badge="DOCUMENTED"
+      badgeType="serious"
+      title="Denied Epstein Friendship Despite Photos & Own Quotes"
+      description="Claims he 'was not a fan' of Jeffrey Epstein and 'had a falling out.' However, in 2002 Trump told New York Magazine: 'I've known Jeff for fifteen years. Terrific guy. He's a lot of fun to be with.' Documented evidence includes 15 years of friendship, numerous photos together, phone numbers in Epstein's black book, and flight logs. The denial contradicts his own recorded words."
+    />
+    <TimelineItem
+      date="2020-ONGOING"
+      badge="1M+ DEATHS"
+      badgeType="catastrophic"
+      title="COVID: Claims 'Nobody Died' Under His Watch"
+      description="Has repeatedly claimed his COVID response was flawless and that 'nobody died.' Over 400,000 Americans died of COVID during his first term alone. Admitted to Bob Woodward on tape that he deliberately 'played it down.' Total U.S. COVID death toll exceeded 1 million."
+    />
+    <TimelineItem
+      date="2016-2024"
+      badge="FLIP-FLOP"
+      badgeType="concerning"
+      title="Abortion Position: Shifting Statements Denied"
+      description="In 2016, said women should face 'some form of punishment' for abortion — walked back the same day. In 2024, positioned himself as leaving abortion to the states. Has taken contradictory positions on specific state bans, then denied his earlier statements. The pattern: take a position, deny it when inconvenient, claim the new position was always the position."
+    />
+    <TimelineItem
+      date="MAR 2026"
+      badge="IRAQ PLAYBOOK"
+      badgeType="serious"
+      title="Iran War: 4-5 Different Justifications in One Week"
+      description="Less than a week after launching Operation Epic Fury against Iran, the administration offered four to five different and contradictory justifications. Defense Secretary Hegseth, Secretary of State Rubio, and Trump himself gave conflicting reasons. The shifting justifications echo the Iraq War WMD playbook — change the story until one sticks."
+    />
+    <TimelineItem
+      date="2026"
+      badge="REVISIONISM"
+      badgeType="serious"
+      title="Oil Prices & Economy: 'A Little Glitch'"
+      description="Oil surged past $100/barrel, gas hit $3.48/gallon (highest of either Trump term), and the economy lost 92,000 jobs in February 2026. Trump dismissed record gas prices as 'a little glitch' and blamed the previous administration — despite taking office with strong economic indicators and 75 consecutive months of inherited job growth."
+    />
+  </TimelineSection>
+
+  <!-- ===== EXPERT WARNINGS ===== -->
+  <SectionDivider label="Expert Warnings" />
+
+  <VoicesSection
+    eyebrow="Historians · Scholars · Experts"
+    title="Why This<br>Matters"
+    introText="Historians and scholars explain why government-directed historical revisionism is one of the most dangerous patterns in democratic decline"
+  >
+    <VoiceCard
+      quote="The 1776 Report presents a politicized narrative that ignores the rich complexity of our past and undermines the nation's historical understanding. It was not written by historians, and it does not meet professional standards."
+      attribution="American Historical Association — January 2021 · Official statement condemning the 1776 Commission report · <a href='https://www.historians.org/news-and-advocacy/aha-advocacy/aha-statement-on-the-1776-commission-report' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: AHA</a>"
+    />
+    <VoiceCard
+      quote="Every authoritarian regime in history has attempted to control the past. When a government removes memorials, censors museums, and rewrites official records, it is not protecting 'shared values' — it is manufacturing a false consensus."
+      attribution="Timothy Snyder — Historian, Yale University · Author of 'On Tyranny: Twenty Lessons from the Twentieth Century' · Expert on authoritarianism and historical memory"
+    />
+    <VoiceCard
+      quote="The removal of slavery exhibits at the President's House is not a policy decision. It is the erasure of the lived experience of enslaved people from a site where they were actually held in bondage. This is the definition of historical erasure."
+      attribution="Historians and community advocates — January 2026 · In response to the Philadelphia slavery memorial removal"
+    />
+    <VoiceCard
+      quote="When you remove signs about climate change from national parks, remove exhibits about slavery from historic sites, and rewrite official accounts of documented events like January 6, you are not 'restoring truth.' You are replacing it."
+      attribution="Scholarly consensus — Multiple historians have noted the pattern of selective erasure targeting uncomfortable truths about American history"
+    />
+  </VoicesSection>
+
+  <!-- ===== CONSEQUENCES ===== -->
+  <ConsequencesGrid eyebrow="The Stakes" title="Why Historical<br>Erasure Matters">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="Loss of Collective Memory"
+        description="When a government removes memorials and censors museums, the lived experiences of enslaved people, Indigenous communities, and other marginalized groups are erased from public consciousness. What is forgotten cannot inform the present."
+      />
+      <ConsequenceItem
+        number="02"
+        title="Normalization of Lies"
+        description="Each successful rewriting makes the next one easier. When the government rewrites January 6 and faces no consequences, it establishes that official lies are acceptable. The threshold for truth erodes with every unchallenged revision."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Educational Harm"
+        description="Children taught sanitized history grow into adults who cannot recognize the patterns of injustice repeating around them. The 1776 Commission and CRT bans are designed to produce citizens who lack the tools to question authority."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Precedent for Censorship"
+        description="Executive orders censoring Smithsonian museums and National Parks set a legal and institutional precedent. If a president can dictate what museums display, no institution of knowledge is safe from political interference."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="05"
+        title="Erosion of Shared Truth"
+        description="Democracy requires a shared factual foundation. When the government rewrites COVID deaths, economic data, and the events of January 6, citizens lose the common ground needed for democratic debate. Without agreed-upon facts, democracy cannot function."
+      />
+      <ConsequenceItem
+        number="06"
+        title="The Authoritarian Pattern"
+        description="Every authoritarian regime in the 20th century controlled history — from Soviet revisionism to Mao's Cultural Revolution to Erdogan's Turkey. Government-directed historical erasure is not a policy preference. It is a defining feature of authoritarianism."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="📖" title="The Pattern Is Clear" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Remove the slavery memorial. Censor the museum. Rewrite January 6. Ban teaching about racism. Deny your own recorded words. Claim nobody died. Each act of erasure builds on the last.</p>
+      <p style="font-size: 16px; color: var(--text); line-height: 1.7; margin-top: 12px; font-weight: 700;">This is not carelessness. This is a system. And every authoritarian in history has used it.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- ===== CTA ===== -->
+  <CTASection
+    title="The Record<br>Stands."
+    description="15 documented cases of government-directed historical erasure — from slavery memorials to museum censorship to official website revisionism. Every case sourced from executive orders, government directives, and official records."
+    linkText="Browse All Rewriting-History Cases"
+    linkHref="https://thetrumptracker.com"
+  />
+
+</ResearchLayout>
