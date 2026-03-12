@@ -1,0 +1,283 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const electionTabs = [
+  { label: 'Overview', href: '/election-rigging' },
+  { label: 'The Coup Attempt', href: '/election-rigging/the-coup-attempt' },
+  { label: '2024', href: '/election-rigging/2024' },
+  { label: 'Active Rigging 2026', href: '/election-rigging/rigging-2026' },
+];
+
+const tickerItems = [
+  "700 Boxes of 2020 Ballots Seized by FBI (Jan 2026)",
+  "DNI Illegally Present at FBI Raid of Election Office",
+  "15 States Targeted for 'Nationalized Voting'",
+  "23+ States Sued by DOJ for Voter Rolls",
+  "17 Inspector Generals Fired (Ruled Unlawful)",
+  "Trump Allies Push Emergency Powers for Midterms",
+  "ICE at Polls Threatened — Illegal Under Federal Law",
+  "Federal Judge: 'The Taking of Democracy'",
+];
+---
+
+<ResearchLayout title="Active Rigging 2026 - Election Rigging" description="Trump is actively attempting to rig the 2026 midterm elections through FBI raids, voting machine seizures, calls to 'nationalize voting,' and federal takeover of state elections.">
+
+  <SeriesNav tabs={electionTabs} currentPath="/election-rigging/rigging-2026" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Election Rigging', href: '/election-rigging' },
+    { label: 'Active Rigging 2026' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 3 of 3 · Election Rigging"
+    title="2026: RIGGING BEFORE THE VOTE"
+    titleHighlight="RIGGING"
+    subtitle="Unlike 2020, Trump is attempting to rig elections before votes are even cast"
+    date="Last Updated: March 4, 2026"
+    eyebrowColor="var(--red-bright)"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <HighlightBar text="THESE ACTIONS ARE HAPPENING RIGHT NOW" variant="red" />
+
+  <IntroQuote
+    quote="This is happening right now. Unlike 2020 (attempting to overturn after losing), Trump is attempting to rig the 2026 midterms before votes are even cast. This is documented, real-time election rigging through federal law enforcement, unconstitutional takeover attempts, and systematic dismantling of oversight."
+    citation="Evidence-Based Documentation"
+  />
+
+  <!-- What Trump Said - 2026 -->
+  <VoicesSection
+    eyebrow="2026 · What Trump Said"
+    title="Stated<br>Intentions"
+    introText="Trump's stated intentions for 2026 elections"
+  >
+    <VoiceCard
+      quote="We should take over the voting in at least — many, 15 places. The Republicans ought to nationalize the voting."
+      attribution="Donald Trump — February 2, 2026 (Dan Bongino Show) · Called for Republicans to &quot;nationalize voting&quot; and federally take over elections in 15 states. Named Detroit, Philadelphia, and Atlanta as &quot;extremely corrupt&quot; (all Democratic-leaning cities, no evidence). Constitutional violation: Article 1, Section 4 grants states, not the federal government, power over elections. · <a href='https://www.washingtonpost.com/politics/2026/02/02/trump-elections-nationalize-fraud/' target='_blank' rel='noreferrer' style='color: var(--red);'>Washington Post</a> | <a href='https://www.independent.co.uk/news/world/americas/us-politics/trump-midterm-election-results-voting-nationalize-b2914259.html' target='_blank' rel='noreferrer' style='color: var(--red);'>The Independent</a>"
+    />
+    <VoiceCard
+      quote="I will, if the elections are honest. If the elections aren't honest, then something else has to happen."
+      attribution="Donald Trump — February 5, 2026 (NBC's Tom Llamas) · On accepting 2026 midterm results. Pre-emptive fraud claim — setting up to reject results if Republicans lose. In same interview, lied about using the word &quot;nationalize&quot; despite being recorded saying it 3 days earlier. Pattern: 2020 lost = fraud. 2024 won = no fraud. 2026 = setting up fraud claims if Republicans lose. · <a href='https://www.independent.co.uk/news/world/americas/us-politics/trump-midterm-election-results-voting-nationalize-b2914259.html' target='_blank' rel='noreferrer' style='color: var(--red);'>The Independent</a> | <a href='https://abcnews.go.com/Politics/trump-urges-republicans-nationalize-voting/story?id=129793658' target='_blank' rel='noreferrer' style='color: var(--red);'>ABC News</a>"
+    />
+    <VoiceCard
+      quote="If Democrats don't want voter ID, if they don't want voter ID, that means they want to cheat. We can't allow cheating in elections."
+      attribution="Donald Trump — February 5, 2026 · Deflecting from his &quot;nationalize&quot; comments by claiming Democrats &quot;want to cheat.&quot; From the man who asked Georgia Secretary of State to &quot;find&quot; 11,000+ votes in 2020. · <a href='https://www.independent.co.uk/news/world/americas/us-politics/trump-midterm-election-results-voting-nationalize-b2914259.html' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: The Independent</a>"
+    />
+    <VoiceCard
+      quote="You're damn right we're going to have ICE surround the polls come November"
+      attribution="Steve Bannon — February 5, 2026 · White House Press Secretary Karoline Leavitt: &quot;I can't guarantee that an ICE agent won't be around a polling location in November.&quot; ILLEGAL: Federal and state laws prohibit federal law enforcement at polling places. Intent: suppress voter turnout through intimidation. Senator Bernie Sanders called Trump a &quot;demagogue&quot; and &quot;authoritarian.&quot; · <a href='https://thehill.com/homenews/media/5723066-bannon-ice-presence-polls/' target='_blank' rel='noreferrer' style='color: var(--red);'>The Hill</a> | <a href='https://www.democracydocket.com/news-alerts/steve-bannon-says-ice-will-surround-the-polls-as-trump-doubles-down-on-taking-over-elections/' target='_blank' rel='noreferrer' style='color: var(--red);'>Democracy Docket</a> | <a href='https://www.newsweek.com/warnings-issued-on-nationalizing-elections-ice-at-polls-huge-danger-11467048' target='_blank' rel='noreferrer' style='color: var(--red);'>Newsweek</a>"
+    />
+  </VoicesSection>
+
+  <!-- What Trump Did - 2026 -->
+  <TimelineSection title="What Trump<br>Did" subtitle="2026 active rigging actions">
+    <TimelineItem
+      date="JAN 28-29, 2026"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="FBI Raids Georgia Elections Office — Gabbard Present, Calls Trump During Raid"
+      description="Jan 28: FBI raided Fulton County (Atlanta) elections office. Seized 700 boxes of 2020 ballots, tabulator tapes, voter rolls, ballot images. Based on Trump's false claims about 2020 fraud. DNI Tulsi Gabbard physically present (unprecedented). Gabbard used cellphone to call Trump during raid (per congressional letter). Gabbard's presence illegal: DNI prohibited from domestic law enforcement. Jan 29: Trump ordered Gabbard to Atlanta. She arranged call between Trump and FBI agents. Trump spoke on speakerphone praising agents for raiding election office. Officials described it as a 'pep talk.' Raid affidavit remains sealed."
+    />
+    <TimelineItem
+      date="MAY 2025"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="Gabbard's DNI Illegally Seizes Puerto Rico Voting Machines"
+      description="DNI Gabbard's office obtained Puerto Rico voting machines, investigating alleged Venezuelan hacking. US Attorney, HSI, and FBI 'facilitated voluntary turnover' of voting hardware to ODNI. Three Reuters sources confirmed goal was investigating Venezuela hacking claims. NO EVIDENCE found of foreign interference. Sen. Mark Warner: 'Absent a foreign nexus, intelligence agencies have absolutely no lawful role in domestic election administration. This is exactly the kind of overreach Congress wrote the law to prevent.' Puerto Rico doesn't vote in presidential elections — likely a testing ground for seizing machines before targeting states."
+    />
+    <TimelineItem
+      date="JAN 2026"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="Pam Bondi Grants Missouri Prosecutor Nationwide 2020 Election Investigation"
+      description="AG Pam Bondi granted a Missouri prosecutor special authority to investigate 2020 election matters nationwide — far beyond Missouri's jurisdiction. Creates roving federal prosecutor focused on Trump's 2020 election grievances, expanding investigation of already-adjudicated claims that 60+ courts rejected."
+    />
+    <TimelineItem
+      date="JAN 2026"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="Minnesota: DOJ Conditions Federal Agent Withdrawal on Voter Data"
+      description="AG Pam Bondi conditioned withdrawal of federal agents from Minnesota on the state providing sensitive voter data to the Trump administration. Federal law enforcement presence used as leverage to extract state voter information — classic authoritarian tactic. DOJ using federal agents as bargaining chips to force states to surrender voter data."
+    />
+    <TimelineItem
+      date="MAR 2026"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="Trump Allies Push Emergency Powers for 2026 Midterms — Federal Agents to Polls"
+      description="Trump allies openly pushing to invoke emergency powers ahead of November 2026 midterms. Proposals include: deploying federal agents including ICE and potentially National Guard to polling places, seizing state election infrastructure under emergency declarations, overriding state election laws by federalizing election oversight. Dramatic escalation beyond earlier refusal to rule out ICE at polls. Senate Democrats preparing legislative measures to block. Posse Comitatus Act of 1878 prohibits use of federal military at polls. Constitutional scholars: using emergency powers to interfere with elections would be unprecedented."
+    />
+    <TimelineItem
+      date="JAN 2026"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="DOJ Sues 23+ States for Voter Rolls Including Sensitive Personal Data"
+      description="Trump's DOJ filed lawsuits against 23 states plus D.C. demanding complete voter registration lists including: full names, home addresses, Social Security numbers, mothers' maiden names, dates of birth, tribal ID numbers, driver's license information, complete voting history. California alone: DOJ sought data of nearly 23 million Californians. Arizona Secretary of State Fontes: 'This administration is weaponizing law enforcement for the purpose of satisfying the president's obsession with his 2020 election loss.' Multiple states refused, citing laws prohibiting sharing confidential voter data."
+    />
+    <TimelineItem
+      date="2021"
+      title="Georgia Legislature Passes Law Allowing State Control of Fulton County Elections"
+      description="Georgia lawmakers (Republican-controlled) approved legislation allowing the state legislature to take control of elections in Fulton County — the Democratic stronghold where Trump lost. State-level groundwork laid in 2021. Federal-level raids happening now. Multi-year, multi-level strategy to control Georgia elections."
+    />
+    <TimelineItem
+      date="2024-2026"
+      title="Republican Voter Suppression Agenda for 2026 Midterms"
+      description="GOP-controlled states advancing coordinated voter suppression: eliminating no-excuse absentee voting, ending automatic voter registration, shortening early voting periods, new certification disruption rules (blocked by courts in 2024, being retried). Multi-pronged strategy: federal raids + state legislation + voter suppression = comprehensive election rigging apparatus."
+    />
+    <TimelineItem
+      date="MAR 2025"
+      title="Executive Order Attempting to Control State Elections (Blocked by Courts)"
+      description="Trump issued sweeping executive order attempting to control state election procedures, including requiring citizenship proof for federal voter registration. Federal courts blocked major portions on constitutional grounds. Trump's first attempt to federalize elections was stopped by courts. He then escalated to direct 'takeover' threats."
+    />
+    <TimelineItem
+      date="JAN 2025"
+      badge="UNLAWFUL"
+      badgeType="catastrophic"
+      title="Fired 17 Inspector Generals (Ruled Unlawful)"
+      description="Trump fired 17 Inspector Generals across federal agencies in coordinated purge of independent oversight. Why this enables election rigging: IGs provide oversight of DOJ and FBI. Removing them allows Trump loyalists to conduct election interference (like Georgia raid) without accountability. Legal status: Federal judge ruled firings violated federal law. Ordered reinstatement and back pay."
+    />
+  </TimelineSection>
+
+  <!-- Related: Installing Loyalists -->
+  <ColoredSection background="#0a0a14" borderColor="var(--blue)">
+    <AlertBanner icon="🔗" title="Related: Installing Loyalists" variant="blue">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 12px;">The Georgia raid was possible because Trump installed <strong style="color: var(--text);">personal loyalists</strong> at FBI and intelligence agencies. Career professionals wouldn't raid an election office based on false fraud claims. Loyalists who serve Trump personally — not the law — will.</p>
+      <ul style="margin-left: 1.2rem; margin-bottom: 12px;">
+        <li><strong style="color: var(--text);">Kash Patel (FBI Director)</strong> — Compiled "enemies list," publicly threatened investigations of journalists and Trump critics</li>
+        <li><strong style="color: var(--text);">Tulsi Gabbard (DNI)</strong> — Illegally coordinated FBI raid, amplified Russian propaganda, no intelligence experience</li>
+        <li><strong style="color: var(--text);">Todd Blanche (Acting AG)</strong> — Trump's personal criminal defense lawyer now running DOJ</li>
+        <li><strong style="color: var(--text);">Dan Bongino (FBI Deputy)</strong> — Talk radio host, no FBI experience, built career defending Trump on air</li>
+      </ul>
+      <p style="margin: 0;"><a href="/attacking-democracy/installing-loyalists" style="color: var(--red-bright); text-decoration: underline; font-weight: 600;">Read Full Documentation: Installing Loyalists</a></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Related: Purging Oversight -->
+  <ColoredSection background="#0a0a14" borderColor="var(--blue)">
+    <AlertBanner icon="🔗" title="Related: Purging Oversight" variant="blue">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 12px;">Trump's firing of 17 Inspector Generals (ruled unlawful) removed oversight of DOJ/FBI, enabling coordination of the Georgia raid and election interference with no accountability mechanism.</p>
+      <ul style="margin-left: 1.2rem; margin-bottom: 12px;">
+        <li>No IG to investigate FBI's political coordination</li>
+        <li>No whistleblower protections for agents who object</li>
+        <li>Loyalists like Kash Patel (FBI) and Tulsi Gabbard (DNI) operate without oversight</li>
+        <li>Courts rule actions unlawful, but no enforcement mechanism remains</li>
+      </ul>
+      <p style="margin: 0;"><a href="/attacking-democracy/purging-oversight" style="color: var(--red-bright); text-decoration: underline; font-weight: 600;">Read Full Analysis: Purging Oversight</a></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Legal/Court Response - 2026 -->
+  <SectionDivider label="Legal Response" />
+  <SectionHeader
+    eyebrow="2026 · Courts Fighting Back"
+    title="Legal<br>Resistance"
+    introText="How courts and the legal system are responding to Trump's 2026 rigging attempts"
+  />
+
+  <TimelineSection title="Court<br>Actions" subtitle="2026 legal proceedings">
+    <TimelineItem
+      date="FEB 1, 2025"
+      badge="BLOCKED"
+      badgeType="serious"
+      title="Federal Judge Rules IG Firings Unlawful"
+      description="Federal judge ruled Trump's firing of 17 Inspector Generals violated federal law. Court ordered immediate reinstatement and back pay. Legal confirmation that Trump violated law to remove oversight and install loyalists."
+    />
+    <TimelineItem
+      date="JAN 15, 2026"
+      badge="DISMISSED"
+      badgeType="serious"
+      title="Federal Judge Dismisses DOJ Voter Roll Lawsuit — &quot;Unprecedented and Illegal&quot;"
+      description="U.S. District Judge David O. Carter (California) dismissed DOJ lawsuit seeking voter data from 23 million Californians. Judge Carter: 'The taking of democracy does not occur in one fell swoop; it is chipped away piece-by-piece until there is nothing left. The case before the Court is one of these cuts that imperils all Americans.' Dismissed without leave to amend — signal DOJ's legal theory is fundamentally flawed. Oregon district judge indicated similar ruling planned."
+    />
+    <TimelineItem
+      date="APR 2025"
+      badge="BLOCKED"
+      badgeType="serious"
+      title="Federal Courts Block Election Executive Order"
+      description="Federal courts blocked Trump's March 2025 executive order attempting to federalize election procedures. Courts ruled citizenship proof requirement unconstitutional. Multiple judges cited separation of powers and federalism concerns. Pattern: Every time Trump tries to federalize elections, courts stop him. Trump responded by escalating to direct 'nationalize voting' demands."
+    />
+    <TimelineItem
+      date="JAN 2026"
+      title="States Refuse Federal Takeover Attempts"
+      description="Multiple states refusing to comply with DOJ voter roll demands and federal interference. Arizona refused voter roll demands. California resisting federal pressure. Multiple states citing state sovereignty. Fulton County filing lawsuit over FBI raid. Status: States are resisting, but Trump administration escalating pressure through lawsuits and raids."
+    />
+  </TimelineSection>
+
+  <!-- Expert Assessment - 2026 -->
+  <VoicesSection
+    eyebrow="2026 · Expert Assessment"
+    title="What Experts<br>Are Saying Now"
+    introText="What experts are saying about Trump's 2026 election rigging attempts"
+  >
+    <VoiceCard
+      quote="This administration is weaponizing law enforcement across the board and in this case for the purpose of satisfying the president's obsession with his 2020 election loss. This is election interference."
+      attribution="Adrian Fontes — Arizona Secretary of State · January 29, 2026 (responding to Georgia raid) · Current election official warning of active election rigging in real-time"
+    />
+    <VoiceCard
+      quote="These raids on election offices are unprecedented and dangerous. This is not how democracies function."
+      attribution="Brad Raffensperger — Georgia Secretary of State (Republican) · January 2026 · Same official Trump pressured in 2020 now facing FBI raids"
+    />
+    <VoiceCard
+      quote="She [Gabbard] is once again demonstrating her utter lack of fitness for office by injecting the nonpartisan intelligence community into a domestic political stunt."
+      attribution="Senator Mark Warner — Senate Intelligence Committee · January 29, 2026 (on Gabbard at Georgia raid)"
+    />
+    <VoiceCard
+      quote="The Fulton County raid should set alarm bells ringing about Trump's willingness to abuse the power of his office to undermine free and fair elections in 2026 and 2028. Trump had previously expressed regret about not activating the National Guard to seize voting machines in 2020."
+      attribution="Samantha Tarazi — CEO, Voting Rights Lab · February 2026 · <a href='https://www.thebulwark.com/p/warning-signs-of-election-interference-fulton-county-raid' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: The Bulwark</a>"
+    />
+    <VoiceCard
+      quote="The last time he started talking like this, his allies minimized the risks and we ended up with Jan 6. This time we must take him literally and seriously. These comments are a five-alarm fire for democracy."
+      attribution="Brendan Nyhan — Dartmouth Professor, Election Integrity Expert · February 2, 2026 (responding to &quot;nationalize voting&quot; comment)"
+    />
+    <VoiceCard
+      quote="This is the autocrat's playbook: Use state power to rig elections before they happen. We're watching democratic backsliding in real-time."
+      attribution="Ruth Ben-Ghiat — NYU Historian, Authoritarianism Expert · February 2026 · Source: MSNBC"
+    />
+    <VoiceCard
+      quote="The Georgia raid is pre-rigging. They're not waiting to lose and then contest — they're seizing control of the election apparatus before votes are cast. This is how democracies die."
+      attribution="Timothy Snyder — Yale Historian · February 2026 · Source: Substack"
+    />
+  </VoicesSection>
+
+  <!-- 2026 Escalation -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="The 2026 Escalation" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">2020:</strong> Trump tried to overturn an election <strong style="color: var(--red-bright);">after losing</strong>.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">2026:</strong> Trump is trying to control elections <strong style="color: var(--red-bright);">before votes are cast</strong>.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">This is not about Trump believing elections are rigged. <strong style="color: var(--text);">This is about Trump rigging elections.</strong></p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">The coup didn't work, so he's trying a different approach: Use federal power to seize control of election systems before there's anything to overturn. If he controls who counts the votes, who oversees the elections, and who certifies the results — he doesn't need a coup. He just needs to call it an election.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="This Is<br>Happening Now."
+    description="FBI raids on election offices. Voting machines seized. Calls to 'nationalize voting.' ICE at polls. Emergency powers. This is not speculation — this is documented, real-time election rigging."
+    linkText="Attacking Democracy →"
+    linkHref="/attacking-democracy"
+  />
+
+  <PageNavigation
+    prev={{ label: '2024', href: '/election-rigging/2024' }}
+    currentIndex={2}
+    totalPages={3}
+  />
+
+</ResearchLayout>

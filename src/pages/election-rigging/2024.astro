@@ -1,0 +1,177 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const electionTabs = [
+  { label: 'Overview', href: '/election-rigging' },
+  { label: 'The Coup Attempt', href: '/election-rigging/the-coup-attempt' },
+  { label: '2024', href: '/election-rigging/2024' },
+  { label: 'Active Rigging 2026', href: '/election-rigging/rigging-2026' },
+];
+
+const tickerItems = [
+  "Pre-Emptive Fraud Claims Throughout 2024 Campaign",
+  "Won Election — Fraud Claims Stopped Immediately",
+  "No Accountability for 2020 Coup Attempt",
+  "Supreme Court Granted Broad Presidential Immunity",
+  "Criminal Cases Delayed Past Election",
+  "Pattern: Elections Only 'Rigged' When He Loses",
+  "Lack of Consequences Emboldened 2026 Escalation",
+];
+---
+
+<ResearchLayout title="2024: No Accountability - Election Rigging" description="Pre-emptive fraud claims, no consequences for 2020, and the Supreme Court immunity decision that emboldened Trump's 2026 election rigging escalation.">
+
+  <SeriesNav tabs={electionTabs} currentPath="/election-rigging/2024" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Election Rigging', href: '/election-rigging' },
+    { label: '2024' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 2 of 3 · Election Rigging"
+    title="2024: NO ACCOUNTABILITY"
+    titleHighlight="NO ACCOUNTABILITY"
+    subtitle="Pre-emptive fraud claims, no consequences, and the escalation that followed"
+    date="Pattern: Elections are only 'rigged' when Trump loses"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Trump never accepted accountability for 2020. He continued pre-emptive fraud claims throughout 2024 campaign, won the election, and immediately stopped claiming fraud. The pattern revealed: Elections are only 'rigged' when he loses. The lack of accountability for 2020 enabled 2026 escalation."
+    citation="Evidence-Based Documentation"
+  />
+
+  <!-- What Trump Said - 2024 -->
+  <VoicesSection
+    eyebrow="2024 · What Trump Said"
+    title="Pre-Emptive<br>Fraud Claims"
+    introText="Trump's pre-emptive fraud claims during 2024 campaign"
+  >
+    <VoiceCard
+      quote="Christians, get out and vote, just this time. You won't have to do it anymore. Four more years, you know what? It'll be fixed. It'll be fine. You won't have to vote anymore, my beautiful Christians."
+      attribution="Donald Trump — July 26, 2024 · Told Christians they &quot;won't have to vote anymore&quot; after this election. Suggested elections would be &quot;fixed&quot; after he wins. · <a href='https://www.cbsnews.com/news/donald-trump-christian-voters-turning-point-action/' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: CBS News</a>"
+    />
+    <VoiceCard
+      quote="If I lose, I will tell you what. It's possible because they cheat. That's the only way we're going to lose, because they cheat."
+      attribution="Donald Trump — September 27, 2024 · Pre-emptive claims that any loss would be due to cheating. · <a href='https://transcripts.cnn.com/show/sotu/date/2024-09-29/segment/01' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: CNN transcript</a>"
+    />
+    <VoiceCard
+      quote="Because they cheat, that's the only way we're going to lose because they cheat."
+      attribution="Donald Trump — November 1, 2024 · Repeated pre-emptive fraud claims days before election. Pattern: if he loses, it's &quot;rigged.&quot; · <a href='https://transcripts.cnn.com/show/cnr/date/2024-11-01/segment/26' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: CNN transcript</a>"
+    />
+    <VoiceCard
+      quote="A Massive Fraud of this type and magnitude allows for the termination of all rules, regulations, and articles, even those found in the Constitution."
+      attribution="Donald Trump — December 2022 · Trump explicitly called for terminating the Constitution to overturn the 2020 election he lost. · Source: Truth Social post"
+    />
+  </VoicesSection>
+
+  <!-- What Trump Did - 2024 -->
+  <TimelineSection title="What Trump<br>Did" subtitle="2024 campaign actions">
+    <TimelineItem
+      date="THROUGHOUT 2024"
+      title="Systematic Pre-Emptive Fraud Claims"
+      description="Trump repeatedly claimed: 'If I lose, it was rigged.' 'The only way we lose is if they cheat.' 'They're already cheating in Pennsylvania.' Claimed mail-in ballots were fraudulent (despite no evidence). Result: Trump won the 2024 election and these claims immediately stopped. Pattern revealed: Elections are only 'rigged' when he loses."
+    />
+    <TimelineItem
+      date="NOV 2024"
+      title="Won 2024 Election, Fraud Claims Stopped"
+      description="Trump won 2024 presidential election. All fraud claims immediately ceased. No complaints about mail-in ballots, voting machines, or fraud. This reveals the pattern: Trump only claims fraud when he loses. When he wins, suddenly the same systems he called 'rigged' are perfectly legitimate."
+    />
+    <TimelineItem
+      date="2022-2024"
+      title="No Accountability for 2020 Coup Attempt"
+      description="Despite criminal indictments, Trump never accepted responsibility for January 6. Continued to claim 2020 was 'stolen.' Praised January 6 rioters as 'patriots.' Promised to pardon them if re-elected. Faced no electoral consequences (won 2024). Consequence: Lack of accountability emboldened Trump to escalate election rigging attempts in 2026."
+    />
+  </TimelineSection>
+
+  <!-- Legal Response - 2024 -->
+  <TimelineSection title="Legal<br>Response" subtitle="2024 accountability failures">
+    <TimelineItem
+      date="2024"
+      title="Criminal Cases Delayed"
+      description="Federal and state criminal cases for 2020 election interference were significantly delayed. Jack Smith federal case: Delayed by Trump's immunity appeals. Georgia RICO case: Delayed by procedural challenges. No trials before 2024 election. Result: Trump won election before facing trial, then used presidential power to dismiss federal cases."
+    />
+    <TimelineItem
+      date="JUL 2024"
+      badge="SCOTUS"
+      badgeType="serious"
+      title="Supreme Court Grants Broad Presidential Immunity"
+      description="Supreme Court ruled presidents have immunity for 'official acts' in Trump v. United States. Impact: Significantly complicated prosecutions of Trump for acts taken while president, including January 6. Consequence: Emboldened Trump by shielding presidential actions from accountability."
+    />
+  </TimelineSection>
+
+  <!-- Expert Assessment - 2024 -->
+  <VoicesSection
+    eyebrow="2024 · Expert Assessment"
+    title="Expert<br>Warnings"
+    introText="What experts warned about during 2024"
+  >
+    <VoiceCard
+      quote="The pre-announcement that an election will be fraudulent if you lose is a classic authoritarian tactic. It's the big lie in advance. If there are no consequences for January 6, it will happen again, but worse."
+      attribution="Timothy Snyder — Yale Historian, Author of &quot;On Tyranny&quot; · October 2024 · Source: The Atlantic"
+    />
+    <VoiceCard
+      quote="Trump is telling us exactly what he plans to do: eliminate the need for future elections. When an authoritarian tells you their plans, believe them."
+      attribution="Ruth Ben-Ghiat — NYU Historian, Expert on Authoritarianism · July 2024 (responding to &quot;won't have to vote anymore&quot; comment) · Source: MSNBC"
+    />
+    <VoiceCard
+      quote="The Supreme Court's immunity decision gives Trump a road map to authoritarianism. Combined with lack of accountability for January 6, we're in unprecedented danger."
+      attribution="Laurence Tribe — Harvard Law Professor · July 2024"
+    />
+  </VoicesSection>
+
+  <!-- 2024 Pattern -->
+  <ColoredSection background="#1a1200" borderColor="var(--amber)">
+    <AlertBanner icon="⚠️" title="The 2024 Pattern" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Trump spent 2024 pre-emptively claiming fraud if he lost. When he won, fraud claims stopped. The pattern is unmistakable: <strong style="color: var(--text);">Trump believes elections are legitimate only when he wins.</strong></p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">More critically: <strong style="color: var(--text);">The lack of accountability for the 2020 coup attempt emboldened Trump to escalate his election rigging tactics in 2026.</strong> Without consequences, authoritarians escalate.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- Related: Path to Fascism -->
+  <ColoredSection background="#0a0a14" borderColor="var(--blue)">
+    <AlertBanner icon="🔗" title="Related: Path to Fascism" variant="blue">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 12px;">Experts like Timothy Snyder and Ruth Ben-Ghiat are warning about Trump's election rigging as a <strong style="color: var(--text);">classic authoritarian tactic</strong>. This is a pattern documented across fascist movements throughout history.</p>
+      <ul style="margin-left: 1.2rem; margin-bottom: 12px;">
+        <li><strong style="color: var(--text);">Fraudulent Elections</strong> — One of Lawrence Britt's 14 characteristics of fascism</li>
+        <li><strong style="color: var(--text);">Undermining Democratic Norms</strong> — Central to all scholarly definitions of fascism</li>
+        <li><strong style="color: var(--text);">Pre-emptive Fraud Claims</strong> — "The big lie in advance" (Timothy Snyder)</li>
+        <li><strong style="color: var(--text);">No Consequences = Escalation</strong> — Authoritarian consolidation pattern</li>
+      </ul>
+      <p style="margin: 0;"><a href="/fascism" style="color: var(--red-bright); text-decoration: underline; font-weight: 600;">Read Full Analysis: Path to Fascism</a></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="No Consequences.<br>Escalation."
+    description="Without accountability for the 2020 coup attempt, Trump was emboldened to go further. In 2026, he's not waiting to lose — he's rigging elections before votes are cast."
+    linkText="Continue: Active Rigging 2026 →"
+    linkHref="/election-rigging/rigging-2026"
+  />
+
+  <PageNavigation
+    prev={{ label: 'The Coup Attempt', href: '/election-rigging/the-coup-attempt' }}
+    next={{ label: 'Active Rigging 2026', href: '/election-rigging/rigging-2026' }}
+    currentIndex={1}
+    totalPages={3}
+  />
+
+</ResearchLayout>

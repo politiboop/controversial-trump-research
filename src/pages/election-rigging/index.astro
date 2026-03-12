@@ -1,0 +1,265 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import NavigationGrid from '../../components/navigation/NavigationGrid.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+
+const electionTabs = [
+  { label: 'Overview', href: '/election-rigging' },
+  { label: 'The Coup Attempt', href: '/election-rigging/the-coup-attempt' },
+  { label: '2024', href: '/election-rigging/2024' },
+  { label: 'Active Rigging 2026', href: '/election-rigging/rigging-2026' },
+];
+
+const tickerItems = [
+  "91 Criminal Charges Filed (Election-Related Conduct)",
+  "60+ Court Cases Rejected Trump's Fraud Claims",
+  "7 States Where Trump Organized Fake Electors",
+  "700 Boxes of 2020 Ballots Seized by FBI (Jan 2026)",
+  "17 Inspector Generals Fired (Ruled Unlawful)",
+  "15 States Targeted for 'Nationalized Voting'",
+  "23+ States Sued by DOJ for Voter Rolls",
+  "DNI Illegally Present at FBI Raid of Election Office",
+];
+
+const subpageCards = [
+  {
+    icon: '🗳️',
+    title: 'The Coup Attempt (2020)',
+    description: 'Fake electors in 7 states. Pressured Pence. Incited January 6 attack. 91 criminal charges filed. The full documented timeline of Trump\'s attempt to overturn the 2020 election.',
+    href: '/election-rigging/the-coup-attempt',
+    tag: '91 Charges',
+  },
+  {
+    icon: '⚠️',
+    title: '2024: No Accountability',
+    description: 'Pre-emptive fraud claims throughout campaign. Won election — fraud claims stopped immediately. No accountability for 2020 emboldened escalation.',
+    href: '/election-rigging/2024',
+    tag: 'No Consequences',
+  },
+  {
+    icon: '🚨',
+    title: 'Active Rigging 2026',
+    description: 'Rigging elections before votes are cast. FBI raids election offices. DNI seizes voting machines. Calls to "nationalize voting." Federal takeover of state elections.',
+    href: '/election-rigging/rigging-2026',
+    tag: 'Happening Now',
+  },
+];
+---
+
+<ResearchLayout title="Election Rigging: A Documented Pattern" description="Comprehensive documentation of Trump's attempts to overturn, control, and rig elections - from the 2020 coup attempt to the 2026 midterm interference happening now.">
+
+  <SeriesNav tabs={electionTabs} currentPath="/election-rigging" />
+
+  <!-- ACTIVE RIGGING ALERT -->
+  <ColoredSection background="#1a0505" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="ACTIVE: Trump Rigging 2026 Midterm Elections" variant="red">
+      <p style="font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 12px;"><strong style="color: var(--text);">Trump is actively attempting to rig the 2026 midterm elections through:</strong></p>
+      <ul style="margin-left: 1.2rem; margin-bottom: 12px;">
+        <li><strong style="color: var(--text);">Conditional acceptance:</strong> Will only accept 2026 midterm results &quot;if they are honest&quot; - if not, &quot;something else has to happen&quot;</li>
+        <li><strong style="color: var(--text);">Voter intimidation:</strong> Bannon calls for ICE to &quot;surround the polls&quot;; White House refuses to rule it out (illegal under federal law)</li>
+        <li><strong style="color: var(--text);">Emergency powers:</strong> Trump allies pushing to invoke emergency powers ahead of midterms — send federal agents to polls, seize state election infrastructure, override state laws (March 2026)</li>
+        <li><strong style="color: var(--text);">Seizing voting machines:</strong> Gabbard's DNI illegally seized Puerto Rico machines (May 2025); FBI raided Georgia and seized 700 boxes of 2020 ballots (Jan 2026)</li>
+        <li><strong style="color: var(--text);">Gabbard coordination:</strong> DNI personally called Trump during Georgia raid, illegally coordinated both operations</li>
+        <li><strong style="color: var(--text);">Unconstitutional takeover:</strong> Publicly called to &quot;nationalize voting&quot; in 15 states (federal takeover of state elections)</li>
+        <li><strong style="color: var(--text);">Bypass Congress:</strong> Threatened executive order to mandate voter ID &quot;whether approved by Congress or not&quot; - a federal judge already struck down his previous election EO as unconstitutional</li>
+        <li><strong style="color: var(--text);">Installing loyalists</strong> at FBI and DOJ to coordinate raids and intimidation</li>
+        <li><strong style="color: var(--text);">Purging oversight:</strong> Fired 17 IGs (ruled unlawful) to remove accountability mechanisms</li>
+      </ul>
+      <p style="font-size: 15px; color: var(--red-bright); font-weight: 700; margin: 0;"><strong>This is election rigging happening in real-time.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <Masthead
+    eyebrow="Documented Pattern · Three Elections · Escalating Threat"
+    title="ELECTION RIGGING"
+    titleHighlight="RIGGING"
+    subtitle="From Attempted Coup to Federal Takeover: Trump's War on Democratic Elections"
+    date="Last Updated: March 4, 2026"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="This page documents proven actions, direct statements, and ongoing attempts by Donald Trump to overturn, control, and rig American elections. Everything here is sourced from court documents, criminal indictments, witness testimony, recordings, or Trump's own words. This is not speculation. This is a factual timeline showing an escalating pattern across three elections."
+    citation="Evidence-Based Documentation"
+  />
+
+  <!-- KEY STATISTICS -->
+  <StatGrid>
+    <StatCard target={91} label="Criminal charges filed (election-related conduct)" />
+    <StatCard target={60} suffix="+" label="Court cases rejected Trump's fraud claims" />
+    <StatCard target={7} label="States where Trump organized fake electors" />
+    <StatCard target={700} label="Boxes of 2020 ballots seized by FBI (Jan 2026)" />
+    <StatCard target={17} label="Inspector Generals fired (ruled unlawful)" />
+    <StatCard target={15} label="States targeted for &quot;nationalized voting&quot;" />
+  </StatGrid>
+
+  <!-- THE ESCALATION -->
+  <SectionDivider label="The Escalation" />
+  <SectionHeader
+    eyebrow="Three Elections · One Pattern"
+    title="An Escalating<br>Pattern"
+    introText="From contesting results after losing, to pre-emptive fraud claims, to seizing control of elections before votes are cast."
+  />
+
+  <NavigationGrid cards={subpageCards} />
+
+  <!-- WHY THIS MATTERS -->
+  <SectionDivider label="Why This Matters" />
+
+  <ConsequencesGrid eyebrow="Immediate Stakes" title="What's at Risk<br>Right Now">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="01"
+        title="2026 Midterms at Risk"
+        description="If Trump succeeds in federalizing control over elections, intimidating state officials, and weaponizing the FBI to raid and seize election materials, the midterms will not be free and fair."
+      />
+      <ConsequenceItem
+        number="02"
+        title="No Congressional Oversight"
+        description="Without fair midterms, there will be no congressional oversight. No investigations. No accountability. Trump will have unchecked power for the remainder of his term."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="03"
+        title="Precedent for Permanent Control"
+        description="If Trump successfully rigs the 2026 midterms, the precedent is set for permanent election control. 2028 presidential election will be under federal control Trump established."
+      />
+      <ConsequenceItem
+        number="04"
+        title="Democracy in Name Only"
+        description="Elections happen, but outcomes are predetermined. State officials who resist face FBI raids, DOJ lawsuits, presidential attacks. Election results depend on who Trump puts in charge."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="How Democracies Die" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Not through dramatic coups, but through gradual capture of election systems disguised as "election security" and "fraud prevention."</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Historical warning signs:</strong> Every country that lost democracy saw these patterns — leader claims elections are rigged when they lose, attempts to overturn results, attacks independent judiciary, weaponizes law enforcement, and ultimately takes control of election systems. Trump's actions check every single box.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- What Can Be Done -->
+  <SectionDivider label="Take Action" />
+  <SectionHeader
+    eyebrow="What Can Be Done"
+    title="Defend<br>Democracy"
+    introText="History will judge which path we chose. And history will know we saw it coming."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📢"
+      title="Stay Informed"
+      body="Follow election protection organizations like Protect Democracy, Fair Fight, and state-level election integrity groups. Knowledge is the first line of defense."
+      tag="Awareness"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Contact Representatives"
+      body="Demand congressional action to stop federal election takeover attempts. Support legislation protecting state control of elections. Your representatives need to hear from you."
+      tag="Action"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="🛡️"
+      title="Support Election Officials"
+      body="Stand with state and local election officials resisting federal pressure. They are on the front lines defending democracy against federal takeover."
+      tag="Solidarity"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="📋"
+      title="Document and Share"
+      body="Make others aware of what is happening. Share evidence, not speculation. Use credible sources. Support organizations like ACLU, Brennan Center, and state attorney generals."
+      tag="Spread the Word"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="🗳️"
+      title="Vote"
+      body="While we still can, participation in elections remains crucial. <strong>High turnout makes rigging harder.</strong> Every ballot cast is an act of democratic resistance."
+      tag="Essential"
+      variant="green"
+    />
+  </CategoryGrid>
+
+  <!-- RELATED DOCUMENTATION -->
+  <SectionDivider label="Related Documentation" />
+  <SectionHeader
+    eyebrow="Explore Further"
+    title="Related<br>Research"
+    introText="Connected documentation across our research pages"
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="Fulton County Ballot Seizure"
+      body="Complete documentation of the Georgia FBI raid, Gabbard's illegal involvement, and Trump's personal coordination with agents. <strong><a href='/controversy?id=fulton-county-ballot-seizure' style='color: var(--red-bright); text-decoration: underline;'>Full Documentation</a></strong>"
+      tag="Jan 2026"
+      variant="red"
+    />
+    <CategoryCard
+      icon="📄"
+      title="Trump Calls to &quot;Nationalize Voting&quot;"
+      body="Full controversy entry with all sources documenting Trump's call to federally take over elections in 15 states. <strong><a href='/controversy?id=trump-nationalize-voting-2026' style='color: var(--red-bright); text-decoration: underline;'>Full Entry</a></strong>"
+      tag="Feb 2026"
+      variant="red"
+    />
+    <CategoryCard
+      icon="⚔️"
+      title="January 6 Capitol Attack"
+      body="Full documentation of the insurrection, including Trump's role, the 187-minute gap, and aftermath. <strong><a href='/controversy?id=january-6-capitol-attack' style='color: var(--red-bright); text-decoration: underline;'>Full Documentation</a></strong>"
+      tag="Jan 2021"
+      variant="red"
+    />
+    <CategoryCard
+      icon="⚠️"
+      title="Path to Fascism"
+      body="Why experts warn Trump exhibits fascist characteristics. Election rigging is one of Britt's 14 fascism criteria. <strong><a href='/fascism' style='color: var(--red-bright); text-decoration: underline;'>Full Analysis</a></strong>"
+      tag="Scholarly Analysis"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="🔒"
+      title="Attacking Democracy"
+      body="How Trump is dismantling democratic institutions including oversight, judiciary, and election integrity. <strong><a href='/attacking-democracy' style='color: var(--red-bright); text-decoration: underline;'>Full Documentation</a></strong>"
+      tag="Ongoing"
+      variant="amber"
+    />
+    <CategoryCard
+      icon="🗽"
+      title="All Democracy Controversies"
+      body="Browse all documented attacks on democratic institutions, election integrity, and rule of law. <strong><a href='/browse?category=democracy' style='color: var(--red-bright); text-decoration: underline;'>Browse All</a></strong>"
+      tag="Full Collection"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="The Evidence<br>Is Clear."
+    description="91 criminal charges. 60+ court cases lost. 7 states with fake electors. An FBI raid on an election office with the DNI present. This is not opinion — this is a documented pattern of election rigging."
+    linkText="Begin: The Coup Attempt →"
+    linkHref="/election-rigging/the-coup-attempt"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,228 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import SeriesNav from '../../components/navigation/SeriesNav.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+import PageNavigation from '../../components/navigation/PageNavigation.astro';
+
+const electionTabs = [
+  { label: 'Overview', href: '/election-rigging' },
+  { label: 'The Coup Attempt', href: '/election-rigging/the-coup-attempt' },
+  { label: '2024', href: '/election-rigging/2024' },
+  { label: 'Active Rigging 2026', href: '/election-rigging/rigging-2026' },
+];
+
+const tickerItems = [
+  "91 Criminal Charges Filed (Election-Related Conduct)",
+  "60+ Court Cases Rejected Trump's Fraud Claims",
+  "7 States Where Trump Organized Fake Electors",
+  "Fake Elector Certificates Sent to Congress",
+  "187 Minutes Trump Refused to Call Off the Mob",
+  "845 Pages in January 6 Committee Report",
+  "10 Republicans Voted to Impeach",
+  "Trump's Own AG Called Fraud Claims 'Bullshit'",
+];
+---
+
+<ResearchLayout title="The Coup Attempt (2020) - Election Rigging" description="After losing the 2020 election, Trump attempted to overturn the results through fake electors, pressure on Pence, and ultimately violence at the Capitol. 91 criminal charges filed.">
+
+  <SeriesNav tabs={electionTabs} currentPath="/election-rigging/the-coup-attempt" />
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Election Rigging', href: '/election-rigging' },
+    { label: 'The Coup Attempt' }
+  ]} />
+
+  <Masthead
+    eyebrow="Part 1 of 3 · Election Rigging"
+    title="THE COUP ATTEMPT"
+    titleHighlight="COUP"
+    subtitle="After losing, Trump attempted to overturn the 2020 election through fraud, pressure, and violence"
+    date="Source: Court Documents · Criminal Indictments · Witness Testimony · Recordings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="After losing the 2020 election, Trump attempted to overturn the results through a multi-pronged effort involving fake electors, pressure on state officials, attempted corruption of the Justice Department, and ultimately violence at the Capitol. Trump has been criminally indicted for these actions with extensive evidence documented in court filings."
+    citation="Evidence-Based Documentation"
+  />
+
+  <!-- What Trump Said - 2020 -->
+  <VoicesSection
+    eyebrow="2020 · What Trump Said"
+    title="Trump's Own<br>Words"
+    introText="Trump's rhetoric laying groundwork for coup attempt and inciting violence"
+  >
+    <VoiceCard
+      quote="Frankly, we did win this election... This is a fraud on the American public. This is an embarrassment to our country."
+      attribution="Donald Trump — November 3-4, 2020 (Election Night) · Declared victory while millions of votes remained uncounted. Began false &quot;stolen election&quot; narrative. · <a href='https://www.cnn.com/2020/11/04/politics/trump-election-night-speech/index.html' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: CNN</a>"
+    />
+    <VoiceCard
+      quote="So look. All I want to do is this. I just want to find 11,780 votes, which is one more than we have. Because we won the state."
+      attribution="Donald Trump — January 2, 2021 · Pressuring Georgia Secretary of State Brad Raffensperger to &quot;find&quot; votes. Full audio recording confirms pressure campaign. · <a href='https://www.washingtonpost.com/politics/trump-raffensperger-call-georgia-vote/2021/01/03/d45acb92-4dc4-11eb-bda4-615aaefd0555_story.html' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: Washington Post (full recording)</a>"
+    />
+    <VoiceCard
+      quote="We fight like hell. And if you don't fight like hell, you're not going to have a country anymore. We're going to walk down to the Capitol."
+      attribution="Donald Trump — January 6, 2021 · Speech to crowd before Capitol attack. Directed mob to Capitol to stop electoral certification. · <a href='https://www.npr.org/2021/02/10/966396848/read-trumps-jan-6-speech-a-key-part-of-impeachment-trial' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: NPR (full transcript)</a>"
+    />
+    <VoiceCard
+      quote="Mike Pence didn't have the courage to do what should have been done to protect our Country and our Constitution."
+      attribution="Donald Trump — January 6, 2021 (During Attack) · Attacked Pence on Twitter while mob was storming Capitol. Rioters chanted &quot;Hang Mike Pence&quot; after this tweet. Pence evacuated by Secret Service. · <a href='https://www.politico.com/news/2021/01/06/trump-tweet-pence-rioters-455285' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: Politico</a>"
+    />
+    <VoiceCard
+      quote="We love you, you're very special... I know how you feel. But go home and go home in peace."
+      attribution="Donald Trump — January 6, 2021 (Video to Rioters) · After 187 minutes of refusing to call off the mob, Trump finally released video praising the rioters who attacked the Capitol. · <a href='https://www.bbc.com/news/world-us-canada-55580466' target='_blank' rel='noreferrer' style='color: var(--red);'>Source: BBC News</a>"
+    />
+  </VoicesSection>
+
+  <!-- What Trump Did - 2020 -->
+  <TimelineSection title="What Trump<br>Did" subtitle="Concrete actions to overturn 2020 election">
+    <TimelineItem
+      date="NOV-DEC 2020"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="The Fake Electors Scheme"
+      description="Trump and co-conspirators organized fake slates of electors in 7 states Biden won: Arizona, Georgia, Michigan, Nevada, New Mexico, Pennsylvania, and Wisconsin. False elector certificates were created and signed. Fake electors met in state capitols on December 14, 2020. Certificates sent to Congress. Text messages, emails, and testimony document the coordination. Legal status: Trump and 18 others indicted in Georgia RICO case. Multiple fake electors have pleaded guilty."
+    />
+    <TimelineItem
+      date="DEC 2020-JAN 2021"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="Pressure Campaign on Vice President Mike Pence"
+      description="Trump pressured Pence to refuse to certify electoral votes on January 6. Trump told Pence 'You're too honest' when Pence refused. Tweeted attack on Pence while mob was storming Capitol. Rioters chanted 'Hang Mike Pence.' Pence evacuated by Secret Service. Trump showed no concern for Pence's safety. Central to Jack Smith's federal indictment."
+    />
+    <TimelineItem
+      date="JAN 6, 2021"
+      badge="SEVERE"
+      badgeType="catastrophic"
+      title="The Attack on the Capitol"
+      description="Trump directed mob to Capitol. Mob breached Capitol for first time since 1814. 5 people died, 140+ police officers injured. Members of Congress evacuated. Trump watched on TV for 187 minutes, refused to call off mob. Eventually told rioters 'We love you, you're very special.' Impeached for 'incitement of insurrection' (10 Republicans voted to impeach). Criminally indicted by Jack Smith."
+    />
+    <TimelineItem
+      date="POST-ELECTION 2020"
+      title="Filed 60+ Lawsuits to Overturn Election"
+      description="Trump and allies filed over 60 lawsuits in state and federal courts challenging election results. Result: Lost virtually every case, including before Trump-appointed judges."
+    />
+  </TimelineSection>
+
+  <!-- Legal/Court Response - 2020 -->
+  <SectionDivider label="Legal Response" />
+  <SectionHeader
+    eyebrow="2020 · Courts &amp; Law"
+    title="Legal<br>Accountability"
+    introText="How courts and the legal system responded to Trump's coup attempt"
+  />
+
+  <StatGrid>
+    <StatCard target={91} label="Criminal Charges Filed" />
+    <StatCard target={4} label="Federal Felony Counts (Jack Smith)" />
+    <StatCard target={13} label="Felony Counts (Georgia RICO)" />
+    <StatCard target={60} suffix="+" label="Election Lawsuits Rejected" />
+    <StatCard target={2} label="Impeachments" />
+    <StatCard target={845} label="Pages in J6 Committee Report" />
+  </StatGrid>
+
+  <TimelineSection title="Court &amp;<br>Legal Actions" subtitle="2020 legal proceedings">
+    <TimelineItem
+      date="AUG 2023"
+      badge="INDICTED"
+      badgeType="catastrophic"
+      title="Federal Indictment by Special Counsel Jack Smith"
+      description="4 felony counts: Conspiracy to defraud the United States, conspiracy to obstruct an official proceeding, obstruction of and attempt to obstruct an official proceeding, conspiracy against rights. Indictment details fake elector scheme, pressure on Pence, January 6. Status: Trump used presidential powers to have case dismissed after winning 2024 election."
+    />
+    <TimelineItem
+      date="AUG 2023"
+      badge="INDICTED"
+      badgeType="catastrophic"
+      title="Georgia RICO Indictment"
+      description="13 felony counts in Georgia for election interference. 18 co-defendants indicted in conspiracy. Includes 'Find 11,780 votes' phone call and fake electors scheme. Multiple defendants have pleaded guilty and are cooperating. Status: Case ongoing but delayed."
+    />
+    <TimelineItem
+      date="JAN 2021"
+      badge="IMPEACHED"
+      badgeType="catastrophic"
+      title="Second Impeachment"
+      description="Impeached by House for 'incitement of insurrection.' 232-197 vote (10 Republicans voted yes). Acquitted by Senate 57-43 (fell short of 67 needed). 7 Republican senators voted to convict. Mitch McConnell: 'There is no question that President Trump is practically and morally responsible for provoking the events of that day.'"
+    />
+    <TimelineItem
+      date="DEC 2022"
+      title="January 6 Committee Findings"
+      description="845-page final report with extensive evidence. Testimony from Trump's own staff and officials. Documented Trump's 187 minutes of inaction during attack. Criminal referrals to DOJ. Committee conclusion: Trump engaged in 'multi-part conspiracy' to overturn election."
+    />
+    <TimelineItem
+      date="NOV-DEC 2020"
+      title="60+ Court Cases: Trump Lost Virtually Every One"
+      description="Notable judicial quotes — Pennsylvania federal judge: 'Charges require specific allegations and proof. We have neither here.' Wisconsin federal judge: 'This Court has allowed plaintiff the chance to make his case and he has lost on the merits.' Federal appeals court: 'Free, fair elections are the lifeblood of our democracy. Charges of unfairness are serious. But calling an election unfair does not make it so.'"
+    />
+  </TimelineSection>
+
+  <!-- Expert Assessment - 2020 -->
+  <VoicesSection
+    eyebrow="2020 · Expert Assessment"
+    title="What Experts<br>Said"
+    introText="What experts said about Trump's 2020 coup attempt"
+  >
+    <VoiceCard
+      quote="The 2020 election in Georgia was not stolen. We counted the votes three times. Every allegation has been investigated and disproven. These continued attacks undermine confidence in our democratic process."
+      attribution="Brad Raffensperger — Georgia Secretary of State (Republican) · November 2020 and repeatedly since · Republican election official in swing state, directly contradicts Trump's claims"
+    />
+    <VoiceCard
+      quote="The November 3rd election was the most secure in American history... There is no evidence that any voting system deleted or lost votes, changed votes, or was in any way compromised."
+      attribution="Chris Krebs — Former Director of CISA, Fired by Trump · November 2020 · Trump's own cybersecurity chief confirmed election integrity, was fired for telling the truth"
+    />
+    <VoiceCard
+      quote="This was an attempted coup. Trump tried to overturn a democratic election through pressure, fraud, and ultimately violence. It's the most serious threat to American democracy since the Civil War."
+      attribution="Laurence Tribe — Harvard Law Professor, Constitutional Scholar · January 2021"
+    />
+    <VoiceCard
+      quote="We realized from the beginning it was just bullshit... There was never an indication of interest in what the actual facts were."
+      attribution="William Barr — Former Attorney General under Trump · June 2022 (January 6 Committee testimony) · Trump's own AG confirmed fraud claims were false"
+    />
+    <VoiceCard
+      quote="This is a Reichstag moment. The gospel of the F&uuml;hrer."
+      attribution="Mark Milley — Former Chairman of the Joint Chiefs of Staff · January 6, 2021 (reported in Bob Woodward's &quot;Peril&quot;) · Highest-ranking military officer compared January 6 to Nazi tactics"
+    />
+    <VoiceCard
+      quote="Trump's incitement of the invasion of the Capitol on January 6, 2021 removes my objection to the fascist label. His open encouragement of civic violence to overturn an election crosses a red line."
+      attribution="Robert Paxton — Columbia University, World's Leading Fascism Expert · January 11, 2021 · Leading fascism scholar who resisted the term finally applied it after January 6"
+    />
+  </VoicesSection>
+
+  <!-- 2020 Bottom Line -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="🔴" title="The 2020 Bottom Line" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;"><strong style="color: var(--text);">Trump attempted a coup.</strong> When the voters rejected him, when state officials refused to change results, when courts threw out his cases, when his own Vice President refused to go along — Trump incited a violent mob to attack the Capitol to stop the peaceful transfer of power.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">He has been criminally indicted for these actions. The evidence is overwhelming. This is not opinion — this is documented fact.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CTASection
+    title="The Coup<br>Failed."
+    description="91 criminal charges. 60+ lawsuits lost. Impeached for incitement. But without accountability, the pattern continued — and escalated."
+    linkText="Continue: 2024 →"
+    linkHref="/election-rigging/2024"
+  />
+
+  <PageNavigation
+    prev={{ label: 'Overview', href: '/election-rigging' }}
+    next={{ label: '2024', href: '/election-rigging/2024' }}
+    currentIndex={0}
+    totalPages={3}
+  />
+
+</ResearchLayout>
