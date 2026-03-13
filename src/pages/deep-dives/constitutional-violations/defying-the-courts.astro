@@ -1,0 +1,355 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "57 of 165 Court Orders Defied — 1 in Every 3",
+  "9-0 SCOTUS Ruling Defied in Abrego Garcia Case",
+  "Administration Held in Civil Contempt at Least Twice",
+  "ICE Violated 96 Court Orders in 74 Cases in Minnesota Alone",
+  "Every Court to Rule on Birthright Citizenship EO Blocked It",
+  "4 District Courts + 2 Appeals Courts Struck Down Birthright EO",
+  "14th Amendment: 'All Persons Born in the United States Are Citizens'",
+  "First Administration in History to Defy a Unanimous SCOTUS Order",
+  "SCOTUS Agreed to Hear Birthright Citizenship Case",
+  "Civil Contempt: Courts Found Administration Willfully Noncompliant",
+];
+---
+
+<ResearchLayout title="Defying the Courts — Constitutional Violations Deep Dive" description="57 of 165 court orders defied. A unanimous Supreme Court ruling ignored. The administration held in civil contempt. The most direct challenge to judicial authority in American history.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Constitution', href: '/deep-dives/constitutional-violations' },
+    { label: 'Defying the Courts' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Judicial Authority"
+    title="DEFYING THE <span class='word-red'>COURTS</span>"
+    subtitle="When the executive branch simply refuses to obey the judiciary."
+    date="Sources: Federal Court Orders · Supreme Court Opinions · Contempt Citations · ICE Compliance Records · Congressional Oversight Reports"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The Government has not complied with the Court's order and the Supreme Court's decision. The Court is gravely concerned about the Government's failure to comply."
+    citation="Judge Xinis — U.S. District Court, D. Maryland, Abrego Garcia case, 2025"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={57} label="Court orders defied in the second term — out of 165 total orders issued" />
+    <StatCard target={9} suffix="-0" label="The unanimous SCOTUS vote in Abrego Garcia that the administration defied" />
+    <StatCard target={96} label="Court orders violated by ICE in 74 cases in Minnesota alone" />
+    <StatCard target={6} label="Courts (4 district + 2 appeals) that blocked the birthright citizenship EO" />
+  </StatGrid>
+
+  <!-- THE ABREGO GARCIA CASE -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Supreme Court"
+    title="The 9-0<br>Ruling"
+    introText="For the first time in American history, an administration defied a unanimous Supreme Court order. The case of Kilmar Abrego Garcia — a man wrongfully deported to a Salvadoran mega-prison — became the defining constitutional confrontation of the second term."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👤"
+      title="Who Is Abrego Garcia?"
+      body="Kilmar Abrego Garcia is a <strong>Salvadoran national</strong> who had been living in the United States with <strong>legal protections</strong>. A federal judge had previously ruled that he could not be deported to El Salvador because he faced <strong>likely persecution or torture</strong> there.<br><br>Despite this existing court protection, the Trump administration <strong>deported him anyway</strong> — sending him to El Salvador's CECOT mega-prison, a facility known for extreme conditions and indefinite detention without trial."
+      tag="Wrongfully Deported"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Supreme Court Rules 9-0"
+      body="The case reached the Supreme Court, which ruled <strong>unanimously — 9 to 0</strong> — that the administration must <strong>&quot;facilitate&quot;</strong> Abrego Garcia's return to the United States.<br><br>This was not a split decision along ideological lines. All three of Trump's own Supreme Court appointees — <strong>Gorsuch, Kavanaugh, and Barrett</strong> — joined the order. The Court's language was unambiguous: the government must take affirmative steps to bring him back."
+      tag="All 9 Justices"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="The Administration's Defiance"
+      body="Rather than comply, the administration argued that <strong>merely asking El Salvador</strong> to return Abrego Garcia constituted &quot;facilitating&quot; his return — even when El Salvador refused.<br><br>The district court judge found this interpretation <strong>noncompliant</strong> with both her order and the Supreme Court's ruling. The administration's position effectively meant: <strong>we will ask, but we will not actually ensure compliance</strong> — rendering the Court's order meaningless."
+      tag="Defiance"
+    />
+    <CategoryCard
+      icon="📜"
+      title="The Constitutional Stakes"
+      body="The principle at stake is <strong>foundational</strong>: can the executive branch simply ignore the Supreme Court?<br><br><strong>Marbury v. Madison (1803)</strong> established that it is the judiciary's role to say what the law is. <strong>Cooper v. Aaron (1958)</strong> established that the Supreme Court's interpretation of the Constitution is supreme over state officials. No administration has ever openly defied a unanimous SCOTUS order and maintained that defiance — <strong>until now</strong>."
+      tag="Marbury v. Madison"
+    />
+  </CategoryGrid>
+
+  <!-- THE BROADER PATTERN -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Numbers"
+    title="1 in 3<br>Orders Defied"
+    introText="Abrego Garcia was not an isolated incident. Across the second term, the administration defied court orders at an unprecedented rate — turning noncompliance from an aberration into a pattern."
+  />
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="📊" title="The Defiance Rate" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Of <strong style="color: var(--text);">165 court orders</strong> issued to the Trump administration in its second term, <strong style="color: var(--text);">57 were defied</strong> — a rate of <strong style="color: var(--text);">1 in every 3 orders</strong>. No previous administration in American history has approached this rate of noncompliance with judicial authority. The orders came from judges appointed by presidents of both parties, including Trump's own appointees.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏢"
+      title="ICE: Systematic Noncompliance"
+      body="Immigration and Customs Enforcement became the most prolific violator of court orders in the administration:<br><br>• <strong>96 court orders violated</strong> in 74 cases in Minnesota alone<br>• Judges reported ICE agents <strong>ignoring stays of removal</strong> — deporting people while their cases were still pending<br>• Multiple judges found ICE in <strong>contempt of court</strong><br>• Attorneys reported being unable to reach clients who had been deported <strong>despite active court orders</strong> preventing removal<br><br>The pattern was not accidental. It was systematic."
+      tag="96 Orders Violated"
+    />
+    <CategoryCard
+      icon="⚠️"
+      title="Civil Contempt"
+      body="The Trump administration was <strong>held in civil contempt of court at least twice</strong> — a finding that the government <strong>willfully failed to comply</strong> with court orders.<br><br>Civil contempt is not a casual finding. Courts use it only when they determine that a party has the <strong>ability to comply</strong> with an order and has <strong>chosen not to</strong>. It is the judiciary's strongest tool short of criminal contempt — and it was deployed against a sitting administration.<br><br>No previous administration has been held in civil contempt under comparable circumstances."
+      tag="Willful Noncompliance"
+    />
+    <CategoryCard
+      icon="📋"
+      title="The Administration's Position"
+      body="The administration's legal arguments followed a pattern:<br><br>• <strong>&quot;Courts are overstepping&quot;</strong> — claiming judges lack authority over immigration enforcement<br>• <strong>&quot;Judges are activist&quot;</strong> — characterizing adverse rulings as political<br>• <strong>&quot;We complied in good faith&quot;</strong> — redefining compliance to mean making minimal effort<br>• <strong>&quot;National security requires flexibility&quot;</strong> — invoking security to override judicial orders<br><br>Courts repeatedly rejected these arguments, finding them <strong>inconsistent with the constitutional framework</strong> of separated powers."
+      tag="The Arguments"
+    />
+  </CategoryGrid>
+
+  <!-- BIRTHRIGHT CITIZENSHIP -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The 14th Amendment"
+    title="Birthright<br>Citizenship"
+    introText="The administration issued an executive order attempting to end birthright citizenship — despite the 14th Amendment's plain text. Every court to consider the order blocked it."
+  />
+
+  <VoicesSection
+    eyebrow="The Constitution"
+    title="The 14th<br>Amendment"
+    introText="The constitutional text is unambiguous."
+  >
+    <VoiceCard
+      quote="All persons born or naturalized in the United States, and subject to the jurisdiction thereof, are citizens of the United States and of the State wherein they reside."
+      name="14th Amendment, Section 1"
+      role="United States Constitution"
+      detail="Ratified July 9, 1868"
+      context="This clause has been interpreted consistently for over 150 years. The Supreme Court affirmed it in United States v. Wong Kim Ark (1898)."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📝"
+      title="The Executive Order"
+      body="In January 2025, Trump signed an executive order declaring that children born in the United States to undocumented parents would <strong>no longer be considered U.S. citizens</strong>.<br><br>The order directly contradicted the <strong>plain text of the 14th Amendment</strong> and 150+ years of settled constitutional law, including the Supreme Court's ruling in <strong>United States v. Wong Kim Ark (1898)</strong>."
+      tag="January 2025"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="Every Court Blocked It"
+      body="The executive order was challenged immediately and blocked by <strong>every court to consider it</strong>:<br><br>• <strong>4 federal district courts</strong> issued injunctions<br>• <strong>2 federal appeals courts</strong> upheld the injunctions<br>• Judges appointed by presidents of <strong>both parties</strong> agreed<br>• One judge called the order one with <strong>&quot;no plausible constitutional defense&quot;</strong><br><br>The judicial consensus was unanimous: the president cannot override the Constitution by executive order."
+      tag="6 Courts Agreed"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Supreme Court Takes the Case"
+      body="Despite the unanimous lower court rulings, the Supreme Court <strong>agreed to hear the case</strong> — a decision that itself generated controversy.<br><br>Constitutional scholars noted that the Court typically takes cases where there is a <strong>circuit split</strong> (disagreement among lower courts). Here, every court agreed. The decision to take the case was seen by some as <strong>an extraordinary intervention</strong> in a matter of settled constitutional law."
+      tag="Pending"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications for defying court orders. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Courts are overstepping — judges can't run immigration policy."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Courts are not "running" immigration policy.</strong> They are doing exactly what the Constitution requires: reviewing whether executive actions comply with the law. This is the principle of judicial review, established in <strong>Marbury v. Madison (1803)</strong> — the foundation of American constitutional law for over 220 years.</p>
+          <p>The courts blocked specific actions that violated <strong>existing statutes, due process requirements, or constitutional provisions</strong>. They did not order the administration to adopt any particular immigration policy. The distinction between "you can't do it this way" and "you must do it our way" is fundamental — and the courts stayed on the correct side of that line.</p>
+          <p>Every administration in history — including Obama's, which lost major immigration cases — has complied with adverse court orders while pursuing appeals. <strong>Compliance is not optional</strong> while an appeal is pending.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"These are all Obama and Biden judges — it's political."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Judges appointed by five different presidents</strong> — including Trump himself — have ruled against the administration's constitutional violations.</p>
+          <p>A <strong>Trump-appointed judge</strong> struck down the AP ban. <strong>All three Trump Supreme Court appointees</strong> joined the 9-0 Abrego Garcia ruling. <strong>Bush-appointed judges</strong> blocked several immigration actions. The claim that adverse rulings are "political" requires believing that Trump's own appointees are conspiring against him.</p>
+          <p>Federal judges serve <strong>life tenure</strong> precisely so they can rule without political pressure. The system is working exactly as the Founders designed it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"We complied with the Abrego Garcia ruling — we asked El Salvador."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The Supreme Court's unanimous order used the word <strong>"facilitate"</strong> — not "request." The district court interpreted this to require <strong>affirmative steps</strong> to bring Abrego Garcia back, not merely a diplomatic inquiry.</p>
+          <p>The administration's interpretation — that asking El Salvador and accepting "no" for an answer constitutes compliance — would <strong>render the Court's order meaningless</strong>. Any government could evade any court order by outsourcing noncompliance to a foreign government.</p>
+          <p>The judge who originally ordered Abrego Garcia's protection had done so because he faced <strong>likely persecution or torture</strong> in El Salvador. He was deported there anyway, to a mega-prison with no trial and no release date. The administration then argued it had done enough by asking for him back. <strong>The court disagreed.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <HighlightBar text="57 court orders defied. A unanimous Supreme Court ruling ignored. The administration held in civil contempt. This is not a policy disagreement — it is a constitutional crisis." />
+
+  <CTASection
+    title="The Courts<br>Have Spoken."
+    description="57 defied orders. A 9-0 Supreme Court ruling. Civil contempt. Judges appointed by five different presidents, including Trump's own. The judiciary has spoken — and it has been ignored."
+    linkText="← Back to Constitutional Violations"
+    linkHref="/deep-dives/constitutional-violations"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,197 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import NavigationGrid from '../../../components/navigation/NavigationGrid.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "57 Court Orders Defied in Second Term Alone",
+  "9-0 SCOTUS Ruling Defied — Abrego Garcia Case",
+  "7+ Federal Judges Found First Amendment Violations",
+  "17 Inspectors General Unlawfully Fired in One Night",
+  "First Defiance of a Unanimous Supreme Court Order",
+  "First Emoluments Litigation in 230+ Years of the Republic",
+  "First Presidential Administration Held in Civil Contempt",
+  "Judges Appointed by 5 Different Presidents Ruled Against Him",
+  "Colorado Supreme Court Found Trump Engaged in Insurrection",
+  "Every Court to Rule on Birthright Citizenship EO Blocked It",
+];
+
+const sectionCards = [
+  {
+    icon: '⚖️',
+    title: 'Defying the Courts',
+    description: '57 of 165 court orders defied. A 9-0 Supreme Court ruling ignored. An administration held in civil contempt. The rule of law, tested to its breaking point.',
+    href: '/deep-dives/constitutional-violations/defying-the-courts',
+    tag: '1 in 3 Orders Defied',
+  },
+  {
+    icon: '📢',
+    title: 'First Amendment',
+    description: 'Law firms punished for representing the wrong clients. The AP banned from the White House. Media companies threatened by the FCC. 7+ judges found violations.',
+    href: '/deep-dives/constitutional-violations/first-amendment',
+    tag: '7+ Judges Agreed',
+  },
+  {
+    icon: '🏛️',
+    title: 'Separation of Powers',
+    description: '17 inspectors general fired unlawfully. Congressional subpoenas ignored entirely. DOGE given authority over federal agencies. The Appropriations Clause violated repeatedly.',
+    href: '/deep-dives/constitutional-violations/separation-of-powers',
+    tag: 'Every Branch Affected',
+  },
+  {
+    icon: '🔥',
+    title: 'The Insurrection Question',
+    description: 'A state supreme court found Trump engaged in insurrection after a full trial. The U.S. Supreme Court reversed on procedure — but never disputed the facts.',
+    href: '/deep-dives/constitutional-violations/the-insurrection-question',
+    tag: 'Section 3 of the 14th',
+  },
+  {
+    icon: '💰',
+    title: 'Emoluments & Corruption',
+    description: 'The first emoluments litigation in American history. Foreign governments booking Trump hotels. Two federal courts ruled broadly against him before cases were mooted.',
+    href: '/deep-dives/constitutional-violations/emoluments-and-corruption',
+    tag: 'First in 230+ Years',
+  },
+];
+---
+
+<ResearchLayout title="Constitutional Violations — Deep Dive" description="Court rulings — not opinions, not editorials — documenting Trump's violations of the Constitution. Judges appointed by five different presidents, including his own.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Constitution' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Court Record"
+    title="THE <span class='word-red'>CONSTITUTION</span>"
+    subtitle="Court rulings. Not opinions. Not editorials. Judges' rulings."
+    date="Sources: Federal Court Orders · Supreme Court Opinions · Congressional Records · Inspector General Reports · Judicial Ethics Opinions"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="I do solemnly swear that I will faithfully execute the Office of President of the United States, and will to the best of my Ability, preserve, protect and defend the Constitution of the United States."
+    citation="Article II, Section 1 — The Presidential Oath of Office"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={57} label="Court orders defied in the second term — 1 in every 3 orders issued" />
+    <StatCard target={9} suffix="-0" label="The unanimous SCOTUS ruling Trump defied in the Abrego Garcia case" />
+    <StatCard target={7} suffix="+" label="Federal judges who found First Amendment violations — from both parties" />
+    <StatCard target={17} label="Inspectors general fired unlawfully in a single night" />
+  </StatGrid>
+
+  <!-- THE EVIDENCE -->
+  <SectionHeader
+    eyebrow="The Standard of Evidence"
+    title="Court Rulings.<br>Not Opinions."
+    introText="This investigation is built primarily on judicial findings — court orders, judicial opinions, and formal rulings. Not op-eds. Not cable news commentary. Not partisan talking points. When a federal judge writes that an executive action is 'unconstitutional,' that is a legal finding with the force of law."
+  />
+
+  <VoicesSection
+    eyebrow="From the Bench"
+    title="The Judges<br>Speak"
+    introText="These are not political opponents. These are judges — including Trump's own appointees — issuing formal rulings."
+  >
+    <VoiceCard
+      quote="The Court finds this executive order unconstitutional from beginning to end."
+      name="Judge Liman"
+      role="U.S. District Judge, S.D.N.Y."
+      detail="Ruling on Susman Godfrey law firm executive order · 2025"
+      context="One of four law firm executive orders found to violate the First Amendment. The DOJ later dropped its defense of all four."
+    />
+    <VoiceCard
+      quote="The Government has not complied with the Court's order and the Supreme Court's decision."
+      name="Judge Xinis"
+      role="U.S. District Judge, D. Maryland"
+      detail="Abrego Garcia case · 2025"
+      context="After the Supreme Court unanimously ordered the administration to 'facilitate' the return of a wrongfully deported man, the administration argued that merely asking El Salvador constituted compliance."
+    />
+    <VoiceCard
+      quote="There is no plausible constitutional defense."
+      name="Judge Alsup"
+      role="U.S. District Judge, N.D. California"
+      detail="Birthright citizenship executive order · 2025"
+      context="The 14th Amendment plainly states: 'All persons born... in the United States... are citizens.' Every court to consider this EO blocked it."
+    />
+  </VoicesSection>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--blue)">
+    <AlertBanner icon="📋" title="How This Investigation Works" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Each section examines a different category of constitutional violation: <strong style="color: var(--text);">defying court orders</strong>, <strong style="color: var(--text);">First Amendment violations</strong>, <strong style="color: var(--text);">separation of powers</strong>, <strong style="color: var(--text);">the insurrection question</strong>, and <strong style="color: var(--text);">emoluments and corruption</strong>. Every claim is sourced to court rulings, judicial opinions, or official government records. The judges who issued these rulings were appointed by presidents of both parties — including Trump himself.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE BIG PICTURE -->
+  <SectionDivider label="The Big Picture" />
+  <SectionHeader
+    eyebrow="Before the Details"
+    title="The Landscape"
+    introText="Before examining specific violations, here's the pattern — across branches of government, across constitutional provisions, and across both terms."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚖️"
+      title="Court Rulings, Not Opinions"
+      body="The evidence in this investigation is primarily <strong>judicial findings</strong> — formal rulings issued by federal judges after briefing, argument, and deliberation.<br><br>• <strong>57 court orders defied</strong> in the second term<br>• <strong>All 4 law firm EOs</strong> ruled unconstitutional<br>• <strong>Every court</strong> to consider the birthright citizenship EO blocked it<br>• <strong>9-0 SCOTUS</strong> ruling defied<br><br>These are not editorial opinions. They carry the force of law."
+      tag="Judicial Findings"
+    />
+    <CategoryCard
+      icon="🔄"
+      title="Bipartisan Judges"
+      body="The judges who ruled against Trump were appointed by <strong>five different presidents</strong>:<br><br>• <strong>Clinton</strong> appointees<br>• <strong>Bush (43)</strong> appointees<br>• <strong>Obama</strong> appointees<br>• <strong>Trump</strong> appointees<br>• <strong>Biden</strong> appointees<br><br>Including Trump's own appointees striking down the AP ban and other actions. The &quot;biased judges&quot; claim requires all five presidents' appointees to be conspiring together."
+      tag="5 Presidents' Appointees"
+    />
+    <CategoryCard
+      icon="📜"
+      title="Historically Unprecedented"
+      body="Several of these constitutional confrontations have <strong>no precedent in American history</strong>:<br><br>• <strong>First defiance</strong> of a unanimous Supreme Court order<br>• <strong>First emoluments litigation</strong> in 230+ years of the Republic<br>• <strong>First administration</strong> held in civil contempt<br>• <strong>First president</strong> found by a state supreme court to have engaged in insurrection<br>• <strong>First total defiance</strong> of congressional subpoenas (zero documents for 70+ requests)<br><br>These are not partisan disputes. They are constitutional firsts."
+      tag="No Precedent"
+    />
+    <CategoryCard
+      icon="📈"
+      title="The Pattern: Escalation"
+      body="The constitutional violations follow a clear escalatory pattern across both terms:<br><br><strong>First term:</strong><br>• Emoluments litigation (unprecedented but mooted)<br>• Total defiance of congressional subpoenas<br>• Two impeachments<br><br><strong>Second term:</strong><br>• Defying 1 in 3 court orders<br>• Ignoring a unanimous SCOTUS ruling<br>• Administration held in civil contempt<br>• Mass unlawful firings<br><br>Each confrontation pushes further than the last."
+      tag="First Term → Second Term"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="57 court orders defied. A 9-0 Supreme Court ruling ignored. 7+ judges found First Amendment violations. 17 inspectors general fired unlawfully. The court record speaks for itself." />
+
+  <!-- SECTION NAVIGATION -->
+  <SectionHeader
+    eyebrow="The Investigation"
+    title="Choose a<br>Section"
+    introText="Each section examines a different category of constitutional violation — with the specific court rulings, the judges who issued them, and the constitutional provisions at stake."
+  />
+
+  <NavigationGrid cards={sectionCards} />
+
+  <CTASection
+    title="The Court Record<br>Speaks for Itself."
+    description="Court orders. Judicial opinions. Formal rulings from judges appointed by five different presidents. The Constitution is not a suggestion — and the judges have spoken."
+    linkText="← Back to Deep Dives"
+    linkHref="/deep-dives"
+  />
+
+</ResearchLayout>

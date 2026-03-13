@@ -1,0 +1,358 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "First Emoluments Litigation in 230+ Years of the Republic",
+  "D.C./Maryland Case: First Judicial Definition of 'Emoluments'",
+  "Second Circuit: CREW Won on Standing and Merits",
+  "Cases Mooted When Trump Left Office — Never Reached Final Ruling",
+  "Foreign Governments Booked Trump Hotels During First Term",
+  "Trump International Hotel D.C. — 5 Blocks from the White House",
+  "Saudi-Funded Lobbyists Spent $270K at Trump Hotel",
+  "T-Mobile Executives Booked at Trump Hotel During Sprint Merger Review",
+  "No President Had Retained Business Interests Like This Before",
+  "Emoluments Clause: Written to Prevent Foreign Influence on Officials",
+];
+---
+
+<ResearchLayout title="Emoluments & Corruption — Constitutional Violations Deep Dive" description="The first emoluments litigation in 230+ years. Foreign governments booking Trump hotels. Two federal courts ruled broadly against Trump before cases were mooted.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Constitution', href: '/deep-dives/constitutional-violations' },
+    { label: 'Emoluments & Corruption' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Emoluments Clauses"
+    title="EMOLUMENTS &amp; <span class='word-red'>CORRUPTION</span>"
+    subtitle="When a president profits from the presidency."
+    date="Sources: Federal Court Opinions · Congressional Ethics Reports · GSA Records · Hotel Booking Records · Foreign Government Disclosures"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="No Person holding any Office of Profit or Trust under them, shall, without the Consent of the Congress, accept of any present, Emolument, Office, or Title, of any kind whatever, from any King, Prince, or foreign State."
+    citation="Article I, Section 9, Clause 8 — The Foreign Emoluments Clause, United States Constitution"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={230} suffix="+" label="Years of the Republic before any president faced emoluments litigation" />
+    <StatCard target={3} label="Federal lawsuits filed alleging emoluments violations — all unprecedented" />
+    <StatCard target={2} label="Federal courts that ruled broadly against Trump on emoluments before cases were mooted" />
+    <StatCard target={0} label="Previous presidents who retained active business interests of this magnitude" />
+  </StatGrid>
+
+  <!-- THE EMOLUMENTS CLAUSES -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Constitutional Text"
+    title="What Are<br>Emoluments?"
+    introText="The Constitution contains two emoluments clauses — one for foreign payments, one for domestic. Both exist for the same reason: to prevent officials from being influenced by financial interests. For 230 years, no president tested these clauses. Then Trump took office while retaining ownership of a global business empire."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🌍"
+      title="The Foreign Emoluments Clause"
+      body="<strong>Article I, Section 9, Clause 8</strong> prohibits any person holding federal office from accepting <strong>&quot;any present, Emolument, Office, or Title, of any kind whatever, from any King, Prince, or foreign State&quot;</strong> without Congress's consent.<br><br>The Founders included this clause because they understood that <strong>foreign payments create foreign influence</strong>. They had seen European diplomats corrupted by foreign gifts and wanted to ensure American officials' loyalty remained undivided."
+      tag="Foreign Payments"
+    />
+    <CategoryCard
+      icon="🇺🇸"
+      title="The Domestic Emoluments Clause"
+      body="<strong>Article II, Section 1, Clause 7</strong> provides that the president shall receive a fixed compensation and <strong>&quot;shall not receive within that Period any other Emolument from the United States, or any of them.&quot;</strong><br><br>This clause prevents the president from receiving <strong>payments from federal or state governments</strong> beyond the presidential salary — ensuring that no government entity can use payments to influence presidential decisions."
+      tag="Domestic Payments"
+    />
+    <CategoryCard
+      icon="📜"
+      title="Why They Matter"
+      body="Every previous president understood the principle behind the emoluments clauses and <strong>took steps to avoid conflicts</strong>:<br><br>• Most placed assets in <strong>blind trusts</strong><br>• Some <strong>divested entirely</strong> from business interests<br>• All maintained <strong>clear separation</strong> between personal finances and the presidency<br><br>Trump was the <strong>first modern president</strong> to retain active ownership of businesses that directly interacted with foreign governments, domestic state governments, and the federal government itself."
+      tag="230 Years of Precedent"
+    />
+  </CategoryGrid>
+
+  <!-- THE LITIGATION -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Court Cases"
+    title="First-Ever<br>Emoluments Cases"
+    introText="Three separate lawsuits were filed alleging that Trump violated the emoluments clauses — the first such litigation in American history. Two federal courts ruled broadly against Trump before the cases were mooted when he left office."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚖️"
+      title="CREW v. Trump (Second Circuit)"
+      body="Citizens for Responsibility and Ethics in Washington (CREW) filed suit alleging that Trump violated the Foreign Emoluments Clause by accepting payments from foreign governments through his businesses.<br><br>The <strong>Second Circuit Court of Appeals ruled in CREW's favor</strong> on standing — finding that the organization had a legitimate legal interest in enforcing the clause. This was a significant legal milestone: the first time a federal appeals court recognized standing to sue a president for emoluments violations."
+      tag="CREW Won on Appeal"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="D.C. and Maryland v. Trump"
+      body="The attorneys general of D.C. and Maryland sued Trump, arguing that his Trump International Hotel in Washington — <strong>five blocks from the White House</strong> — gave him an unconstitutional financial advantage that harmed competing businesses in their jurisdictions.<br><br>A federal judge issued the <strong>first judicial definition of &quot;emoluments&quot;</strong> in American history, interpreting the term broadly to include <strong>any payment or profit</strong> — not just direct gifts. This was a landmark ruling: for 230 years, no court had needed to define the term."
+      tag="First Definition of 'Emoluments'"
+    />
+    <CategoryCard
+      icon="🗳️"
+      title="Blumenthal v. Trump"
+      body="Nearly 200 Democratic members of Congress sued Trump, arguing that by accepting foreign government payments without seeking Congress's consent, he violated the Foreign Emoluments Clause's requirement of <strong>congressional approval</strong>.<br><br>A federal judge ruled that the <strong>members had standing</strong> to sue — finding that their constitutional right to vote on whether to approve emoluments had been effectively nullified by Trump's unilateral acceptance of foreign payments."
+      tag="Congressional Standing"
+    />
+    <CategoryCard
+      icon="⏸️"
+      title="All Cases Mooted"
+      body="All three cases were <strong>dismissed as moot</strong> when Trump left office in January 2021. Because Trump was no longer president, the courts determined the cases no longer presented a live controversy.<br><br>This means the emoluments question was <strong>never fully resolved on the merits</strong>. The courts that did rule found against Trump on standing, definitions, and preliminary issues — but the ultimate question of whether he violated the clauses was <strong>never adjudicated to final judgment</strong>."
+      tag="Never Fully Resolved"
+    />
+  </CategoryGrid>
+
+  <!-- THE EVIDENCE -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Evidence"
+    title="Following<br>the Money"
+    introText="The evidence presented in these cases documented a pattern of foreign and domestic government spending at Trump properties — creating the financial entanglements the Founders specifically sought to prevent."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏨"
+      title="Trump International Hotel D.C."
+      body="Located in the <strong>Old Post Office building</strong> — a federal property leased from the GSA — Trump's Washington hotel became the <strong>epicenter of emoluments concerns</strong>:<br><br>• <strong>Foreign diplomats</strong> publicly stated they booked at the Trump Hotel to curry favor<br>• <strong>Saudi-funded lobbyists</strong> spent $270,000 at the hotel<br>• <strong>T-Mobile executives</strong> booked rooms during the Sprint merger review<br>• <strong>The hotel's own lease</strong> stated that no elected official could benefit from the lease — a clause the GSA inspector general found Trump violated"
+      tag="Five Blocks from the White House"
+    />
+    <CategoryCard
+      icon="🌐"
+      title="Foreign Government Spending"
+      body="Evidence showed <strong>foreign governments and their representatives</strong> spending money at Trump properties:<br><br>• <strong>Kuwait</strong> moved its National Day celebration to the Trump Hotel<br>• <strong>The Philippines, Turkey, and other nations</strong> held events there<br>• <strong>Chinese government-linked entities</strong> booked rooms and event space<br>• <strong>Saudi Arabia</strong> spent lavishly at multiple Trump properties<br><br>The pattern was clear: foreign governments understood that <strong>spending money at Trump properties was a way to access and influence</strong> the administration."
+      tag="Global Patronage"
+    />
+    <CategoryCard
+      icon="🏌️"
+      title="The Golf Properties"
+      body="Trump's golf clubs generated additional emoluments concerns:<br><br>• The <strong>Secret Service</strong> paid to stay at Trump properties while protecting the president — meaning taxpayer money flowed directly to Trump's businesses<br>• <strong>Foreign officials and lobbyists</strong> paid for memberships and events at Mar-a-Lago<br>• Trump visited his own properties <strong>hundreds of times</strong> during his first term, each visit generating revenue for his businesses<br><br>The presidency became a <strong>marketing engine</strong> for the Trump Organization."
+      tag="Taxpayer Money to Trump"
+    />
+  </CategoryGrid>
+
+  <!-- DUE PROCESS -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV · Due Process"
+    title="Due Process<br>Violations"
+    introText="Beyond emoluments, several Trump administration policies were struck down for violating the Fifth Amendment's guarantee that no person shall be 'deprived of life, liberty, or property, without due process of law.'"
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👨‍👩‍👧‍👦"
+      title="Family Separation"
+      body="The &quot;zero tolerance&quot; policy systematically <strong>separated children from their parents</strong> at the border — including children as young as infants. Federal courts found the policy violated <strong>due process</strong>.<br><br>A federal judge ordered families reunified, finding the government had <strong>no adequate system</strong> for tracking separated children or reuniting them with parents. Hundreds of children were separated with no plan for reunification — some for <strong>months or years</strong>."
+      tag="Children Separated"
+    />
+    <CategoryCard
+      icon="✈️"
+      title="The Travel Ban"
+      body="The first two versions of the &quot;travel ban&quot; — restricting entry from majority-Muslim countries — were <strong>struck down by multiple courts</strong> for violating due process and the Establishment Clause.<br><br>The <strong>first version</strong> was blocked by multiple courts within days. The <strong>second version</strong> was enjoined nationwide. A <strong>third version</strong> — substantially revised — was ultimately upheld by the Supreme Court in a 5-4 decision (<em>Trump v. Hawaii</em>), but the earlier versions' constitutional defects were not disputed."
+      tag="Two Versions Struck Down"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The cases were dismissed — that means he won."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The cases were dismissed as moot — not on the merits.</strong> "Moot" means the controversy is no longer live because circumstances changed (Trump left office). It does not mean the court found Trump's conduct lawful.</p>
+          <p>In every case where courts <em>did</em> reach substantive issues, <strong>they ruled against Trump</strong>: on standing, on the definition of emoluments, and on preliminary questions. The government lost at virtually every stage where the merits were addressed.</p>
+          <p>If Trump had won on the merits, the government would have sought dismissal on those grounds. Instead, the cases were mooted by the calendar — <strong>a timing escape, not a legal vindication</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Hotels receive guests from everywhere — that's not corruption."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The Emoluments Clause doesn't require proof of corruption — it prohibits the financial entanglement itself.</strong> The Founders understood that even the <em>appearance</em> of foreign financial influence undermines public trust and creates conflicts of interest.</p>
+          <p>This is why every previous modern president placed assets in blind trusts or divested entirely. The question is not whether any specific hotel booking changed a policy decision. The question is whether a president should <strong>profit from foreign governments while making decisions that affect those governments</strong>.</p>
+          <p>When the Kuwaiti embassy moves its annual celebration to the Trump Hotel, when Saudi lobbyists spend $270,000 there, when T-Mobile executives book rooms during their merger review — <strong>the entanglement the Constitution prohibits is present whether or not a quid pro quo is proven</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"He donated his presidential salary — he didn't profit from the office."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The presidential salary is <strong>$400,000 per year</strong>. Trump's businesses generated <strong>hundreds of millions of dollars</strong> during his presidency — including from foreign governments, federal agencies, and state governments.</p>
+          <p>Donating a $400,000 salary while retaining ownership of businesses that received millions from entities the president regulates and negotiates with is not a meaningful conflict-of-interest mitigation. It is a <strong>public relations gesture</strong> that addresses less than a fraction of the financial entanglement.</p>
+          <p>The Secret Service alone spent <strong>over $1 million</strong> at Trump properties. Federal agencies held events and booked rooms at Trump hotels. The presidency generated vastly more revenue for the Trump Organization than the salary he donated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <HighlightBar text="230+ years. No president ever faced emoluments litigation — until one refused to divest from a global business empire. Two federal courts ruled against him. The cases were mooted by timing, not by vindication." />
+
+  <CTASection
+    title="The Founders<br>Saw This Coming."
+    description="The Emoluments Clauses were written because the Founders understood a simple truth: when officials profit from foreign powers, their loyalty is compromised. For 230 years, every president respected this principle. Then one didn't."
+    linkText="← Back to Constitutional Violations"
+    linkHref="/deep-dives/constitutional-violations"
+  />
+
+</ResearchLayout>

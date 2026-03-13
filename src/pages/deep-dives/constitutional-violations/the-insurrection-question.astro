@@ -1,0 +1,367 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "Colorado Supreme Court: Full Trial Found Trump Engaged in Insurrection",
+  "U.S. Supreme Court Reversed on Procedure — Never Disputed the Facts",
+  "57 Senators Voted to Convict — Including 7 Republicans",
+  "McConnell: Trump Was 'Practically and Morally Responsible'",
+  "Section 3 of the 14th Amendment: Disqualification for Insurrection",
+  "January 6th Committee: 1,000+ Interviews, 10 Public Hearings",
+  "First Impeachment: Abuse of Power and Obstruction of Congress",
+  "Second Impeachment: 'Incitement of Insurrection'",
+  "Most Bipartisan Impeachment Vote in American History",
+  "140+ Police Officers Injured at the Capitol on January 6",
+];
+---
+
+<ResearchLayout title="The Insurrection Question — Constitutional Violations Deep Dive" description="A state supreme court found Trump engaged in insurrection after a full evidentiary trial. The U.S. Supreme Court reversed on procedure — but never disputed the factual finding.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Constitution', href: '/deep-dives/constitutional-violations' },
+    { label: 'The Insurrection Question' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The 14th Amendment, Section 3"
+    title="THE <span class='word-red'>INSURRECTION</span> QUESTION"
+    subtitle="A court found he did it. The Supreme Court said only Congress could act on it. Congress didn't."
+    date="Sources: Colorado Supreme Court Opinion · U.S. Supreme Court Opinion · Senate Impeachment Records · January 6th Committee Report"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="No person shall be a Senator or Representative in Congress, or elector of President and Vice-President, or hold any office, civil or military, under the United States, or under any State, who, having previously taken an oath... to support the Constitution of the United States, shall have engaged in insurrection or rebellion against the same."
+    citation="14th Amendment, Section 3 — United States Constitution, ratified 1868"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={57} label="Senators who voted to convict Trump of 'incitement of insurrection' — including 7 Republicans" />
+    <StatCard target={1000} suffix="+" label="Interviews conducted by the January 6th Select Committee" />
+    <StatCard target={10} label="Public hearings held by the January 6th Committee" />
+    <StatCard target={140} suffix="+" label="Police officers injured defending the Capitol on January 6, 2021" />
+  </StatGrid>
+
+  <!-- COLORADO TRIAL -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Colorado Case"
+    title="The Only<br>Full Trial"
+    introText="Colorado held what no other proceeding did: a full evidentiary trial on whether Trump 'engaged in insurrection' under Section 3 of the 14th Amendment. Witnesses testified. Evidence was presented. Cross-examination occurred. And a court issued a factual finding."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚖️"
+      title="The Trial"
+      body="In late 2023, a Colorado district court held a <strong>five-day evidentiary hearing</strong> on whether Trump should be disqualified from the ballot under Section 3 of the 14th Amendment.<br><br>The court heard testimony from <strong>constitutional scholars, Capitol Police officers, Trump administration officials,</strong> and reviewed extensive documentary evidence including Trump's own statements, the timeline of January 6, and evidence of his knowledge and intent."
+      tag="Full Evidentiary Hearing"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Colorado Supreme Court Rules"
+      body="The Colorado Supreme Court, in a <strong>4-3 decision</strong>, affirmed the trial court's factual finding that Trump <strong>engaged in insurrection</strong> and ordered him removed from the state's Republican primary ballot.<br><br>The court's opinion was detailed and thorough — addressing the historical meaning of &quot;insurrection,&quot; the evidence of Trump's role, and the applicability of Section 3 to the presidency. It was the <strong>first time a court had made this finding</strong> based on a full trial record."
+      tag="4-3 Decision"
+    />
+    <CategoryCard
+      icon="📋"
+      title="The Factual Findings"
+      body="The trial court found — based on evidence and testimony — that Trump:<br><br>• <strong>Knew his election fraud claims were false</strong> (based on what advisors told him)<br>• <strong>Intended to prevent the peaceful transfer of power</strong><br>• <strong>Incited and encouraged</strong> the violence at the Capitol<br>• <strong>Failed to act</strong> for hours while the attack was underway, despite pleas from allies<br>• <strong>Engaged in insurrection</strong> within the meaning of Section 3<br><br>These were <strong>factual findings</strong> based on evidence, not legal conclusions based on theory."
+      tag="Evidence-Based"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="The Supreme Court Reversal"
+      body="The U.S. Supreme Court <strong>reversed the Colorado ruling</strong> — but on <strong>procedural grounds, not factual ones</strong>.<br><br>The Court held that <strong>only Congress, not individual states</strong>, can enforce Section 3 against federal candidates. This was a ruling about <strong>who has the authority to act</strong>, not about whether Trump engaged in insurrection.<br><br><strong>The Supreme Court never disputed the trial court's factual finding</strong> that Trump engaged in insurrection. It simply said Colorado was not the right body to enforce that finding."
+      tag="Procedure, Not Facts"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--amber)">
+    <AlertBanner icon="⚠️" title="What the Supreme Court Did Not Say" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The Supreme Court's reversal is frequently characterized as "clearing" Trump or "finding he didn't commit insurrection." This is incorrect. The Court ruled that <strong style="color: var(--text);">states cannot unilaterally enforce Section 3</strong> — only Congress can. The Court <strong style="color: var(--text);">did not address the merits</strong> of whether Trump engaged in insurrection. The factual finding from the Colorado trial — based on five days of evidence and testimony — <strong style="color: var(--text);">was never overturned on the facts</strong>.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE TWO IMPEACHMENTS -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · Congressional Proceedings"
+    title="Two<br>Impeachments"
+    introText="Trump is the only president in American history to be impeached twice. The second impeachment — for 'incitement of insurrection' — produced the most bipartisan conviction vote in impeachment history."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🇺🇦"
+      title="First Impeachment (2019)"
+      body="<strong>Charges: Abuse of Power and Obstruction of Congress</strong><br><br>Trump was impeached for pressuring Ukraine's president to investigate Joe Biden — withholding <strong>$391 million in congressionally appropriated military aid</strong> as leverage. The second article charged <strong>total obstruction of Congress</strong> — the administration produced zero documents for 70+ requests.<br><br><strong>Senate vote:</strong> 52-48 (acquitted). Mitt Romney became the <strong>first senator in history</strong> to vote to convict a president of his own party."
+      tag="Abuse of Power"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Second Impeachment (2021)"
+      body="<strong>Charge: Incitement of Insurrection</strong><br><br>Impeached on January 13, 2021 — <strong>one week after the Capitol attack</strong>. The House voted 232-197, with <strong>10 Republicans voting to impeach</strong> — the most bipartisan impeachment vote in American history.<br><br><strong>Senate vote:</strong> 57-43 (acquitted — fell 10 short of the two-thirds required). <strong>7 Republicans voted to convict</strong>: Burr, Cassidy, Collins, Murkowski, Romney, Sasse, and Toomey."
+      tag="57 Votes to Convict"
+    />
+  </CategoryGrid>
+
+  <VoicesSection
+    eyebrow="After the Vote"
+    title="What Republicans<br>Said"
+    introText="Even senators who voted to acquit often condemned Trump's conduct in the strongest terms."
+  >
+    <VoiceCard
+      quote="There's no question — none — that President Trump is practically and morally responsible for provoking the events of the day. No question about it."
+      name="Mitch McConnell"
+      role="Senate Minority Leader (R)"
+      detail="Senate floor speech · February 13, 2021 — after voting to acquit"
+      context="McConnell voted to acquit on jurisdictional grounds — arguing the Senate couldn't try a former president — but explicitly stated Trump bore responsibility for the attack."
+    />
+    <VoiceCard
+      quote="The people who stormed this building believed they were acting on the wishes and instructions of their President."
+      name="Mitch McConnell"
+      role="Senate Minority Leader (R)"
+      detail="Senate floor speech · January 6, 2021"
+    />
+    <VoiceCard
+      quote="President Trump's actions preceded the riot were a disgraceful, disgraceful dereliction of duty. Trump is practically and morally responsible for provoking the events of the day."
+      name="Bill Cassidy"
+      role="U.S. Senator (R-LA)"
+      detail="After voting to convict · February 2021"
+      context="One of 7 Republican senators who voted to convict."
+    />
+  </VoicesSection>
+
+  <!-- THE JANUARY 6TH COMMITTEE -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Evidence"
+    title="The January 6th<br>Committee"
+    introText="The House Select Committee conducted the most comprehensive investigation of the Capitol attack — over 1,000 interviews, 10 public hearings, and an 845-page final report."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📊"
+      title="The Investigation's Scope"
+      body="The January 6th Select Committee conducted:<br><br>• <strong>1,000+ witness interviews</strong> and depositions<br>• <strong>10 public hearings</strong> broadcast nationally<br>• Review of <strong>tens of thousands of documents</strong><br>• An <strong>845-page final report</strong><br><br>Key witnesses included former Trump White House officials, Secret Service agents, campaign advisors, and DOJ officials — many of whom were <strong>Republican appointees</strong> testifying about a Republican president."
+      tag="1,000+ Interviews"
+    />
+    <CategoryCard
+      icon="📱"
+      title="The 187-Minute Gap"
+      body="The committee documented a <strong>187-minute period</strong> on January 6 during which Trump watched the Capitol attack unfold on television — and <strong>did not act to stop it</strong>.<br><br>During those three-plus hours:<br>• His own children asked him to intervene<br>• Congressional allies called begging for help<br>• His staff pleaded with him to act<br>• Fox News hosts texted his chief of staff<br><br>Trump sent a tweet criticizing Mike Pence while rioters were chanting <em>&quot;Hang Mike Pence&quot;</em> inside the Capitol."
+      tag="3+ Hours of Inaction"
+    />
+    <CategoryCard
+      icon="🔍"
+      title="Key Findings"
+      body="The committee concluded that Trump:<br><br>• <strong>Orchestrated a multi-part plan</strong> to overturn the 2020 election<br>• <strong>Pressured state officials</strong> to change election results<br>• <strong>Pressured the DOJ</strong> to declare fraud where none existed<br>• <strong>Pressured Mike Pence</strong> to refuse to certify the election<br>• <strong>Summoned supporters</strong> to Washington on January 6<br>• <strong>Failed to act</strong> for 187 minutes while the Capitol was under attack<br>• <strong>Referred Trump</strong> to the DOJ for criminal prosecution on four charges"
+      tag="Criminal Referral"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The 14th Amendment Connection"
+      body="The committee's evidence became central to the Colorado case. The factual record assembled by the committee — testimony, documents, timelines — was used in the Colorado trial to support the finding that Trump <strong>engaged in insurrection</strong>.<br><br>Section 3 of the 14th Amendment was written after the Civil War specifically to prevent <strong>those who participated in rebellion</strong> from returning to power. The question of whether January 6 constitutes an &quot;insurrection&quot; under this provision was answered — by a court, after a trial — <strong>in the affirmative</strong>."
+      tag="Section 3"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific arguments about the insurrection question. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The Supreme Court cleared Trump — he didn't commit insurrection."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The Supreme Court did not address whether Trump committed insurrection.</strong> The Court's ruling was solely about <strong>who has the authority to enforce Section 3</strong> — states or Congress. The Court held that only Congress can enforce disqualification for federal candidates.</p>
+          <p>The factual finding from the Colorado trial — that Trump engaged in insurrection — was <strong>never overturned on the merits</strong>. No court has held an evidentiary hearing and found that Trump <em>did not</em> engage in insurrection. The only court that conducted a full trial on the question found that he did.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"He was acquitted by the Senate — that means he's innocent."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>57 senators voted to convict — a clear bipartisan majority.</strong> Trump was acquitted only because conviction requires a two-thirds supermajority (67 votes). A majority of the Senate — including 7 Republicans — found him guilty of incitement of insurrection.</p>
+          <p>Several senators who voted to acquit — most prominently <strong>Mitch McConnell</strong> — explicitly stated that Trump was "practically and morally responsible" for the attack. McConnell acquitted on the narrow jurisdictional argument that the Senate couldn't try a former president — <strong>not because Trump was innocent</strong>.</p>
+          <p>Senate impeachment is a <strong>political process</strong>, not a criminal trial. Acquittal means the supermajority threshold wasn't met — it does not mean the conduct didn't occur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"January 6 was a protest that got out of hand — not an insurrection."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Over 140 police officers were injured.</strong> Rioters breached the Capitol building, occupied the Senate chamber, and forced the evacuation of both chambers of Congress during the certification of a presidential election. Property was destroyed. Members of Congress were in physical danger. Rioters carried weapons, zip ties, and a gallows was erected outside.</p>
+          <p>The Colorado court — after hearing five days of evidence — specifically addressed whether January 6 met the legal definition of "insurrection." It concluded that it did: <strong>an organized, violent attempt to prevent the lawful transfer of presidential power</strong>.</p>
+          <p>Over <strong>1,200 people have been criminally charged</strong> in connection with January 6. Hundreds have been convicted of serious felonies, including seditious conspiracy — the charge specifically designed for attempts to overthrow the government.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <HighlightBar text="One court held a full trial and found Trump engaged in insurrection. The Supreme Court said only Congress could act on it. 57 senators voted to convict — including 7 Republicans. McConnell called him 'practically and morally responsible.' The facts were never disputed." />
+
+  <CTASection
+    title="The Facts Were<br>Never Overturned."
+    description="A court found insurrection after a full trial. The Supreme Court reversed on procedure. 57 senators voted guilty. The only question left is whether the 14th Amendment's disqualification clause will ever be enforced."
+    linkText="← Back to Constitutional Violations"
+    linkHref="/deep-dives/constitutional-violations"
+  />
+
+</ResearchLayout>

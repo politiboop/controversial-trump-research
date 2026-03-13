@@ -1,0 +1,339 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "All 4 Law Firm Executive Orders Found Unconstitutional",
+  "Susman Godfrey Order: 'Unconstitutional from Beginning to End'",
+  "DOJ Dropped Defense of All Four Law Firm EOs",
+  "AP Ban Struck Down by a Trump-Appointed Judge",
+  "7+ Federal Judges Found First Amendment Violations",
+  "FCC Chairman Threatened Media Companies Over Content",
+  "CPB Funding Frozen — Press Freedom Erosion",
+  "'Congress Shall Make No Law... Abridging the Freedom of Speech'",
+  "Judges from Both Parties Found Violations",
+  "First Amendment: 45 Words That Protect All Americans",
+];
+---
+
+<ResearchLayout title="First Amendment Violations — Constitutional Violations Deep Dive" description="All four law firm executive orders ruled unconstitutional. The AP banned from the White House. Media companies threatened. 7+ judges from both parties found First Amendment violations.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Constitution', href: '/deep-dives/constitutional-violations' },
+    { label: 'First Amendment' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Freedom of Speech & Press"
+    title="THE FIRST <span class='word-red'>AMENDMENT</span>"
+    subtitle="When the government punishes speech, association, and the press."
+    date="Sources: Federal Court Orders · Judicial Opinions · FCC Records · White House Press Pool Records · DOJ Filings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances."
+    citation="The First Amendment to the United States Constitution — ratified December 15, 1791"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={4} label="Law firm executive orders ruled unconstitutional by federal courts" />
+    <StatCard target={7} suffix="+" label="Federal judges who found First Amendment violations — from both parties" />
+    <StatCard target={4} label="Law firm EOs abandoned by the DOJ itself — dropped their own defense" />
+    <StatCard target={0} label="Law firm EOs that survived judicial review" />
+  </StatGrid>
+
+  <!-- THE LAW FIRM EXECUTIVE ORDERS -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · Punishing Lawyers"
+    title="The Law Firm<br>Executive Orders"
+    introText="The Trump administration issued executive orders targeting four specific law firms — revoking their employees' security clearances, barring them from federal contracts, and directing agencies to sever ties. The stated reason: these firms had represented clients the administration opposed. Every court to review these orders found them unconstitutional."
+  />
+
+  <VoicesSection
+    eyebrow="The Rulings"
+    title="The Judges<br>Respond"
+    introText="Federal judges — including appointees from both parties — struck down the law firm executive orders in unambiguous terms."
+  >
+    <VoiceCard
+      quote="The Court finds this executive order unconstitutional from beginning to end."
+      name="Judge Liman"
+      role="U.S. District Judge, S.D.N.Y."
+      detail="Ruling on Susman Godfrey executive order · 2025"
+      context="The most sweeping judicial condemnation of any of the four orders — finding it violated the First Amendment's protections of speech, association, and petition."
+    />
+    <VoiceCard
+      quote="The executive order punishes a law firm for the clients it chose to represent. That is the definition of a First Amendment violation."
+      name="Federal Court Summary"
+      role="Multiple rulings across four cases"
+      detail="2025"
+      context="All four orders were found to violate the right to petition the government — one of the most fundamental First Amendment protections."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚖️"
+      title="Perkins Coie"
+      body="The administration issued an executive order targeting <strong>Perkins Coie</strong>, one of the largest law firms in the country, because it had represented the <strong>Democratic National Committee</strong> and other Democratic clients.<br><br>The order revoked security clearances for firm employees and directed federal agencies to sever contracts. A federal court <strong>blocked the order</strong>, finding it punished the firm for constitutionally protected legal representation."
+      tag="Blocked"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="WilmerHale"
+      body="<strong>WilmerHale</strong> was targeted because of its connection to <strong>Robert Mueller's special counsel investigation</strong>. Mueller was a former partner at the firm.<br><br>The executive order sought to punish the firm for Mueller's work investigating Russian interference in the 2016 election — work that resulted in <strong>34 indictments, 7 guilty pleas, and 5 prison sentences</strong>. A federal court blocked the order."
+      tag="Blocked"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Jenner & Block"
+      body="<strong>Jenner & Block</strong> was targeted for its <strong>pro bono legal work</strong>, including representation of clients in immigration and civil rights cases that opposed administration policies.<br><br>The executive order penalized the firm for the <em>content</em> of its legal advocacy — a direct violation of the First Amendment right to petition the government. A federal court blocked the order."
+      tag="Blocked"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Susman Godfrey"
+      body="The order targeting <strong>Susman Godfrey</strong> received the most sweeping judicial rebuke. Judge Liman ruled it <strong>&quot;unconstitutional from beginning to end&quot;</strong> — finding it violated free speech, freedom of association, and the right to petition.<br><br>The ruling noted that the <strong>entire purpose</strong> of the order was to punish lawyers for representing disfavored clients — which strikes at the heart of the adversarial legal system."
+      tag="'Unconstitutional from Beginning to End'"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="DOJ Abandoned Its Own Defense" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">In a remarkable development, the <strong style="color: var(--text);">Department of Justice itself dropped its defense</strong> of all four law firm executive orders. DOJ lawyers — tasked with defending the president's actions in court — concluded that the orders were <strong style="color: var(--text);">indefensible</strong>. When the government's own lawyers won't defend an executive order, the constitutional violation is beyond dispute.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- PRESS FREEDOM -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · Freedom of the Press"
+    title="Attacking the<br>Press"
+    introText="The First Amendment protects freedom of the press for a reason — it is the primary mechanism by which citizens hold their government accountable. The Trump administration's actions against the press went beyond rhetoric to concrete government action."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📰"
+      title="The AP Ban"
+      body="The Trump administration <strong>banned the Associated Press</strong> — the nation's largest and oldest news cooperative — from the White House press pool.<br><br>The ban was challenged in court. A <strong>Trump-appointed judge</strong> struck it down, finding it violated the First Amendment. The ruling was notable precisely because of who issued it: a judge appointed by the president whose administration imposed the ban."
+      tag="Trump Judge Struck It Down"
+    />
+    <CategoryCard
+      icon="📡"
+      title="FCC Threats Against Media"
+      body="The FCC Chairman <strong>threatened media companies</strong> over their editorial content — suggesting that broadcast licenses could be at risk if coverage was unfavorable to the administration.<br><br>The FCC's authority over broadcast licenses is meant to ensure <strong>technical compliance and public interest standards</strong> — not to police political content. Using licensing authority to pressure editorial decisions is a <strong>textbook prior restraint</strong> on speech."
+      tag="Prior Restraint"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="CPB Defunding"
+      body="The administration moved to <strong>defund the Corporation for Public Broadcasting</strong> — the entity that funds NPR, PBS, and local public media stations across the country.<br><br>While funding decisions are within Congress's authority, the defunding effort was explicitly framed as <strong>retaliation for editorial content</strong> the administration found unfavorable — transforming a budgetary decision into a <strong>First Amendment issue</strong>."
+      tag="Retaliatory Defunding"
+    />
+    <CategoryCard
+      icon="📋"
+      title="The Pattern"
+      body="The individual actions form a clear pattern of <strong>using government power to punish disfavored speech</strong>:<br><br>• <strong>Law firms</strong> punished for representing the wrong clients<br>• <strong>News organizations</strong> banned for critical coverage<br>• <strong>Broadcast companies</strong> threatened over editorial decisions<br>• <strong>Public media</strong> defunded in retaliation for content<br><br>Each action targets a different medium — but the constitutional principle is the same: <strong>the government may not punish speech it dislikes</strong>."
+      tag="Government Power vs. Speech"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications for these actions. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"He's fighting bias — these firms and media outlets are against him."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The First Amendment exists precisely to protect speech the government doesn't like.</strong> The entire purpose of the amendment is to prevent the government from using its power to punish disfavored viewpoints.</p>
+          <p>Law firms have a <strong>constitutional right</strong> to represent any client — including those the government opposes. This right is foundational to the adversarial legal system. If lawyers can be punished for representing unpopular clients, then <strong>every accused person's right to counsel is at risk</strong>.</p>
+          <p>The press has a <strong>constitutional right</strong> to publish critical coverage. If the government can revoke access or threaten licenses over unfavorable reporting, then press freedom exists only at the pleasure of whoever holds power.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"These firms represented his enemies — they were part of the resistance."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Every person and organization in America has the right to legal representation.</strong> The Sixth Amendment guarantees the right to counsel in criminal cases. The First Amendment protects the right to petition the government — which includes hiring lawyers to do so.</p>
+          <p>John Adams defended the British soldiers accused of the Boston Massacre. Thurgood Marshall represented clients that many Americans despised. The principle that lawyers must not be punished for their clients has been <strong>bedrock American law since the founding</strong>.</p>
+          <p>The DOJ's own decision to <strong>drop defense of all four orders</strong> confirms that there was no legitimate legal basis for targeting these firms. The government's own lawyers concluded the orders were indefensible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The AP was biased — they don't deserve White House access."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The Associated Press has operated as a <strong>nonpartisan news cooperative since 1846</strong>. It provides news to outlets across the political spectrum — from Fox News to MSNBC, from the Wall Street Journal to the New York Times.</p>
+          <p>A <strong>Trump-appointed judge</strong> struck down the ban, finding it violated the First Amendment. When a president's own appointee rules that his actions violate the Constitution, the "bias" argument collapses.</p>
+          <p>White House press access has never been contingent on favorable coverage. If it were, <strong>no independent press could exist</strong> — only state media.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <HighlightBar text="4 executive orders. 4 courts. 4 rulings of unconstitutionality. 0 orders survived. Even the DOJ gave up defending them. Seven or more judges — from both parties — agreed: these actions violated the First Amendment." />
+
+  <CTASection
+    title="45 Words.<br>The First Amendment."
+    description="Freedom of speech. Freedom of the press. The right to petition the government. The right to legal representation. 45 words in the Constitution — and 7+ federal judges who enforced them."
+    linkText="← Back to Constitutional Violations"
+    linkHref="/deep-dives/constitutional-violations"
+  />
+
+</ResearchLayout>

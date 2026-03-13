@@ -1,0 +1,364 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "17 Inspectors General Fired in a Single Night — Violated 30-Day Notice",
+  "Zero Documents Produced for 70+ Congressional Subpoenas During Impeachment",
+  "DOGE: Unelected Private Citizens Given Authority Over Federal Agencies",
+  "Border Wall Funding Ruled Unconstitutional — 9th Circuit",
+  "GAO Found Multiple Spending Freezes Illegal",
+  "TikTok Ban: Even Conservative AEI Called Nonenforcement Illegal",
+  "Pendley Ran BLM Unlawfully — Court Voided His Actions",
+  "Acting Officials Ruled Unconstitutional Under Appointments Clause",
+  "Appropriations Clause: Only Congress Controls Spending",
+  "Take Care Clause: President Must 'Faithfully Execute' the Laws",
+];
+---
+
+<ResearchLayout title="Separation of Powers — Constitutional Violations Deep Dive" description="17 inspectors general fired unlawfully. Congressional subpoenas ignored. DOGE. Spending freezes. The systematic erosion of checks and balances between branches of government.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Constitution', href: '/deep-dives/constitutional-violations' },
+    { label: 'Separation of Powers' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Checks & Balances"
+    title="SEPARATION OF <span class='word-red'>POWERS</span>"
+    subtitle="When the executive branch claims the authority of all three branches."
+    date="Sources: Congressional Records · GAO Opinions · Federal Court Orders · Inspector General Reports · Appointments Clause Rulings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The accumulation of all powers, legislative, executive, and judiciary, in the same hands, whether of one, a few, or many, and whether hereditary, self-appointed, or elective, may justly be pronounced the very definition of tyranny."
+    citation="James Madison — Federalist No. 47, 1788"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={17} label="Inspectors general fired in a single night — violating the 30-day notice requirement" />
+    <StatCard target={0} label="Documents produced in response to 70+ congressional subpoenas during impeachment" />
+    <StatCard target={70} suffix="+" label="Congressional requests for documents or testimony that were totally ignored" />
+    <StatCard target={3} label="Constitutional clauses violated — Appropriations, Take Care, Appointments" />
+  </StatGrid>
+
+  <!-- INSPECTOR GENERAL FIRINGS -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · Oversight Eliminated"
+    title="17 Inspectors<br>General"
+    introText="Inspectors general are the government's internal watchdogs — independent officials who investigate waste, fraud, and abuse within federal agencies. Federal law requires 30 days' written notice to Congress before removing an IG. On a single night, the Trump administration fired 17 of them."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🔍"
+      title="What Inspectors General Do"
+      body="Inspectors general are <strong>independent watchdogs</strong> created by the Inspector General Act of 1978 (passed after Watergate). They exist to:<br><br>• <strong>Investigate waste, fraud, and abuse</strong> within federal agencies<br>• <strong>Report to Congress</strong> independently of the agency they oversee<br>• <strong>Protect whistleblowers</strong> who report misconduct<br>• <strong>Audit government spending</strong> and program effectiveness<br><br>They are specifically designed to be <strong>independent of the officials they oversee</strong>."
+      tag="Independent Oversight"
+    />
+    <CategoryCard
+      icon="🌙"
+      title="The Friday Night Massacre"
+      body="On a single night in January 2025, the Trump administration <strong>fired 17 inspectors general</strong> across the federal government — including watchdogs at the <strong>Defense Department, State Department, CIA, and other critical agencies</strong>.<br><br>The firings violated the <strong>Inspector General Reform Act</strong>, which requires the president to give Congress <strong>30 days' written notice</strong> and a substantive explanation before removing an IG. No notice was given. No explanations were provided."
+      tag="17 in One Night"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Courts Found the Firings Unlawful"
+      body="Federal courts ruled that the mass firings <strong>violated federal law</strong>. The 30-day notice requirement is not a suggestion — it is a <strong>statutory mandate</strong> designed to give Congress the opportunity to investigate whether the removal is politically motivated.<br><br>By firing all 17 simultaneously, without notice, the administration <strong>eliminated the entire oversight infrastructure</strong> of the federal government in a single action — making it impossible for Congress to exercise its review authority."
+      tag="Unlawful"
+    />
+    <CategoryCard
+      icon="🎯"
+      title="Why It Matters"
+      body="Without inspectors general, there is <strong>no independent oversight</strong> of how federal agencies spend taxpayer money, whether they follow the law, or whether officials engage in misconduct.<br><br>Several of the fired IGs had been <strong>actively investigating</strong> matters of public interest. Their removal sent a clear message to any future watchdog: <strong>investigate this administration and lose your job</strong>."
+      tag="No Oversight"
+    />
+  </CategoryGrid>
+
+  <!-- CONGRESSIONAL SUBPOENAS -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · Defying Congress"
+    title="Total<br>Stonewalling"
+    introText="During the first impeachment inquiry, the Trump administration adopted an unprecedented position: total, categorical refusal to comply with any congressional subpoena. Not selective compliance. Not executive privilege claims for specific documents. Zero cooperation."
+  />
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="📊" title="The Scope of Defiance" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The White House Counsel sent a letter declaring that the administration would <strong style="color: var(--text);">not cooperate in any way</strong> with the impeachment inquiry. The result: <strong style="color: var(--text);">zero documents produced</strong> in response to over <strong style="color: var(--text);">70 congressional requests</strong>. Key witnesses were ordered not to testify. This was not executive privilege — it was a <strong style="color: var(--text);">blanket refusal</strong> to recognize Congress's constitutional oversight authority.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📄"
+      title="The White House Letter"
+      body="White House Counsel Pat Cipollone sent an 8-page letter to Congress declaring that the administration would <strong>not participate in the impeachment inquiry</strong> in any way.<br><br>The letter did not assert executive privilege for specific documents or communications. Instead, it challenged the <strong>legitimacy of the entire inquiry</strong> — a position with no basis in the Constitution, which grants the House the <em>&quot;sole Power of Impeachment.&quot;</em>"
+      tag="Blanket Refusal"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="Witnesses Blocked"
+      body="Key administration officials were <strong>ordered not to testify</strong> before Congress:<br><br>• <strong>Don McGahn</strong> (White House Counsel) — blocked<br>• <strong>Mick Mulvaney</strong> (Chief of Staff) — blocked<br>• <strong>Mike Pompeo</strong> (Secretary of State) — blocked<br>• <strong>John Bolton</strong> (National Security Advisor) — refused to testify without a subpoena, then sued to avoid one<br><br>Some officials — like <strong>Fiona Hill, Alexander Vindman, and Marie Yovanovitch</strong> — testified anyway, defying the White House directive."
+      tag="Key Officials Blocked"
+    />
+  </CategoryGrid>
+
+  <!-- DOGE AND APPROPRIATIONS -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Power of the Purse"
+    title="DOGE &amp; the<br>Appropriations Clause"
+    introText="The Constitution vests the 'power of the purse' exclusively in Congress. Article I, Section 9 states: 'No Money shall be drawn from the Treasury, but in Consequence of Appropriations made by Law.' The Trump administration's actions challenged this foundational principle in multiple ways."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏢"
+      title="DOGE: Unelected Authority"
+      body="The Department of Government Efficiency (DOGE) — led by <strong>unelected private citizens</strong> — was given sweeping authority over federal agencies, including access to sensitive government systems and the power to recommend (and effectively direct) mass personnel changes.<br><br>The constitutional question is fundamental: can the president delegate <strong>government authority</strong> to private individuals who have not been confirmed by the Senate, are not subject to congressional oversight, and have <strong>no statutory authorization</strong> for their role?"
+      tag="No Senate Confirmation"
+    />
+    <CategoryCard
+      icon="💰"
+      title="Spending Freezes"
+      body="The administration imposed <strong>broad freezes on congressionally appropriated funds</strong> — money that Congress had already allocated for specific purposes.<br><br>The <strong>Government Accountability Office (GAO)</strong> — Congress's nonpartisan investigative arm — found that <strong>multiple spending freezes were illegal</strong>, violating the Impoundment Control Act of 1974. That law was passed after Nixon's abuses and requires the president to spend money Congress appropriates unless he follows specific procedures."
+      tag="GAO: Illegal"
+    />
+    <CategoryCard
+      icon="🧱"
+      title="Border Wall Funding"
+      body="When Congress refused to fund the border wall, Trump declared a <strong>national emergency</strong> and redirected military construction funds to wall construction.<br><br>The <strong>9th Circuit Court of Appeals</strong> ruled this unconstitutional — finding that the president cannot override Congress's spending decisions by declaring an emergency. The <strong>Appropriations Clause</strong> gives Congress, not the president, the exclusive power to decide how federal money is spent."
+      tag="9th Circuit: Unconstitutional"
+    />
+    <CategoryCard
+      icon="📱"
+      title="The Take Care Clause"
+      body="Article II requires the president to <strong>&quot;take Care that the Laws be faithfully executed.&quot;</strong> Yet the administration <strong>refused to enforce the TikTok ban</strong> — a law passed by Congress and signed by Biden.<br><br>Even the <strong>American Enterprise Institute (AEI)</strong>, a conservative think tank, called the nonenforcement illegal. The president's duty is to enforce laws passed by Congress — even laws he disagrees with. Selective nonenforcement is not a presidential power."
+      tag="Even AEI Objected"
+    />
+  </CategoryGrid>
+
+  <!-- APPOINTMENTS CLAUSE -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV · The Appointments Clause"
+    title="Unlawful<br>Appointments"
+    introText="The Constitution requires 'principal officers' of the United States to be nominated by the president and confirmed by the Senate. The Trump administration repeatedly installed officials without proper appointment — and courts repeatedly struck down their actions."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👤"
+      title="William Perry Pendley — BLM"
+      body="William Perry Pendley served as <strong>acting director of the Bureau of Land Management</strong> for over a year without Senate confirmation and without proper designation under the Federal Vacancies Reform Act.<br><br>A federal court ruled his appointment <strong>unlawful</strong> and voided actions he had taken — including decisions affecting millions of acres of public land. The court found the administration had used the &quot;acting&quot; designation to <strong>circumvent the Senate's constitutional role</strong>."
+      tag="Actions Voided"
+    />
+    <CategoryCard
+      icon="👤"
+      title="Michael Pack — USAGM"
+      body="Michael Pack's installation as head of the <strong>U.S. Agency for Global Media</strong> — which oversees Voice of America and other international broadcasters — was <strong>ruled unconstitutional</strong>.<br><br>Pack immediately fired the heads of the agency's networks, installed loyalists, and began <strong>investigating journalists</strong> for perceived bias against Trump. A federal court found his actions violated the <strong>statutory independence</strong> of the broadcasters he was supposed to oversee."
+      tag="Unconstitutional"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications for these actions. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The president has the right to fire anyone in the executive branch."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Congress has the constitutional authority to set conditions on removal.</strong> The Inspector General Reform Act requires 30 days' notice to Congress before removing an IG. This is not a suggestion — it is a law passed by Congress under its Article I powers.</p>
+          <p>The Supreme Court has repeatedly upheld Congress's authority to protect certain officials from at-will removal — precisely to ensure that <strong>independent oversight</strong> remains possible. The question is not whether the president can fire IGs. It's whether he can do so <strong>without following the law</strong>.</p>
+          <p>Firing 17 inspectors general in one night, with no notice and no explanation, was not an exercise of presidential authority. It was an <strong>evasion of congressional oversight</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"DOGE is just making government more efficient — what's wrong with that?"</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The constitutional issue is not efficiency — it's authority.</strong> The Constitution requires that principal officers exercising significant government authority be <strong>nominated by the president and confirmed by the Senate</strong>.</p>
+          <p>DOGE's leadership consisted of <strong>unelected private citizens</strong> who were given access to sensitive government systems, directed mass personnel changes, and made decisions affecting billions of dollars in government spending — all without Senate confirmation, statutory authorization, or meaningful congressional oversight.</p>
+          <p>If efficiency justified bypassing constitutional requirements, then any president could delegate government authority to private individuals indefinitely. The Founders designed the confirmation process specifically to prevent this concentration of unchecked power.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Congress wastes money — the president should be able to cut spending."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The Constitution gives the power of the purse exclusively to Congress — not the president.</strong> Article I, Section 9: "No Money shall be drawn from the Treasury, but in Consequence of Appropriations made by Law."</p>
+          <p>The Impoundment Control Act of 1974 was passed specifically because <strong>Nixon tried the same thing</strong> — impounding funds Congress had appropriated. Congress determined that the president may not unilaterally refuse to spend money that Congress has directed be spent.</p>
+          <p>The GAO — a <strong>nonpartisan congressional agency</strong> — found that the administration's spending freezes were illegal. The president has the authority to propose budget cuts to Congress. He does not have the authority to <strong>override Congress's decisions unilaterally</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <HighlightBar text="17 inspectors general fired unlawfully. Zero documents for 70+ subpoenas. DOGE operating without Senate confirmation. GAO found spending freezes illegal. The separation of powers exists for a reason — and it is being dismantled." />
+
+  <CTASection
+    title="Three Branches.<br>One Trying to Absorb the Others."
+    description="The Founders designed a system of checks and balances because they understood the danger of concentrated power. Inspectors general, congressional oversight, the power of the purse — each check is being eroded."
+    linkText="← Back to Constitutional Violations"
+    linkHref="/deep-dives/constitutional-violations"
+  />
+
+</ResearchLayout>
