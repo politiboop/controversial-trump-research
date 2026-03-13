@@ -1,0 +1,347 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import TimelineSection from '../../../components/design/TimelineSection.astro';
+import TimelineItem from '../../../components/design/TimelineItem.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "July 2024: 'I Know Nothing About Project 2025'",
+  "April 2022: Trump Shared a Private Flight with Kevin Roberts",
+  "April 2022: Trump on Roberts — 'He's Going to Be So Incredible'",
+  "September 2024: 'I Have Not Read It. I Don't Want to Read It.'",
+  "January 2025: Signs 26 EOs — Two-Thirds Mirror Project 2025",
+  "October 2025: 'Russ Vought, He of PROJECT 2025 Fame'",
+  "25 of 30 Chapters Written by Former Trump Officials",
+  "Roberts: 'I Personally Have Talked to President Trump About Project 2025'",
+  "Roberts: 'The Overlap Is Tremendous'",
+  "CNN: 140+ Trump Officials Helped Write the Blueprint",
+];
+---
+
+<ResearchLayout title="Trump's Denials vs. Reality — Project 2025 Deep Dive" description="'I know nothing about Project 2025.' Every denial, mapped against the 140+ connections, the private flight, and his own words embracing it months later.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'Project 2025', href: '/deep-dives/project-2025' },
+    { label: "Trump's Denials vs. Reality" }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Denials"
+    title="TRUMP'S <span class='word-red'>DENIALS</span> VS. REALITY"
+    subtitle="'I know nothing about Project 2025' — a claim tested against the documented record."
+    date="Sources: Truth Social · Debate Transcripts · Washington Post · CNN · Heritage Foundation · Federal Register"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="I have nothing to do with Project 2025. That is out there. I have not read it. I don't want to read it, purposely."
+    citation="Donald Trump — ABC News Presidential Debate, September 10, 2024. He had already shared a private flight with its leader and praised him publicly."
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={140} suffix="+" label="Former Trump officials who helped write the document he claimed to know nothing about" />
+    <StatCard target={25} label="Of 30 Mandate chapters authored by former Trump administration officials" />
+    <StatCard target={15} label="Months between 'I know nothing' and 'he of PROJECT 2025 Fame'" />
+    <StatCard target={26} label="Executive orders signed on day one — two-thirds mirroring Project 2025" />
+  </StatGrid>
+
+  <!-- THE TIMELINE -->
+  <SectionDivider label="The Timeline" />
+  <SectionHeader
+    eyebrow="Denial to Embrace"
+    title="Watch the<br>Story Change"
+    introText="A chronological record of Trump's relationship with Project 2025 — from the private flight and public praise, through the campaign denials, to the executive orders and open embrace."
+  />
+
+  <TimelineSection eyebrow="The Full Arc" title="From Praise to<br>Denial to<br>Implementation">
+    <TimelineItem
+      date="April 2022"
+      title="Trump Keynotes Heritage Conference"
+      description="Trump gives a keynote speech at a Heritage Foundation conference and praises Kevin Roberts, who oversees Project 2025: 'This is a great group and they're going to lay the groundwork and detail plans for exactly what our movement will do... when the American people give us a colossal mandate to save America.' He also says of Roberts: 'He's going to be so incredible. I know that for a fact.'"
+    />
+    <TimelineItem
+      date="April 2022"
+      title="The Private Flight"
+      description="Trump shares a 45-minute private flight with Kevin Roberts to the Heritage conference, per The Washington Post (reported August 2024). Roberts later confirms: 'I personally have talked to President Trump about Project 2025.'"
+    />
+    <TimelineItem
+      date="April 2023"
+      title="Mandate for Leadership Published"
+      description="The Heritage Foundation publishes the 920-page 'Mandate for Leadership: The Conservative Promise' — the earliest-ever edition in the series. At least 140 former Trump administration officials contributed. 25 of the 30 chapters were written by former Trump officials."
+    />
+    <TimelineItem
+      date="July 2, 2024"
+      title="Roberts' 'Second American Revolution' Comment"
+      description="Kevin Roberts appears on Steve Bannon's podcast and says: 'We are in the process of the second American Revolution, which will remain bloodless if the left allows it to be.' The comment generates a political firestorm, and Trump's campaign begins distancing from Project 2025."
+    />
+    <TimelineItem
+      date="July 5, 2024"
+      title="Trump's First Denial"
+      description="Trump posts on Truth Social: 'I know nothing about Project 2025. I have no idea who is behind it. I disagree with some of the things they're saying and some of the things they're saying are absolutely ridiculous and abysmal. Anything they do, I wish them luck, but I have nothing to do with them.'"
+    />
+    <TimelineItem
+      date="July 20, 2024"
+      title="Further Distancing"
+      description="Trump publicly disavows Project 2025 again, calling its authors 'far-right.' Project 2025 director Paul Dans steps down amid the political controversy; Kevin Roberts assumes direct leadership."
+    />
+    <TimelineItem
+      date="August 22, 2024"
+      title="Continued Denial"
+      description="Trump again distances himself from Project 2025 in public statements, calling links between them 'pure disinformation.'"
+    />
+    <TimelineItem
+      date="September 10, 2024"
+      title="The Debate Denial"
+      description="At the ABC News presidential debate, when Kamala Harris presses Trump on Project 2025, he states: 'I have nothing to do with Project 2025. That is out there. I have not read it. I don't want to read it, purposely. I'm not going to read it.'"
+    />
+    <TimelineItem
+      date="January 20, 2025"
+      title="Day One: 26 Executive Orders"
+      description="Trump signs 26 executive orders on his first day in office — the most of any president. A TIME/Bloomberg analysis finds nearly two-thirds of his early executive actions 'mirror or partially mirror' Project 2025 proposals. He reinstates Schedule F (P2025's cornerstone recommendation), ends federal DEI programs, withdraws from the Paris Climate Agreement, withdraws from WHO, and suspends refugee admissions — all P2025 recommendations."
+    />
+    <TimelineItem
+      date="January 31, 2025"
+      title="NPR Report"
+      description="NPR reports that Trump is 'enacting Project 2025 policies he distanced himself from during the campaign,' documenting the overlap between his executive orders and the Mandate's specific recommendations."
+    />
+    <TimelineItem
+      date="October 2025"
+      title="The Open Embrace"
+      description="During a government shutdown fight, Trump posts on Truth Social: 'I have a meeting today with Russ Vought, he of PROJECT 2025 Fame, to determine which of the many Democrat Agencies, most of which are a political SCAM, he recommends to be cut, and whether or not those cuts will be temporary or permanent.' Vought — who wrote P2025's chapter on the Executive Office of the President — is now Trump's OMB Director."
+    />
+  </TimelineSection>
+
+  <HighlightBar text="Private flight in April 2022. 'I know nothing' in July 2024. 26 executive orders mirroring P2025 in January 2025. 'He of PROJECT 2025 Fame' by October 2025." />
+
+  <!-- THE CONNECTIONS -->
+  <SectionDivider label="The Connections" />
+  <SectionHeader
+    eyebrow="What He Said He Didn't Know"
+    title="The Evidence<br>He Knew"
+    introText="For Trump's denial to be true, he would have to not know about a document written by 140+ of his own former officials, led by an organization whose president he personally praised, flew with, and was briefed by."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="✈️"
+      title="The Private Flight"
+      body="In April 2022, Trump shared a <strong>45-minute private flight</strong> with Kevin Roberts — the president of the Heritage Foundation who oversaw Project 2025 — en route to a Heritage conference where Trump gave the keynote.<br><br>Roberts later confirmed: <em>&quot;I personally have talked to President Trump about Project 2025.&quot;</em><br><br>Trump's campaign denied this. But Trump himself publicly praised Roberts at the conference: <em>&quot;He's going to be so incredible. I know that for a fact.&quot;</em>"
+      tag="45 Minutes"
+    />
+    <CategoryCard
+      icon="✍️"
+      title="His Own Officials Wrote It"
+      body="CNN found that <strong>at least 140 people who worked in the Trump administration</strong> helped write Project 2025.<br><br>The Revolving Door Project found that <strong>former Trump officials authored 25 of the 30 chapters</strong> in the Mandate for Leadership. <strong>Six former Trump Cabinet secretaries</strong> contributed.<br><br>For Trump's denial to be true, 140+ of his own officials wrote a 920-page plan for his presidency — and he had <em>no idea</em>."
+      tag="25 of 30 Chapters"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Heritage's Own Words"
+      body="Kevin Roberts didn't hide the connection. He publicly stated:<br><br>• <em>&quot;The overlap is tremendous&quot;</em> between Trump's platform and P2025<br>• <em>&quot;There's no doubt&quot;</em> that Trump will implement Project 2025<br>• Americans are <em>&quot;excited about the possibility for those areas where President Trump and Project 2025 significantly overlap&quot;</em><br><br>The Heritage Foundation's own president was openly marketing Project 2025 as Trump's governing plan."
+      tag="'No Doubt'"
+    />
+    <CategoryCard
+      icon="👤"
+      title="The Appointments"
+      body="After winning the election, Trump nominated or appointed <strong>at least 31 Project 2025 contributors</strong> to his administration, including:<br><br>• <strong>Russell Vought</strong> (P2025 co-author) → OMB Director<br>• <strong>Brendan Carr</strong> (wrote FCC chapter) → FCC Chairman<br>• <strong>Peter Navarro</strong> (wrote trade chapter) → Senior Counselor<br>• <strong>Tom Homan</strong> (P2025 contributor) → Border Czar<br><br>You don't appoint 31 people from a project you 'know nothing about.'"
+      tag="31+ Appointed"
+    />
+  </CategoryGrid>
+
+  <!-- THE TALKING POINTS -->
+  <SectionDivider label="The Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Facts"
+    title="Testing the<br>Denials"
+    introText="Trump and his supporters have offered several explanations for the Project 2025 connection. Each one is tested against the documented record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Trump has his own platform — Agenda 47. Project 2025 is someone else's plan."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Agenda 47 and Project 2025 are not competing plans — they are <strong>overlapping and complementary</strong>.</p>
+          <p>Kevin Roberts himself said <em>"the overlap is tremendous."</em> A CNN analysis found that most of Trump's early executive actions mirrored <strong>both</strong> Agenda 47 talking points <strong>and</strong> Project 2025's specific policy recommendations.</p>
+          <p>The key difference: Agenda 47 is a set of campaign promises. Project 2025 is the <strong>implementation playbook</strong> — the 920-page manual for how to actually do it, agency by agency, regulation by regulation.</p>
+          <p>Having your own platform doesn't mean you don't also use the detailed blueprint that 140 of your own former officials wrote for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Heritage writes these for every Republican president. It's nothing new."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>This is true — Heritage has published a Mandate for Leadership since 1981. What's different this time:</p>
+          <ul>
+            <li>It was published <strong>earlier than ever</strong> — April 2023, months before the first primary debate</li>
+            <li>It includes a <strong>personnel database</strong> of 20,000 recruits and a <strong>training academy</strong> — no previous Mandate had these</li>
+            <li>It includes a <strong>180-day agency-by-agency playbook</strong> — turning policy into executable operations</li>
+            <li><strong>140+ officials from the intended president's own administration</strong> wrote it — an unprecedented level of insider involvement</li>
+          </ul>
+          <p>Previous Mandates were policy recommendations. Project 2025 is a <strong>full implementation system</strong> — personnel, training, policy, and playbooks — designed specifically for Trump's second term, by Trump's own people.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Trump disagreed with parts of it — that proves he's not connected."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Trump's July 2024 statement said he disagreed with <em>"some of the things they're saying."</em> He never specified what.</p>
+          <p>But disagreeing with some parts of a 920-page document does not mean you have <strong>"nothing to do with"</strong> it. It means you agree with <em>most</em> of it.</p>
+          <p>The record is clear: within one year, <strong>53% of its recommendations were implemented or underway</strong>. That's not the track record of a president who disagreed with the document — it's the track record of one who used it as his governing blueprint.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">04</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The media is using Project 2025 as a scare tactic."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The media didn't write Project 2025. <strong>The Heritage Foundation did.</strong> It's a public document — <a href="https://static.heritage.org/project2025/2025_MandateForLeadership_FULL.pdf" style="color: var(--blue-bright);">available for anyone to read</a>.</p>
+          <p>The proposals documented on this site come <strong>directly from the Mandate for Leadership</strong> — with page numbers. The implementation tracking comes from <strong>the Federal Register and executive orders</strong>. The personnel connections come from <strong>public appointment records</strong>.</p>
+          <p>If Project 2025's own stated goals sound alarming, that is not a media problem. That is a <strong>Project 2025 problem</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p { margin-bottom: 16px; }
+    .tp-facts-content p:last-child { margin-bottom: 0; }
+    .tp-facts-content strong { color: var(--text); }
+    .tp-facts-content em { color: var(--text); font-style: italic; }
+    .tp-facts-content ul { padding-left: 20px; margin: 12px 0; }
+    .tp-facts-content li { margin-bottom: 8px; }
+    .tp-facts-content li:last-child { margin-bottom: 0; }
+  </style>
+
+  <CTASection
+    title="He Denied It.<br>Then He Did It."
+    description="A private flight with its leader. 140+ of his own officials wrote it. 26 executive orders mirroring it on day one. 31+ of its contributors appointed to his administration. 53% implemented within a year. And then he praised its author by name."
+    linkText="← Back to Project 2025"
+    linkHref="/deep-dives/project-2025"
+  />
+
+</ResearchLayout>

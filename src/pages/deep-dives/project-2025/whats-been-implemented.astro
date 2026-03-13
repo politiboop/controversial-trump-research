@@ -1,0 +1,263 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import TimelineSection from '../../../components/design/TimelineSection.astro';
+import TimelineItem from '../../../components/design/TimelineItem.astro';
+import ConsequencesGrid from '../../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "53% of 532 Recommendations Implemented or Underway — February 2026",
+  "26 Executive Orders Signed on Day One Alone",
+  "Two-Thirds of Early Executive Actions Mirror P2025 — TIME/Bloomberg",
+  "92% of USAID Objectives Accomplished",
+  "80%+ of Public Lands Recommendations Enacted",
+  "Schedule F Reinstated on Day One — 50,000 Workers Affected",
+  "317,000 Federal Employees Pushed Out in 2025",
+  "EPA Workforce Cut by 65%+ Under Lee Zeldin",
+  "~800 NOAA Employees Fired February 2025",
+  "CPB Defunded — First President to Actually Do It",
+];
+---
+
+<ResearchLayout title="What's Been Implemented — Project 2025 Deep Dive" description="Tracking Project 2025's implementation: 53% of recommendations acted on within one year. Executive orders, agency gutting, and Schedule F — mapped to the blueprint.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'Project 2025', href: '/deep-dives/project-2025' },
+    { label: "What's Been Implemented" }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Implementation"
+    title="WHAT'S BEEN <span class='word-red'>IMPLEMENTED</span>"
+    subtitle="53% of the blueprint's recommendations — acted on within one year."
+    date="Sources: Federal Register · Center for Progressive Reform · Executive Orders · Agency Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="I have not read it. I don't want to read it, purposely. I'm not going to read it."
+    citation="Donald Trump — September 2024. By February 2026, 283 of 532 specific P2025 recommendations had been implemented or initiated."
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={283} label="Of 532 tracked P2025 recommendations implemented or underway" />
+    <StatCard target={26} label="Executive orders signed on day one — two-thirds mirroring P2025" />
+    <StatCard target={317} suffix="K" label="Federal employees pushed out of government in 2025" />
+    <StatCard target={92} suffix="%" label="Of USAID-related P2025 objectives accomplished" />
+  </StatGrid>
+
+  <!-- TRACKING -->
+  <ColoredSection background="#0a0c12" borderColor="var(--blue)">
+    <AlertBanner icon="📊" title="How Implementation Is Tracked" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The <strong style="color: var(--text);">Center for Progressive Reform</strong> tracks 532 specific administrative policy recommendations from the Mandate for Leadership across 20 federal agencies. Each recommendation is mapped to its corresponding executive order, agency action, or regulation. As of <strong style="color: var(--text);">February 2026 (one year in)</strong>, 53% have been implemented or initiated. Multiple independent organizations — the NAACP Legal Defense Fund, Democracy Forward, and others — maintain additional trackers confirming these findings.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- IMPLEMENTATION RATE -->
+  <SectionDivider label="The Numbers" />
+  <SectionHeader
+    eyebrow="Implementation Rate"
+    title="The Scorecard"
+    introText="How much of Project 2025 has been enacted, broken down by agency and policy area."
+  />
+
+  <ConsequencesGrid eyebrow="By the Numbers" title="Implementation<br>by Sector">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="92%"
+        title="USAID"
+        description="Agency effectively eliminated. Hundreds of thousands of projected excess deaths from aid cuts. 92% of P2025 USAID objectives accomplished."
+      />
+      <ConsequenceItem
+        number="80%+"
+        title="Public Lands"
+        description="Over 80% of P2025 recommendations on public lands implemented or begun, per the Center for Western Priorities (January 2026)."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="53%"
+        title="Overall"
+        description="283 of 532 tracked recommendations implemented or underway across all 20 agencies by February 2026."
+      />
+      <ConsequenceItem
+        number="~40%"
+        title="EPA &amp; DOE"
+        description="Approximately 40% of EPA and Department of Energy P2025 objectives underway. Endangerment finding repeal proposed."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- DAY ONE -->
+  <SectionDivider label="Day One" />
+  <SectionHeader
+    eyebrow="January 20, 2025"
+    title="26 Executive<br>Orders"
+    introText="Trump signed more executive orders on his first day than any president in history. A TIME/Bloomberg Government analysis found that nearly two-thirds mirrored or partially mirrored Project 2025 proposals."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👔"
+      title="Schedule F Reinstated (EO 14171)"
+      body="Trump's very first day: signed <strong>'Restoring Accountability to Policy-Influencing Positions Within the Federal Workforce'</strong> — reinstating Schedule F (renamed 'Schedule Policy/Career').<br><br>This is <strong>the cornerstone of Project 2025</strong> (Chapter 3). It reclassifies up to <strong>50,000 federal workers</strong> as at-will employees who can be fired without cause.<br><br>The final rule was published in <strong>February 2026</strong>. Civil service protections that existed since 1883 are being dismantled."
+      tag="P2025 Chapter 3"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="Federal DEI Eliminated (EO 14151)"
+      body="<strong>'Ending Radical and Wasteful Government DEI Programs'</strong> — ordered the elimination of all diversity, equity, and inclusion programs across the federal government.<br><br>Directly matches <strong>P2025 Chapter 3</strong> (Central Personnel Agencies), which calls for elimination of DEI across all federal agencies.<br><br>Federal employees were given <strong>10 days</strong> to report any DEI programs that had been renamed or hidden."
+      tag="P2025 Chapter 3"
+    />
+    <CategoryCard
+      icon="⚧"
+      title="Gender Policy Reversed (EO 14168)"
+      body="<strong>'Defending Women from Gender Ideology Extremism'</strong> — declared the federal government recognizes only biological sex.<br><br>Directly matches <strong>P2025 Chapter 14</strong> (HHS), which calls for recognizing only biological sex and ending CDC collection of gender identity data.<br><br>Also rescinded Biden's White House Gender Policy Council — a specific P2025 recommendation."
+      tag="P2025 Chapter 14"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="Climate Agreements Withdrawn"
+      body="Withdrew the United States from the <strong>Paris Climate Agreement</strong> and the <strong>World Health Organization</strong> — both specific P2025 recommendations.<br><br>Signed <strong>'Unleashing American Energy'</strong> — rescinding Biden's climate executive orders and directing a review of the EPA's endangerment finding.<br><br>Matches <strong>P2025 Chapters 12 (DOE) and 13 (EPA)</strong>."
+      tag="P2025 Chapters 12-13"
+    />
+    <CategoryCard
+      icon="🛂"
+      title="Immigration Crackdown"
+      body="Declared a <strong>national emergency at the southern border</strong>. Deployed the National Guard. Suspended the <strong>U.S. Refugee Admissions Program</strong>.<br><br>P2025 Chapter 5 (DHS) calls for <strong>'indefinite curtailment'</strong> of refugee admissions and military deployment for border enforcement.<br><br>Tom Homan — a P2025 contributor — was installed as 'Border Czar' to oversee implementation."
+      tag="P2025 Chapter 5"
+    />
+    <CategoryCard
+      icon="⚔️"
+      title="Transgender Military Ban"
+      body="Reversed transgender military service protections — matching <strong>P2025 Chapter 4</strong> (Department of Defense), which calls for eliminating <em>'policies that conflate gender identity with biological sex.'</em><br><br>Signed on day one alongside the other P2025-aligned executive orders."
+      tag="P2025 Chapter 4"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="Day one alone: Schedule F reinstated. DEI eliminated. Gender policy reversed. Climate agreements withdrawn. Refugee admissions suspended. Military trans ban. Every single one a Project 2025 recommendation." />
+
+  <!-- AGENCY BY AGENCY -->
+  <SectionDivider label="Agency by Agency" />
+  <SectionHeader
+    eyebrow="Beyond Day One"
+    title="The Ongoing<br>Dismantling"
+    introText="After the executive orders came the agency-level implementation — workforce reductions, program eliminations, and structural changes that match the Mandate's department-by-department playbook."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🌿"
+      title="EPA: Gutted"
+      body="<strong>EPA Administrator Lee Zeldin</strong> announced plans to cut <strong>more than 65% of the EPA's workforce</strong>.<br><br>• <strong>March 2025:</strong> Announced plans to undo the 2009 <strong>endangerment finding</strong> — the legal basis for all U.S. climate regulation<br>• <strong>August 2025:</strong> Published formal proposal to <strong>repeal the endangerment finding</strong> and all greenhouse gas vehicle emission standards<br>• Rolled back national air quality standards, wastewater limits, and power plant emission rules<br>• Put the Greenhouse Gas Reduction Fund director on administrative leave"
+      tag="P2025 Chapter 13"
+    />
+    <CategoryCard
+      icon="🌊"
+      title="NOAA: Dismantled"
+      body="P2025 called NOAA <em>'one of the main drivers of the climate change alarm industry'</em> and recommended breaking it up. What happened:<br><br>• <strong>~800 NOAA employees fired</strong> on February 27, 2025<br>• <strong>20% reduction</strong> in NOAA workforce since late February<br>• Nearly <strong>400 scientists</strong> working on the National Climate Assessment fired<br>• Proposed budget would <strong>eliminate NOAA's Office of Oceanic and Atmospheric Research</strong><br>• <strong>Ended NOAA's tracking</strong> of billion-dollar weather and climate disasters"
+      tag="P2025 Recommendation"
+    />
+    <CategoryCard
+      icon="🎓"
+      title="Department of Education: Being Shuttered"
+      body="P2025: <em>'Congress should shutter'</em> the Department of Education.<br><br>• Education Secretary <strong>Linda McMahon</strong> overseeing dismantlement<br>• <strong>Lindsey Burke</strong> — who wrote the P2025 education chapter — installed as deputy chief of staff for policy<br>• <strong>Seven interagency partnership contracts</strong> arranged to move functions to other agencies<br>• Slashed <strong>89 independent research contracts</strong> worth ~$900 million<br>• McMahon described moves as 'temporary' pending Congressional codification"
+      tag="P2025 Chapter 11"
+    />
+    <CategoryCard
+      icon="🌐"
+      title="USAID: Eliminated"
+      body="USAID was <strong>effectively shut down in July 2025</strong> — achieving 92% of P2025's objectives for the agency.<br><br>An internal memo projected <strong>hundreds of thousands of excess deaths</strong> from the aid cuts. A Boston University model estimated <strong>over 700,000 excess deaths</strong> by January 2026.<br><br>Decades of foreign aid infrastructure, disaster response capability, and global health programs — dismantled in months."
+      tag="92% Implemented"
+    />
+    <CategoryCard
+      icon="🏥"
+      title="HHS &amp; CDC: Transformed"
+      body="Under HHS Secretary <strong>RFK Jr.</strong>:<br><br>• <strong>Fired the entire 17-member CDC Advisory Committee</strong> on Immunization Practices (ACIP) — June 2025<br>• Installed <strong>vaccine skeptics as replacements</strong><br>• New ACIP <strong>declined to recommend COVID-19 shots</strong> for anyone<br>• <strong>Reversed hepatitis B recommendation</strong> for newborns<br>• Directed CDC to <strong>abandon its position that vaccines don't cause autism</strong> — November 2025<br>• <strong>Terminated $500M</strong> in mRNA vaccine development contracts<br>• <strong>Canceled $800M+</strong> in LGBTQ+ health research grants<br>• <strong>Nine former CDC directors</strong> said Kennedy was 'endangering' the nation's health"
+      tag="P2025 Chapter 14"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Media &amp; Press: Targeted"
+      body="<strong>FCC Chairman Brendan Carr</strong> (who wrote P2025's FCC chapter) investigated and threatened media companies including ABC, NBC, NPR, and PBS.<br><br>• <strong>AG Pam Bondi</strong> issued a DOJ memo allowing subpoenas and search warrants to <strong>force journalists to reveal sources</strong> — April 2025<br>• Trump attempted to <strong>fire CPB board members</strong> and stop funding NPR/PBS<br>• <strong>July 2025:</strong> Congress approved defunding CPB<br>• <strong>October 2025:</strong> CPB lost federal funding — <strong>1,500+ local stations</strong> affected<br>• Trump became the <strong>first president to actually defund</strong> public broadcasting"
+      tag="P2025 Media Chapter"
+    />
+    <CategoryCard
+      icon="👷"
+      title="DOGE: The Wrecking Ball"
+      body="Elon Musk's <strong>Department of Government Efficiency</strong> executed many P2025 goals — often going further than the blueprint itself:<br><br>• DOGE members gained access to <strong>at least 15 federal agencies</strong><br>• Reduced federal employment by <strong>9% in less than 10 months</strong> — approximately <strong>317,000 employees</strong><br>• Musk <strong>left DOGE in May 2025</strong> after legal setbacks and clashes with cabinet<br>• DOGE was <strong>quietly disbanded by OPM</strong> with eight months left in its charter"
+      tag="317,000 Workers"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="DOJ: Politicized"
+      body="P2025 calls for placing the DOJ under direct presidential control. What happened:<br><br>• Replacement of <strong>career civil servants with political appointees</strong><br>• <strong>Elimination of consent decrees</strong> — agreements following investigations into police misconduct<br>• Civil Rights Division <strong>weaponized to target DEI</strong> and affirmative action programs<br>• DOJ memo authorizing <strong>forcing journalists to reveal sources</strong><br>• <strong>FEMA memo</strong> banned 10 climate-related words from documents including 'changing climate,' 'climate resilience,' and 'net zero'"
+      tag="P2025 Chapter 17"
+    />
+  </CategoryGrid>
+
+  <!-- THE PROGRESSION -->
+  <SectionDivider label="The Progression" />
+  <SectionHeader
+    eyebrow="Implementation Rate Over Time"
+    title="The Acceleration"
+    introText="Implementation didn't happen all at once. It accelerated throughout the first year."
+  />
+
+  <TimelineSection eyebrow="Tracking the Rate" title="From 28% to<br>53% in<br>Ten Months">
+    <TimelineItem
+      date="January 20, 2025"
+      title="Day One"
+      description="26 executive orders signed. Two-thirds mirror P2025 recommendations. Schedule F reinstated. DEI eliminated. Climate agreements withdrawn."
+    />
+    <TimelineItem
+      date="April 2025"
+      title="28% Implemented"
+      description="Within three months, 28% of P2025's 532 tracked recommendations have been completed or initiated. OPM proposes formal Schedule F rule affecting 50,000 workers."
+    />
+    <TimelineItem
+      date="July 2025"
+      title="USAID Eliminated"
+      description="USAID effectively shut down — 92% of P2025 USAID objectives accomplished. Congress approves defunding CPB. Federal workforce reductions accelerate."
+    />
+    <TimelineItem
+      date="October 2025"
+      title="47% Underway"
+      description="Nearly half of all P2025 recommendations implemented or in progress. Trump openly praises 'Russ Vought, he of PROJECT 2025 Fame.' CPB loses federal funding."
+    />
+    <TimelineItem
+      date="February 2026"
+      title="53% — One Year Mark"
+      description="283 of 532 recommendations implemented or underway. Final Schedule F rule published. 317,000 federal employees pushed out of government. For comparison: Reagan implemented 49% of Heritage's 1981 Mandate in his first year."
+    />
+  </TimelineSection>
+
+  <HighlightBar text="53% in one year. 317,000 federal workers gone. USAID eliminated. NOAA gutted. Education Department being shuttered. EPA workforce cut 65%+. Public broadcasting defunded. Every piece traceable to the 920-page blueprint." />
+
+  <CTASection
+    title="The Document<br>Became Policy."
+    description="He said he didn't know about it. He said he hadn't read it. Then his administration implemented 53% of it in a single year — agency by agency, executive order by executive order, exactly as the 920-page blueprint specified."
+    linkText="← Back to Project 2025"
+    linkHref="/deep-dives/project-2025"
+  />
+
+</ResearchLayout>

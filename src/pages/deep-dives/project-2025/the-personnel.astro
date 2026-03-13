@@ -1,0 +1,220 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "140+ Former Trump Officials Helped Write Project 2025 — CNN",
+  "25 of 30 Chapters Authored by Former Trump Officials",
+  "6 Former Trump Cabinet Secretaries Contributed",
+  "31+ P2025 Contributors Appointed to Trump's Second Administration",
+  "Russell Vought: P2025 Author → OMB Director",
+  "Brendan Carr: Wrote FCC Chapter → FCC Chairman",
+  "Lindsey Burke: Wrote Education Chapter → Deputy Chief of Staff at Education",
+  "John McEntee: P2025 Personnel Chief → Enforced 'MAGA Purity' in Term 1",
+  "Tom Homan: P2025 Contributor → Border Czar",
+  "Peter Navarro: P2025 Author → Senior Counselor for Trade",
+];
+---
+
+<ResearchLayout title="The Personnel — Project 2025 Deep Dive" description="Who wrote Project 2025, and where they are now. The revolving door between Heritage Foundation authors and Trump administration appointments.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'Project 2025', href: '/deep-dives/project-2025' },
+    { label: 'The Personnel' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The People"
+    title="THE <span class='word-red'>PERSONNEL</span>"
+    subtitle="They wrote the blueprint. Then they got the jobs to implement it."
+    date="Sources: CNN · NBC News · Newsweek · Revolving Door Project · Heritage Foundation · Public Appointment Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Personnel is policy."
+    citation="A founding principle of Project 2025 — and the reason the blueprint includes a database of 20,000 vetted conservative recruits ready for government jobs."
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={140} suffix="+" label="Former Trump officials who helped write Project 2025" />
+    <StatCard target={25} label="Of 30 Mandate chapters authored by former Trump administration officials" />
+    <StatCard target={31} suffix="+" label="P2025 contributors nominated or appointed to the second Trump administration" />
+    <StatCard target={20000} label="Conservative recruits in the P2025 personnel database" />
+  </StatGrid>
+
+  <!-- THE REVOLVING DOOR -->
+  <SectionHeader
+    eyebrow="The Pattern"
+    title="The Revolving<br>Door"
+    introText="The same people who served in Trump's first administration wrote the playbook for his second. Then they were appointed to the positions needed to implement what they wrote. This is not coincidence — it is the system working exactly as designed."
+  />
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🔑" title="The Personnel Database" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Project 2025's second pillar is a <strong style="color: var(--text);">LinkedIn-style personnel database</strong> designed to recruit <strong style="color: var(--text);">20,000 vetted conservatives</strong> for government appointments. Applicants must answer <strong style="color: var(--text);">ideological screening questions</strong> and have their social media scrutinized. The database was overseen by <strong style="color: var(--text);">John McEntee</strong> — Trump's former Presidential Personnel Office director known as the chief enforcer of 'MAGA purity,' who screened first-term officials for loyalty. The goal: ensure that <strong style="color: var(--text);">every political appointee</strong> is pre-vetted for ideological alignment before they enter government.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- KEY APPOINTMENTS -->
+  <SectionDivider label="The Appointments" />
+  <SectionHeader
+    eyebrow="Author → Appointee"
+    title="They Wrote It.<br>Then They<br>Got the Jobs."
+    introText="These are the most consequential cases — people who authored specific chapters of Project 2025 and were then appointed to the positions with authority to implement what they wrote."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📋"
+      title="Russell Vought"
+      body="<strong>P2025 Role:</strong> Authored Chapter 2 — the Executive Office of the President. Deeply involved in drafting the 180-day transition playbook. Described by ProPublica as Trump's 'shadow president.'<br><br><strong>Appointed:</strong> Director of the Office of Management and Budget (OMB) — the person who controls the <strong>entire federal budget</strong>.<br><br><strong>The connection:</strong> The man who wrote the blueprint for how to restructure the executive branch was given control of the federal purse strings. Self-described <strong>Christian nationalist</strong>. Trump later praised him as <em>&quot;he of PROJECT 2025 Fame.&quot;</em>"
+      tag="Author → OMB Director"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Brendan Carr"
+      body="<strong>P2025 Role:</strong> Authored the FCC chapter of the Mandate for Leadership — laying out plans for how to use the FCC to pressure media companies, investigate broadcasters, and reshape telecommunications policy.<br><br><strong>Appointed:</strong> Chairman of the Federal Communications Commission.<br><br><strong>The connection:</strong> He wrote the plan for what the FCC should do. Then he was made FCC Chairman. He has since <strong>investigated and threatened ABC, NBC, NPR, and PBS</strong> — exactly as his chapter recommended."
+      tag="Author → FCC Chairman"
+    />
+    <CategoryCard
+      icon="🎓"
+      title="Lindsey Burke"
+      body="<strong>P2025 Role:</strong> Wrote the education policy proposals in the Mandate — including the recommendation that <em>'Congress should shutter'</em> the Department of Education.<br><br><strong>Appointed:</strong> Deputy Chief of Staff for Policy and Programs at the Department of Education.<br><br><strong>The connection:</strong> The person who wrote the plan to dismantle the Department of Education was placed <strong>inside the Department of Education</strong> to oversee its dismantlement."
+      tag="Author → Education Deputy"
+    />
+    <CategoryCard
+      icon="🏭"
+      title="Peter Navarro"
+      body="<strong>P2025 Role:</strong> Authored the trade chapter of the Mandate for Leadership.<br><br><strong>Appointed:</strong> Senior Counselor for Trade and Manufacturing.<br><br><strong>The connection:</strong> Navarro also served in Trump's first term as a trade adviser. He was <strong>convicted of contempt of Congress</strong> for refusing to comply with the January 6th Committee's subpoena and served four months in federal prison before being appointed again."
+      tag="Author → Trade Counselor"
+    />
+    <CategoryCard
+      icon="🚔"
+      title="Tom Homan"
+      body="<strong>P2025 Role:</strong> Heritage Foundation visiting fellow and Project 2025 contributor. Helped shape the immigration enforcement recommendations.<br><br><strong>Appointed:</strong> 'Border Czar' — leading the administration's mass deportation efforts.<br><br><strong>The connection:</strong> Homan previously served as acting ICE Director under Trump's first term. Now he oversees the implementation of P2025's most visible policy area: mass deportation."
+      tag="Contributor → Border Czar"
+    />
+    <CategoryCard
+      icon="🏦"
+      title="Paul Atkins"
+      body="<strong>P2025 Role:</strong> Project 2025 contributor on financial regulation policy.<br><br><strong>Appointed:</strong> Nominated as Chairman of the Securities and Exchange Commission (SEC).<br><br><strong>The connection:</strong> P2025 calls for placing independent agencies like the SEC under direct presidential control. A P2025 contributor now leads one of those agencies."
+      tag="Contributor → SEC Chairman"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="The author of the executive power chapter runs the budget. The author of the FCC chapter runs the FCC. The author of the education chapter is dismantling the Education Department. This is not coincidence." />
+
+  <!-- MORE APPOINTMENTS -->
+  <SectionDivider label="The Full List" />
+  <SectionHeader
+    eyebrow="31+ Appointments"
+    title="The Complete<br>Picture"
+    introText="Beyond the headline appointments, at least 31 P2025 contributors, authors, instructors, or advisory board members have been nominated, designated, appointed, or confirmed to Trump administration positions."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👤"
+      title="Additional Key Appointments"
+      body="• <strong>Stephen Miller</strong> (P2025 contributor) → Senior White House role<br>• <strong>Jon Feere</strong> (P2025 contributor) → Chief of Staff, ICE<br>• <strong>John Ratcliffe</strong> (P2025 contributor) → CIA Director<br>• <strong>Steven G. Bradbury</strong> (P2025 contributor) → Nominated as Deputy Secretary of Transportation<br>• <strong>Troy Edgar</strong> (P2025 contributor) → Nominated as Deputy Secretary of Homeland Security<br>• <strong>Pete Hoekstra</strong> (P2025 contributor) → Nominated as Ambassador to Canada<br>• <strong>Michael Anton</strong> (P2025 contributor) → Director of Policy Planning<br>• <strong>Stephen Billy</strong> (P2025 contributor) → OMB senior adviser<br>• <strong>Brian J. Cavanaugh</strong> (P2025 contributor) → OMB associate director<br>• <strong>James Baehr</strong> (P2025 contributor) → VA General Counsel"
+      tag="Public Records"
+    />
+    <CategoryCard
+      icon="📊"
+      title="By the Numbers"
+      body="<strong>Who wrote Project 2025:</strong><br>• <strong>140+</strong> former Trump administration officials (CNN)<br>• <strong>25 of 30 chapters</strong> by former Trump officials (Revolving Door Project)<br>• <strong>6 former Cabinet secretaries</strong> contributed<br>• <strong>40 primary authors</strong><br><br><strong>Who's now implementing it:</strong><br>• <strong>31+</strong> P2025 contributors appointed or nominated (Newsweek)<br>• Authors placed in positions <strong>matching their P2025 chapters</strong><br>• Several in <strong>Senate-confirmed roles</strong> with direct implementation authority"
+      tag="The Numbers"
+    />
+  </CategoryGrid>
+
+  <!-- THE ARCHITECTS -->
+  <SectionDivider label="The Architects" />
+  <SectionHeader
+    eyebrow="Behind the Scenes"
+    title="The People<br>Who Built It"
+    introText="Project 2025 was not a grassroots effort. It was organized by specific individuals with deep ties to Trump's first administration and the conservative movement's institutional infrastructure."
+  />
+
+  <VoicesSection
+    eyebrow="The Architects"
+    title="In Their<br>Own Words"
+    introText="What the people who built Project 2025 said about their goals."
+  >
+    <VoiceCard
+      quote="This is a great group and they're going to lay the groundwork and detail plans for exactly what our movement will do... when the American people give us a colossal mandate to save America."
+      name="Donald Trump"
+      role="Former President"
+      detail="Heritage Foundation keynote · April 2022"
+      context="This was said at the same conference where Heritage was developing Project 2025 — before Trump claimed to know nothing about it."
+    />
+    <VoiceCard
+      quote="He's going to be so incredible. I know that for a fact."
+      name="Donald Trump"
+      role="Former President"
+      detail="About Kevin Roberts, Heritage Foundation President · April 2022"
+      context="Roberts oversees Project 2025. Two years later, Trump claimed: 'I have no idea who is behind it.'"
+    />
+    <VoiceCard
+      quote="I personally have talked to President Trump about Project 2025."
+      name="Kevin Roberts"
+      role="President, The Heritage Foundation"
+      detail="Trump's campaign denied this claim"
+    />
+    <VoiceCard
+      quote="We are in the process of the second American Revolution, which will remain bloodless if the left allows it to be."
+      name="Kevin Roberts"
+      role="President, The Heritage Foundation"
+      detail="Steve Bannon's podcast · July 2, 2024"
+      context="This statement triggered Trump's public distancing from Project 2025 three days later."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="Kevin Roberts"
+      body="<strong>President of The Heritage Foundation</strong> since October 2021. Oversaw the creation and publication of Project 2025. Wrote the foreword to the Mandate for Leadership.<br><br>• Shared a <strong>45-minute private flight</strong> with Trump (April 2022)<br>• Said <em>&quot;the overlap is tremendous&quot;</em> between Trump's platform and P2025<br>• Said <em>&quot;there's no doubt&quot;</em> Trump will implement P2025<br>• Confirmed personally briefing Trump on Project 2025<br>• Assumed direct leadership of P2025 after Paul Dans stepped down"
+      tag="P2025 Leader"
+    />
+    <CategoryCard
+      icon="📋"
+      title="Paul Dans"
+      body="<strong>Director of Project 2025</strong> from its inception until July 2024. Former Trump White House official (Office of Personnel Management).<br><br>Led the day-to-day development of the Mandate, the personnel database, and the training academy. <strong>Stepped down in July 2024</strong> amid political controversy following Roberts' 'second American Revolution' comment — after which Kevin Roberts assumed leadership."
+      tag="Former Director"
+    />
+    <CategoryCard
+      icon="👤"
+      title="John McEntee"
+      body="<strong>Senior advisor</strong> overseeing Project 2025's personnel database. Former director of Trump's <strong>Presidential Personnel Office</strong> — where he was known as the chief enforcer of 'MAGA purity.'<br><br>During Trump's first term, McEntee screened officials for loyalty and orchestrated the removal of those deemed insufficiently loyal. At P2025, he built the <strong>database of 20,000 vetted conservatives</strong> to ensure the second term would be staffed exclusively with loyalists from day one."
+      tag="Personnel Chief"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="They Wrote It.<br>They Got the Jobs.<br>They're Doing It."
+    description="140+ former Trump officials wrote the blueprint. 31+ were appointed to implement it. The authors of specific chapters were placed in the exact positions needed to carry out their recommendations. Personnel is policy — and this is the proof."
+    linkText="← Back to Project 2025"
+    linkHref="/deep-dives/project-2025"
+  />
+
+</ResearchLayout>

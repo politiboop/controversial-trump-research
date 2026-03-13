@@ -1,0 +1,235 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "Brennan Center: 'A Dangerous Vision for the Presidency'",
+  "ACLU: 'Promises to Turn Presidents into Kings'",
+  "Nine Former CDC Directors: Kennedy Is 'Endangering' the Nation's Health",
+  "700,000+ Projected Excess Deaths from USAID Cuts — Boston University",
+  "Civil Service Protections Existed Since 1883 — Now Being Dismantled",
+  "Scholars Compare P2025 to Hungary, Turkey, Russia Tactics",
+  "Center for American Progress: 'Would Create an Imperial Presidency'",
+  "1,500+ Local Broadcast Stations Lost Federal Funding",
+  "317,000 Federal Workers Lost Jobs in 2025",
+  "Schedule F: 50,000 Workers Could Lose At-Will Protections",
+];
+---
+
+<ResearchLayout title="The Consequences — Project 2025 Deep Dive" description="What constitutional scholars, former officials, and democracy experts say about Project 2025's impact on American governance, public health, and democratic institutions.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'Project 2025', href: '/deep-dives/project-2025' },
+    { label: 'The Consequences' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · What It Means"
+    title="THE <span class='word-red'>CONSEQUENCES</span>"
+    subtitle="What experts say Project 2025 means for democracy, public health, and American life."
+    date="Sources: Constitutional Scholars · Former Government Officials · Democracy Experts · Public Health Analysis"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Project 2025 is a plan for an authoritarian takeover of the United States."
+    citation="Ruth Ben-Ghiat — NYU scholar of fascism and authoritarian leaders, May 2024"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={317} suffix="K" label="Federal employees pushed out of government — institutional knowledge lost" />
+    <StatCard target={700} suffix="K+" label="Projected excess deaths from USAID elimination — Boston University model" />
+    <StatCard target={1500} suffix="+" label="Local broadcast stations that lost federal funding" />
+    <StatCard target={50} suffix="K" label="Federal workers who could lose civil service protections under Schedule F" />
+  </StatGrid>
+
+  <!-- EXPERT WARNINGS -->
+  <SectionDivider label="Expert Warnings" />
+  <SectionHeader
+    eyebrow="What Scholars Say"
+    title="The Expert<br>Consensus"
+    introText="Constitutional scholars, democracy researchers, civil liberties organizations, and former government officials have analyzed Project 2025's proposals and their implementation. Their assessments are remarkably consistent."
+  />
+
+  <VoicesSection
+    eyebrow="Constitutional Scholars"
+    title="In Their<br>Own Words"
+    introText="What experts on democracy, authoritarianism, and constitutional law have concluded about Project 2025."
+  >
+    <VoiceCard
+      quote="Project 2025 is a plan for an authoritarian takeover of the United States. The intent to abolish federal departments is to destroy the legal and governance cultures of liberal democracy and create new bureaucratic structures, staffed by new politically vetted cadres, to support autocratic rule."
+      name="Ruth Ben-Ghiat"
+      role="NYU Professor"
+      detail="Scholar of fascism and authoritarian leaders · May 2024"
+    />
+    <VoiceCard
+      quote="If Project 2025 is implemented, what it means is a dramatic decrease in American citizens' ability to engage in public life based on the kind of principles of liberty, freedom and representation that are accorded in a democracy."
+      name="Rachel Beatty Riedl"
+      role="Cornell University"
+      detail="Political Scientist"
+    />
+    <VoiceCard
+      quote="Project 2025 would destroy the U.S. system of checks and balances and create an imperial presidency. It is a 920-page road map for a future president to wield excessive power, trampling on Congress' constitutional role."
+      name="Center for American Progress"
+      role="Policy Analysis"
+      detail="Institutional assessment of the Mandate for Leadership"
+    />
+    <VoiceCard
+      quote="Project 2025 promises to harm our communities and turn presidents into kings."
+      name="American Civil Liberties Union"
+      role="ACLU"
+      detail="Organizational assessment"
+    />
+  </VoicesSection>
+
+  <!-- DEMOCRATIC EROSION -->
+  <SectionDivider label="Democratic Erosion" />
+  <SectionHeader
+    eyebrow="Separation of Powers"
+    title="The Democracy<br>Question"
+    introText="At its core, Project 2025 is built on the 'unitary executive theory' — the idea that the president should have near-total control over the entire executive branch, including agencies that have historically operated with independence."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚖️"
+      title="Checks and Balances"
+      body="The Mandate explicitly calls for:<br><br>• <strong>Placing all independent agencies</strong> (FCC, FTC, SEC, etc.) under direct presidential control<br>• <strong>Eliminating the independence of inspectors general</strong> — the government's internal watchdogs<br>• <strong>'Sharply diminishing Congress' imperative role'</strong> as a check on executive power<br>• Making the DOJ an arm of the presidency<br><br>The Brennan Center for Justice described this as <em>&quot;a dangerous vision for the presidency&quot;</em> that would undermine <strong>the rule of law, separation of powers, separation of church and state, and civil liberties</strong>."
+      tag="Brennan Center Warning"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="Global Comparisons"
+      body="Political scientists have noted that Project 2025's approach mirrors <strong>authoritarian tactics</strong> documented in other countries:<br><br>• <strong>Hungary (Orban):</strong> Systematic capture of independent institutions<br>• <strong>Turkey (Erdogan):</strong> Purging civil servants and replacing them with loyalists<br>• <strong>Russia:</strong> Eliminating media independence and press freedom<br>• <strong>Venezuela:</strong> Using democratic institutions to consolidate power<br><br>Scholars call this process <strong>'executive aggrandizement'</strong> or <strong>'democratic backsliding'</strong> — using democratic mechanisms to undermine democracy itself."
+      tag="Democratic Backsliding"
+    />
+    <CategoryCard
+      icon="👔"
+      title="The Civil Service"
+      body="Schedule F dismantles protections that have existed since the <strong>Pendleton Civil Service Reform Act of 1883</strong> — which was passed after President Garfield was assassinated by a man angry about not receiving a government patronage job.<br><br>For 140 years, civil service protections ensured that government employees were hired and retained based on <strong>merit, not political loyalty</strong>. Schedule F reverses this for up to 50,000 positions — creating a system where career experts can be fired and replaced with <strong>political loyalists</strong> regardless of qualifications."
+      tag="Since 1883"
+    />
+    <CategoryCard
+      icon="📰"
+      title="Press Freedom"
+      body="The implementation of P2025's media recommendations has been swift:<br><br>• <strong>Public broadcasting defunded</strong> — 1,500+ local stations affected<br>• FCC Chairman (P2025 author) <strong>investigating and threatening</strong> news networks<br>• DOJ authorized to <strong>force journalists to reveal sources</strong><br>• <strong>NPR, PBS, CPB</strong> lost federal funding for the first time in history<br><br>A free press is a foundational check on government power. Defunding public media and pressuring private media simultaneously narrows the information environment."
+      tag="First Amendment"
+    />
+  </CategoryGrid>
+
+  <!-- PUBLIC HEALTH -->
+  <SectionDivider label="Public Health" />
+  <SectionHeader
+    eyebrow="Health Consequences"
+    title="The Human<br>Cost"
+    introText="Project 2025's implementation has had measurable consequences for public health — from vaccine policy reversals to the elimination of foreign aid that sustained millions of lives."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💉"
+      title="Vaccine Policy Reversal"
+      body="Under HHS Secretary RFK Jr., implementing P2025 Chapter 14 recommendations:<br><br>• <strong>Fired the entire 17-member CDC Advisory Committee</strong> on Immunization Practices — the expert body that has guided U.S. vaccine policy for decades<br>• Installed <strong>vaccine skeptics as replacements</strong><br>• New committee <strong>declined to recommend COVID-19 shots</strong> for anyone<br>• <strong>Reversed hepatitis B recommendation</strong> for newborns<br>• Directed CDC to <strong>abandon its position that vaccines don't cause autism</strong> — with no new scientific evidence<br>• <strong>Terminated $500M</strong> in mRNA vaccine development contracts<br><br><strong>Nine former CDC directors</strong> — from both Republican and Democratic administrations — said Kennedy was <em>'endangering'</em> the nation's health."
+      tag="9 Former Directors Warned"
+    />
+    <CategoryCard
+      icon="🌐"
+      title="USAID Elimination: 700,000+ Projected Deaths"
+      body="USAID was effectively shut down in July 2025, achieving <strong>92% of P2025's objectives</strong> for the agency. The consequences:<br><br>• An internal memo projected <strong>hundreds of thousands of excess deaths</strong><br>• A Boston University model estimated <strong>over 700,000 excess deaths</strong> by January 2026<br>• Decades of <strong>HIV/AIDS treatment programs</strong> (PEPFAR) disrupted<br>• <strong>Malaria prevention</strong>, <strong>maternal health</strong>, and <strong>disaster response</strong> programs eliminated<br>• Global food assistance programs cut<br><br>These were not theoretical programs. They were <strong>active interventions keeping people alive</strong>."
+      tag="700,000+ Deaths"
+    />
+    <CategoryCard
+      icon="🏥"
+      title="Reproductive Health"
+      body="By November 2025, approximately <strong>40% of P2025 reproductive freedom restrictions</strong> had been implemented:<br><br>• Healthcare policy changes affecting <strong>LGBTQ+ individuals</strong><br>• <strong>Trans healthcare coverage</strong> restrictions<br>• <strong>Canceled $800M+</strong> in LGBTQ+ health research grants<br>• Title X family planning restrictions underway<br><br>The Mandate also calls for <strong>revoking FDA approval of mifepristone</strong> and enforcing the 1873 <strong>Comstock Act</strong> to create a de facto national abortion ban — proposals that have not yet been fully enacted."
+      tag="40% Implemented"
+    />
+  </CategoryGrid>
+
+  <!-- ENVIRONMENTAL -->
+  <SectionDivider label="Environmental" />
+  <SectionHeader
+    eyebrow="Climate and Environment"
+    title="The Environmental<br>Consequences"
+    introText="Project 2025's climate and environmental proposals are among the most aggressively implemented — with the goal of dismantling the entire regulatory framework for addressing climate change."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🌡️"
+      title="The Endangerment Finding"
+      body="The EPA's 2009 <strong>endangerment finding</strong> is the legal basis for all major U.S. climate regulations. It established that greenhouse gas emissions endanger public health and welfare.<br><br>In August 2025, the EPA published a formal proposal to <strong>repeal the endangerment finding</strong> and all greenhouse gas vehicle emission standards that rely on it.<br><br>If finalized, this would <strong>eliminate the legal foundation</strong> for virtually every federal climate regulation — air quality standards, vehicle emissions limits, power plant rules, and more."
+      tag="Foundation of Climate Law"
+    />
+    <CategoryCard
+      icon="🌊"
+      title="NOAA and Climate Science"
+      body="The Mandate described NOAA as <em>'one of the main drivers of the climate change alarm industry.'</em> The implementation:<br><br>• <strong>~800 employees fired</strong> in a single day<br>• Nearly <strong>400 climate scientists</strong> terminated<br>• NOAA's tracking of <strong>billion-dollar weather disasters ended</strong><br>• Proposed budget would <strong>eliminate the Office of Oceanic and Atmospheric Research</strong><br><br>NOAA provides the weather forecasts, hurricane tracking, and climate data that Americans rely on daily. Gutting it doesn't change the climate — it changes what we <strong>know about</strong> the climate."
+      tag="Science Under Attack"
+    />
+    <CategoryCard
+      icon="🏔️"
+      title="Public Lands"
+      body="Over <strong>80% of P2025 public lands recommendations</strong> have been implemented or begun (Center for Western Priorities, January 2026).<br><br>This includes expanded fossil fuel leasing, reduced environmental protections, and rollbacks of conservation measures on federal lands.<br><br>The <strong>FEMA memo</strong> banning climate-related words — including 'changing climate,' 'climate resilience,' and 'net zero' — from official documents illustrates the approach: if you can't see the words, the problem doesn't exist."
+      tag="80%+ Implemented"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="700,000+ projected excess deaths from aid cuts. Vaccine advisory committee replaced with skeptics. Climate science infrastructure gutted. Press freedom narrowed. Civil service protections from 1883 dismantled. These are the documented consequences." />
+
+  <!-- WHAT COMES NEXT -->
+  <SectionDivider label="What's Still Coming" />
+  <SectionHeader
+    eyebrow="The Remaining 47%"
+    title="What Hasn't<br>Happened Yet"
+    introText="53% of Project 2025's recommendations have been implemented or initiated. That means 47% remain — including some of the most consequential proposals."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💊"
+      title="Comstock Act Enforcement"
+      body="The Mandate calls for enforcing the <strong>Comstock Act of 1873</strong> to ban mailing abortion pills. Legal experts say full enforcement could create a <strong>de facto national abortion ban</strong> — even in states where abortion is legal.<br><br>The Guttmacher Institute notes this would affect <strong>medication abortion</strong>, which now accounts for the majority of abortions in the United States. This recommendation has not yet been fully enacted."
+      tag="Not Yet Enacted"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Full Agency Elimination"
+      body="While the Department of Education is being shuttered and USAID has been eliminated, P2025 also calls for:<br><br>• <strong>Privatizing the National Weather Service</strong><br>• <strong>Eliminating the CFPB</strong> (Consumer Financial Protection Bureau)<br>• Further gutting or restructuring <strong>EPA, NOAA, HHS</strong><br><br>Congressional action is required for permanent agency elimination. Some restructuring is proceeding through <strong>executive action and budget cuts</strong>."
+      tag="Requires Congress"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Full DOJ Capture"
+      body="While significant steps have been taken to politicize the DOJ — including eliminating consent decrees and authorizing source-revealing subpoenas for journalists — the full P2025 vision of <strong>complete presidential control over law enforcement</strong> has not been fully realized.<br><br>The Mandate envisions a DOJ that operates as a <strong>direct extension of presidential authority</strong>, with the FBI, the Civil Rights Division, and federal prosecutors answerable to the White House."
+      tag="In Progress"
+    />
+  </CategoryGrid>
+
+  <CTASection
+    title="The Consequences<br>Are Real."
+    description="This is not a theoretical exercise. 317,000 federal workers lost their jobs. Vaccine policy was reversed. Foreign aid was eliminated. Climate science infrastructure was gutted. Press freedom was narrowed. And 47% of the blueprint's recommendations have not yet been implemented."
+    linkText="← Back to Project 2025"
+    linkHref="/deep-dives/project-2025"
+  />
+
+</ResearchLayout>

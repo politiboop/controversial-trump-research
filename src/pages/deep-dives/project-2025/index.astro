@@ -1,0 +1,203 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import NavigationGrid from '../../../components/navigation/NavigationGrid.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "920 Pages — Published April 2023 by The Heritage Foundation",
+  "140+ Former Trump Officials Helped Write It",
+  "25 of 30 Chapters Written by Former Trump Officials",
+  "53% of Recommendations Implemented or Underway by February 2026",
+  "Trump: 'I Know Nothing About Project 2025' — July 2024",
+  "Trump: 'Russ Vought, He of PROJECT 2025 Fame' — October 2025",
+  "50,000 Federal Workers Could Lose Civil Service Protections",
+  "317,000 Federal Employees Pushed Out in 2025",
+  "110+ Conservative Organizations in the Coalition",
+  "Kevin Roberts: 'The Overlap Is Tremendous'",
+];
+
+const sectionCards = [
+  {
+    icon: '📋',
+    title: 'The Blueprint',
+    description: 'What the 920-page document actually says — department by department, policy by policy. The four pillars, the 30 chapters, and the most consequential proposals.',
+    href: '/deep-dives/project-2025/the-blueprint',
+    tag: '920 Pages',
+  },
+  {
+    icon: '🤥',
+    title: "Trump's Denials vs. Reality",
+    description: '"I know nothing about Project 2025." Every denial, mapped against the 140+ connections, the private flight, and his own words embracing it months later.',
+    href: '/deep-dives/project-2025/trumps-denials',
+    tag: 'Denial → Embrace',
+  },
+  {
+    icon: '📊',
+    title: "What's Been Implemented",
+    description: '53% of recommendations acted on within one year. Executive orders, agency gutting, Schedule F, and more — tracked against the original blueprint.',
+    href: '/deep-dives/project-2025/whats-been-implemented',
+    tag: '53% and Counting',
+  },
+  {
+    icon: '👤',
+    title: 'The Personnel',
+    description: 'Who wrote Project 2025, and where they are now. The revolving door between Heritage Foundation authors and Trump administration appointments.',
+    href: '/deep-dives/project-2025/the-personnel',
+    tag: '31+ Appointed',
+  },
+  {
+    icon: '⚠️',
+    title: 'The Consequences',
+    description: 'What constitutional scholars, former officials, and democracy experts say about what Project 2025 means for American governance.',
+    href: '/deep-dives/project-2025/the-consequences',
+    tag: 'Expert Warnings',
+  },
+];
+---
+
+<ResearchLayout title="Project 2025 — Deep Dive" description="The 920-page blueprint Trump denied knowing about — then implemented. What it says, who wrote it, what's been enacted, and what it means.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'Project 2025' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The 920-Page Blueprint"
+    title="PROJECT <span class='word-red'>2025</span>"
+    subtitle="He said he knew nothing about it. Then he implemented it."
+    date="Sources: The Heritage Foundation · Federal Register · Executive Orders · Congressional Records · Tracking Organizations"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="I know nothing about Project 2025. I have no idea who is behind it."
+    citation="Donald Trump — Truth Social, July 5, 2024. Within one year, 53% of the blueprint's recommendations were implemented or underway."
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={53} suffix="%" label="Of Project 2025's 532 recommendations implemented or underway by February 2026" />
+    <StatCard target={140} suffix="+" label="Former Trump administration officials who helped write the blueprint" />
+    <StatCard target={920} label="Pages in the 'Mandate for Leadership' policy document" />
+    <StatCard target={317} suffix="K" label="Federal employees pushed out of government in the first year" />
+  </StatGrid>
+
+  <!-- THE DENIAL -->
+  <SectionHeader
+    eyebrow="The Contradiction"
+    title="Denied It.<br>Implemented It."
+    introText="Trump publicly disavowed Project 2025 during the 2024 campaign. Then he staffed his administration with its authors, signed its recommendations into law on day one, and eventually praised its architect by name."
+  />
+
+  <VoicesSection
+    eyebrow="In Their Words"
+    title="The Denial &amp;<br>the Reveal"
+    introText="Watch the story change — from 'I know nothing' to 'he of PROJECT 2025 Fame.'"
+  >
+    <VoiceCard
+      quote="I know nothing about Project 2025. I have no idea who is behind it. I disagree with some of the things they're saying and some of the things they're saying are absolutely ridiculous and abysmal."
+      name="Donald Trump"
+      role="Former President"
+      detail="Truth Social · July 5, 2024"
+      context="At least 140 former Trump officials helped write it. Trump had shared a private flight with its leader Kevin Roberts in April 2022."
+    />
+    <VoiceCard
+      quote="I have nothing to do with Project 2025. That is out there. I have not read it. I don't want to read it, purposely. I'm not going to read it."
+      name="Donald Trump"
+      role="Former President"
+      detail="ABC News Presidential Debate · September 10, 2024"
+      context="By this point, 25 of the document's 30 chapters had been written by former Trump administration officials."
+    />
+    <VoiceCard
+      quote="I have a meeting today with Russ Vought, he of PROJECT 2025 Fame, to determine which of the many Democrat Agencies, most of which are a political SCAM, he recommends to be cut."
+      name="Donald Trump"
+      role="President"
+      detail="Truth Social · October 2025"
+      context="Vought wrote Project 2025's chapter on the Executive Office of the President. Trump appointed him as OMB Director — the person who controls the federal budget."
+    />
+    <VoiceCard
+      quote="The overlap is tremendous."
+      name="Kevin Roberts"
+      role="President, The Heritage Foundation"
+      detail="Describing alignment between Trump's platform and Project 2025"
+    />
+  </VoicesSection>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--blue)">
+    <AlertBanner icon="📋" title="How This Investigation Works" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This deep dive breaks Project 2025 into five sections: <strong style="color: var(--text);">the blueprint</strong> (what it actually says), <strong style="color: var(--text);">Trump's denials</strong> (mapped against reality), <strong style="color: var(--text);">what's been implemented</strong> (tracked with sources), <strong style="color: var(--text);">the personnel</strong> (who wrote it and where they are now), and <strong style="color: var(--text);">the consequences</strong> (what experts say it means). Every claim is sourced to the document itself, executive orders, or the federal record.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE BIG PICTURE -->
+  <SectionDivider label="The Big Picture" />
+  <SectionHeader
+    eyebrow="Before the Details"
+    title="The Landscape"
+    introText="Before diving into the specifics, here's what the full picture looks like — from the document's publication to its implementation."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📖"
+      title="Not a Wish List — A Playbook"
+      body="Project 2025 isn't just a policy document. It has <strong>four pillars</strong>:<br><br>• A <strong>920-page policy blueprint</strong> covering every federal agency<br>• A <strong>personnel database</strong> of 20,000 vetted conservatives for government jobs<br>• A <strong>Presidential Administration Academy</strong> training political appointees<br>• A <strong>180-day transition playbook</strong> for each agency<br><br>This is an <strong>implementation machine</strong>, not a think tank paper."
+      tag="Four Pillars"
+    />
+    <CategoryCard
+      icon="🔄"
+      title="The Revolving Door"
+      body="• <strong>140+ former Trump officials</strong> helped write it (CNN)<br>• <strong>25 of 30 chapters</strong> authored by former Trump officials (Revolving Door Project)<br>• <strong>6 former Trump Cabinet secretaries</strong> contributed<br>• <strong>31+ P2025 contributors</strong> nominated or appointed to the second Trump administration<br><br>The people who wrote the blueprint <strong>are now in position to implement it</strong>."
+      tag="140+ Trump Officials"
+    />
+    <CategoryCard
+      icon="📈"
+      title="53% Implemented in Year One"
+      body="The Center for Progressive Reform tracks 532 specific P2025 recommendations across 20 agencies. By February 2026:<br><br>• <strong>53% implemented or underway</strong> (283 of 532)<br>• <strong>92%</strong> of USAID objectives accomplished<br>• <strong>80%+</strong> of public lands recommendations enacted<br>• <strong>~40%</strong> of EPA and DOE objectives underway<br><br>For comparison: Reagan implemented <strong>49%</strong> of Heritage's 1981 Mandate in his first year."
+      tag="283 of 532"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="He Said He Didn't Know"
+      body="Trump's denials followed a clear arc:<br><br>• <strong>July 2024:</strong> &quot;I know nothing about Project 2025&quot;<br>• <strong>September 2024:</strong> &quot;I have not read it. I don't want to read it&quot;<br>• <strong>January 2025:</strong> Signs 26 executive orders — two-thirds mirror P2025<br>• <strong>October 2025:</strong> Praises &quot;Russ Vought, he of PROJECT 2025 Fame&quot;<br><br>From <strong>total denial</strong> to <strong>open embrace</strong> in 15 months."
+      tag="Denial → Implementation"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="920 pages. 140+ Trump officials. 53% implemented. 317,000 federal workers pushed out. He said he knew nothing about it. Then he implemented it." />
+
+  <!-- SECTION NAVIGATION -->
+  <SectionHeader
+    eyebrow="The Investigation"
+    title="Choose a<br>Section"
+    introText="Each section examines a different dimension of Project 2025 — what it says, who's behind it, what's been implemented, and what it means for the country."
+  />
+
+  <NavigationGrid cards={sectionCards} />
+
+  <CTASection
+    title="The Blueprint<br>Is the Record."
+    description="920 pages of plans. 140+ authors from Trump's first administration. 53% implemented within a year. The document speaks for itself — and so does the implementation."
+    linkText="← Back to Deep Dives"
+    linkHref="/deep-dives"
+  />
+
+</ResearchLayout>

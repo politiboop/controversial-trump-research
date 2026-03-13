@@ -1,0 +1,228 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "920 Pages · 30 Chapters · 40 Primary Authors",
+  "Published April 2023 — Earliest-Ever Mandate for Leadership",
+  "Personnel Database: 20,000 Vetted Conservative Recruits",
+  "180-Day Playbook for Every Federal Agency",
+  "Presidential Administration Academy for Training Appointees",
+  "110+ Conservative Organizations in the Coalition",
+  "Four Stated Goals: Family, Administrative State, Borders, 'God-Given Rights'",
+  "Built on the 'Unitary Executive Theory'",
+  "Heritage's 1981 Mandate: Reagan Implemented 49% in Year One",
+  "Trump's First Term: 64% of 2016 Mandate Implemented",
+];
+---
+
+<ResearchLayout title="The Blueprint — Project 2025 Deep Dive" description="What the 920-page 'Mandate for Leadership' actually says — department by department, policy by policy. The four pillars and the most consequential proposals.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'Project 2025', href: '/deep-dives/project-2025' },
+    { label: 'The Blueprint' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Document"
+    title="THE <span class='word-red'>BLUEPRINT</span>"
+    subtitle="920 pages. 30 chapters. A department-by-department plan to reshape the federal government."
+    date="Source: 'Mandate for Leadership: The Conservative Promise' — The Heritage Foundation, April 2023"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="It is not enough for conservatives to win elections. If we are going to rescue the country from the grip of the radical Left, we need both a governing agenda and the right people in place."
+    citation="Kevin Roberts — President of The Heritage Foundation, Project 2025 foreword"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={920} label="Pages in the 'Mandate for Leadership' policy document" />
+    <StatCard target={30} label="Chapters — one for nearly every federal department and agency" />
+    <StatCard target={110} suffix="+" label="Conservative organizations in the Project 2025 coalition" />
+    <StatCard target={20000} label="Conservative recruits in the personnel database" />
+  </StatGrid>
+
+  <!-- WHAT IT IS -->
+  <SectionHeader
+    eyebrow="The Structure"
+    title="More Than<br>a Document"
+    introText="Project 2025 is not a policy paper. It is a four-part implementation machine designed to ensure that a conservative president can begin reshaping the federal government on day one — with trained personnel, detailed playbooks, and a vetted workforce ready to deploy."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📖"
+      title="Pillar 1: The Policy Guide"
+      body="The 920-page <strong>'Mandate for Leadership: The Conservative Promise'</strong> — the ninth edition in a Heritage Foundation series dating back to 1981.<br><br>It covers <strong>every major federal department</strong> with specific, actionable policy recommendations: what to change, what to eliminate, what to create. Published in April 2023 — <strong>months before the first presidential primary debate</strong> — making it the earliest Mandate ever released."
+      tag="920 Pages"
+    />
+    <CategoryCard
+      icon="👤"
+      title="Pillar 2: The Personnel Database"
+      body="A <strong>LinkedIn-style database</strong> designed to recruit <strong>20,000 vetted conservatives</strong> for government appointments.<br><br>Applicants must answer <strong>ideological screening questions</strong> and have their <strong>social media scrutinized</strong> for alignment. Overseen by <strong>John McEntee</strong>, Trump's former Presidential Personnel Office director, known as the chief enforcer of 'MAGA purity' during the first term."
+      tag="20,000 Recruits"
+    />
+    <CategoryCard
+      icon="🎓"
+      title="Pillar 3: The Training Academy"
+      body="The <strong>Presidential Administration Academy</strong> — an online training program to <em>'prepare and equip future political appointees now to be ready on Day One.'</em><br><br>Courses cover how to navigate federal agencies, implement conservative policies, and overcome bureaucratic resistance. The goal: <strong>no learning curve</strong>. Appointees arrive knowing exactly what to do and how to do it."
+      tag="Day One Ready"
+    />
+    <CategoryCard
+      icon="📋"
+      title="Pillar 4: The 180-Day Playbook"
+      body="A <strong>detailed transition plan for each federal agency</strong>, developed by Russell Vought (who Trump later appointed as OMB Director).<br><br>The playbook specifies <strong>exactly what actions to take</strong> in the first six months — which regulations to reverse, which offices to close, which personnel to replace. It transforms campaign promises into <strong>executable government operations</strong>."
+      tag="Agency by Agency"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="This is not a wish list. It is a personnel system, a training program, a policy document, and a day-by-day implementation plan — built years in advance." />
+
+  <!-- THE COALITION -->
+  <SectionDivider label="The Coalition" />
+  <SectionHeader
+    eyebrow="Who's Behind It"
+    title="The Network"
+    introText="Project 2025 is not a fringe effort. It was organized by the Heritage Foundation — the most influential conservative think tank in America — and backed by a coalition of over 110 organizations spanning every major policy area."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="The Heritage Foundation"
+      body="Heritage has produced a <strong>Mandate for Leadership for every Republican president since Reagan</strong>. Their track record:<br><br>• <strong>Reagan (1981):</strong> Implemented ~49% of Mandate recommendations in year one<br>• <strong>Trump (2017):</strong> Implemented 64% of the 2016 Mandate after one year<br><br>Project 2025's Mandate is the most ambitious yet — published <strong>earlier than any previous edition</strong> and backed by the largest coalition ever assembled."
+      tag="Since 1981"
+    />
+    <CategoryCard
+      icon="🔗"
+      title="The Coalition Partners"
+      body="Over <strong>110 conservative organizations</strong> joined Project 2025's advisory board, including:<br><br>• <strong>Alliance Defending Freedom</strong> — anti-LGBTQ+ litigation group<br>• <strong>America First Legal Foundation</strong> — Stephen Miller's organization<br>• <strong>Center for Immigration Studies</strong> — restrictionist think tank<br>• <strong>Claremont Institute</strong> — intellectual home of 'unitary executive' theory<br>• <strong>American Legislative Exchange Council</strong> (ALEC)<br>• <strong>Susan B. Anthony Pro-Life America</strong>"
+      tag="110+ Organizations"
+    />
+  </CategoryGrid>
+
+  <!-- KEY PROPOSALS -->
+  <SectionDivider label="The Proposals" />
+  <SectionHeader
+    eyebrow="What It Actually Says"
+    title="The Key<br>Proposals"
+    introText="The following are direct from the Mandate for Leadership document. These are not interpretations or characterizations — they are the stated policy recommendations, organized by topic."
+  />
+
+  <!-- SCHEDULE F -->
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🔑" title="The Cornerstone: Schedule F" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The single most important proposal in Project 2025 is <strong style="color: var(--text);">Schedule F</strong> — reclassifying tens of thousands of career federal employees as at-will workers who can be <strong style="color: var(--text);">fired for failing to 'faithfully implement administration policies.'</strong> This removes civil service protections that have existed since 1883. It is the mechanism that enables everything else: once you can fire career experts and replace them with loyalists, every other policy change becomes possible. <strong style="color: var(--text);">Trump signed this into law on day one.</strong></p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="Dismantling Agencies"
+      body="The Mandate calls for eliminating or gutting multiple federal agencies:<br><br>• <strong>Department of Education:</strong> 'Congress should shutter' it entirely (Chapter 11)<br>• <strong>NOAA:</strong> Described as 'one of the main drivers of the climate change alarm industry' — break it up and privatize the National Weather Service<br>• <strong>CFPB:</strong> Place under presidential control or eliminate<br>• <strong>USAID:</strong> Effectively dismantle<br>• <strong>EPA:</strong> Close the Office of Environmental Justice, dramatically reduce workforce"
+      tag="Multiple Agencies"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="Climate and Environment"
+      body="Project 2025 calls for:<br><br>• <strong>Withdrawing from the Paris Climate Agreement</strong><br>• <strong>Repealing the Inflation Reduction Act</strong><br>• <strong>Reversing the EPA's endangerment finding</strong> — the legal basis for all major U.S. climate regulations since 2009<br>• <strong>'Eradicating climate change references from absolutely everywhere'</strong> in government<br>• Ending NOAA's tracking of billion-dollar weather and climate disasters"
+      tag="End Climate Action"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="DOJ and Law Enforcement"
+      body="The Mandate calls for:<br><br>• Placing the <strong>DOJ and FBI under direct presidential control</strong>, eliminating their independence<br>• <strong>Eliminating consent decrees</strong> — agreements following investigations into police wrongdoing<br>• Using the <strong>Civil Rights Division to target DEI</strong> and affirmative action programs<br>• Enforcing the <strong>Comstock Act (1873)</strong> against providers and distributors of abortion pills"
+      tag="Presidential Control"
+    />
+    <CategoryCard
+      icon="🏥"
+      title="Reproductive Rights"
+      body="Pages 284 and 449-473 of the Mandate call for:<br><br>• <strong>Revoking FDA approval of mifepristone</strong> (medication abortion)<br>• Enforcing the <strong>Comstock Act</strong> to ban mailing abortion pills — legal experts say this could create a <strong>de facto national abortion ban</strong><br>• Replacing Biden's Reproductive Healthcare Access Task Force with a <strong>'pro-life' agency</strong><br>• <strong>Restricting Title X</strong> family planning services"
+      tag="Pages 449-473"
+    />
+    <CategoryCard
+      icon="🚔"
+      title="Immigration"
+      body="The Mandate calls for:<br><br>• <strong>Mass deportation</strong> of undocumented immigrants<br>• <strong>Mobilizing the military</strong> for domestic immigration enforcement, potentially under the Insurrection Act<br>• <strong>'Indefinite curtailment'</strong> of the refugee admissions program<br>• Expanding border wall construction<br>• Ending all forms of 'catch and release'"
+      tag="Mass Deportation"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Media and Press"
+      body="The Mandate calls for:<br><br>• <strong>Defunding public broadcasting</strong> (NPR, PBS, CPB)<br>• <strong>Revoking noncommercial education status</strong> from NPR/PBS-affiliated stations<br>• Reinterpreting <strong>Section 230</strong> to restrict content moderation<br>• Using the FCC to investigate and pressure media companies<br>• DOJ authority to <strong>force journalists to reveal sources</strong> during leak investigations"
+      tag="Press Freedom"
+    />
+    <CategoryCard
+      icon="🏳️‍🌈"
+      title="LGBTQ+ Rights"
+      body="The Mandate calls for:<br><br>• Recognizing <strong>only biological sex</strong> across all federal policy<br>• <strong>Ending CDC collection of gender identity data</strong><br>• <strong>Banning transgender military service</strong><br>• Defining <strong>'pornography' broadly</strong> to include 'transgender ideology'<br>• <strong>Imprisoning distributors</strong> and registering educators and librarians who provide such materials as <strong>'sex offenders'</strong> (Mandate foreword)"
+      tag="Mandate Foreword"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Executive Power"
+      body="The entire document is built on the <strong>unitary executive theory</strong>, which claims the president has near-total control over the entire executive branch. Specifically:<br><br>• Place <strong>all independent agencies</strong> (FCC, FTC, SEC, etc.) under direct presidential control<br>• <strong>Eliminate the independence of inspectors general</strong><br>• <strong>'Sharply diminish Congress' imperative role'</strong> as a check on executive power<br>• Make the DOJ an arm of the presidency rather than an independent law enforcement agency"
+      tag="Unitary Executive"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="These are not interpretations. These are the stated proposals from the Mandate for Leadership document — published by the Heritage Foundation, written by 140+ former Trump officials, and 53% implemented within one year." />
+
+  <!-- THE FOREWORD -->
+  <SectionDivider label="In Their Own Words" />
+
+  <VoicesSection
+    eyebrow="From the Document"
+    title="What the<br>Authors Said"
+    introText="Direct quotes from the Mandate for Leadership and its architects."
+  >
+    <VoiceCard
+      quote="It is not enough for conservatives to win elections. If we are going to rescue the country from the grip of the radical Left, we need both a governing agenda and the right people in place, ready to carry out an pointedly conservative agenda."
+      name="Kevin Roberts"
+      role="President, The Heritage Foundation"
+      detail="Mandate for Leadership foreword"
+    />
+    <VoiceCard
+      quote="Pornography, manifested today in the omnipresence of transgender ideology... is not a political Gordian knot inextricably binding up disparate claims about free speech, sexual liberation, and gender identity. It has no claim to First Amendment protection. Its purveyors are child predators and misogynistic exploiters of women. Their product is as addictive as any illicit drug and as psychologically destructive as any crime. Pornography should be outlawed. The people who produce and distribute it should be imprisoned. Educators and public librarians who purvey it should be classed as registered sex offenders."
+      name="Project 2025"
+      role="Mandate for Leadership"
+      detail="Foreword — pages 4-5"
+      context="This passage uses the word 'pornography' but explicitly equates it with 'transgender ideology,' creating a legal framework for criminalizing trans visibility."
+    />
+    <VoiceCard
+      quote="The next conservative President must make the institutions of American civil society hard targets for woke culture warriors. This starts with deleting the terms sexual orientation and gender identity, diversity, equity, and inclusion, gender equality, gender equity, gender awareness, gender-sensitive, abortion, reproductive health, reproductive rights out of every federal rule, agency regulation, contract, grant, regulation, and piece of legislation that exists."
+      name="Roger Severino"
+      role="Former Trump HHS Official"
+      detail="Mandate for Leadership — HHS chapter"
+    />
+  </VoicesSection>
+
+  <CTASection
+    title="920 Pages.<br>Now You Know<br>What's In Them."
+    description="The Mandate for Leadership is a public document. These are the stated goals of Project 2025 — written by former Trump officials, backed by 110+ organizations, and more than half implemented within a year of Trump taking office."
+    linkText="← Back to Project 2025"
+    linkHref="/deep-dives/project-2025"
+  />
+
+</ResearchLayout>
