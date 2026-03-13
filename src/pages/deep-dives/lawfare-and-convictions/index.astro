@@ -1,0 +1,189 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import NavigationGrid from '../../../components/navigation/NavigationGrid.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "34 Felony Convictions — Unanimous Jury Verdict",
+  "Manhattan DA Is Elected, Not Appointed by Biden",
+  "Judge in Classified Docs Case Was a Trump Appointee",
+  "4 Co-Defendants Pleaded Guilty in Georgia",
+  "Michael Cohen Went to Prison for the Same Conduct",
+  "$88.3 Million in Defamation Verdicts Against Trump",
+  "~9,794 Similar Falsifying-Records Cases in NY Since 2015",
+  "Durham Investigation: $6.5M, 4 Years, 0 Trial Convictions",
+  "Reality Winner: 5+ Years for Leaking 1 Classified Document",
+  "Trump Org Found Guilty of 17 Felony Counts of Tax Fraud",
+];
+
+const caseCards = [
+  {
+    icon: '⚖️',
+    title: 'The 34 Felony Convictions',
+    description: 'The Manhattan hush money case — every MAGA talking point tested against the court record. The "novel legal theory," the jury, the judge, the evidence, and the 9,794 similar prosecutions.',
+    href: '/deep-dives/lawfare-and-convictions/manhattan-34-convictions',
+    tag: 'Unanimous Jury Verdict',
+  },
+  {
+    icon: '📦',
+    title: 'The Classified Documents',
+    description: 'Hundreds of top-secret documents in a bathroom. A recorded admission. Active obstruction. And how Biden, Pence, and Reality Winner were treated for the same thing.',
+    href: '/deep-dives/lawfare-and-convictions/classified-documents',
+    tag: '~300 Top Secret Documents',
+  },
+  {
+    icon: '🗳️',
+    title: 'Federal Election Interference',
+    description: 'Jack Smith\'s case for conspiracy to overturn the 2020 election — the charges, the evidence, the immunity ruling, and why dismissal didn\'t mean exoneration.',
+    href: '/deep-dives/lawfare-and-convictions/federal-election-interference',
+    tag: 'Dismissed, Not Exonerated',
+  },
+  {
+    icon: '🍑',
+    title: 'The Georgia RICO Case',
+    description: 'A recorded call asking for 11,780 votes. 19 defendants. 4 guilty pleas. The sweeping racketeering case against a criminal enterprise to overturn an election.',
+    href: '/deep-dives/lawfare-and-convictions/georgia-rico',
+    tag: '4 Guilty Pleas',
+  },
+  {
+    icon: '💰',
+    title: 'The Civil Cases',
+    description: '$88.3M for defamation and sexual abuse. Fraud finding upheld on appeal. $25M for Trump University. A dissolved foundation. And a lifetime of 4,000+ lawsuits.',
+    href: '/deep-dives/lawfare-and-convictions/civil-cases',
+    tag: 'Fraud Upheld on Appeal',
+  },
+];
+---
+
+<ResearchLayout title="The 'Lawfare' Narrative — Deep Dive" description="Testing the 'political persecution' claim against the actual court record — criminal cases, civil cases, jury verdicts, judicial rulings, and how similar cases are typically handled.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The "Lawfare" Narrative' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Court Record"
+    title="THE <span class='word-red'>&quot;LAWFARE&quot;</span> NARRATIVE"
+    subtitle="Every criminal and civil case against Trump — tested against the 'political persecution' claim."
+    date="Sources: Court Records · Jury Verdicts · Judicial Opinions · DOJ Filings · State Attorney General Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="This is the most horrific abuse of a legal system in the history of our country."
+    citation="Donald Trump — a claim this investigation tests against the evidence from every case"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={4} label="Separate juries that ruled against Trump — not one sided with him" />
+    <StatCard target={0} label="Criminal cases initiated by President Biden or the White House" />
+    <StatCard target={34} label="Felony convictions in the Manhattan case alone — unanimous verdict" />
+    <StatCard target={4} label="Independent prosecutors — elected officials and a special counsel" />
+  </StatGrid>
+
+  <!-- THE CLAIM -->
+  <SectionHeader
+    eyebrow="The Claim"
+    title="What Trump<br>Says Happened"
+    introText="Trump describes every legal case against him — criminal and civil, state and federal — as a coordinated political attack. This investigation examines each case individually: the charges, the evidence, the process, and the outcome."
+  />
+
+  <VoicesSection
+    eyebrow="In His Words"
+    title="The &quot;Lawfare&quot;<br>Narrative"
+    introText="These are the specific claims this investigation tests against the court record."
+  >
+    <VoiceCard
+      quote="I have been indicted for you. They're not coming after me, they're coming after you, and I'm just standing in the way."
+      name="Donald Trump"
+      role="Former President"
+      detail="Social media post · August 2023"
+    />
+    <VoiceCard
+      quote="These are all Biden indictments. Biden indictments. They come from Biden, they come from Washington."
+      name="Donald Trump"
+      role="Former President"
+      detail="Campaign rally · 2023"
+      context="The Manhattan case was brought by an elected county prosecutor. The Georgia case was brought by an elected state prosecutor. Neither reports to the President."
+    />
+  </VoicesSection>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--blue)">
+    <AlertBanner icon="📋" title="How This Investigation Works" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Each case gets its own page. For every case, we present: <strong style="color: var(--text);">the charges, the evidence, the process, and the outcome.</strong> Then we take the top talking points used to dismiss each case and test them against the facts. No opinions — just <strong style="color: var(--text);">court records, jury verdicts, judicial opinions, and comparisons</strong> to how similar cases are typically handled.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE BIG PICTURE -->
+  <SectionDivider label="The Big Picture" />
+  <SectionHeader
+    eyebrow="Before the Details"
+    title="The Landscape"
+    introText="Before diving into individual cases, here's what the full record looks like — across criminal and civil cases, state and federal courts, jury trials and bench trials."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="👥"
+      title="Every Jury Agreed"
+      body="In every case that went to a jury:<br><br>• Manhattan: <strong>Guilty on all 34 counts</strong> (unanimous)<br>• E. Jean Carroll (Trial 1): <strong>Liable for sexual abuse and defamation</strong><br>• E. Jean Carroll (Trial 2): <strong>$83.3M in damages</strong><br>• Trump Organization tax fraud: <strong>Guilty on all 17 counts</strong> (unanimous)<br><br>Four different juries. Four different cases. <strong>Not a single jury sided with Trump.</strong>"
+      tag="4 for 4"
+    />
+    <CategoryCard
+      icon="🔄"
+      title="No Case Was 'Biden's'"
+      body="• <strong>Manhattan DA</strong>: Elected county official — not federal<br>• <strong>Georgia DA</strong>: Elected state official — not federal<br>• <strong>NY Attorney General</strong>: Elected state official — investigation began before Biden's presidency<br>• <strong>Special Counsel</strong>: Appointed with independence protections<br><br>No evidence of White House coordination with any prosecutor has ever been presented."
+      tag="Four Independent Prosecutors"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="His Own Judges Ruled Against Him"
+      body="• <strong>Judge Aileen Cannon</strong> (Trump appointee) dismissed the classified docs case — the only major ruling in Trump's favor<br>• <strong>38 Republican-appointed judges</strong> ruled against him in 2020 election cases<br>• All <strong>3 Trump Supreme Court appointees</strong> declined to intervene in election cases<br><br>The &quot;biased judges&quot; claim requires believing Trump's own appointees were part of the conspiracy."
+      tag="Including His Own Appointees"
+    />
+    <CategoryCard
+      icon="🔍"
+      title="Trump's Own Investigation Found Nothing"
+      body="Trump's AG William Barr appointed <strong>Special Counsel John Durham</strong> to prove the justice system was weaponized against Trump. Durham spent <strong>4 years</strong> and <strong>$6.5 million</strong>.<br><br><strong>Results: 0 convictions at trial.</strong> He brought 3 cases — one minor guilty plea, two acquittals by juries.<br><br>Trump's own special counsel couldn't prove weaponization in court."
+      tag="$6.5M, 0 Convictions"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="34 felony convictions. $88.3M in defamation verdicts. Fraud finding upheld on appeal. 4 co-defendants pleaded guilty. 17 corporate felonies. Every jury, every time, ruled against Trump." />
+
+  <!-- CASE NAVIGATION -->
+  <SectionHeader
+    eyebrow="The Cases"
+    title="Choose a<br>Case"
+    introText="Each case has its own page with the full evidence, the specific MAGA talking points, and the factual record that debunks them."
+  />
+
+  <NavigationGrid cards={caseCards} />
+
+  <CTASection
+    title="The Court Record<br>Speaks for Itself."
+    description="Judges' rulings, jury verdicts, guilty pleas, and the evidence they were based on — documented, sourced, and available for anyone to verify."
+    linkText="← Back to Deep Dives"
+    linkHref="/deep-dives"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,77 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import NavigationGrid from '../../components/navigation/NavigationGrid.astro';
+import CTASection from '../../components/design/CTASection.astro';
+
+const tickerItems = [
+  "60+ Courts Rejected Election Fraud Claims",
+  "34 Felony Convictions in Manhattan",
+  "920 Pages in the Project 2025 Blueprint",
+  "Trump's Own AG Called Fraud Claims 'Bullshit'",
+  "Exposed: The Full Fake Electors Scheme",
+  "Heritage Foundation's Mandate for Leadership",
+  "Every Case Documented with Court Records",
+  "Beyond the Headlines — The Full Story",
+];
+
+const deepDiveCards = [
+  {
+    icon: '🗳️',
+    title: 'The 2020 Election',
+    description: 'The complete story — from election night through January 6 and beyond. Fake electors, the Raffensperger call, Pence pressure, the Capitol attack, and criminal indictments.',
+    href: '/deep-dives/the-2020-election',
+    tag: '62 Lawsuits, 61 Losses',
+  },
+  {
+    icon: '⚖️',
+    title: 'The "Lawfare" Narrative',
+    description: 'Testing the "political persecution" claim against the court record — criminal and civil cases, jury verdicts, judicial rulings, and guilty pleas.',
+    href: '/deep-dives/lawfare-and-convictions',
+    tag: '5 Cases Examined',
+  },
+  {
+    icon: '📋',
+    title: 'Project 2025',
+    description: "What the 920-page blueprint actually says, what's already been implemented, Trump's denials vs. reality, and what's still coming.",
+    href: '/deep-dives/project-2025',
+    tag: 'Coming Soon',
+  },
+];
+---
+
+<ResearchLayout title="Deep Dives" description="Comprehensive single-issue investigations — going beyond headlines to the full documented story behind the 2020 election, Trump's convictions, Project 2025, and more.">
+
+  <Masthead
+    eyebrow="Deep Dives · Issue Investigations"
+    title="DEEP <span class='word-red'>DIVES</span>"
+    subtitle="Comprehensive Single-Issue Investigations"
+    date="Going beyond headlines to tell the full documented story"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Headlines give you the what. We give you the whole story — every document, every timeline, every connection — so you can understand not just what happened, but how and why."
+    citation="The Trump Tracker Research Division"
+  />
+
+  <SectionHeader
+    eyebrow="Investigations"
+    title="Choose a<br>Deep Dive"
+    introText="Each investigation is a comprehensive, single-page deep dive into one specific issue. Full sourcing, complete timelines, and the context that headlines leave out."
+  />
+
+  <NavigationGrid cards={deepDiveCards} />
+
+  <CTASection
+    title="More Investigations<br>Coming Soon"
+    description="Deep dives are researched and written one at a time to ensure accuracy. Check back for new investigations, or explore other research sections."
+    linkText="Browse All Research →"
+    linkHref="/"
+  />
+
+</ResearchLayout>

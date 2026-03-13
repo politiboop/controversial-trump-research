@@ -1,0 +1,411 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "19 Defendants Including Trump — Georgia RICO Indictment",
+  "4 Co-Defendants Pleaded Guilty Before Dismissal",
+  "'Find Me 11,780 Votes' — The Recorded Call",
+  "161 Predicate Criminal Acts Identified",
+  "Georgia RICO Has Been Used in 100+ Political Corruption Cases",
+  "Willis Disqualified for Misconduct — Not for Weak Evidence",
+  "Guilty Pleas Still Stand After Case Dismissal",
+  "Biden Won Georgia by 11,779 Votes — Confirmed by 3 Counts",
+  "Raffensperger: 'We Don't Agree That You Have Won'",
+  "Chesebro Admitted Fake Elector Certificates Were False",
+];
+---
+
+<ResearchLayout title="The Georgia RICO Case — Deep Dive" description="A recorded call asking for 11,780 votes. 19 defendants. 4 guilty pleas. The sweeping racketeering case and why it was dismissed.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The "Lawfare" Narrative', href: '/deep-dives/lawfare-and-convictions' },
+    { label: 'Georgia RICO' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Georgia RICO Case"
+    title="THE GEORGIA <span class='word-red'>RICO</span> CASE"
+    subtitle="A recorded crime. 19 defendants. 4 guilty pleas. Then a dismissal."
+    date="Sources: Fulton County Grand Jury Indictment · Guilty Plea Transcripts · Raffensperger Call Recording · Court Filings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="I just want to find 11,780 votes, which is one more than we have, because we won the state."
+    citation="Donald Trump — recorded phone call to Georgia Secretary of State Brad Raffensperger, January 2, 2021"
+  />
+
+  <StatGrid>
+    <StatCard target={19} label="Defendants indicted — Trump plus 18 co-conspirators" />
+    <StatCard target={41} label="Criminal counts in the original indictment" />
+    <StatCard target={161} label="Predicate criminal acts identified in the racketeering case" />
+    <StatCard target={4} label="Co-defendants who pleaded guilty — admissions that still stand" />
+  </StatGrid>
+
+  <!-- THE CASE -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Case"
+    title="The Criminal<br>Enterprise"
+    introText="Fulton County DA Fani Willis alleged that Trump and 18 co-defendants operated as a criminal enterprise to overturn Georgia's 2020 election results — using Georgia's RICO (Racketeer Influenced and Corrupt Organizations) statute."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🎯"
+      title="What RICO Means"
+      body="Georgia's RICO statute targets <strong>patterns of criminal activity</strong> conducted through an enterprise. Unlike federal RICO, Georgia's version is <strong>broader</strong> — it does not require a connection to organized crime. It has been used to prosecute:<br><br>• <strong>Public corruption</strong> — Atlanta city officials, school cheating scandals<br>• <strong>Street gangs</strong> — including cases against Young Thug and YSL<br>• <strong>Corporate fraud</strong> — organized financial schemes<br><br>The statute has been used in <strong>over 100 cases</strong> involving political corruption in Georgia."
+      tag="Established Legal Tool"
+    />
+    <CategoryCard
+      icon="📋"
+      title="The Alleged Enterprise"
+      body="The indictment alleged a coordinated criminal enterprise to overturn the election through:<br><br>• The <strong>Raffensperger call</strong> — pressuring the Secretary of State to &quot;find&quot; votes<br>• The <strong>fake electors scheme</strong> in Georgia<br>• <strong>Harassment of election workers</strong> Ruby Freeman and Shaye Moss<br>• <strong>Unauthorized access</strong> to voting equipment in Coffee County<br>• <strong>False statements</strong> to state officials and courts<br>• <strong>Soliciting public officers</strong> to violate their oaths<br><br>The indictment identified <strong>161 predicate acts</strong> forming the pattern of racketeering."
+      tag="161 Predicate Acts"
+    />
+  </CategoryGrid>
+
+  <!-- THE RECORDED CALL -->
+  <SectionHeader
+    eyebrow="January 2, 2021"
+    title="The Recorded<br>Call"
+    introText="Four days before January 6, Trump called Georgia Secretary of State Brad Raffensperger in a one-hour call that was recorded and published in full by the Washington Post."
+  />
+
+  <VoicesSection
+    eyebrow="January 2, 2021 · Recorded Call"
+    title="In Trump's<br>Own Words"
+    introText="These are direct quotes from the recorded conversation between the President of the United States and Georgia's Secretary of State."
+  >
+    <VoiceCard
+      quote="I just want to find 11,780 votes, which is one more than we have, because we won the state."
+      name="Donald Trump"
+      role="President of the United States"
+      detail="Phone call to Georgia Secretary of State · January 2, 2021"
+      context="11,780 was exactly one more than Biden's margin of victory in Georgia."
+    />
+    <VoiceCard
+      quote="There's nothing wrong with saying, you know, um, that you've recalculated."
+      name="Donald Trump"
+      role="President of the United States"
+      detail="Same call · January 2, 2021"
+      context="Suggesting Raffensperger simply announce that the count had been adjusted — without any factual basis."
+    />
+    <VoiceCard
+      quote="That's a criminal, that's a criminal offense. And you can't let that happen. That's a big risk to you and to Ryan, your lawyer."
+      name="Donald Trump"
+      role="President of the United States"
+      detail="Same call · January 2, 2021"
+      context="Directly threatening Raffensperger and his general counsel Ryan Germany with criminal liability for certifying the legitimate results."
+    />
+    <VoiceCard
+      quote="We don't agree that you have won."
+      name="Brad Raffensperger (R)"
+      role="Georgia Secretary of State"
+      detail="Same call · January 2, 2021"
+      context="Raffensperger — a Republican — refused Trump's demands. He later testified he interpreted Trump's comments as a 'threat.'"
+    />
+  </VoicesSection>
+
+  <HighlightBar text="The entire one-hour call was recorded. It was not taken out of context. It was not selectively edited. Trump asked Georgia's Secretary of State to 'find' exactly the number of votes he needed to win." />
+
+  <!-- THE GUILTY PLEAS -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Guilty Pleas"
+    title="They Admitted<br>What They Did"
+    introText="Four of Trump's co-defendants entered guilty pleas before the case was dismissed — admitting in court to participating in the scheme. These pleas cannot be undone."
+  />
+
+  <VoicesSection
+    eyebrow="Guilty Pleas"
+    title="In Their<br>Own Words"
+    introText="These are Trump's own lawyers and allies, admitting under oath that what they did was wrong."
+  >
+    <VoiceCard
+      quote="If I knew then what I know now, I would have declined to represent Donald Trump in these post-election challenges... I look back on this full experience with deep remorse."
+      name="Jenna Ellis"
+      role="Trump Campaign Attorney"
+      detail="Guilty plea · October 24, 2023"
+      context="Pleaded guilty to 1 felony count of aiding and abetting false statements. Sentenced to 5 years probation, $5,000 restitution, 100 hours community service."
+    />
+    <VoiceCard
+      quote="[Admitted to creating and distributing] false Electoral College documents working 'in coordination with' the Trump campaign."
+      name="Sidney Powell"
+      role="Trump Attorney"
+      detail="Guilty plea · October 19, 2023"
+      context="Pleaded guilty to 6 misdemeanor counts. Also admitted hiring forensic experts to compromise voting software in Coffee County, Georgia."
+    />
+    <VoiceCard
+      quote="[Admitted he] conspired to put forward fake GOP electors in Georgia with Trump, Giuliani, and Eastman."
+      name="Kenneth Chesebro"
+      role="Architect of the Fake Electors Strategy"
+      detail="Guilty plea · October 20, 2023"
+      context="Pleaded guilty to 1 felony count of conspiracy to commit filing false documents."
+    />
+    <VoiceCard
+      quote="I entered a guilty plea on a charge of conspiring to commit intentional interference with performance of election duties. I apologize to the people of the state of Georgia."
+      name="Scott Hall"
+      role="Atlanta Bail Bondsman"
+      detail="Guilty plea · September 29, 2023"
+      context="The first defendant to plead guilty. Admitted to participating in the breach of voting equipment in Coffee County."
+    />
+  </VoicesSection>
+
+  <!-- THE DISMISSAL -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Dismissal"
+    title="What Happened<br>to the Case"
+    introText="The Georgia RICO case was ultimately dismissed — but not because the evidence was weak."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="❤️"
+      title="The Willis-Wade Relationship"
+      body="In January 2024, co-defendant Michael Roman filed a motion alleging DA Fani Willis had a <strong>romantic relationship</strong> with Special Prosecutor Nathan Wade — and that she had <strong>financially benefited</strong> from his appointment through vacations paid with case funds.<br><br>Judge Scott McAfee found a <strong>conflict of interest</strong> and gave Willis a choice: remove Wade or be disqualified. Wade resigned in March 2024, initially allowing Willis to stay."
+      tag="Conflict of Interest"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Willis Disqualified"
+      body="In December 2024, the Georgia Court of Appeals <strong>disqualified Willis entirely</strong>, finding the appearance of impropriety was too significant — even after Wade's resignation. The court ruled that public confidence in the prosecution had been undermined.<br><br>A replacement prosecutor was appointed to decide whether to continue the case."
+      tag="Appearance of Impropriety"
+    />
+    <CategoryCard
+      icon="❌"
+      title="Case Dismissed"
+      body="The replacement prosecutor ultimately <strong>dismissed the case</strong> in early 2025, citing the complexity of the case and the resources required to continue it after Willis's removal.<br><br>Trump subsequently pardoned <strong>77 individuals</strong> involved in the fake electors scheme at the federal level in November 2025 — though presidential pardons apply only to federal offenses, not state charges."
+      tag="Early 2025"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--blue)">
+    <AlertBanner icon="📌" title="What the Dismissal Means — and Doesn't Mean" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The case was dismissed because of <strong style="color: var(--text);">prosecutorial misconduct</strong> — the Willis-Wade relationship — not because the evidence was insufficient. No court ruled the evidence was weak. No jury acquitted any defendant.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">The <strong style="color: var(--text);">four guilty pleas still stand</strong>. Ellis, Powell, Chesebro, and Hall admitted in court to participating in a scheme to overturn Georgia's election results. Their admissions — made under oath — cannot be undone by the case's dismissal.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;">And the <strong style="color: var(--text);">Raffensperger call still exists</strong>. It was recorded. It was published in full. Trump's own words — asking Georgia's Secretary of State to "find" exactly the number of votes needed to overturn the result — are part of the permanent record.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV · Fact-Checking the Defense"
+    title="Every Talking<br>Point, Tested"
+    introText="The most common arguments used to dismiss the Georgia RICO case."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The case was thrown out because Willis was corrupt."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Willis was disqualified for <strong>an appearance of impropriety</strong> related to her personal relationship with Special Prosecutor Wade. This is a real problem — and it's fair to criticize.</p>
+          <p>But Willis's personal conduct has <strong>nothing to do with the evidence</strong>. The evidence included:</p>
+          <ul>
+            <li>A <strong>recorded phone call</strong> in which Trump asked Raffensperger to "find" votes</li>
+            <li><strong>Four guilty pleas</strong> from co-defendants who admitted to participating in the scheme</li>
+            <li><strong>Surveillance footage</strong> from Coffee County showing unauthorized access to voting equipment</li>
+            <li><strong>Fake elector certificates</strong> submitted to Congress and the National Archives</li>
+          </ul>
+          <p>The dismissal removed the <strong>prosecutor</strong>. It did not remove the <strong>evidence</strong>. The recorded call still exists. The guilty pleas still stand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The Raffensperger call was perfect — he was just asking questions."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The full call is publicly available. Here is what Trump said — not excerpted, not out of context:</p>
+          <ul>
+            <li><em>"I just want to find 11,780 votes"</em> — the exact number needed to overturn Georgia's result</li>
+            <li><em>"There's nothing wrong with saying, you know, um, that you've recalculated"</em> — asking Raffensperger to announce a different result without basis</li>
+            <li><em>"That's a criminal, that's a criminal offense. And you can't let that happen. That's a big risk to you and to Ryan, your lawyer"</em> — <strong>directly threatening</strong> Raffensperger with criminal prosecution</li>
+            <li><em>"You should want to have an accurate election. And you're a Republican"</em> — appealing to partisan loyalty over duty</li>
+          </ul>
+          <p>Raffensperger — <strong>a Republican</strong> — refused every request. He later testified he interpreted Trump's comments as a <strong>"threat"</strong> and said: <em>"I understood the positional power that the President of the United States of America has."</em></p>
+          <p>This was not "asking questions." It was a <strong>one-hour pressure campaign</strong> on a state official to change election results — while directly threatening him with criminal consequences for refusing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"RICO is overreach — it was designed for the mob, not politics."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Federal</strong> RICO was designed for organized crime. <strong>Georgia's</strong> RICO statute is intentionally broader — it applies to <strong>any pattern of racketeering activity</strong> conducted through an enterprise, regardless of the type of enterprise.</p>
+          <p>Georgia's RICO statute has been used extensively in <strong>non-mob contexts</strong>:</p>
+          <ul>
+            <li><strong>Atlanta Public Schools cheating scandal</strong> (2015) — 11 educators convicted of racketeering for coordinating a cheating scheme on standardized tests</li>
+            <li><strong>Atlanta city corruption cases</strong> — public officials prosecuted for coordinated bribery schemes</li>
+            <li><strong>Young Thug / YSL case</strong> (2023-2024) — gang prosecution using the same statute</li>
+          </ul>
+          <p>The statute has been used in <strong>over 100 political corruption cases</strong> in Georgia. Using RICO to prosecute an alleged coordinated scheme involving 19 defendants acting across multiple states is <strong>exactly what RICO was designed for</strong> — coordinated criminal activity that no single charge can capture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">04</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The guilty pleas were coerced — they just wanted to avoid trial."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Guilty pleas in American courts are entered <strong>voluntarily, under oath</strong>, before a judge who is required to confirm the defendant understands what they are admitting. Judges specifically ask whether the plea is being made freely and whether any threats or coercion were involved.</p>
+          <p>Each defendant made specific admissions:</p>
+          <ul>
+            <li><strong>Jenna Ellis:</strong> <em>"I look back on this full experience with deep remorse"</em> — describing her own role with apparent genuine reflection, not coercion</li>
+            <li><strong>Sidney Powell:</strong> Admitted creating and distributing false Electoral College documents "in coordination with" the Trump campaign</li>
+            <li><strong>Kenneth Chesebro:</strong> Admitted conspiring to submit fake elector certificates — admitting the documents were false</li>
+            <li><strong>Scott Hall:</strong> Apologized "to the people of the state of Georgia" for his role in breaching voting equipment</li>
+          </ul>
+          <p>Plea deals involve legal calculation — defendants weigh the evidence against them and make strategic decisions. That is not coercion. <strong>That is the justice system working exactly as designed.</strong></p>
+          <p>If the evidence against them was weak, they would have gone to trial. They pleaded guilty because the evidence — including the <strong>recorded call, the fake certificates, and the surveillance footage</strong> — was strong enough that trial was a worse option.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p { margin-bottom: 16px; }
+    .tp-facts-content p:last-child { margin-bottom: 0; }
+    .tp-facts-content strong { color: var(--text); }
+    .tp-facts-content em { color: var(--text); font-style: italic; }
+    .tp-facts-content ul { padding-left: 20px; margin: 12px 0; }
+    .tp-facts-content li { margin-bottom: 8px; }
+    .tp-facts-content li:last-child { margin-bottom: 0; }
+  </style>
+
+  <HighlightBar text="The prosecutor was disqualified. The evidence was not. Four co-defendants admitted their guilt under oath. The recorded call exists. The fake elector certificates exist. None of that changed." />
+
+  <CTASection
+    title="Recorded.<br>Admitted.<br>Documented."
+    description="A one-hour phone call asking Georgia's Secretary of State to 'find' votes. Four guilty pleas admitting participation in the scheme. Fake elector certificates submitted to Congress. The case was dismissed because of prosecutorial misconduct — not because the evidence was insufficient."
+    linkText="← Back to The 'Lawfare' Narrative"
+    linkHref="/deep-dives/lawfare-and-convictions"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,409 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "4 Federal Charges — Conspiracy to Defraud the United States",
+  "Jack Smith: Evidence Was 'Sufficient to Obtain a Conviction'",
+  "Case Dismissed Per DOJ Policy — Not on the Merits",
+  "6 Co-Conspirators Identified in the Indictment",
+  "Fake Elector Certificates Filed in 7 States",
+  "Trump's Own AG Called Fraud Claims 'Bullshit'",
+  "86 Judges Ruled Against Trump — Including 8 He Appointed",
+  "Supreme Court Created New Presidential Immunity Doctrine",
+  "DOJ Policy: A Sitting President Cannot Be Indicted",
+  "Same Policy Shielded Trump from Mueller Prosecution in 2019",
+];
+---
+
+<ResearchLayout title="Federal Election Interference — Deep Dive" description="Jack Smith's case for conspiracy to overturn the 2020 election — the charges, the evidence, the immunity ruling, and why dismissal didn't mean exoneration.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The "Lawfare" Narrative', href: '/deep-dives/lawfare-and-convictions' },
+    { label: 'Federal Election Interference' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Jack Smith's Federal Case"
+    title="FEDERAL ELECTION <span class='word-red'>INTERFERENCE</span>"
+    subtitle="The conspiracy to overturn the 2020 election — charged, documented, then dismissed per DOJ policy."
+    date="Sources: Federal Indictment · Special Counsel Report · Supreme Court Ruling · Sworn Testimony · Court Filings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The admissible evidence was sufficient to obtain a conviction at trial."
+    citation="Special Counsel Jack Smith — Final Report, January 2025"
+  />
+
+  <StatGrid>
+    <StatCard target={4} label="Federal felony charges — conspiracy, obstruction, rights deprivation" />
+    <StatCard target={6} label="Co-conspirators identified in the indictment" />
+    <StatCard target={7} label="States targeted by the fake electors scheme" />
+    <StatCard target={0} label="Courts that ruled the evidence was insufficient" />
+  </StatGrid>
+
+  <!-- THE CHARGES -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Indictment"
+    title="The Four<br>Charges"
+    introText="On August 1, 2023, a federal grand jury indicted Trump on four counts related to his efforts to overturn the 2020 election."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="§"
+      title="Conspiracy to Defraud the United States"
+      body="<strong>18 U.S.C. § 371</strong> — Conspiring to use dishonesty, fraud, and deceit to impair the lawful functions of government in collecting, counting, and certifying the presidential election results.<br><br>The indictment alleged Trump and his co-conspirators <strong>knew their fraud claims were false</strong> and used them as a pretext to obstruct the legitimate transfer of power."
+      tag="Count 1"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="§"
+      title="Conspiracy to Obstruct an Official Proceeding"
+      body="<strong>18 U.S.C. § 1512(k)</strong> — Conspiring to obstruct Congress's January 6 certification of electoral votes. The fake electors scheme, the pressure on Pence, and the Capitol attack were all part of the alleged conspiracy to prevent Congress from completing its constitutional duty."
+      tag="Count 2"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="§"
+      title="Obstruction of an Official Proceeding"
+      body="<strong>18 U.S.C. § 1512(c)(2)</strong> — Directly obstructing or attempting to obstruct the January 6 joint session of Congress. Even after the Supreme Court narrowed this statute in <em>Fischer v. United States</em> (2024), the use of <strong>fraudulent documents</strong> (fake elector certificates) still fell within scope."
+      tag="Count 3"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="§"
+      title="Conspiracy Against Rights"
+      body="<strong>18 U.S.C. § 241</strong> — Conspiring to deprive citizens of their right to have their votes counted. This Civil War-era statute protects the right of citizens to have their votes properly counted. The fake electors scheme aimed to <strong>disenfranchise millions of voters in seven states</strong>."
+      tag="Count 4"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- THE EVIDENCE -->
+  <SectionHeader
+    eyebrow="What the Indictment Documented"
+    title="The Scheme<br>in Detail"
+    introText="The indictment laid out a multi-pronged conspiracy to overturn the election — using fraud, coercion, and obstruction."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📜"
+      title="The Fake Electors Scheme"
+      body="Trump and co-conspirators organized fraudulent slates of electors in <strong>7 states</strong> Biden won — Arizona, Georgia, Michigan, Nevada, New Mexico, Pennsylvania, and Wisconsin. These fake certificates were submitted to Congress and the National Archives to give Pence a pretext to block certification.<br><br><strong>4 participants later pleaded guilty</strong> in the Georgia case, admitting the certificates were false."
+      tag="7 States"
+    />
+    <CategoryCard
+      icon="📞"
+      title="Pressuring State Officials"
+      body="Trump personally pressured officials in multiple states to change election results. The most documented: the <strong>January 2, 2021 call</strong> to Georgia Secretary of State Raffensperger: <em>&quot;I just want to find 11,780 votes, which is one more than we have.&quot;</em><br><br>He also pressured officials in <strong>Arizona, Michigan, and Pennsylvania</strong> — including inviting Michigan legislators to the White House."
+      tag="Recorded Calls"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="Pressuring the Vice President"
+      body="Trump and co-conspirator John Eastman pressured Pence to <strong>unilaterally reject legitimate electoral votes</strong> on January 6. Eastman's memo laid out a step-by-step plan for Pence to declare Trump the winner.<br><br>When Pence refused, Trump publicly attacked him — <strong>while rioters were inside the Capitol</strong> — tweeting that Pence <em>&quot;didn't have the courage to do what should have been done.&quot;</em>"
+      tag="Pence Pressure"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Corrupting the DOJ"
+      body="Trump pressured DOJ officials to declare the election corrupt: <em>&quot;Just say that the election was corrupt and leave the rest to me and the Republican congressmen.&quot;</em><br><br>When Acting AG Rosen and Deputy AG Donoghue refused, Trump nearly replaced Rosen with <strong>Jeffrey Clark</strong> — a loyalist who drafted a letter falsely claiming DOJ was investigating election fraud. Mass resignation threats stopped the scheme."
+      tag="DOJ Pressure"
+    />
+  </CategoryGrid>
+
+  <!-- THE 6 CO-CONSPIRATORS -->
+  <SectionHeader
+    eyebrow="The Co-Conspirators"
+    title="Six Unnamed<br>Allies"
+    introText="The indictment identified six co-conspirators by description, not name. Their identities were widely reported."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="1"
+      title="Co-Conspirator 1: Rudy Giuliani"
+      body="Trump's personal attorney who led the legal effort to overturn election results. Made explosive fraud claims on TV while <strong>refusing to allege fraud under oath</strong> in court. Later <strong>disbarred</strong> in New York and D.C. Ordered to pay <strong>$148 million</strong> to election workers he defamed."
+      tag="Disbarred"
+    />
+    <CategoryCard
+      icon="2"
+      title="Co-Conspirator 2: John Eastman"
+      body="The attorney who authored the memo outlining how Pence could unilaterally overturn the election. <strong>Disbarred</strong> in California after the State Bar found he <em>&quot;intentionally misled the courts by making voter fraud claims that he basically knew were bogus.&quot;</em>"
+      tag="Disbarred"
+    />
+    <CategoryCard
+      icon="3"
+      title="Co-Conspirator 3: Sidney Powell"
+      body="Filed the &quot;Kraken&quot; lawsuits alleging massive Dominion voting machine fraud — claims that were <strong>sanctioned by courts</strong> for being frivolous. <strong>Pleaded guilty</strong> in Georgia to 6 misdemeanor counts, admitting she created false electoral documents."
+      tag="Pleaded Guilty"
+    />
+    <CategoryCard
+      icon="4"
+      title="Co-Conspirator 4: Jeffrey Clark"
+      body="The DOJ official who drafted a letter for the Department to send to Georgia officials, <strong>falsely claiming</strong> DOJ was investigating election irregularities. White House Counsel Pat Cipollone called Clark's plan a <em>&quot;murder-suicide pact.&quot;</em>"
+      tag="DOJ Loyalist"
+    />
+    <CategoryCard
+      icon="5"
+      title="Co-Conspirator 5: Kenneth Chesebro"
+      body="The architect of the fake electors strategy. <strong>Pleaded guilty</strong> in Georgia to conspiracy to commit filing false documents, admitting he conspired with Trump, Giuliani, and Eastman to submit fake elector certificates."
+      tag="Pleaded Guilty"
+    />
+    <CategoryCard
+      icon="6"
+      title="Co-Conspirator 6: Boris Epshteyn"
+      body="A Trump political adviser who helped coordinate the fake electors scheme across multiple states. Identified as playing a <strong>coordinating role</strong> between Trump's legal team and the state-level fake elector organizers."
+      tag="Coordinator"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · Fact-Checking the Defense"
+    title="Every Talking<br>Point, Tested"
+    introText="The most common arguments used to dismiss the federal election interference case — tested against the actual record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The case was dismissed — he was exonerated."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The case was dismissed in November 2024 because of the <strong>DOJ's longstanding policy that a sitting president cannot be indicted</strong> — the same policy that prevented the Mueller investigation from recommending charges in 2019.</p>
+          <p><strong>No court ever ruled the evidence was insufficient.</strong> No jury ever acquitted Trump. No judge ever dismissed the case on the merits.</p>
+          <p>Jack Smith's final report stated explicitly: <em>"The admissible evidence was sufficient to obtain a conviction at trial."</em> He stood behind this conclusion in both volumes of his final report.</p>
+          <p>The dismissal was about <strong>constitutional policy</strong>, not evidence. If Trump had lost the 2024 election, the case would have gone to trial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"It was just free speech — he was expressing his opinion about the election."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Trump was not charged for <strong>saying</strong> the election was stolen. He was charged for <strong>actions</strong> he took to overturn it:</p>
+          <ul>
+            <li><strong>Organizing fraudulent elector certificates</strong> in 7 states — creating false government documents</li>
+            <li><strong>Pressuring the Vice President</strong> to reject legitimate electoral votes — a constitutional violation</li>
+            <li><strong>Pressuring state officials</strong> to change vote counts — including the recorded Raffensperger call</li>
+            <li><strong>Pressuring DOJ officials</strong> to falsely declare the election corrupt</li>
+            <li><strong>Attempting to install a loyalist</strong> as Acting Attorney General</li>
+          </ul>
+          <p>The indictment carefully distinguished between protected speech and criminal conduct. As the Supreme Court has held, the First Amendment does not protect fraud, coercion, or conspiracy to obstruct government proceedings.</p>
+          <p>Claiming the election was stolen is speech. <strong>Creating 7 sets of forged documents to overturn it is not.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"He genuinely believed he won the election."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Even if Trump genuinely believed he won — which the evidence strongly undermines — <strong>genuine belief does not legalize the actions he took.</strong></p>
+          <p>You cannot genuinely believe you won an election and then:</p>
+          <ul>
+            <li>Have your <strong>own lawyers refuse</strong> to allege fraud under oath in court</li>
+            <li>Hear your <strong>own Attorney General</strong> call the claims "bullshit" — and continue</li>
+            <li>Lose <strong>61 of 62 lawsuits</strong> before 86 judges — and continue</li>
+            <li>Have co-conspirator Eastman <strong>admit in an email</strong> the fake elector certificates had "no legal weight" — and continue</li>
+          </ul>
+          <p>The indictment documented that Trump was <strong>repeatedly told by his own advisers</strong> that his claims were false:</p>
+          <ul>
+            <li><strong>AG Barr:</strong> Called the claims "bullshit" and told Trump he was "detached from reality"</li>
+            <li><strong>Campaign data analysts:</strong> Briefed Trump showing he lost each contested state</li>
+            <li><strong>White House Counsel Cipollone:</strong> Warned multiple schemes were illegal</li>
+            <li><strong>Vice President Pence:</strong> Told Trump the Constitution gave him no authority to reject votes</li>
+          </ul>
+          <p>Under the charged statutes — particularly conspiracy to defraud the United States — the question is whether Trump acted with <strong>dishonesty, fraud, and deceit</strong>. Creating false documents and pressuring officials to change results based on claims <strong>his own team told him were false</strong> meets that standard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">04</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The Supreme Court immunity ruling vindicated him."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>In <em>Trump v. United States</em> (July 2024), the Supreme Court ruled 6-3 that presidents have <strong>absolute immunity</strong> for core constitutional powers and <strong>presumptive immunity</strong> for other official acts. This did not "vindicate" Trump — it <strong>created a new legal doctrine</strong> that no prior court had recognized.</p>
+          <p>The ruling:</p>
+          <ul>
+            <li><strong>Did not say</strong> the evidence was insufficient</li>
+            <li><strong>Did not say</strong> Trump's actions were lawful</li>
+            <li><strong>Did not dismiss</strong> the case</li>
+            <li><strong>Did say</strong> some evidence (Trump's interactions with DOJ officials) could not be used at trial</li>
+          </ul>
+          <p>Smith responded by filing a <strong>narrowed superseding indictment</strong> that removed the immunized conduct — and the remaining charges still stood.</p>
+          <p>The three dissenting justices — Sotomayor, Kagan, and Jackson — warned the ruling effectively placed the president <em>"above the law"</em>: <em>"The President is now a king above the law."</em></p>
+          <p>The case was ultimately dismissed because Trump won the election — <strong>not because of the immunity ruling</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">05</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Biden weaponized the DOJ against his political opponent."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Jack Smith was appointed as <strong>Special Counsel</strong> with independence protections specifically designed to insulate him from political interference. No evidence of White House coordination with Smith has ever been presented.</p>
+          <p>The independence framework:</p>
+          <ul>
+            <li>Special Counsel regulations <strong>require independence</strong> from the Attorney General and White House</li>
+            <li>Smith had authority to make <strong>prosecutorial decisions independently</strong></li>
+            <li>The same framework was used to appoint <strong>Robert Mueller</strong> (investigating Trump-Russia ties) and <strong>John Durham</strong> (appointed by Trump's AG to investigate Trump's investigators)</li>
+          </ul>
+          <p>If the Special Counsel framework represents "weaponization," then Trump's own administration weaponized the DOJ when Barr appointed Durham.</p>
+          <p><strong>Biden himself</strong> was investigated by a special counsel (Robert Hur) for classified document retention — undermining the claim that Biden controlled who got prosecuted. Biden did not interfere with Hur's investigation and accepted his conclusions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p { margin-bottom: 16px; }
+    .tp-facts-content p:last-child { margin-bottom: 0; }
+    .tp-facts-content strong { color: var(--text); }
+    .tp-facts-content em { color: var(--text); font-style: italic; }
+    .tp-facts-content ul { padding-left: 20px; margin: 12px 0; }
+    .tp-facts-content li { margin-bottom: 8px; }
+    .tp-facts-content li:last-child { margin-bottom: 0; }
+  </style>
+
+  <HighlightBar text="Jack Smith's final report: 'The admissible evidence was sufficient to obtain a conviction at trial.' The case was dismissed because Trump won an election — not because he was innocent." />
+
+  <CTASection
+    title="Dismissed.<br>Not Exonerated."
+    description="Four federal charges. Six co-conspirators. Seven states targeted with fake elector certificates. The case was dismissed per longstanding DOJ policy — the same policy that shielded Trump from Mueller's findings. No court ever ruled the evidence was insufficient."
+    linkText="← Back to The 'Lawfare' Narrative"
+    linkHref="/deep-dives/lawfare-and-convictions"
+  />
+
+</ResearchLayout>

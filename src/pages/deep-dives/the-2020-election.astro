@@ -1,0 +1,941 @@
+---
+import ResearchLayout from '../../layouts/ResearchLayout.astro';
+import Masthead from '../../components/design/Masthead.astro';
+import Ticker from '../../components/design/Ticker.astro';
+import IntroQuote from '../../components/design/IntroQuote.astro';
+import HighlightBar from '../../components/design/HighlightBar.astro';
+import StatGrid from '../../components/design/StatGrid.astro';
+import StatCard from '../../components/design/StatCard.astro';
+import SectionHeader from '../../components/design/SectionHeader.astro';
+import SectionDivider from '../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../components/design/CategoryCard.astro';
+import VoicesSection from '../../components/design/VoicesSection.astro';
+import VoiceCard from '../../components/design/VoiceCard.astro';
+import TimelineSection from '../../components/design/TimelineSection.astro';
+import TimelineItem from '../../components/design/TimelineItem.astro';
+import ConsequencesGrid from '../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../components/design/AlertBanner.astro';
+import ColoredSection from '../../components/design/ColoredSection.astro';
+import CTASection from '../../components/design/CTASection.astro';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "62 Lawsuits Filed — 61 Rejected by Courts",
+  "86 Judges Ruled Against Trump — Including 8 He Appointed",
+  "Trump's Own AG Called Fraud Claims 'Bullshit'",
+  "CISA: 'Most Secure Election in American History'",
+  "Fox News Paid $787.5M for Broadcasting Election Lies",
+  "Trump's Lawyers Refused to Allege Fraud Under Oath",
+  "Arizona Audit Found 360 MORE Votes for Biden",
+  "Georgia Hand Recount Confirmed Biden's Win",
+  "1,575 People Charged for January 6 Capitol Attack",
+  "4 Trump Co-Conspirators Pleaded Guilty in Georgia",
+  "Fake Elector Certificates Filed in 7 States",
+  "AP Found Fewer Than 475 Potential Fraud Cases Out of 25.5 Million Votes",
+];
+---
+
+<ResearchLayout title="The 2020 Election — Deep Dive" description="The complete documented story of the 2020 election — how every fraud claim was debunked, every lawsuit failed, and what Trump actually did to overturn the results.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The 2020 Election' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Complete Story"
+    title="THE <span class='word-red'>2020</span> ELECTION"
+    subtitle="Every fraud claim debunked. Every lawsuit lost. Every crime documented."
+    date="Sources: Court Records · DOJ Filings · Congressional Report · Sworn Testimony · State Election Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="Charges of unfairness are serious. But calling an election unfair does not make it so. Charges require specific allegations and then proof. We have neither here."
+    citation="Judge Stephanos Bibas, Trump appointee, Third Circuit Court of Appeals — November 27, 2020"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={61} suffix="/62" label="Lawsuits rejected by courts — Trump won only 1 case, affecting zero votes" />
+    <StatCard target={86} label="Judges ruled against post-election lawsuits, including 38 Republican appointees" />
+    <StatCard target={0} label="Instances of fraud found at a scale that could affect any state's outcome" />
+    <StatCard target={50} label="States that certified their results — every single one" />
+  </StatGrid>
+
+  <!-- SECTION 1: THE ELECTION WAS SECURE -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · Official Confirmations"
+    title="The Election<br>Was Secure"
+    introText="Every institution responsible for election security — from Trump's own appointees to Republican state officials to international observers — confirmed the 2020 election was legitimate."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🛡️"
+      title="CISA: 'Most Secure in American History'"
+      body="On <strong>November 12, 2020</strong>, the Cybersecurity and Infrastructure Security Agency — run by Trump appointee <strong>Chris Krebs</strong> — issued a joint statement: <em>&quot;The November 3rd election was the most secure in American history. There is no evidence that any voting system deleted or lost votes, changed votes, or was in any way compromised.&quot;</em><br><br><strong>Trump fired Krebs five days later for telling the truth.</strong>"
+      tag="Trump's Own Agency"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="AG Barr: No Evidence of Fraud"
+      body="On <strong>December 1, 2020</strong>, Trump's own Attorney General <strong>William Barr</strong> told the Associated Press: <em>&quot;To date, we have not seen fraud on a scale that could have affected a different outcome in the election.&quot;</em><br><br>In sworn testimony to the January 6 Committee, Barr was blunter: <em>&quot;I told the president the stuff his people were shoveling out was bullshit.&quot;</em>"
+      tag="Trump's Own AG"
+    />
+    <CategoryCard
+      icon="🗳️"
+      title="Republican Officials Confirmed Results"
+      body="Republican state officials across every contested state certified Biden's victory:<br><br><strong>Georgia:</strong> Gov. Brian Kemp (R) and SoS Brad Raffensperger (R) certified after three separate counts.<br><strong>Arizona:</strong> Gov. Doug Ducey (R) signed certification, stating: <em>&quot;That's the law. I've sworn an oath to uphold it.&quot;</em><br><strong>Pennsylvania:</strong> GOP Commissioner Al Schmidt defended the count and received death threats targeting his family by name."
+      tag="Their Own Party"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="International Observers Confirmed"
+      body="The OSCE deployed <strong>102 observers from 39 countries</strong>. Their conclusion: the elections were <em>&quot;competitive and well managed.&quot;</em> They specifically condemned Trump's claims: <em>&quot;Baseless allegations of systematic deficiencies, notably by the incumbent President, including on election night, harm public trust in democratic institutions.&quot;</em>"
+      tag="39 Countries"
+    />
+  </CategoryGrid>
+
+  <!-- RECOUNTS AND AUDITS -->
+  <SectionHeader
+    eyebrow="Every Recount Confirmed the Results"
+    title="Audited.<br>Recounted.<br>Confirmed."
+    introText="Every recount and audit — including those requested and funded by Trump and his allies — confirmed or expanded Biden's victory."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="✋"
+      title="Georgia: Historic Hand Recount"
+      body="Georgia conducted the <strong>first statewide hand recount of paper ballots in American history</strong>. Nearly 5 million ballots, counted by hand. <strong>Result: Biden's win confirmed.</strong><br><br>A subsequent machine recount — requested by Trump — confirmed it again. Secretary of State Raffensperger: <em>&quot;Georgia's historic first statewide audit reaffirmed that the state's new secure paper ballot voting system accurately counted and reported results.&quot;</em>"
+      tag="3 Counts, Same Result"
+    />
+    <CategoryCard
+      icon="🔍"
+      title="Arizona: The Cyber Ninjas Audit"
+      body="Arizona Senate Republicans hired <strong>Cyber Ninjas</strong> — a firm with zero election audit experience whose CEO had been spreading election conspiracy theories — to audit Maricopa County's 2.1 million ballots.<br><br><strong>Their own audit found Biden won by even more.</strong> Biden gained 360 additional votes. The Republican Chairman of the Board of Supervisors called the report <em>&quot;littered with errors &amp; faulty conclusions.&quot;</em> Cyber Ninjas subsequently went bankrupt."
+      tag="Biden Gained Votes"
+    />
+    <CategoryCard
+      icon="💰"
+      title="Wisconsin: Trump Paid $3M for a Recount"
+      body="Trump's campaign paid <strong>$3 million</strong> for recounts in Milwaukee and Dane Counties.<br><br><strong>Result: Biden's lead increased by 87 votes.</strong><br><br>A subsequent state audit by the Wisconsin Legislative Audit Bureau confirmed that the 2020 election was <em>&quot;secure&quot;</em> and that no voting machines changed, deleted, or incorrectly tabulated votes."
+      tag="Biden Gained Votes"
+    />
+    <CategoryCard
+      icon="✅"
+      title="Michigan: Statewide Audit Confirmed"
+      body="Michigan Secretary of State Jocelyn Benson announced a statewide election audit affirming accuracy. In Wayne County — which uses Dominion machines — the <strong>hand count matched machine totals</strong> within fractions of a percentage point.<br><br>Every conspiracy theory about Dominion machines in Michigan was debunked by the state's own verification process."
+      tag="Machine Count Verified"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="Every recount. Every audit. Every hand count. Every state. Biden won. The results never changed." />
+
+  <!-- SECTION 2: IN COURT VS ON CAMERA -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Two-Faced Legal Strategy"
+    title="In Court vs.<br>On Camera"
+    introText="Trump's lawyers made explosive fraud claims on television. But in court — where lying carries consequences — they told a very different story."
+  />
+
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="⚠️" title="Why This Distinction Matters" variant="amber">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Lawyers can say anything on cable news. In a courtroom, they face <strong style="color: var(--text);">disbarment, sanctions, and contempt charges</strong> for making false statements. When Trump's lawyers were under oath and subject to professional discipline, they <strong style="color: var(--text);">uniformly refused</strong> to allege fraud.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <VoicesSection
+    eyebrow="Under Oath"
+    title="What They Said<br>in Court"
+    introText="When facing actual legal consequences for lying, Trump's own lawyers admitted they had no fraud case."
+  >
+    <VoiceCard
+      quote="This is not a fraud case."
+      name="Rudy Giuliani"
+      role="Trump's Personal Attorney"
+      detail="Pennsylvania Federal Court · November 17, 2020"
+      context="Giuliani initially alleged 'widespread, nationwide voter fraud' — then admitted under questioning from the judge that it was not a fraud case."
+    />
+    <VoiceCard
+      quote="This is not a fraud case. We are not alleging fraud. We are not saying anyone is trying to steal the election."
+      name="Kory Langhofer"
+      role="Trump Campaign Attorney"
+      detail="Arizona Court · November 2020"
+    />
+    <VoiceCard
+      quote="Your Honor, accusing people of fraud is a pretty big step."
+      name="Jonathan S. Goldstein"
+      role="Trump Campaign Attorney"
+      detail="Montgomery County, Pennsylvania"
+      context="When the judge asked directly if the campaign was alleging fraud."
+    />
+    <VoiceCard
+      quote="Petitioners do not allege, and there is no evidence of, any fraud in connection with the challenged ballots."
+      name="Trump's Attorneys"
+      role="Bucks County, Pennsylvania"
+      detail="Signed joint stipulation of facts — a binding legal document"
+    />
+  </VoicesSection>
+
+  <!-- JUDGES' RULINGS -->
+  <SectionDivider label="The Courts Speak" />
+  <SectionHeader
+    eyebrow="62 Lawsuits, 61 Losses"
+    title="What the<br>Judges Said"
+    introText="86 judges — including 38 Republican appointees and 8 Trump appointees — rejected the claims. These are their words."
+  />
+
+  <VoicesSection
+    eyebrow="Judicial Rulings"
+    title="Rejected by<br>Their Own Judges"
+    introText="Trump-appointed and Republican-appointed judges delivered some of the most devastating rebukes."
+  >
+    <VoiceCard
+      quote="One might expect that when seeking such a startling outcome, a plaintiff would come formidably armed with compelling legal arguments and factual proof of rampant corruption. That has not happened. This Court has been presented with strained legal arguments without merit and speculative accusations, unsupported by evidence."
+      name="Judge Matthew Brann"
+      role="George W. Bush Appointee"
+      detail="Trump v. Boockvar · Dismissed with prejudice · November 21, 2020"
+    />
+    <VoiceCard
+      quote="Voters, not lawyers, choose the President. Ballots, not briefs, decide elections."
+      name="Judge Stephanos Bibas"
+      role="Trump Appointee · Federalist Society Member"
+      detail="Third Circuit Court of Appeals · November 27, 2020"
+    />
+    <VoiceCard
+      quote="This lawsuit represents a historic and profound abuse of the judicial process. Sanctions are required to deter the filing of future frivolous lawsuits designed primarily to spread the narrative that our election processes are rigged and our democratic institutions cannot be trusted."
+      name="Judge Linda Parker"
+      role="U.S. District Court, Eastern District of Michigan"
+      detail="110-page sanctions ruling against Sidney Powell's 'Kraken' lawyers · August 2021"
+    />
+    <VoiceCard
+      quote="Contestants did not prove under any standard of proof that any illegal votes were cast and counted, or legal votes were not counted at all."
+      name="Judge James T. Russell"
+      role="First Judicial District Court, Nevada"
+      detail="December 4, 2020"
+      context="Used the phrase 'did not prove under any standard of proof' 25 times in his 35-page ruling."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="The Supreme Court Refused to Hear It"
+      body="Trump called <em>Texas v. Pennsylvania</em> — filed by AG Ken Paxton — <em>&quot;the big one.&quot;</em> The Supreme Court refused to hear it, ruling Texas had no standing to challenge how other states run elections.<br><br><strong>None of Trump's three Supreme Court appointees</strong> — Gorsuch, Kavanaugh, and Barrett — indicated they saw any merit to the case. Even Justices Alito and Thomas, who said they would have allowed the filing, stated they <em>&quot;would not grant other relief.&quot;</em>"
+      tag="All 3 Trump Appointees Rejected It"
+    />
+    <CategoryCard
+      icon="🔨"
+      title="Sanctions Against Trump's Lawyers"
+      body="Courts didn't just reject the claims — they <strong>punished the lawyers</strong> for bringing them. Sidney Powell and her co-counsel were sanctioned over $175,000 for the Michigan &quot;Kraken&quot; lawsuit. The Supreme Court later upheld these sanctions, refusing to hear Powell's appeal.<br><br>The judge's message was clear: these lawsuits were filed not to win in court, but to <strong>undermine public trust in democracy</strong>."
+      tag="$175,000+ in Sanctions"
+    />
+  </CategoryGrid>
+
+  <!-- SECTION 3: FRAUD CLAIMS DEBUNKED -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Claims vs. The Evidence"
+    title="Every Fraud Claim,<br>Exposed"
+    introText="Each conspiracy theory was investigated — often by Trump's own officials. Every single one collapsed under scrutiny."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💀"
+      title="'Dead People Voted' — Exposed by Trump's Own Data"
+      body="Trump claimed <strong>5,000 dead people</strong> voted in Georgia during his Raffensperger call.<br><br><strong>Trump's own commissioned report</strong> found only 23 &quot;potential&quot; cases. Georgia's official investigation found <strong>four</strong>.<br><br>In Nevada, Trump claimed 1,506 dead voters. <strong>His own researchers found approximately 20.</strong>"
+      tag="Exposed by His Own Team"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="🖥️"
+      title="Dominion Voting Machines — 'Idiotic Claims'"
+      body="Trump's AG Barr: <em>&quot;I reiterated that they'd wasted a whole month on these Dominion voting machines, and they were idiotic claims.&quot;</em><br><br>Fox News <strong>paid $787.5 million</strong> to settle Dominion's defamation lawsuit — the largest known media settlement in U.S. history. Discovery revealed Fox hosts <strong>privately knew the claims were false</strong> while broadcasting them."
+      tag="$787.5M Settlement"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="🧳"
+      title="'Suitcases of Ballots' at State Farm Arena"
+      body="Giuliani alleged surveillance video showed secret suitcases of fraudulent ballots being counted in Atlanta after observers were dismissed.<br><br><strong>Investigation revealed:</strong> The &quot;suitcases&quot; were standard ballot storage crates used in every election. The video was selectively edited. Normal counting procedures were being followed. <strong>Ruby Freeman was passing her daughter a ginger mint — not a USB drive.</strong>"
+      tag="Selectively Edited Video"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="📊"
+      title="AP Investigation: 0.002% Potential Fraud"
+      body="The Associated Press conducted one of the most comprehensive investigations in history, examining records from <strong>over 300 local election offices</strong> across six battleground states.<br><br>Result: Fewer than <strong>475 potential cases</strong> out of <strong>25.5 million votes cast</strong> — just 0.002%. Biden won those six states by a combined 311,257 votes. The disputed ballots represented 0.15% of Biden's margin."
+      tag="25.5 Million Votes Examined"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="📽️"
+      title="'2000 Mules' — Debunked by Trump's Own AG"
+      body="Barr called the cellphone evidence in Dinesh D'Souza's film <em>&quot;singularly unimpressive&quot;</em>: <em>&quot;If you take 2 million cell phones and figure out where they are physically in a big city like Atlanta, just by definition you're going to find many hundreds of them have passed by and spent time in the vicinity of these boxes. The premise that that's somehow a mule is indefensible.&quot;</em><br><br>Barr's conclusion: <em>&quot;My opinion then and my opinion now is that the election was not stolen by fraud.&quot;</em>"
+      tag="Barr's Own Words"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="📁"
+      title="Heritage Foundation's Own Data Undermines the Narrative"
+      body="Even the conservative <strong>Heritage Foundation's</strong> voter fraud database — spanning <strong>decades and billions of votes</strong> — found approximately 1,500 proven cases total.<br><br>Brennan Center analysis of that database: only <strong>10 cases</strong> of in-person impersonation fraud at polls and <strong>41 cases</strong> of non-citizens voting — over five decades. Voter fraud is, statistically, <em>&quot;less common than being struck by lightning.&quot;</em>"
+      tag="Their Own Data"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="Barr used the words 'bullshit,' 'crazy,' 'idiotic,' 'total nonsense,' 'rubbish,' 'garbage,' and 'stupid' to describe Trump's election fraud claims in sworn testimony." />
+
+  <!-- FOX NEWS KNEW -->
+  <ColoredSection background="#0a0c12" borderColor="var(--blue-border)">
+    <AlertBanner icon="📺" title="Fox News Knew the Claims Were False" variant="blue">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Dominion Voting Systems' lawsuit against Fox News revealed that hosts and executives <strong style="color: var(--text);">privately acknowledged the fraud claims were false</strong> while broadcasting them to millions.</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Tucker Carlson:</strong> "Sidney Powell is lying by the way. I caught her. It's insane." He called the Dominion software allegations "absurd."</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">Rupert Murdoch:</strong> Called Trump's behavior "a huge disservice to the country. Pretty much a crime." Told a Fox executive: "We want to make Trump a non person."</p>
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7; margin-top: 12px;"><strong style="color: var(--text);">The settlement: $787.5 million</strong> — the largest known media defamation settlement in U.S. history. A separate Smartmatic lawsuit seeking $2.7 billion remains ongoing.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- SECTION 4: THE FAKE ELECTORS SCHEME -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV · The Fake Electors Scheme"
+    title="Forging<br>Democracy"
+    introText="Trump and his allies organized groups of Republican officials in seven states to sign fraudulent electoral certificates — falsely claiming Trump won states he lost. The certificates were submitted to Congress and the National Archives to give Vice President Pence a pretext to block certification on January 6."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📜"
+      title="How It Worked"
+      body="In <strong>seven states</strong> Biden won — Arizona, Georgia, Michigan, Nevada, New Mexico, Pennsylvania, and Wisconsin — groups of Republican Party officials were recruited to sign certificates falsely stating they were <em>&quot;duly elected and qualified&quot;</em> presidential electors.<br><br>These fraudulent certificates were then <strong>submitted to Congress and the National Archives</strong>, using language virtually identical to legitimate electoral certificates. The goal: create the appearance of &quot;competing slates&quot; of electors to justify blocking certification."
+      tag="7 States Targeted"
+    />
+    <CategoryCard
+      icon="🔗"
+      title="The Connection to January 6"
+      body="The certificates weren't an end in themselves — they were the <strong>mechanism</strong> for overturning the election. The Eastman memos laid out the plan:<br><br><strong>Step 1:</strong> Submit fake certificates to create &quot;competing slates&quot;<br><strong>Step 2:</strong> Pence announces &quot;multiple slates of electors&quot; on January 6<br><strong>Step 3:</strong> Pence refuses to count Biden's legitimate electors<br><strong>Step 4:</strong> Trump declared winner, or election thrown to the House<br><br>Pence's own counsel, Greg Jacob, testified there were <strong>not actually dual slates</strong> from any state. Eastman's entire premise was fabricated."
+      tag="The Mechanism"
+    />
+    <CategoryCard
+      icon="❌"
+      title="What Made Them Illegal"
+      body="The certificates were fraudulent on their face. The signatories:<br><br>• Were <strong>not certified</strong> by any state governor<br>• Were <strong>not appointed</strong> by any state legislature<br>• Were <strong>not recognized</strong> by any state election authority<br>• Were <strong>not validated</strong> by any court<br><br><strong>Five of seven</strong> state certificates used unconditional language — flatly stating the signatories were &quot;duly elected and qualified&quot; electors with <strong>no caveats</strong>. Only New Mexico and Pennsylvania included conditional language — which is precisely why prosecutions occurred in the other five states."
+      tag="Fraudulent on Their Face"
+    />
+    <CategoryCard
+      icon="🎭"
+      title="The 'Contingent Electors' Defense — Debunked"
+      body="Defenders claim these were legitimate &quot;contingent&quot; electors, citing a 1960 Hawaii precedent. This argument fails:<br><br><strong>1.</strong> In Hawaii 1960, the margin was under 200 votes with an active recount. In 2020, Biden won each state by thousands to tens of thousands.<br><strong>2.</strong> Five of seven certificates had <strong>no conditional language</strong>.<br><strong>3.</strong> Eastman himself admitted in a December 19, 2020 email that the certificates had <em>&quot;no legal weight&quot;</em> and were <em>&quot;dead on arrival in Congress.&quot;</em><br><strong>4.</strong> Kenneth Chesebro — the scheme's architect — <strong>pleaded guilty</strong> to conspiracy to commit filing false documents, admitting the documents were false."
+      tag="Defense Collapses"
+    />
+  </CategoryGrid>
+
+  <!-- FEDERAL LAWS VIOLATED -->
+  <SectionHeader
+    eyebrow="Federal Laws Violated"
+    title="The Criminal<br>Statutes"
+    introText="The fake electors scheme violated multiple federal and state criminal statutes. Here are the specific laws and how they apply."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="§"
+      title="18 U.S.C. § 371 — Conspiracy to Defraud the United States"
+      body="Criminalizes conspiracies to <em>&quot;defraud the United States, or any agency thereof in any manner or for any purpose.&quot;</em> The DOJ's Criminal Resource Manual identifies interfering with legitimate government activity as a form of &quot;defrauding&quot; the government. The fake electors scheme was a coordinated effort to interfere with Congress's constitutionally mandated function of certifying electoral votes.<br><br><strong>Maximum penalty: 5 years imprisonment.</strong>"
+      tag="Federal"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="§"
+      title="18 U.S.C. § 1512(c) — Obstruction of an Official Proceeding"
+      body="Criminalizes corruptly obstructing, influencing, or impeding an official proceeding. The January 6 joint session of Congress is an official proceeding. The creation and submission of fraudulent certificates was designed to obstruct that proceeding by giving Pence a pretextual basis to reject legitimate votes.<br><br>Even after the Supreme Court narrowed this statute in <em>Fischer v. United States</em> (2024), legal analysts confirmed the fake elector scheme — involving creation of <strong>fraudulent documents</strong> — still falls squarely within scope.<br><br><strong>Maximum penalty: 20 years imprisonment.</strong>"
+      tag="Federal"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="§"
+      title="18 U.S.C. § 241 — Conspiracy Against Rights"
+      body="This Civil War-era statute protects the right of citizens to have their votes properly counted. Courts have repeatedly applied it to conspiracies involving ballot fraud and interference with accurate vote counting. The fake electors scheme aimed to <strong>disenfranchise millions of voters in seven states</strong> by substituting fraudulent certificates for the legitimate ones.<br><br>Unlike § 371, this statute does <strong>not require an overt act</strong> — the conspiracy itself is the crime.<br><br><strong>Maximum penalty: 10 years imprisonment.</strong>"
+      tag="Federal"
+      variant="blue"
+    />
+    <CategoryCard
+      icon="§"
+      title="18 U.S.C. § 1001 — False Statements"
+      body="Criminalizes knowingly making <em>&quot;any materially false, fictitious, or fraudulent statement or representation&quot;</em> in any matter within the jurisdiction of the federal government. The fake certificates were submitted to the <strong>National Archives</strong> (executive branch) and <strong>Congress</strong> (legislative branch), containing materially false claims that the signatories were &quot;duly elected and qualified&quot; electors.<br><br><strong>Maximum penalty: 5 years imprisonment.</strong>"
+      tag="Federal"
+      variant="blue"
+    />
+  </CategoryGrid>
+
+  <!-- STATE CHARGES -->
+  <SectionHeader
+    eyebrow="State Criminal Charges"
+    title="Prosecuted in<br>Five States"
+    introText="Five states brought criminal charges against participants in the fake elector scheme."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🍑"
+      title="Georgia — RICO and Forgery"
+      body="<strong>August 14, 2023:</strong> 19 defendants indicted under Georgia's RICO Act, including Trump. Charges include <strong>racketeering, forgery, impersonating a public officer, and filing false documents</strong>. The indictment identified 161 predicate criminal acts. Georgia's RICO statute is broader than federal law — it does not require a connection to organized crime.<br><br><strong>4 co-conspirators pleaded guilty</strong> before the case was dismissed in November 2025 after DA Fani Willis was disqualified."
+      tag="19 Defendants"
+    />
+    <CategoryCard
+      icon="🖐️"
+      title="Michigan — All 16 Fake Electors Charged"
+      body="<strong>July 18, 2023:</strong> AG Dana Nessel charged all 16 individuals who signed false certificates with <strong>eight felony counts each</strong> — including forgery (up to 14 years), election law forgery (up to 5 years), and uttering and publishing forged documents. Trump had lost Michigan by 154,000 votes."
+      tag="8 Felony Counts Each"
+    />
+    <CategoryCard
+      icon="🌵"
+      title="Arizona — 18 Defendants Indicted"
+      body="<strong>April 2024:</strong> Grand jury indicted 18 defendants — 11 Arizona Republicans and 7 Trump aides — on <strong>nine felony counts</strong> including forgery, fraudulent schemes, and conspiracy. Named defendants included Kelli Ward (AZ GOP chair), John Eastman, Boris Epshteyn, and Rudy Giuliani. Trump was listed as &quot;Unindicted Co-Conspirator 1.&quot;"
+      tag="9 Felony Counts"
+    />
+    <CategoryCard
+      icon="🎰"
+      title="Nevada and Wisconsin"
+      body="<strong>Nevada:</strong> 6 fake electors indicted for offering false instruments for filing and uttering forged instruments. Case proceeding after Nevada Supreme Court ruled 6-0 it could continue.<br><br><strong>Wisconsin:</strong> 3 defendants (including Chesebro) charged with felony forgery. In December 2025, a judge ruled sufficient evidence existed to send the case to trial."
+      tag="Cases Proceeding"
+    />
+  </CategoryGrid>
+
+  <!-- SECTION 5: THE PRESSURE CAMPAIGN -->
+  <SectionDivider label="Chapter V" />
+  <SectionHeader
+    eyebrow="Chapter V · The Pressure Campaign"
+    title="&quot;Find Me<br>the Votes&quot;"
+    introText="While the fake electors provided the mechanism, Trump personally pressured state officials, the Vice President, and the Department of Justice to overturn the results."
+  />
+
+  <!-- RAFFENSPERGER CALL -->
+  <VoicesSection
+    eyebrow="January 2, 2021 · The Raffensperger Call"
+    title="&quot;I Just Want to Find<br>11,780 Votes&quot;"
+    introText="Four days before January 6, Trump called Georgia Secretary of State Brad Raffensperger in a one-hour call — recorded and published by the Washington Post. On the call were Giuliani, Eastman, Mark Meadows, and several other Trump advisers."
+  >
+    <VoiceCard
+      quote="I just want to find 11,780 votes, which is one more than we have, because we won the state."
+      name="Donald Trump"
+      role="President of the United States"
+      detail="Phone call to Georgia Secretary of State · January 2, 2021"
+      context="11,780 was one more than Biden's margin of victory in Georgia."
+    />
+    <VoiceCard
+      quote="That's a criminal, that's a criminal offense. And you can't let that happen. That's a big risk to you and to Ryan, your lawyer."
+      name="Donald Trump"
+      role="President of the United States"
+      detail="Same call · January 2, 2021"
+      context="Directly threatening Raffensperger and his general counsel Ryan Germany with criminal liability for certifying the legitimate results."
+    />
+    <VoiceCard
+      quote="We don't agree that you have won."
+      name="Brad Raffensperger (R)"
+      role="Georgia Secretary of State"
+      detail="January 2, 2021"
+      context="Raffensperger later testified he interpreted Trump's comments as a 'threat,' stating: 'I understood the positional power that the President of the United States of America has.'"
+    />
+  </VoicesSection>
+
+  <!-- PENCE PRESSURE -->
+  <SectionHeader
+    eyebrow="Pressuring Mike Pence"
+    title="&quot;You'll Go Down<br>as a Wimp&quot;"
+    introText="Trump and John Eastman developed a plan requiring Vice President Pence to unilaterally reject legitimate electoral votes on January 6. When Pence refused, Trump escalated."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📝"
+      title="The Eastman Six-Step Plan"
+      body="John Eastman wrote a memo laying out how Pence could overturn the election:<br><br><strong>1.</strong> Pence opens ballots, starting with Alabama<br><strong>2.</strong> At Arizona, announces &quot;multiple slates of electors,&quot; sets aside disputed states<br><strong>3.</strong> Continues through all states, setting aside seven<br><strong>4.</strong> Announces Trump has 232 votes, Biden 222<br><strong>5.</strong> Declares Trump re-elected<br><br>Eastman wrote: <em>&quot;Pence should do this without asking for permission — either from a vote of the joint session or from the Court.&quot;</em>"
+      tag="The Blueprint"
+    />
+    <CategoryCard
+      icon="📞"
+      title="The Morning of January 6"
+      body="According to Pence's own handwritten notes, Trump called him that morning and said:<br><br><em>&quot;You'll go down as a wimp.&quot;</em><br><em>&quot;If you do that, I made a big mistake 5 years ago.&quot;</em><br><em>&quot;You're not protecting our country.&quot;</em><br><em>&quot;You listen to the wrong people.&quot;</em><br><br>Ivanka Trump testified the call was <em>&quot;heated&quot;</em> and her father used a <em>&quot;different tone&quot;</em> than she'd heard before."
+      tag="Pence's Notes"
+    />
+    <CategoryCard
+      icon="🛡️"
+      title="Pence's Response"
+      body="Pence wrote in his notes: <em>&quot;I said we both [took] an oath to support + defend the Constitution.&quot;</em><br><br>He concluded the Constitution gave him no power beyond counting the Electoral College votes. He told Trump:<br><br><strong><em>&quot;It doesn't take courage to break the law. It takes courage to uphold the law.&quot;</em></strong>"
+      tag="Oath Over Loyalty"
+    />
+  </CategoryGrid>
+
+  <!-- DOJ PRESSURE -->
+  <SectionHeader
+    eyebrow="Pressuring the Department of Justice"
+    title="&quot;Just Say It Was<br>Corrupt&quot;"
+    introText="Trump pressured DOJ officials to declare the election corrupt — and when they refused, he nearly replaced the Acting Attorney General with a loyalist willing to do his bidding."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📱"
+      title="December 27, 2020: The 90-Minute Call"
+      body="During a call with Acting AG Jeffrey Rosen and Deputy AG Richard Donoghue, Trump said:<br><br><strong><em>&quot;Just say that the election was corrupt and leave the rest to me and the Republican congressmen.&quot;</em></strong><br><br>This quote comes from Donoghue's handwritten notes taken during the call. Trump also said: <em>&quot;We have an obligation to tell people that this was an illegal, corrupt election.&quot;</em>"
+      tag="Donoghue's Notes"
+    />
+    <CategoryCard
+      icon="👤"
+      title="The Jeffrey Clark Scheme"
+      body="Jeffrey Clark — a DOJ official with <strong>no criminal law experience</strong> — drafted a letter for DOJ to send to Georgia officials, falsely stating that DOJ was investigating &quot;various irregularities&quot; and recommending the state appoint Trump electors.<br><br>White House Counsel Pat Cipollone described Clark's plan as a <em><strong>&quot;murder-suicide pact.&quot;</strong></em>"
+      tag="The Loyalist"
+    />
+    <CategoryCard
+      icon="🚪"
+      title="The Mass Resignation Threat"
+      body="On the evening of January 3, 2021, Trump planned to fire Rosen and install Clark as Acting AG. At a dramatic White House meeting:<br><br>• Rosen, Donoghue, and Engel all <strong>threatened to resign</strong><br>• Assistant AGs across the department said they would resign <strong>en masse</strong><br>• Cipollone warned the plan was legally disastrous<br>• Donoghue told Trump that Clark <em>&quot;simply didn't have the skills, the ability and the experience&quot;</em><br><br>Faced with the prospect of hundreds of resignations, <strong>Trump backed down — just hours before January 6</strong>."
+      tag="Hours Before Jan. 6"
+    />
+  </CategoryGrid>
+
+  <!-- SECTION 6: JANUARY 6 -->
+  <SectionDivider label="Chapter VI" />
+  <SectionHeader
+    eyebrow="Chapter VI · January 6, 2021"
+    title="The<br>187 Minutes"
+    introText="After weeks of false claims, Trump summoned thousands to Washington. He told them to march to the Capitol. Then he watched the attack on television for over three hours while refusing calls to intervene."
+  />
+
+  <TimelineSection title="January 6<br>Timeline">
+    <TimelineItem
+      date="~11:50 AM"
+      badge="Rally"
+      badgeType="serious"
+      title="Giuliani Warms Up the Crowd"
+      description="Rudy Giuliani addresses the rally at the Ellipse, declaring: 'Let's have trial by combat.'"
+    />
+    <TimelineItem
+      date="~12:00 PM"
+      badge="Rally"
+      badgeType="serious"
+      title="Trump Begins Speaking"
+      description="Trump tells the crowd: 'If you don't fight like hell, you're not going to have a country anymore.' And: 'We're going to walk down to the Capitol, and we're going to cheer on our brave senators and congressmen and women... you'll never take back our country with weakness. You have to show strength.' He uses the phrase 'peacefully and patriotically' once, then spends roughly 50 more minutes amplifying false claims and attacking Pence."
+    />
+    <TimelineItem
+      date="~1:10 PM"
+      badge="Breach Begins"
+      badgeType="catastrophic"
+      title="Rioters Overrun First Barriers"
+      description="Pro-Trump rioters, including members of the Proud Boys, overrun the first barriers outside the Capitol."
+    />
+    <TimelineItem
+      date="~1:21 PM"
+      badge="White House"
+      badgeType="catastrophic"
+      title="Trump Is Informed the Capitol Is Under Attack"
+      description="Trump is told the Capitol has been breached. He goes to the White House dining room and watches the attack unfold on television."
+    />
+    <TimelineItem
+      date="~2:00 PM"
+      badge="Breach"
+      badgeType="catastrophic"
+      title="Rioters Enter the Building"
+      description="Proud Boy Dominic Pezzola uses a stolen police shield to break a window, allowing the first rioters to enter the Capitol building."
+    />
+    <TimelineItem
+      date="~2:13 PM"
+      badge="Evacuation"
+      badgeType="catastrophic"
+      title="Pence Evacuated from Senate Chamber"
+      description="Vice President Pence is evacuated. He comes within approximately one minute and 100 feet of being visible to rioters on a staircase."
+    />
+    <TimelineItem
+      date="2:24 PM"
+      badge="The Tweet"
+      badgeType="catastrophic"
+      title="Trump Attacks Pence — During the Attack"
+      description="While Pence is in hiding and rioters are inside the Capitol, Trump tweets: 'Mike Pence didn't have the courage to do what should have been done to protect our Country and our Constitution.' This tweet is read aloud by rioters inside the Capitol. Crowds break into chants of 'Hang Mike Pence!'"
+    />
+    <TimelineItem
+      date="2:24–4:17 PM"
+      badge="Inaction"
+      badgeType="catastrophic"
+      title="Trump Refuses to Act for 187 Minutes"
+      description="From approximately 1:10 PM to 4:17 PM, Trump watches the attack on television. He does not call the Secretary of Defense, the Attorney General, the Secretary of Homeland Security, or any law enforcement agency. He refuses repeated requests from family members, White House staff, Fox News hosts, and Republican members of Congress to tell the mob to go home."
+    />
+    <TimelineItem
+      date="4:17 PM"
+      badge="Video"
+      badgeType="serious"
+      title="Trump Finally Posts a Video"
+      description="After 187 minutes, Trump posts a video telling supporters to leave. In it, he says: 'I know your pain. I know your hurt. We had an election that was stolen from us... So go home. We love you. You are very special.' Twitter, Facebook, and YouTube remove the video for violating their policies."
+    />
+  </TimelineSection>
+
+  <!-- WHAT HE DIDN'T DO -->
+  <section class="inaction-section">
+    <div class="inaction-inner">
+      <div class="inaction-header">
+        <div class="inaction-eyebrow">During the 187 Minutes</div>
+        <h3 class="inaction-title">What Trump <span class="inaction-did-not">Did Not</span> Do</h3>
+      </div>
+      <div class="inaction-grid">
+        <div class="inaction-item fade-up">
+          <span class="inaction-x">✕</span>
+          <span class="inaction-label">Call the Secretary of Defense</span>
+        </div>
+        <div class="inaction-item fade-up">
+          <span class="inaction-x">✕</span>
+          <span class="inaction-label">Call the Attorney General</span>
+        </div>
+        <div class="inaction-item fade-up">
+          <span class="inaction-x">✕</span>
+          <span class="inaction-label">Call the Secretary of Homeland Security</span>
+        </div>
+        <div class="inaction-item fade-up">
+          <span class="inaction-x">✕</span>
+          <span class="inaction-label">Call the National Guard</span>
+        </div>
+        <div class="inaction-item fade-up">
+          <span class="inaction-x">✕</span>
+          <span class="inaction-label">Call any law enforcement agency</span>
+        </div>
+      </div>
+      <div class="inaction-did-header fade-up">
+        <h3 class="inaction-title">What Trump <span class="inaction-did">Did</span> Do</h3>
+      </div>
+      <div class="inaction-grid inaction-grid-did">
+        <div class="inaction-item inaction-item-did fade-up">
+          <span class="inaction-check">✓</span>
+          <span class="inaction-label">Call Rudy Giuliani</span>
+        </div>
+        <div class="inaction-item inaction-item-did fade-up">
+          <span class="inaction-check">✓</span>
+          <span class="inaction-label">Call members of Congress to continue objecting to certification — during the attack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .inaction-section {
+      background: #0d0606;
+      border-top: 2px solid var(--red);
+      border-bottom: 2px solid var(--red);
+      padding: 70px 24px;
+    }
+
+    .inaction-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .inaction-header {
+      margin-bottom: 40px;
+    }
+
+    .inaction-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .inaction-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 64px);
+      color: var(--text);
+      line-height: 0.95;
+    }
+
+    .inaction-did-not {
+      color: var(--red);
+    }
+
+    .inaction-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .inaction-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(212, 43, 43, 0.15);
+    }
+
+    .inaction-item:last-child {
+      border-bottom: none;
+    }
+
+    .inaction-x {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--red);
+      flex-shrink: 0;
+      width: 32px;
+      text-align: center;
+    }
+
+    .inaction-label {
+      font-family: var(--font-heading);
+      font-size: clamp(16px, 2.5vw, 20px);
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .inaction-did-header {
+      margin-top: 48px;
+      margin-bottom: 40px;
+    }
+
+    .inaction-did {
+      color: var(--red-bright);
+    }
+
+    .inaction-item-did {
+      border-bottom-color: rgba(212, 43, 43, 0.15);
+    }
+
+    .inaction-item-did .inaction-label {
+      color: var(--text);
+    }
+
+    .inaction-check {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--red-bright);
+      flex-shrink: 0;
+      width: 32px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- SECTION 7: THE FALLOUT -->
+  <SectionDivider label="Chapter VII" />
+  <SectionHeader
+    eyebrow="Chapter VII · Consequences"
+    title="The<br>Fallout"
+    introText="The attempt to overturn the 2020 election produced the largest criminal investigation in American history, destroyed careers, ended in guilty pleas, and left a trail of ruined lives."
+  />
+
+  <!-- JANUARY 6 PROSECUTIONS -->
+  <ConsequencesGrid eyebrow="January 6 Prosecutions" title="The Largest Criminal Investigation<br>in U.S. History">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="1,575"
+        title="People Charged"
+        description="Federal criminal charges filed in connection with the January 6 Capitol attack — over 1,000 pleaded guilty."
+      />
+      <ConsequenceItem
+        number="1,300"
+        title="Years in Prison"
+        description="Combined sentences handed down to January 6 defendants before Trump's pardons wiped them away."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="140"
+        title="Officers Injured"
+        description="Police officers physically injured — beaten with lead pipes, stun guns, flagpoles, and clubs. 15 hospitalized. Traumatic brain injuries, crushed spinal discs."
+      />
+      <ConsequenceItem
+        number="9"
+        title="Lives Lost"
+        description="4 rioters died on January 6. Officer Brian Sicknick died the next day after being assaulted with pepper spray. 4 officers who responded to the attack later died by suicide."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- SEDITIOUS CONSPIRACY -->
+  <SectionHeader
+    eyebrow="Seditious Conspiracy Convictions"
+    title="Convicted of<br>Trying to Overthrow<br>the Government"
+    introText="Leaders of the Oath Keepers and Proud Boys were convicted of seditious conspiracy — one of the most serious charges in federal law, reserved for attempts to overthrow the government by force."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⛓️"
+      title="Oath Keepers"
+      body="<strong>Stewart Rhodes</strong>, founder: Convicted of seditious conspiracy. Sentenced to <strong>18 years</strong> — the longest sentence for a case involving seditious conspiracy in decades.<br><br><strong>Kelly Meggs</strong>, Florida chapter leader: <strong>12 years</strong>.<br><br>Both were released on January 21, 2025, after Trump commuted their sentences. Rhodes has said he is &quot;rebuilding&quot; the Oath Keepers."
+      tag="Released by Trump"
+    />
+    <CategoryCard
+      icon="⛓️"
+      title="Proud Boys"
+      body="<strong>Enrique Tarrio</strong>, former chairman: <strong>22 years</strong> — the longest January 6 sentence. <strong>Ethan Nordean</strong>: 18 years. <strong>Joe Biggs</strong>: 17 years. <strong>Zachary Rehl</strong>: 15 years.<br><br>All four convicted of seditious conspiracy on May 4, 2023. <strong>All released after Trump's January 20, 2025 clemency.</strong>"
+      tag="Released by Trump"
+    />
+  </CategoryGrid>
+
+  <!-- CO-CONSPIRATOR GUILTY PLEAS -->
+  <SectionHeader
+    eyebrow="Trump's Own Allies Pleaded Guilty"
+    title="They Admitted<br>What They Did"
+    introText="Four of Trump's co-conspirators in the Georgia RICO case entered guilty pleas — admitting their roles in the effort to overturn the election."
+  />
+
+  <VoicesSection
+    eyebrow="Georgia Guilty Pleas"
+    title="In Their<br>Own Words"
+    introText="These are Trump's own lawyers and advisers, admitting in court that what they did was wrong."
+  >
+    <VoiceCard
+      quote="If I knew then what I know now, I would have declined to represent Donald Trump in these post-election challenges... I look back on this full experience with deep remorse."
+      name="Jenna Ellis"
+      role="Trump Campaign Attorney"
+      detail="Guilty plea · October 24, 2023"
+      context="Pleaded guilty to 1 felony count of aiding and abetting false statements. Sentenced to 5 years probation, $5,000 restitution, 100 hours community service."
+    />
+    <VoiceCard
+      quote="[Admitted she] created and distributed false Electoral College documents working 'in coordination with' the Trump campaign."
+      name="Sidney Powell"
+      role="Trump Attorney"
+      detail="Guilty plea · October 19, 2023"
+      context="Pleaded guilty to 6 misdemeanor counts. Admitted hiring forensic experts to compromise voting software in Coffee County, Georgia."
+    />
+    <VoiceCard
+      quote="[Admitted he] conspired to put forward fake GOP electors in Georgia with Trump, Giuliani, and Eastman."
+      name="Kenneth Chesebro"
+      role="Architect of the Fake Electors Strategy"
+      detail="Guilty plea · October 20, 2023"
+      context="Pleaded guilty to 1 felony count of conspiracy to commit filing false documents."
+    />
+  </VoicesSection>
+
+  <!-- GIULIANI'S DOWNFALL -->
+  <CategoryGrid>
+    <CategoryCard
+      icon="📉"
+      title="Rudy Giuliani: Complete Downfall"
+      body="<strong>Disbarred</strong> in New York (July 2024) and Washington, D.C. (September 2024).<br><br><strong>$148 million verdict</strong> awarded to election workers Ruby Freeman and Shaye Moss for defamation ($75M punitive, $33M defamation, $40M emotional distress).<br><br><strong>Filed for bankruptcy</strong> one week after the verdict. Surrendered his Manhattan apartment, luxury watches, and memorabilia.<br><br><strong>Settled with Dominion Voting Systems</strong> in a separate defamation lawsuit."
+      tag="Disbarred & Bankrupt"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="John Eastman: Disbarred"
+      body="The architect of the plan to overturn the election through Pence was found culpable of <strong>10 of 11 disciplinary charges</strong> by the California State Bar Court.<br><br>The judge found Eastman <em>&quot;intentionally misled the courts by making voter fraud claims that he basically knew were bogus.&quot;</em><br><br><strong>Disbarment recommendation affirmed</strong> by the State Bar Court Review Department in June 2025."
+      tag="Disbarred"
+    />
+  </CategoryGrid>
+
+  <!-- ELECTION WORKERS -->
+  <SectionDivider label="Human Cost" />
+  <SectionHeader
+    eyebrow="The People Behind the Numbers"
+    title="Election Workers<br>Under Siege"
+    introText="Trump and Giuliani's lies didn't just fail in court — they destroyed the lives of ordinary Americans who were doing their jobs."
+  />
+
+  <VoicesSection
+    eyebrow="Sworn Testimony"
+    title="Ruby Freeman &amp;<br>Shaye Moss"
+    introText="Ruby Freeman and her daughter Shaye Moss were Georgia election workers falsely accused by Trump and Giuliani of sneaking in fraudulent ballots. Their lives were upended."
+  >
+    <VoiceCard
+      quote="There were a lot of threats, wishing death upon me, telling me that I'll be in jail with my mother and saying things like, 'Be glad it's 2020 and not 1920.'"
+      name="Shaye Moss"
+      role="Georgia Election Worker"
+      detail="January 6 Committee testimony · June 21, 2022"
+      context="Moss testified she changed her appearance, seldom leaves her home, and suffers from panic attacks."
+    />
+    <VoiceCard
+      quote="There is nowhere I feel safe. Nowhere."
+      name="Ruby Freeman"
+      role="Georgia Election Worker"
+      context="Freeman was forced into hiding for two months after the FBI said it was not safe for her to be at home around January 6."
+    />
+    <VoiceCard
+      quote="Money will never solve all my problems. I can never move back into the house that I call home. I will always have to be careful about where I go and who I choose to share my name with. I miss my home. I miss my neighbors and I miss my name."
+      name="Ruby Freeman"
+      role="Georgia Election Worker"
+      detail="After the $148 million jury verdict against Giuliani"
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🎯"
+      title="Nationwide Threats to Election Workers"
+      body="<strong>38%</strong> of local election officials report experiencing threats, harassment, or abuse because of their job (Brennan Center, 2025).<br><br><strong>45%</strong> say they fear for the safety of their colleagues.<br><br>At least <strong>227 bomb threats</strong> targeted polling locations and election offices on and after Election Day 2024.<br><br>Election worker turnover reached <strong>41% in 2024</strong> — the highest in at least 25 years. The people who run our elections are being driven out."
+      tag="Democracy Under Threat"
+    />
+    <CategoryCard
+      icon="📊"
+      title="The Big Lie Lives On"
+      body="Despite 62 lost lawsuits, Trump's own AG calling the claims &quot;bullshit,&quot; every recount confirming Biden's win, and guilty pleas from Trump's own lawyers:<br><br><strong>69% of Republicans</strong> still believe the 2020 election was stolen (CNN, August 2023).<br><br>Among Americans who most trust far-right TV news: <strong>92%</strong> believe it was stolen. Among Fox News viewers: <strong>65%</strong>.<br><br>The belief has remained remarkably stable — roughly two-thirds of Republicans — despite <strong>zero evidence supporting it</strong>."
+      tag="The Disinformation Effect"
+    />
+  </CategoryGrid>
+
+  <!-- SECTION 8: THE PARDONS -->
+  <SectionDivider label="Chapter VIII" />
+  <SectionHeader
+    eyebrow="Chapter VIII · The Pardons"
+    title="Pardoned.<br>Released.<br>Rearrested."
+    introText="On his first day back in office, Trump granted blanket clemency to nearly everyone convicted in connection with January 6. Seditious conspiracy convicts walked free. Then came the rearrest reports."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📋"
+      title="January 20, 2025: Blanket Clemency"
+      body="Trump granted clemency to nearly <strong>all 1,600 people</strong> convicted of or awaiting trial for January 6 offenses. Most received full pardons. Seditious conspiracy convicts — including the leaders of the Oath Keepers and Proud Boys — had their sentences commuted to time served.<br><br>Among those pardoned: <strong>600+ convicted of assaulting law enforcement officers</strong> and <strong>170 convicted of using a deadly weapon</strong>."
+      tag="Day One"
+    />
+    <CategoryCard
+      icon="📋"
+      title="November 2025: Fake Electors Pardoned"
+      body="Trump pardoned <strong>77 individuals</strong> involved in the fake electors scheme, including Giuliani, Meadows, Powell, Ellis, Chesebro, and Eastman. The proclamation covered anyone involved in the &quot;advice, creation, organization, execution, submission, support, voting, activities, participation in, or advocacy for&quot; any slate of fake electors.<br><br><strong>Note:</strong> Presidential pardons only apply to federal offenses. State prosecutions in Wisconsin and Nevada continue."
+      tag="Mass Pardon"
+    />
+    <CategoryCard
+      icon="🔄"
+      title="33+ Pardoned Defendants Rearrested"
+      body="As of January 2026, at least <strong>33 pardoned January 6 defendants</strong> have been rearrested for new crimes:<br><br>• <strong>6</strong> charged with child sex crimes<br>• <strong>5</strong> charged with illegal weapons possession<br>• <strong>5</strong> arrested for DUI (2 resulting in fatalities)<br>• <strong>Edward Kelley:</strong> sentenced to <strong>life in prison</strong> for conspiracy to murder federal employees<br>• <strong>Jake Lang:</strong> arrested for felony vandalism at the Minnesota State Capitol"
+      tag="After the Pardons"
+    />
+    <CategoryCard
+      icon="🔓"
+      title="All Criminal Cases Resolved Without Trial"
+      body="Every criminal case against Trump related to the 2020 election ended without going to trial:<br><br><strong>Federal indictment (Jack Smith):</strong> Dismissed November 2024 — DOJ policy against prosecuting a sitting president.<br><br><strong>Georgia RICO case:</strong> Dismissed November 2025 after DA Willis was disqualified and the replacement prosecutor dropped it.<br><br>Jack Smith's final report stated the evidence was <em>&quot;sufficient to convict Trump&quot;</em> but for his election and return to the presidency."
+      tag="No Trial"
+    />
+  </CategoryGrid>
+
+  <!-- JANUARY 6 COMMITTEE CONCLUSION -->
+  <ColoredSection background="#120a0a" borderColor="var(--red)">
+    <AlertBanner icon="📘" title="The January 6 Committee's Central Finding" variant="amber">
+      <p style="font-size: 18px; color: var(--text); line-height: 1.7; font-weight: 600;">"The central cause of January 6th was one man, former President Donald Trump, who many others followed. None of the events of January 6th would have happened without him."</p>
+      <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-top: 16px;">The committee — which included 7 Democrats and 2 Republicans (Liz Cheney and Adam Kinzinger) — unanimously voted to refer Trump for criminal prosecution under four federal statutes. It was the first time in American history that Congress recommended criminal referral against a former president.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- BARR FINAL WORD -->
+  <HighlightBar text="William Barr, Trump's own Attorney General, wrote in his 2022 memoir: 'The election was not stolen. Trump lost it.'" />
+
+  <CTASection
+    title="The Evidence<br>Is Documented."
+    description="62 lawsuits. 86 judges. Every recount. Every audit. Every guilty plea. Every sworn statement. The 2020 election was not stolen — and the attempt to steal it is the most documented political crime in American history."
+    linkText="← Back to Deep Dives"
+    linkHref="/deep-dives"
+  />
+
+</ResearchLayout>

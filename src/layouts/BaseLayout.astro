@@ -24,6 +24,10 @@ const { title, description = 'Research and documentation from The Trump Tracker'
 <body>
   <slot />
   <script>
+    import { inject } from '@vercel/analytics';
+    inject();
+  </script>
+  <script>
     // Counter animation for stat numbers
     function animateCounter(el: HTMLElement) {
       const target = parseInt(el.dataset.target || '0');

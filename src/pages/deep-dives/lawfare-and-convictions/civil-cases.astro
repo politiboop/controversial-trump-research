@@ -1,0 +1,435 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import ConsequencesGrid from '../../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "$88.3 Million — E. Jean Carroll Defamation Verdicts",
+  "Jury Found Trump Liable for Sexual Abuse",
+  "Fraud Finding Upheld on Appeal — $454M Penalty Vacated (Eighth Amendment)",
+  "Mar-a-Lago Valued at $739M — County Assessed at $18M",
+  "Trump University: $25 Million Settlement for 6,000 Students",
+  "Trump Foundation Dissolved by Court Order",
+  "Trump Org: 17 Felony Convictions for Tax Fraud",
+  "4,000+ Lifetime Lawsuits — Pattern, Not Persecution",
+  "Two Separate Juries Ruled Against Trump in Carroll Case",
+  "CFO Allen Weisselberg: Pleaded Guilty Twice",
+];
+---
+
+<ResearchLayout title="The Civil Cases — Deep Dive" description="$88.3M for defamation. $454M for fraud. $25M for Trump University. A dissolved foundation. And 4,000+ lifetime lawsuits.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The "Lawfare" Narrative', href: '/deep-dives/lawfare-and-convictions' },
+    { label: 'The Civil Cases' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Civil Record"
+    title="THE CIVIL <span class='word-red'>CASES</span>"
+    subtitle="Fraud. Defamation. Sexual abuse. And a pattern spanning decades."
+    date="Sources: Jury Verdicts · Judicial Opinions · Settlement Records · AG Filings · Court Documents"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The court finds that the defendants participated in repeated and persistent fraud, illegality, and illegality that shocks the conscience of this court."
+    citation="Judge Arthur Engoron — Trump Organization fraud ruling, September 2023"
+  />
+
+  <ConsequencesGrid eyebrow="What Courts Have Ordered Trump to Pay" title="The Financial<br>Judgments">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="$454M"
+        title="Business Fraud"
+        description="Judge Engoron ruled Trump committed 'persistent and repeated fraud' over a decade. The fraud finding was upheld on appeal, but the $454M penalty was vacated on Eighth Amendment grounds (August 2025)."
+      />
+      <ConsequenceItem
+        number="$88.3M"
+        title="E. Jean Carroll Defamation"
+        description="Two separate jury verdicts. The first jury found Trump sexually abused Carroll. The second awarded $83.3M in punitive damages for his continued defamation."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="$25M"
+        title="Trump University Settlement"
+        description="Settlement paid to approximately 6,000 students who alleged Trump University was a fraudulent scheme with no accreditation and no 'hand-picked' instructors."
+      />
+      <ConsequenceItem
+        number="$2M"
+        title="Trump Foundation"
+        description="Foundation dissolved by court order. Trump used charitable funds to buy a portrait of himself, settle business debts, and make a political donation to a Florida AG."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <!-- E. JEAN CARROLL -->
+  <SectionDivider label="Case I" />
+  <SectionHeader
+    eyebrow="Case I · Carroll v. Trump"
+    title="E. Jean Carroll:<br>Sexual Abuse &amp;<br>Defamation"
+    introText="Two separate juries heard evidence, examined witnesses, and ruled against Trump — finding him liable for sexual abuse, defamation, and awarding a combined $88.3 million in damages."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚖️"
+      title="Trial 1: Sexual Abuse and Defamation (May 2023)"
+      body="A federal jury found Trump <strong>liable for sexual abuse</strong> of journalist E. Jean Carroll in a department store dressing room in the mid-1990s, and <strong>liable for defamation</strong> for calling her a liar.<br><br>The jury awarded <strong>$5 million</strong> — $2 million for sexual abuse and $3 million for defamation.<br><br>The jury did not find that Carroll proved rape under New York's narrow legal definition, but <strong>did find sexual abuse</strong> — which Judge Kaplan later clarified was consistent with the common understanding of rape."
+      tag="$5 Million — Jury Verdict"
+    />
+    <CategoryCard
+      icon="💰"
+      title="Trial 2: Punitive Damages (January 2024)"
+      body="A second jury awarded <strong>$83.3 million</strong> in damages for Trump's continued defamation of Carroll — statements he made <em>while president</em>, <em>while the first trial was ongoing</em>, and <em>after the first verdict</em>.<br><br>The breakdown: <strong>$18.3 million</strong> in compensatory damages (reputational harm and emotional distress) and <strong>$65 million</strong> in punitive damages (to deter future defamatory conduct).<br><br>The jury deliberated for <strong>less than 3 hours</strong>."
+      tag="$83.3 Million — Jury Verdict"
+    />
+    <CategoryCard
+      icon="📋"
+      title="The Evidence"
+      body="Carroll's account was corroborated by:<br><br>• <strong>Two friends</strong> she told at the time of the alleged assault in the mid-1990s<br>• The <strong>Access Hollywood tape</strong> — in which Trump described the same kind of conduct Carroll alleged: <em>&quot;I just start kissing them... I don't even wait. And when you're a star, they let you do it.&quot;</em><br>• Testimony from <strong>two other women</strong> who described similar experiences with Trump<br>• <strong>Expert psychological testimony</strong> on the effects of the alleged assault<br><br>Trump chose <strong>not to testify</strong> at either trial. His video deposition was played for jurors, during which he <strong>mistook a photo of Carroll for his ex-wife Marla Maples</strong>."
+      tag="Corroborated Testimony"
+    />
+  </CategoryGrid>
+
+  <!-- CARROLL TALKING POINTS -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"She's lying — there's no proof."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Two separate juries</strong> — 12 jurors each, selected with defense participation — found Carroll's account credible and Trump's denials not credible.</p>
+          <p>Her account was corroborated by contemporaneous witnesses (friends she told at the time), by Trump's own words on the Access Hollywood tape describing identical conduct, and by testimony from other women describing similar experiences.</p>
+          <p>Trump had every opportunity to present his defense. He chose not to testify. His legal team cross-examined Carroll and all witnesses. <strong>Two juries still ruled against him.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"$83 million is absurd — it's politically motivated."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The $83.3 million award was driven largely by <strong>punitive damages</strong> — which exist specifically to deter defendants from continuing harmful behavior.</p>
+          <p>The jury arrived at the number after considering Trump's <strong>conduct during and after the first trial</strong>:</p>
+          <ul>
+            <li>After the first jury found him liable for sexual abuse, Trump <strong>continued defaming Carroll</strong> — calling her a liar on social media and in public appearances</li>
+            <li>He made defamatory statements <strong>during the second trial itself</strong></li>
+            <li>He showed <strong>no remorse or intent to stop</strong></li>
+          </ul>
+          <p>Punitive damages are calibrated to the defendant's wealth — a $1,000 fine means nothing to a billionaire. The jury determined that $65 million was the amount necessary to actually <strong>deter Trump from continuing to defame Carroll</strong>.</p>
+          <p>Judge Kaplan — a <strong>Clinton appointee</strong> — denied Trump's motions for a new trial, finding the evidence <em>"overwhelming."</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUMP ORG FRAUD -->
+  <SectionDivider label="Case II" />
+  <SectionHeader
+    eyebrow="Case II · People of the State of New York v. Trump et al."
+    title="Trump Organization<br>Fraud"
+    introText="After a non-jury trial, Judge Arthur Engoron found that Trump, his sons, and the Trump Organization engaged in persistent and repeated fraud over a decade — inflating asset values to obtain better loans and insurance terms. The fraud finding was upheld on appeal in August 2025, but the $454 million penalty was vacated on Eighth Amendment (excessive fines) grounds."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📈"
+      title="The Scheme: A Decade of Lies"
+      body="From 2011 to 2021, Trump submitted annual <strong>Statements of Financial Condition</strong> to banks and insurers that massively inflated his net worth. These weren't minor discrepancies — they were <strong>fabrications</strong>:<br><br>• <strong>Mar-a-Lago:</strong> Valued at up to <strong>$739 million</strong>. Palm Beach County assessed it at <strong>$18 million</strong>.<br>• <strong>Trump Tower penthouse:</strong> Listed as <strong>30,000 square feet</strong>. Actual size: <strong>11,000 square feet</strong>. Trump tripled it.<br>• <strong>Seven Springs estate:</strong> Valued at <strong>$291 million</strong>. Independent appraisals: <strong>$56 million</strong>.<br>• <strong>40 Wall Street:</strong> Valued at <strong>$550 million</strong>. An appraisal the same year: <strong>$220 million</strong>."
+      tag="Billions in Inflations"
+    />
+    <CategoryCard
+      icon="🏦"
+      title="Why It Matters"
+      body="These inflated valuations weren't just vanity numbers. They were submitted to <strong>banks to obtain loans</strong> and to <strong>insurance companies to secure coverage</strong> at favorable rates.<br><br>The banks and insurers relied on these statements when making lending and underwriting decisions. By inflating his worth, Trump obtained <strong>hundreds of millions of dollars in loans at lower interest rates</strong> than his actual financial position warranted."
+      tag="Financial Fraud"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Ruling — and the Appeal"
+      body="After a <strong>non-jury trial</strong>, Judge Engoron found <strong>&quot;persistent and repeated fraud&quot;</strong> and ordered:<br><br>• <strong>$454 million</strong> in disgorgement<br>• <strong>Cancellation</strong> of Trump Organization business certificates<br>• <strong>Bans</strong> on Trump, Eric Trump, and Donald Trump Jr. from serving as officers of any NY corporation<br>• Appointment of an <strong>independent monitor</strong><br><br><strong>On appeal (August 2025):</strong> The appellate court <strong>upheld the fraud finding</strong> — confirming that Trump engaged in persistent and repeated fraud. However, the <strong>$454 million penalty was vacated</strong> on Eighth Amendment grounds, with the court finding it constituted an excessive fine. The fraud itself was never in question — only the size of the penalty."
+      tag="Fraud Upheld on Appeal"
+    />
+  </CategoryGrid>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"There were no victims — the banks got paid back."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>New York's <strong>Executive Law § 63(12)</strong> — the statute used — does not require a victim or financial loss. It prohibits <strong>"persistent fraud or illegality in the carrying on, conducting or transaction of business."</strong></p>
+          <p>The purpose of the statute is to <strong>prevent fraudulent business practices</strong>, not to compensate specific victims. If someone robs a bank and returns the money, they still committed bank robbery.</p>
+          <p>Furthermore, the banks <strong>were</strong> harmed — they extended loans at interest rates that did not reflect the actual risk, because they were relying on fraudulent financial statements. They would have charged higher rates or denied the loans entirely if they had known Trump's actual financial position.</p>
+          <p>The original $454 million represented <strong>disgorgement</strong> — returning the profits Trump gained through fraud. While the penalty was later vacated on Eighth Amendment grounds, the <strong>fraud itself was upheld on appeal</strong>. The court confirmed Trump submitted knowingly false financial statements to banks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Every businessman inflates their numbers."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>There is a difference between optimistic valuation and <strong>tripling the square footage of your apartment</strong>.</p>
+          <p>Trump Tower penthouse: <strong>11,000 sq ft → listed as 30,000 sq ft</strong>. That's not a rounding error or an optimistic estimate. It's a fabrication — a number nearly three times the actual size.</p>
+          <p>Mar-a-Lago: <strong>$18 million assessment → $739 million valuation</strong>. That's a 41x inflation.</p>
+          <p>Seven Springs: <strong>$56 million appraisal → $291 million valuation</strong>. A 5x inflation.</p>
+          <p>The statements also included disclaimers that the values were not independently verified — disclaimers that the banks relied upon as an assurance of good faith. <strong>Submitting knowingly false financial statements to banks is fraud.</strong> It is a crime when ordinary people do it on mortgage applications. The scale of Trump's inflations put them in a category far beyond normal business optimism.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Letitia James campaigned on getting Trump — it's political."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>James did reference Trump during her 2018 campaign. However:</p>
+          <ul>
+            <li>The <strong>investigation began under her predecessor</strong>, AG Eric Schneiderman, and continued under his successor Barbara Underwood before James took office</li>
+            <li>A prosecutor's political views do not invalidate an investigation if the <strong>evidence supports the charges</strong> — just as a defense attorney's beliefs don't invalidate an acquittal</li>
+            <li>The case was decided by <strong>Judge Engoron</strong> based on evidence presented at trial, not by James</li>
+            <li>Trump's legal team raised the political motivation argument in court — the judge considered it and <strong>found the evidence of fraud overwhelming</strong></li>
+          </ul>
+          <p>The question is not whether James had political opinions. The question is whether <strong>Trump actually committed fraud</strong>. A judge examined the evidence for months and concluded he did — <em>"persistent and repeated fraud"</em> — with examples so extreme they <em>"shock the conscience of this court."</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUMP UNIVERSITY -->
+  <SectionDivider label="Case III" />
+  <SectionHeader
+    eyebrow="Case III · Trump University"
+    title="Trump University:<br>$25 Million Settlement"
+    introText="Trump University was not a university. It was not accredited. And its instructors were not 'hand-picked' by Trump."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🎓"
+      title="The Promises vs. Reality"
+      body="Trump University promised students they would learn <strong>Trump's personal real estate investing secrets</strong> from instructors <strong>&quot;hand-picked&quot; by Trump himself</strong>.<br><br><strong>Reality:</strong><br>• Trump <strong>did not hand-pick the instructors</strong><br>• Trump had <strong>no role in designing the curriculum</strong><br>• It was <strong>not an accredited university</strong> — the New York State Education Department warned Trump to stop using the word &quot;university&quot;<br>• Students paid up to <strong>$35,000</strong> for courses that former employees described as <strong>high-pressure upsells</strong> to more expensive packages"
+      tag="Not a University"
+    />
+    <CategoryCard
+      icon="💸"
+      title="The Settlement"
+      body="Approximately <strong>6,000 students</strong> alleged they were defrauded. Trump settled for <strong>$25 million</strong> shortly after winning the 2016 election — after repeatedly vowing he would <strong>never settle</strong>.<br><br>Trump had called the lawsuit <em>&quot;a case I could have won.&quot;</em> He settled anyway.<br><br>The New York AG had called Trump University a <em>&quot;classic bait-and-switch scheme.&quot;</em> Internal documents showed employees were trained in <strong>high-pressure sales tactics</strong> designed to extract maximum money from students, many of whom went into debt."
+      tag="$25 Million"
+    />
+  </CategoryGrid>
+
+  <!-- TRUMP FOUNDATION -->
+  <SectionDivider label="Case IV" />
+  <SectionHeader
+    eyebrow="Case IV · The Trump Foundation"
+    title="Trump Foundation:<br>Dissolved by Court"
+    introText="The Donald J. Trump Foundation was dissolved by court order after the New York AG found it was operated as 'little more than a checkbook' for Trump's personal and business interests."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🖼️"
+      title="How Trump Used the Foundation"
+      body="The AG's investigation found Trump used charitable funds for:<br><br>• A <strong>$10,000 portrait of himself</strong> — purchased at a charity auction using foundation money<br>• <strong>Settling business debts</strong> — including a $100,000 payment related to a Mar-a-Lago lawsuit and a $158,000 payment to settle a lawsuit involving his golf course<br>• A <strong>$25,000 political contribution</strong> to Florida AG Pam Bondi's campaign — whose office was considering whether to investigate Trump University at the time<br>• The foundation had <strong>no staff</strong> and held <strong>no board meetings</strong> for nearly two decades"
+      tag="Misuse of Charity"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Resolution"
+      body="The foundation was <strong>dissolved</strong> under court supervision in December 2018. Trump was ordered to pay <strong>$2 million</strong> in damages and agreed to restrictions on any future charitable activities, including mandatory oversight by independent directors.<br><br>The judge found a <em>&quot;shocking pattern of illegality involving the Trump Foundation — including unlawful coordination with the Trump presidential campaign, repeated and willful self-dealing, and much more.&quot;</em>"
+      tag="Dissolved"
+    />
+  </CategoryGrid>
+
+  <!-- TRUMP ORG CRIMINAL -->
+  <SectionDivider label="Case V" />
+  <SectionHeader
+    eyebrow="Case V · Trump Organization Criminal Case"
+    title="17 Felony<br>Convictions"
+    introText="In addition to the civil fraud case, the Trump Organization itself was convicted of 17 felony counts of tax fraud in December 2022."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⛓️"
+      title="The Scheme"
+      body="For <strong>15 years</strong>, the Trump Organization compensated top executives with off-the-books benefits — <strong>rent-free apartments, luxury cars, private school tuition</strong> — while evading payroll taxes on this compensation.<br><br>CFO <strong>Allen Weisselberg</strong> received a rent-free apartment on the Upper West Side, two Mercedes-Benz vehicles, private school tuition for his grandchildren, and cash payments disguised as holiday bonuses — all unreported to tax authorities."
+      tag="15-Year Scheme"
+    />
+    <CategoryCard
+      icon="✅"
+      title="The Verdict"
+      body="A jury found the Trump Organization <strong>guilty on all 17 felony counts</strong> — including scheme to defraud, conspiracy, criminal tax fraud, and falsifying business records. The organization was fined <strong>$1.61 million</strong> — the maximum penalty.<br><br><strong>Allen Weisselberg</strong> pleaded guilty and served time at Rikers Island. He later pleaded guilty <em>again</em> to <strong>perjury</strong> for lying under oath during the civil fraud trial — and was sentenced to <strong>5 months</strong> at Rikers."
+      tag="Unanimous Verdict"
+    />
+  </CategoryGrid>
+
+  <!-- THE PATTERN -->
+  <SectionDivider label="The Pattern" />
+  <SectionHeader
+    eyebrow="4,000+ Lawsuits"
+    title="A Lifetime<br>of Litigation"
+    introText="Trump's legal troubles did not begin in 2023. The legal system has been a central feature of his career for decades."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📊"
+      title="4,000+ Lifetime Lawsuits"
+      body="According to USA Today's comprehensive analysis, Trump and his businesses have been involved in <strong>at least 4,095 lawsuits</strong> over his career — an extraordinary number that dwarfs any comparable businessperson or politician.<br><br>He has been sued by: <strong>contractors, employees, partners, students, buyers, tenants</strong>, and government agencies. He has sued: <strong>journalists, critics, competitors</strong>, and former business partners.<br><br>Among the claims: <strong>breach of contract, fraud, defamation, sexual assault, racial discrimination</strong>, and failure to pay for services rendered."
+      tag="Pattern"
+    />
+    <CategoryCard
+      icon="🔨"
+      title="The Contractor Pattern"
+      body="USA Today documented <strong>at least 60 lawsuits</strong> from workers and small businesses who alleged Trump or his companies <strong>refused to pay</strong> for work completed — painters, plumbers, dishwashers, glass installers, and other contractors.<br><br>The pattern was consistent: hire contractors, receive their work, then <strong>refuse to pay the full agreed amount</strong> — offering pennies on the dollar or nothing, knowing most small businesses couldn't afford to litigate against a billionaire."
+      tag="Didn't Pay"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="$88.3M in defamation verdicts. Fraud finding upheld on appeal. $25M settlement for defrauded students. Foundation dissolved. Trump Org convicted of 17 felonies. 4,000+ lawsuits. This is not persecution — it's a pattern." />
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p { margin-bottom: 16px; }
+    .tp-facts-content p:last-child { margin-bottom: 0; }
+    .tp-facts-content strong { color: var(--text); }
+    .tp-facts-content em { color: var(--text); font-style: italic; }
+    .tp-facts-content ul { padding-left: 20px; margin: 12px 0; }
+    .tp-facts-content li { margin-bottom: 8px; }
+    .tp-facts-content li:last-child { margin-bottom: 0; }
+  </style>
+
+  <CTASection
+    title="The Pattern<br>Is the Point."
+    description="Fraud. Defamation. Sexual abuse. Tax evasion. Misuse of charity. Stiffing contractors. This is not a man suddenly targeted by the legal system in 2023. This is a lifetime of litigation — documented by courts, confirmed by juries, and settled with hundreds of millions of dollars."
+    linkText="← Back to The 'Lawfare' Narrative"
+    linkHref="/deep-dives/lawfare-and-convictions"
+  />
+
+</ResearchLayout>

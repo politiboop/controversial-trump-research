@@ -1,0 +1,633 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import TimelineSection from '../../../components/design/TimelineSection.astro';
+import TimelineItem from '../../../components/design/TimelineItem.astro';
+import ConsequencesGrid from '../../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "34 Felony Convictions — Unanimous Jury Verdict",
+  "~9,794 Similar Falsifying-Records Cases in NY Since 2015",
+  "Michael Cohen Went to Prison for the Same Conduct",
+  "Bragg Paused the Investigation — Two Prosecutors Resigned in Protest",
+  "NY Ethics Board: Judge Merchan's 'Impartiality Cannot Reasonably Be Questioned'",
+  "FEC's Own Lawyers Found 'Reason to Believe' Violations Occurred",
+  "500+ Prospective Jurors Screened — Defense Used All 10 Strikes",
+  "22 Witnesses · 200+ Exhibits · 7-Week Trial",
+  "No Retainer Agreement Existed — The 'Legal Expenses' Were Fabricated",
+  "Checks Were FedExed to the White House for Trump's Signature",
+];
+---
+
+<ResearchLayout title="The 34 Felony Convictions — Deep Dive" description="Every MAGA talking point about the Manhattan case, tested against the court record. The evidence, the trial, the jury, and the verdict.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The "Lawfare" Narrative', href: '/deep-dives/lawfare-and-convictions' },
+    { label: 'The 34 Felony Convictions' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Manhattan Case"
+    title="THE <span class='word-red'>34</span> FELONY CONVICTIONS"
+    subtitle="Every talking point tested. Every claim checked. The court record speaks."
+    date="Sources: Court Transcripts · Trial Exhibits · Judicial Opinions · NY Ethics Board Rulings · FEC Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="While this defendant may be unlike any other in American history, we arrived at this trial and ultimately today in this verdict in the same manner as every other case that comes through the courtroom doors — by following the facts and the law and doing so without fear or favor."
+    citation="Manhattan DA Alvin Bragg — after the verdict, May 30, 2024"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={34} label="Felony counts — guilty on every single one, unanimously" />
+    <StatCard target={22} label="Witnesses testified — 20 for prosecution, 2 for defense" />
+    <StatCard target={200} suffix="+" label="Exhibits entered into evidence — documents, recordings, phone records" />
+    <StatCard target={9794} prefix="~" label="Similar NY falsifying-records cases from 2015–2023" />
+  </StatGrid>
+
+  <!-- CHAPTER 1: WHAT ACTUALLY HAPPENED -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Facts"
+    title="What Actually<br>Happened"
+    introText="Before addressing the talking points, here's what the evidence showed — in Trump's own voice, his own documents, and his own employees' testimony."
+  />
+
+  <!-- THE CATCH AND KILL SCHEME -->
+  <SectionHeader
+    eyebrow="August 2015 · Trump Tower"
+    title="The Catch-and-Kill<br>Agreement"
+    introText="Weeks after announcing his candidacy, Trump met with National Enquirer publisher David Pecker and Michael Cohen at Trump Tower. What they agreed to would become the foundation of the case."
+  />
+
+  <VoicesSection
+    eyebrow="Under Oath"
+    title="David Pecker's<br>Testimony"
+    introText="The former CEO of American Media Inc. testified for four days — over 10 hours — about the arrangement he made with Trump."
+  >
+    <VoiceCard
+      quote="At that meeting, Donald Trump and Michael, they asked me what can I do and what my magazines could do to help the campaign."
+      name="David Pecker"
+      role="Former CEO, American Media Inc. (National Enquirer)"
+      detail="Trial testimony · April 2024"
+      context="Describing the August 2015 Trump Tower meeting where the catch-and-kill scheme was established."
+    />
+    <VoiceCard
+      quote="I said, 'I would be your eyes and ears.' And then I said that anything that I hear in the marketplace, if I hear anything negative about yourself or if I hear anything about women selling stories, I would notify Michael Cohen."
+      name="David Pecker"
+      role="Former CEO, American Media Inc."
+      detail="Trial testimony · April 2024"
+      context="Pecker agreed to suppress negative stories, publish positive ones, and run negative stories about Trump's Republican primary opponents."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🚪"
+      title="The Doorman: $30,000"
+      body="Former Trump Tower doorman Dino Sajudin claimed Trump had fathered a child with a building employee. AMI paid Sajudin <strong>$30,000</strong> for exclusive rights to the story, then buried it. The story was never verified — but the pattern of using AMI to suppress potentially damaging stories was established."
+      tag="Catch & Kill #1"
+    />
+    <CategoryCard
+      icon="📸"
+      title="Karen McDougal: $150,000"
+      body="Former Playboy model Karen McDougal sought to sell her story of a 10-month affair with Trump. Pecker testified Trump called and asked <em>&quot;What should I do?&quot;</em> AMI purchased McDougal's life rights for <strong>$150,000</strong> — burying the story.<br><br>After AMI's general counsel warned the payment could be an <strong>illegal campaign contribution</strong>, Pecker decided AMI would absorb the cost rather than seek reimbursement from Trump. Cohen testified Trump was angry: <em>&quot;I hate the fact that we did it.&quot;</em>"
+      tag="Catch & Kill #2"
+    />
+    <CategoryCard
+      icon="⚡"
+      title="Stormy Daniels: $130,000"
+      body="After the <strong>Access Hollywood tape</strong> leaked on October 7, 2016, the urgency to suppress Daniels' story of a sexual encounter with Trump escalated dramatically. Keith Davidson (Daniels' attorney) testified the tape was the <em>&quot;driving force&quot;</em> behind finalizing the deal.<br><br>Pecker refused to fund this payment. <strong>Cohen fronted the $130,000 himself</strong>, creating a shell company (Essential Consultants LLC) and wiring the payment on <strong>October 27, 2016 — 12 days before Election Day</strong>.<br><br>Cohen testified Trump instructed him to delay: <em>&quot;If he won, it wouldn't matter.&quot;</em>"
+      tag="12 Days Before the Election"
+    />
+    <CategoryCard
+      icon="📼"
+      title="Trump's Own Voice on Tape"
+      body="In a <strong>September 2016 recorded phone call</strong> — secretly recorded by Cohen — Trump discussed the payment arrangements:<br><br><strong>Cohen:</strong> <em>&quot;I need to open up a company for the transfer of all of that info regarding our friend, David.&quot;</em><br><strong>Trump:</strong> <em>&quot;What do we got to pay for this? One-fifty?&quot;</em><br><strong>Trump:</strong> Suggested paying in <strong>cash</strong><br><strong>Cohen:</strong> <em>&quot;No, no, no.&quot;</em><br><strong>Trump:</strong> <em>&quot;Check.&quot;</em><br><br>This recording placed Trump <strong>directly in discussions</strong> about the payment mechanics."
+      tag="His Own Voice"
+    />
+  </CategoryGrid>
+
+  <!-- THE COVER-UP -->
+  <SectionHeader
+    eyebrow="The Cover-Up"
+    title="34 False<br>Documents"
+    introText="After the election, Trump reimbursed Cohen — but disguised the payments as something they were not."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🧮"
+      title="The Weisselberg Calculation"
+      body="Trump Org CFO Allen Weisselberg wrote the repayment math in his own handwriting on a bank statement:<br><br><strong>$130,000</strong> — Daniels payment reimbursement<br><strong>$50,000</strong> — Red Finch tech services reimbursement<br><strong>= $180,000</strong> subtotal<br><strong>× 2 = $360,000</strong> (grossed up to cover Cohen's taxes)<br><strong>+ $60,000</strong> bonus<br><strong>= $420,000 total</strong><br><br>Paid in <strong>12 monthly installments of $35,000</strong>. Every single one disguised as <em>&quot;legal services rendered pursuant to a retainer agreement.&quot;</em>"
+      tag="Key Physical Evidence"
+    />
+    <CategoryCard
+      icon="📄"
+      title="The 34 False Records"
+      body="The 34 counts corresponded to 34 specific documents:<br><br>• <strong>11 invoices</strong> from Cohen, each describing &quot;legal services rendered pursuant to a retainer agreement&quot;<br>• <strong>12 general ledger entries</strong> coding the payments as &quot;legal expenses&quot;<br>• <strong>11 checks</strong> to Cohen — 9 from Trump's personal account, signed by Trump himself<br><br><strong>No retainer agreement existed.</strong> No legal services were rendered. Every document was fabricated."
+      tag="34 Fabricated Documents"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="Signed in the White House"
+      body="Accounts payable supervisor <strong>Deborah Tarasoff</strong> testified that after Trump became president, checks from his personal account were <strong>FedExed to the White House</strong> for his signature. Trump signed reimbursement checks for a scheme to cover up election interference <strong>from the Oval Office</strong>.<br><br>Tarasoff also testified that any invoice over $10,000 had to be approved by Trump or one of his sons — meaning Trump personally authorized every payment."
+      tag="From the Oval Office"
+    />
+    <CategoryCard
+      icon="💔"
+      title="Hope Hicks Destroyed the Cover Story"
+      body="Trump's own communications director testified that in February 2018, after the story broke publicly, Trump told her Cohen paid Daniels <em>&quot;out of the kindness of his heart.&quot;</em><br><br>Prosecutors asked if that was consistent with Cohen's character. Hicks replied: <em>&quot;I didn't know Michael to be an especially charitable person, or a selfless person. He's the kind of person who seeks credit.&quot;</em><br><br><strong>She then broke down in tears on the stand</strong> — a loyal former aide, visibly distressed at testifying against her former boss, delivering testimony that destroyed his defense."
+      tag="His Own Staff"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="'What have we done?' — Keith Davidson texted Dylan Howard on election night 2016. Howard replied: 'Oh my god.' Both understood their catch-and-kill scheme may have helped elect a president." />
+
+  <!-- THE VERDICT -->
+  <SectionHeader
+    eyebrow="May 30, 2024"
+    title="The Verdict"
+    introText="After roughly 9.5 hours of deliberation over two days, the jury returned its decision."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="✅"
+      title="Guilty on All 34 Counts"
+      body="The jury foreman read <strong>&quot;guilty&quot; 34 consecutive times</strong>. Trump sat stone-faced — he started slowly shaking his head at count 4, then stopped. By the last counts, he was motionless, lips pursed, looking at the floor.<br><br>The verdict was <strong>unanimous</strong>. All 12 jurors agreed, on every count. Trump became the <strong>first current or former U.S. president convicted of a felony</strong>."
+      tag="Unanimous"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Sentence: January 10, 2025"
+      body="Judge Merchan sentenced Trump to an <strong>unconditional discharge</strong> — the conviction stands, but no prison time, probation, or fine. Merchan stated this was <strong>not because the crimes were trivial</strong>, but because <em>&quot;the protection of [the office of the presidency] is a factor that overrides all others.&quot;</em><br><br>Trump told the court: <em>&quot;I got indicted for calling a legal expense a legal expense.&quot;</em><br><br>The conviction remains on his record. He is a <strong>convicted felon</strong>."
+      tag="10 Days Before Inauguration"
+    />
+  </CategoryGrid>
+
+  <!-- CHAPTER 2: THE TALKING POINTS -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · Fact-Checking the Defense"
+    title="Every Talking<br>Point, Tested"
+    introText="These are the most common arguments used to dismiss the conviction. For each one, here's what the actual record shows."
+  />
+
+  <!-- TALKING POINT 1: NOVEL LEGAL THEORY -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"It was a novel legal theory — bootstrapping a misdemeanor into a felony."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>This is the plain text of a statute that has been on the books <strong>since 1986</strong>.</p>
+          <p><strong>NY Penal Law Section 175.10</strong> elevates falsifying business records from a misdemeanor to a felony when the defendant's "intent to defraud includes an intent to commit another crime or to aid or conceal the commission thereof." This isn't a novel theory — <strong>it's literally how the statute was designed to work.</strong></p>
+          <p>The numbers confirm it's routine:</p>
+          <ul>
+            <li>From 2015 through 2023, New York prosecutors filed approximately <strong>9,794 felony falsifying business records cases</strong> statewide.</li>
+            <li>Bragg's office alone filed <strong>166 felony counts</strong> for this crime in his first 15 months as DA.</li>
+            <li>The Manhattan DA brought <strong>117 felony counts against 29 defendants</strong> from January 2022 through April 2023.</li>
+          </ul>
+          <p>Notable prior defendants convicted under this statute include <strong>L. Dennis Kozlowski</strong> (Tyco International CEO), <strong>Clarence Norman Jr.</strong> (NY Assemblyman), and <strong>Steven Croman</strong> (NYC landlord).</p>
+          <p>In <em>People v. Taveras</em> (2009), New York's highest court confirmed the statute only requires <strong>intent</strong> to commit the other crime — the defendant doesn't need to have completed it.</p>
+          <p>As Judge Merchan wrote: <em>"While a former President's prosecution is unprecedented, so too are the allegations that a President committed the crimes with which Defendant is charged."</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 2: BRAGG CAMPAIGNED ON IT -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Bragg campaigned on getting Trump."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Bragg <strong>never promised to indict or prosecute Trump</strong>. His actual statements referenced his professional experience: <em>"I have investigated Trump and his children and held them accountable for their misconduct with the Trump Foundation."</em> He said he would <em>"follow the facts where they go"</em> — standard prosecutorial language about continuing an existing investigation he was inheriting.</p>
+          <p>The decisive counter-evidence: <strong>After taking office in January 2022, Bragg paused the Trump investigation.</strong></p>
+          <p>This prompted two senior prosecutors — <strong>Mark Pomerantz and Carey Dunne</strong> — to resign in protest in February 2022. Pomerantz wrote in his resignation letter that he believed Trump was <em>"guilty of numerous felony violations"</em> and that Bragg's reluctance to indict was <em>"contrary to the public interest."</em></p>
+          <p><strong>A DA who "campaigned on getting Trump" would not have paused the investigation and lost his senior team over it.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 3: MERCHAN'S DAUGHTER -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Judge Merchan's daughter works for Democrats — he should have recused."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Loren Merchan</strong> is president of Authentic Campaigns, a digital political consulting firm whose clients have included Biden, Harris, and other Democrats.</p>
+          <p>Here's what the ethics authorities actually said:</p>
+          <ul>
+            <li>The <strong>New York Advisory Committee on Judicial Ethics</strong> issued Opinion 23-54, concluding that Judge Merchan's <em>"impartiality cannot reasonably be questioned"</em> based on his daughter's employment. They found <em>"nothing in the inquiry to suggest that the outcome of the case could have any effect on the judge's relative, the relative's business, or any of their interests."</em></li>
+            <li>Judge Merchan's <strong>$35 in political donations</strong> (three donations in 2020: $15 to Biden for President, $10 to Progressive Turnout Project, $10 to Stop Republicans) were reviewed by the <strong>NY State Commission on Judicial Conduct</strong>, which dismissed the complaint, calling them <em>"modest political contributions"</em> that <em>"cannot reasonably create an impression of bias or favoritism."</em></li>
+            <li>NYU legal ethics professor <strong>Stephen Gillers</strong> called the donations <em>"trivial"</em>: <em>"Absolutely not. This does not come anywhere near the kind of proof required for recusal."</em></li>
+          </ul>
+          <p>Merchan <strong>rejected three separate recusal motions</strong> from Trump's defense team. The <strong>New York City Bar Association</strong> issued a statement of <em>"unequivocal support"</em> for his handling of the case.</p>
+          <p>Under New York law, recusal requires a judge to have a <strong>direct personal or financial interest</strong> in the outcome. An adult child's employer having done work for a political party does not meet this threshold.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 4: BIASED JURY -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">04</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Manhattan is 87% Democrat — he couldn't get a fair jury."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The venue is legally required.</strong> The crimes — falsifying Trump Organization business records — occurred in Manhattan, where the Trump Organization is headquartered. Cases are tried where the crime took place.</p>
+          <p>Jury selection was extensive:</p>
+          <ul>
+            <li>Over <strong>500 prospective jurors</strong> were screened.</li>
+            <li>Jurors completed <strong>detailed written questionnaires</strong> before individual questioning.</li>
+            <li>Both sides had teams <strong>researching jurors' social media in real time</strong>.</li>
+            <li>Both sides had <strong>10 peremptory challenges</strong> each (to remove jurors without stating a reason).</li>
+            <li>Either side could make <strong>unlimited "for cause" challenges</strong> for demonstrated bias.</li>
+            <li>Trump's defense team <strong>used all 10 of their peremptory strikes</strong>.</li>
+          </ul>
+          <p>The final jury: <strong>7 men and 5 women</strong>. Professions included an investment banker, a security engineer, a retired wealth manager, two lawyers, a speech therapist, and a physical therapist. The foreman was an Irish immigrant who worked in sales.</p>
+          <p>As the <strong>Brennan Center for Justice</strong> noted, accepting this argument would mean no elected official could ever be tried where their crimes occurred. Defendants in all kinds of cases — drug cases, police brutality, white-collar fraud — routinely face juries in jurisdictions with strong community feelings on the subject. That's what voir dire is for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 5: MICHAEL COHEN -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">05</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The whole case rests on Michael Cohen, a convicted liar."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>New York law explicitly addresses this.</strong> Under the accomplice corroboration rule, a defendant <em>cannot</em> be convicted on accomplice testimony alone. The jury was specifically instructed that Cohen was an accomplice and that his testimony <strong>required corroboration by independent evidence</strong>. The conviction means the jury found that corroboration existed.</p>
+          <p>The prosecution called <strong>20 witnesses</strong> and introduced <strong>over 200 exhibits</strong>. The independent evidence included:</p>
+          <ul>
+            <li><strong>The 34 documents themselves</strong> — invoices, vouchers, and checks, 9 of which were signed by Trump personally</li>
+            <li><strong>Allen Weisselberg's handwritten notes</strong> calculating the $420,000 repayment — physical evidence in the CFO's own hand</li>
+            <li><strong>Jeffrey McConney's testimony</strong> — the Trump Org controller confirmed the reimbursement structure independently</li>
+            <li><strong>The September 2016 audio recording</strong> — Trump's own voice discussing payment arrangements</li>
+            <li><strong>David Pecker's 4-day testimony</strong> — confirming the catch-and-kill scheme under a non-prosecution agreement</li>
+            <li><strong>Hope Hicks's testimony</strong> — Trump's own communications director undermining his cover story</li>
+            <li><strong>Bank records</strong> showing Cohen's shell company, the wire transfers, and the payment trail</li>
+            <li><strong>Deborah Tarasoff's testimony</strong> — confirming Trump approved invoices and signed the checks</li>
+          </ul>
+          <p>Defense attorney Todd Blanche told jurors in closing: <em>"There's no way that you can find that President Trump knew about this payment without believing the words of Michael Cohen, period."</em></p>
+          <p>Prosecutor Joshua Steinglass responded: <em>"You don't need Michael Cohen to prove that one bit."</em></p>
+          <p><strong>The jury agreed with the prosecution.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 6: STATUTE OF LIMITATIONS -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">06</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The statute of limitations had expired."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The statute of limitations for a Class E felony in New York is <strong>5 years</strong>. The last false records were created in 2017. The indictment was returned March 30, 2023.</p>
+          <p><strong>COVID-19 tolling:</strong> On March 20, 2020, Governor Cuomo issued executive orders tolling all statutes of limitations due to the pandemic. This remained in effect until November 3, 2020 — a period of <strong>228 days</strong> (approximately 7.5 months). This alone extended the deadline well into 2023, making the indictment timely.</p>
+          <p><strong>Out-of-state tolling:</strong> NY Criminal Procedure Law also permits tolling while a defendant is continuously outside the state. Trump spent the majority of 2017–2021 in Washington, D.C. and Florida. Judge Merchan noted this provision existed but did not need to rule on it because COVID tolling alone was sufficient.</p>
+          <p>The indictment was <strong>within the statute of limitations</strong> under established New York law.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 7: FEC -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">07</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The FEC investigated and declined to prosecute."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>This is misleading in several ways.</p>
+          <p><strong>The FEC's own lawyers recommended action.</strong> The FEC's Office of General Counsel found <em>"reason to believe"</em> that campaign finance violations were made <em>"knowingly and willfully"</em> by the Trump campaign.</p>
+          <p>The commission <strong>deadlocked along party lines:</strong> 2 Republican commissioners voted to dismiss, 2 Democrats voted to proceed, 1 Republican absent, 1 Republican recused. Under FEC rules, a deadlock means no action is taken — <strong>but it is not a finding of innocence.</strong></p>
+          <p>The Republicans who voted to dismiss cited <em>"prosecutorial discretion"</em> — not a determination that no violation occurred. They said it was "not the best use of agency resources" given enforcement backlogs.</p>
+          <p>The Democratic commissioners' dissent stated: <em>"There is ample evidence in the record to support the finding that Trump and the Committee knew of, and nonetheless accepted, the illegal contributions at issue here."</em> They added: <em>"To conclude that a payment, made 13 days before Election Day to hush up a suddenly newsworthy 10-year-old story, was not campaign-related, without so much as conducting an investigation, defies reality."</em></p>
+          <p>The FEC <strong>did</strong> find that AMI (National Enquirer's parent company) made a prohibited corporate in-kind contribution — and <strong>AMI paid a $187,500 fine</strong>.</p>
+          <p><strong>Critical distinction:</strong> The FEC enforces federal campaign finance law. Bragg prosecuted under <strong>New York state law</strong> (falsifying business records). Different statutes, different jurisdictions, different legal standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 8: PREDECESSORS DECLINED -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">08</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Bragg's predecessor and the DOJ both declined to prosecute."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Neither the predecessor DA nor the DOJ concluded there was insufficient evidence.</p>
+          <p><strong>Cy Vance (Manhattan DA predecessor):</strong></p>
+          <ul>
+            <li>Vance told NBC: <em>"I was asked by the U.S. Attorney's office in the Southern District to stand down on our investigation."</em> The SDNY asked Vance to <strong>pause for approximately 18 months</strong> while they conducted their own investigation.</li>
+            <li>Additional delays included COVID-19 and Trump's prolonged legal fight over his tax records, which went to the <strong>Supreme Court twice</strong> (<em>Trump v. Vance</em>, 2020).</li>
+            <li>Vance said he was <em>"surprised, after Michael Cohen pleaded guilty, that the investigation from the Southern District on that issue did not go forward."</em></li>
+          </ul>
+          <p><strong>The Southern District of New York (SDNY):</strong></p>
+          <ul>
+            <li>Federal prosecutors identified Trump as <strong>"Individual-1"</strong> in Cohen's plea documents and stated Cohen made payments <em>"in coordination with and at the direction of"</em> Individual-1.</li>
+            <li>The decision not to prosecute was driven by the <strong>DOJ's longstanding policy that a sitting president cannot be indicted</strong>. Trump was president for the entire relevant period (2017–2021).</li>
+          </ul>
+          <p>Neither Vance nor SDNY ever said <em>"the evidence is too weak."</em> Vance was told to stand down. SDNY was constrained by policy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 9: BOOKKEEPING ERROR -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">09</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"This was just a bookkeeping error — a victimless crime."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>A bookkeeping error is accidentally putting an expense in the wrong category.</strong> The Trump Organization created <strong>34 separate false records</strong> — 11 invoices, 12 vouchers, and 11 checks — all describing payments as "legal services rendered pursuant to a retainer agreement" when <strong>no retainer agreement existed</strong> and <strong>no legal services were rendered</strong>.</p>
+          <p>The reimbursement was deliberately structured: $130,000 + tax gross-up + bonus = $420,000, paid in monthly installments to disguise its true nature. Allen Weisselberg calculated the formula by hand. That is not a clerical error.</p>
+          <p><strong>It was not victimless.</strong> The jury found the falsification was done to conceal a scheme to corrupt the 2016 presidential election by suppressing information voters might have considered material. The "victims" were American voters denied relevant information before casting their ballots.</p>
+          <p><strong>Comparison:</strong> If any employee submitted 34 falsified expense reports to their company, each misrepresenting the purpose of the payment, they would face serious consequences. This was not a misplaced decimal point — it was a <strong>deliberate, 34-document cover-up</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 10: PAYING HUSH MONEY ISN'T ILLEGAL -->
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">10</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Paying hush money isn't illegal."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>True — and irrelevant.</strong> Trump was not charged with paying hush money. He was charged with <strong>falsifying business records</strong> to disguise the payments and conceal their election-related purpose.</p>
+          <p>Non-disclosure agreements are legal. Paying someone to stay quiet is legal. Creating <strong>34 fraudulent documents</strong> to disguise reimbursement payments as legal fees — when no legal services were rendered and no retainer agreement existed — in order to conceal a scheme to influence a presidential election is a felony.</p>
+          <p>The crime is the cover-up, not the payment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALKING POINT 11: UNCONDITIONAL DISCHARGE -->
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">11</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"He got no punishment — so it must not have been serious."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Judge Merchan explicitly addressed this. Trump received an unconditional discharge <strong>not because the crimes were trivial</strong>, but because <em>"the protection of [the office of the presidency] is a factor that overrides all others."</em></p>
+          <p>The sentencing occurred <strong>10 days before Trump's inauguration</strong>. Merchan concluded that no sentence other than unconditional discharge was appropriate for a person about to assume the presidency.</p>
+          <p>The conviction on <strong>all 34 felony counts stands on his record</strong>. He is the first U.S. president convicted of a felony. The sentence reflects the office, not the severity of the crimes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <!-- CHAPTER 3: THE TRIAL HIGHLIGHTS -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · Key Trial Moments"
+    title="Inside the<br>Courtroom"
+    introText="22 witnesses. 7 weeks. These were the moments that defined the trial."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💥"
+      title="The Defense's Own Witness Backfired"
+      body="The defense called attorney <strong>Robert Costello</strong> to undermine Cohen, testifying Cohen told him Trump <em>&quot;knew nothing.&quot;</em> It went catastrophically wrong.<br><br>Costello <strong>rolled his eyes, muttered &quot;jeez,&quot; and gave the judge side-eye</strong>. Merchan cleared the courtroom and erupted: <em>&quot;Are you staring me down right now?&quot;</em> He warned: <em>&quot;I'm putting you on notice that your conduct is contemptuous.&quot;</em><br><br>Prosecutors then used <strong>Costello's own emails</strong> against him, showing he was part of a pressure campaign to keep Cohen loyal to Trump."
+      tag="Defense Disaster"
+    />
+    <CategoryCard
+      icon="📞"
+      title="The Phone Call That Challenged Cohen"
+      body="The defense's strongest moment: challenging Cohen's account of an <strong>October 24, 2016 phone call</strong> to Keith Schiller (Trump's bodyguard). Phone records showed the call lasted <strong>96 seconds</strong>. The defense presented evidence the call was about <strong>harassing phone calls from a 14-year-old</strong>, not the Daniels deal.<br><br>Cohen maintained he discussed both topics in 96 seconds. This was the <strong>most effective defense attack</strong> on Cohen's credibility — but it addressed one call among hundreds of pieces of corroborating evidence."
+      tag="Strongest Defense Moment"
+    />
+    <CategoryCard
+      icon="⚠️"
+      title="Trump Cursed During Testimony"
+      body="During <strong>Stormy Daniels' testimony</strong>, Trump was observed <em>&quot;cursing audibly&quot;</em> and <em>&quot;shaking his head visually.&quot;</em> Judge Merchan warned Trump's attorneys that this conduct was <strong>&quot;contemptuous&quot;</strong> and could result in sanctions.<br><br>Daniels testified over two days. Merchan admonished prosecutors for eliciting too much detail about the alleged sexual encounter and pleaded with Daniels to keep answers short."
+      tag="Courtroom Conduct"
+    />
+    <CategoryCard
+      icon="🚫"
+      title="The Defense's Closing Blunder"
+      body="Defense attorney Todd Blanche told jurors: <em>&quot;You cannot send someone to prison based on the words of Michael Cohen.&quot;</em><br><br>Judge Merchan was furious, calling the comment <strong>&quot;improper&quot;</strong> and instructing jurors to disregard it: <em>&quot;It's simply not allowed. Period. It's hard for me to imagine how that was accidental in any way.&quot;</em><br><br>Lawyers are not allowed to tell jurors what sentence to impose — that's the judge's role. Blanche injected prison into jurors' minds without authorization."
+      tag="Improper Argument"
+    />
+  </CategoryGrid>
+
+  <!-- THE MICHAEL COHEN COMPARISON -->
+  <SectionDivider label="The Comparison" />
+  <SectionHeader
+    eyebrow="Same Crime, Different Outcome"
+    title="Cohen Went<br>to Prison"
+    introText="The most direct comparison to Trump's case isn't hypothetical — it's the person who carried out the same scheme."
+  />
+
+  <ConsequencesGrid eyebrow="Same Scheme, Two Outcomes" title="Michael Cohen vs.<br>Donald Trump">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="3"
+        title="Years in Prison — Michael Cohen"
+        description="Cohen was sentenced to 3 years in federal prison for, among other things, the same hush money payments. He made the payments. The DOJ identified Trump as 'Individual-1' — the person who directed them."
+      />
+      <ConsequenceItem
+        number="0"
+        title="Days in Prison — Donald Trump"
+        description="Trump received an unconditional discharge. Cohen went to prison for executing the scheme. Trump — identified by federal prosecutors as the person who directed it — was elected president."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <HighlightBar text="Michael Cohen went to prison for 3 years for carrying out the hush money scheme. Federal prosecutors identified Trump as the person who directed it. Cohen was punished. Trump became president." />
+
+  <CTASection
+    title="34 Counts.<br>Unanimous.<br>Documented."
+    description="Every talking point tested against the court record. Every claim checked against the evidence. The jury heard it all — 22 witnesses, 200+ exhibits, 7 weeks of testimony — and returned a unanimous guilty verdict on every count."
+    linkText="← Back to The 'Lawfare' Narrative"
+    linkHref="/deep-dives/lawfare-and-convictions"
+  />
+
+</ResearchLayout>

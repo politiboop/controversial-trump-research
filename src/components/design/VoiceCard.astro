@@ -1,15 +1,34 @@
 ---
 interface Props {
   quote: string;
-  attribution: string;
+  /** Legacy: single HTML string for attribution (still supported) */
+  attribution?: string;
+  /** Structured: speaker name */
+  name?: string;
+  /** Structured: role/title */
+  role?: string;
+  /** Structured: date and/or location */
+  detail?: string;
+  /** Structured: additional context (rendered as normal body text, not uppercase mono) */
+  context?: string;
 }
 
-const { quote, attribution } = Astro.props;
+const { quote, attribution, name, role, detail, context } = Astro.props;
+const isStructured = !!name;
 ---
 
 <div class="voice-card fade-up">
   <p class="voice-quote">{quote}</p>
-  <div class="voice-attribution" set:html={attribution} />
+  {isStructured ? (
+    <div class="voice-meta">
+      <div class="voice-name">{name}</div>
+      {role && <div class="voice-role">{role}</div>}
+      {detail && <div class="voice-detail">{detail}</div>}
+      {context && <div class="voice-context">{context}</div>}
+    </div>
+  ) : (
+    <div class="voice-attribution" set:html={attribution} />
+  )}
 </div>
 
 <style>
@@ -34,19 +53,63 @@ const { quote, attribution } = Astro.props;
 
   .voice-quote {
     font-style: italic;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     color: var(--text);
     margin-bottom: 16px;
     padding-top: 20px;
   }
 
+  /* Legacy attribution (backwards compatible) */
   .voice-attribution {
     font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 1.5px;
+    font-size: 11px;
+    letter-spacing: 1px;
     color: var(--red);
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1.6;
+  }
+
+  /* Structured attribution */
+  .voice-meta {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    margin-top: 4px;
+  }
+
+  .voice-name {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .voice-role {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .voice-detail {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .voice-context {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 10px;
+    font-style: italic;
   }
 </style>

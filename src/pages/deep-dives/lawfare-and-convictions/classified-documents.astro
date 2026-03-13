@@ -1,0 +1,562 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import TimelineSection from '../../../components/design/TimelineSection.astro';
+import TimelineItem from '../../../components/design/TimelineItem.astro';
+import ConsequencesGrid from '../../../components/design/ConsequencesGrid.astro';
+import ConsequenceRow from '../../../components/design/ConsequenceRow.astro';
+import ConsequenceItem from '../../../components/design/ConsequenceItem.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "~300 Classified Documents Taken to Mar-a-Lago",
+  "Documents Marked TOP SECRET/SCI Found Next to a Toilet",
+  "Trump on Tape: 'This Is Still a Secret'",
+  "Reality Winner: 5+ Years for 1 Classified Document",
+  "Biden Cooperated — Pence Cooperated — Trump Obstructed",
+  "Subpoenaed in May 2022 — Returned Only 38 Documents",
+  "Surveillance Footage: Boxes Moved Before FBI Visit",
+  "Judge Cannon — a Trump Appointee — Dismissed the Case",
+  "Every Other Federal Court Upheld Special Counsel Appointments",
+  "David Petraeus Pleaded Guilty for Sharing Classified Info",
+];
+---
+
+<ResearchLayout title="The Classified Documents Case — Deep Dive" description="Hundreds of top-secret documents in a bathroom. A recorded admission. Active obstruction. And how everyone else was treated for the same thing.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The "Lawfare" Narrative', href: '/deep-dives/lawfare-and-convictions' },
+    { label: 'Classified Documents' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · The Classified Documents Case"
+    title="THE CLASSIFIED <span class='word-red'>DOCUMENTS</span>"
+    subtitle="Top-secret files in a bathroom. A recorded confession. And active obstruction."
+    date="Sources: DOJ Indictment · Court Filings · FBI Evidence Photos · Grand Jury Testimony · Surveillance Footage"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="See, as president I could have declassified it. Now I can't, you know, but this is still a secret."
+    citation="Donald Trump — recorded at his Bedminster golf club, July 2021, while showing a classified Pentagon document to people without security clearances"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard target={40} label="Criminal counts in the original and superseding indictments" />
+    <StatCard target={300} prefix="~" label="Classified documents taken to Mar-a-Lago after leaving office" />
+    <StatCard target={31} label="Counts of willful retention of national defense information" />
+    <StatCard target={38} label="Documents returned after subpoena — while hundreds more were hidden" />
+  </StatGrid>
+
+  <!-- CHAPTER 1: WHAT HAPPENED -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Facts"
+    title="What Actually<br>Happened"
+    introText="After leaving office in January 2021, Trump took hundreds of classified documents to Mar-a-Lago. When the government asked for them back, he refused, hid them, and obstructed the investigation."
+  />
+
+  <TimelineSection title="The Timeline">
+    <TimelineItem
+      date="January 2021"
+      badge="Departure"
+      badgeType="serious"
+      title="Trump Leaves Office with Classified Documents"
+      description="Trump takes approximately 300 classified documents to Mar-a-Lago, including documents marked TOP SECRET/SCI — the highest classification level, covering information from the CIA, NSA, and National Reconnaissance Office."
+    />
+    <TimelineItem
+      date="May 2021"
+      badge="Request"
+      badgeType="serious"
+      title="National Archives Asks for Documents Back"
+      description="The National Archives and Records Administration (NARA) contacts Trump's representatives requesting the return of presidential records. Trump's team delays for months."
+    />
+    <TimelineItem
+      date="January 2022"
+      badge="Partial Return"
+      badgeType="serious"
+      title="Trump Returns 15 Boxes — Archives Finds Classified Material"
+      description="After a year of requests, Trump returns 15 boxes. NARA discovers they contain 184 classified documents, including 67 marked CONFIDENTIAL, 92 marked SECRET, and 25 marked TOP SECRET. NARA refers the matter to the DOJ."
+    />
+    <TimelineItem
+      date="May 11, 2022"
+      badge="Subpoena"
+      badgeType="catastrophic"
+      title="Grand Jury Issues Subpoena"
+      description="A federal grand jury subpoenas Trump for all remaining documents with classification markings. This is a legal order compelling their return."
+    />
+    <TimelineItem
+      date="June 3, 2022"
+      badge="False Certification"
+      badgeType="catastrophic"
+      title="Trump's Attorney Signs False Certification"
+      description="Trump's attorney certifies to the DOJ that a 'diligent search' has been conducted and all documents responsive to the subpoena have been returned. This is false — hundreds of classified documents remain at Mar-a-Lago. The indictment alleges Trump directed his attorney to make this false certification."
+    />
+    <TimelineItem
+      date="June 2022"
+      badge="Obstruction"
+      badgeType="catastrophic"
+      title="Surveillance Footage Shows Boxes Being Moved"
+      description="Security camera footage at Mar-a-Lago shows Trump aide Walt Nauta and maintenance worker Carlos De Oliveira moving boxes out of the storage room — after the subpoena was served but before the DOJ visit. The indictment alleges Trump directed this movement to conceal documents."
+    />
+    <TimelineItem
+      date="August 8, 2022"
+      badge="Search Warrant"
+      badgeType="catastrophic"
+      title="FBI Executes Court-Approved Search Warrant"
+      description="After the false certification and evidence of obstruction, a federal judge approves a search warrant. FBI agents recover over 100 additional classified documents — including documents marked TOP SECRET/SCI found in Trump's office, a bathroom, a ballroom stage, and a storage room."
+    />
+    <TimelineItem
+      date="June 8, 2023"
+      badge="Indictment"
+      badgeType="catastrophic"
+      title="Trump Indicted on 37 Counts"
+      description="Special Counsel Jack Smith secures a 37-count indictment. A superseding indictment in July adds more charges, bringing the total to 40 counts including willful retention of national defense information, conspiracy to obstruct justice, and false statements."
+    />
+    <TimelineItem
+      date="July 15, 2024"
+      badge="Dismissal"
+      badgeType="serious"
+      title="Judge Cannon Dismisses the Case"
+      description="Judge Aileen Cannon — a Trump appointee — dismisses the case, ruling Jack Smith's appointment violated the Appointments Clause. This ruling contradicts every other federal court to consider the issue."
+    />
+  </TimelineSection>
+
+  <!-- WHERE THEY WERE FOUND -->
+  <SectionHeader
+    eyebrow="Where America's Secrets Were Stored"
+    title="A Bathroom.<br>A Ballroom.<br>A Storage Room."
+    introText="FBI evidence photographs — released by the DOJ — showed where the nation's most sensitive intelligence was being kept."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🚽"
+      title="A Bathroom"
+      body="Boxes of classified documents were photographed <strong>stacked next to a toilet</strong> in a bathroom at Mar-a-Lago. These boxes contained documents marked <strong>TOP SECRET/SCI</strong> — information so sensitive it can normally only be viewed in a Sensitive Compartmented Information Facility (SCIF)."
+      tag="FBI Evidence Photo"
+    />
+    <CategoryCard
+      icon="🎭"
+      title="A Ballroom Stage"
+      body="Classified documents were found <strong>on a ballroom stage</strong> — a space used for events attended by Mar-a-Lago club members, guests, and staff. Club membership costs <strong>$200,000</strong> with annual dues of $14,000. None of these members have security clearances."
+      tag="FBI Evidence Photo"
+    />
+    <CategoryCard
+      icon="📦"
+      title="A Storage Room"
+      body="The main document storage area was an unsecured room accessible to maintenance staff, club employees, and Trump aides. <strong>Surveillance footage</strong> captured boxes being moved in and out of this room — including <strong>after</strong> the grand jury subpoena was served."
+      tag="Surveillance Footage"
+    />
+    <CategoryCard
+      icon="🏢"
+      title="Trump's Personal Office"
+      body="Some of the most sensitive documents were found in <strong>Trump's personal office at Mar-a-Lago</strong>. The indictment describes specific documents involving <strong>nuclear capabilities, defense plans, and intelligence assets</strong> — information that, if compromised, could endanger lives and national security."
+      tag="FBI Recovery"
+    />
+  </CategoryGrid>
+
+  <!-- TRUMP'S OWN WORDS -->
+  <SectionHeader
+    eyebrow="His Own Voice"
+    title="&quot;This Is Still<br>a Secret&quot;"
+    introText="In July 2021, at his Bedminster golf club, Trump showed what he described as a classified Pentagon document to people who did not have security clearances. The conversation was recorded by his own staff."
+  />
+
+  <VoicesSection
+    eyebrow="Recorded at Bedminster · July 2021"
+    title="Trump's Own<br>Admission"
+    introText="This recording — made by Trump's own staff — directly contradicted his claim that he had declassified everything before leaving office."
+  >
+    <VoiceCard
+      quote="See, as president I could have declassified it. Now I can't, you know, but this is still a secret."
+      name="Donald Trump"
+      role="Former President"
+      detail="Recorded conversation · Bedminster, NJ · July 2021"
+      context="While showing what he described as a classified Pentagon document about attacking Iran to people without security clearances. The recording was obtained by investigators."
+    />
+    <VoiceCard
+      quote="These are the papers... This was done by the military and given to me. Isn't that incredible? ... As president I could have declassified it. Now I can't."
+      name="Donald Trump"
+      role="Former President"
+      detail="Same recording · July 2021"
+      context="Trump explicitly acknowledged he could NOT declassify the document because he was no longer president — destroying his own 'I declassified everything' defense."
+    />
+  </VoicesSection>
+
+  <!-- THE OBSTRUCTION -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Obstruction"
+    title="It's Not About<br>the Documents"
+    introText="Trump was not indicted simply for having classified documents. He was indicted for refusing to return them, hiding them from investigators, and directing others to obstruct the investigation."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🔄"
+      title="A Year of Refusing to Return Them"
+      body="The National Archives asked for the documents starting in <strong>May 2021</strong>. Trump delayed for months. When he finally returned 15 boxes in <strong>January 2022</strong>, they contained 184 classified documents — but <strong>hundreds more remained at Mar-a-Lago</strong>."
+      tag="May 2021 – Jan 2022"
+    />
+    <CategoryCard
+      icon="📜"
+      title="Subpoenaed — Then Lied"
+      body="After a grand jury subpoena demanded all remaining classified documents, Trump's attorney <strong>certified in writing</strong> that a &quot;diligent search&quot; had been conducted and all responsive documents returned.<br><br><strong>This was false.</strong> The FBI later found over 100 additional classified documents. The indictment alleges Trump <strong>directed his attorney</strong> to make this false certification."
+      tag="False Certification"
+    />
+    <CategoryCard
+      icon="📹"
+      title="Caught on Camera Moving Boxes"
+      body="Mar-a-Lago <strong>surveillance footage</strong> showed Trump aide Walt Nauta and maintenance worker Carlos De Oliveira moving boxes out of the storage room — <strong>after the subpoena was served but before the DOJ visit</strong>.<br><br>The indictment alleges Trump directed this movement. Nauta was charged with conspiracy to obstruct justice, making false statements, and concealing documents."
+      tag="Surveillance Evidence"
+    />
+    <CategoryCard
+      icon="💬"
+      title="Suggesting His Lawyer Lie"
+      body="According to the indictment, Trump told one of his attorneys words to the effect of: <em>&quot;Wouldn't it be better if we just told them we don't have anything here?&quot;</em> and <em>&quot;Well look, isn't it better if there are no documents?&quot;</em><br><br>When the attorney declined, Trump allegedly suggested he <em>&quot;pluck&quot;</em> some documents out of the boxes before turning them over — effectively asking his lawyer to <strong>help hide evidence from a federal grand jury</strong>."
+      tag="Alleged Witness Tampering"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="Asked to return documents: refused. Subpoenaed: lied. Caught on camera: moving boxes. Told his lawyer: 'wouldn't it be better if we just told them we don't have anything here?'" />
+
+  <!-- CHAPTER 3: TALKING POINTS -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · Fact-Checking the Defense"
+    title="Every Talking<br>Point, Tested"
+    introText="These are the most common arguments used to dismiss the classified documents case. For each one, here's what the actual record shows."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"He declassified everything before leaving office."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Trump's own recorded words destroy this defense.</strong> In the July 2021 Bedminster recording, Trump said: <em>"As president I could have declassified it. Now I can't, you know, but this is still a secret."</em></p>
+          <p>He explicitly acknowledged two things: (1) the document was still classified, and (2) he no longer had the power to declassify it.</p>
+          <p><strong>The declassification process requires formal action.</strong> There is no evidence Trump ever issued a declassification order for any of the documents found at Mar-a-Lago. No executive order was signed. No memorandum was issued. No agency was notified. No documents were re-marked.</p>
+          <p><strong>Trump's own lawyers never claimed declassification in court.</strong> While Trump made the claim publicly, his attorneys — who face professional sanctions for making false statements to a court — <strong>did not assert that Trump had declassified the documents</strong> in any legal filing. The defense in court focused on other grounds.</p>
+          <p>The "standing declassification order" Trump described — where documents were automatically declassified simply by being removed from the Oval Office — was contradicted by <strong>18 former Trump administration officials</strong>, including his own National Security Adviser, White House counsel, and multiple chief of staff officials. None were aware of any such order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The Presidential Records Act lets presidents take whatever they want."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The Presidential Records Act governs <strong>presidential records</strong> — memos, correspondence, meeting notes. It states that presidential records <strong>belong to the United States</strong>, not the president, and must be transferred to the National Archives upon leaving office.</p>
+          <p>The PRA does <strong>not</strong> apply to classified national defense information, which is governed by entirely separate laws — specifically the <strong>Espionage Act (18 U.S.C. §§ 793-798)</strong>. These are not "presidential records." They are intelligence products from the CIA, NSA, and Department of Defense.</p>
+          <p>Even under the PRA, a president cannot simply <strong>take</strong> records — they must be <strong>transferred to the Archives</strong>. The PRA makes clear that presidential records are the <strong>property of the United States government</strong>, not personal property of the president.</p>
+          <p>Judge Cannon's own earlier ruling (later overturned by the 11th Circuit) acknowledged that classified documents are <strong>"not 'personal records' under the PRA."</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Biden and Pence did the same thing."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Biden, Pence, and Trump all had classified documents after leaving office. <strong>What happened next is what matters.</strong></p>
+          <div style="background: var(--card); padding: 24px; margin: 16px 0; border-left: 3px solid var(--blue);">
+            <p style="margin-bottom: 12px;"><strong style="color: var(--blue-bright);">Biden:</strong></p>
+            <ul>
+              <li>Attorneys <strong>voluntarily notified</strong> the Archives upon discovery</li>
+              <li><strong>Immediately cooperated</strong> with the investigation</li>
+              <li>Invited FBI to <strong>search his home</strong></li>
+              <li>Turned over <strong>all materials</strong></li>
+              <li>Special Counsel Hur <strong>declined to prosecute</strong>: <em>"The evidence does not establish Mr. Biden's guilt beyond a reasonable doubt"</em></li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 24px; margin: 16px 0; border-left: 3px solid var(--blue);">
+            <p style="margin-bottom: 12px;"><strong style="color: var(--blue-bright);">Pence:</strong></p>
+            <ul>
+              <li><strong>Voluntarily reported</strong> the discovery</li>
+              <li><strong>Immediately cooperated</strong></li>
+              <li>Invited FBI to <strong>search his Indiana home</strong></li>
+              <li>Turned over <strong>all materials</strong></li>
+              <li>DOJ <strong>declined to prosecute</strong>: no willful retention or obstruction</li>
+            </ul>
+          </div>
+          <div style="background: var(--card); padding: 24px; margin: 16px 0; border-left: 3px solid var(--red);">
+            <p style="margin-bottom: 12px;"><strong style="color: var(--red-bright);">Trump:</strong></p>
+            <ul>
+              <li><strong>Refused to return</strong> documents for over a year</li>
+              <li>When subpoenaed, <strong>returned only 38</strong> while hiding hundreds more</li>
+              <li>His attorney <strong>falsely certified</strong> all documents had been returned</li>
+              <li>Aides caught on <strong>surveillance camera moving boxes</strong> before DOJ visits</li>
+              <li><strong>Showed classified documents</strong> to people without clearances</li>
+              <li>Suggested his lawyer <strong>lie to investigators</strong></li>
+            </ul>
+          </div>
+          <p>The difference is not that Trump had documents. <strong>The difference is what he did when asked to give them back.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">04</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The FBI raid on Mar-a-Lago was unprecedented and political."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The FBI did not "raid" Mar-a-Lago as a first resort. The search warrant came <strong>after 18 months of failed attempts</strong> to get the documents back through cooperation:</p>
+          <ul>
+            <li><strong>May 2021:</strong> Archives asks for documents. Trump delays.</li>
+            <li><strong>January 2022:</strong> Trump returns 15 boxes — containing 184 classified documents — but keeps hundreds more.</li>
+            <li><strong>May 2022:</strong> Grand jury issues a subpoena.</li>
+            <li><strong>June 2022:</strong> Trump's attorney falsely certifies all documents returned.</li>
+            <li><strong>June–August 2022:</strong> Evidence of obstruction — surveillance footage shows boxes being moved.</li>
+            <li><strong>August 2022:</strong> Only then does a federal judge approve a search warrant.</li>
+          </ul>
+          <p>The search warrant was <strong>approved by a federal magistrate judge</strong> based on probable cause — the same legal standard required for any search warrant. It was executed during the day, with advance notice to the Secret Service, and conducted while Trump was not present at Mar-a-Lago.</p>
+          <p>The FBI found <strong>over 100 additional classified documents</strong> — proving that the false certification was, in fact, false.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">05</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Judge Cannon was right — Jack Smith was illegally appointed."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Judge Cannon's ruling that Special Counsel Jack Smith's appointment violated the Appointments Clause was a <strong>legal outlier</strong> — contradicting decades of precedent.</p>
+          <ul>
+            <li><strong>Every other federal court</strong> to consider the issue upheld the constitutionality of special counsel appointments under the same authority.</li>
+            <li>The <strong>same legal mechanism</strong> was used to appoint Robert Mueller (2017), John Durham (2020), Robert Hur (2023), David Weiss (2023), and numerous prior special counsels.</li>
+            <li>The Supreme Court has <strong>never struck down</strong> a special counsel appointment. In <em>Morrison v. Olson</em> (1988) and <em>United States v. Nixon</em> (1974), the Court upheld the constitutionality of independent prosecutors.</li>
+            <li>Judge Cannon — a <strong>Trump appointee</strong> — had already been reversed once by the 11th Circuit Court of Appeals earlier in the case for overstepping her authority.</li>
+          </ul>
+          <p>Legal scholars across the political spectrum criticized the ruling. Former Attorney General <strong>Michael Mukasey</strong> — a George W. Bush appointee — called Cannon's reasoning <em>"simply wrong"</em> on the Appointments Clause question.</p>
+          <p>Jack Smith appealed, but dropped the appeal after Trump won the 2024 election, per DOJ policy against prosecuting a sitting president.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim fade-up">
+        <div class="tp-number">06</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"It was just a storage issue — not a big deal."</h3>
+      </div>
+      <div class="tp-facts fade-up">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Trump didn't just store documents improperly. He <strong>showed them to people without security clearances</strong> — on tape.</p>
+          <p>The Bedminster recording captured Trump showing what he described as a classified Pentagon document about attacking Iran to a writer, a publisher, and two of his staff members. <strong>None had security clearances.</strong> Trump acknowledged on tape that the document was still classified.</p>
+          <p>The indictment described documents involving:</p>
+          <ul>
+            <li><strong>Nuclear capabilities</strong> of foreign nations</li>
+            <li><strong>U.S. military defense plans</strong> and potential vulnerabilities</li>
+            <li><strong>Intelligence sources and methods</strong> — information that, if compromised, could endanger the lives of intelligence assets abroad</li>
+          </ul>
+          <p>These are not policy memos or historical curiosities. <strong>TOP SECRET/SCI</strong> information is classified at that level because its unauthorized disclosure could cause <em>"exceptionally grave damage to the national security."</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+
+    .tp-facts-content em {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .tp-facts-content ul {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .tp-facts-content li {
+      margin-bottom: 8px;
+    }
+
+    .tp-facts-content li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <!-- HOW OTHERS WERE TREATED -->
+  <SectionDivider label="The Comparison" />
+  <SectionHeader
+    eyebrow="Same Crime, Different People"
+    title="How Others<br>Were Treated"
+    introText="Trump claims he's being singled out. Here's how the justice system treated other people who mishandled classified information."
+  />
+
+  <ConsequencesGrid eyebrow="Classified Information Cases" title="What Happened to<br>Everyone Else">
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="5+"
+        title="Years — Reality Winner"
+        description="A 25-year-old NSA contractor who leaked a single classified document to a news outlet. No obstruction. She cooperated with the investigation. Sentenced to 5 years and 3 months."
+      />
+      <ConsequenceItem
+        number="2"
+        title="Years Probation — David Petraeus"
+        description="A four-star general and CIA director who shared classified notebooks with his biographer/mistress. He pleaded guilty to mishandling classified information. Fined $100,000."
+      />
+    </ConsequenceRow>
+    <ConsequenceRow>
+      <ConsequenceItem
+        number="0"
+        title="Days in Prison — Donald Trump"
+        description="Took ~300 classified documents. Stored them next to a toilet. Showed them to people without clearances. Refused to return them for a year. Obstructed the investigation. Case dismissed by his own appointee."
+      />
+      <ConsequenceItem
+        number="2"
+        title="Years Probation — Sandy Berger"
+        description="Clinton's National Security Adviser. Took classified documents from the National Archives. Pleaded guilty. Sentenced to probation, community service, and a $50,000 fine."
+      />
+    </ConsequenceRow>
+  </ConsequencesGrid>
+
+  <HighlightBar text="Reality Winner: 1 document, cooperated, 5+ years in prison. Trump: ~300 documents, obstructed, showed them to people without clearances, case dismissed by his own appointee." />
+
+  <CTASection
+    title="The Evidence<br>Was on Tape."
+    description="Trump's own voice admitting the documents were still classified. Surveillance footage of boxes being moved. A false certification to the DOJ. Over 100 classified documents recovered after his attorney said there were none left. The case was dismissed on procedural grounds — not because the evidence was insufficient."
+    linkText="← Back to The 'Lawfare' Narrative"
+    linkHref="/deep-dives/lawfare-and-convictions"
+  />
+
+</ResearchLayout>
