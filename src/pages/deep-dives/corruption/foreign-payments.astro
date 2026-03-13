@@ -1,0 +1,328 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "Qatar Gifted Trump a $400M Boeing 747-8 — Qatar Hosts Al Udeid Air Base",
+  "Swiss Gold Bar & Rolex — Tariff Cut from 39% to 15% Just 9 Days Later",
+  "Swiss Prosecutors Received 3 Criminal Complaints Over the Gift",
+  "Gold Card Citizenship: $1M, $2M, $5M Tiers — Selling US Residency",
+  "White House Ballroom: $300-400M from Companies Trump Regulates",
+  "Apple, Amazon, Google, Lockheed Martin All Paid for Access",
+  "TikTok: National Security Law Turned Into Enrichment Vehicle",
+  "The Emoluments Clause: 'No Person Holding Any Office Shall Accept...'",
+  "Foreign Payments to the President Were Banned by the Founders for a Reason",
+  "Every Gift Creates a Debt — Every Debt Creates Leverage",
+];
+---
+
+<ResearchLayout title="Foreign Payments — Corruption Deep Dive" description="A $400M plane from Qatar. A Swiss gold bar followed by a tariff cut. Gold Card citizenship for sale. When foreign governments pay the president, the president owes foreign governments.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Grift', href: '/deep-dives/corruption' },
+    { label: 'Foreign Payments' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Follow the Money"
+    title="FOREIGN <span class='word-red'>PAYMENTS</span>"
+    subtitle="When foreign governments pay the president, the president owes foreign governments."
+    date="Sources: Federal Gift Disclosures · Trade Records · Swiss Prosecutor Filings · Congressional Records · Investigative Reporting"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="No Person holding any Office of Profit or Trust under them, shall, without the Consent of the Congress, accept of any present, Emolument, Office, or Title, of any kind whatever, from any King, Prince, or foreign State."
+    citation="Article I, Section 9, Clause 8 — The Foreign Emoluments Clause of the United States Constitution"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard prefix="$" target={400} suffix="M" label="Boeing 747-8 gifted by Qatar — which hosts the largest US military base in the Middle East" />
+    <StatCard target={9} label="Days between Swiss gold bar gift and a tariff cut from 39% to 15% for Switzerland" />
+    <StatCard prefix="$" target={5} suffix="M" label="Maximum tier for 'Gold Card' citizenship — selling US residency to the highest bidder" />
+    <StatCard prefix="$" target={400} suffix="M" label="Raised at White House ballroom events from companies Trump directly regulates" />
+  </StatGrid>
+
+  <!-- QATAR PLANE -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The $400M Plane"
+    title="The Qatar<br>747"
+    introText="The government of Qatar — which hosts Al Udeid Air Base, the largest US military installation in the Middle East — gifted the president a Boeing 747-8 valued at approximately $400 million. This is the most expensive gift ever given to a sitting US president."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="✈️"
+      title="The Gift"
+      body="Qatar gifted President Trump a <strong>Boeing 747-8</strong> — one of the largest and most expensive commercial aircraft ever built.<br><br>• Estimated value: <strong>$400 million</strong><br>• The most expensive gift ever given to a sitting US president<br>• Qatar's Emir made the offer personally<br>• Trump accepted despite constitutional concerns<br><br>The Emoluments Clause exists specifically to prevent foreign governments from buying influence through gifts to US officials."
+      tag="Most Expensive Gift Ever"
+    />
+    <CategoryCard
+      icon="🏗️"
+      title="The Leverage"
+      body="Qatar is not a neutral gift-giver. It has enormous stakes in US policy:<br><br>• Hosts <strong>Al Udeid Air Base</strong> — the largest US military installation in the Middle East<br>• <strong>10,000+ US troops</strong> stationed in Qatar<br>• Critical US Central Command (CENTCOM) forward headquarters<br>• Massive <strong>natural gas exports</strong> affected by US energy policy<br>• Active interests in <strong>defense procurement</strong><br><br>A $400M gift from a government that depends on US military protection is not generosity. It's investment."
+      tag="Al Udeid Air Base"
+    />
+    <CategoryCard
+      icon="📜"
+      title="The Constitutional Question"
+      body="The Founders wrote the Emoluments Clause because they understood that <strong>gifts create obligations</strong>.<br><br>Benjamin Franklin was gifted a diamond-encrusted snuffbox by Louis XVI — and the Continental Congress debated whether he could keep it. The Founders decided that <strong>no federal official should accept foreign gifts</strong> without Congressional consent.<br><br>A $400M airplane is not a snuffbox. And Congress did not consent."
+      tag="No Congressional Consent"
+    />
+  </CategoryGrid>
+
+  <!-- SWISS GIFT -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Swiss Gift"
+    title="Gold Bar<br>&amp; Rolex"
+    introText="Swiss President Karin Keller-Sutter gifted Trump a gold bar and a Rolex watch during a state visit. Nine days later, the US cut tariffs on Swiss goods from 39% to 15%. Swiss prosecutors received three criminal complaints."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🥇"
+      title="The Gift"
+      body="During a state visit, Swiss President Karin Keller-Sutter presented Trump with:<br><br>• A <strong>gold bar</strong><br>• A <strong>Rolex watch</strong> (Swiss-made luxury timepiece)<br><br>Both are luxury items from Switzerland's signature industries — <strong>gold refining and watchmaking</strong> — the exact industries that would benefit from reduced tariffs."
+      tag="Gold & Rolex"
+    />
+    <CategoryCard
+      icon="📉"
+      title="The Tariff Cut"
+      body="<strong>Nine days after the gift</strong>, the United States cut tariffs on Swiss goods from <strong>39% to 15%</strong>.<br><br>The timeline:<br>• <strong>Day 0:</strong> Swiss president gives Trump gold bar and Rolex<br>• <strong>Day 9:</strong> US announces tariff reduction for Switzerland<br>• <strong>Savings:</strong> Billions in reduced duties for Swiss exporters<br><br>The tariff cut directly benefited Swiss luxury goods manufacturers — <strong>the same industries represented by the gifts</strong>."
+      tag="39% → 15% in 9 Days"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Criminal Complaints"
+      body="The Swiss gift triggered <strong>three separate criminal complaints</strong> filed with Swiss prosecutors:<br><br>The complaints alleged that Swiss President Keller-Sutter may have violated Swiss anti-bribery laws by giving luxury gifts to a foreign head of state in connection with trade negotiations.<br><br>Whether or not the complaints result in prosecution, the fact that <strong>Swiss prosecutors are investigating their own president</strong> for giving gifts to Trump illustrates how far outside international norms this behavior is."
+      tag="3 Criminal Complaints"
+    />
+  </CategoryGrid>
+
+  <!-- GOLD CARD CITIZENSHIP -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · Selling Citizenship"
+    title="Gold Card<br>Citizenship"
+    introText="The Trump administration created a tiered system for purchasing US residency — the 'Gold Card' program — effectively putting American citizenship up for sale to the highest bidder."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💳"
+      title="The Tiers"
+      body="The Gold Card program created a <strong>pay-to-play path to US residency</strong>:<br><br>• <strong>$1 million tier</strong> — basic residency pathway<br>• <strong>$2 million tier</strong> — expedited processing<br>• <strong>$5 million tier</strong> — premium access and benefits<br><br>This is not an immigration policy. It is a <strong>pricing structure</strong> — selling access to the United States based on ability to pay."
+      tag="$1M / $2M / $5M"
+    />
+    <CategoryCard
+      icon="🌍"
+      title="Who Benefits"
+      body="Gold Card citizenship primarily benefits:<br><br>• <strong>Wealthy individuals</strong> from authoritarian countries seeking a safe harbor<br>• <strong>Oligarchs</strong> looking to park assets in the US<br>• <strong>Those seeking to avoid scrutiny</strong> in their home countries<br><br>The program explicitly <strong>prioritizes wealth over merit</strong> — replacing the American principle of equal opportunity with a price tag. The wealthy get in. Everyone else waits."
+      tag="Wealth Over Merit"
+    />
+  </CategoryGrid>
+
+  <!-- WHITE HOUSE BALLROOM & TIKTOK -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV · Access for Sale"
+    title="The White House<br>Ballroom"
+    introText="The White House hosted fundraising events that raised $300-400 million from companies the president directly regulates — turning the people's house into a pay-for-access venue."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="The Ballroom"
+      body="The White House ballroom became a <strong>fundraising venue</strong>, raising an estimated <strong>$300-400 million</strong> from corporate donors including:<br><br>• <strong>Apple</strong> — subject to antitrust regulation<br>• <strong>Amazon</strong> — federal contracts, antitrust, postal rates<br>• <strong>Google</strong> — antitrust, AI regulation<br>• <strong>Lockheed Martin</strong> — defense contracts<br><br>Every company that paid for access had <strong>active business before the administration</strong>. The White House — the people's house — became a <strong>corporate access point</strong>."
+      tag="$300-400M Raised"
+    />
+    <CategoryCard
+      icon="📱"
+      title="The TikTok Deal"
+      body="Congress passed a <strong>bipartisan national security law</strong> requiring TikTok's Chinese parent company to divest or face a ban. The law was based on genuine national security concerns about Chinese government access to American data.<br><br>The Trump administration turned this law into an <strong>enrichment vehicle</strong> — steering the deal toward allies and associates, with terms that benefited connected parties rather than maximizing national security protections.<br><br>A national security law became a <strong>deal-making opportunity</strong>."
+      tag="Security → Enrichment"
+    />
+  </CategoryGrid>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Diplomatic gifts are normal — every president receives them."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Diplomatic gifts are normal. <strong>A $400 million airplane is not.</strong> Previous diplomatic gifts include ceremonial swords, artwork, and cultural artifacts — items worth thousands, not hundreds of millions.</p>
+          <p>Under federal law, gifts from foreign governments worth more than a minimal amount must be turned over to the National Archives or the General Services Administration. <strong>They are not personal property.</strong></p>
+          <p>The Qatar plane is not a diplomatic courtesy. It is the most expensive gift ever given to a sitting president — from a government that depends on US military protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Gold Cards create jobs and bring investment to America."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The existing EB-5 visa program already allows investment-based immigration — with <strong>oversight, job creation requirements, and accountability measures</strong>.</p>
+          <p>Gold Cards <strong>bypass these safeguards</strong>. They don't require job creation. They don't require investment in specific projects. They are simply a <strong>payment for residency</strong> — with premium tiers for those who pay more.</p>
+          <p>The program's primary function is not economic development. It is <strong>selling access to the United States</strong> based on wealth alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Correlation isn't causation — the Swiss tariff cut was unrelated to the gift."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Nine days.</strong> A gold bar and a Rolex on Day 0. A tariff cut from 39% to 15% on Day 9. The gifts came from industries that directly benefited from the tariff reduction.</p>
+          <p>Swiss prosecutors apparently disagree that correlation isn't causation — they received <strong>three criminal complaints</strong> about the gift.</p>
+          <p>The Emoluments Clause doesn't require proof of a quid pro quo. It prohibits the acceptance of gifts from foreign governments <strong>precisely because the appearance of corruption is itself corrosive</strong> to democratic governance. The Founders understood that you don't need to prove the bribe worked — you need to prevent the bribe from happening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+  </style>
+
+  <HighlightBar text="A $400M plane from Qatar. A gold bar and Rolex — tariff cut 9 days later. Citizenship for sale at $1-5M. $300-400M raised from regulated companies at the White House. The Founders wrote the Emoluments Clause for exactly this reason." />
+
+  <CTASection
+    title="Every Gift Creates<br>a Debt."
+    description="The Founders understood that foreign payments to the president create leverage over the president. The Emoluments Clause exists because gifts from foreign governments are not gifts — they are investments."
+    linkText="← Back to Corruption & Self-Dealing"
+    linkHref="/deep-dives/corruption"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,344 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "$TRUMP Meme Coin Launched 3 Days Before Inauguration",
+  "764,000 Wallets Lost Money — Top 40 Wallets Extracted $320M+",
+  "Trump Family Retained 80% of Token Supply",
+  "World Liberty Financial: $11.6B in Family Crypto Holdings",
+  "73% of Trump Family Net Worth Now in Cryptocurrency",
+  "UAE Invested $500M — 4 Days Before Inauguration",
+  "DOJ Terminated All Cryptocurrency Investigations",
+  "SEC Reversed Crypto Enforcement Under Trump",
+  "Family Sets Crypto Policy While Holding $11.6B in Crypto",
+  "The Largest Presidential Conflict of Interest in American History",
+];
+---
+
+<ResearchLayout title="The Crypto Empire — Corruption Deep Dive" description="$TRUMP meme coin extracted $320M+ while 764K wallets lost money. The Trump family holds $11.6B in crypto — 73% of their net worth — while setting national crypto policy.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Grift', href: '/deep-dives/corruption' },
+    { label: 'The Crypto Empire' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Follow the Money"
+    title="THE CRYPTO <span class='word-red'>EMPIRE</span>"
+    subtitle="When the president's family holds $11.6 billion in an asset class he regulates."
+    date="Sources: Blockchain Transaction Data · SEC Filings · Federal Disclosure Records · Financial Analysis · DOJ Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="No man is allowed to be a judge in his own cause, because his interest would certainly bias his judgment, and, not improbably, corrupt his integrity."
+    citation="James Madison — Federalist No. 10"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard prefix="$" target={320} suffix="M+" label="Extracted by $TRUMP meme coin — from 764,000 wallets that lost money" />
+    <StatCard prefix="$" target={11.6} suffix="B" label="Trump family cryptocurrency holdings — 73% of their total net worth" />
+    <StatCard prefix="$" target={500} suffix="M" label="UAE investment in World Liberty Financial — 4 days before inauguration" />
+    <StatCard target={764} suffix="K" label="Wallets that purchased $TRUMP and lost money — retail buyers, not insiders" />
+  </StatGrid>
+
+  <!-- THE $TRUMP MEME COIN -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Meme Coin"
+    title="The $TRUMP<br>Meme Coin"
+    introText="On January 17, 2025 — three days before inauguration — the incoming president launched a cryptocurrency meme coin. The family retained 80% of the token supply, guaranteeing they would profit while retail buyers absorbed the losses. Blockchain data tells the rest of the story."
+  />
+
+  <VoicesSection
+    eyebrow="The Blockchain Record"
+    title="On-Chain<br>Data"
+    introText="Blockchain transactions are public and immutable. The numbers are not disputed."
+  >
+    <VoiceCard
+      quote="Of the 764,000 wallets that purchased $TRUMP, the vast majority lost money. The top 40 wallets — connected to the project's creators — extracted over $320 million in trading fees alone."
+      name="On-Chain Analysis"
+      role="Blockchain transaction records"
+      detail="$TRUMP meme coin · January 2025 – present"
+      context="The token structure was designed so that creators would profit from transaction fees regardless of whether the token's price went up or down. Every trade — buy or sell — generated fees flowing to insider wallets."
+    />
+    <VoiceCard
+      quote="The timing was not coincidental. The coin launched during peak inauguration attention, when the incoming president's name recognition was at its highest and public trust was being extended."
+      name="Market Analysis"
+      role="Financial timing and context"
+      detail="January 17, 2025 — 3 days before inauguration"
+      context="Meme coins are among the riskiest crypto assets. They have no underlying value, no revenue, no product. Their only value comes from speculation and the prominence of the name attached to them."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🪙"
+      title="The Launch"
+      body="The $TRUMP meme coin launched on <strong>January 17, 2025</strong> — three days before Donald Trump was inaugurated as president.<br><br>Key facts:<br>• The Trump family <strong>retained 80%</strong> of the total token supply<br>• The coin had <strong>no underlying product, revenue, or utility</strong><br>• It was marketed using the <strong>presidential brand</strong> at peak attention<br>• The launch was timed to exploit <strong>inauguration excitement</strong><br><br>The structure guaranteed insiders would profit regardless of what happened to retail buyers."
+      tag="3 Days Before Inauguration"
+    />
+    <CategoryCard
+      icon="📉"
+      title="The Losses"
+      body="Blockchain data reveals the aftermath:<br><br>• <strong>764,000 wallets</strong> purchased $TRUMP<br>• The <strong>vast majority lost money</strong><br>• The top 40 insider wallets <strong>extracted $320M+</strong> in fees<br>• Retail buyers collectively <strong>transferred wealth to insiders</strong><br><br>This is not a market fluctuation. The token was structured so that <strong>fees flowed to creator wallets on every transaction</strong> — whether the price went up or down. The house always wins."
+      tag="764K Wallets Lost"
+    />
+    <CategoryCard
+      icon="🍽️"
+      title="The Dinner Gambit"
+      body="In May 2025, Trump hosted a <strong>private dinner at his golf club</strong> for the top 220 holders of $TRUMP.<br><br>The announcement caused a <strong>price surge</strong> as buyers rushed to qualify. After the dinner, the price crashed. The pattern is a classic <strong>pump-and-dump</strong>: create artificial demand, let insiders profit from the surge, and leave retail buyers holding devalued tokens.<br><br>An incoming president used the <strong>promise of personal access</strong> to pump a financial product his family controlled."
+      tag="Access for Sale"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Legal Question"
+      body="Under normal circumstances, launching a financial product while holding material non-public information about upcoming government policy would constitute <strong>securities fraud</strong>.<br><br>The Trump team classified $TRUMP as a &quot;meme coin&quot; rather than a security — placing it in a <strong>regulatory gray zone</strong> that the administration itself would later shape.<br><br>The president launched a financial product, set the regulations governing it, and profited from it. All three roles — <strong>issuer, regulator, and beneficiary</strong> — occupied by the same family."
+      tag="Issuer, Regulator, Beneficiary"
+    />
+  </CategoryGrid>
+
+  <!-- WORLD LIBERTY FINANCIAL -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Crypto Holdings"
+    title="World Liberty<br>Financial"
+    introText="Beyond the meme coin, the Trump family built a cryptocurrency empire — World Liberty Financial — that now represents the majority of their net worth. This creates the largest presidential conflict of interest in American history."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏦"
+      title="The Holdings"
+      body="The Trump family's cryptocurrency portfolio through World Liberty Financial:<br><br>• <strong>$11.6 billion</strong> in total crypto holdings<br>• Represents <strong>73% of the family's net worth</strong><br>• Holdings span <strong>multiple cryptocurrencies and DeFi protocols</strong><br>• The family has <strong>direct financial interest</strong> in every crypto policy decision<br><br>No president in American history has had this percentage of their wealth tied to a single asset class they directly regulate."
+      tag="73% of Net Worth"
+    />
+    <CategoryCard
+      icon="🇦🇪"
+      title="The UAE Investment"
+      body="Four days before inauguration, a <strong>$500 million investment from the United Arab Emirates</strong> flowed into World Liberty Financial.<br><br>The UAE is a critical US strategic partner with active interests in:<br>• Defense contracts<br>• Oil and energy policy<br>• Middle East diplomacy<br>• Technology transfer agreements<br><br>A $500M investment into the incoming president's family crypto venture — <strong>days before he takes power</strong> over policies directly affecting the investor."
+      tag="$500M — 4 Days Before"
+    />
+    <CategoryCard
+      icon="📈"
+      title="The Conflict"
+      body="The scale of the conflict is without precedent:<br><br>• The president's family holds <strong>$11.6B in crypto</strong><br>• The president <strong>appoints the SEC chair</strong> who regulates crypto<br>• The president <strong>appoints the CFTC chair</strong> who regulates crypto derivatives<br>• The president <strong>directs DOJ policy</strong> on crypto enforcement<br>• The president <strong>signs or vetoes</strong> crypto legislation<br><br>Every crypto policy decision the administration makes directly affects the family's $11.6 billion portfolio."
+      tag="Unprecedented Conflict"
+    />
+    <CategoryCard
+      icon="🔮"
+      title="The Timeline"
+      body="The sequence of events tells the story:<br><br>1. Trump family <strong>builds crypto portfolio</strong> (2024)<br>2. <strong>$500M UAE investment</strong> — 4 days before inauguration<br>3. <strong>$TRUMP meme coin</strong> launches — 3 days before inauguration<br>4. Trump takes office — <strong>appoints pro-crypto regulators</strong><br>5. DOJ <strong>terminates all crypto investigations</strong><br>6. SEC <strong>reverses crypto enforcement</strong><br>7. Family holdings reach <strong>$11.6B</strong><br><br>Build the portfolio. Take power. Change the rules. Profit."
+      tag="The Sequence"
+    />
+  </CategoryGrid>
+
+  <!-- POLICY INTERSECTION -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Policy Changes"
+    title="Changing the<br>Rules"
+    introText="While the Trump family held billions in cryptocurrency, the administration systematically dismantled the regulatory framework governing crypto — directly benefiting the family's holdings."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏛️"
+      title="DOJ: Investigations Terminated"
+      body="The Department of Justice <strong>terminated all active cryptocurrency fraud investigations</strong>.<br><br>This is not a policy disagreement about regulation. Active investigations into crypto fraud — schemes that harmed real victims — were <strong>shut down</strong> while the president's family held $11.6 billion in the asset class being investigated.<br><br>The message to the crypto industry: <strong>the cop is off the beat</strong>."
+      tag="Investigations Killed"
+    />
+    <CategoryCard
+      icon="📋"
+      title="SEC: Enforcement Reversed"
+      body="The Securities and Exchange Commission <strong>reversed its crypto enforcement posture</strong> under Trump-appointed leadership:<br><br>• Active enforcement actions <strong>dropped or settled favorably</strong><br>• New enforcement actions <strong>declined dramatically</strong><br>• Regulatory guidance <strong>loosened</strong> across the board<br>• The classification of tokens as securities <strong>narrowed</strong><br><br>Every change increased the value and reduced the legal risk of the Trump family's crypto holdings."
+      tag="Enforcement Reversed"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="The Core Conflict" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">The president's family holds <strong style="color: var(--text);">$11.6 billion in cryptocurrency</strong> — 73% of their net worth. The president appoints the regulators who oversee crypto, directs DOJ enforcement policy, and signs crypto legislation. The DOJ terminated crypto investigations. The SEC reversed enforcement. Every policy change <strong style="color: var(--text);">directly increased the value of the family's holdings</strong>. This is not alleged corruption. It is a documented, mathematically verifiable conflict of interest — the largest in presidential history.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications. Here is each claim, tested against the financial record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"It's just a business — presidents are allowed to have businesses."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>No previous president has launched a financial product three days before taking office</strong> — let alone one designed to extract fees from retail buyers while the family retains 80% of the supply.</p>
+          <p>Previous presidents divested their holdings or placed them in blind trusts specifically to avoid conflicts of interest. Trump not only <strong>refused to divest</strong> but actively <strong>expanded his financial interests</strong> into the exact areas his administration would regulate.</p>
+          <p>Having 73% of your net worth in an asset class you regulate isn't "having a business." It's the <strong>textbook definition of a conflict of interest</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Everyone lost money in crypto — that's just the market."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The $TRUMP coin wasn't a market fluctuation — it was structurally designed to transfer wealth from buyers to insiders.</strong> The family retained 80% of tokens and extracted fees on every transaction.</p>
+          <p>In a normal market, buyers and sellers share risk. In this structure, the <strong>creators profit from volume regardless of price direction</strong>. It is a fee extraction mechanism, not an investment.</p>
+          <p>764,000 wallets lost money. The top 40 insider wallets extracted $320M+. This is not "the market." It's a <strong>designed outcome</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The UAE deal was a legitimate investment."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>A $500 million investment from a foreign government into the incoming president's family business, four days before he takes power over policies that directly affect that government</strong> — this is not a normal investment. It is a payment to the incoming president's family by a government that needs favorable policy.</p>
+          <p>The UAE has active interests in US defense contracts, energy policy, Middle East diplomacy, and technology transfers. Every one of these areas falls under <strong>direct presidential authority</strong>.</p>
+          <p>If a $500M payment from a foreign government to the president's family business doesn't constitute a conflict of interest, then the concept has no meaning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+  </style>
+
+  <HighlightBar text="$320M+ extracted. 764,000 wallets lost money. $11.6B in holdings while setting crypto policy. DOJ investigations terminated. SEC enforcement reversed. The blockchain doesn't lie." />
+
+  <CTASection
+    title="The Blockchain<br>Doesn't Lie."
+    description="On-chain transaction data. SEC filings. Federal disclosure records. The crypto empire is documented in immutable financial records — and the conflict of interest is the largest in presidential history."
+    linkText="← Back to Corruption & Self-Dealing"
+    linkHref="/deep-dives/corruption"
+  />
+
+</ResearchLayout>

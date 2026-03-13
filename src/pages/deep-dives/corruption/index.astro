@@ -1,0 +1,197 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import NavigationGrid from '../../../components/navigation/NavigationGrid.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "$320M+ Extracted by $TRUMP Meme Coin — 764K Wallets Lost Money",
+  "$400M Boeing 747-8 Gift from Qatar — Hosts Critical US Military Base",
+  "$2B in Restitution Wiped by Presidential Pardons",
+  "3,200 Undisclosed Financial Conflicts — ProPublica Investigation",
+  "$11.6B Family Crypto Holdings — 73% of Net Worth",
+  "Swiss Gold Bar & Rolex — Tariff Cut 9 Days Later",
+  "$600M Merchandise Empire — Trump Accounts, TrumpRx, Dollar Coins",
+  "DOGE: $300B in Conflicts of Interest — Musk Exempted from Disclosure",
+  "$93B Pentagon Spending Spree — King Crab, Lobster, $98K Piano",
+  "Trump Sues Own IRS for $10B — 'Work Out a Settlement with Myself'",
+];
+
+const sectionCards = [
+  {
+    icon: '🪙',
+    title: 'The Crypto Empire',
+    description: '$TRUMP meme coin extracted $320M+ while 764K wallets lost money. World Liberty Financial holds $11.6B. The DOJ terminated crypto investigations as the family profited.',
+    href: '/deep-dives/corruption/the-crypto-empire',
+    tag: '$320M+ Extracted',
+  },
+  {
+    icon: '🌍',
+    title: 'Foreign Payments',
+    description: 'A $400M plane from Qatar. A Swiss gold bar followed by a tariff cut. Gold Card citizenship for sale. The White House ballroom: $300-400M from regulated companies.',
+    href: '/deep-dives/corruption/foreign-payments',
+    tag: '$400M Qatar Plane',
+  },
+  {
+    icon: '™️',
+    title: 'Government as Brand',
+    description: 'Trump-class battleships. His face on the parks pass. A $600M merchandise empire. The DOJ building draped with his banner. The presidency as a brand extension.',
+    href: '/deep-dives/corruption/government-as-brand',
+    tag: '$600M Merchandise',
+  },
+  {
+    icon: '💰',
+    title: 'Self-Dealing & Graft',
+    description: 'Suing his own IRS for $10B. DOGE with $300B in conflicts. $71M in taxpayer golf. Pentagon splurges while SNAP gets cut. 3,200 undisclosed conflicts.',
+    href: '/deep-dives/corruption/self-dealing',
+    tag: '3,200 Conflicts',
+  },
+  {
+    icon: '🔒',
+    title: 'Cover-ups & Pardons',
+    description: 'The Epstein files deleted then restored. $2B in restitution wiped by pardons. Trump University, Trump Foundation, 34 felony convictions — the lifelong pattern.',
+    href: '/deep-dives/corruption/cover-ups-and-pardons',
+    tag: '$2B Restitution Wiped',
+  },
+];
+---
+
+<ResearchLayout title="Corruption & Self-Dealing — Deep Dive" description="Follow the money. $320M+ in meme coin fees, a $400M Qatar plane, $2B in restitution wiped by pardons, 3,200 undisclosed financial conflicts. Sourced to SEC filings, blockchain data, and court records.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Grift' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Follow the Money"
+    title="THE <span class='word-red'>GRIFT</span>"
+    subtitle="When the presidency becomes a profit center."
+    date="Sources: SEC Filings · Blockchain Analysis · Federal Disclosure Records · ProPublica · Congressional Oversight Reports · DOJ Records"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="No man is allowed to be a judge in his own cause, because his interest would certainly bias his judgment, and, not improbably, corrupt his integrity."
+    citation="James Madison — Federalist No. 10"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard prefix="$" target={320} suffix="M+" label="Extracted by the $TRUMP meme coin — while 764,000 wallets lost money" />
+    <StatCard prefix="$" target={400} suffix="M" label="Value of Boeing 747-8 gifted by Qatar — which hosts a critical US military base" />
+    <StatCard prefix="$" target={2} suffix="B" label="In restitution to fraud victims wiped clean by presidential pardons" />
+    <StatCard target={3200} separator="," label="Undisclosed financial conflicts identified by ProPublica investigation" />
+  </StatGrid>
+
+  <!-- THE EVIDENCE -->
+  <SectionHeader
+    eyebrow="The Standard of Evidence"
+    title="Follow the<br>Money."
+    introText="This investigation is built on financial records — SEC filings, blockchain transaction data, federal disclosure forms, court documents, and investigative journalism from ProPublica, Reuters, and others. Not opinions. Not speculation. The money trail."
+  />
+
+  <VoicesSection
+    eyebrow="The Money Trail"
+    title="The Numbers<br>Speak"
+    introText="These aren't allegations — they're financial records, blockchain data, and government filings."
+  >
+    <VoiceCard
+      quote="764,000 wallets that purchased $TRUMP lost money. The top 40 wallets — connected to the project's creators — extracted over $320 million in fees."
+      name="Blockchain Analysis"
+      role="On-chain transaction data"
+      detail="$TRUMP meme coin · Launched January 17, 2025"
+      context="The coin launched three days before inauguration. The family retained 80% of the token supply, guaranteeing they would profit while retail buyers lost."
+    />
+    <VoiceCard
+      quote="The Trump family's cryptocurrency holdings now represent approximately 73% of their net worth — $11.6 billion — creating unprecedented conflicts as the administration sets crypto policy."
+      name="Financial Analysis"
+      role="Federal disclosure records and market data"
+      detail="World Liberty Financial · 2025"
+      context="The DOJ terminated all cryptocurrency investigations and the SEC reversed enforcement actions while the Trump family held billions in crypto assets."
+    />
+    <VoiceCard
+      quote="ProPublica identified more than 3,200 instances where Trump administration officials had financial interests that intersected with their official duties — and failed to disclose them."
+      name="ProPublica Investigation"
+      role="Federal disclosure records analysis"
+      detail="2025"
+      context="The investigation cross-referenced financial disclosure forms with policy decisions, finding systematic failures to recuse or disclose conflicts across the administration."
+    />
+  </VoicesSection>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="💰" title="How This Investigation Works" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Each section follows the money through a different channel: <strong style="color: var(--text);">cryptocurrency schemes</strong>, <strong style="color: var(--text);">foreign payments</strong>, <strong style="color: var(--text);">government branding</strong>, <strong style="color: var(--text);">self-dealing</strong>, and <strong style="color: var(--text);">cover-ups and pardons</strong>. Every claim is sourced to financial records, court filings, blockchain data, or investigative reporting. The dollar figures are not estimates — they come from transaction records and disclosure forms.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- THE BIG PICTURE -->
+  <SectionDivider label="The Big Picture" />
+  <SectionHeader
+    eyebrow="Before the Details"
+    title="The Landscape"
+    introText="Before examining specific schemes, here's the pattern — across every financial channel, the same dynamic: government power converted into personal profit."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📊"
+      title="The Scale"
+      body="The aggregate dollar figures are staggering:<br><br>• <strong>$320M+</strong> extracted by the $TRUMP meme coin<br>• <strong>$400M</strong> Qatar plane gift<br>• <strong>$11.6B</strong> family crypto holdings<br>• <strong>$600M</strong> merchandise empire<br>• <strong>$2B</strong> in restitution wiped by pardons<br>• <strong>$93B</strong> Pentagon spending spree<br>• <strong>$71M</strong> taxpayer money to Trump golf properties<br><br>These are not allegations. They are financial records."
+      tag="The Dollar Figures"
+    />
+    <CategoryCard
+      icon="🔄"
+      title="The Pattern"
+      body="Every scheme follows the same structure: <strong>government power is used for personal benefit</strong>.<br><br>• Set crypto policy → <strong>profit from crypto holdings</strong><br>• Receive foreign gifts → <strong>deliver favorable policy</strong><br>• Brand government institutions → <strong>build the commercial brand</strong><br>• Control oversight → <strong>block disclosure of conflicts</strong><br>• Issue pardons → <strong>reward loyalists and erase accountability</strong><br><br>The presidency isn't serving the public. It's serving the brand."
+      tag="Power → Profit"
+    />
+    <CategoryCard
+      icon="📈"
+      title="First Term → Second Term"
+      body="The escalation from first term to second term is dramatic:<br><br><strong>First term:</strong><br>• Trump Hotel bookings by foreign governments<br>• Emoluments lawsuits (mooted on appeal)<br>• Mar-a-Lago membership fees<br><br><strong>Second term:</strong><br>• $11.6B crypto empire<br>• $400M planes from foreign governments<br>• His face on currency and battleships<br>• Selling citizenship for $1-5M<br>• Suing his own IRS for $10B<br><br>Hotels to crypto empires. The scale has changed by orders of magnitude."
+      tag="Orders of Magnitude"
+    />
+    <CategoryCard
+      icon="👥"
+      title="Who Pays"
+      body="Behind every dollar extracted, there are victims:<br><br>• <strong>764,000 meme coin buyers</strong> who lost money while insiders profited<br>• <strong>Fraud victims</strong> whose $2B in court-ordered restitution was wiped by pardons<br>• <strong>Taxpayers</strong> funding $71M in presidential golf and $93B Pentagon splurges<br>• <strong>Small businesses</strong> competing against a president who regulates their industries while selling competing products<br>• <strong>Democracy itself</strong> — when policy is for sale, citizens lose their voice"
+      tag="764K Losers & Counting"
+    />
+  </CategoryGrid>
+
+  <HighlightBar text="$320M+ in meme coin fees. A $400M plane from Qatar. $2B in restitution wiped. 3,200 undisclosed conflicts. $11.6B in crypto holdings while setting crypto policy. The financial record speaks for itself." />
+
+  <!-- SECTION NAVIGATION -->
+  <SectionHeader
+    eyebrow="The Investigation"
+    title="Choose a<br>Section"
+    introText="Each section follows the money through a different channel — with the specific dollar figures, the financial records, and the policy decisions that made them possible."
+  />
+
+  <NavigationGrid cards={sectionCards} />
+
+  <CTASection
+    title="Follow the<br>Money."
+    description="SEC filings. Blockchain data. Federal disclosure records. Court documents. The money trail doesn't lie — and these numbers come straight from the financial record."
+    linkText="← Back to Deep Dives"
+    linkHref="/deep-dives"
+  />
+
+</ResearchLayout>

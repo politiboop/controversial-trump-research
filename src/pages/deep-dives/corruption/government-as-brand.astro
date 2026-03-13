@@ -1,0 +1,329 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "$600M Merchandise Empire — Trump Accounts, TrumpRx, Dollar Coins",
+  "Trump Dollar Coin: His Face on Both Sides",
+  "Trump-Class Battleships — $10-15B Each",
+  "Trump Institute of Peace — Judge Ruled Takeover Illegal",
+  "Trump-Kennedy Center — Lawsuit Filed",
+  "His Face on the National Parks Pass",
+  "Replaced MLK Day & Juneteenth Free Days with Trump's Birthday",
+  "Giant Banners on DOJ Building and Federal Buildings",
+  "Visa Partnership: Trump-Branded Financial Accounts",
+  "TrumpRx Prescription Drug Cards — Government as Product Line",
+];
+---
+
+<ResearchLayout title="Government as Brand — Corruption Deep Dive" description="Trump-class battleships, his face on parks passes and currency, a $600M merchandise empire, giant banners on federal buildings. When the government becomes a brand extension.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Grift', href: '/deep-dives/corruption' },
+    { label: 'Government as Brand' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Follow the Money"
+    title="GOVERNMENT AS <span class='word-red'>BRAND</span>"
+    subtitle="When federal institutions become extensions of a personal brand."
+    date="Sources: Federal Procurement Records · Court Filings · Executive Orders · Congressional Records · Financial Filings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The government of the United States is not, in any sense, founded on the Christian religion, nor on any personal brand, nor on any name — it is founded on the consent of the governed."
+    citation="Adapted from the Treaty of Tripoli, 1797 — ratified unanimously by the U.S. Senate"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard prefix="$" target={600} suffix="M" label="Estimated value of the Trump merchandise empire built on the presidential brand" />
+    <StatCard prefix="$" target={15} suffix="B" label="Cost per Trump-class battleship — named by executive order" />
+    <StatCard target={2} label="Sides of the Trump dollar coin featuring his face — front and back" />
+    <StatCard target={0} label="Previous presidents who put their face on currency while in office" />
+  </StatGrid>
+
+  <!-- PRODUCT LINES -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Product Lines"
+    title="The Merchandise<br>Empire"
+    introText="The Trump administration launched an unprecedented array of commercial products — branded with the president's name and marketed using the authority and visibility of the presidency."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="💳"
+      title="Trump Accounts"
+      body="A partnership with <strong>Visa</strong> to create Trump-branded financial accounts:<br><br>• <strong>Trump Accounts</strong> — personal financial products bearing the president's name<br>• Marketed through <strong>presidential visibility</strong><br>• Visa lends its <strong>payment infrastructure</strong> to a sitting president's brand<br><br>No previous president has launched a branded financial product while in office. The presidency is being used as a <strong>marketing platform</strong> for commercial financial services."
+      tag="Presidential Branding"
+    />
+    <CategoryCard
+      icon="💊"
+      title="TrumpRx"
+      body="<strong>TrumpRx</strong> — prescription drug discount cards bearing the president's name and likeness:<br><br>• Distributed to Americans seeking <strong>lower drug prices</strong><br>• Branded with Trump's name and image<br>• Creates the impression that <strong>drug savings come from the president personally</strong><br><br>Healthcare policy is being converted into a <strong>personal branding opportunity</strong> — taking credit for savings programs through branded cards that function as marketing materials."
+      tag="Healthcare as Marketing"
+    />
+    <CategoryCard
+      icon="🪙"
+      title="The Dollar Coin"
+      body="The Trump administration issued a <strong>commemorative dollar coin with Trump's face on both sides</strong>:<br><br>• <strong>Front:</strong> Trump's face<br>• <strong>Back:</strong> Trump's face<br>• <strong>Zero previous presidents</strong> put their own face on currency while in office<br><br>By tradition and law, US currency features <strong>deceased historical figures</strong>. Putting a sitting president's face on currency — on both sides — transforms national currency into a <strong>propaganda tool and collectible</strong>."
+      tag="Both Sides"
+    />
+    <CategoryCard
+      icon="🛍️"
+      title="The Scale"
+      body="The total Trump merchandise empire is estimated at <strong>$600 million</strong>:<br><br>• Trump Accounts (Visa partnership)<br>• TrumpRx prescription cards<br>• Trump dollar coins<br>• Official merchandise stores<br>• Branded memorabilia<br>• Licensed products<br><br>Every product leverages the <strong>visibility and authority of the presidency</strong> to build commercial value. The office isn't just being used for personal profit — it's being used as a <strong>brand incubator</strong>."
+      tag="$600M Empire"
+    />
+  </CategoryGrid>
+
+  <!-- RENAMING AMERICA -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · Renaming America"
+    title="The Trump<br>Name"
+    introText="Beyond merchandise, the administration systematically renamed federal institutions, military assets, and public spaces — replacing their historic identities with the Trump brand."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="⚓"
+      title="Trump-Class Battleships"
+      body="By executive order, the Navy's next generation of warships will be designated the <strong>Trump class</strong>:<br><br>• Cost: <strong>$10-15 billion each</strong><br>• Named by the sitting president <strong>after himself</strong><br>• Breaking the tradition of naming warship classes after <strong>states, historical figures, or concepts</strong><br><br>Naval vessels are national assets. Naming them after the sitting president who ordered their construction converts <strong>military procurement into personal monument-building</strong>."
+      tag="$10-15B Each"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="The Institute of Peace"
+      body="The Trump administration <strong>seized the United States Institute of Peace building</strong> and renamed it the <strong>Trump Institute of Peace</strong>:<br><br>• A federal judge <strong>ruled the takeover illegal</strong><br>• The administration proceeded anyway<br>• An independent, congressionally-funded institution was <strong>commandeered for branding purposes</strong><br><br>A judge found the takeover unlawful — and the building was renamed after the president regardless."
+      tag="Judge Ruled It Illegal"
+    />
+    <CategoryCard
+      icon="🎭"
+      title="The Kennedy Center"
+      body="The administration moved to rename the <strong>John F. Kennedy Center for the Performing Arts</strong> to include Trump's name:<br><br>• <strong>A lawsuit was filed</strong> to block the renaming<br>• The Kennedy Center was named by Congress in honor of an <strong>assassinated president</strong><br>• Renaming it after a sitting president <strong>overwrites historical tribute with self-promotion</strong><br><br>The Kennedy Center is not a blank canvas. It is a <strong>memorial</strong> — and renaming it is an act of erasure."
+      tag="Lawsuit Filed"
+    />
+    <CategoryCard
+      icon="⚔️"
+      title="Department of War"
+      body="The administration renamed the <strong>Department of Defense</strong> back to the <strong>Department of War</strong> — its pre-1947 name.<br><br>While framed as a return to tradition, the renaming is part of a broader pattern of <strong>rebranding federal institutions</strong> to align with the administration's preferred messaging and identity.<br><br>The 1947 name change to &quot;Defense&quot; reflected a deliberate <strong>post-WWII commitment to framing American military power as defensive</strong>."
+      tag="Rebranding"
+    />
+  </CategoryGrid>
+
+  <!-- NATIONAL PARKS & BANNERS -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Public Spaces"
+    title="Claiming<br>Public Spaces"
+    introText="The branding extended to public spaces that belong to all Americans — national parks, federal buildings, and public holidays."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏞️"
+      title="The Parks Pass"
+      body="The Trump administration put the <strong>president's face on the national parks pass</strong> — the annual pass that grants access to all national parks:<br><br>• National parks belong to <strong>all Americans</strong><br>• The pass traditionally features <strong>natural landscapes</strong><br>• Replacing nature with the president's face converts a <strong>public resource into a personal branding vehicle</strong><br><br>The parks pass isn't just a ticket — it's a symbol of America's public lands. Putting one person's face on it sends a message about who those lands belong to."
+      tag="Public → Personal"
+    />
+    <CategoryCard
+      icon="📅"
+      title="The Holidays"
+      body="The administration <strong>replaced the free national parks days</strong> for Martin Luther King Jr. Day and Juneteenth with a free day on <strong>Trump's birthday</strong>:<br><br>• <strong>MLK Day</strong> — honoring the civil rights movement<br>• <strong>Juneteenth</strong> — honoring the end of slavery<br>• <strong>Both replaced</strong> with Trump's birthday<br><br>Two holidays honoring the expansion of freedom for all Americans — replaced with a day honoring the sitting president. The symbolism is unmistakable."
+      tag="MLK Day & Juneteenth → Trump Birthday"
+    />
+    <CategoryCard
+      icon="🏢"
+      title="The Banners"
+      body="Giant banners featuring the president's face were <strong>hung on federal buildings</strong>, including the <strong>Department of Justice</strong>:<br><br>• The DOJ building — home of federal law enforcement<br>• Multiple federal buildings across Washington<br>• The president's image displayed on institutions that are supposed to serve <strong>the public, not the president</strong><br><br>Draping the Justice Department in the president's image sends a clear message: this institution serves <strong>one person</strong>, not the Constitution."
+      tag="DOJ Building"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="The Pattern: Government as Extension of Brand" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Merchandise. Military vessels. Federal buildings. National parks. Public holidays. Currency. In every case, the pattern is the same: <strong style="color: var(--text);">public institutions and assets are being converted into extensions of a personal brand</strong>. The presidency is not a brand. Federal buildings are not billboards. National parks are not marketing platforms. Currency is not a vanity project. These belong to <strong style="color: var(--text);">the American people</strong> — not to any one person.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Presidents have always put their stamp on things."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>No previous president has named warship classes after themselves, put their face on currency while in office, hung banners of themselves on the Justice Department, or replaced civil rights holidays with their birthday.</strong></p>
+          <p>Presidents name libraries, foundations, and policy initiatives. They do not rename existing memorials, brand military assets, or convert federal buildings into personal billboards.</p>
+          <p>The difference between "putting your stamp on things" and what is happening here is the difference between <strong>policy and personality cult</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The merchandise isn't taxpayer-funded."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The merchandise may not be directly taxpayer-funded, but it <strong>leverages the presidency — a taxpayer-funded office — as a marketing platform</strong>.</p>
+          <p>The <strong>visibility, authority, and trust</strong> of the presidential office are being used to sell commercial products. Every Trump Account, every TrumpRx card, every dollar coin trades on the <strong>institutional credibility of the presidency</strong>.</p>
+          <p>And the renaming? Trump-class battleships at $10-15B each <strong>are</strong> taxpayer-funded. The banners on federal buildings <strong>are</strong> taxpayer-funded. The parks passes <strong>are</strong> taxpayer-funded. The office is being used as a <strong>brand factory</strong> at public expense.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"These are just names — they don't affect policy."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Names are not just names. <strong>Symbols shape perception, and perception shapes power.</strong></p>
+          <p>When the Justice Department is draped in one person's image, it signals that justice serves that person. When military assets bear one person's name, it signals that the military belongs to that person. When public holidays are replaced with one person's birthday, it signals whose legacy matters.</p>
+          <p>Authoritarian leaders throughout history have understood that <strong>controlling symbols is controlling the narrative</strong>. That's why they put their faces on buildings, their names on institutions, and their birthdays on the calendar. It's not about the name — it's about the <strong>claim of ownership over the state</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+  </style>
+
+  <HighlightBar text="$600M merchandise empire. His face on currency — both sides. $10-15B battleships named after himself. MLK Day and Juneteenth replaced with his birthday. The DOJ building draped with his banner. Government as brand." />
+
+  <CTASection
+    title="The Government<br>Is Not a Brand."
+    description="Federal institutions belong to the American people. Military assets serve the nation. National parks preserve the commons. Currency represents the republic. None of these are marketing platforms for a personal brand."
+    linkText="← Back to Corruption & Self-Dealing"
+    linkHref="/deep-dives/corruption"
+  />
+
+</ResearchLayout>

@@ -1,0 +1,346 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "Trump Sues Own IRS for $10B — 'Work Out a Settlement with Myself'",
+  "Venezuelan Oil Revenues in Offshore Qatar Account",
+  "$71M in Taxpayer Money to Trump Golf Properties",
+  "DOGE: $300B in Conflicts — Musk Exempted from Financial Disclosure",
+  "DOGE Promised $2T in Savings — Delivered $215B",
+  "Patel FBI Jet Trips: Milan Olympics, Beer in Locker Room",
+  "Chavez-DeRemer: Husband Banned for Sexual Assault, IG Probe for Drinking",
+  "$93B Pentagon Spending Spree While DOGE Cuts SNAP",
+  "King Crab, Lobster, $98K Piano, $225M Furniture — Pentagon Budget",
+  "ProPublica: 3,200 Undisclosed Financial Conflicts Across Administration",
+];
+---
+
+<ResearchLayout title="Self-Dealing & Graft — Corruption Deep Dive" description="Suing his own IRS for $10B. DOGE with $300B in conflicts. $71M in taxpayer golf. A $93B Pentagon spending spree. 3,200 undisclosed conflicts. Self-dealing at every level.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Grift', href: '/deep-dives/corruption' },
+    { label: 'Self-Dealing & Graft' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Follow the Money"
+    title="SELF-<span class='word-red'>DEALING</span>"
+    subtitle="When the government works for one person instead of 330 million."
+    date="Sources: IRS Records · Federal Procurement Data · ProPublica · Inspector General Reports · Financial Disclosure Records · GAO Reports"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The executive Power shall be vested in a President of the United States of America. He shall... take Care that the Laws be faithfully executed."
+    citation="Article II, Sections 1 & 3 — The Take Care Clause of the United States Constitution"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard prefix="$" target={10} suffix="B" label="Trump's lawsuit against his own IRS — 'work out a settlement with myself'" />
+    <StatCard prefix="$" target={300} suffix="B" label="In conflicts of interest held by DOGE leader Elon Musk — exempted from disclosure" />
+    <StatCard prefix="$" target={93} suffix="B" label="Pentagon spending spree — king crab, lobster, $98K piano, $225M furniture" />
+    <StatCard target={3200} separator="," label="Undisclosed financial conflicts identified by ProPublica across the administration" />
+  </StatGrid>
+
+  <!-- DIRECT SELF-ENRICHMENT -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · Direct Self-Enrichment"
+    title="The President's<br>Ledger"
+    introText="The most direct form of corruption: the president using the powers of his office to enrich himself personally — suing his own agencies, directing government spending to his properties, and converting government resources into personal profit."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🏦"
+      title="Suing His Own IRS"
+      body="Trump filed a <strong>$10 billion lawsuit against his own Internal Revenue Service</strong> — the tax agency he controls as president.<br><br>The absurdity is structural:<br>• The president <strong>appoints the IRS Commissioner</strong><br>• The president <strong>directs DOJ</strong>, which would defend the IRS<br>• The president is suing an agency he controls, defended by lawyers he appointed<br>• He described it as needing to <strong>&quot;work out a settlement with myself&quot;</strong><br><br>A president suing his own agency for $10B is a president <strong>negotiating with himself</strong> using taxpayer money."
+      tag="'Settlement with Myself'"
+    />
+    <CategoryCard
+      icon="🛢️"
+      title="Venezuelan Oil"
+      body="Venezuelan oil revenues — generated through US policy decisions — were directed to an <strong>offshore account in Qatar</strong>:<br><br>• The US controls <strong>sanctions policy on Venezuelan oil</strong><br>• Revenue from sanctioned oil transactions was routed through <strong>offshore structures</strong><br>• The account was located in <strong>Qatar</strong> — the same country that gifted Trump a $400M plane<br><br>US foreign policy generated revenue that ended up in <strong>offshore accounts</strong> rather than the US Treasury."
+      tag="Offshore Qatar Account"
+    />
+    <CategoryCard
+      icon="⛳"
+      title="$71M Taxpayer Golf"
+      body="The US government spent <strong>$71 million in taxpayer money at Trump-owned golf properties</strong>:<br><br>• Secret Service protection requires renting rooms, golf carts, and facilities<br>• The president <strong>chooses to golf at his own properties</strong><br>• His properties <strong>charge the government at commercial rates</strong><br>• The money flows from <strong>taxpayers → US Treasury → Trump properties → Trump</strong><br><br>Every presidential golf trip to a Trump property is a <strong>direct transfer of public money to the president's private business</strong>."
+      tag="Taxpayer → Trump"
+    />
+  </CategoryGrid>
+
+  <!-- THE MUSK PROBLEM -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · DOGE"
+    title="The Musk<br>Problem"
+    introText="Elon Musk was given authority over federal spending through DOGE — the Department of Government Efficiency — while holding $300 billion in conflicts of interest across companies that depend on federal contracts and regulatory decisions."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🔧"
+      title="$300B in Conflicts"
+      body="Elon Musk's companies have <strong>$300 billion in financial interests</strong> that intersect with federal policy:<br><br>• <strong>SpaceX</strong> — $15B+ in NASA and DOD contracts<br>• <strong>Tesla</strong> — EV tax credits, EPA regulations, NHTSA safety oversight<br>• <strong>Neuralink</strong> — FDA regulation<br>• <strong>xAI</strong> — AI regulation and federal AI policy<br>• <strong>The Boring Company</strong> — federal infrastructure contracts<br><br>DOGE was given authority to review and cut spending across <strong>the very agencies that regulate these companies</strong>."
+      tag="$300B in Conflicts"
+    />
+    <CategoryCard
+      icon="📊"
+      title="Promised vs. Delivered"
+      body="DOGE promised <strong>$2 trillion in government savings</strong>. It delivered <strong>$215 billion</strong> — barely 10% of the promise.<br><br>But the real story isn't the savings gap. It's <strong>what was cut and what wasn't</strong>:<br><br>• <strong>SNAP benefits</strong> (food assistance for the poor) — cut<br>• <strong>Federal workforce</strong> — slashed<br>• <strong>Government programs for vulnerable populations</strong> — reduced<br>• <strong>Contracts benefiting Musk's companies</strong> — untouched<br><br>DOGE cut programs for the poor while protecting contracts for the richest man on Earth."
+      tag="$2T Promised → $215B"
+    />
+    <CategoryCard
+      icon="🔒"
+      title="No Disclosure"
+      body="Musk was <strong>exempted from financial disclosure requirements</strong> that apply to other government officials:<br><br>• No disclosure of his <strong>$300B in conflicts</strong><br>• No recusal requirements when decisions affect his companies<br>• No transparency about <strong>which programs DOGE reviewed</strong><br>• No public accounting of <strong>the basis for cuts vs. protections</strong><br><br>The person with the largest financial conflicts in the history of the federal government was given the <strong>least oversight</strong>."
+      tag="Exempted from Disclosure"
+    />
+  </CategoryGrid>
+
+  <!-- APPOINTEE CORRUPTION -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Appointees"
+    title="The Inner<br>Circle"
+    introText="The corruption extends beyond the president to his appointees — officials who used their positions for personal benefit, faced ethics investigations, or leveraged government power for private interests."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="✈️"
+      title="Kash Patel — FBI Director"
+      body="FBI Director Kash Patel used <strong>government jets for personal travel</strong>:<br><br>• Flew to the <strong>Milan Olympics</strong> on an FBI jet<br>• Reports of <strong>beer stored in a locker room</strong> at FBI headquarters<br>• Pattern of using <strong>government resources for personal purposes</strong><br><br>The FBI Director's use of government aircraft for personal trips is a <strong>direct misuse of taxpayer resources</strong> — and a signal about the culture of accountability at the top of federal law enforcement."
+      tag="Government Jets"
+    />
+    <CategoryCard
+      icon="⚠️"
+      title="Lori Chavez-DeRemer"
+      body="Labor Secretary Lori Chavez-DeRemer faced multiple scandals:<br><br>• Her <strong>husband was banned from her workplace</strong> after allegations of <strong>sexual assault</strong> against a staffer<br>• An <strong>Inspector General probe</strong> was opened into reports of <strong>drinking on the job</strong><br>• The IG investigation was initiated after <strong>multiple complaints from Department of Labor staff</strong><br><br>The person responsible for protecting American workers' rights was the subject of workplace misconduct investigations in her own department."
+      tag="IG Probe Opened"
+    />
+    <CategoryCard
+      icon="📺"
+      title="Larry Ellison — Media Consolidation"
+      body="Oracle co-founder Larry Ellison — a close Trump ally — positioned himself at the center of an <strong>unprecedented media consolidation</strong>:<br><br>• Connections to deals involving <strong>CNN, CBS, HBO, and TikTok</strong><br>• Trump allies acquiring <strong>major media properties</strong><br>• The consolidation gives <strong>political allies control over news coverage</strong><br><br>When the president's allies control the media companies that cover the president, the <strong>free press ceases to function as a check on power</strong>."
+      tag="CNN + CBS + HBO + TikTok"
+    />
+  </CategoryGrid>
+
+  <!-- PENTAGON & DISCLOSURE -->
+  <SectionDivider label="Chapter IV" />
+  <SectionHeader
+    eyebrow="Chapter IV · The Pentagon & Disclosure"
+    title="Waste &<br>Cover-Up"
+    introText="While DOGE cut food assistance for struggling Americans, the Pentagon went on a $93 billion spending spree — and the administration systematically dismantled financial transparency across the government."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🦀"
+      title="The Pentagon Spending Spree"
+      body="While DOGE cut SNAP benefits and federal jobs, the Pentagon spent <strong>$93 billion</strong> on items including:<br><br>• <strong>King crab and lobster</strong> for Pentagon dining<br>• A <strong>$98,000 piano</strong><br>• <strong>$225 million in furniture</strong><br>• Luxury items across Pentagon facilities<br><br>The hypocrisy is the point: <strong>austerity for the poor, luxury for the powerful</strong>. DOGE cuts food assistance while the Pentagon buys king crab."
+      tag="King Crab & $98K Piano"
+    />
+    <CategoryCard
+      icon="📋"
+      title="3,200 Conflicts"
+      body="ProPublica's investigation found <strong>3,200 instances</strong> where Trump administration officials had <strong>undisclosed financial conflicts</strong>:<br><br>• Officials making decisions that <strong>directly affected their financial interests</strong><br>• <strong>No disclosure</strong> of the conflicts<br>• <strong>No recusal</strong> from the decisions<br>• Systematic failure of the <strong>ethics infrastructure</strong><br><br>3,200 is not a few bad apples. It's a <strong>system operating as designed</strong> — without accountability."
+      tag="Systematic Failure"
+    />
+    <CategoryCard
+      icon="📊"
+      title="Jobs Report Manipulation"
+      body="The administration <strong>manipulated the jobs report</strong> — and fired the BLS Commissioner for producing unfavorable data:<br><br>• The Bureau of Labor Statistics produces <strong>independent economic data</strong><br>• The BLS Commissioner was <strong>fired after publishing data</strong> the administration didn't like<br>• The message: <strong>produce favorable numbers or lose your job</strong><br><br>When the government fires statisticians for reporting accurate data, the public loses its ability to <strong>know what's actually happening in the economy</strong>."
+      tag="BLS Commissioner Fired"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="The Self-Dealing System" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">This is not a collection of individual scandals. It is a <strong style="color: var(--text);">system</strong>: the president sues his own agencies for billions, his appointees use government resources for personal benefit, the richest man in the world cuts programs for the poor while protecting his own contracts, the Pentagon splurges while Americans lose food assistance, and the data that would reveal all of this is <strong style="color: var(--text);">suppressed, manipulated, or never disclosed</strong>. Self-dealing isn't a side effect of this administration. It's the <strong style="color: var(--text);">operating principle</strong>.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"DOGE is saving taxpayer money."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>DOGE promised $2 trillion in savings and delivered $215 billion</strong> — barely 10% of the promise.</p>
+          <p>More importantly, DOGE's leader holds <strong>$300 billion in conflicts of interest</strong> and was exempted from financial disclosure. The cuts targeted food assistance, federal workers, and programs for vulnerable populations — while contracts benefiting Musk's companies remained untouched.</p>
+          <p>Saving money for taxpayers while protecting your own government contracts isn't efficiency. It's <strong>self-dealing with a PR strategy</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The IRS lawsuit is a legitimate legal dispute."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>The president <strong>appoints the IRS Commissioner</strong>. The president <strong>directs the DOJ</strong> that would defend the IRS. The president described it as needing to <strong>"work out a settlement with myself."</strong></p>
+          <p>This is not plaintiff vs. defendant. This is <strong>the same person on both sides of the case</strong>. The president controls the agency being sued and the lawyers defending it.</p>
+          <p>A $10 billion lawsuit where the plaintiff controls the defense isn't litigation. It's a <strong>withdrawal from the Treasury with extra steps</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"These are normal government expenditures."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>$98,000 pianos and $225 million in furniture are not normal government expenditures.</strong> They are luxury purchases made by an agency that claims it cannot be audited.</p>
+          <p>The contrast tells the story: DOGE cuts <strong>SNAP benefits</strong> — food for families who can't afford groceries — while the Pentagon buys <strong>king crab, lobster, and six-figure musical instruments</strong>.</p>
+          <p>If these are "normal" expenditures, then why is DOGE cutting food assistance to save money? You can't simultaneously claim the Pentagon budget is normal <strong>and</strong> claim austerity is necessary for programs that feed the poor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+  </style>
+
+  <HighlightBar text="$10B IRS lawsuit against himself. $300B in DOGE conflicts. $93B Pentagon splurge while cutting food assistance. 3,200 undisclosed conflicts. BLS Commissioner fired for accurate data. Self-dealing as operating principle." />
+
+  <CTASection
+    title="Self-Dealing Is<br>the System."
+    description="The president sues his own agencies. His appointees use government resources for personal benefit. The richest man in the world cuts programs for the poor while protecting his own contracts. This isn't corruption in the system — it is the system."
+    linkText="← Back to Corruption & Self-Dealing"
+    linkHref="/deep-dives/corruption"
+  />
+
+</ResearchLayout>

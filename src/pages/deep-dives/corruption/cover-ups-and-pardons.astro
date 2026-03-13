@@ -1,0 +1,350 @@
+---
+import ResearchLayout from '../../../layouts/ResearchLayout.astro';
+import Masthead from '../../../components/design/Masthead.astro';
+import Ticker from '../../../components/design/Ticker.astro';
+import IntroQuote from '../../../components/design/IntroQuote.astro';
+import HighlightBar from '../../../components/design/HighlightBar.astro';
+import StatGrid from '../../../components/design/StatGrid.astro';
+import StatCard from '../../../components/design/StatCard.astro';
+import SectionHeader from '../../../components/design/SectionHeader.astro';
+import SectionDivider from '../../../components/design/SectionDivider.astro';
+import CategoryGrid from '../../../components/design/CategoryGrid.astro';
+import CategoryCard from '../../../components/design/CategoryCard.astro';
+import VoicesSection from '../../../components/design/VoicesSection.astro';
+import VoiceCard from '../../../components/design/VoiceCard.astro';
+import AlertBanner from '../../../components/design/AlertBanner.astro';
+import ColoredSection from '../../../components/design/ColoredSection.astro';
+import CTASection from '../../../components/design/CTASection.astro';
+import Breadcrumbs from '../../../components/navigation/Breadcrumbs.astro';
+
+const tickerItems = [
+  "DOJ Deleted Epstein Files — Then Restored Them After Public Outcry",
+  "AG Bondi Subpoenaed by Bipartisan 24-19 Vote",
+  "Ghislaine Maxwell Quid Pro Quo Alleged",
+  "Howard Lutnick: Claimed Never Visited Epstein's Island — Records Say Otherwise",
+  "$2B in Restitution to Fraud Victims Wiped by Pardons",
+  "Trevor Milton Pardon: $660M Nikola Fraud",
+  "Chrisleys Pardoned: $17.8M in Tax & Bank Fraud",
+  "January 6 Defendants Pardoned En Masse",
+  "Trump University: $25M Fraud Settlement",
+  "Trump Foundation: Dissolved by Court Order for Misuse of Charitable Funds",
+];
+---
+
+<ResearchLayout title="Cover-ups & Pardons — Corruption Deep Dive" description="The Epstein files deleted then restored. $2B in restitution wiped by pardons. Trump University, Trump Foundation, 34 felony convictions. The pattern of covering up and pardoning corruption.">
+
+  <Breadcrumbs items={[
+    { label: 'Research', href: '/' },
+    { label: 'Deep Dives', href: '/deep-dives' },
+    { label: 'The Grift', href: '/deep-dives/corruption' },
+    { label: 'Cover-ups & Pardons' }
+  ]} />
+
+  <Masthead
+    eyebrow="Deep Dive · Follow the Money"
+    title="COVER-UPS &amp; <span class='word-red'>PARDONS</span>"
+    subtitle="When the power to forgive becomes the power to erase accountability."
+    date="Sources: DOJ Records · Court Filings · Congressional Records · Pardon Records · Federal Court Settlements · State AG Filings"
+  />
+
+  <Ticker items={tickerItems} />
+
+  <IntroQuote
+    quote="The President... shall have Power to grant Reprieves and Pardons for Offences against the United States, except in Cases of Impeachment."
+    citation="Article II, Section 2 — The United States Constitution"
+  />
+
+  <!-- KEY STATS -->
+  <StatGrid>
+    <StatCard prefix="$" target={2} suffix="B" label="In court-ordered restitution to fraud victims wiped clean by presidential pardons" />
+    <StatCard target={34} label="Felony convictions — the first sitting president convicted of felonies in American history" />
+    <StatCard prefix="$" target={25} suffix="M" label="Trump University fraud settlement — paid to students who were defrauded" />
+    <StatCard target={24} suffix="-19" label="Bipartisan Senate vote to subpoena AG Bondi over Epstein file handling" />
+  </StatGrid>
+
+  <!-- THE EPSTEIN FILES -->
+  <SectionDivider label="Chapter I" />
+  <SectionHeader
+    eyebrow="Chapter I · The Epstein Files"
+    title="The Epstein<br>Cover-Up"
+    introText="The DOJ deleted Epstein-related files from its website, then restored them only after public outcry. AG Bondi was subpoenaed by a bipartisan vote. Key figures in the administration had connections to Epstein that they minimized or lied about."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🗂️"
+      title="The Deleted Files"
+      body="The Department of Justice <strong>deleted Epstein-related files</strong> from its public-facing website:<br><br>• Files documenting the Epstein investigation were <strong>removed</strong><br>• Public outcry forced the DOJ to <strong>restore the files</strong><br>• The deletion occurred under AG Pam Bondi's leadership<br>• No explanation was given for <strong>why the files were removed</strong><br><br>When the government deletes files about a sex trafficking investigation involving powerful people, and only restores them when caught — that's not an administrative oversight. That's a <strong>cover-up that failed</strong>."
+      tag="Deleted → Restored"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="The Bondi Subpoena"
+      body="The Senate voted <strong>24-19 on a bipartisan basis</strong> to subpoena Attorney General Pam Bondi over the Epstein file handling:<br><br>• <strong>Bipartisan</strong> — members of both parties voted to subpoena<br>• Bondi was questioned about <strong>why files were deleted</strong><br>• The vote reflected <strong>cross-party concern</strong> about obstruction<br><br>When a bipartisan majority of the Senate believes the Attorney General is obstructing an investigation into sex trafficking, the seriousness is beyond dispute."
+      tag="Bipartisan 24-19"
+    />
+    <CategoryCard
+      icon="🤝"
+      title="The Maxwell Connection"
+      body="Allegations emerged of a <strong>quid pro quo involving Ghislaine Maxwell</strong> — Epstein's convicted accomplice:<br><br>• Maxwell was convicted of <strong>sex trafficking minors</strong><br>• Allegations of communications or arrangements regarding her case<br>• The full scope of the alleged arrangement <strong>remains under investigation</strong><br><br>Any connection between the administration's handling of Epstein files and arrangements involving his convicted accomplice raises <strong>the most serious questions imaginable</strong>."
+      tag="Quid Pro Quo Alleged"
+    />
+    <CategoryCard
+      icon="🏝️"
+      title="The Lutnick Lies"
+      body="Commerce Secretary Howard Lutnick <strong>claimed he never visited Epstein's island</strong>. Records suggest otherwise:<br><br>• Lutnick made public statements <strong>denying any island visits</strong><br>• Available records <strong>contradicted his denial</strong><br>• The discrepancy was raised during his confirmation process<br><br>Additionally, DNI Tulsi Gabbard was connected to the broader Epstein disclosure controversy through her role overseeing intelligence agencies that hold <strong>relevant classified information</strong>."
+      tag="Records vs. Denials"
+    />
+  </CategoryGrid>
+
+  <!-- THE PARDON MACHINE -->
+  <SectionDivider label="Chapter II" />
+  <SectionHeader
+    eyebrow="Chapter II · The Pardons"
+    title="The Pardon<br>Machine"
+    introText="The presidential pardon power — designed as a check against unjust prosecution — was converted into a tool for wiping clean the records of convicted fraudsters, erasing billions in restitution owed to their victims."
+  />
+
+  <VoicesSection
+    eyebrow="The Victims"
+    title="The People<br>Who Paid"
+    introText="Behind every pardoned fraud conviction are real victims — people who were cheated, who won justice in court, and then had that justice erased by presidential decree."
+  >
+    <VoiceCard
+      quote="The court ordered $660 million in restitution to investors who were defrauded by a scheme that fabricated the core technology of the company. That restitution was wiped clean by a presidential pardon."
+      name="Nikola Corporation Fraud"
+      role="Trevor Milton — pardoned"
+      detail="$660M in investor losses"
+      context="Milton was convicted of defrauding investors in Nikola Corporation by lying about the company's technology — including staging a video of a truck 'driving' that was actually rolling downhill. Investors lost $660M. The pardon erased their restitution."
+    />
+    <VoiceCard
+      quote="The Chrisleys were convicted of bank fraud and tax evasion totaling $17.8 million. The court ordered restitution. The pardon wiped it clean."
+      name="Chrisley Tax & Bank Fraud"
+      role="Todd & Julie Chrisley — pardoned"
+      detail="$17.8M in fraud"
+      context="The Chrisleys — reality TV stars — were convicted of bank fraud and tax evasion. They fabricated financial documents to obtain loans and evaded taxes on millions in income. Their pardon erased the victims' right to restitution."
+    />
+  </VoicesSection>
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="📜"
+      title="$2B in Restitution Wiped"
+      body="Presidential pardons wiped approximately <strong>$2 billion in court-ordered restitution</strong>:<br><br>• <strong>Trevor Milton</strong> — $660M Nikola fraud<br>• <strong>Todd & Julie Chrisley</strong> — $17.8M tax and bank fraud<br>• <strong>Multiple other fraud convictions</strong> pardoned<br>• <strong>January 6 defendants</strong> pardoned en masse<br><br>Restitution is money <strong>owed to victims</strong> — people and institutions that were defrauded. Pardons didn't just forgive crimes. They <strong>took money from victims' hands</strong>."
+      tag="$2B to Victims — Gone"
+    />
+    <CategoryCard
+      icon="🏛️"
+      title="January 6 Pardons"
+      body="Trump issued <strong>mass pardons for January 6 defendants</strong> — individuals convicted of crimes during the attack on the Capitol:<br><br>• Included defendants convicted of <strong>assaulting police officers</strong><br>• Included those who <strong>breached the Capitol building</strong><br>• Pardons issued <strong>regardless of the severity</strong> of the offense<br>• Over <strong>140 police officers were injured</strong> in the attack<br><br>The pardon power was used to erase accountability for an attack on <strong>the seat of American democracy</strong>."
+      tag="Mass Pardons"
+    />
+    <CategoryCard
+      icon="🔄"
+      title="The Pattern"
+      body="The pardons followed a pattern:<br><br>• <strong>Loyalists</strong> — people who supported Trump or refused to cooperate with investigations<br>• <strong>Connected individuals</strong> — people with relationships to Trump or his allies<br>• <strong>Reality TV figures</strong> — the Chrisleys, aligned with Trump's entertainment world<br>• <strong>Fraudsters</strong> — people convicted of the kind of financial crimes Trump himself has been accused of<br><br>The pardon power wasn't used to correct injustice. It was used to <strong>reward loyalty and erase accountability</strong>."
+      tag="Loyalty → Pardon"
+    />
+  </CategoryGrid>
+
+  <!-- THE LIFELONG PATTERN -->
+  <SectionDivider label="Chapter III" />
+  <SectionHeader
+    eyebrow="Chapter III · The Lifelong Pattern"
+    title="The Pattern<br>Repeats"
+    introText="The second-term corruption didn't emerge from nowhere. It follows a lifelong pattern — from Trump University to the Trump Foundation to 34 felony convictions — of using institutional power for personal gain and then covering up the consequences."
+  />
+
+  <CategoryGrid>
+    <CategoryCard
+      icon="🎓"
+      title="Trump University"
+      body="<strong>Trump University</strong> was not a university. It was an unaccredited seminar series that charged students up to $35,000 for real estate &quot;secrets&quot;:<br><br>• <strong>$25 million fraud settlement</strong> paid to defrauded students<br>• The &quot;university&quot; had <strong>no accreditation</strong><br>• Students were pressured into <strong>maxing out credit cards</strong><br>• Instructors were <strong>not hand-picked by Trump</strong> as advertised<br><br>Trump settled the case for $25M — without admitting wrongdoing but paying $25M to students his venture defrauded."
+      tag="$25M Fraud Settlement"
+    />
+    <CategoryCard
+      icon="🏢"
+      title="Trump Foundation"
+      body="The <strong>Trump Foundation was dissolved by court order</strong> after the New York Attorney General found systematic misuse of charitable funds:<br><br>• Used charity funds for <strong>personal and business expenses</strong><br>• Paid <strong>business debts</strong> with charitable donations<br>• Made <strong>political contributions</strong> from the foundation<br>• The court ordered <strong>dissolution and distribution</strong> of remaining funds<br><br>A court found that a charitable foundation bearing Trump's name was being used as a <strong>personal slush fund</strong>."
+      tag="Dissolved by Court"
+    />
+    <CategoryCard
+      icon="⚖️"
+      title="34 Felony Convictions"
+      body="In 2024, Donald Trump became the <strong>first president or former president convicted of felonies</strong> in American history:<br><br>• <strong>34 felony counts</strong> of falsifying business records<br>• Jury conviction in <strong>Manhattan criminal court</strong><br>• Related to <strong>hush money payments</strong> to conceal information from voters<br>• The convictions were for <strong>covering up</strong> — falsifying records to hide the payments<br><br>The pattern holds: the crime is bad, but the <strong>cover-up is the felony</strong>."
+      tag="First in History"
+    />
+    <CategoryCard
+      icon="🔒"
+      title="Bondi Blocking Ethics"
+      body="Attorney General Pam Bondi has <strong>blocked ethics investigations</strong> into administration officials:<br><br>• Ethics complaints against appointees <strong>shelved or declined</strong><br>• The AG's office — responsible for <strong>enforcing federal ethics laws</strong> — became a shield for misconduct<br>• Combined with the Epstein file deletion, a pattern of <strong>using the DOJ to protect rather than investigate</strong><br><br>When the nation's top law enforcement official blocks ethics investigations, accountability doesn't just fail — it's <strong>actively prevented</strong>."
+      tag="DOJ as Shield"
+    />
+  </CategoryGrid>
+
+  <ColoredSection background="#0a0c12" borderColor="var(--red)">
+    <AlertBanner icon="🚨" title="The Lifelong Pattern" variant="red">
+      <p style="font-size: 16px; color: var(--muted); line-height: 1.7;">Trump University: <strong style="color: var(--text);">$25M fraud settlement</strong>. Trump Foundation: <strong style="color: var(--text);">dissolved by court order</strong>. 34 felony convictions for <strong style="color: var(--text);">falsifying business records</strong>. And now: $320M meme coin extraction, $400M foreign gifts, $2B in pardoned restitution, and deleted Epstein files. The pattern doesn't change — it <strong style="color: var(--text);">scales</strong>. From a fake university to the presidency, the mechanism is the same: <strong style="color: var(--text);">use institutional power for personal gain, then cover up the consequences</strong>.</p>
+    </AlertBanner>
+  </ColoredSection>
+
+  <!-- TALKING POINTS -->
+  <SectionDivider label="Talking Points" />
+  <SectionHeader
+    eyebrow="Claims vs. Record"
+    title="Testing the<br>Talking Points"
+    introText="The administration and its supporters offer specific justifications. Here is each claim, tested against the record."
+  />
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">01</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"The Epstein files were released."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>The DOJ deleted Epstein files first — then restored them only after public outcry.</strong> That is not "releasing" files. That is getting caught deleting them and being forced to put them back.</p>
+          <p>AG Bondi was subpoenaed by a <strong>bipartisan 24-19 Senate vote</strong> over the file handling. Members of both parties found the DOJ's conduct concerning enough to compel testimony.</p>
+          <p>If the files were going to be "released" all along, why were they deleted in the first place?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">02</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Pardons are constitutional — every president uses them."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p>Pardons are constitutional. Using them to <strong>erase $2 billion in restitution owed to fraud victims</strong> is a choice no previous president made at this scale.</p>
+          <p>The pardon power was designed to correct <strong>unjust prosecutions</strong> and show <strong>mercy in extraordinary cases</strong>. It was not designed to wipe clean the records of convicted fraudsters who owe billions to their victims.</p>
+          <p>Every dollar in pardoned restitution is a dollar <strong>taken from someone who was defrauded</strong>. The fraud victims won in court. They proved their case. And then the president erased their victory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp-section tp-section-last">
+    <div class="tp-inner">
+      <div class="tp-claim">
+        <div class="tp-number">03</div>
+        <div class="tp-label">The Talking Point</div>
+        <h3 class="tp-text">"Trump University was settled, not lost."</h3>
+      </div>
+      <div class="tp-facts">
+        <div class="tp-facts-label">The Record</div>
+        <div class="tp-facts-content">
+          <p><strong>Trump paid $25 million to settle fraud claims.</strong> People do not pay $25 million to settle cases they're winning.</p>
+          <p>The settlement came after a <strong>judge rejected Trump's attempts to dismiss the case</strong>, finding sufficient evidence of fraud to proceed to trial. Trump settled rather than face a jury that would have heard testimony from <strong>defrauded students who maxed out their credit cards</strong> on promises of personal instruction from Trump.</p>
+          <p>The Trump Foundation wasn't settled — it was <strong>dissolved by court order</strong>. The 34 felony convictions weren't settled — they were <strong>jury verdicts</strong>. The pattern is clear: settlements where possible, convictions where not.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tp-section {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+
+    .tp-section:first-of-type {
+      border-top: 2px solid var(--red);
+    }
+
+    .tp-section-last {
+      border-bottom: 2px solid var(--red);
+    }
+
+    .tp-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .tp-claim {
+      margin-bottom: 36px;
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .tp-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+
+    .tp-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .tp-text {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3.5vw, 40px);
+      color: var(--text);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .tp-facts {
+      border-left: 3px solid var(--blue);
+      padding-left: 24px;
+    }
+
+    .tp-facts-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--blue-bright);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .tp-facts-content {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tp-facts-content p {
+      margin-bottom: 16px;
+    }
+
+    .tp-facts-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tp-facts-content strong {
+      color: var(--text);
+    }
+  </style>
+
+  <HighlightBar text="Epstein files deleted. $2B in restitution wiped. $25M fraud settlement. Foundation dissolved by court. 34 felony convictions. The pattern spans decades — and now it has the power of the presidency behind it." />
+
+  <CTASection
+    title="The Pattern<br>Doesn't Change."
+    description="From Trump University to the Trump Foundation to 34 felony convictions to the presidency — the mechanism is the same. Use institutional power for personal gain. Cover up the consequences. And when caught, pardon the accomplices."
+    linkText="← Back to Corruption & Self-Dealing"
+    linkHref="/deep-dives/corruption"
+  />
+
+</ResearchLayout>
